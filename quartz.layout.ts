@@ -10,13 +10,13 @@ export const sharedPageComponents: SharedLayout = {
 			provider: 'giscus',
 			options: {
 				// from data-repo
-				repo: 'Rexus752/Giardino-Digitale',
+				repo: 'Rexus752/Digital-Garden',
 				// from data-repo-id
-				repoId: 'R_kgDOMXGFSg',
+				repoId: 'R_kgDONHp66Q',
 				// from data-category
 				category: 'Announcements',
 				// from data-category-id
-				categoryId: 'DIC_kwDOMXGFSs4ChDeJ',
+				categoryId: 'DIC_kwDONHp66c4Cjzbq',
 			}
 		}),
 	],
