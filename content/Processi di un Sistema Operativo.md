@@ -154,9 +154,9 @@ https://stackoverflow.com/questions/5815675/what-is-sock-dgram-and-sock-stream/6
 	- **3.5 - Parametri di performance della schedulazione**
 - **4 - Processi I/O-bound e CPU-bound**
 	- **4.1 - Processo I/O-bound**
-		- **4.1.1 - Caratteristiche principali dei processi I/O-bound**
+		- **4.1.1 - Principali caratteristiche dei processi I/O-bound**
 	- **4.2 - Processo CPU-bound**
-		- **4.2.1 - Caratteristiche principali dei processi CPU-bound**
+		- **4.2.1 - Principali caratteristiche dei processi CPU-bound**
 	- **4.3 - Differenze principali tra i due tipi**
 	- **4.4 - Importanza per la schedulazione**
 - **5 - Operazioni sui processi**
@@ -172,23 +172,23 @@ https://stackoverflow.com/questions/5815675/what-is-sock-dgram-and-sock-stream/6
 			- **5.2.3.2 - Esempio di terminazione a cascata in linguaggio C**
 	- **5.3 - Comunicazione tra processi**
 		- **5.3.1 - Pipe**
-			- **5.3.1.1 - Caratteristiche principali delle pipe**
-			- **5.3.1.2 - Funzionamento di base delle pipe**
+			- **5.3.1.1 - Principali caratteristiche delle pipe**
+			- **5.3.1.2 - Funzionamento delle pipe**
 				- **5.3.1.2.1 - Esempio di codice in linguaggio C**
 			- **5.3.1.3 - Vantaggi e svantaggi delle pipe**
 			- **5.3.1.4 - Named pipe**
 		- **5.3.2 - Code di messaggi**
-			- **5.3.2.1 - Caratteristiche principali delle code di messaggi**
+			- **5.3.2.1 - Principali caratteristiche delle code di messaggi**
 			- **5.3.2.2 - Funzionamento delle code di messaggi**
 				- **5.3.2.2.1 - Esempio di codice in linguaggio C**
 			- **5.3.2.3 - Vantaggi e svantaggi delle code di messaggi**
 		- **5.3.3 - Memoria condivisa**
-			- **5.3.3.1 - Caratteristiche principali della memoria condivisa**
+			- **5.3.3.1 - Principali caratteristiche della memoria condivisa**
 			- **5.3.3.2 - Funzionamento della memoria condivisa**
 				- **5.3.3.2.1 - Esempio di codice in linguaggio C**
 			- **5.3.3.3 - Vantaggi e svantaggi della memoria condivisa**
 		- **5.3.4 - Socket**
-			- **5.3.4.1 - Caratteristiche principali dei socket%% SISTEMARE %%**
+			- **5.3.4.1 - Principali caratteristiche dei socket%% SISTEMARE %%**
 				- **5.3.4.1.1 - Half-duplex e full-duplex**
 					- **5.3.4.1.1.1 - Half-duplex**
 					- **5.3.4.1.1.2 - Full-duplex**
@@ -202,6 +202,10 @@ https://stackoverflow.com/questions/5815675/what-is-sock-dgram-and-sock-stream/6
 			- **5.3.4.2 - Vantaggi e svantaggi dei socket**
 			- **5.3.4.3 - Internet socket**
 				- **5.3.4.3.1 - Funzionamento degli internet socket**
+		- **5.3.5 - Chiamate di procedure remote**
+			- **5.3.5.1 - Principali caratteristiche delle RPC**
+			- **5.3.5.2 - Funzionamento delle RPC**
+			- **5.3.5.3 - Vantaggi e svantaggi delle RPC**
 - **6 - Thread**
 	- **6.1 - Differenza tra processo e thread**
 	- **6.2 - Utilità dei thread**
@@ -282,14 +286,14 @@ In un sistema operativo, un processo può attraversare diversi **cambiamenti di 
 ```mermaid
 stateDiagram-v2
 	direction LR
-    New --> Ready: 1
-    Ready --> Running: 2
-    Ready --> Terminated: 3
-    Running --> Ready: 4
-    Running --> Waiting: 5
-    Running --> Terminated: 6
-    Waiting --> Running: 7
-    Waiting --> Terminated: 8
+    new --> ready: 1
+    ready --> running: 2
+    ready --> terminated: 3
+    running --> ready: 4
+    running --> waiting: 5
+    running --> terminated: 6
+    waiting --> running: 7
+    waiting --> terminated: 8
 ```
 
 %%
@@ -473,9 +477,9 @@ I concetti di **processi I/O-bound e CPU-bound** si riferiscono al tipo di risor
 
 Un **processo I/O-bound** è un processo che passa la maggior parte del suo tempo in attesa di operazioni di I/O, come la lettura da o la scrittura su un disco, l'attesa di dati dalla rete, o l'interazione con dispositivi come tastiere e stampanti. Il tempo di esecuzione sulla CPU è relativamente breve rispetto al tempo trascorso in attesa di I/O.
 
-### 4.1.1 - Caratteristiche principali dei processi I/O-bound
+### 4.1.1 - Principali caratteristiche dei processi I/O-bound
 
-Le **caratteristiche principali dei processi I/O-bound** sono:
+Le principali caratteristiche dei processi I/O-bound sono:
 - **Uso intenso di I/O**: questi processi effettuano molte operazioni di input e output e, quindi, tendono a essere spesso bloccati (quindi nello stato `waiting`) fino a quando le operazioni di I/O non sono completate.
 - **Breve tempo di utilizzo della CPU**: quando il processo ottiene il controllo della CPU, tende a eseguire solo un piccolo numero di calcoli prima di essere nuovamente bloccato per attendere l'I/O (ad esempio, un programma che attende frequenti input da parte dell'utente, come un editor di testo o un'applicazione interattiva, oppure un processo che trasferisce grandi quantità di dati da o verso un disco rigido).
 - **Obiettivo della schedulazione**: i processi I/O-bound beneficiano di una schedulazione che li rimuova rapidamente dallo stato di attesa (quando l'I/O è completato) e gli assegni prontamente la CPU, per minimizzare i tempi di attesa e garantire che le operazioni di I/O siano gestite efficientemente.
@@ -484,9 +488,9 @@ Le **caratteristiche principali dei processi I/O-bound** sono:
 
 Un **processo CPU-bound** è un processo che trascorre la maggior parte del suo tempo effettuando calcoli sulla CPU e richiede relativamente poche operazioni di I/O. Il tempo speso in attesa di operazioni di I/O è trascurabile rispetto al tempo di utilizzo della CPU.
 
-### 4.2.1 - Caratteristiche principali dei processi CPU-bound
+### 4.2.1 - Principali caratteristiche dei processi CPU-bound
 
-Le **caratteristiche principali dei processi CPU-bound** sono:
+Le principali caratteristiche dei processi CPU-bound sono:
 - **Uso intenso della CPU**: Questi processi richiedono molto tempo di CPU per eseguire i loro calcoli e rimangono in esecuzione per lunghi periodi senza essere bloccati per operazioni di I/O.
 - **Basso utilizzo di I/O**: I processi CPU-bound raramente richiedono accesso a dispositivi di input e output, quindi tendono a non essere frequentemente bloccati (es. un programma di elaborazione scientifica o di simulazione che esegue complessi calcoli matematici, oppure un software che genera immagini grafiche complesse o esegue algoritmi di compressione dati).
 - **Obiettivo della schedulazione**: i processi CPU-bound possono richiedere quanti di tempo più lunghi, poiché tendono a utilizzare la CPU per periodi prolungati prima di completare il loro lavoro o di cedere la CPU.
@@ -695,25 +699,25 @@ Durante l'esecuzione di questo programma, si può notare che il processo figlio 
 
 Spesso, i processi hanno bisogno di comunicare e collaborare tra di loro scambiandosi dati. La **comunicazione tra processi** (Inter-Process Communication, IPC) riguarda le tecniche e i meccanismi attraverso cui i processi di un sistema operativo, che possono essere eseguiti in parallelo o separatamente, scambiano informazioni tra loro. Ogni metodo di comunicazione tra processi ha vantaggi e svantaggi, ed è scelto in base alle esigenze specifiche di sincronizzazione, latenza, throughput e complessità dell'applicazione.
 
-Le principali tecniche di comunicazione tra processi sono:%% SISTEMARE LISTA CON TUTTE LE TECNICHE %%
-- **Pipe**: è un canale di comunicazione unidirezionale tra due processi. Un processo scrive dati in un'estremità della pipe, mentre l'altro processo legge dall'altra estremità.
-- **Code di messaggi**: I processi inviano e ricevono messaggi tra di loro tramite **code di messaggi** (message queues).
-- **Memoria condivisa**: Due o più processi possono condividere una porzione di memoria, il che permette lo scambio rapido di informazioni.
-- **Socket**: Permettono la comunicazione tra processi su macchine diverse tramite protocolli di rete.
-- Chiamate di procedura remota (RPC)
+Le principali tecniche di comunicazione tra processi sono:
+- [**Pipe**](Processi%20di%20un%20Sistema%20Operativo.md#5.3.1%20-%20Pipe): permettono la comunicazione unidirezionale tra processi, tipicamente tra un processo padre e i suoi processi figli, trasferendo dati in modo sequenziale.
+- [**Code di messaggi**](Processi%20di%20un%20Sistema%20Operativo.md#5.3.2%20-%20Code%20di%20messaggi): consentono a più processi di scambiarsi informazioni tramite messaggi strutturati, inviati a una coda condivisa; questa tecnica è particolarmente adatta per la comunicazione asincrona.
+- [**Memoria condivisa**](Processi%20di%20un%20Sistema%20Operativo.md#5.3.3%20-%20Memoria%20condivisa): permette a più processi di accedere a un’area di memoria comune per scambiare dati in modo molto rapido, anche se richiede un sistema di sincronizzazione per evitare conflitti di accesso.
+- [**Socket**](Processi%20di%20un%20Sistema%20Operativo.md#5.3.4%20-%20Socket): utilizzati per la comunicazione tra processi su sistemi diversi (o anche sullo stesso sistema), sfruttano la rete per il trasferimento di dati e sono alla base della comunicazione in rete, sia locale che remota.
+- [Chiamate di procedure remote (RPC)](Processi%20di%20un%20Sistema%20Operativo.md#5.3.5%20-%20Chiamate%20di%20procedure%20remote): consentono a un processo di richiedere l’esecuzione di una funzione su un sistema remoto, come se fosse locale, semplificando la programmazione distribuita nascondendo i dettagli della comunicazione di rete.
 
 ### 5.3.1 - Pipe
 
 Le **pipe** %%([pronuncia]: `/paɪp/`)%%sono un meccanismo di comunicazione tra processi che permette a uno o più processi di condividere dati tramite un canale unidirezionale. In sostanza, una pipe crea un collegamento tra due processi: uno scrive dati nella pipe e l'altro legge quei dati.
 
-#### 5.3.1.1 - Caratteristiche principali delle pipe
+#### 5.3.1.1 - Principali caratteristiche delle pipe
 
-Le caratteristiche principali delle pipe sono:
+Le principali caratteristiche delle pipe sono:
 - **Unidirezionali**: i dati fluiscono in una sola direzione (dal processo scrivente a quello leggente).
 - **Anonime**: sono tipicamente usate tra processi che hanno una relazione gerarchica (padre-figlio). In genere, il processo padre crea una pipe e poi genera il processo figlio che la usa.
 - **Comunicazione in memoria**: la pipe si comporta come un buffer circolare tra i due processi, memorizzando temporaneamente i dati fino a quando non vengono letti.
 
-#### 5.3.1.2 - Funzionamento di base delle pipe
+#### 5.3.1.2 - Funzionamento delle pipe
 
 Una pipe in UNIX o Linux può essere creata con la chiamata di sistema%%link%% `pipe()`. Questa funzione genera due file descriptor:
 - Il file descriptor per la lettura (`fd[0]`);
@@ -827,9 +831,9 @@ Esempi: `pipe()` in UNIX/Linux, pipe nei comandi shell (`|`).
 
 Le **code di messaggi** (message queues) sono un meccanismo di comunicazione tra processi che permette a più processi di inviare e ricevere messaggi in maniera asincrona: un processo può inserire un messaggio in una coda, e un altro processo (o più processi) può leggerlo in un momento successivo, senza che i processi debbano sincronizzarsi perfettamente.
 
-#### 5.3.2.1 - Caratteristiche principali delle code di messaggi
+#### 5.3.2.1 - Principali caratteristiche delle code di messaggi
 
-Le caratteristiche principali delle code di messaggi sono:
+Le principali caratteristiche delle code di messaggi sono:
 - **Asincronia**: un processo può inviare un messaggio senza aspettare che l'altro processo lo legga immediatamente.
 - **Ordinamento**: i messaggi sono normalmente gestiti secondo la politica FIFO (First In, First Out), cioè il primo messaggio inserito è il primo a essere letto.
 - **Identificatori**: i messaggi possono avere identificatori o tipi per permettere ai processi di filtrare quelli di interesse.
@@ -946,9 +950,9 @@ I principali svantaggi delle code di messaggi sono:
 
 La **memoria condivisa** (shared memory) è un meccanismo di comunicazione tra processi che consente a più processi di accedere alla stessa area di memoria. Questo metodo è molto veloce poiché non richiede copie di dati tra processi, ma i processi devono coordinarsi per evitare conflitti di accesso.
 
-#### 5.3.3.1 - Caratteristiche principali della memoria condivisa
+#### 5.3.3.1 - Principali caratteristiche della memoria condivisa
 
-Le caratteristiche principali della memoria condivisa sono:
+Le principali caratteristiche della memoria condivisa sono:
 - **Accesso diretto ai dati**: la memoria condivisa consente a più processi di accedere allo stesso segmento di memoria fisica senza necessità di trasferire dati tra processi. Questo avviene mappando lo stesso spazio di memoria nello spazio di indirizzi virtuale di ciascun processo.
 - **Elevata velocità di comunicazione**: poiché i dati non devono essere copiati o trasferiti, l'accesso alla memoria condivisa è estremamente rapido rispetto ad altri metodi di comunicazione tra processi, come le [code di messaggi](Processi%20di%20un%20Sistema%20Operativo.md#5.3.2%20-%20Code%20di%20messaggi) o i [socket](Processi%20di%20un%20Sistema%20Operativo.md#5.3.4%20-%20Socket).
 - **Dipendenza dalla sincronizzazione**: la memoria condivisa non fornisce un meccanismo di sincronizzazione integrato. I processi devono gestire autonomamente l'accesso alla memoria per evitare condizioni di gara%%link%% e inconsistenze. Si utilizzano spesso semafori%%link%% o mutex%%link%% per garantire l'accesso ordinato.
@@ -1020,9 +1024,9 @@ I principali svantaggi della memoria condivisa sono:
 
 I **socket** sono un meccanismo di comunicazione tra processi che consentono a due o più processi di comunicare tra loro sia all'interno dello stesso sistema sia su sistemi diversi tramite rete. Nella comunicazione tra processi, i socket più utilizzati sono quelli di [dominio UNIX](Processi%20di%20un%20Sistema%20Operativo.md#5.3.4.1.2%20-%20Famiglie%20di%20socket) e quelli di [dominio Internet (IPv4 o IPv6)](Processi%20di%20un%20Sistema%20Operativo.md#5.3.4.3%20-%20Internet%20socket), e l'uso varia a seconda del tipo di applicazione e delle esigenze di comunicazione.
 
-#### 5.3.4.1 - Caratteristiche principali dei socket%% SISTEMARE %%
+#### 5.3.4.1 - Principali caratteristiche dei socket%% SISTEMARE %%
 
-Le caratteristiche principali dei socket sono:
+Le principali caratteristiche dei socket sono:
 - [**Half-duplex e full-duplex**](Processi%20di%20un%20Sistema%20Operativo.md#5.3.4.1.1%20-%20Half-duplex%20e%20full-duplex): i socket possono supportare la comunicazione o monodirezionale ([half-duplex](Processi%20di%20un%20Sistema%20Operativo.md#5.3.4.1.1.1%20-%20Half-duplex)) o bidirezionale ([full-duplex](Processi%20di%20un%20Sistema%20Operativo.md#5.3.4.1.1.2%20-%20Full-duplex)), in cui i dati possono essere inviati e ricevuti simultaneamente o solo in una direzione alla volta.
 - [**Famiglia di socket**](Processi%20di%20un%20Sistema%20Operativo.md#5.3.4.1.2%20-%20Famiglie%20di%20socket): è un raggruppamento di socket che utilizzano gli stessi protocolli sottostanti, supporta un sottoinsieme di stili di comunicazione e possiede un proprio formato di indirizzamento.
 - [**Tipo di socket**](Processi%20di%20un%20Sistema%20Operativo.md#5.3.4.1.3%20-%20Tipo%20di%20socket): definisce come i dati vengono trasmessi attraverso il socket e determina le modalità di comunicazione tra i dispositivi.
@@ -1077,7 +1081,7 @@ Le **famiglie di socket** sono i raggruppamenti in cui vengono divisi i vari tip
 - **UNIX domain socket (`AF_UNIX` o `AF_LOCAL`)**: permette la comunicazione tra processi sullo stesso sistema operativo e utilizza file di sistema come punto di connessione, infatti il nome del socket è identificato dal percorso del file%%link%% (`/<path>/<filename>`).
 - **[Internet socket](Processi%20di%20un%20Sistema%20Operativo.md#5.3.4.3%20-%20Internet%20socket) (`AF_INET` e `AF_INET6`)**: permette la comunicazione su reti IP%%link%%, sia locale che su Internet e usa indirizzi IP%%link%% (IPv4 e IPv6 rispettivamente per `AF_INET` e `AF_INET6`) e numeri di porta%%link%% per identificare i dispositivi, infatti il nome del socket è identificato dalla coppia indirizzo-porta (`<indirizzo IP>:<porta>`).
 - **Bluetooth socket (`AF_BLUETOOTH`)**: viene utilizzato per la comunicazione su reti Bluetooth%%link%% e supporta connessioni wireless a corto raggio, ad esempio tra dispositivi mobili e periferiche. Per identificare i dispositivi, usa indirizzi MAC Bluetooth%%link%%, che sono identificatori unici per dispositivi Bluetooth (simili agli indirizzi MAC Ethernet%%link%%).
-- **Packet socket (`AF_PACKET`)**: disponibile solo su Linux, permette l'accesso diretto ai pacchetti a livello di rete, senza passare per un protocollo specifico (come IP%%link%%). Usato per operazioni a basso livello come sniffing di rete e diagnostica.
+- **Packet socket (`AF_PACKET`)**: disponibile solo su Linux, permette l'accesso diretto ai pacchetti a livello di rete, senza passare per un protocollo specifico (come l'IP%%link%%). Usato per operazioni a basso livello come sniffing di rete e diagnostica.
 
 ##### 5.3.4.1.3 - Tipo di socket
 
@@ -1155,7 +1159,7 @@ I principali svantaggi dei socket sono:
 
 Gli **Internet socket** sono una [famiglia di socket](Processi%20di%20un%20Sistema%20Operativo.md#5.3.4.1.2%20-%20Famiglie%20di%20socket) utilizzati per la comunicazione su reti basate su IP, come Internet. Questi socket possono essere utilizzati per stabilire connessioni tra dispositivi che si trovano anche in posizioni geografiche diverse.
 
-Gli internet socket hanno le seguenti caratteristiche principali:
+Gli internet socket hanno le seguenti principali caratteristiche:
 - **Indirizzamento**: ogni socket è identificato univocamente da un indirizzo IP%%link%% e da una porta%%link%%, che consentono ai dispositivi di indirizzare correttamente i dati.
 - **Protocollo**: i socket utilizzano protocolli di trasporto che determinano come vengono trasferiti i dati. I due protocolli più usati sono il TCP (Transmission Control Protocol)%%link%%, che crea una connessione stabile e affidabile e garantisce la consegna dei dati in modo ordinato e senza perdite, e l'UDP (User Datagram Protocol)%%link%%, che crea una connessione più leggera e veloce, ma non garantisce affidabilità, sequenzialità o controllo della perdita di pacchetti.
 
@@ -1170,6 +1174,52 @@ Il funzionamento base di un socket è il seguente:
 4. **Trasferimento dei dati**: una volta stabilita la connessione, il client e il server possono scambiarsi dati. I dati sono inviati e ricevuti (in pacchetti) tramite funzioni di lettura e scrittura, come `send()` e `recv()` in TCP%%link%%, che garantiscono la consegna, oppure `sendto()` e `recvfrom()` in UDP%%link%%, dove non è garantita.
 5. **Chiusura della connessione**: al termine della comunicazione, il socket viene chiuso. Nel TCP%%link%%, entrambe le parti devono chiudere il socket per terminare la connessione (half-close), garantendo che non ci siano dati persi. Nell'UDP%%link%%, che è senza connessione, la chiusura non ha bisogno di un processo specifico.
 
+### 5.3.5 - Chiamate di procedure remote
+
+Le **chiamate di procedure remote** (RPC, Remote Procedure Calls) sono un meccanismo di comunicazione tra processi che consente a un programma di eseguire una procedura (funzione o subroutine) in un altro indirizzo di rete, come se fosse una funzione locale. Questo tipo di comunicazione è usato frequentemente in sistemi distribuiti per facilitare l'interazione tra componenti che risiedono su macchine diverse.
+
+#### 5.3.5.1 - Principali caratteristiche delle RPC
+
+Le principali caratteristiche delle RPC sono:
+- **Trasparenza della rete**: le RPC nascondono i dettagli di rete, permettendo agli sviluppatori di chiamare funzioni remote come funzioni locali, semplificando il codice e la logica applicativa. La comunicazione tra client e server avviene senza che il chiamante debba preoccuparsi di dettagli come indirizzi IP%%link%%, porte%%link%% o protocolli%%link%%.
+- **Indipendenza dalla piattaforma e dal linguaggio**: molti sistemi di RPC sono progettati per essere indipendenti dal linguaggio di programmazione e dalla piattaforma, consentendo la comunicazione tra componenti eterogenei (ad esempio, un'app Java su Linux può chiamare una procedura C# su Windows).
+- **Modello client-server**: le RPC si basano su un'architettura client-server, in cui il client richiede l'esecuzione della procedura e il server la esegue e restituisce il risultato.
+- **Gestione degli errori e delle condizioni di guasto**: in un ambiente di rete, possono verificarsi guasti come timeout, interruzioni di connessione o server non raggiungibili, quindi le RPC devono implementare meccanismi per gestire questi errori, come ritentativi automatici, gestione delle eccezioni e timeout configurabili.
+- **Sicurezza**: le RPC spesso includono meccanismi di autenticazione, autorizzazione e crittografia per proteggere la comunicazione tra client e server e garantire che solo gli utenti autorizzati possano accedere ai servizi.
+- **Efficienza**: le RPC devono essere efficienti e leggere per poter supportare una vasta gamma di applicazioni distribuite.
+- **Asincronia e synchronous calls**: sebbene le RPC tradizionali siano sincrone (il client attende la risposta dal server), alcune implementazioni supportano anche chiamate asincrone per evitare il blocco del client. Le chiamate asincrone sono particolarmente utili in applicazioni ad alte prestazioni e in ambienti distribuiti complessi.
+
+#### 5.3.5.2 - Funzionamento delle RPC
+
+Il **funzionamento delle RPC** si basa su un meccanismo che permette a un programma di richiedere l'esecuzione di una funzione su un sistema remoto, come se fosse una normale chiamata a una funzione locale.
+
+Ecco i principali passaggi e i componenti chiave di questo processo:
+1. **Chiamata del client**: con un programma client che desidera utilizzare una funzione specifica disponibile su un server remoto, il client non deve preoccuparsi di come inviare la richiesta al server; al contrario, invoca semplicemente la funzione come se fosse una funzione locale.
+2. **Stub del client**: quando il client invoca la funzione, questa chiamata non parte direttamente verso il server. Invece, viene intercettata da un componente chiamato _stub del client_: esso agisce come un "proxy" per la funzione remota, preparandosi a inviare la richiesta al server.
+3. **Marshalling dello stub**: per inviare la richiesta al server, lo stub raccoglie i dati necessari (i parametri della funzione) e li serializza in un formato standard compatibile con la trasmissione su rete: questo processo è chiamato _marshalling_ e assicura che i dati possano essere compresi dall'altro lato della comunicazione, indipendentemente dal sistema operativo o dal linguaggio di programmazione.
+4. **Invio della richiesta alla rete**: dopo aver effettuato il marshalling, lo stub del client invia i dati attraverso la rete verso il server. In questa fase, il sistema di comunicazione di rete (tipicamente utilizzando il protocollo TCP/IP%%link%%) si occupa di consegnare i dati al server remoto.
+5. **Skeleton del server**: sul lato del server, un componente chiamato _skeleton_ riceve la richiesta. Questo skeleton è, in un certo senso, il "gemello" dello stub, e ha il compito di agire come rappresentante della funzione remota. Una volta ricevuta la richiesta, lo skeleton esegue il processo inverso al marshalling, chiamato _demarshalling_, col quale i dati vengono deserializzati e convertiti in un formato che può essere interpretato e utilizzato dal server.
+6. **Esecuzione della funzione remota**: una volta completato il demarshalling, lo skeleton chiama la funzione effettiva sul server (la stessa invocata dal client) e passa i parametri originali. La funzione viene quindi eseguita localmente sul server e produce un risultato.
+7. **Restituzione del risultato**: il risultato ottenuto dall'esecuzione della funzione viene quindi restituito dallo skeleton, che si occupa di trasformarlo di nuovo in un formato standard, facendo il marshalling del risultato per prepararlo alla trasmissione. I dati vengono inviati indietro attraverso la rete, tornando verso lo stub del client.
+8. **Riconversione e risultato finale**: quando i dati tornano al client, lo stub del client esegue di nuovo il demarshalling per trasformare i dati ricevuti in un formato comprensibile dall'applicazione client. Infine, lo stub restituisce il risultato al client, che lo riceve come se fosse stato prodotto da una funzione locale.
+
+#### 5.3.5.3 - Vantaggi e svantaggi delle RPC
+
+I principali vantaggi delle RPC sono:
+- **Trasparenza della rete**: le RPC nascondono i dettagli di rete, permettendo agli sviluppatori di invocare funzioni remote con una sintassi simile a quella locale. Questo riduce la complessità e facilita lo sviluppo di applicazioni distribuite.
+- **Astrazione della comunicazione**: il client non deve preoccuparsi di gestire le connessioni di rete, il formato dei dati o i protocolli di comunicazione. Lo stub e lo skeleton si occupano di tutti i dettagli tecnici, semplificando il codice applicativo.
+- **Riusabilità e modularità**: con le RPC, le funzioni server possono essere utilizzate da diverse applicazioni e client. Questo migliora la modularità, rendendo i componenti del sistema più riutilizzabili e facilitando lo sviluppo di architetture distribuite.
+- **Indipendenza dalla piattaforma e dal linguaggio**: alcune implementazioni RPC, come gRPC%%link%%, permettono di creare servizi compatibili tra diversi linguaggi di programmazione e sistemi operativi, rendendo le RPC adatte a progetti complessi ed eterogenei.
+- **Supporto per sistemi distribuiti**: le RPC sono progettate per sistemi distribuiti e favoriscono una struttura client-server, spesso essenziale per applicazioni come microservizi, in cui diversi componenti comunicano tra loro in rete.
+
+I principali svantaggi delle RPC sono:
+- **Dipendenza dalla rete**: la performance delle RPC dipende fortemente dalla rete, in quanto eventuali problemi di connessione, come latenza o instabilità, possono rallentare le chiamate o provocare errori, riducendo l'affidabilità del sistema.
+- **Gestione complessa degli errori**: gestire errori di rete, timeout, o guasti dei server può essere difficile. Le RPC devono implementare meccanismi di gestione dei guasti, ma questi aggiungono complessità al sistema e richiedono un'accurata gestione degli errori.
+- **Overhead di marshalling e demarshalling**: il processo di serializzazione e deserializzazione dei dati per adattarli al formato di rete introduce un overhead. In scenari ad alte prestazioni, questo può essere un collo di bottiglia.
+- **Limiti sui tipi di dati complessi**: il marshalling di dati complessi (come oggetti, strutture nidificate o referenze) può essere difficile e non sempre supportato, a meno di utilizzare strumenti avanzati di serializzazione, che però aumentano la complessità.
+- **Sicurezza e autenticazione**: poiché i dati viaggiano sulla rete, le RPC devono spesso implementare meccanismi di autenticazione, autorizzazione e crittografia, aggiungendo ulteriore complessità e possibili punti deboli alla sicurezza.
+- **Costi di nanutenzione e debug**: diagnosticare e risolvere i problemi in un sistema distribuito è più difficile rispetto a un'applicazione locale. Tracciamento e monitoraggio diventano essenziali, ma introducono un ulteriore livello di complessità e richiedono strumenti dedicati.
+
 %%
 
 \### 5. **Segnali (Signals)**
@@ -1182,10 +1232,6 @@ Il funzionamento base di un socket è il seguente:
 
 \### 7. **File temporanei**
    - I **file temporanei** possono essere usati per lo scambio di dati tra processi. I dati vengono scritti su file e letti da altri processi.
-
-\### 8. **RPC (Remote Procedure Call)**
-   - Un **RPC** permette a un processo di chiamare una funzione eseguita su un altro processo (anche su un'altra macchina). Maschera la complessità della comunicazione, rendendola simile a una chiamata di funzione locale.
-   - Esempi: gRPC, XML-RPC.
 
 \### 9. **Database e Sistemi di File**
    - Un processo può scrivere dati in un database o file, e un altro processo può leggerli. Questo metodo è meno efficiente rispetto ad altri, ma può essere utile per la persistenza e condivisione di grandi quantità di dati.

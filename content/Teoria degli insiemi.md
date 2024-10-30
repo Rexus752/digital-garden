@@ -104,7 +104,7 @@ Un **insieme vuoto**, denotato col simbolo $\emptyset$, è un insieme privo di e
 
 ### 1.2.1 - <span style="color:#888888; background:#00000000">Osservazione: l'insieme $\color{#888888}A=\{\emptyset\}$ non è vuoto</span>
 
-L'insieme $A = \{\emptyset\}$ non è un insieme vuoto: l'insieme vuoto è privo di elementi, mentre l'insieme $\color{#888888}A$ ha un elemento, ossia l'elemento-insieme vuoto $\emptyset \in A$ ([come già osservato](#113-osservazione-insiemi-come-elementi-di-altri-insiemi), un insieme può avere come suoi elementi altri insiemi).
+L'insieme $A = \{\emptyset\}$ non è un insieme vuoto: l'insieme vuoto è privo di elementi, mentre l'insieme $\color{#888888}A$ ha un elemento, ossia l'elemento-insieme vuoto $\emptyset \in A$ ([come già osservato](Teoria%20degli%20insiemi.md#1.1.3%20-%20<span%20style="color%20888888;%20background%2000000000">Osservazione%20insiemi%20come%20elementi%20di%20altri%20insiemi</span>), un insieme può avere come suoi elementi altri insiemi).
 
 %%
 \### Osservazione: unicità dell'insieme vuoto</span>
@@ -310,7 +310,7 @@ L'unico sottoinsieme di $\emptyset$ è $\{\emptyset\}$. Pertanto, $\mathcal{P}(\
 
 #### 2.4.1.3 - <span style="color:#888888; background:#00000000">Osservazione: $\color{#888888}\mathcal{P}(\{a\})=\{\emptyset,\{a\}\}$</span>
 
-Dato un insieme $A$ con un solo elemento $a \in A$, gli unici sottoinsiemi sono quelli [banali](#22-definizione-sottoinsiemi-banali), quindi $\mathcal{P}(A) = \mathcal{P}(\{a\}) = \{\emptyset, \{a\}\}$.
+Dato un insieme $A$ con un solo elemento $a \in A$, gli unici sottoinsiemi sono quelli [banali](Teoria%20degli%20insiemi.md#2.2%20-%20<span%20style="color%20FF88FF;%20background%2000000000">Definizione%20sottoinsiemi%20banali</span>), quindi $\mathcal{P}(A) = \mathcal{P}(\{a\}) = \{\emptyset, \{a\}\}$.
 
 #### 2.4.1.4 - <span style="color:#888888; background:#00000000">Osservazione: $\color{#888888}\mathcal{P}(A)$ è sempre non vuoto</span>
 
@@ -388,7 +388,7 @@ $$
 
 Dati due insiemi $A$ e $B$, si dice _**unione**_ di $A$ e $B$ e si denota $A\cup B$ l'insieme contenente tutti gli elementi di entrambi gli insiemi:
 $$ A \cup B = \{x \mid x \in A \lor x \in B\} $$
-Gli elementi che si trovano sia in $A$ che in $B$ vengono presi in considerazione una volta sola perché, [come già osservato](#114-osservazione-unicità-degli-elementi), non ci possono essere elementi ripetuti in un insieme.
+Gli elementi che si trovano sia in $A$ che in $B$ vengono presi in considerazione una volta sola perché, [come già osservato](Teoria%20degli%20insiemi.md#1.1.4%20-%20<span%20style="color%20888888;%20background%2000000000">Osservazione%20unicità%20degli%20elementi</span>), non ci possono essere elementi ripetuti in un insieme.
 %% rappresentazione con Eulero-Venn %%
 
 ### 4.2.1 - <span style="color:#8888FF; background:#00000000">Esempio: unione di due insiemi</span>
@@ -461,7 +461,7 @@ $$
 
 ### 4.4.1 - <span style="color:#888888; background:#00000000">Osservazione: $\color{#888888}\complement_B(A)=B\backslash A$</span>
 
-Dati due insiemi $A$ e $B$ con $A\subseteq B$, il complementare $\complement_B(A)$ di $A$ in $B$ si può esprimere anche come la [differenza](#43-definizione-differenza-tra-due-insiemi) $B\backslash A$ tra $B$ e $A$: $\complement_B(A)=B\backslash A$.
+Dati due insiemi $A$ e $B$ con $A\subseteq B$, il complementare $\complement_B(A)$ di $A$ in $B$ si può esprimere anche come la [differenza](Teoria%20degli%20insiemi.md#4.3%20-%20<span%20style="color%20FF88FF;%20background%2000000000">Definizione%20differenza%20tra%20due%20insiemi</span>) $B\backslash A$ tra $B$ e $A$: $\complement_B(A)=B\backslash A$.
 
 ### 4.4.2 - <span style="color:#888888; background:#00000000">Osservazione: $\color{#888888}\Bbb{I}=\complement_\Bbb{R}(\Bbb{Q})$</span>
 
