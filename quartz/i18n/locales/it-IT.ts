@@ -36,7 +36,7 @@ export default {
       createdWith: "Creato con",
     },
     graph: {
-      title: "Vista grafico",
+      title: "Vista grafo",
     },
     recentNotes: {
       title: "Note recenti",
@@ -51,10 +51,10 @@ export default {
       searchBarPlaceholder: "Cerca qualcosa",
     },
     tableOfContents: {
-      title: "Tabella dei contenuti",
+      title: "Indice",
     },
     contentMeta: {
-      readingTime: ({ minutes }) => `${minutes} minuti`,
+      readingTime: ({ minutes }) => `${minutes} minuti di lettura`,
     },
   },
   pages: {

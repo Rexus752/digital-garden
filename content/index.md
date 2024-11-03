@@ -10,9 +10,12 @@ Tablature per basso: [[so, bassically-]]
 
 Appunti di studio:
 - [Teoria degli insiemi](Teoria%20degli%20insiemi.md)
-- [Processi di un Sistema Operativo](Processi%20di%20un%20Sistema%20Operativo.md)
+- [Sistema operativo](private/Sistema%20operativo.md)
+	- [Processo](Processo.md)
+	- [Comunicazione tra processi (IPC)](Comunicazione%20tra%20processi%20(IPC).md)
+	- [Thread](Thread.md)
 
-Progetti/collettivi/gruppi di cui faccio parte:
+Progetti/collettivi/gruppi/robe di cui faccio parte:
 - PoliTeK
 - TrainersHub
 - CSI - Collettivo Studentesco Informatica
