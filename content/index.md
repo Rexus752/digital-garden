@@ -9,11 +9,15 @@ Dato che Quartz sminchia i link alle varie pagine e ai paragrafi nelle pagine, a
 Tablature per basso: [[so, bassically-]]
 
 Appunti di studio:
-- [Teoria degli insiemi](Teoria%20degli%20insiemi.md)
-- [Sistema operativo](private/Sistema%20operativo.md)
-	- [Processo](Processo.md)
-	- [Comunicazione tra processi (IPC)](Comunicazione%20tra%20processi%20(IPC).md)
-	- [Thread](Thread.md)
+- Matematica
+	- [Teoria degli insiemi](Teoria%20degli%20insiemi.md)
+- Informatica
+	- [Algoritmica](Algoritmica.md)
+		- [Complessità di un algoritmo](Complessità%20di%20un%20algoritmo.md)
+	- [Sistemi operativi](Sistemi%20operativi.md)
+		- [Processi](Processi.md)
+		- [Comunicazione tra processi (IPC)](Comunicazione%20tra%20processi%20(IPC).md)
+		- [Thread](Thread.md)
 
 Progetti/collettivi/gruppi/robe di cui faccio parte:
 - PoliTeK

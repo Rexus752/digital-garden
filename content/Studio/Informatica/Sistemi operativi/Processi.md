@@ -69,15 +69,15 @@ Sebbene due processi siano associabili allo stesso programma, sono tuttavia da c
 
 # 2 - Il PCB e le informazioni sul processo
 
-Il **blocco di controllo del processo** (in inglese _PCB_, _Process Control Block_) è una struttura dati fondamentale utilizzata dal sistema operativo per memorizzare tutte le informazioni relative a un processo in esecuzione. Il PCB contiene informazioni cruciali per la gestione del processo, come il suo [stato](Processo.md#2.3%20-%20Stato%20di%20un%20processo), l'allocazione delle risorse, la sua posizione nella memoria e molto altro. Ogni processo attivo nel sistema ha un PCB associato, che viene creato al momento della sua inizializzazione, memorizzato nella RAM e aggiornato durante l'intero ciclo di vita del processo.
+Il **blocco di controllo del processo** (in inglese _PCB_, _Process Control Block_) è una struttura dati fondamentale utilizzata dal sistema operativo per memorizzare tutte le informazioni relative a un processo in esecuzione. Il PCB contiene informazioni cruciali per la gestione del processo, come il suo [stato](Processi.md#2.3%20-%20Stato%20di%20un%20processo), l'allocazione delle risorse, la sua posizione nella memoria e molto altro. Ogni processo attivo nel sistema ha un PCB associato, che viene creato al momento della sua inizializzazione, memorizzato nella RAM e aggiornato durante l'intero ciclo di vita del processo.
 
 ## 2.1 - Informazioni contenute in un PCB
 
 Le informazioni contenute in un PCB variano a seconda delle implementazioni nei vari sistemi operativi, ma in generale sono presenti:
-1. [**Stato del processo**](Processo.md#2.3%20-%20Stato%20di%20un%20processo): la condizione in cui si trova un processo in un dato momento durante la sua esecuzione nel sistema operativo (`new`, `ready`, `running`, `waiting` o `terminated`).
+1. [**Stato del processo**](Processi.md#2.3%20-%20Stato%20di%20un%20processo): la condizione in cui si trova un processo in un dato momento durante la sua esecuzione nel sistema operativo (`new`, `ready`, `running`, `waiting` o `terminated`).
 2. **Identificatore del processo (PID, Process ID)**: un numero univoco assegnato al processo dal sistema operativo. Questo identificatore viene utilizzato per distinguere il processo dagli altri processi attivi.
 3. **Program Counter (PC)**: il PCB salva il valore contenuto nel Program Counter%%link%%, il registro nella CPU che rappresenta l'indirizzo dell'istruzione successiva che il processo deve eseguire. Se il processo viene interrotto, il Program Counter consente di riprendere l'esecuzione dal punto in cui è stata interrotta, perché appunto conterrà il valore dell'indirizzo di memoria in cui è presente l'istruzione del processo da cui ripartire.
-4. **Contenuto dei registri della CPU**: il PCB salva il contenuto dei registri della CPU (es. accumulatori, puntatori allo stack, registri di uso generale) nel momento in cui il processo è stato interrotto. Questo è essenziale per riprendere correttamente l'esecuzione del processo in un successivo [cambio di contesto](Processo.md#3.4%20-%20Il%20cambio%20di%20contesto).
+4. **Contenuto dei registri della CPU**: il PCB salva il contenuto dei registri della CPU (es. accumulatori, puntatori allo stack, registri di uso generale) nel momento in cui il processo è stato interrotto. Questo è essenziale per riprendere correttamente l'esecuzione del processo in un successivo [cambio di contesto](Processi.md#3.4%20-%20Il%20cambio%20di%20contesto).
 5. **Informazioni sulla gestione della memoria**: include dati su come la memoria è allocata al processo, come indirizzi di base e limiti di memoria del processo, oppure tabelle di paginazione o segmentazione, nel caso il sistema operativo utilizzi tecniche di gestione della memoria virtuale.
 6. **Informazioni di I/O**: un elenco dei dispositivi di input/output utilizzati dal processo (es. file aperti, dispositivi hardware come stampanti, reti) e file descriptor che fanno riferimento ai file aperti dal processo.
 7. **Informazioni di schedulazione**: un elenco delle informazioni utili alla schedulazione della CPU, come:
@@ -90,7 +90,7 @@ Le informazioni contenute in un PCB variano a seconda delle implementazioni nei 
 ## 2.2 - Funzione del PCB
 
 Il PCB svolge un ruolo cruciale nel gestire i processi nel sistema operativo. Le sue principali funzioni includono:
-- **Salvataggio del contesto del processo**: quando un processo viene sospeso (ad esempio, per un [cambio di contesto](Processo.md#3.4%20-%20Il%20cambio%20di%20contesto)), il suo stato (registri CPU, Program Counter, ecc.) viene memorizzato nel PCB. Quando il processo viene ripreso, il contesto viene ripristinato.  
+- **Salvataggio del contesto del processo**: quando un processo viene sospeso (ad esempio, per un [cambio di contesto](Processi.md#3.4%20-%20Il%20cambio%20di%20contesto)), il suo stato (registri CPU, Program Counter, ecc.) viene memorizzato nel PCB. Quando il processo viene ripreso, il contesto viene ripristinato.  
 - **Gestione della memoria**: il PCB tiene traccia delle risorse di memoria utilizzate dal processo, assicurando che il processo non acceda a zone di memoria riservate ad altri processi o al sistema operativo.
 - **Identificazione del processo**: grazie al PID e alle altre informazioni contenute nel PCB, il sistema operativo può gestire un numero elevato di processi contemporaneamente, distinguendo un processo dall'altro.
 - **Schedulazione e gestione della priorità**: le informazioni di priorità e di tempo di esecuzione accumulate nel PCB consentono al sistema operativo di decidere quale processo eseguire in un dato momento, ottimizzando l'uso della CPU.
@@ -204,13 +204,13 @@ Le **code di schedulazione** (scheduling queues) sono strutture di dati utilizza
 
 Le **principali code di schedulazione** sono:
 1. **Job queue**: contiene tutti i processi nel sistema, indipendentemente dallo stato in cui si trovano. Non appena un processo viene creato, viene aggiunto a questa coda.
-2. **Ready queue**: contiene tutti i processi che sono pronti per l'esecuzione (cioè nello stato `ready`) e in attesa che la CPU sia disponibile. Lo [schedulatore a breve termine](Processo.md#3.3%20-%20Tipi%20di%20schedulazione) sceglie i processi da questa coda per essere eseguiti. Questa coda è una delle più attive e importanti, poiché determina quali processi avranno accesso alla CPU.
+2. **Ready queue**: contiene tutti i processi che sono pronti per l'esecuzione (cioè nello stato `ready`) e in attesa che la CPU sia disponibile. Lo [schedulatore a breve termine](Processi.md#3.3%20-%20Tipi%20di%20schedulazione) sceglie i processi da questa coda per essere eseguiti. Questa coda è una delle più attive e importanti, poiché determina quali processi avranno accesso alla CPU.
 3. **Device queue**: ogni dispositivo di I/O nel sistema ha una propria coda. Quando un processo richiede un'operazione di I/O, entra nella coda del dispositivo corrispondente e rimane bloccato finché l'operazione non viene completata. Dopo che l'I/O è completato, il processo può ritornare nella coda dei processi pronti. Per esempio, se un processo sta aspettando che venga completata la lettura da disco, sarà nella coda del disco fino al termine dell'operazione.
 4. **Waiting queue**: contiene processi che sono bloccati in attesa di un evento (cioè nello stato `waiting`), come l'input da un dispositivo o il completamento di una richiesta di I/O. Quando l'evento atteso si verifica, il processo ritorna nella ready queue. È simile alla device queue, ma può anche includere processi in attesa di altri tipi di eventi non legati ai dispositivi di I/O.
 
 ### 3.2.2 - Rappresentazione in memoria delle code di schedulazione
 
-Ogni coda generalmente viene memorizzata come una lista concatenata%%link%%, con un'intestazione della coda contenente i puntatori al primo [PCB](Processo.md#2%20-%20Il%20PCB%20e%20le%20informazioni%20sul%20processo) della lista che a sua volta comprende un campo puntatore che indica il successivo processo contenuto nella coda e così via:
+Ogni coda generalmente viene memorizzata come una lista concatenata%%link%%, con un'intestazione della coda contenente i puntatori al primo [PCB](Processi.md#2%20-%20Il%20PCB%20e%20le%20informazioni%20sul%20processo) della lista che a sua volta comprende un campo puntatore che indica il successivo processo contenuto nella coda e così via:
 
 ![](Pasted%20image%2020241019202031.png)
 %%eliminare questo schema e farne uno mio%%
@@ -218,7 +218,7 @@ Ogni coda generalmente viene memorizzata come una lista concatenata%%link%%, con
 ## 3.3 - Tipi di schedulazione
 
 Esistono diversi **tipi di schedulazione**, che variano in base a quando e come viene assegnata la CPU ai processi:
-1. **Schedulazione a lungo termine (job scheduler)**: decide quali processi devono essere caricati in memoria principale (RAM) dalla [job queue](Processo.md#3.2.1%20-%20Principali%20code%20di%20schedulazione). Il suo scopo è quello di controllare il grado di multiprogrammazione%%link%%, cioè il numero di processi che possono essere mantenuti in memoria e pronti per essere eseguiti contemporaneamente.
+1. **Schedulazione a lungo termine (job scheduler)**: decide quali processi devono essere caricati in memoria principale (RAM) dalla [job queue](Processi.md#3.2.1%20-%20Principali%20code%20di%20schedulazione). Il suo scopo è quello di controllare il grado di multiprogrammazione%%link%%, cioè il numero di processi che possono essere mantenuti in memoria e pronti per essere eseguiti contemporaneamente.
 3. **Schedulazione a medio termine (swapper scheduler)**: è responsabile del cosiddetto _swapping dei processi_, cioè dello spostamento temporaneo di processi in stato `waiting` dalla RAM a una memoria secondaria (per esempio su disco) per liberare memoria e fare spazio ad altri processi.
 4. **Schedulazione a breve termine (CPU scheduler)**: è l'unica schedulazione realmente necessaria in un sistema operativo, poiché decide quale processo tra quelli nello stato `ready` dovrà essere eseguito dalla CPU attraverso l'uso di diversi algoritmi di schedulazione%%link%%. Questo processo avviene molto frequentemente (nell'ordine dei millisecondi).
 
@@ -266,18 +266,18 @@ Il **cambio di contesto** (context switch) è l'operazione che il sistema operat
 ### 3.4.1 - Utilità e vantaggi del cambio di contesto
 
 Il cambio di contesto serve principalmente per:
-1. [**Multitasking**](Processo.md#7%20-%20Multitasking): dovendo gestire più processi quasi simultaneamente, la CPU esegue ogni processo per un breve intervallo di tempo e poi passa a un altro processo, servendosi proprio del cambio di contesto e garantendo che ogni processo ottenga una porzione del tempo della CPU utile alla sua esecuzione.
+1. [**Multitasking**](Processi.md#7%20-%20Multitasking): dovendo gestire più processi quasi simultaneamente, la CPU esegue ogni processo per un breve intervallo di tempo e poi passa a un altro processo, servendosi proprio del cambio di contesto e garantendo che ogni processo ottenga una porzione del tempo della CPU utile alla sua esecuzione.
 2. **Prevenzione del monopolio della CPU**: in un sistema operativo multitasking, il cambio di contesto permette di sospendere temporaneamente un processo e riprendere l'esecuzione di un altro, assicurando che nessun processo monopolizzi la CPU. Questo permette a più programmi di essere eseguiti nello stesso momento senza che uno blocchi l'altro.
 3. **Gestione dei processi bloccati**: quando un processo è bloccato (cioè è nello stato `waiting`, per esempio in attesa di un'operazione di I/O), il cambio di contesto consente alla CPU di passare immediatamente a un altro processo pronto per essere eseguito, ottimizzando l'utilizzo delle risorse.
 4. **Risposta a eventi esterni**: il cambio di contesto può essere innescato da un interrupt%%link%% (ad esempio, l'arrivo di un input da tastiera o il completamento di un'operazione di I/O) che richiede l'attenzione del sistema operativo. Quando si verifica un evento esterno, la CPU può eseguire il cambio di contesto per gestire l'evento e successivamente tornare al processo precedente.
 5. **Supporto alla concorrenza**: nei sistemi multiprocessore%%link%% o multithread%%link%%, il cambio di contesto consente a diversi [thread](Thread.md) o processi di essere eseguiti contemporaneamente o in sequenza sulla stessa CPU, migliorando la concorrenza tra le operazioni.
-6. **Ottimizzazione del sistema**: permette di bilanciare [processi I/O-bound](Processo.md#4.1%20-%20Processo%20I/O-bound) (che richiedono più operazioni di I/O) e [processi CPU-bound](Processo.md#4.2%20-%20Processo%20CPU-bound) (che utilizzano intensivamente la CPU), migliorando le prestazioni complessive del sistema.
+6. **Ottimizzazione del sistema**: permette di bilanciare [processi I/O-bound](Processi.md#4.1%20-%20Processo%20I/O-bound) (che richiedono più operazioni di I/O) e [processi CPU-bound](Processi.md#4.2%20-%20Processo%20CPU-bound) (che utilizzano intensivamente la CPU), migliorando le prestazioni complessive del sistema.
 
 ### 3.4.2 - Come funziona il cambio di contesto
 
 Le fasi principali di un cambio di contesto sono:
-1. **Salvataggio dello stato del processo corrente**: il sistema operativo salva lo stato corrente del processo (o thread) in esecuzione, inclusi i valori dei registri della CPU, il valore del Program Counter (PC) che tiene traccia dell'istruzione successiva da eseguire, lo [stato di un processo](Processo.md#2.3%20-%20Stato%20di%20un%20processo) e le altre informazioni necessarie per riprendere l'esecuzione in futuro. Queste informazioni sono memorizzate nel [PCB](Processo.md#2%20-%20Il%20PCB%20e%20le%20informazioni%20sul%20processo) del processo.
-2. **Caricamento del nuovo contesto**: il sistema operativo carica il contesto del prossimo processo da eseguire dal suo corrispettivo [PCB](Processo.md#2%20-%20Il%20PCB%20e%20le%20informazioni%20sul%20processo), ripristinando i suoi valori dei registri della CPU e del Program Counter, quindi la CPU riprende l'esecuzione del nuovo processo da dove era stato interrotto l'ultima volta.
+1. **Salvataggio dello stato del processo corrente**: il sistema operativo salva lo stato corrente del processo (o thread) in esecuzione, inclusi i valori dei registri della CPU, il valore del Program Counter (PC) che tiene traccia dell'istruzione successiva da eseguire, lo [stato di un processo](Processi.md#2.3%20-%20Stato%20di%20un%20processo) e le altre informazioni necessarie per riprendere l'esecuzione in futuro. Queste informazioni sono memorizzate nel [PCB](Processi.md#2%20-%20Il%20PCB%20e%20le%20informazioni%20sul%20processo) del processo.
+2. **Caricamento del nuovo contesto**: il sistema operativo carica il contesto del prossimo processo da eseguire dal suo corrispettivo [PCB](Processi.md#2%20-%20Il%20PCB%20e%20le%20informazioni%20sul%20processo), ripristinando i suoi valori dei registri della CPU e del Program Counter, quindi la CPU riprende l'esecuzione del nuovo processo da dove era stato interrotto l'ultima volta.
 3. **Ripresa dell'esecuzione**: la CPU riprende l'esecuzione del nuovo processo dal punto in cui era stato sospeso.
 
 Ecco un diagramma che illustra il cambio di contesto tra due processi $P_0$ e $P_1$:
@@ -300,7 +300,7 @@ Alcuni criteri utilizzati per valutare le prestazioni di un algoritmo di schedul
 
 # 4 - Processi I/O-bound e CPU-bound
 
-I concetti di **processi I/O-bound e CPU-bound** si riferiscono al tipo di risorse su cui un processo è più dipendente durante la sua esecuzione. La distinzione tra questi due tipi di processi è fondamentale per l'ottimizzazione delle prestazioni dei sistemi operativi e per la [schedulazione dei processi](Processo.md#3%20-%20Schedulazione%20dei%20processi).
+I concetti di **processi I/O-bound e CPU-bound** si riferiscono al tipo di risorse su cui un processo è più dipendente durante la sua esecuzione. La distinzione tra questi due tipi di processi è fondamentale per l'ottimizzazione delle prestazioni dei sistemi operativi e per la [schedulazione dei processi](Processi.md#3%20-%20Schedulazione%20dei%20processi).
 
 ## 4.1 - Processo I/O-bound
 
@@ -340,19 +340,19 @@ Ecco una tabella riassuntiva delle differenze principali tra i due tipi di proce
 
 Il sistema operativo deve tenere conto del tipo di processo (I/O-bound o CPU-bound) durante la schedulazione per ottimizzare le prestazioni del sistema:
 - **Processi I/O-bound**: vengono solitamente eseguiti con maggiore priorità o con quanti di tempo più brevi per evitare che rimangano inutilmente in attesa di operazioni I/O completate.
-- **Processi CPU-bound**: possono essere eseguiti con quanti di tempo più lunghi per evitare frequenti [cambi di contesto](Processo.md#3.4%20-%20Il%20cambio%20di%20contesto) e overhead associati, poiché tendono a utilizzare la CPU per periodi più estesi.
+- **Processi CPU-bound**: possono essere eseguiti con quanti di tempo più lunghi per evitare frequenti [cambi di contesto](Processi.md#3.4%20-%20Il%20cambio%20di%20contesto) e overhead associati, poiché tendono a utilizzare la CPU per periodi più estesi.
 
 # 5 - Creazione di un processo
 
-Ogni nuovo processo viene creato a partire da un processo già esistente: il processo creante viene detto _processo padre_ (_parent process_), mentre il nuovo processo è chiamato _processo figlio_ (_child process_). Il sistema operativo assegna al processo appena creato risorse (come spazio di memoria e tempo CPU) e lo aggiunge alla [job queue](Processo.md#3.2.1%20-%20Principali%20code%20di%20schedulazione).
+Ogni nuovo processo viene creato a partire da un processo già esistente: il processo creante viene detto _processo padre_ (_parent process_), mentre il nuovo processo è chiamato _processo figlio_ (_child process_). Il sistema operativo assegna al processo appena creato risorse (come spazio di memoria e tempo CPU) e lo aggiunge alla [job queue](Processi.md#3.2.1%20-%20Principali%20code%20di%20schedulazione).
 
 ## 5.1 - Fasi principali della creazione di un processo
 
 Le fasi principali della creazione di un processo sono:
 1. **Assegnazione di un PID**: ogni processo ha un identificatore univoco (solitamente rappresentato in memoria come un numero intero), noto come _Process ID_ (_PID_). Il PID fornisce un valore univoco per ogni processo del sistema e può essere usato come indice per accedere a vari attributi di un processo all'interno del kernel%%link%%.
-2. **Allocazione delle risorse**: vengono allocate le risorse necessarie per il nuovo processo, come lo [spazio di memoria](Processo.md#2.4%20-%20Spazio%20di%20memoria), i descrittori dei file aperti dal processo padre che possono essere ereditati o copiati da lui, il tempo di CPU e così via.
-3. **Inizializzazione del contesto**: il sistema operativo crea un [PCB](Processo.md#2%20-%20Il%20PCB%20e%20le%20informazioni%20sul%20processo) per il processo figlio contenente tutte le informazioni di controllo necessarie, come lo stato del processo, i registri, i puntatori alla memoria, i file aperti e altro.
-4. **Inserimento nelle code di schedulazione**: il processo viene aggiunto alla [job queue](Processo.md#3.2.1%20-%20Principali%20code%20di%20schedulazione), cioè alla coda di schedulazione contenente tutti i processi nel sistema.
+2. **Allocazione delle risorse**: vengono allocate le risorse necessarie per il nuovo processo, come lo [spazio di memoria](Processi.md#2.4%20-%20Spazio%20di%20memoria), i descrittori dei file aperti dal processo padre che possono essere ereditati o copiati da lui, il tempo di CPU e così via.
+3. **Inizializzazione del contesto**: il sistema operativo crea un [PCB](Processi.md#2%20-%20Il%20PCB%20e%20le%20informazioni%20sul%20processo) per il processo figlio contenente tutte le informazioni di controllo necessarie, come lo stato del processo, i registri, i puntatori alla memoria, i file aperti e altro.
+4. **Inserimento nelle code di schedulazione**: il processo viene aggiunto alla [job queue](Processi.md#3.2.1%20-%20Principali%20code%20di%20schedulazione), cioè alla coda di schedulazione contenente tutti i processi nel sistema.
 
 %%https://it.wikipedia.org/wiki/Init
 fare una sottosezione%%
@@ -406,7 +406,7 @@ Il processo figlio può poi sovrascrivere il suo spazio di memoria e l'eseguibil
 
 Nei sistemi operativi Windows, un nuovo processo viene creato tramite l'API%%link%% `CreateProcess()`. Questa funzione crea un nuovo processo e contemporaneamente un [thread](Thread.md) principale all'interno del processo.
 
-A differenza di [`fork()`](Processo.md#5.2%20-%20`fork()`%20in%20Unix/Linux) che duplica il processo corrente, `CreateProcess()` consente di specificare il nome dell'eseguibile che il processo figlio deve eseguire. Questo significa che, in Windows, il processo figlio inizia immediatamente con l'esecuzione di un programma distinto.
+A differenza di [`fork()`](Processi.md#5.2%20-%20`fork()`%20in%20Unix/Linux) che duplica il processo corrente, `CreateProcess()` consente di specificare il nome dell'eseguibile che il processo figlio deve eseguire. Questo significa che, in Windows, il processo figlio inizia immediatamente con l'esecuzione di un programma distinto.
 
 Un esempio di codice in linguaggio C che utilizza `CreateProcess()`:
 
@@ -461,11 +461,11 @@ Un processo può terminare per vari motivi. Quando termina, le risorse assegnate
 
 Le fasi principali della terminazione di un processo sono:
 1. **Richiesta di terminazione**: il processo chiama una funzione di uscita o riceve un segnale di terminazione. Questo avvia il processo di chiusura.
-2. **Chiusura e liberazione delle risorse**: il sistema operativo chiude automaticamente tutti i file aperti dal processo. Anche altri tipi di risorse come [socket](Comunicazione%20tra%20processi%20(IPC).md#4%20-%20Socket), canali di comunicazione%%link%%, semafori%%link%% o altre strutture di dati vengono rilasciate, così come lo [spazio di memoria](Processo.md#2.4%20-%20Spazio%20di%20memoria) assegnato al processo (sia quella per il codice che per i dati) viene liberato, in modo che possa essere utilizzato da altri processi.
-3. **Aggiornamento dello stato del processo**: lo [stato del processo](Processo.md#2.3%20-%20Stato%20di%20un%20processo) nel [PCB](Processo.md#2%20-%20Il%20PCB%20e%20le%20informazioni%20sul%20processo) viene aggiornato in `terminated`. Finché il processo padre non recupera lo stato del processo figlio, si dice che quest'ultimo diventa un _processo zombie_ (in quanto il padre non sa che il processo figlio è morto).
-4. **Liberazione del PCB dalle code di schedulazione**: il processo viene rimosso dalla coda dei processi pronti (la [ready queue](Processo.md#3.2.1%20-%20Principali%20code%20di%20schedulazione)) o da altre [code di schedulazione](Processo.md#3.2%20-%20Code%20di%20schedulazione). Il [PCB](Processo.md#2%20-%20Il%20PCB%20e%20le%20informazioni%20sul%20processo) del processo viene marcato per la rimozione o, nel caso di un processo zombie, viene mantenuto in memoria fino a che il processo padre recupera il suo stato.
-5. **Notifica del processo padre**: se il processo è stato generato da un processo padre, quest'ultimo viene notificato della terminazione del figlio. Nei sistemi Unix/Linux, il padre può chiamare la funzione `wait()` per raccogliere il codice di uscita del figlio e permettere la completa rimozione del [PCB](Processo.md#2%20-%20Il%20PCB%20e%20le%20informazioni%20sul%20processo) del figlio dalla memoria.
-6. **Rimozione del processo dal sistema operativo**: una volta che tutte le risorse sono state rilasciate e, se necessario, il processo padre ha recuperato il codice di uscita del figlio, il sistema operativo rimuove il [PCB](Processo.md#2%20-%20Il%20PCB%20e%20le%20informazioni%20sul%20processo) e altre strutture associate al processo dalla memoria. A questo punto, il processo è completamente terminato.
+2. **Chiusura e liberazione delle risorse**: il sistema operativo chiude automaticamente tutti i file aperti dal processo. Anche altri tipi di risorse come [socket](Comunicazione%20tra%20processi%20(IPC).md#4%20-%20Socket), canali di comunicazione%%link%%, semafori%%link%% o altre strutture di dati vengono rilasciate, così come lo [spazio di memoria](Processi.md#2.4%20-%20Spazio%20di%20memoria) assegnato al processo (sia quella per il codice che per i dati) viene liberato, in modo che possa essere utilizzato da altri processi.
+3. **Aggiornamento dello stato del processo**: lo [stato del processo](Processi.md#2.3%20-%20Stato%20di%20un%20processo) nel [PCB](Processi.md#2%20-%20Il%20PCB%20e%20le%20informazioni%20sul%20processo) viene aggiornato in `terminated`. Finché il processo padre non recupera lo stato del processo figlio, si dice che quest'ultimo diventa un _processo zombie_ (in quanto il padre non sa che il processo figlio è morto).
+4. **Liberazione del PCB dalle code di schedulazione**: il processo viene rimosso dalla coda dei processi pronti (la [ready queue](Processi.md#3.2.1%20-%20Principali%20code%20di%20schedulazione)) o da altre [code di schedulazione](Processi.md#3.2%20-%20Code%20di%20schedulazione). Il [PCB](Processi.md#2%20-%20Il%20PCB%20e%20le%20informazioni%20sul%20processo) del processo viene marcato per la rimozione o, nel caso di un processo zombie, viene mantenuto in memoria fino a che il processo padre recupera il suo stato.
+5. **Notifica del processo padre**: se il processo è stato generato da un processo padre, quest'ultimo viene notificato della terminazione del figlio. Nei sistemi Unix/Linux, il padre può chiamare la funzione `wait()` per raccogliere il codice di uscita del figlio e permettere la completa rimozione del [PCB](Processi.md#2%20-%20Il%20PCB%20e%20le%20informazioni%20sul%20processo) del figlio dalla memoria.
+6. **Rimozione del processo dal sistema operativo**: una volta che tutte le risorse sono state rilasciate e, se necessario, il processo padre ha recuperato il codice di uscita del figlio, il sistema operativo rimuove il [PCB](Processi.md#2%20-%20Il%20PCB%20e%20le%20informazioni%20sul%20processo) e altre strutture associate al processo dalla memoria. A questo punto, il processo è completamente terminato.
 
 ## 6.2 - Codice di uscita
 
@@ -481,7 +481,7 @@ La **terminazione a cascata** è un meccanismo che si verifica in un sistema ope
 
 Quando un processo padre termina, i processi figli possono essere influenzati in diversi modi a seconda della loro relazione con il processo padre e della gestione dei segnali. Alcuni punti chiave della terminazione a cascata sono:
 - **Segnale di terminazione**: quando un processo padre termina, può inviare segnali ai suoi processi figli. Se i processi figli non sono in grado di gestire il segnale di terminazione (come `SIGTERM` o `SIGKILL`), verranno terminati dal sistema operativo.
-- **Processi orfani**: se un processo padre termina, i suoi processi figli diventano _orfani_. In UNIX e Linux, i processi orfani vengono adottati dal processo `init` (che ha [PID](Processo.md#2.1%20-%20Informazioni%20contenute%20in%20un%20PCB) con valore `1`), che si occupa di gestire la loro terminazione. I processi orfani non vengono necessariamente terminati a meno che non vengano esplicitamente chiesti di farlo.
+- **Processi orfani**: se un processo padre termina, i suoi processi figli diventano _orfani_. In UNIX e Linux, i processi orfani vengono adottati dal processo `init` (che ha [PID](Processi.md#2.1%20-%20Informazioni%20contenute%20in%20un%20PCB) con valore `1`), che si occupa di gestire la loro terminazione. I processi orfani non vengono necessariamente terminati a meno che non vengano esplicitamente chiesti di farlo.
 - **Comportamento di `wait()`**: quando un processo padre utilizza la funzione `wait()`, attende la terminazione di uno dei suoi processi figli. Se il padre termina prima dei figli, il sistema operativo può terminare i figli se la relazione di dipendenza è tale che non ha senso che continuino a vivere.
 
 ### 6.3.2 - Esempio di terminazione a cascata in linguaggio C
@@ -537,7 +537,7 @@ I principali vantaggi del multitasking sono:
 - **Flessibilità**: facilita l'esecuzione di diversi tipi di attività su un unico dispositivo, come navigare su internet mentre si ascolta musica o si scaricano file.
 
 I principali svantaggi del multitasking sono:
-- **Overhead del sistema**: cambiare rapidamente da un processo all'altro (ossia effettuare un [cambio di contesto](Processo.md#3.4%20-%20Il%20cambio%20di%20contesto)) richiede risorse di sistema e può rallentare le prestazioni generali.
+- **Overhead del sistema**: cambiare rapidamente da un processo all'altro (ossia effettuare un [cambio di contesto](Processi.md#3.4%20-%20Il%20cambio%20di%20contesto)) richiede risorse di sistema e può rallentare le prestazioni generali.
 - **Rischio di collisione**: con più processi che accedono alle stesse risorse, come la memoria, può essere necessario gestire i conflitti di risorse e sincronizzare i processi, aumentando la complessità.
 - **Maggiore complessità e possibilità di errori**: la gestione di più processi o [thread](Thread.md) richiede un controllo avanzato e può portare a errori difficili da identificare, come deadlock%%link%% o race conditions%%link%%.
 - **Riduzione delle prestazioni su sistemi limitati**: su sistemi con meno risorse, il multitasking può ridurre l'efficienza complessiva, creando un sovraccarico che rallenta il sistema.

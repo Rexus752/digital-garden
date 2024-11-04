@@ -30,7 +30,7 @@ Ecco una tabella riassuntiva delle differenze tra "processo" e "thread":
 | **Comunicazione**                                                                                          | [Comunicazione tra processi (IPC)](Comunicazione%20tra%20processi%20(IPC).md) complessa | Comunicazione interna semplice (tramite [memoria condivisa](Comunicazione%20tra%20processi%20(IPC).md#3%20-%20Memoria%20condivisa)) |
 | **Esecuzione**                                                                                             | Un processo può avere uno o più thread, eseguiti separatamente                          | Ogni thread è un'unità di esecuzione all'interno di un processo                                                                     |
 | **Crashing**                                                                                               | Se un processo va in crash, non influenza altri processi                                | Se un thread va in crash, può compromettere l'intero processo                                                                       |
-| [**Cambi di contesto**](Processo.md#3.4%20-%20Il%20cambio%20di%20contesto) | Richiede un cambio di contesto completo (salvataggio di registri, memoria, ecc.)        | Il cambio di contesto tra thread è più rapido poiché condividono memoria e risorse                                                  |
+| [**Cambi di contesto**](Processi.md#3.4%20-%20Il%20cambio%20di%20contesto) | Richiede un cambio di contesto completo (salvataggio di registri, memoria, ecc.)        | Il cambio di contesto tra thread è più rapido poiché condividono memoria e risorse                                                  |
 
 # 2 - Vantaggi e svantaggi dei thread
 
