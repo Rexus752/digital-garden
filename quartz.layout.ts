@@ -31,6 +31,7 @@ export const sharedPageComponents: SharedLayout = {
 export const defaultContentPageLayout: PageLayout = {
 	beforeBody: [
 		Component.Breadcrumbs(),
+		Component.MobileOnly(Component.TableOfContents()),
 		Component.ArticleTitle(),
 		Component.ContentMeta(),
 		Component.TagList(),
@@ -40,7 +41,7 @@ export const defaultContentPageLayout: PageLayout = {
 		Component.Search(),
 		// Component.Darkmode(),
 		Component.DesktopOnly(Component.TableOfContents()),
-		Component.Backlinks(),
+		
 	],
 	right: [
 		Component.DesktopOnly(Component.Explorer()),
