@@ -1,4 +1,4 @@
-Il **processo** è un'istanza di un programma in esecuzione su un computer e rappresenta una delle unità fondamentali di gestione delle risorse da parte di un sistema operativo. Quando un programma viene eseguito, il sistema operativo crea un processo per esso, fornendogli le risorse necessarie, come CPU, memoria, accesso ai file e altri dispositivi. Ogni processo è identificato da un codice univoco chiamato _PID_ (_Process ID_).
+Il **processo** è un'istanza di un programma in esecuzione su un computer e rappresenta una delle unità fondamentali di gestione delle risorse da parte di un sistema operativo. Quando un programma viene eseguito, il sistema operativo crea un processo per esso, fornendogli le risorse necessarie, come CPU, memoria, accesso ai file e altri dispositivi.
 
 Può essere visibile all'utente, come nel caso di un'applicazione durante la sua esecuzione, oppure può essere eseguito in background; per visualizzare la lista completa dei processi eseguiti su un computer e le relative risorse impiegate è possibile utilizzare un software comunemente chiamato _task manager_, mentre la gestione dei processi da parte del sistema operativo è affidata a un particolare programma, detto _process scheduler_, attraverso opportuni algoritmi di schedulazione%%link%%.
 
@@ -266,7 +266,7 @@ Il **cambio di contesto** (context switch) è l'operazione che il sistema operat
 ### 3.4.1 - Utilità e vantaggi del cambio di contesto
 
 Il cambio di contesto serve principalmente per:
-1. [**Multitasking**](Processi.md#7%20-%20Multitasking): dovendo gestire più processi quasi simultaneamente, la CPU esegue ogni processo per un breve intervallo di tempo e poi passa a un altro processo, servendosi proprio del cambio di contesto e garantendo che ogni processo ottenga una porzione del tempo della CPU utile alla sua esecuzione.
+1. [**Multitasking**](Processi.md#8%20-%20Multitasking): dovendo gestire più processi quasi simultaneamente, la CPU esegue ogni processo per un breve intervallo di tempo e poi passa a un altro processo, servendosi proprio del cambio di contesto e garantendo che ogni processo ottenga una porzione del tempo della CPU utile alla sua esecuzione.
 2. **Prevenzione del monopolio della CPU**: in un sistema operativo multitasking, il cambio di contesto permette di sospendere temporaneamente un processo e riprendere l'esecuzione di un altro, assicurando che nessun processo monopolizzi la CPU. Questo permette a più programmi di essere eseguiti nello stesso momento senza che uno blocchi l'altro.
 3. **Gestione dei processi bloccati**: quando un processo è bloccato (cioè è nello stato `waiting`, per esempio in attesa di un'operazione di I/O), il cambio di contesto consente alla CPU di passare immediatamente a un altro processo pronto per essere eseguito, ottimizzando l'utilizzo delle risorse.
 4. **Risposta a eventi esterni**: il cambio di contesto può essere innescato da un interrupt%%link%% (ad esempio, l'arrivo di un input da tastiera o il completamento di un'operazione di I/O) che richiede l'attenzione del sistema operativo. Quando si verifica un evento esterno, la CPU può eseguire il cambio di contesto per gestire l'evento e successivamente tornare al processo precedente.
@@ -397,10 +397,9 @@ int main() {
     }
     return 0;
 }
-
 ```
 
-Il processo figlio può poi sovrascrivere il suo spazio di memoria e l'eseguibile, entrambi ereditati dal padre, con una nuova immagine di processo tramite una chiamata come `exec()`, che permette di eseguire un programma differente all'interno del processo figlio.
+Il processo figlio può poi sovrascrivere il suo spazio di memoria e l'eseguibile, entrambi ereditati dal padre, con una nuova immagine di processo tramite una chiamata come èxec()`, che permette di eseguire un programma differente all'interno del processo figlio.
 
 ## 5.3 - `CreateProcess()` in Windows
 
@@ -454,14 +453,14 @@ int main() {
 # 6 - Terminazione di un processo
 
 Un processo può terminare per vari motivi. Quando termina, le risorse assegnate al processo (come la memoria, i file aperti e il tempo CPU) vengono liberate dal sistema operativo. La terminazione di un processo può essere volontaria o forzata:
-- **Terminazione volontaria**: il processo completa l'esecuzione del suo codice (ad esempio, l'utente chiude un programma). Ogni processo può chiamare esplicitamente la funzione di terminazione, usando come `exit()` in Unix/Linux o `ExitProcess()` in Windows.
+- **Terminazione volontaria**: il processo completa l'esecuzione del suo codice (ad esempio, l'utente chiude un programma). Ogni processo può chiamare esplicitamente la funzione di terminazione, usando come èxit()` in Unix/Linux o `ExitProcess()` in Windows.
 - **Terminazione forzata**: un errore o un'eccezione non gestita (come una divisione per zero o un accesso in memoria non valido) può causare la terminazione forzata del processo. Il sistema operativo o un altro processo può terminare forzatamente un processo tramite chiamate di sistema (ad esempio, tramite `kill()` in UNIX o `TerminateProcess()` in Windows). Generalmente solo il processo padre del processo che si vuole terminare può invocare una chiamata di sistema di questo tipo, altrimenti gli utenti potrebbero causare arbitrariamente la terminazione forzata di processi di chiunque.
 
 ## 6.1 - Fasi principali della terminazione di un processo
 
 Le fasi principali della terminazione di un processo sono:
 1. **Richiesta di terminazione**: il processo chiama una funzione di uscita o riceve un segnale di terminazione. Questo avvia il processo di chiusura.
-2. **Chiusura e liberazione delle risorse**: il sistema operativo chiude automaticamente tutti i file aperti dal processo. Anche altri tipi di risorse come [socket](Comunicazione%20tra%20processi%20(IPC).md#4%20-%20Socket), canali di comunicazione%%link%%, semafori%%link%% o altre strutture di dati vengono rilasciate, così come lo [spazio di memoria](Processi.md#2.4%20-%20Spazio%20di%20memoria) assegnato al processo (sia quella per il codice che per i dati) viene liberato, in modo che possa essere utilizzato da altri processi.
+2. **Chiusura e liberazione delle risorse**: il sistema operativo chiude automaticamente tutti i file aperti dal processo. Anche altri tipi di risorse come [socket](Socket.md), canali di comunicazione%%link%%, semafori%%link%% o altre strutture di dati vengono rilasciate, così come lo [spazio di memoria](Processi.md#2.4%20-%20Spazio%20di%20memoria) assegnato al processo (sia quella per il codice che per i dati) viene liberato, in modo che possa essere utilizzato da altri processi.
 3. **Aggiornamento dello stato del processo**: lo [stato del processo](Processi.md#2.3%20-%20Stato%20di%20un%20processo) nel [PCB](Processi.md#2%20-%20Il%20PCB%20e%20le%20informazioni%20sul%20processo) viene aggiornato in `terminated`. Finché il processo padre non recupera lo stato del processo figlio, si dice che quest'ultimo diventa un _processo zombie_ (in quanto il padre non sa che il processo figlio è morto).
 4. **Liberazione del PCB dalle code di schedulazione**: il processo viene rimosso dalla coda dei processi pronti (la [ready queue](Processi.md#3.2.1%20-%20Principali%20code%20di%20schedulazione)) o da altre [code di schedulazione](Processi.md#3.2%20-%20Code%20di%20schedulazione). Il [PCB](Processi.md#2%20-%20Il%20PCB%20e%20le%20informazioni%20sul%20processo) del processo viene marcato per la rimozione o, nel caso di un processo zombie, viene mantenuto in memoria fino a che il processo padre recupera il suo stato.
 5. **Notifica del processo padre**: se il processo è stato generato da un processo padre, quest'ultimo viene notificato della terminazione del figlio. Nei sistemi Unix/Linux, il padre può chiamare la funzione `wait()` per raccogliere il codice di uscita del figlio e permettere la completa rimozione del [PCB](Processi.md#2%20-%20Il%20PCB%20e%20le%20informazioni%20sul%20processo) del figlio dalla memoria.
@@ -470,8 +469,8 @@ Le fasi principali della terminazione di un processo sono:
 ## 6.2 - Codice di uscita
 
 Quando un processo termina, spesso restituisce un **codice di uscita** al sistema operativo o al processo padre. Questo codice è un valore numerico che indica se il processo è terminato correttamente o se si è verificato un errore. I valori solitamente usati sono:
-- `0`: indica che il processo è terminato con successo.
-- **Un numero diverso dallo `0`**: indica un errore o una condizione specifica che ha causato la terminazione del processo.
+- **Valore `0`**: indica che il processo è terminato con successo.
+- **Un numero diverso dallo `0`**: indica un errore o una condizione specifica che ha causato la terminazione del processo (ogni numero viene solitamente assegnato a un errore specifico che lo identifica).
 
 ## 6.3 - Terminazione a cascata
 
@@ -520,14 +519,60 @@ int main() {
 
 Durante l'esecuzione di questo programma, si può notare che il processo figlio continua a stampare i messaggi anche dopo la terminazione del processo padre, poiché diventa un processo orfano e viene adottato da `init`. Se invece il processo padre inviasse un segnale di terminazione, come `SIGKILL` o `SIGTERM`, anche il processo figlio verrebbe terminato, mostrando un comportamento di terminazione a cascata.
 
-# 7 - Multitasking
+# 7 - Comunicazione tra processi (IPC)
+Spesso, i processi hanno bisogno di comunicare e collaborare tra di loro scambiandosi dati. La **comunicazione tra processi** (IPC, Inter-Process Communication) riguarda le tecniche e i meccanismi attraverso cui i processi di un sistema operativo, che possono essere eseguiti in parallelo o separatamente, scambiano informazioni tra loro. Ogni metodo di comunicazione tra processi ha vantaggi e svantaggi, ed è scelto in base alle esigenze specifiche di sincronizzazione, latenza, throughput e complessità dell'applicazione.
+
+Le principali tecniche di comunicazione tra processi sono:
+- [**Pipe**](Pipe.md): permettono la comunicazione unidirezionale tra processi, tipicamente tra un processo padre e i suoi processi figli, trasferendo dati in modo sequenziale.
+- [**Code di messaggi**](Code%20di%20messaggi.md): consentono a più processi di scambiarsi informazioni tramite messaggi strutturati, inviati a una coda condivisa; questa tecnica è particolarmente adatta per la comunicazione asincrona.
+- [**Memoria condivisa**](Memoria%20condivisa.md): permette a più processi di accedere a un'area di memoria comune per scambiare dati in modo molto rapido, anche se richiede un sistema di sincronizzazione per evitare conflitti di accesso.
+- [**Socket**](Socket.md): utilizzati per la comunicazione tra processi su sistemi diversi (o anche sullo stesso sistema), sfruttano la rete per il trasferimento di dati e sono alla base della comunicazione in rete, sia locale che remota.
+- [**Chiamate di procedure remote (RPC)**](Chiamate%20di%20procedure%20remote%20(RPC).md): consentono a un processo di richiedere l'esecuzione di una funzione su un sistema remoto, come se fosse locale, semplificando la programmazione distribuita nascondendo i dettagli della comunicazione di rete.
+
+%%
+
+\### 5. **Segnali (Signals)**
+   - I **segnali** sono un metodo per inviare notifiche asincrone a un processo. Un processo può ricevere segnali che indicano la necessità di eseguire qualche azione (es. terminazione, interruzione).
+   - Esempi: `kill()`, `signal()`.
+
+\### 6. **Semafori (Semaphores)**
+   - I **semafori** sono variabili che vengono utilizzate per gestire l'accesso concorrente alle risorse condivise, come la memoria condivisa. Aiutano a evitare situazioni come il **race condition**.
+   - Esempi: `semget()`, `semop()`.
+
+\### 7. **File temporanei**
+   - I **file temporanei** possono essere usati per lo scambio di dati tra processi. I dati vengono scritti su file e letti da altri processi.
+
+\### 9. **Database e Sistemi di File**
+   - Un processo può scrivere dati in un database o file, e un altro processo può leggerli. Questo metodo è meno efficiente rispetto ad altri, ma può essere utile per la persistenza e condivisione di grandi quantità di dati.
+%%
+
+%%
+\### 6. **Coordinamento e sincronizzazione tra processi**
+   Nei sistemi con **processi concorrenti**, è necessario coordinare l'esecuzione di più processi per evitare problemi come **race conditions** (condizioni di corsa) o **deadlock** (stallo). Le operazioni per la sincronizzazione includono:
+
+   - **Mutua esclusione**: Garantisce che un solo processo possa accedere a una risorsa condivisa alla volta (utilizzando semafori o mutex).
+   - **Semafori**: I **semafori** sono variabili utilizzate per controllare l'accesso a risorse condivise, permettendo ai processi di attendere in modo sicuro l'accesso a una risorsa.
+   - **Monitor**: I **monitor** sono costrutti di alto livello per gestire la mutua esclusione e la sincronizzazione dei processi.
+
+\### 7. **Forking e clonazione di processi**
+   Alcuni sistemi operativi (come Unix/Linux) permettono a un processo di creare una **copia di se stesso** tramite l'operazione di **fork**. Il processo figlio risultante è una replica del processo padre, con la stessa memoria, ma con un diverso **PID**.
+
+\### 8. **Gestione dei segnali (Signals)**
+   I processi possono inviare e ricevere **segnali**, che sono notifiche asincrone inviate dal sistema operativo o da altri processi per segnalare eventi come errori, richieste di terminazione o altri eventi specifici. Ad esempio, in Unix/Linux, il comando **kill** invia segnali a un processo (ad esempio, **SIGTERM** per richiedere la terminazione del processo).
+
+\### 9. **Esecuzione di processi in foreground e background**
+   Nei sistemi multiutente, è possibile eseguire un processo in **foreground** (in primo piano) o in **background** (sullo sfondo). Un processo in background può continuare a essere eseguito mentre l'utente esegue altre attività.
+
+%%
+
+# 8 - Multitasking
 
 Il **multitasking** è la capacità di un sistema operativo (o di un software) di eseguire più processi contemporaneamente. Anche se il termine suggerisce che più compiti vengono svolti simultaneamente, in molti casi si tratta in realtà di una rapida alternanza tra diversi processi, dando all'utente l'impressione che tutti stiano avanzando nello stesso momento.
 
 In un ambiente multitasking, il sistema operativo suddivide il tempo del processore tra più processi. Ogni processo ottiene una piccola quantità di tempo per eseguire le sue operazioni. Anche se i processi non vengono eseguiti tutti contemporaneamente, il cambio rapido tra di essi è così veloce che l'utente ha l'impressione di simultaneità.
 Ecco i principali vantaggi e svantaggi del multitasking:
 
-## 7.1 - Vantaggi e svantaggi del multitasking
+## 8.1 - Vantaggi e svantaggi del multitasking
 
 I principali vantaggi del multitasking sono:
 - **Miglior utilizzo della CPU**: sfrutta al massimo la capacità del processore eseguendo diverse attività, riducendo i tempi di inattività della CPU.
@@ -542,3 +587,9 @@ I principali svantaggi del multitasking sono:
 - **Maggiore complessità e possibilità di errori**: la gestione di più processi o [thread](Thread.md) richiede un controllo avanzato e può portare a errori difficili da identificare, come deadlock%%link%% o race conditions%%link%%.
 - **Riduzione delle prestazioni su sistemi limitati**: su sistemi con meno risorse, il multitasking può ridurre l'efficienza complessiva, creando un sovraccarico che rallenta il sistema.
 - **Problemi di sicurezza**: se i processi non sono ben isolati, un processo può influenzare o interferire con altri, creando vulnerabilità e rischi per la sicurezza.
+
+# Fonti
+
+- Abraham Silberschatz, Peter Baer Galvin, Greg Gagne - [Sistemi Operativi (10ᵃ Edizione)](https://he.pearson.it/catalogo/1099) - Pearson, 2019 - ISBN: `9788891904560`.
+- Slide del Prof. Aldinucci Marco del corso di Sistemi Operativi (canale B), Corso di Laurea in Informatica presso l'Università di Torino, A.A. 2024-25:
+	- [Cap_03](https://informatica.i-learn.unito.it/mod/resource/view.php?id=253884)

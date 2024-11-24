@@ -6,24 +6,27 @@ Il sito è ancora _work in progress_, per questo c'è poca roba e fatta molto al
 
 Dato che Quartz sminchia i link alle varie pagine e ai paragrafi nelle pagine, apri i link sempre in una nuova scheda (cliccando sul link non col click sinistro ma con il middle click).
 
-Tablature per basso: [[so, bassically-]]
+- Musica
+	- Basso
+		- [so, bassically-](so,%20bassically-.md)
 
 Appunti di studio:
-- Matematica
-	- [Teoria degli insiemi](Teoria%20degli%20insiemi.md)
 - Informatica
 	- [Algoritmica](Algoritmica.md)
-		- [Complessità di un algoritmo](Complessità%20di%20un%20algoritmo.md)
 	- [Sistemi operativi](Sistemi%20operativi.md)
 		- [Processi](Processi.md)
-		- [Comunicazione tra processi (IPC)](Comunicazione%20tra%20processi%20(IPC).md)
-		- [Thread](Thread.md)
+			- [Pipe](Pipe.md)
+			- [Code di messaggi](Code%20di%20messaggi.md)
+			- [Memoria condivisa](Memoria%20condivisa.md)
+			- [Socket](Socket.md)
+			- [Chiamate di procedure remote (RPC)](Chiamate%20di%20procedure%20remote%20(RPC).md)
+			- [Thread](Thread.md)
 
 Progetti/collettivi/gruppi/robe di cui faccio parte:
 - PoliTeK
+- Bring Palace
 - TrainersHub
 - CSI - Collettivo Studentesco Informatica
-- Bring Palace
 
 Roba passata:
 - Ponti Sospesi

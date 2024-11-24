@@ -1,75 +1,8 @@
 ---
 icon: TiCirclesRelation
 iconColor: "#FF88FF"
-number headings: first-level 1, max 6, contents ^toc, skip, 1.1)
+draft: "true"
 ---
-# Indice
-
-- **1 - Introduzione agli insiemi**
-	- **1.1 - <span style="color:#FF88FF; background:#00000000">Definizione: insieme</span>**
-		- **1.1.1 - <span style="color:#888888; background:#00000000">Osservazione: restrizioni sulla natura degli elementi di un insieme</span>**
-		- **1.1.2 - <span style="color:#888888; background:#00000000">Osservazione: significato di _"ben definita"_</span>**
-		- **1.1.3 - <span style="color:#888888; background:#00000000">Osservazione: insiemi come elementi di altri insiemi</span>**
-		- **1.1.4 - <span style="color:#888888; background:#00000000">Osservazione: unicità degli elementi</span>**
-		- **1.1.5 - <span style="color:#888888; background:#00000000">Osservazione: irrilevanza dell'ordine degli elementi</span>**
-	- **1.2 - <span style="color:#FF88FF; background:#00000000">Definizione: insieme vuoto</span>**
-		- **1.2.1 - <span style="color:#888888; background:#00000000">Osservazione: l'insieme $\color{#888888}A=\{\emptyset\}$ non è vuoto</span>**
-	- **1.3 - <span style="color:#FF88FF; background:#00000000">Definizione: singoletto</span>**
-		- **1.3.1 - <span style="color:#8888FF; background:#00000000">Esempio: $\color{#8888FF}\{0\}$ e $\color{#8888FF}\{\{1,2,3\}\}$ sono singoletti</span>**
-	- **1.4 - <span style="color:#FF88FF; background:#00000000">Definizione: cardinalità di un insieme</span>**
-		- **1.4.1 - <span style="color:#8888FF; background:#00000000">Esempio: $\color{#8888FF}|\{\{0,1\}, 0, 1\}| = 3$</span>**
-		- **1.4.2 - <span style="color:#8888FF; background:#00000000">Esempio: $\color{#8888FF}|\{\{0,1\}, 0, 1\}| = 3$</span>**
-		- **1.4.3 - <span style="color:#8888FF; background:#00000000">Esempio: $\color{#8888FF}|\mathbb{N}| = \infty$</span>**
-	- **1.5 - Rappresentazioni di un insieme**
-		- **1.5.1 - <span style="color:#88FFFF; background:#00000000">Notazione: rappresentazione per elencazione di un insieme</span>**
-			- **1.5.1.1 - <span style="color:#8888FF; background:#00000000">Esempio: $\color{#8888FF}A=\{1,2,3,4,5,6,7,8,9\}$ e $\color{#8888FF}B=\{\text{Francia}, \space\text{Germania}, \space\text{Svizzera}\}$</span>**
-			- **1.5.1.2 - <span style="color:#8888FF; background:#00000000">Esempio: $\color{#8888FF}\mathbb{N} = \{0, 1, 2, 3, \ldots\}, \mathbb{Z} = \{\ldots, -2, -1, 0, 1, 2, \ldots\}, \mathbb{R} = \{\ldots, 3, \ldots, 4, \ldots \}$</span>**
-		- **1.5.2 - <span style="color:#88FFFF; background:#00000000">Notazione: rappresentazione per caratteristica di un insieme</span>**
-			- **1.5.2.1 - <span style="color:#8888FF; background:#00000000">Esempio: $\color{#8888FF}C=\{\text{cittadini italiani}\}$ e $\color{#8888FF}D=\{x\in\mathbb{R}\mid x^2>1\}$</span>**
-		- **1.5.3 - <span style="color:#88FFFF; background:#00000000">Notazione: rappresentazione grafica di un insieme</span>**
-		- **1.5.4 - <span style="color:#88FFFF; background:#00000000">Notazione: rappresentazione per intervalli di un insieme</span>**
-			- **1.5.4.1 - <span style="color:#888888; background:#00000000">Osservazione: intervalli con un solo estremo incluso</span>**
-				- **1.5.4.1.1 - <span style="color:#8888FF; background:#00000000">Esempio: $\color{#8888FF}A=\{x\in\mathbb{R}\mid x >-1 \land x \le 4\} = (-1,4]$</span>**
-- **2 - Sottoinsiemi**
-	- **2.1 - <span style="color:#FF88FF; background:#00000000">Definizione: sottoinsieme</span>**
-		- **2.1.1 - <span style="color:#8888FF; background:#00000000">Esempio: sottoinsiemi di $\color{#8888FF}A=\{0,1,2,3,4\}$</span>**
-		- **2.1.2 - <span style="color:#888888; background:#00000000">Osservazione: confusione sul termine _"contenere"_</span>**
-	- **2.2 - <span style="color:#FF88FF; background:#00000000">Definizione: sottoinsiemi banali</span>**
-		- **2.2.1 - <span style="color:#8888FF; background:#00000000">Esempio: sottoinsiemi banali di $\color{#8888FF}A=\{0,1,2,3,4\}$</span>**
-	- **2.3 - <span style="color:#FF88FF; background:#00000000">Definizione: sottoinsieme proprio</span>**
-		- **2.3.1 - <span style="color:#8888FF; background:#00000000">Esempio: sottoinsiemi propri di $\color{#8888FF}A=\{0,1,2,3,4\}$</span>**
-	- **2.4 - Insieme delle parti**
-		- **2.4.1 - <span style="color:#FF88FF; background:#00000000">Definizione: insieme delle parti</span>**
-			- **2.4.1.1 - <span style="color:#8888FF; background:#00000000">Esempio: insieme delle parti di $\color{#8888FF}A=\{a,b,c\}$</span>**
-			- **2.4.1.2 - <span style="color:#888888; background:#00000000">Osservazione: $\color{#888888}\mathcal{P}(\emptyset)=\{\emptyset\}$</span>**
-			- **2.4.1.3 - <span style="color:#888888; background:#00000000">Osservazione: $\color{#888888}\mathcal{P}(\{a\})=\{\emptyset,\{a\}\}$</span>**
-			- **2.4.1.4 - <span style="color:#888888; background:#00000000">Osservazione: $\color{#888888}\mathcal{P}(A)$ è sempre non vuoto</span>**
-			- **2.4.1.5 - <span style="color:#888888; background:#00000000">Osservazione: $\color{#888888}|\mathcal{P}(A)| = 2^{|A|}$</span>**
-- **3 - Uguaglianza di due insiemi**
-	- **3.1 - <span style="color:#FF8888; background:#00000000">Proposizione: uguaglianza di due insiemi</span>**
-		- **3.1.1 - <span style="color:#88FF88; background:#00000000">Dimostrazione</span>**
-- **4 - Operazioni sugli insiemi**
-	- **4.1 - <span style="color:#FF88FF; background:#00000000">Definizione: intersezione di due insiemi</span>**
-		- **4.1.1 - <span style="color:#8888FF; background:#00000000">Esempio: intersezione di due insiemi</span>**
-		- **4.1.2 - <span style="color:#8888FF; background:#00000000">Esempio: intersezione di tre insiemi</span>**
-		- **4.1.3 - <span style="color:#8888FF; background:#00000000">Esempio: intersezione di insiemi delle parti</span>**
-	- **4.2 - <span style="color:#FF88FF; background:#00000000">Definizione: unione di due insiemi</span>**
-		- **4.2.1 - <span style="color:#8888FF; background:#00000000">Esempio: unione di due insiemi</span>**
-		- **4.2.2 - <span style="color:#8888FF; background:#00000000">Esempio: unione di tre insiemi</span>**
-		- **4.2.3 - <span style="color:#8888FF; background:#00000000">Esempio: unione degli insiemi dei numeri pari e dispari</span>**
-	- **4.3 - <span style="color:#FF88FF; background:#00000000">Definizione: differenza tra due insiemi</span>**
-		- **4.3.1 - <span style="color:#8888FF; background:#00000000">Esempio: differenza tra due insiemi</span>**
-	- **4.4 - <span style="color:#FF88FF; background:#00000000">Definizione: complementare di un insieme</span>**
-		- **4.4.1 - <span style="color:#888888; background:#00000000">Osservazione: $\color{#888888}\complement_B(A)=B\backslash A$</span>**
-		- **4.4.2 - <span style="color:#888888; background:#00000000">Osservazione: $\color{#888888}\Bbb{I}=\complement_\Bbb{R}(\Bbb{Q})$</span>**
-	- **4.5 - <span style="color:#FF88FF; background:#00000000">Definizione: prodotto cartesiano di due insiemi</span>**
-		- **4.5.1 - <span style="color:#8888FF; background:#00000000">Esempio: prodotto cartesiano tra due insiemi</span>**
-		- **4.5.2 - <span style="color:#888888; background:#00000000">Osservazione: $\color{#888888}A \times \emptyset = \emptyset$</span>**
-		- **4.5.3 - <span style="color:#888888; background:#00000000">Osservazione: $\color{#888888}A \ne \emptyset \land B \ne \emptyset \implies A \times B \ne \emptyset$</span>**
-		- **4.5.4 - <span style="color:#888888; background:#00000000">Osservazione: valenza geometrica del prodotto cartesiano</span>**
-	- **4.6 - <span style="color:#FF8888; background:#00000000">Proposizione: cardinalità del prodotto cartesiano</span>**
-		- **4.6.1 - <span style="color:#88FF88; background:#00000000">Dimostrazione</span>**
-
 # 1 - Introduzione agli insiemi
 
 ## 1.1 - <span style="color:#FF88FF; background:#00000000">Definizione: insieme</span>
@@ -104,7 +37,7 @@ Un **insieme vuoto**, denotato col simbolo $\emptyset$, è un insieme privo di e
 
 ### 1.2.1 - <span style="color:#888888; background:#00000000">Osservazione: l'insieme $\color{#888888}A=\{\emptyset\}$ non è vuoto</span>
 
-L'insieme $A = \{\emptyset\}$ non è un insieme vuoto: l'insieme vuoto è privo di elementi, mentre l'insieme $\color{#888888}A$ ha un elemento, ossia l'elemento-insieme vuoto $\emptyset \in A$ ([come già osservato](Teoria%20degli%20insiemi.md#1.1.3%20-%20<span%20style="color%20888888;%20background%2000000000">Osservazione%20insiemi%20come%20elementi%20di%20altri%20insiemi</span>), un insieme può avere come suoi elementi altri insiemi).
+L'insieme $A = \{\emptyset\}$ non è un insieme vuoto: l'insieme vuoto è privo di elementi, mentre l'insieme $\color{#888888}A$ ha un elemento, ossia l'elemento-insieme vuoto $\emptyset \in A$ ([]((Insiemistica).md#1.1.3%20-%20<span%20style="color%20888888;%20background%2000000000">Osservazione%20insiemi%20come%20elementi%20di%20altri%20insiemi</span>), un insieme può avere come suoi elementi altri insiemi).
 
 %%
 \### Osservazione: unicità dell'insieme vuoto</span>
@@ -310,7 +243,7 @@ L'unico sottoinsieme di $\emptyset$ è $\{\emptyset\}$. Pertanto, $\mathcal{P}(\
 
 #### 2.4.1.3 - <span style="color:#888888; background:#00000000">Osservazione: $\color{#888888}\mathcal{P}(\{a\})=\{\emptyset,\{a\}\}$</span>
 
-Dato un insieme $A$ con un solo elemento $a \in A$, gli unici sottoinsiemi sono quelli [banali](Teoria%20degli%20insiemi.md#2.2%20-%20<span%20style="color%20FF88FF;%20background%2000000000">Definizione%20sottoinsiemi%20banali</span>), quindi $\mathcal{P}(A) = \mathcal{P}(\{a\}) = \{\emptyset, \{a\}\}$.
+Dato un insieme $A$ con un solo elemento $a \in A$, gli unici sottoinsiemi sono quelli []((Insiemistica).md#2.2%20-%20<span%20style="color%20FF88FF;%20background%2000000000">Definizione%20sottoinsiemi%20banali</span>), quindi $\mathcal{P}(A) = \mathcal{P}(\{a\}) = \{\emptyset, \{a\}\}$.
 
 #### 2.4.1.4 - <span style="color:#888888; background:#00000000">Osservazione: $\color{#888888}\mathcal{P}(A)$ è sempre non vuoto</span>
 
@@ -388,7 +321,7 @@ $$
 
 Dati due insiemi $A$ e $B$, si dice _**unione**_ di $A$ e $B$ e si denota $A\cup B$ l'insieme contenente tutti gli elementi di entrambi gli insiemi:
 $$ A \cup B = \{x \mid x \in A \lor x \in B\} $$
-Gli elementi che si trovano sia in $A$ che in $B$ vengono presi in considerazione una volta sola perché, [come già osservato](Teoria%20degli%20insiemi.md#1.1.4%20-%20<span%20style="color%20888888;%20background%2000000000">Osservazione%20unicità%20degli%20elementi</span>), non ci possono essere elementi ripetuti in un insieme.
+Gli elementi che si trovano sia in $A$ che in $B$ vengono presi in considerazione una volta sola perché, []((Insiemistica).md#1.1.4%20-%20<span%20style="color%20888888;%20background%2000000000">Osservazione%20unicità%20degli%20elementi</span>), non ci possono essere elementi ripetuti in un insieme.
 %% rappresentazione con Eulero-Venn %%
 
 ### 4.2.1 - <span style="color:#8888FF; background:#00000000">Esempio: unione di due insiemi</span>
@@ -461,7 +394,7 @@ $$
 
 ### 4.4.1 - <span style="color:#888888; background:#00000000">Osservazione: $\color{#888888}\complement_B(A)=B\backslash A$</span>
 
-Dati due insiemi $A$ e $B$ con $A\subseteq B$, il complementare $\complement_B(A)$ di $A$ in $B$ si può esprimere anche come la [differenza](Teoria%20degli%20insiemi.md#4.3%20-%20<span%20style="color%20FF88FF;%20background%2000000000">Definizione%20differenza%20tra%20due%20insiemi</span>) $B\backslash A$ tra $B$ e $A$: $\complement_B(A)=B\backslash A$.
+Dati due insiemi $A$ e $B$ con $A\subseteq B$, il complementare $\complement_B(A)$ di $A$ in $B$ si può esprimere anche come la []((Insiemistica).md#4.3%20-%20<span%20style="color%20FF88FF;%20background%2000000000">Definizione%20differenza%20tra%20due%20insiemi</span>) $B\backslash A$ tra $B$ e $A$: $\complement_B(A)=B\backslash A$.
 
 ### 4.4.2 - <span style="color:#888888; background:#00000000">Osservazione: $\color{#888888}\Bbb{I}=\complement_\Bbb{R}(\Bbb{Q})$</span>
 

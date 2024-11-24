@@ -23,14 +23,14 @@ All'interno dell'editor di testo, ci possono essere più **thread**: uno che ges
 
 Ecco una tabella riassuntiva delle differenze tra "processo" e "thread":
 
-| Caratteristica                                                                                           | **Processo**                                                                          | **Thread**                                                                                                                        |
-| ---------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| **Spazio di memoria**                                                                                      | Ha uno spazio di memoria separato                                                       | Condivide lo spazio di memoria con altri thread del processo                                                                        |
-| **Isolamento**                                                                                             | Isolato da altri processi                                                               | Condivide le risorse con altri thread nel processo                                                                                  |
-| **Comunicazione**                                                                                          | [Comunicazione tra processi (IPC)](Comunicazione%20tra%20processi%20(IPC).md) complessa | Comunicazione interna semplice (tramite [memoria condivisa](Comunicazione%20tra%20processi%20(IPC).md#3%20-%20Memoria%20condivisa)) |
-| **Esecuzione**                                                                                             | Un processo può avere uno o più thread, eseguiti separatamente                          | Ogni thread è un'unità di esecuzione all'interno di un processo                                                                     |
-| **Crashing**                                                                                               | Se un processo va in crash, non influenza altri processi                                | Se un thread va in crash, può compromettere l'intero processo                                                                       |
-| [**Cambi di contesto**](Processi.md#3.4%20-%20Il%20cambio%20di%20contesto) | Richiede un cambio di contesto completo (salvataggio di registri, memoria, ecc.)        | Il cambio di contesto tra thread è più rapido poiché condividono memoria e risorse                                                  |
+| Caratteristica                                                             | **Processo**                                                                     | **Thread**                                                                           |
+| -------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
+| **Spazio di memoria**                                                      | Ha uno spazio di memoria separato                                                | Condivide lo spazio di memoria con altri thread del processo                         |
+| **Isolamento**                                                             | Isolato da altri processi                                                        | Condivide le risorse con altri thread nel processo                                   |
+| **Comunicazione**                                                          | Comunicazione tra processi complessa                                             | Comunicazione interna semplice (tramite [memoria condivisa](Memoria%20condivisa.md)) |
+| **Esecuzione**                                                             | Un processo può avere uno o più thread, eseguiti separatamente                   | Ogni thread è un'unità di esecuzione all'interno di un processo                      |
+| **Crashing**                                                               | Se un processo va in crash, non influenza altri processi                         | Se un thread va in crash, può compromettere l'intero processo                        |
+| [**Cambi di contesto**](Processi.md#3.4%20-%20Il%20cambio%20di%20contesto) | Richiede un cambio di contesto completo (salvataggio di registri, memoria, ecc.) | Il cambio di contesto tra thread è più rapido poiché condividono memoria e risorse   |
 
 # 2 - Vantaggi e svantaggi dei thread
 
@@ -47,3 +47,9 @@ I principali svantaggi dei thread sono:
 - **Debug difficile**: identificare e risolvere i problemi nei programmi multithreading può essere complesso, soprattutto quando si tratta di bug non deterministici che si verificano solo in determinate condizioni.
 - **Scalabilità limitata**: anche se i thread migliorano le prestazioni su CPU multicore, non tutti i problemi possono essere parallelizzati, e oltre un certo limite i benefici si riducono.
 - **Rischio di deadlock e starvation**: se i thread non sono ben gestiti, possono bloccarsi in uno stato di attesa reciproca (_deadlock_) o essere "affamati" di risorse, restando bloccati e incapaci di completare il loro compito (_starvation_).
+
+# Fonti
+
+- Abraham Silberschatz, Peter Baer Galvin, Greg Gagne - [Sistemi Operativi (10ᵃ Edizione)](https://he.pearson.it/catalogo/1099) - Pearson, 2019 - ISBN: `9788891904560`.
+- Slide del Prof. Aldinucci Marco del corso di Sistemi Operativi (canale B), Corso di Laurea in Informatica presso l'Università di Torino, A.A. 2024-25:
+	- [Cap_03](https://informatica.i-learn.unito.it/mod/resource/view.php?id=253884)
