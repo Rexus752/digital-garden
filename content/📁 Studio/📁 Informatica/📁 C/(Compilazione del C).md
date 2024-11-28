@@ -1,7 +1,7 @@
 ---
 draft: true
 ---
-![](Passaggi.png)
+![](content/📁%20Studio/📁%20Informatica/📁%20C/attachments/Passaggi.png)
 
 # 1 - Preprocessore
 - Riceve in input un programma scritto in C (in realtà, non è un obbligo)

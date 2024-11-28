@@ -1,4 +1,4 @@
-Un **sistema operativo** (OS, Operating System) è il software di base che gestisce l'hardware di un computer (in particolare la memoria primaria e secondaria, le periferiche, e la stessa CPU) e fornisce i servizi fondamentali per l'esecuzione di tutti gli altri software applicativi. È l'intermediario tra l'hardware e l'utente, permettendo l'interazione tra l'utente e il dispositivo e rendendo il sistema semplice da usare.
+Un **sistema operativo** (abbreviato in **_SO_**, in inglese **_OS_**, _**O**perating **S**ystem_) è il software di base che gestisce l'hardware di un computer (in particolare la memoria primaria e secondaria, le periferiche, e la stessa CPU) e fornisce i servizi fondamentali per l'esecuzione di tutti gli altri software applicativi. È l'intermediario tra l'hardware e l'utente, permettendo l'interazione tra l'utente e il dispositivo e rendendo il sistema semplice da usare.
 
 %%
 \## 2. Interfaccia di Programmazione (API)
@@ -13,7 +13,7 @@ Le funzioni principali di un sistema operativo sono:
 - **Gestione della memoria**: tiene traccia dell'uso della memoria principale (RAM)%%link%% e assegna spazio ai vari processi, ottimizzando l'uso delle risorse e prevenendo conflitti di accesso alla memoria.
 - **Gestione delle risorse hardware**: controlla e coordina l'uso delle risorse hardware, come dischi, stampanti e schede di rete, assicurando che i vari programmi possano accedere alle risorse necessarie senza interferenze.
 - **Gestione dei file**: fornisce un sistema di gestione dei file che organizza i dati su supporti di memoria (dischi rigidi, SSD) e facilita operazioni come creare, leggere, scrivere, e cancellare file e directory.
-- **Interfaccia utente**: può offrire un'interfaccia grafica (GUI, Graphical User Interface) o a riga di comando (CLI, Command Line Interface), che consente agli utenti di interagire facilmente con il sistema.
+- **Interfaccia utente**: può offrire un'interfaccia grafica (_**GUI**_, _**G**raphical **U**ser **I**nterface_) o a riga di comando (_**CLI**_, _**C**ommand **L**ine **I**nterface_), che consente agli utenti di interagire facilmente con il sistema.
 - **Gestione della sicurezza e dei permessi**: protegge i dati e le risorse del sistema tramite meccanismi di sicurezza, come autorizzazioni e autenticazione, e limita l'accesso ai file e alle risorse sensibili.
 - **Gestione della rete**: permette la comunicazione tra computer attraverso reti, gestendo protocolli di rete e assicurando la condivisione delle risorse tra i dispositivi collegati.
 
@@ -23,7 +23,7 @@ I principali tipi di sistemi operativi sono:
 - **Sistemi operativi desktop**: sono progettati per essere utilizzati su computer desktop e laptop. Esempi: Windows, macOS, Linux.
 - **Sistemi operativi per dispositivi mobili**: sono progettati per essere utilizzati su smartphone e tablet. Esempi: Android, iOS.
 - **Sistemi operativi per server**: sono ottimizzati per la gestione di reti, servizi web e database. Esempi: Linux, Windows Server.
-- **Sistemi operativi embedded**: sono progettati per dispositivi specifici come router, elettrodomestici e dispositivi IoT (Internet of Things)%%link%%, con funzionalità limitate e adattate all'hardware specifico.
+- **Sistemi operativi embedded**: sono progettati per dispositivi specifici come router, elettrodomestici e dispositivi IoT (_**I**nternet **o**f **T**hings_)%%link%%, con funzionalità limitate e adattate all'hardware specifico.
 
 # 3 - Struttura di un sistema operativo
 
@@ -107,6 +107,8 @@ files and directories located on storage devices.
 %%
 
 %%
+\### File system in UNIX
+
 Files have names: file extension does not imply anything about the content, it is just part of the name
 • In most file systems, files are arranged in a tree structure
 • Directories are special files which may contain other files
@@ -213,3 +215,5 @@ Il problema di definire esattamente quali siano i componenti di un sistema opera
 - Abraham Silberschatz, Peter Baer Galvin, Greg Gagne - [Sistemi Operativi (10ᵃ Edizione)](https://he.pearson.it/catalogo/1099) - Pearson, 2019 - ISBN: `9788891904560`.
 - Slide del Prof. Aldinucci Marco del corso di Sistemi Operativi (canale B), Corso di Laurea in Informatica presso l'Università di Torino, A.A. 2024-25:
 	- [Cap_03](https://informatica.i-learn.unito.it/mod/resource/view.php?id=253884)
+- Slide del Prof. Schifanella Claudio del corso di Laboratorio di Sistemi Operativi (canale B, turno T4), Corso di Laurea in Informatica presso l'Università di Torino, A.A. 2024-25:
+	- [Slide: introduzione al corso e introduzione a UNIX](https://informatica.i-learn.unito.it/pluginfile.php/422768/mod_resource/content/2/01_introduzione_UNIX.pdf)

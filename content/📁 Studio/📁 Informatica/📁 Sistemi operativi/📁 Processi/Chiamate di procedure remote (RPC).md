@@ -1,8 +1,8 @@
-Le **chiamate di procedure remote** (RPC, Remote Procedure Calls) sono un meccanismo di [comunicazione tra processi](Processi.md#7%20-%20Comunicazione%20tra%20processi%20(IPC)) che consentono a un programma di eseguire una procedura (funzione o subroutine) in un altro indirizzo di rete, come se fosse una funzione locale. Questo tipo di comunicazione è usato frequentemente in sistemi distribuiti per facilitare l'interazione tra componenti che risiedono su macchine diverse.
+Le **chiamate di procedure remote** (in inglese _**RPC**_, _**R**emote **P**rocedure **C**alls_) sono un meccanismo di [comunicazione tra processi](Processi.md#7%20-%20Comunicazione%20tra%20processi%20(IPC)) che consentono a un programma di eseguire una procedura (funzione o subroutine) in un altro indirizzo di rete, come se fosse una funzione locale. Questo tipo di comunicazione è usato frequentemente in sistemi distribuiti per facilitare l'interazione tra componenti che risiedono su macchine diverse.
 
-# 1 - Principali caratteristiche delle RPC
+# 1 - Caratteristiche principali delle RPC
 
-Le principali caratteristiche delle RPC sono:
+Le caratteristiche principali delle RPC sono:
 - **Trasparenza della rete**: le RPC nascondono i dettagli di rete, permettendo agli sviluppatori di chiamare funzioni remote come funzioni locali, semplificando il codice e la logica applicativa. La comunicazione tra client e server avviene senza che il chiamante debba preoccuparsi di dettagli come indirizzi IP%%link%%, porte%%link%% o protocolli%%link%%.
 - **Indipendenza dalla piattaforma e dal linguaggio**: molti sistemi di RPC sono progettati per essere indipendenti dal linguaggio di programmazione e dalla piattaforma, consentendo la comunicazione tra componenti eterogenei (ad esempio, un'app Java su Linux può chiamare una procedura C# su Windows).
 - **Modello client-server**: le RPC si basano su un'architettura client-server, in cui il client richiede l'esecuzione della procedura e il server la esegue e restituisce il risultato.
@@ -15,7 +15,7 @@ Le principali caratteristiche delle RPC sono:
 
 Il **funzionamento delle RPC** si basa su un meccanismo che permette a un programma di richiedere l'esecuzione di una funzione su un sistema remoto, come se fosse una normale chiamata a una funzione locale.
 
-Ecco i principali passaggi e i componenti chiave di questo processo:
+I principali passaggi e i componenti chiave di questo processo sono:
 1. **Chiamata del client**: con un programma client che desidera utilizzare una funzione specifica disponibile su un server remoto, il client non deve preoccuparsi di come inviare la richiesta al server; al contrario, invoca semplicemente la funzione come se fosse una funzione locale.
 2. **Stub del client**: quando il client invoca la funzione, questa chiamata non parte direttamente verso il server. Invece, viene intercettata da un componente chiamato _stub del client_: esso agisce come un "proxy" per la funzione remota, preparandosi a inviare la richiesta al server.
 3. **Marshalling dello stub**: per inviare la richiesta al server, lo stub raccoglie i dati necessari (i parametri della funzione) e li serializza in un formato standard compatibile con la trasmissione su rete: questo processo è chiamato _marshalling_ e assicura che i dati possano essere compresi dall'altro lato della comunicazione, indipendentemente dal sistema operativo o dal linguaggio di programmazione.

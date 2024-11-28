@@ -69,14 +69,14 @@ Sebbene due processi siano associabili allo stesso programma, sono tuttavia da c
 
 # 2 - Il PCB e le informazioni sul processo
 
-Il **blocco di controllo del processo** (in inglese _PCB_, _Process Control Block_) è una struttura dati fondamentale utilizzata dal sistema operativo per memorizzare tutte le informazioni relative a un processo in esecuzione. Il PCB contiene informazioni cruciali per la gestione del processo, come il suo [stato](Processi.md#2.3%20-%20Stato%20di%20un%20processo), l'allocazione delle risorse, la sua posizione nella memoria e molto altro. Ogni processo attivo nel sistema ha un PCB associato, che viene creato al momento della sua inizializzazione, memorizzato nella RAM e aggiornato durante l'intero ciclo di vita del processo.
+Il **blocco di controllo del processo** (in inglese **_PCB_**, _**P**rocess **C**ontrol **B**lock_) è una struttura dati fondamentale utilizzata dal sistema operativo per memorizzare tutte le informazioni relative a un processo in esecuzione. Il PCB contiene informazioni cruciali per la gestione del processo, come il suo [stato](Processi.md#2.3%20-%20Stato%20di%20un%20processo), l'allocazione delle risorse, la sua posizione nella memoria e molto altro. Ogni processo attivo nel sistema ha un PCB associato, che viene creato al momento della sua inizializzazione, memorizzato nella RAM e aggiornato durante l'intero ciclo di vita del processo.
 
 ## 2.1 - Informazioni contenute in un PCB
 
 Le informazioni contenute in un PCB variano a seconda delle implementazioni nei vari sistemi operativi, ma in generale sono presenti:
 1. [**Stato del processo**](Processi.md#2.3%20-%20Stato%20di%20un%20processo): la condizione in cui si trova un processo in un dato momento durante la sua esecuzione nel sistema operativo (`new`, `ready`, `running`, `waiting` o `terminated`).
-2. **Identificatore del processo (PID, Process ID)**: un numero univoco assegnato al processo dal sistema operativo. Questo identificatore viene utilizzato per distinguere il processo dagli altri processi attivi.
-3. **Program Counter (PC)**: il PCB salva il valore contenuto nel Program Counter%%link%%, il registro nella CPU che rappresenta l'indirizzo dell'istruzione successiva che il processo deve eseguire. Se il processo viene interrotto, il Program Counter consente di riprendere l'esecuzione dal punto in cui è stata interrotta, perché appunto conterrà il valore dell'indirizzo di memoria in cui è presente l'istruzione del processo da cui ripartire.
+2. **Identificatore del processo** (in inglese _**PID**_, _**P**rocess **ID**_): un numero univoco assegnato al processo dal sistema operativo. Questo identificatore viene utilizzato per distinguere il processo dagli altri processi attivi.
+3. **Program Counter** (abbreviato in _**PC**_): il PCB salva il valore contenuto nel Program Counter%%link%%, il registro nella CPU che rappresenta l'indirizzo dell'istruzione successiva che il processo deve eseguire. Se il processo viene interrotto, il Program Counter consente di riprendere l'esecuzione dal punto in cui è stata interrotta, perché appunto conterrà il valore dell'indirizzo di memoria in cui è presente l'istruzione del processo da cui ripartire.
 4. **Contenuto dei registri della CPU**: il PCB salva il contenuto dei registri della CPU (es. accumulatori, puntatori allo stack, registri di uso generale) nel momento in cui il processo è stato interrotto. Questo è essenziale per riprendere correttamente l'esecuzione del processo in un successivo [cambio di contesto](Processi.md#3.4%20-%20Il%20cambio%20di%20contesto).
 5. **Informazioni sulla gestione della memoria**: include dati su come la memoria è allocata al processo, come indirizzi di base e limiti di memoria del processo, oppure tabelle di paginazione o segmentazione, nel caso il sistema operativo utilizzi tecniche di gestione della memoria virtuale.
 6. **Informazioni di I/O**: un elenco dei dispositivi di input/output utilizzati dal processo (es. file aperti, dispositivi hardware come stampanti, reti) e file descriptor che fanno riferimento ai file aperti dal processo.
@@ -164,7 +164,7 @@ Lo spazio di memoria di un processo è solitamente diviso in:
 1. **Segmento di codice (o segmento testo)**: contiene il codice eseguibile del programma, cioè le istruzioni che la CPU eseguirà. Il segmento di codice è generalmente di sola lettura, per evitare che il codice del programma venga accidentalmente modificato.
 2. **Segmento dati**: contiene le variabili globali e statiche del programma, divise in:
 	- **Dati inizializzati**: l'insieme delle variabili globali e statiche a cui è stato assegnato un valore al momento della dichiarazione.
-	- **Dati non inizializzati (BSS, Block Started by Symbol)**: l'insieme delle variabili globali e statiche che sono dichiarate ma non esplicitamente inizializzate, quindi non hanno un valore inizialmente definito; in alcuni sistemi operativi vengono inizializzate a zero.%%approfondire cos'è il BSS%%
+	- **Dati non inizializzati** (in inglese **_BSS_**, _**B**lock **S**tarted by **S**ymbol_): l'insieme delle variabili globali e statiche che sono dichiarate ma non esplicitamente inizializzate, quindi non hanno un valore inizialmente definito; in alcuni sistemi operativi vengono inizializzate a zero.%%approfondire cos'è il BSS%%
 3. **Heap**: è l'area della memoria dinamica utilizzata per l'allocazione di memoria a runtime. Quando un programma richiede memoria dinamica (ad esempio tramite funzioni come `malloc()` in C o `new` in C++/Java), questa viene allocata nello heap, il quale viene gestito unicamente dal programmatore stesso (cioè il programmatore è l'unico responsabile della gestione e del rilascio della memoria).
 4. **Stack**: area di memoria che viene utilizzata per memorizzare variabili locali, parametri di funzione e indirizzi di ritorno da funzioni. Ogni volta che viene chiamata una funzione, un nuovo "frame" viene aggiunto allo stack, che contiene le informazioni relative a quella particolare chiamata. Quando la funzione termina, lo stack viene "srotolato" e il frame della funzione viene rimosso. Lo stack si espande e si contrae automaticamente durante l'esecuzione del programma, e la sua gestione è di solito curata dal compilatore e dal sistema operativo.
 %%approfondire heap e stack in una pagina a parte sulla https://it.wikipedia.org/wiki/Gestione_della_memoria %%
@@ -177,14 +177,14 @@ Ecco una rappresentazione grafica dello spazio di memoria di un processo:
 ### 2.4.1 - Variazione della grandezza dei segmenti di memoria
 
 Si può notare che le dimensioni dei segmenti di codice e di dati sono fisse, ovvero non cambiano durante l'esecuzione del programma, mentre le dimensioni di stack e heap possono ridursi e crescere dinamicamente durante l'esecuzione:
-- Ogni volta che si chiama una funzione, viene inserito nello stack una struttura dati detta _record di attivazione_ (_activation record_) contenente i suoi parametri, le variabili locali e l'indirizzo di ritorno; quando la funzione restituisce il controllo al chiamante, il record di attivazione viene rimosso dallo stack.
+- Ogni volta che si chiama una funzione, viene inserito nello stack una struttura dati detta _record di attivazione_ (in inglese _activation record_) contenente i suoi parametri, le variabili locali e l'indirizzo di ritorno; quando la funzione restituisce il controllo al chiamante, il record di attivazione viene rimosso dallo stack.
 - Allo stesso modo, l'heap crescerà quando viene allocata memoria dinamicamente e si ridurrà quando la memoria viene restituita al sistema.
 
 Visto che le sezioni dello stack e dell'heap crescono l'una verso l'altra, tocca al sistema operativo garantire che non si sovrappongano.
 
 # 3 - Schedulazione dei processi
 
-La **schedulazione dei processi** è il meccanismo attraverso il quale il sistema operativo decide quale processo deve essere eseguito dalla CPU in un dato momento. In un sistema multitasking%%link%%, più processi competono per l'utilizzo della CPU ed esiste un programma specifico detto _process scheduler_ il cui ruolo è quello di assegnare la CPU a questi processi in modo efficiente, garantendo che il sistema risponda correttamente alle richieste degli utenti e ottimizzi le prestazioni.
+La **schedulazione dei processi** è il meccanismo attraverso il quale il sistema operativo decide quale processo deve essere eseguito dalla CPU in un dato momento. In un sistema multitasking%%link%%, più processi competono per l'utilizzo della CPU ed esiste un programma specifico (detto _process scheduler_) il cui ruolo è quello di assegnare la CPU a questi processi in modo efficiente, garantendo che il sistema risponda correttamente alle richieste degli utenti e ottimizzi le prestazioni.
 
 ## 3.1 - Obiettivi della schedulazione dei processi
 
@@ -198,7 +198,7 @@ Gli **obiettivi della schedulazione dei processi** sono:
 
 ## 3.2 - Code di schedulazione
 
-Le **code di schedulazione** (scheduling queues) sono strutture di dati utilizzate dal sistema operativo per gestire i processi in diverse fasi del loro ciclo di vita. Queste code aiutano il sistema operativo a organizzare e determinare quale processo deve essere eseguito, aspettare o bloccarsi, basandosi su determinati algoritmi di schedulazione%%link%%.
+Le **code di schedulazione** (in inglese **_scheduling queues_**) sono strutture di dati utilizzate dal sistema operativo per gestire i processi in diverse fasi del loro ciclo di vita. Queste code aiutano il sistema operativo a organizzare e determinare quale processo deve essere eseguito, aspettare o bloccarsi, basandosi su determinati algoritmi di schedulazione%%link%%.
 
 ### 3.2.1 - Principali code di schedulazione
 
@@ -218,9 +218,9 @@ Ogni coda generalmente viene memorizzata come una lista concatenata%%link%%, con
 ## 3.3 - Tipi di schedulazione
 
 Esistono diversi **tipi di schedulazione**, che variano in base a quando e come viene assegnata la CPU ai processi:
-1. **Schedulazione a lungo termine (job scheduler)**: decide quali processi devono essere caricati in memoria principale (RAM) dalla [job queue](Processi.md#3.2.1%20-%20Principali%20code%20di%20schedulazione). Il suo scopo è quello di controllare il grado di multiprogrammazione%%link%%, cioè il numero di processi che possono essere mantenuti in memoria e pronti per essere eseguiti contemporaneamente.
-3. **Schedulazione a medio termine (swapper scheduler)**: è responsabile del cosiddetto _swapping dei processi_, cioè dello spostamento temporaneo di processi in stato `waiting` dalla RAM a una memoria secondaria (per esempio su disco) per liberare memoria e fare spazio ad altri processi.
-4. **Schedulazione a breve termine (CPU scheduler)**: è l'unica schedulazione realmente necessaria in un sistema operativo, poiché decide quale processo tra quelli nello stato `ready` dovrà essere eseguito dalla CPU attraverso l'uso di diversi algoritmi di schedulazione%%link%%. Questo processo avviene molto frequentemente (nell'ordine dei millisecondi).
+1. **Schedulazione a lungo termine** (in inglese **_job scheduler_**): decide quali processi devono essere caricati in memoria principale (RAM) dalla [job queue](Processi.md#3.2.1%20-%20Principali%20code%20di%20schedulazione). Il suo scopo è quello di controllare il grado di multiprogrammazione%%link%%, cioè il numero di processi che possono essere mantenuti in memoria e pronti per essere eseguiti contemporaneamente.
+3. **Schedulazione a medio termine** (in inglese _**swapper scheduler**_): è responsabile del cosiddetto _swapping dei processi_, cioè dello spostamento temporaneo di processi in stato `waiting` dalla RAM a una memoria secondaria (per esempio su disco) per liberare memoria e fare spazio ad altri processi.
+4. **Schedulazione a breve termine** (in inglese _**CPU scheduler**_): è l'unica schedulazione realmente necessaria in un sistema operativo, poiché decide quale processo tra quelli nello stato `ready` dovrà essere eseguito dalla CPU attraverso l'uso di diversi algoritmi di schedulazione%%link%%. Questo processo avviene molto frequentemente (nell'ordine dei millisecondi).
 
 %%
 \## Algoritmi di schedulazione
@@ -261,7 +261,7 @@ Esistono vari **algoritmi di schedulazione** utilizzati per determinare quale pr
 
 ## 3.4 - Il cambio di contesto
 
-Il **cambio di contesto** (context switch) è l'operazione che il sistema operativo esegue per sospendere l'esecuzione di un processo attualmente in corso e passare l'esecuzione ad un altro processo. Questa operazione è essenziale per implementare il multitasking%%link%%, ovvero la capacità di un sistema di eseguire più processi quasi simultaneamente, facendo in modo che ciascun processo ottenga la CPU a turno.
+Il **cambio di contesto** (in inglese _**context switch**_) è l'operazione che il sistema operativo esegue per sospendere l'esecuzione di un processo attualmente in corso e passare l'esecuzione ad un altro processo. Questa operazione è essenziale per implementare il multitasking%%link%%, ovvero la capacità di un sistema di eseguire più processi quasi simultaneamente, facendo in modo che ciascun processo ottenga la CPU a turno.
 
 ### 3.4.1 - Utilità e vantaggi del cambio di contesto
 
@@ -276,7 +276,7 @@ Il cambio di contesto serve principalmente per:
 ### 3.4.2 - Come funziona il cambio di contesto
 
 Le fasi principali di un cambio di contesto sono:
-1. **Salvataggio dello stato del processo corrente**: il sistema operativo salva lo stato corrente del processo (o thread) in esecuzione, inclusi i valori dei registri della CPU, il valore del Program Counter (PC) che tiene traccia dell'istruzione successiva da eseguire, lo [stato di un processo](Processi.md#2.3%20-%20Stato%20di%20un%20processo) e le altre informazioni necessarie per riprendere l'esecuzione in futuro. Queste informazioni sono memorizzate nel [PCB](Processi.md#2%20-%20Il%20PCB%20e%20le%20informazioni%20sul%20processo) del processo.
+1. **Salvataggio dello stato del processo corrente**: il sistema operativo salva lo stato corrente del processo (o thread) in esecuzione, inclusi i valori dei registri della CPU, il valore del Program Counter che tiene traccia dell'istruzione successiva da eseguire, lo [stato di un processo](Processi.md#2.3%20-%20Stato%20di%20un%20processo) e le altre informazioni necessarie per riprendere l'esecuzione in futuro. Queste informazioni sono memorizzate nel [PCB](Processi.md#2%20-%20Il%20PCB%20e%20le%20informazioni%20sul%20processo) del processo.
 2. **Caricamento del nuovo contesto**: il sistema operativo carica il contesto del prossimo processo da eseguire dal suo corrispettivo [PCB](Processi.md#2%20-%20Il%20PCB%20e%20le%20informazioni%20sul%20processo), ripristinando i suoi valori dei registri della CPU e del Program Counter, quindi la CPU riprende l'esecuzione del nuovo processo da dove era stato interrotto l'ultima volta.
 3. **Ripresa dell'esecuzione**: la CPU riprende l'esecuzione del nuovo processo dal punto in cui era stato sospeso.
 
@@ -306,9 +306,9 @@ I concetti di **processi I/O-bound e CPU-bound** si riferiscono al tipo di risor
 
 Un **processo I/O-bound** è un processo che passa la maggior parte del suo tempo in attesa di operazioni di I/O, come la lettura da o la scrittura su un disco, l'attesa di dati dalla rete, o l'interazione con dispositivi come tastiere e stampanti. Il tempo di esecuzione sulla CPU è relativamente breve rispetto al tempo trascorso in attesa di I/O.
 
-### 4.1.1 - Principali caratteristiche dei processi I/O-bound
+### 4.1.1 - Caratteristiche principali dei processi I/O-bound
 
-Le principali caratteristiche dei processi I/O-bound sono:
+Le caratteristiche principali dei processi I/O-bound sono:
 - **Uso intenso di I/O**: questi processi effettuano molte operazioni di input e output e, quindi, tendono a essere spesso bloccati (quindi nello stato `waiting`) fino a quando le operazioni di I/O non sono completate.
 - **Breve tempo di utilizzo della CPU**: quando il processo ottiene il controllo della CPU, tende a eseguire solo un piccolo numero di calcoli prima di essere nuovamente bloccato per attendere l'I/O (ad esempio, un programma che attende frequenti input da parte dell'utente, come un editor di testo o un'applicazione interattiva, oppure un processo che trasferisce grandi quantità di dati da o verso un disco rigido).
 - **Obiettivo della schedulazione**: i processi I/O-bound beneficiano di una schedulazione che li rimuova rapidamente dallo stato di attesa (quando l'I/O è completato) e gli assegni prontamente la CPU, per minimizzare i tempi di attesa e garantire che le operazioni di I/O siano gestite efficientemente.
@@ -317,9 +317,9 @@ Le principali caratteristiche dei processi I/O-bound sono:
 
 Un **processo CPU-bound** è un processo che trascorre la maggior parte del suo tempo effettuando calcoli sulla CPU e richiede relativamente poche operazioni di I/O. Il tempo speso in attesa di operazioni di I/O è trascurabile rispetto al tempo di utilizzo della CPU.
 
-### 4.2.1 - Principali caratteristiche dei processi CPU-bound
+### 4.2.1 - Caratteristiche principali dei processi CPU-bound
 
-Le principali caratteristiche dei processi CPU-bound sono:
+Le caratteristiche principali dei processi CPU-bound sono:
 - **Uso intenso della CPU**: Questi processi richiedono molto tempo di CPU per eseguire i loro calcoli e rimangono in esecuzione per lunghi periodi senza essere bloccati per operazioni di I/O.
 - **Basso utilizzo di I/O**: I processi CPU-bound raramente richiedono accesso a dispositivi di input e output, quindi tendono a non essere frequentemente bloccati (es. un programma di elaborazione scientifica o di simulazione che esegue complessi calcoli matematici, oppure un software che genera immagini grafiche complesse o esegue algoritmi di compressione dati).
 - **Obiettivo della schedulazione**: i processi CPU-bound possono richiedere quanti di tempo più lunghi, poiché tendono a utilizzare la CPU per periodi prolungati prima di completare il loro lavoro o di cedere la CPU.
@@ -344,12 +344,12 @@ Il sistema operativo deve tenere conto del tipo di processo (I/O-bound o CPU-bou
 
 # 5 - Creazione di un processo
 
-Ogni nuovo processo viene creato a partire da un processo già esistente: il processo creante viene detto _processo padre_ (_parent process_), mentre il nuovo processo è chiamato _processo figlio_ (_child process_). Il sistema operativo assegna al processo appena creato risorse (come spazio di memoria e tempo CPU) e lo aggiunge alla [job queue](Processi.md#3.2.1%20-%20Principali%20code%20di%20schedulazione).
+Ogni nuovo processo viene creato a partire da un processo già esistente: il processo creante viene detto _processo padre_ (in inglese _parent process_), mentre il nuovo processo è chiamato _processo figlio_ (in inglese _child process_). Il sistema operativo assegna al processo appena creato risorse (come spazio di memoria e tempo CPU) e lo aggiunge alla [job queue](Processi.md#3.2.1%20-%20Principali%20code%20di%20schedulazione).
 
 ## 5.1 - Fasi principali della creazione di un processo
 
 Le fasi principali della creazione di un processo sono:
-1. **Assegnazione di un PID**: ogni processo ha un identificatore univoco (solitamente rappresentato in memoria come un numero intero), noto come _Process ID_ (_PID_). Il PID fornisce un valore univoco per ogni processo del sistema e può essere usato come indice per accedere a vari attributi di un processo all'interno del kernel%%link%%.
+1. **Assegnazione di un PID**: ogni processo ha un identificatore univoco (solitamente rappresentato in memoria come un numero intero), noto come **_PID_** (_**P**rocess **ID**_). Il PID fornisce un valore univoco per ogni processo del sistema e può essere usato come indice per accedere a vari attributi di un processo all'interno del kernel%%link%%.
 2. **Allocazione delle risorse**: vengono allocate le risorse necessarie per il nuovo processo, come lo [spazio di memoria](Processi.md#2.4%20-%20Spazio%20di%20memoria), i descrittori dei file aperti dal processo padre che possono essere ereditati o copiati da lui, il tempo di CPU e così via.
 3. **Inizializzazione del contesto**: il sistema operativo crea un [PCB](Processi.md#2%20-%20Il%20PCB%20e%20le%20informazioni%20sul%20processo) per il processo figlio contenente tutte le informazioni di controllo necessarie, come lo stato del processo, i registri, i puntatori alla memoria, i file aperti e altro.
 4. **Inserimento nelle code di schedulazione**: il processo viene aggiunto alla [job queue](Processi.md#3.2.1%20-%20Principali%20code%20di%20schedulazione), cioè alla coda di schedulazione contenente tutti i processi nel sistema.
@@ -453,8 +453,8 @@ int main() {
 # 6 - Terminazione di un processo
 
 Un processo può terminare per vari motivi. Quando termina, le risorse assegnate al processo (come la memoria, i file aperti e il tempo CPU) vengono liberate dal sistema operativo. La terminazione di un processo può essere volontaria o forzata:
-- **Terminazione volontaria**: il processo completa l'esecuzione del suo codice (ad esempio, l'utente chiude un programma). Ogni processo può chiamare esplicitamente la funzione di terminazione, usando come `exit()` in Unix/Linux o `ExitProcess()` in Windows.
-- **Terminazione forzata**: un errore o un'eccezione non gestita (come una divisione per zero o un accesso in memoria non valido) può causare la terminazione forzata del processo. Il sistema operativo o un altro processo può terminare forzatamente un processo tramite chiamate di sistema (ad esempio, tramite `kill()` in UNIX o `TerminateProcess()` in Windows). Generalmente solo il processo padre del processo che si vuole terminare può invocare una chiamata di sistema di questo tipo, altrimenti gli utenti potrebbero causare arbitrariamente la terminazione forzata di processi di chiunque.
+- **Terminazione volontaria**: il processo completa l'esecuzione del suo codice (ad esempio, l'utente chiude un programma). Ogni processo può chiamare esplicitamente la funzione di terminazione, usando come `exit()` in Unix/Linux%%link%% o `ExitProcess()` in Windows.
+- **Terminazione forzata**: un errore o un'eccezione non gestita (come una divisione per zero o un accesso in memoria non valido) può causare la terminazione forzata del processo. Il sistema operativo o un altro processo può terminare forzatamente un processo tramite chiamate di sistema (ad esempio, tramite `kill()` in UNIX%%link%% o `TerminateProcess()` in Windows). Generalmente solo il processo padre del processo che si vuole terminare può invocare una chiamata di sistema di questo tipo, altrimenti gli utenti potrebbero causare arbitrariamente la terminazione forzata di processi di chiunque.
 
 ## 6.1 - Fasi principali della terminazione di un processo
 
@@ -520,7 +520,8 @@ int main() {
 Durante l'esecuzione di questo programma, si può notare che il processo figlio continua a stampare i messaggi anche dopo la terminazione del processo padre, poiché diventa un processo orfano e viene adottato da `init`. Se invece il processo padre inviasse un segnale di terminazione, come `SIGKILL` o `SIGTERM`, anche il processo figlio verrebbe terminato, mostrando un comportamento di terminazione a cascata.
 
 # 7 - Comunicazione tra processi (IPC)
-Spesso, i processi hanno bisogno di comunicare e collaborare tra di loro scambiandosi dati. La **comunicazione tra processi** (IPC, Inter-Process Communication) riguarda le tecniche e i meccanismi attraverso cui i processi di un sistema operativo, che possono essere eseguiti in parallelo o separatamente, scambiano informazioni tra loro. Ogni metodo di comunicazione tra processi ha vantaggi e svantaggi, ed è scelto in base alle esigenze specifiche di sincronizzazione, latenza, throughput e complessità dell'applicazione.
+
+Spesso, i processi hanno bisogno di comunicare e collaborare tra di loro scambiandosi dati. La **comunicazione tra processi** (in inglese _**IPC**_, _**I**nter-**P**rocess **C**ommunication_) riguarda le tecniche e i meccanismi attraverso cui i processi di un sistema operativo, che possono essere eseguiti in parallelo o separatamente, scambiano informazioni tra loro. Ogni metodo di comunicazione tra processi ha vantaggi e svantaggi, ed è scelto in base alle esigenze specifiche di sincronizzazione, latenza, throughput e complessità dell'applicazione.
 
 Le principali tecniche di comunicazione tra processi sono:
 - [**Pipe**](Pipe.md): permettono la comunicazione unidirezionale tra processi, tipicamente tra un processo padre e i suoi processi figli, trasferendo dati in modo sequenziale.

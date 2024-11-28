@@ -9,6 +9,8 @@ draft: true
 	- [Slide: gestione dei processi](https://informatica.i-learn.unito.it/mod/resource/view.php?id=253888)
 	- [Slide: gdb](https://informatica.i-learn.unito.it/mod/resource/view.php?id=254492)
 	- [Slide: i segnali](https://informatica.i-learn.unito.it/mod/resource/view.php?id=254494)
+	- [Slides (Pipe e FIFO)](https://informatica.i-learn.unito.it/mod/resource/view.php?id=254776)
+	- [Slides (code di messaggi)](https://informatica.i-learn.unito.it/mod/resource/view.php?id=255664)
 - Slide del Prof. Aldinucci
 	- [Cap_03](https://informatica.i-learn.unito.it/mod/resource/view.php?id=253884)
 - Libro di SO
@@ -18,9 +20,9 @@ draft: true
 
 - Laboratorio di SO
 	- [Videoregistrazioni dell'anno scorso](https://informatica.i-learn.unito.it/enrol/index.php?id=2714)
-	- [Esercizi sull'uso del terminale](https://informatica.i-learn.unito.it/pluginfile.php/422772/mod_resource/content/1/esercizi__1.pdf)
-	- [Slides (Pipe e FIFO)](https://informatica.i-learn.unito.it/mod/resource/view.php?id=254776)
+	- [Esercizi sull'uso del terminale](https://informatica.i-learn.unito.it/pluginfile.php/422772/mod_resource/content/1/esercizi__1.pdf) (da fare prima dell'esame)
 	- [PIPE e FIFO: esercitazione](https://informatica.i-learn.unito.it/mod/resource/view.php?id=255320)
+	- [Code di messaggi: esercitazione](https://informatica.i-learn.unito.it/mod/resource/view.php?id=255668)
 - Libro di SO
 	- Capitoli 3.7.2 e 3.7.3 (IPC su Mach e Windows)
 - https://it.wikipedia.org/wiki/Processo_(informatica)

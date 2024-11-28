@@ -4,14 +4,13 @@ title: Benvenuto nel mio Giardino Digitale
 Ciao, benvenuto nel mio Giardino Digitale (se non sai cos'è, cerca su internet cos'è un _digital garden_ (poi metterò anche qui una descrizione, aspettate)).
 Il sito è ancora _work in progress_, per questo c'è poca roba e fatta molto alla cazzo di cane. let me cook.
 
-Dato che Quartz sminchia i link alle varie pagine e ai paragrafi nelle pagine, apri i link sempre in una nuova scheda (cliccando sul link non col click sinistro ma con il middle click).
-
 - Musica
 	- Basso
 		- [so, bassically-](so,%20bassically-.md)
 
 Appunti di studio:
 - Informatica
+	- [GNU Debugger (GDB)](GNU%20Debugger%20(GDB).md)
 	- [Algoritmica](Algoritmica.md)
 	- [Sistemi operativi](Sistemi%20operativi.md)
 		- [Processi](Processi.md)
@@ -30,3 +29,6 @@ Progetti/collettivi/gruppi/robe di cui faccio parte:
 
 Roba passata:
 - Ponti Sospesi
+
+Roba da aggiustare:
+- Il layout del sito (Quartz è abbastanza buggato sotto questo punto di vista)

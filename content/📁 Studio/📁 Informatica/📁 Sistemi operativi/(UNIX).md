@@ -1,5 +1,5 @@
 ---
-draft: false
+draft: true
 ---
 UNIX%% ([pronuncia]: `/ˈjuːnɪks/`)%% è un [sistema operativo](Sistemi%20operativi.md) sviluppato originariamente nei laboratori Bell di AT&T, una delle più grandi aziende di telecomunicazioni al mondo, tra gli anni '60 e '70. UNIX ha influenzato profondamente lo sviluppo di molti altri sistemi operativi, come Linux%%link%%, BSD%%link%% e macOS%%link%%. Le sue caratteristiche principali includono un design modulare, in cui ogni programma esegue una funzione specifica e può essere combinato con altri programmi tramite la riga di comando.
 

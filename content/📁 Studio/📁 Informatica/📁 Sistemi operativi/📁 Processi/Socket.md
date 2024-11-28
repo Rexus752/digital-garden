@@ -1,8 +1,8 @@
 I **socket** sono un meccanismo di [comunicazione tra processi](Processi.md#7%20-%20Comunicazione%20tra%20processi%20(IPC)) che consentono a due o più processi di comunicare tra loro sia all'interno dello stesso sistema sia su sistemi diversi tramite rete. Nella comunicazione tra processi, i socket più utilizzati sono quelli di [dominio UNIX](Socket.md#1.2%20-%20Famiglie%20di%20socket) %%cambiare link poi quando farò sezione specifica per dominio UNIX%%e quelli di [dominio Internet (IPv4 o IPv6)](Socket.md#3%20-%20Internet%20socket), e l'uso varia a seconda del tipo di applicazione e delle esigenze di comunicazione.
 
-# 1 - Principali caratteristiche dei socket
+# 1 - Caratteristiche principali dei socket
 
-Le principali caratteristiche dei socket sono:
+Le caratteristiche principali dei socket sono:
 - [**Half-duplex e full-duplex**](Socket.md#1.1%20-%20Half-duplex%20e%20full-duplex): i socket possono supportare la comunicazione bidirezionale alternata ([half-duplex](Socket.md#1.1.1%20-%20Half-duplex)) o bidirezionale simultanea ([full-duplex](Socket.md#1.1.2%20-%20Full-duplex)), in cui i dati possono essere inviati e ricevuti rispettivamente solo in una direzione alla volta oppure in entrambe contemporaneamente.
 - [**Famiglia di socket**](Socket.md#1.2%20-%20Famiglie%20di%20socket): è un raggruppamento di socket che utilizzano gli stessi protocolli sottostanti, supporta un sottoinsieme di stili di comunicazione e possiede un proprio formato di indirizzamento.
 - [**Tipo di socket**](Socket.md#1.3%20-%20Tipo%20di%20socket): definisce come i dati vengono trasmessi attraverso il socket e determina le modalità di comunicazione tra i dispositivi.
