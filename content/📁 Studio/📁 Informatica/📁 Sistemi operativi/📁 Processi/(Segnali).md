@@ -1,7 +1,7 @@
 ---
 draft: true
 ---
-I **segnale** sono un meccanismo di [comunicazione tra processi](Processi.md#7%20-%20Comunicazione%20tra%20processi%20(IPC)) utilizzato per notificare a un processo l'occorrenza di un evento specifico, come un errore, un'interruzione dell'utente o un'operazione speciale. I segnali vengono spesso utilizzati per gestire eventi imprevisti o per controllare il comportamento dei processi.
+I **segnali** sono un meccanismo di [comunicazione tra processi](Processi.md#7%20-%20Comunicazione%20tra%20processi%20(IPC)) utilizzato per notificare a un processo l'occorrenza di un evento specifico, come un errore, un'interruzione dell'utente o un'operazione speciale. I segnali vengono spesso utilizzati per gestire eventi imprevisti o per controllare il comportamento dei processi.
 
 Fra i tipi di eventi che causano il fatto che il kernel generi un segnale per un processo ci sono i seguenti:
 - È occorsa una eccezione hardware, l'hardware ha verificato una condizione di errore che è stata notificata al kernel, il quale a propria volta ha inviato un segnale corrispondente al processo in questione.
@@ -10,6 +10,68 @@ Fra i tipi di eventi che causano il fatto che il kernel generi un segnale per un
 	- questi caratteri includono il carattere interrupt (normalmente associato a `CTRL + C`) e il suspend carattere (`CTRL + Z`).
 - È occorso un evento software.
 	- per esempio, l'input è divenuto disponibile su un descrittore di file, un timer è arrivato a 0, il tempo di processore per il processo è stato superato, o un figlio del processo è terminato.
+
+%%
+I segnali nei sistemi operativi sono notifiche software che un processo invia a un altro (o a se stesso) per comunicare eventi o per richiedere specifiche azioni. Sono fondamentali nei sistemi Unix-like, come Linux, e fanno parte della gestione dei processi. Di seguito una panoramica:
+
+### 1. **Cos'è un segnale?**
+
+Un segnale è un meccanismo per notificare eventi asincroni a un processo. Può essere generato dall'utente, dal kernel o da un altro processo. Quando un processo riceve un segnale, può:
+
+- Eseguire un gestore (handler) specifico per quel segnale.
+- Ignorare il segnale (se permesso).
+- Terminare o essere interrotto (comportamento predefinito per molti segnali).
+
+---
+
+### 2. **Tipi di segnali comuni**
+
+- **SIGKILL (9):** Termina immediatamente un processo; non può essere ignorato o gestito.
+- **SIGTERM (15):** Richiede al processo di terminare; può essere gestito o ignorato.
+- **SIGINT (2):** Interrompe un processo, ad esempio premendo `Ctrl+C`.
+- **SIGHUP (1):** Notifica la chiusura di un terminale o richiede la ricarica della configurazione.
+- **SIGSTOP (19):** Sospende un processo; non può essere ignorato.
+- **SIGCONT (18):** Riprende un processo sospeso.
+- **SIGSEGV (11):** Segnale di segmentazione; si verifica in caso di accesso non valido alla memoria.
+- **SIGALRM (14):** Notifica la scadenza di un timer impostato dal processo.
+
+---
+
+### 3. **Gestione dei segnali in un programma**
+
+In C, la funzione `signal()` o la più moderna `sigaction()` può essere utilizzata per impostare un gestore personalizzato per un segnale.
+
+Esempio di gestione di un segnale (`SIGINT`):
+
+```c
+#include <stdio.h>
+#include <signal.h>
+
+void handle_signal(int sig) {
+    printf("Segnale ricevuto: %d\n", sig);
+}
+
+int main() {
+    signal(SIGINT, handle_signal); // Associa SIGINT al gestore
+    while (1) {
+        printf("In esecuzione...\n");
+        sleep(1);
+    }
+    return 0;
+}
+```
+
+---
+
+### 4. **Interazione tramite terminale**
+
+I segnali possono essere inviati ai processi usando il comando `kill` o shortcut come `Ctrl+C`:
+
+- `kill -SIGTERM <PID>`: Invia SIGTERM al processo con ID `<PID>`.
+- `kill -9 <PID>`: Invia SIGKILL per terminare forzatamente un processo.
+
+Se hai domande specifiche o vuoi esempi dettagliati, fammi sapere! 😊
+%%
 
 # Nomi simbolici e codici
 

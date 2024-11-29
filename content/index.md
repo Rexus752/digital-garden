@@ -13,6 +13,8 @@ Appunti di studio:
 	- [GNU Debugger (GDB)](GNU%20Debugger%20(GDB).md)
 	- [Algoritmica](Algoritmica.md)
 	- [Sistemi operativi](Sistemi%20operativi.md)
+		- [UNIX](UNIX.md)
+			- [Account in UNIX](Account%20in%20UNIX.md)
 		- [Processi](Processi.md)
 			- [Pipe](Pipe.md)
 			- [Code di messaggi](Code%20di%20messaggi.md)
