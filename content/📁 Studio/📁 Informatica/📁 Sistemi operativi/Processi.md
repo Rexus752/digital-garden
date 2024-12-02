@@ -523,6 +523,14 @@ Durante l'esecuzione di questo programma, si può notare che il processo figlio 
 
 Spesso, i processi hanno bisogno di comunicare e collaborare tra di loro scambiandosi dati. La **comunicazione tra processi** (in inglese _**IPC**_, _**I**nter-**P**rocess **C**ommunication_) riguarda le tecniche e i meccanismi attraverso cui i processi di un sistema operativo, che possono essere eseguiti in parallelo o separatamente, scambiano informazioni tra loro. Ogni metodo di comunicazione tra processi ha vantaggi e svantaggi, ed è scelto in base alle esigenze specifiche di sincronizzazione, latenza, throughput e complessità dell'applicazione.
 
+%%
+Le tecniche di comunicazione tra processi si dividono nelle seguenti tre categorie:
+- **Tecniche di scambio di dati**: tecniche utilizzate per lo scambio di dati fra processi.
+- **Tecniche di sincronizzazione**: tecniche utilizzate per sincronizzare le azioni dei processi in comunicazione.
+- **Segnali**: sebbene i segnali siano nati prevalentemente con altri fini, in alcune circostanze possono essere utilizzati come strumenti di sincronizzazione (wut?)
+![](Pasted%20image%2020241125115917.png)
+%%
+
 Le principali tecniche di comunicazione tra processi sono:
 - [**Pipe**](Pipe.md): permettono la comunicazione unidirezionale tra processi, tipicamente tra un processo padre e i suoi processi figli, trasferendo dati in modo sequenziale.
 - [**Code di messaggi**](Code%20di%20messaggi.md): consentono a più processi di scambiarsi informazioni tramite messaggi strutturati, inviati a una coda condivisa; questa tecnica è particolarmente adatta per la comunicazione asincrona.

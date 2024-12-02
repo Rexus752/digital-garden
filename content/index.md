@@ -15,6 +15,7 @@ Appunti di studio:
 	- [Sistemi operativi](Sistemi%20operativi.md)
 		- [UNIX](UNIX.md)
 			- [Account in UNIX](Account%20in%20UNIX.md)
+			- [Permessi in UNIX](Permessi%20in%20UNIX.md)
 		- [Processi](Processi.md)
 			- [Pipe](Pipe.md)
 			- [Code di messaggi](Code%20di%20messaggi.md)

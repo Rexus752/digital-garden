@@ -1,12 +1,6 @@
 ---
 draft: true
 ---
-I vari strumenti che UNIX offre per la comunicazione e la sincronizzazione possono essere suddivisi in tre ampie categorie funzionali:
-- Comunicazione: facilities utilizzate per lo scambio di dati fra processi.
-- Sincronizzazione: facilities utilizzate per sincronizzare le azioni dei processi.
-- Segnali: sebbene i segnali siano nati prevalentemente con altri fini, in alcune circostanze possono essere utilizzati come strumenti di sincronizzazione
-
-![](Pasted%20image%2020241125115917.png)
 
 # Communication facilities
 
