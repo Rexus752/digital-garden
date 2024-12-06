@@ -23,6 +23,7 @@ Appunti di studio:
 			- [Socket](Socket.md)
 			- [Chiamate di procedure remote (RPC)](Chiamate%20di%20procedure%20remote%20(RPC).md)
 			- [Thread](Thread.md)
+			- [Segnali](Segnali.md)
 
 Progetti/collettivi/gruppi/robe di cui faccio parte:
 - PoliTeK

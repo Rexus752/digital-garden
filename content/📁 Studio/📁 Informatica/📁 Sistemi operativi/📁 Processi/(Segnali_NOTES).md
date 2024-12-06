@@ -1,7 +1,36 @@
 ---
 draft: true
 ---
-I **segnali** sono un meccanismo di [comunicazione tra processi](Processi.md#7%20-%20Comunicazione%20tra%20processi%20(IPC)) utilizzato per notificare a un processo l'occorrenza di un evento specifico, come un errore, un'interruzione dell'utente o un'operazione speciale. I segnali vengono spesso utilizzati per gestire eventi imprevisti o per controllare il comportamento dei processi.
+
+%%
+
+### **3. Come Vengono Inviati i Segnali**
+Un segnale può essere inviato in vari modi:
+- **Invio da parte di un altro processo**: Utilizzando il comando `kill`, il quale permette di inviare segnali a un processo specificando il suo PID (Process ID).
+    
+    ```bash
+    kill -9 1234   # Invia SIGKILL al processo con PID 1234
+    ```
+    
+- **Invio dal kernel**: Ad esempio, se un processo tenta di accedere a memoria non valida, il kernel invia automaticamente un `SIGSEGV`.
+- **Invio da se stessi**: Un processo può inviare segnali a se stesso per altre operazioni, come il controllo della propria esecuzione.
+
+### **7. Segnali e Processo di Terminazione**
+
+Quando un processo riceve un segnale, può:
+
+- Terminare immediatamente se il segnale è uno di quelli che terminano il processo (come `SIGKILL` o `SIGTERM`).
+- Eseguire una funzione di gestione se il segnale è catturato.
+- Ignorare il segnale se è configurato per farlo.
+
+### 4. **Interazione tramite terminale**
+
+I segnali possono essere inviati ai processi usando il comando `kill` o shortcut come `Ctrl+C`:
+
+- `kill -SIGTERM <PID>`: Invia SIGTERM al processo con ID `<PID>`.
+- `kill -9 <PID>`: Invia SIGKILL per terminare forzatamente un processo.
+%%
+
 
 Fra i tipi di eventi che causano il fatto che il kernel generi un segnale per un processo ci sono i seguenti:
 - È occorsa una eccezione hardware, l'hardware ha verificato una condizione di errore che è stata notificata al kernel, il quale a propria volta ha inviato un segnale corrispondente al processo in questione.
@@ -10,83 +39,6 @@ Fra i tipi di eventi che causano il fatto che il kernel generi un segnale per un
 	- questi caratteri includono il carattere interrupt (normalmente associato a `CTRL + C`) e il suspend carattere (`CTRL + Z`).
 - È occorso un evento software.
 	- per esempio, l'input è divenuto disponibile su un descrittore di file, un timer è arrivato a 0, il tempo di processore per il processo è stato superato, o un figlio del processo è terminato.
-
-%%
-I segnali nei sistemi operativi sono notifiche software che un processo invia a un altro (o a se stesso) per comunicare eventi o per richiedere specifiche azioni. Sono fondamentali nei sistemi Unix-like, come Linux, e fanno parte della gestione dei processi. Di seguito una panoramica:
-
-### 1. **Cos'è un segnale?**
-
-Un segnale è un meccanismo per notificare eventi asincroni a un processo. Può essere generato dall'utente, dal kernel o da un altro processo. Quando un processo riceve un segnale, può:
-
-- Eseguire un gestore (handler) specifico per quel segnale.
-- Ignorare il segnale (se permesso).
-- Terminare o essere interrotto (comportamento predefinito per molti segnali).
-
----
-
-### 2. **Tipi di segnali comuni**
-
-- **SIGKILL (9):** Termina immediatamente un processo; non può essere ignorato o gestito.
-- **SIGTERM (15):** Richiede al processo di terminare; può essere gestito o ignorato.
-- **SIGINT (2):** Interrompe un processo, ad esempio premendo `Ctrl+C`.
-- **SIGHUP (1):** Notifica la chiusura di un terminale o richiede la ricarica della configurazione.
-- **SIGSTOP (19):** Sospende un processo; non può essere ignorato.
-- **SIGCONT (18):** Riprende un processo sospeso.
-- **SIGSEGV (11):** Segnale di segmentazione; si verifica in caso di accesso non valido alla memoria.
-- **SIGALRM (14):** Notifica la scadenza di un timer impostato dal processo.
-
----
-
-### 3. **Gestione dei segnali in un programma**
-
-In C, la funzione `signal()` o la più moderna `sigaction()` può essere utilizzata per impostare un gestore personalizzato per un segnale.
-
-Esempio di gestione di un segnale (`SIGINT`):
-
-```c
-#include <stdio.h>
-#include <signal.h>
-
-void handle_signal(int sig) {
-    printf("Segnale ricevuto: %d\n", sig);
-}
-
-int main() {
-    signal(SIGINT, handle_signal); // Associa SIGINT al gestore
-    while (1) {
-        printf("In esecuzione...\n");
-        sleep(1);
-    }
-    return 0;
-}
-```
-
----
-
-### 4. **Interazione tramite terminale**
-
-I segnali possono essere inviati ai processi usando il comando `kill` o shortcut come `Ctrl+C`:
-
-- `kill -SIGTERM <PID>`: Invia SIGTERM al processo con ID `<PID>`.
-- `kill -9 <PID>`: Invia SIGKILL per terminare forzatamente un processo.
-
-Se hai domande specifiche o vuoi esempi dettagliati, fammi sapere! 😊
-%%
-
-# Nomi simbolici e codici
-
-I segnali sono definiti con interi unici, la cui sequenza inizia da `1`. Tali interi sono definiti in `<signal.h>` (o in `<sys/signal.h>`) con nomi simbolici della forma `SIG****`.
-
-Poiché gli effettivi numeri utilizzati per ogni segnale variano a seconda delle implementazioni, all'interno dei programmi è meglio utilizzare questi nomi.
-Per esempio, quando l'utente digita il carattere dell'interrupt, SIGINT (il segnale numero 2) è inviato a un processo.
-
-![](Pasted%20image%2020241123125216.png)
-
-| Name | Function                                                    | Character  |
-| ---- | ----------------------------------------------------------- | ---------- |
-| intr | Terminates the current job                                  | `CTRL + C` |
-| quit | Terminates the current job and makes a core file            | `CTRL + \` |
-| susp | Stops the current job (so you can put it in the background) | `CTRL + Z` |
 
 # Ciclo di vita dei segnali
 
@@ -110,24 +62,6 @@ Al momento della ricezione di un segnale, un processo continua con una delle seg
 	- Un file con core dump contiene un'immagine della memoria virtuale del processo; tale immagine può essere caricata in un debugger per ispezionare lo stato del processo al momento della terminazione.
 - Il processo viene bloccato (stopped): l'esecuzione è in questo caso sospesa.
 - L'esecuzione del processo è ripresa (resumed) dopo essere stata bloccata in precedenza.
-
-# Il sistema di segnali in Unix
-
-## Le trap
-
-Una classe di segnali sono le trap: segnali generati da eventi prodotti da un processo e inviati al processo stesso. Alcune trap sono causate da comportamenti errati del processo stesso, e immediatamente inviate al processo che normalmente reagisce terminando.
-
-Per esempio tentativi di divisione per zero (`SIGFPE`), indirizzamento errato degli array (`SIGSEGV`), tentativo di eseguire istruzioni privilegiate (`SIGILL`), ecc.
-
-## Gli interrupt
-
-Gli interrupt sono segnali inviati ad un processo da un agente esterno: l’utente o un altro processo
-Utente:
-- CTRL-C (invia SIGINT)
-- CTRL-Z (invia SIGSTOP)
-- Comando kill: `kill –s SIGNAL PID`
-Altro processo:
-- System call kill: `kill(PID, SIGNAL)`
 
 # Impostare l’handler del segnale
 
@@ -488,7 +422,8 @@ Esercizio:
 	- se il numero è maggiore o minore di quello estratto casualmente, viene stampato a video la scritta “maggiore” o “minore”, rispettivamente.
 - Se il giocatore non indovina entro argv[2] secondi (da realizzare con alarm e gestendo il segnale SIGALRM), il programma stampa a video “tempo scaduto”, ed esce.
 
-%%
+---
+
 ### Caratteristiche principali:
 
 1. **Asincronia**: I segnali possono essere inviati a un processo in qualsiasi momento.
@@ -522,9 +457,3 @@ La libreria standard di C offre funzioni per gestire i segnali, come:
 - Sincronizzazione tra processi.
 - Gestione degli errori (es. chiusura di risorse su errore).
 - Debugging (es. gestione di segfault con SIGSEGV).
-%%
-
-# Fonti
-
-- Slide del Prof. Schifanella Claudio del corso di Laboratorio di Sistemi Operativi (canale B, turno T4), Corso di Laurea in Informatica presso l'Università di Torino, A.A. 2024-25:
-	- [Slide: i segnali](https://informatica.i-learn.unito.it/mod/resource/view.php?id=254494)
