@@ -1,6 +1,6 @@
 UNIX%% ([pronuncia]: `/ˈjuːnɪks/`)%% è un [sistema operativo](Sistemi%20operativi.md) sviluppato originariamente nei laboratori Bell di AT&T, una delle più grandi aziende di telecomunicazioni al mondo, tra gli anni '60 e '70. UNIX ha influenzato profondamente lo sviluppo di molti altri sistemi operativi, come Linux%%link%%, BSD%%link%% e macOS%%link%%. Le sue caratteristiche principali includono un design modulare, in cui ogni programma esegue una funzione specifica e può essere combinato con altri programmi tramite la riga di comando.
 
-# Terminologia di UNIX
+# 1 - Terminologia di UNIX
 
 Oggi, molto più spesso, con il termine _UNIX_ si fa riferimento non più al sistema operativo UNIX sviluppato da AT&T, ma a una famiglia di sistemi operativi certificati per essere conformi agli standard ufficiali POSIX, stabiliti per mantenere una certa compatibilità con l'originale UNIX. Alcuni esempi di questi sistemi sono macOS%%link%% e AIX (di IBM).
 
@@ -31,7 +31,7 @@ rimuovere gli `\` dalla seconda riga nel diagramma
 ```
 %%
 
-# Filosofia di UNIX
+# 2 - Filosofia di UNIX
 
 La filosofia di UNIX comprende un insieme di principi e idee che guidano il design e l'uso dei sistemi operativi della famiglia UNIX, caratterizzati da semplicità, modularità e potenza. Questi principi, emersi negli anni '70 con lo sviluppo del sistema UNIX nei Bell Labs, hanno influenzato non solo i sistemi UNIX-like (come Linux e BSD) ma anche la progettazione del software in generale.
 
@@ -81,7 +81,7 @@ Ogni programma dovrebbe essere scritto in modo che possa essere utilizzato come 
 Invece di progettare un sistema monolitico, Unix si basa sull'evoluzione incrementale: si aggiungono solo le funzionalità strettamente necessarie.
 %%
 
-# POSIX
+# 3 - POSIX
 
 **POSIX** (acronimo di _**P**ortable **O**perating **S**ystem **I**nterface for UNI**X**_) è una famiglia di standard definiti dall'IEEE%%link%% (denominati formalmente _IEEE 1003_) per definire un'interfaccia standard per i sistemi della famiglia UNIX, permettendo agli sviluppatori di scrivere software che può essere facilmente eseguito su piattaforme diverse.
 

@@ -5,162 +5,160 @@ I permessi di un file o di una directory si possono configurare su tre distinte 
 - **Gruppo** (in inglese **_group_**): gli utenti appartenenti allo stesso gruppo a cui appartiene il file.
 - **Altri** (in inglese **_others_**): tutti gli altri utenti che non rientrano nelle due categorie precedenti.
 
-# Tipi di permessi
+# 1 - Tipi di permessi
 
 I tre tipi di permessi che si possono assegnare a un file o una directory sono:
 - **Lettura**: permette di leggere il contenuto del file o, per una directory, di elencarne i contenuti.
 - **Scrittura**: consente di modificare il file o, per una directory, aggiungere/eliminare file.
 - **Esecuzione**: permette di eseguire un file o accedere a una directory.
 
-## Rappresentazione dei permessi
+# 2 - Rappresentazione dei permessi
 
 All'interno di UNIX, ognuno dei tre tipi di permessi è rappresentato da una singola lettera dell'alfabeto:
-- **Lettura**: rappresentato con la `r` (da _**r**ead_);
-- **Scrittura**: rappresentato con la `w` (da _**w**rite_);
+- **Lettura**: rappresentato con la `r` (da _**r**ead_).
+- **Scrittura**: rappresentato con la `w` (da _**w**rite_).
 - **Esecuzione**: rappresentato con la `x` (da _e**x**ecute_).
 
 Questi caratteri sono usati per rappresentare l'insieme dei permessi di un file o di una directory attraverso un'unica stringa di 10 caratteri, suddivisa nei seguenti 4 blocchi:
 $$
 \color{Red}{X}\color{Orange}{XXX}\color{Green}{XXX}\color{Blue}{XXX}
 $$
+dove:
 - $\color{Red}{X}$: indica il tipo di file:
 	- **`-`**: file normale.
     - **`d`**: directory.
     - **`l`**: link simbolico.
-- $\color{Orange}{XXX}$: permessi per il proprietario (_owner_);
-- $\color{Green}{XXX}$: permessi per il gruppo (_group_);
-- $\color{Blue}{XXX}$: permessi per gli altri (_others_).
+- $\color{Orange}{XXX}$: permessi per il proprietario (detto _owner_).
+- $\color{Green}{XXX}$: permessi per il gruppo (detto _group_).
+- $\color{Blue}{XXX}$: permessi per gli altri (detti _others_).
 
 In particolare, nelle triple di caratteri $XXX$ che identificano i permessi di _owner_, _group_ e _others_:
-- Il primo carattere rappresenta il permesso di **lettura** (`r` se il permesso è abilitato, `-` altrimenti);
-- Il secondo carattere rappresenta il permesso di **scrittura** (`w` se il permesso è abilitato, `-` altrimenti);
+- Il primo carattere rappresenta il permesso di **lettura** (`r` se il permesso è abilitato, `-` altrimenti).
+- Il secondo carattere rappresenta il permesso di **scrittura** (`w` se il permesso è abilitato, `-` altrimenti).
 - Il terzo carattere rappresenta il permesso di **esecuzione** (`x` se il permesso è abilitato, `-` altrimenti).
 
 > [!esempio] Esempio
-> 
-> Si consideri la seguente stringa.
->
+> Un esempio di rappresentazione dei permessi di una directory è il seguente:
 > ```
 > drwxr-xr--
 > ```
+> dove:
+> - **`d`**: indica che si tratta di una directory.
+> - **`rwx`**: indica i permessi del proprietario, quindi il proprietario ha permesso di lettura, scrittura ed esecuzione.
+> - **`r-x`**: indica i permessi del gruppo, quindi i componenti del gruppo possono leggere e aprire la cartella, ma non modificarla, perché il permesso di scrittura è disabilitato con il `-`.
+> - **`r--`**: indica i permessi degli altri, quindi gli altri hanno solamente il permesso di lettura.
+
+# 3 - Modifica dei permessi
+
+In UNIX, la **modifica dei permessi** dei file e delle directory può essere effettuata utilizzando i seguenti comandi:
+- [**`chmod`**](Permessi%20in%20UNIX.md#3.1%20-%20Comando%20`chmod`): consente di modificare i permessi del file o della directory.
+- [**`chown`**](Permessi%20in%20UNIX.md#3.2%20-%20Comando%20`chown`): consente di modificare il proprietario del file o della directory.
+- [**`chgrp`**](Permessi%20in%20UNIX.md#3.3%20-%20Comando%20`chgrp`): consente di modificare il gruppo di appartenenza del file o della directory.
+
+L'uso di questi comandi è riservato solamente:
+- All'**account root**%%link%%, che può modificare i permessi, il proprietario e il gruppo di qualsiasi file o directory senza restrizioni (o, allo stesso modo, un utente con privilegi speciali%%link%%).
+- Al **proprietario** del file o della directory, che può solamente utilizzare il comando `chmod`.
+Quindi, un utente comune non può modificare i permessi, ma solamente utilizzare i file o le directory secondo quelli già stabiliti.
+
+## 3.1 - Comando `chmod`
+
+Il **comando `chmod`** (dall'inglese _**ch**ange **mod**e_) modifica i permessi di lettura, scrittura ed esecuzione di _owner_, _group_ e _others_. La sintassi del comando è la seguente:
+```shell
+chmod <modalità> <file/directory>
+```
+dove:
+- **`<modalità>`**: rappresentazione dei nuovi permessi da applicare al file o alla directory attraverso la [modalità simbolica](Permessi%20in%20UNIX.md#3.1.1%20-%20Modalità%20simbolica) o la [modalità numerica](Permessi%20in%20UNIX.md#3.1.2%20-%20Modalità%20numerica).
+- **`<file/directory>`**: il percorso al file o alla directory a cui applicare i nuovi permessi.
+
+### 3.1.1 - Modalità simbolica
+
+Nella **modalità simbolica**, per rappresentare i permessi si usano lettere e simboli:
+- **`u`**: per indicare il proprietario del file o della directory (da _**u**ser_).
+- **`g`**: per indicare il gruppo a cui appartiene il file o la directory (da _**g**roup_).
+- **`o`**: per indicare gli altri (da _**o**thers_).
+- **`a`**: per indicare i permessi di tutte e tre le categorie contemporaneamente (da _**a**ll_).
+- **`+`**: per aggiungere nuovi permessi oltre a quelli già esistenti.
+- **`-`**: per rimuovere dei permessi già esistenti.
+- **`=`**: per reimpostare nuovi permessi (sovrascrivendo quelli precedenti).
+
+> [!esempio] Esempio
+> 
+> Si consideri il seguente comando.
+>
+> ```shell
+> chmod u+w, g=rx, o-r file.txt
+> ```
 > 
 > Si può dedurre che:
-> - Si tratta di una cartella, in quanto il primo carattere è una `d`;
-> - I permessi del proprietario sono `rwx`, quindi il proprietario ha permesso di lettura, scrittura ed esecuzione;
-> - I permessi del gruppo sono `r-x`, quindi i componenti del gruppo possono leggere e aprire la cartella;
-> - I permessi degli altri sono `r--`, quindi hanno solo il permesso di lettura.
+> - **`u+w`**: viene aggiunto (`+`) il permesso di scrittura (`w`) all'utente proprietario del file (`u`);
+> - **`g=rx`**: vengono reimpostati (`=`) solamente i permessi di lettura (`r`) e di esecuzione (`x`) del file per il gruppo (`g`);
+> - **`o-r`**: viene rimosso (`-`) il permesso di lettura (`r`) al file per gli altri (`o`). 
 
-%%
-### Modifica dei permessi:
+### 3.1.2 - Modalità numerica
 
-1. **Comando `chmod`**:
-    
-    - Modalità simbolica:
-        
-        ```bash
-        chmod u+rwx,g+rx,o+r file.txt
-        ```
-        
-        (aggiunge permessi al proprietario, gruppo e altri).
-    - Modalità numerica (ottale):
-        
-        ```bash
-        chmod 755 file.txt
-        ```
-        
-        Dove:
-        - `7` = lettura (4) + scrittura (2) + esecuzione (1).
-        - `5` = lettura (4) + esecuzione (1).
-2. **Modifica della proprietà**:
-    
-    - Proprietario: `chown utente file.txt`
-    - Gruppo: `chgrp gruppo file.txt`
+Nella **modalità numerica**, per rappresentare i permessi si usano triple di cifre ottali (quindi da `0` a `7`) per rappresentare rispettivamente i permessi di _owner_, _group_ e _others_. Le cifre ottali vengono rappresentate in binario ognuna da tre bit:
+$$
+\color{Red}{X}\color{Green}{X}\color{Blue}{X}
+$$
+dove:
+- $\color{Red}{X}$: permesso di lettura (`1` se abilitato, `0` altrimenti).
+- $\color{Green}{X}$: permesso di scrittura (`1` se abilitato, `0` altrimenti).
+- $\color{Blue}{X}$: permesso di esecuzione (`1` se abilitato, `0` altrimenti).
+Questa combinazione di tre bit viene convertita in decimale (ecco perché può assumere valori da $0_{10}=000_{2}$ a $7_{10}=111_{2}$) e rappresenta i permessi della singola categoria di ogni gruppo
 
-Conoscere e gestire i permessi è cruciale per la sicurezza e l'organizzazione dei file in un sistema Unix.
+> [!esempio] Esempio
+> 
+> Si consideri il seguente comando.
+>
+> ```shell
+> chmod 752 file.txt
+> ```
+> 
+> Si può dedurre che:
+> - **`7`** (in binario ${\color{Red}1}{\color{Green}1}{\color{Blue}1}_2$): per il proprietario saranno abilitati i permessi di scrittura ($\color{Red}1$), i permessi di lettura ($\color{Green}1$) e i permessi di esecuzione del file ($\color{Blue}1$).
+> - **`5`** (in binario ${\color{Red}1}{\color{Green}0}{\color{Blue}1}_2$): per il gruppo saranno abilitati i permessi di scrittura ($\color{Red}1$) e i permessi di esecuzione del file ($\color{Blue}1$), ma non i permessi di lettura ($\color{Green}0$).
+> - **`2`** (in binario ${\color{Red}0}{\color{Green}1}{\color{Blue}0}_2$): per gli altri saranno abilitati solamente i permessi di lettura ($\color{Green}1$).
 
-- Generally, the files that the user owns are ones that he created, or which were created as a result of some action on his part.
-	- The exception to this, of course, is the superuser, also known as root.
-	- The superuser can change the ownership of any file, whether he created it or not, with the chown command. For example, if the superuser gives the command
-		```
-		chown jane /home/bill/billsfile
-		```
-- la proprietà del file `/home/bill/billsfile` viene trasferita all'utente `jane`.
-%%
+## 3.2 - Comando `chown`
 
-%%
-# Proprietà dei file
+Il **comando `chown`** (dall'inglese _**ch**ange **own**er_) modifica l'utente proprietario di un file o di una directory. La sintassi del comando è la seguente:
 
-La **proprietà dei file** è un meccanismo che definisce chi controlla un file o una directory, in modo da gestirne i permessi e, conseguentemente, chi può interagirci o meno. Ogni file ha tre livelli di proprietà:
+```bash
+chown <utente> <file/directory>
+```
+
+dove:
+- **`<utente>`**: è il nome dell'utente che si vuole impostare come nuovo proprietario del file o della directory.
+- **`<file/directory>`**: il percorso al file o alla directory a cui si vuole cambiare il proprietario.
+
+Opzionalmente, si può anche cambiare contemporaneamente sia l'utente proprietario che il gruppo di appartenenza del file o della directory:
+```shell
+chown <utente>:<gruppo> <file/directory>
+```
+
+## 3.3 - Comando `chgrp`
+
+Il **comando `chgrp`** (dall'inglese _**ch**ange **gr**ou**p**_) modifica il gruppo di appartenenza di un file o di una directory. La sintassi del comando è la seguente:
 
 ```shell
-chown jane /home/bill/billsfile  
+chgrp <gruppo> <file/directory>
 ```
 
-L'account root%\%link%\% può cambiare la proprietà di qualsiasi file con il comando `chown`, indipendentemente da chi sia il proprietario originale.
-
-Generalmente, i file che un utente possiede sono quelli che ha creato o che sono stati creati a seguito di un'azione da parte sua.
-- L'eccezione a questa regola è il superutente, noto anche come root.
-- Il superutente può modificare la proprietà di qualsiasi file, indipendentemente dal fatto che l'abbia creato o meno, utilizzando il comando `chown`. Ad esempio, se il superutente esegue il comando:
-%%
+dove:
+- **`<gruppo>`**: è il nome del gruppo che si vuole impostare come nuovo gruppo di appartenenza del file o della directory.
+- **`<file/directory>`**: il percorso al file o alla directory a cui si vuole cambiare il gruppo.
 
 %%
-### File Permissions
+### 5. **Permessi speciali**
 
-- As the owner of a file, a user has a right to decide who can access a file, and what kind of access others can have.
-- There are three kinds of file permission:
-	- Read (file can be viewed)
-	- Write (file can be edited)
-	- Execute (file can be run as a program)
-- there are three categories of users to whom these permissions can be applied:
-	- User (owner of that particular file)
-	- Group (group to which the file is assigned)
-	- All (all users and groups)
-- When you define permissions for a given file, you must assign a type of permission to each category (u,g,o) of users.
-	- If you are writing a program, you probably want to give yourself read, write, and execute permission.
-	- If you are working with a team, you might want to have your system administrator create a group for the team.
-		- You can then give the team read and execute permissions so they can test your program and make suggestions but not be able to edit the file.
+- **Setuid (`s`):** Esegui il file come proprietario.
+- **Setgid (`s`):** File eseguito con il gruppo proprietario o directory con ereditarietà dei permessi.
+- **Sticky bit (`t`):** Solo il proprietario può eliminare file in una directory.
 
-How to Read a Permissions List
-- use the `ls -l` command, and the permission information is printed as part of a directory listing.
-- from left to right, the columns show file permissions, UID, username, group name, file size, timestamp, and filename
-- The string of characters on the left displays all the permission information for each file.
-- The permission information consists of nine characters, beginning with the second character from the left.
-- The first three characters represent the permission for the user, the second three for the group, and the final set of three represents permission for all.
+Esempio per sticky bit:
 
-| Permission      | Applied to a Directory                                                         | Applied to Any Other Type of File                                                                                                        |
-| --------------- | ------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| **read (r)**    | Grants the capability to read the contents of the directory or subdirectories. | Grants the capability to view the file.                                                                                                  |
-| **write (w)**   | Grants the capability to create, modify, or remove files or subdirectories.    | Grants write permissions, allowing an authorized entity to modify the file, such as by adding text to a text file, or deleting the file. |
-| **execute (x)** | Grants the capability to enter the directory.                                  | Allows the user to "run" the program.                                                                                                    |
-| **-**           | No permission.                                                                 | No permission.                                                                                                                           |
-
-Esempio: `-rwxr-xr--`
-
-| Characters                | Apply to                                      | Definition                                                                                                                                                                                                                                     |
-| ------------------------- | --------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **rwx** (characters 2–4)  | The owner (known as user in Unix) of the file | The **owner** of the file has read (or view), write, and execute permission to the file.                                                                                                                                                       |
-| **r-x** (characters 5–7)  | The group to which the file belongs           | The users in the **owning group** (users) can read the file and execute the file if it has executable components (commands, and so forth). The group does not have write permission: the "-" character fills the space of a denied permission. |
-| **r--** (characters 8–10) | Everyone else (others)                        | **Anyone else** with a valid login to the system can only read the file: write and execute permissions are denied (--).                                                                                                                        |
-%%
-
-%%
-### Changing permissions
-
-- To change file or directory permissions, you use the chmod (change mode) command. There are two ways to use chmod: symbolic mode and absolute mode.
-- In symbolic mode, + (or -) adds (pr removes) the designated permission(s) to a file or directory. es:
-	```
-	chmod o+wx myfile
-	```
-	Adds write and execute permissions for others
-- In Absolute mode
-	```
-	chmod 754 myfile
-	```
-viene convertito in
-```
-111 101 100
-rwx rwx rwx
- 7   5   4
+```bash
+chmod +t /cartella
 ```
 %%
 

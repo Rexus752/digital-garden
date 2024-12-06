@@ -27,7 +27,6 @@ Appunti di studio:
 Progetti/collettivi/gruppi/robe di cui faccio parte:
 - PoliTeK
 - Bring Palace
-- TrainersHub
 - CSI - Collettivo Studentesco Informatica
 
 Roba passata:

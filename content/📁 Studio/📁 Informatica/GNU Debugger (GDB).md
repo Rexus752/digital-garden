@@ -1,6 +1,6 @@
 **GDB** (acronimo di _**G**NU **D**e**b**ugger_) è un software sviluppato come parte del progetto GNU%%link%% che permette di eseguire il **debugging** di altri programmi, aiutando i programmatori a identificare e correggere errori nel loro codice. È progettato principalmente per linguaggi come C e C++, ma supporta anche altri linguaggi come Fortran, Assembly e Rust.
 
-# Caratteristiche principali di GDB
+# 1 - Caratteristiche principali di GDB
 
 Le caratteristiche principali di GDB sono:
 - **Debugging interattivo**: è possibile seguire passo-passo l'esecuzione di un programma per comprendere il flusso del codice e identificare gli errori.
@@ -9,9 +9,9 @@ Le caratteristiche principali di GDB sono:
 - **Backtrace e analisi dello stack**: è possibile visualizzare la sequenza delle chiamate di funzione attive (detta _call stack_) per risalire facilmente all'origine di un errore nel programma.
 - **Core dump**: GDB permette di caricare un core dump per analizzare il motivo del crash del programma e fornisce informazioni come lo stato della memoria e i registri al momento del crash.
 
-# Come usare GDB%% per il c (?)%%
+# 2 - Come usare GDB%% per il c (?)%%
 
-## Compilazione di un programma in C con supporto al debugging
+## 2.1 - Compilazione di un programma in C con supporto al debugging
 
 Per usare GDB, nella compilazione del codice sorgente di un programma scritto in C con GCC%%link%% è consigliato:
 - Usare l'opzione `-g` per includere informazioni di debug nel file eseguibile generato durante la compilazione, in modo che GDB sia in grado di interpretare meglio il codice sorgente e di collegare le istruzioni eseguibili alle righe di codice originali
@@ -33,7 +33,7 @@ In questo comando non vanno specificati gli argomenti%%link%% con cui eseguire i
 
 A questo punto, verrà avviato il prompt interattivo di GDB in cui inserire i comandi.
 
-## Principali comandi di GDB
+## 2.2 - Principali comandi di GDB
 
 - **`help` (alias: `h`)**: elenca i comandi a disposizione.
 	- **`help all`**: elenca la lista completa di tutti i comandi a disposizione.
@@ -45,7 +45,7 @@ A questo punto, verrà avviato il prompt interattivo di GDB in cui inserire i co
 - **`info <sotto-comando>` (alias: `i <sotto-comando>`)**: mostra informazioni sul programma che si sta debuggando, in particolare su ciò che viene specificato nel `<sotto-comando>`.
 - **`quit` (alias: `q`)**: termina l’esecuzione di GDB.
 
-### Avvio ed esecuzione di un programma
+### 2.2.1 - Avvio ed esecuzione di un programma
 
 - **`run` (alias: `r`)**: avvia il programma e lo esegue al primo breakpoint (se ce ne sono).
 	- **`run <argomenti>`**: avvia il programma e lo esegue con gli argomenti%%link%% specificati.
@@ -53,14 +53,14 @@ A questo punto, verrà avviato il prompt interattivo di GDB in cui inserire i co
 - **`continue` (alias: `c`)**: prosegue l’esecuzione del programma fino al breakpoint successivo (se ce ne sono).
 - **`kill` (alias: `k`)**: termina il programma in esecuzione.
 
-### Navigazione nel codice
+### 2.2.2 - Navigazione nel codice
 
 - **`next` (alias: `n`)**: esegue una linea di codice e, se si tratta di una chiamata di una funzione, la esegue interamente.
 - **`step` (alias: `s`)**: esegue una linea di codice e, se si tratta di una chiamata di una funzione, entra nel codice della funzione senza eseguirla interamente.
 - **`finish`**: finisce di eseguire la funzione corrente.
 - **`jump <numero-riga>` (alias: `j <numero-riga>`)**: salta a una specifica riga di codice e prosegue l’esecuzione del programma fino al breakpoint successivo (se ce ne sono).
 
-### Breakpoints
+### 2.2.3 - Breakpoints
 
 - **`break <numero-riga>` (alias: `b <numero-riga>`)**: inserisce un breakpoint alla riga indicata.
 	- **`break <nome-file-sorgente>:<numero-riga>`**: inserisce un breakpoint alla riga specificata all'interno del file `<nome-file-sorgente>` (utile nel caso in cui si stia debuggando un programma composto da più file sorgente).
@@ -69,7 +69,7 @@ A questo punto, verrà avviato il prompt interattivo di GDB in cui inserire i co
 - **`delete <id>` (alias: `d <id>`)**: elimina il breakpoint con ID `<id>`.
 - **`disable <id>` (alias: `dis <id>`) ed `enable <id>` (alias: `en <id>`)**: disattiva (senza eliminarlo) o riattiva il breakpoint con ID `<id>`.
 
-### Variabili e stato del programma
+### 2.2.4 - Variabili e stato del programma
 
 - **`print <espressione>` (alias: `p <espressione>`)**: valuta l’espressione e ne stampa il valore.
 - **`set <variabile> = <valore>`**: modifica il valore di una variabile.
@@ -78,7 +78,7 @@ A questo punto, verrà avviato il prompt interattivo di GDB in cui inserire i co
 - **`undisplay <id>`**: rimuove il display con ID `<id>`.
 - **`info locals`**: mostra tutte le variabili locali e i loro relativi valori.
 
-### Call stack e funzioni
+### 2.2.5 - Call stack e funzioni
 
 - **`backtrace` (alias: `bt`, `where`)**: mostra la sequenza delle chiamate attive (detta _call stack_).
 - **`frame <id>` (alias: `f <id>`)**: passa al frame con ID `<id>` nel call stack.
