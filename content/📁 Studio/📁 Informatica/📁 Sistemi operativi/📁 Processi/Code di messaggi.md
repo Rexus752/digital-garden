@@ -1,8 +1,7 @@
 Le **code di messaggi** (in inglese _**message queues**_) sono un meccanismo di [comunicazione tra processi](Processi.md#7%20-%20Comunicazione%20tra%20processi%20(IPC)) che permette a più processi di inviare e ricevere messaggi in maniera asincrona: un processo può inserire un messaggio in una coda, e un altro processo (o più processi) può leggerlo in un momento successivo, senza che i processi debbano sincronizzarsi perfettamente.
 
-# 1 - Caratteristiche principali delle code di messaggi
+# 1 - Caratteristiche principali
 
-Le caratteristiche principali delle code di messaggi sono:
 - **Asincronia**: un processo può inviare un messaggio senza aspettare che l'altro processo lo legga immediatamente.
 - **Ordinamento**: i messaggi sono normalmente gestiti secondo la politica FIFO (First In, First Out), cioè il primo messaggio inserito è il primo a essere letto.
 - **Identificatori**: i messaggi possono avere identificatori o tipi per permettere ai processi di filtrare quelli di interesse.

@@ -1,8 +1,7 @@
 La **memoria condivisa** (in inglese _**shared memory**_) è un meccanismo di [comunicazione tra processi](Processi.md#7%20-%20Comunicazione%20tra%20processi%20(IPC)) che consente a più processi di accedere alla stessa area di memoria. Questo metodo è molto veloce poiché non richiede copie di dati tra processi, ma i processi devono coordinarsi per evitare conflitti di accesso.
 
-# 1 - Caratteristiche principali della memoria condivisa
+# 1 - Caratteristiche principali
 
-Le caratteristiche principali della memoria condivisa sono:
 - **Accesso diretto ai dati**: la memoria condivisa consente a più processi di accedere allo stesso segmento di memoria fisica senza necessità di trasferire dati tra processi. Questo avviene mappando lo stesso spazio di memoria nello spazio di indirizzi virtuale di ciascun processo.
 - **Elevata velocità di comunicazione**: poiché i dati non devono essere copiati o trasferiti, l'accesso alla memoria condivisa è estremamente rapido rispetto ad altri metodi di comunicazione tra processi, come le [code di messaggi](Code%20di%20messaggi.md) o i [socket](Socket.md).
 - **Dipendenza dalla sincronizzazione**: la memoria condivisa non fornisce un meccanismo di sincronizzazione integrato. I processi devono gestire autonomamente l'accesso alla memoria per evitare condizioni di gara%%link%% e inconsistenze. Si utilizzano spesso semafori%%link%% o mutex%%link%% per garantire l'accesso ordinato.

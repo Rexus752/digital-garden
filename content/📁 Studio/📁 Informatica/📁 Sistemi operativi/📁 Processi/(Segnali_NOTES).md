@@ -33,25 +33,8 @@ I segnali possono essere inviati ai processi usando il comando `kill` o shortcut
 
 
 Fra i tipi di eventi che causano il fatto che il kernel generi un segnale per un processo ci sono i seguenti:
-- È occorsa una eccezione hardware, l'hardware ha verificato una condizione di errore che è stata notificata al kernel, il quale a propria volta ha inviato un segnale corrispondente al processo in questione.
-	- per esempio, l'esecuzione di istruzioni di linguaggio macchina malformate, divisioni per 0, o riferimenti a parti di memoria inaccessibili.
-- L'utente ha digitato sul terminale dei caratteri speciali che generano i segnali.
-	- questi caratteri includono il carattere interrupt (normalmente associato a `CTRL + C`) e il suspend carattere (`CTRL + Z`).
-- È occorso un evento software.
-	- per esempio, l'input è divenuto disponibile su un descrittore di file, un timer è arrivato a 0, il tempo di processore per il processo è stato superato, o un figlio del processo è terminato.
 
 # Ciclo di vita dei segnali
-
-Si dice che un segnale è generato da qualche evento. Dopo essere stato generato, un segnale è inviato (*delivered*) ad un processo, che quindi esegue una qualche azione in risposta al segnale.
-Fra il momento in cui è generato e il momento in cui è inviato al processo, il segnale è pendente (*pending*).
-
-## Pending, delivery e block
-
-Di norma, un segnale pendente è inviato a un processo appena il processo è scelto per l'esecuzione, oppure immediatamente se il processo è già in esecuzione (per esempio, nel caso in cui il processo invia un segnale a se stesso).
-
-A volte invece è necessario assicurare che un segmento di codice non sia interrotto dalla consegna di un segnale: in questo caso, possiamo aggiungere un segnale alla maschera dei segnali%%cos'è?%% del processo, cioè un insieme di segnali la cui ricezione è attualmente bloccata.
-
-Se un segnale è generato mentre il processo è bloccato, il segnale rimane pendente fino a quando non viene successivamente sbloccato e rimosso dalla maschera dei segnali. Varie system call permettono ai processi di aggiungere e rimuovere segnali dalla propria maschera dei segnali.
 
 ## Delivery and process actions
 
@@ -62,6 +45,15 @@ Al momento della ricezione di un segnale, un processo continua con una delle seg
 	- Un file con core dump contiene un'immagine della memoria virtuale del processo; tale immagine può essere caricata in un debugger per ispezionare lo stato del processo al momento della terminazione.
 - Il processo viene bloccato (stopped): l'esecuzione è in questo caso sospesa.
 - L'esecuzione del processo è ripresa (resumed) dopo essere stata bloccata in precedenza.
+
+
+## Pending, delivery e block
+
+Di norma, un segnale pendente è inviato a un processo appena il processo è scelto per l'esecuzione, oppure immediatamente se il processo è già in esecuzione (per esempio, nel caso in cui il processo invia un segnale a se stesso).
+
+A volte invece è necessario assicurare che un segmento di codice non sia interrotto dalla consegna di un segnale: in questo caso, possiamo aggiungere un segnale alla maschera dei segnali%%cos'è?%% del processo, cioè un insieme di segnali la cui ricezione è attualmente bloccata.
+
+Se un segnale è generato mentre il processo è bloccato, il segnale rimane pendente fino a quando non viene successivamente sbloccato e rimosso dalla maschera dei segnali. Varie system call permettono ai processi di aggiungere e rimuovere segnali dalla propria maschera dei segnali.
 
 # Impostare l’handler del segnale
 

@@ -1,8 +1,7 @@
 Le **pipe** %%([pronuncia]: `/paɪp/`)%%sono un meccanismo di [comunicazione tra processi](Processi.md#7%20-%20Comunicazione%20tra%20processi%20(IPC)) che permettono a uno o più processi di condividere dati tramite un canale unidirezionale. In sostanza, una pipe crea un collegamento tra due processi: uno scrive dati nella pipe e l'altro legge quei dati.
 
-# 1 - Caratteristiche principali delle pipe
+# 1 - Caratteristiche principali
 
-Le caratteristiche principali delle pipe sono:
 - **Unidirezionali**: i dati fluiscono in una sola direzione (dal processo scrivente a quello leggente).
 - **Anonime**: sono tipicamente usate tra processi che hanno una relazione gerarchica (padre-figlio). In genere, il processo padre crea una pipe e poi genera il processo figlio che la usa.
 - **Comunicazione in memoria**: la pipe si comporta come un buffer circolare tra i due processi, memorizzando temporaneamente i dati fino a quando non vengono letti.

@@ -37,7 +37,7 @@ La filosofia di UNIX comprende un insieme di principi e idee che guidano il desi
 
 Nonostante le diverse riformulazioni fornite nel corso degli anni, i principi fondamentali della filosofia di UNIX si possono riassumere in:
 1. _**"Write programs that do one thing and do it well"**_: ogni programma dovrebbe svolgere un compito specifico in modo efficace. Questo approccio minimalista favorisce la semplicità e la modularità, infatti programmi piccoli e specializzati possono essere combinati per ottenere funzionalità più complesse.
-2. _**"Write programs to work together"**_: i programmi dovrebbero essere progettati per essere concatenati tra di loro tramite meccanismi come le [pipe](#Pipe), in modo che l'output di un programma diventi l'input di un altro. È importante quindi evitare di riempire l'output con informazioni non necessarie.
+2. _**"Write programs to work together"**_: i programmi dovrebbero essere progettati per essere concatenati tra di loro tramite meccanismi come le [pipe](Pipe.md), in modo che l'output di un programma diventi l'input di un altro. È importante quindi evitare di riempire l'output con informazioni non necessarie.
 3. _**"Write programs to handle text streams, because that is a universal interface"**_: i file di testo sono il formato standard per archiviare e trasferire informazioni. Sono semplici da creare, leggere, modificare e analizzare sia manualmente che con script.
 %%
 - Simplicity: Many of the most useful UNIX utilities are very simple and, as a result, small and easy to understand.

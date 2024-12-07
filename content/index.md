@@ -23,7 +23,7 @@ Appunti di studio:
 			- [Socket](Socket.md)
 			- [Chiamate di procedure remote (RPC)](Chiamate%20di%20procedure%20remote%20(RPC).md)
 			- [Thread](Thread.md)
-			- [Segnali](Segnali.md)
+			- [Segnali in UNIX](Segnali%20in%20UNIX.md)
 
 Progetti/collettivi/gruppi/robe di cui faccio parte:
 - PoliTeK
@@ -35,3 +35,9 @@ Roba passata:
 
 Roba da aggiustare:
 - Il layout del sito (Quartz è abbastanza buggato sotto questo punto di vista)
+- Nodi dei diagrammi di Mermaid devono essere scuri
+%%
+Admonitions:
+- Consiglio
+- Esempio
+%%

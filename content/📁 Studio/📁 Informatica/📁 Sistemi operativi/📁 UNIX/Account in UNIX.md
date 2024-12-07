@@ -47,7 +47,7 @@ Ogni account nei sistemi [UNIX](UNIX.md) rientra sempre in una delle seguenti tr
 
 Gli **account utente** sono account creati per utenti che accedono al sistema per scopi generici, come lavorare su file personali, eseguire programmi o accedere a servizi. Sono generalmente il tipo di account utilizzato da un utente generico di un sistema UNIX.
 
-### 2.1.1 - Caratteristiche principali degli account utente
+### 2.1.1 - Caratteristiche principali
 
 - **Privilegi limitati**: gli account utente hanno permessi ristretti, che impediscono loro di modificare file di sistema, installare software o gestire altri utenti. Possono accedere e modificare solo i file di cui sono proprietari, solitamente situati nella loro home directory.
 - **Home directory personale**: una directory dedicata che funge da spazio privato per i suoi file e impostazioni personali. Il percorso tipico di una home directory: `/home/<username>` (per esempio, un utente chiamato `alice` avrà la sua home directory in `/home/alice`).
@@ -66,7 +66,7 @@ L'**account root** (noto anche come _**superutente**_, in inglese **_superuser_*
 
 Avendo il controllo completo sul sistema, è in grado di eseguire comandi che possano anche distruggere il sistema stesso, senza alcun tipo di restrizioni. La filosofia di UNIX%%link%% presume che gli utenti che utilizzino gli account root sanno ciò che fanno, quindi se eseguono un comando che possa rendere il sistema inutilizzabile, UNIX glielo permette. Proprio per questo principio, generalmente si usa l'account root unicamente per i compiti più importanti e solamente per il tempo necessario.
 
-### 2.2.1 - Caratteristiche principali dell'account root
+### 2.2.1 - Caratteristiche principali
 
 - **Privilegi completi**: l'account root può accedere, modificare e eliminare qualsiasi file, incluse le risorse di sistema protette, bypassando tutte le restrizioni di sicurezza imposte agli account normali.
 - **Identificazione univoca e fissa**: l'account root ha come username predefinito `root` e ha sempre l'UID `0` che lo identifica a livello di sistema.
@@ -86,7 +86,7 @@ Account di sistema comuni sono i seguenti:
 - **`alias`**: pipopopi
 %%
 
-### 2.3.1 - Caratteristiche principali degli account di sistema
+### 2.3.1 - Caratteristiche principali
 
 - **Privilegi limitati al contesto**: ogni account di sistema ha permessi specifici per evitare che un servizio interferisca con un altro o con il sistema stesso.
 - **UID riservato**: hanno UID compresi in un intervallo riservato, solitamente inferiore a 1000 (o 500 in alcuni sistemi più vecchi). In particolare, gli account di sistema con UID compreso tra 1 e 99 riguardano servizi critici, mentre quelli compresi tra 100 e 999 riguardano altri servizi.
