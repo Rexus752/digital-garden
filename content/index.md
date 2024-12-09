@@ -16,6 +16,7 @@ Appunti di studio:
 		- [UNIX](UNIX.md)
 			- [Account in UNIX](Account%20in%20UNIX.md)
 			- [Permessi in UNIX](Permessi%20in%20UNIX.md)
+			- [Segnali in UNIX](Segnali%20in%20UNIX.md)
 		- [Processi](Processi.md)
 			- [Pipe](Pipe.md)
 			- [Code di messaggi](Code%20di%20messaggi.md)
@@ -23,7 +24,6 @@ Appunti di studio:
 			- [Socket](Socket.md)
 			- [Chiamate di procedure remote (RPC)](Chiamate%20di%20procedure%20remote%20(RPC).md)
 			- [Thread](Thread.md)
-			- [Segnali in UNIX](Segnali%20in%20UNIX.md)
 
 Progetti/collettivi/gruppi/robe di cui faccio parte:
 - PoliTeK
