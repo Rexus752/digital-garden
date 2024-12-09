@@ -2,34 +2,6 @@
 draft: true
 ---
 
-# Segnali
-
-```
-6 SIGABRT - create core image - abort program (formerly SIGIOT)
-14 SIGALRM - terminate process - real-time timer expired
-```
-- **`SIGABRT`**: Un processo riceve questo segnale quando invoca la funzione abort(). Di default questo segnale termina il processo con un core dump. Questo produce l'effetto della chiamata abort(), che produce un core dump a fini di debug.
-- **`SIGALRM`**. Il kernel genera questo segnale al momento del raggiungimento dello zero di un timer impostato da una chiamata ad alarm() o setitimer().
-```
-20 SIGCHLD - discard signal - child status has changed
-19 SIGCONT - discard signal - continue after stop
-```
-- **`SIGCHLD`**. Segnale inviato dal kernel a un processo genitore quando uno dei figli termina (chiamando exit(), o ucciso da un qualche segnale). Può essere inviato a un processo quando uno dei suoi figli è bloccato o risvegliato da un segnale.
-- **`SIGCONT`**. Quando viene inviato a un processo bloccato (stopped), questo segnale causa il risveglio del processo (resume), cioè che il processo venga schedulato per successivamente essere eseguito. Quando è ricevuto da un processo che non è bloccato, questo segnale è ignorato di default. Un processo può intercettare questo segnale, in modo da eseguire qualche azione particolare al momento della ripresa dell'esecuzione.
-```
-2 SIGINT - terminate process - interrupt program
-9 SIGKILL - terminate process - kill program
-13 SIGPIPE - terminate process - write on a pipe with no reader
-```
-- **`SIGINT`**. Quanto l'utente digita il carattere di interrupt (Control-C), il terminale invia questo segnale al gruppo del processo in foreground. L'azione di default per questo segnale è terminare il processo.
-- **`SIGKILL`**. È il segnale sicuro di kill. Non può essere bloccato, ignorato, o intercettato da un handler, e quindi termina sempre un processo.
-- **`SIGPIPE`**. Segnale generato quando un processo tenta di scrivere su un pipe o un FIFO per il quale non c'è un corrispondente processo lettore. Questo normalmente occorre perché il processo lettore ha chiuso il proprio file descriptor per il canale IPC.
-```
-11 SIGSEGV - create core image - segmentation violation
-```
-- **`SIGSEGV`**. Segnale generato quando un programma tenta un riferimento in memoria non valido. Il riferimento può non essere valido perché la pagina riferita non esiste (per esempio, giace in un'area non mappata, fra heap e stack), oppure il processo ha tentato di modificare una locazione in read-only memory (il segmento di testo del programma o una regione di memoria marcati come disponibili in sola lettura), o il processo ha tentato di accedere a una parte della memoria del kernel durante l'esecuzione in user mode.
-	- In C, questi eventi spesso derivano dalla dereferenziazione di un puntatore che contiene un 'bad address' (come un puntatore non inizializzato) o dal passaggio di un argomento non valido in una chiamata a funzione.
-	- Il nome del segnale deriva da segmentation violation.
 ```
 17 SIGSTOP - stop process - stop (cannot be caught or ignored)
 15 SIGTERM - terminate process - software termination signal

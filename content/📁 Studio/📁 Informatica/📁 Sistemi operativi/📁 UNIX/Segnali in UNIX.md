@@ -8,6 +8,12 @@ Ogni segnale è associato univocamente a:
 
 Poiché gli effettivi interi assegnati a ogni segnale variano a seconda delle implementazioni nei vari [sistemi operativi](Sistema%20operativo.md), all'interno dei programmi è meglio utilizzare direttamente i nomi simbolici.
 
+> [!consiglio] Consiglio
+> È possibile verificare la numerazione dei segnali nel proprio sistema operativo eseguendo il comando:
+> ```shell
+> kill -l
+> ```
+
 # 2 - Tipi di segnali in UNIX
 
 I **segnali in [UNIX](UNIX.md)** si dividono nelle seguenti categorie:
@@ -84,12 +90,6 @@ L'API%%link%% `kill()` è uno dei metodi principali per generare segnali. Può e
 I segnali `SIGUSR1` e `SIGUSR2` sono segnali definiti dall'utente. Sono segnali generici che non hanno un'azione predefinita specifica (a parte la terminazione del processo, se non gestiti) e vengono solitamente utilizzati per notifiche o comunicazioni personalizzate tra processi.
 
 I numeri assegnati a `SIGUSR1` e `SIGUSR2` possono variare tra i sistemi, ma tipicamente sono rispettivamente `10` e `12`.
-
-> [!consiglio] Consiglio
-> È possibile verificare la numerazione dei segnali nel proprio sistema operativo eseguendo il comando:
-> ```shell
-> kill -l
-> ```
 
 ### 4.3.1 - Uso tipico
 
@@ -574,6 +574,34 @@ Solitamente, **`sigaction()` è preferita** rispetto a `signal()` per i seguenti
 - **Flessibilità**: `sigaction()` permette di bloccare temporaneamente altri segnali durante l'esecuzione del gestore e offre maggiore controllo sui segnali.
 - **Compatibilità**: `signal()` può avere un comportamento imprevisto su alcune piattaforme, mentre `sigaction()` è più robusta e portabile.
 - **Controllo avanzato**: con `sigaction()` è possibile specificare una maschera di segnali da bloccare durante l'esecuzione del gestore e altre opzioni, mentre `signal()` è più semplice ma meno potente.
+
+# 8 - Lista dei segnali più comuni
+
+| **Segnale**                                                                  | **Numero** | **Quando viene generato**                                                        | **Azione predefinita**                                                                                                                            |
+| ---------------------------------------------------------------------------- | ---------- | -------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `SIGHUP`<br>(_**h**ang **up**_)                                              | `1`        | Disconnessione del terminale%%link%% o chiusura della shell%%link%%.             | Termina o ricarica il processo, spesso usato per configurazioni.                                                                                  |
+| `SIGINT`<br>(_**int**errupt_)                                                | `2`        | Interruzione da tastiera (`Ctrl+C`).                                             | Termina il processo.                                                                                                                              |
+| `SIGQUIT`<br>(_**quit**_)                                                    | `3`        | Interruzione da tastiera con dump (`Ctrl+\`).                                    | Termina il processo e genera un core dump.                                                                                                        |
+| `SIGILL`<br>(_**ill**egal instruction_)                                      | `4`        | Istruzione illegale eseguita dal processo.                                       | Termina il processo segnalando un errore critico.                                                                                                 |
+| `SIGTRAP`<br>(_**trap**_)                                                    | `5`        | Breakpoint impostato da un debugger (es. GDB%%link%%) o sollevata un'eccezione.  | Termina il processo con generazione di un core dump.                                                                                              |
+| `SIGABRT`<br>(_**ab**o**rt**_)                                               | `6`        | Invocazione della funzione `abort()`%%link%%.                                    | Termina il processo e genera un core dump.                                                                                                        |
+| `SIGBUS`<br>(_**bus** error_)                                                | `7`        | Accesso a memoria non allineato o errore su memoria mappata.                     | Termina il processo con generazione di un core dump.                                                                                              |
+| `SIGFPE`<br>(_**f**loating **p**oint **e**xception_)                         | `8`        | Errore aritmetico (es. divisione per zero).                                      | Termina il processo e segnala un errore matematico.                                                                                               |
+| `SIGKILL`<br>(_**kill**_)                                                    | `9`        | Inviato dal kernel o da un comando `kill -9`%%link%%.                            | Termina immediatamente il processo ([non bloccabile](Segnali%20in%20UNIX.md#5.3%20-%20Segnali%20non%20bloccabili%20(`SIGKILL`%20e%20`SIGSTOP`))). |
+| `SIGUSR1`<br>(_**us**e**r** defined **1**_)                                  | `10`       | Generato da altri processi per scopi personalizzati.                             | Usato per notifiche o segnali definiti dall'utente.                                                                                               |
+| `SIGSEGV`<br>(_**seg**mentation **v**iolation_)                              | `11`       | Accesso a memoria non valida (es. dereferenziamento nullo).                      | Termina il processo e genera un core dump.                                                                                                        |
+| `SIGUSR2`<br>(_**us**e**r** defined **2**_)                                  | `12`       | Generato da altri processi per scopi personalizzati.                             | Usato per notifiche o segnali definiti dall'utente.                                                                                               |
+| `SIGPIPE`<br>(_**pipe**_)                                                    | `13`       | Scrittura su una [pipe](Pipe.md) chiusa o lettura non valida.                    | Termina il processo o gestisce l'errore.                                                                                                          |
+| `SIGALRM`<br>(_**al**a**rm**_)                                               | `14`       | Timer scaduto generato da una funzione `alarm()`%%link%% o `settimer()`%%link%%. | Utilizzato per gestire timeout nei processi.                                                                                                      |
+| `SIGTERM`<br>(_**term**inate_)                                               | `15`       | Richiesta di terminazione ordinata tramite comando `kill`%%link%%.               | Termina il processo in modo ordinato.                                                                                                             |
+| `SIGSTKFLT`<br>(_**st**ac**k** **f**au**lt**_)                               | `16`       | Errore relativo alla gestione dello stack (segnale obsoleto).                    | Termina il processo.                                                                                                                              |
+| `SIGCHLD`<br>(_**ch**i**ld**_)                                               | `17`       | Processo figlio terminato o sospeso.                                             | Notifica al processo padre della terminazione di un figlio.                                                                                       |
+| `SIGCONT`<br>(_**cont**inue_)                                                | `18`       | Ripresa di un processo sospeso.                                                  | Riprende l'esecuzione di un processo sospeso precedentemente con `SIGSTOP`.                                                                       |
+| `SIGSTOP`<br>(_**stop**_)                                                    | `19`       | Sospensione forzata di un processo.                                              | Sospende il processo ([non bloccabile](Segnali%20in%20UNIX.md#5.3%20-%20Segnali%20non%20bloccabili%20(`SIGKILL`%20e%20`SIGSTOP`))).               |
+| `SIGTSTP`<br>(_**t**erminal **st**o**p**_)                                   | `20`       | Sospensione da tastiera (`Ctrl+Z`).                                              | Sospende il processo, modificabile dal processo.                                                                                                  |
+| `SIGTTIN`<br>(_**t**erminal **in**put_)                                      | `21`       | Processo in background tenta di leggere dall'input.                              | Sospende il processo fino a che non è in primo piano.                                                                                             |
+| `SIGTTOU`<br>(_**t**erminal **ou**tput_)                                     | `22`       | Processo in background tenta di scrivere sull'output.                            | Sospende il processo fino a che non è in primo piano.                                                                                             |
+| `SIGPOLL`<br>(_**poll**able event_)<br>o `SIGIO`<br>(_**i**nput/**o**utput_) | `29`       | Evento su un descrittore di file monitorato.                                     | Notifica un input/output disponibile (POSIX%%link%%).                                                                                             |
 
 # Fonti
 
