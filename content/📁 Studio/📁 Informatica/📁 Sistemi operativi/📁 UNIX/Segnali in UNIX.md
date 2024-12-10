@@ -1,5 +1,11 @@
 I **segnali in [UNIX](UNIX.md)** sono un meccanismo di [comunicazione tra processi](Processi.md#7%20-%20Comunicazione%20tra%20processi%20(IPC)) utilizzato per notificare a un processo l'occorrenza di un evento specifico, come un errore, un'interruzione dell'utente o un'operazione speciale.
 
+%%
+
+- SIGTERM. Segnale standard utilizzato per terminare un processo; segnale inviato di default dai comandi kill e killall. Gli utenti a volte inviano esplicitamente il segnale SIGKILL a un processo, usando `kill –KILL` or `kill –9`.
+	- In generale, questo è un errore. Un'applicazione ben progettata deve avere un handler per SIGTERM che consenta una 'graceful' exit, che consenta di pulire i file temporanei e di rilasciare le altre risorse. L'uccisione di un processo con SIGKILL bypassa l'handler di SIGTERM, e quindi si dovrebbe sempre prima cercare di terminare un processo con SIGTERM, e tenere SIGKILL come ultima scelta per terminare i processi che non rispondono a SIGTERM.
+%%
+
 # 1 - Nomi simbolici dei segnali
 
 Ogni segnale è associato univocamente a:
@@ -97,47 +103,6 @@ I numeri assegnati a `SIGUSR1` e `SIGUSR2` possono variare tra i sistemi, ma tip
 - [**Comunicazione tra processi (IPC)**](Processi.md#7%20-%20Comunicazione%20tra%20processi%20(IPC)): permettere ai [processi](Processi.md) di scambiarsi informazioni senza passare per meccanismi complessi come [pipe](Pipe.md) o [socket](Socket.md).
 - **Debugging**: utilizzati per notificare lo stato interno di un'applicazione durante il debug.
 
-> [!esempio] Esempio
-> ```c
-> #include <stdio.h>
-> #include <stdlib.h>
-> #include <signal.h>
-> #include <unistd.h>
-> 
-> // Gestore per SIGUSR1
-> void handle_sigusr1(int signo) {
->     printf("Ricevuto SIGUSR1 (segnale %d)\n", signo);
-> }
-> 
-> // Gestore per SIGUSR2
-> void handle_sigusr2(int signo) {
->     printf("Ricevuto SIGUSR2 (segnale %d)\n", signo);
-> }
-> 
-> int main() {
->     // Configura i gestori per SIGUSR1 e SIGUSR2
->     signal(SIGUSR1, handle_sigusr1);
->     signal(SIGUSR2, handle_sigusr2);
-> 
->     printf("Processo in esecuzione (PID: %d). Inviare SIGUSR1 o SIGUSR2.\n", getpid());
-> 
->     // Ciclo infinito in attesa dei segnali
->     while (1) {
->         pause();  // Attende un segnale
->     }
-> 
->     return 0;
-> }
-> ```
-
-%%
-Per usare questo esempio, compilare ed eseguire il programma in C e inviare i segnali al processo usando il comando `kill`:
-```shell
-kill -SIGUSR1 <PID>
-kill -SIGUSR2 <PID>
-```
-%%
-
 # 5 - Blocco del segnale
 
 Il **blocco di un segnale** è una tecnica usata per impedire temporaneamente che un segnale venga consegnato a un processo, memorizzandolo all'interno della [coda dei segnali pendenti](Segnali%20in%20UNIX.md#Coda%20dei%20segnali%20pendenti).
@@ -188,9 +153,7 @@ dove:
 >         return 1;
 >     }
 > 
-> 	/*
-> 	Uso della maschera
-> 	*/
+> 	// Uso della maschera
 > 
 >     return 0;
 > }
@@ -221,9 +184,7 @@ dove:
 >         return 1;
 >     }
 > 
-> 	/*
-> 	Uso della maschera
-> 	*/
+> 	// Uso della maschera
 > 
 >     return 0;
 > }
@@ -521,7 +482,8 @@ dove:
 > }
 > ```
 
-Tuttavia, `signal()` ha delle limitazioni (come un comportamento meno prevedibile su alcune piattaforme) e non è raccomandata per un uso robusto in programmi complessi.
+> [!attenzione] Attenzione!
+> Vi sono differenze nel comportamento della funzione `signal()` fra le varie implementazioni di [UNIX](UNIX.md); se possibile, quindi, va evitato il suo uso in programmi complessi.
 
 La funzione `sigaction()` è una versione più potente e sicura per gestire i segnali. Permette un controllo più fine, come il blocco temporaneo dei segnali durante l'esecuzione del gestore. Il suo prototipo è il seguente:
 ```c

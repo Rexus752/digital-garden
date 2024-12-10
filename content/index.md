@@ -38,6 +38,7 @@ Roba da aggiustare:
 - Nodi dei diagrammi di Mermaid devono essere scuri
 %%
 Admonitions:
-- Consiglio
-- Esempio
+- [!consiglio]
+- [!esempio]
+- [!attenzione]
 %%
