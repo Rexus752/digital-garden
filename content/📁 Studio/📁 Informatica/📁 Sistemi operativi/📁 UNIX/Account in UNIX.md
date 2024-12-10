@@ -1,3 +1,7 @@
+---
+icon: FasPeopleGroup
+iconColor: "#FFFF88"
+---
 Nei sistemi [UNIX](UNIX.md), un **account** (in italiano _conto_) rappresenta un'entità (che sia un utente o un servizio) che può accedere al sistema operativo e utilizzarne le sue risorse a seconda dei permessi che gli vengono riservati.
 
 # 1 - Caratteristiche degli account in UNIX

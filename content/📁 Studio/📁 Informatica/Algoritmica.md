@@ -1,3 +1,8 @@
+---
+icon: RiFlowChart
+iconColor: "#88FF88"
+---
+
 Un **algoritmo** è la specificazione di una sequenza finita di operazioni (dette anche _istruzioni_) che consente di risolvere tutti i quesiti di una stessa classe, ognuno dei quali viene detto _istanza del problema_, o di calcolare il risultato di un'espressione matematica.
 
 Un algoritmo deve essere:

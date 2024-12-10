@@ -1,3 +1,7 @@
+---
+icon: LiMemoryStick
+iconColor: "#FF8888"
+---
 La **memoria condivisa** (in inglese _**shared memory**_) è un meccanismo di [comunicazione tra processi](Processi.md#7%20-%20Comunicazione%20tra%20processi%20(IPC)) che consente a più processi di accedere alla stessa area di memoria. Questo metodo è molto veloce poiché non richiede copie di dati tra processi, ma i processi devono coordinarsi per evitare conflitti di accesso.
 
 # 1 - Caratteristiche principali

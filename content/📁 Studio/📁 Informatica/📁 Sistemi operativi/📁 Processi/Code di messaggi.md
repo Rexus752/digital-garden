@@ -1,3 +1,7 @@
+---
+icon: LiMessagesSquare
+iconColor: "#88FFFF"
+---
 Le **code di messaggi** (in inglese _**message queues**_) sono un meccanismo di [comunicazione tra processi](Processi.md#7%20-%20Comunicazione%20tra%20processi%20(IPC)) che permette a più processi di inviare e ricevere messaggi in maniera asincrona: un processo può inserire un messaggio in una coda, e un altro processo (o più processi) può leggerlo in un momento successivo, senza che i processi debbano sincronizzarsi perfettamente.
 
 # 1 - Caratteristiche principali

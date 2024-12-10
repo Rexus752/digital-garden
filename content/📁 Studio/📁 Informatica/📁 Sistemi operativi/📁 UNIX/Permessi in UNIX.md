@@ -1,4 +1,8 @@
-In UNIX, i **permessi** definiscono chi può leggere, scrivere o eseguire un file o una directory. Una delle caratteristiche distintive di UNIX, infatti, è che è stato progettato sin dai suoi primi giorni per essere un sistema multiutente, quindi deve utilizzare meccanismi che permettano agli utenti di gestire i propri file senza avere accesso ai file di altri utenti.
+---
+icon: RiProhibited2Line
+iconColor: "#FF8888"
+---
+Nei sistemi [UNIX](UNIX.md), i **permessi** sono un meccanismo che permettono di definire chi può leggere, scrivere o eseguire un file o una directory. Una delle caratteristiche distintive di UNIX, infatti, è che è stato progettato sin dai suoi primi giorni per essere un sistema multiutente, quindi deve utilizzare meccanismi che permettano agli utenti di gestire i propri file senza avere accesso ai file di altri utenti.
 
 I permessi di un file o di una directory si possono configurare su tre distinte categorie di utenti:
 - **Proprietario** (in inglese **_owner_**): l'utente che possiede il file.

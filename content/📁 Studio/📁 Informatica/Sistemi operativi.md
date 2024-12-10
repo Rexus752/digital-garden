@@ -1,4 +1,8 @@
-Un **sistema operativo** (abbreviato in **_SO_**, in inglese **_OS_**, _**O**perating **S**ystem_) è il software di base che gestisce l'hardware di un computer (in particolare la memoria primaria e secondaria, le periferiche, e la stessa CPU) e fornisce i servizi fondamentali per l'esecuzione di tutti gli altri software applicativi. È l'intermediario tra l'hardware e l'utente, permettendo l'interazione tra l'utente e il dispositivo e rendendo il sistema semplice da usare.
+---
+icon: RiComputerLine
+iconColor: "#8888FF"
+---
+Il **sistema operativo** (abbreviato in **_SO_**, in inglese **_OS_**, _**O**perating **S**ystem_) è il software di base che gestisce l'hardware di un computer (in particolare la memoria primaria e secondaria, le periferiche, e la stessa CPU) e fornisce i servizi fondamentali per l'esecuzione di tutti gli altri software applicativi. È l'intermediario tra l'hardware e l'utente, permettendo l'interazione tra l'utente e il dispositivo e rendendo il sistema semplice da usare.
 
 %%
 \## 2. Interfaccia di Programmazione (API)

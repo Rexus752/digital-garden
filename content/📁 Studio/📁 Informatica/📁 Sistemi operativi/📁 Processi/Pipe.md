@@ -1,3 +1,7 @@
+---
+icon: FasNetworkWired
+iconColor: "#FF88FF"
+---
 Le **pipe** %%([pronuncia]: `/paɪp/`)%%sono un meccanismo di [comunicazione tra processi](Processi.md#7%20-%20Comunicazione%20tra%20processi%20(IPC)) che permettono a uno o più processi di condividere dati tramite un canale unidirezionale. In sostanza, una pipe crea un collegamento tra due processi: uno scrive dati nella pipe e l'altro legge quei dati.
 
 # 1 - Caratteristiche principali

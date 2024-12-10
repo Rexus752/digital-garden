@@ -1,3 +1,7 @@
+---
+icon: IbPhoneCallTransfer
+iconColor: "#88FF88"
+---
 Le **chiamate di procedure remote** (in inglese _**RPC**_, _**R**emote **P**rocedure **C**alls_) sono un meccanismo di [comunicazione tra processi](Processi.md#7%20-%20Comunicazione%20tra%20processi%20(IPC)) che consentono a un programma di eseguire una procedura (funzione o subroutine) in un altro indirizzo di rete, come se fosse una funzione locale. Questo tipo di comunicazione è usato frequentemente in sistemi distribuiti per facilitare l'interazione tra componenti che risiedono su macchine diverse.
 
 # 1 - Caratteristiche principali

@@ -1,3 +1,7 @@
+---
+icon: TiNeedleThread
+iconColor: "#8888FF"
+---
 Un **thread** (abbreviazione di _**thread of execution**_, in italiano _filo dell'esecuzione_) è l'unità granulare in cui un processo può essere suddiviso e che può essere eseguito a divisione di tempo (cioè assegnando a ognuno una determinata porzione di tempo in cui poter essere eseguito) o in parallelo ad altri thread da parte del processore. In altre parole, un thread è una parte del processo che viene eseguita, in maniera concorrente ed indipendente, internamente allo stato generale del processo stesso.
 
 # 1 - Differenza tra "processo" e "thread"

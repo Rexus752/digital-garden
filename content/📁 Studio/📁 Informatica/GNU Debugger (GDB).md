@@ -1,3 +1,7 @@
+---
+icon: LiBug
+iconColor: "#FF8888"
+---
 **GDB** (acronimo di _**G**NU **D**e**b**ugger_) è un software sviluppato come parte del progetto GNU%%link%% che permette di eseguire il **debugging** di altri programmi, aiutando i programmatori a identificare e correggere errori nel loro codice. È progettato principalmente per linguaggi come C e C++, ma supporta anche altri linguaggi come Fortran, Assembly e Rust.
 
 # 1 - Caratteristiche principali di GDB

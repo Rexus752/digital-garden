@@ -1,3 +1,7 @@
+---
+icon: LiPlug2
+iconColor: "#FFFF88"
+---
 I **socket** sono un meccanismo di [comunicazione tra processi](Processi.md#7%20-%20Comunicazione%20tra%20processi%20(IPC)) che consentono a due o più processi di comunicare tra loro sia all'interno dello stesso sistema sia su sistemi diversi tramite rete. Nella comunicazione tra processi, i socket più utilizzati sono quelli di [dominio UNIX](Socket.md#1.2%20-%20Famiglie%20di%20socket) %%cambiare link poi quando farò sezione specifica per dominio UNIX%%e quelli di [dominio Internet (IPv4 o IPv6)](Socket.md#3%20-%20Internet%20socket), e l'uso varia a seconda del tipo di applicazione e delle esigenze di comunicazione.
 
 # 1 - Caratteristiche principali

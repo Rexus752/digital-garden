@@ -1,4 +1,8 @@
-I **segnali in [UNIX](UNIX.md)** sono un meccanismo di [comunicazione tra processi](Processi.md#7%20-%20Comunicazione%20tra%20processi%20(IPC)) utilizzato per notificare a un processo l'occorrenza di un evento specifico, come un errore, un'interruzione dell'utente o un'operazione speciale.
+---
+icon: BoBxNotification
+iconColor: "#88FF88"
+---
+Nei sistemi [UNIX](UNIX.md), I **segnali** sono un meccanismo di [comunicazione tra processi](Processi.md#7%20-%20Comunicazione%20tra%20processi%20(IPC)) utilizzato per notificare a un processo l'occorrenza di un evento specifico, come un errore, un'interruzione dell'utente o un'operazione speciale.
 
 %%
 
