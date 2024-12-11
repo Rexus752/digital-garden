@@ -79,7 +79,7 @@ Il **blocco di controllo del processo** (in inglese **_PCB_**, _**P**rocess **C*
 
 Le informazioni contenute in un PCB variano a seconda delle implementazioni nei vari sistemi operativi, ma in generale sono presenti:
 1. [**Stato del processo**](Processi.md#2.3%20-%20Stato%20di%20un%20processo): la condizione in cui si trova un processo in un dato momento durante la sua esecuzione nel sistema operativo (`new`, `ready`, `running`, `waiting` o `terminated`).
-2. **Identificatore del processo** (in inglese _**PID**_, _**P**rocess **ID**_): un numero univoco assegnato al processo dal sistema operativo. Questo identificatore viene utilizzato per distinguere il processo dagli altri processi attivi.
+2. **Identificatore del processo** (in inglese _**PID**_, _**P**rocess **ID**_): un numero intero univoco assegnato al processo dal sistema operativo. Questo identificatore viene utilizzato per distinguere il processo dagli altri processi attivi.
 3. **Program Counter** (abbreviato in _**PC**_): il PCB salva il valore contenuto nel Program Counter%%link%%, il registro nella CPU che rappresenta l'indirizzo dell'istruzione successiva che il processo deve eseguire. Se il processo viene interrotto, il Program Counter consente di riprendere l'esecuzione dal punto in cui è stata interrotta, perché appunto conterrà il valore dell'indirizzo di memoria in cui è presente l'istruzione del processo da cui ripartire.
 4. **Contenuto dei registri della CPU**: il PCB salva il contenuto dei registri della CPU (es. accumulatori, puntatori allo stack, registri di uso generale) nel momento in cui il processo è stato interrotto. Questo è essenziale per riprendere correttamente l'esecuzione del processo in un successivo [cambio di contesto](Processi.md#3.4%20-%20Il%20cambio%20di%20contesto).
 5. **Informazioni sulla gestione della memoria**: include dati su come la memoria è allocata al processo, come indirizzi di base e limiti di memoria del processo, oppure tabelle di paginazione o segmentazione, nel caso il sistema operativo utilizzi tecniche di gestione della memoria virtuale.
@@ -96,7 +96,7 @@ Le informazioni contenute in un PCB variano a seconda delle implementazioni nei 
 Il PCB svolge un ruolo cruciale nel gestire i processi nel sistema operativo. Le sue principali funzioni includono:
 - **Salvataggio del contesto del processo**: quando un processo viene sospeso (ad esempio, per un [cambio di contesto](Processi.md#3.4%20-%20Il%20cambio%20di%20contesto)), il suo stato (registri CPU, Program Counter, ecc.) viene memorizzato nel PCB. Quando il processo viene ripreso, il contesto viene ripristinato.  
 - **Gestione della memoria**: il PCB tiene traccia delle risorse di memoria utilizzate dal processo, assicurando che il processo non acceda a zone di memoria riservate ad altri processi o al sistema operativo.
-- **Identificazione del processo**: grazie al PID e alle altre informazioni contenute nel PCB, il sistema operativo può gestire un numero elevato di processi contemporaneamente, distinguendo un processo dall'altro.
+- **Identificazione del processo**: grazie al [PID](Processi.md#2.4%20-%20Process%20ID%20(PID)) e alle altre informazioni contenute nel PCB, il sistema operativo può gestire un numero elevato di processi contemporaneamente, distinguendo un processo dall'altro.
 - **Schedulazione e gestione della priorità**: le informazioni di priorità e di tempo di esecuzione accumulate nel PCB consentono al sistema operativo di decidere quale processo eseguire in un dato momento, ottimizzando l'uso della CPU.
 
 ## 2.3 - Stato di un processo
@@ -104,7 +104,7 @@ Il PCB svolge un ruolo cruciale nel gestire i processi nel sistema operativo. Le
 Lo **stato di un processo** rappresenta la condizione in cui si trova un processo in un dato momento durante la sua esecuzione nel sistema operativo. Il sistema operativo utilizza questi stati per gestire i processi in modo efficiente, garantendo che la CPU venga utilizzata in modo ottimale.
 
 Gli stati principali di un processo sono:
-- **`new` (nuovo)**: il processo è appena stato creato, ma non è ancora pronto per essere eseguito. Si trova in fase di inizializzazione, durante la quale vengono assegnate risorse come memoria e ID del processo.
+- **`new` (nuovo)**: il processo è appena stato creato, ma non è ancora pronto per essere eseguito. Si trova in fase di inizializzazione, durante la quale vengono assegnate risorse come memoria e [PID](Processi.md#2.4%20-%20Process%20ID%20(PID)).
 - **`ready` (pronto)**: il processo è pronto per essere eseguito ma sta aspettando che la CPU diventi disponibile. In questo stato, il processo ha tutto ciò di cui ha bisogno per essere eseguito (memoria, dati, risorse), ma la CPU è attualmente occupata con un altro processo.
 - **`running` (in esecuzione)**: il processo sta attualmente utilizzando la CPU e le sue istruzioni vengono eseguite. Il sistema operativo ha assegnato il controllo della CPU al processo, che sta attivamente svolgendo il suo lavoro.
 - **`waiting` o `blocked` (in attesa o bloccato)**: il processo è in attesa di un evento esterno per continuare l'esecuzione. Questo evento può essere, ad esempio, il completamento di un'operazione di input/output (I/O), la ricezione di dati o un messaggio. In questo stato, il processo non può proseguire fino a che l'evento atteso non si verifica.
@@ -160,7 +160,35 @@ Ecco una tabella riassuntiva delle transizioni di stato:
 
 La gestione degli stati permette al sistema operativo di organizzare l'esecuzione dei processi in modo efficiente: ad esempio, quando un processo è in attesa (`waiting`), il sistema operativo può assegnare la CPU a un altro processo nello stato `ready`, garantendo che la CPU non rimanga inattiva.
 
-## 2.4 - Spazio di memoria
+## 2.4 - Process ID (PID)
+
+L'**identificatore del processo** (in inglese _**PID**_, _**P**rocess **ID**_) è un numero intero univoco assegnato al processo dal sistema operativo. Questo identificatore viene utilizzato per distinguere il processo dagli altri processi attivi all'interno del kernel%%link%%.
+
+### 2.4.1 - Ottenere i PID con `getpid()` e `getppid()`
+
+%%
+SISTEMARE NEL FORMATO USATO NELLA PAGINA [Segnali in UNIX](Segnali%20in%20UNIX.md)
+%%
+
+La syscall%%link%% `getpid()` restituisce il process ID del processo chiamante:
+
+```c
+#include <unistd.h>
+
+pid_t getpid(void);
+```
+
+Ogni processo ha un genitore: il processo che lo ha creato. La syscall%%link%% `getppid()` permette ad un processo di conoscere il process ID del proprio genitore:
+
+```c
+#include <unistd.h>
+
+ppid_t getppid(void);
+```
+
+Le relazioni tra processi costituiscono una struttura ad albero. Il genitore di ogni processo ha a sua volta un genitore, fino ad arrivare alla radice: il processo `init`.
+
+## 2.5 - Spazio di memoria
 
 Lo **spazio di memoria di un processo** rappresenta l'insieme di tutte le aree di memoria allocate per un processo dal sistema operativo. Questo spazio contiene il codice eseguibile, i dati e le strutture necessarie per far funzionare il programma. Ogni processo ha il proprio spazio di memoria isolato, separato da quello degli altri processi, garantendo che un processo non possa accedere o modificare direttamente la memoria di un altro processo: questa separazione migliora la sicurezza e la stabilità del sistema.
 
@@ -178,7 +206,7 @@ Ecco una rappresentazione grafica dello spazio di memoria di un processo:
 ![](Spazio%20di%20memoria%20di%20un%20processo.png)
 %%rimuovere questa foto e mettere uno schema fatto da me%%
 
-### 2.4.1 - Variazione della grandezza dei segmenti di memoria
+### 2.5.1 - Variazione della grandezza dei segmenti di memoria
 
 Si può notare che le dimensioni dei segmenti di codice e di dati sono fisse, ovvero non cambiano durante l'esecuzione del programma, mentre le dimensioni di stack e heap possono ridursi e crescere dinamicamente durante l'esecuzione:
 - Ogni volta che si chiama una funzione, viene inserito nello stack una struttura dati detta _record di attivazione_ (in inglese _activation record_) contenente i suoi parametri, le variabili locali e l'indirizzo di ritorno; quando la funzione restituisce il controllo al chiamante, il record di attivazione viene rimosso dallo stack.
@@ -353,8 +381,8 @@ Ogni nuovo processo viene creato a partire da un processo già esistente: il pro
 ## 5.1 - Fasi principali della creazione di un processo
 
 Le fasi principali della creazione di un processo sono:
-1. **Assegnazione di un PID**: ogni processo ha un identificatore univoco (solitamente rappresentato in memoria come un numero intero), noto come **_PID_** (_**P**rocess **ID**_). Il PID fornisce un valore univoco per ogni processo del sistema e può essere usato come indice per accedere a vari attributi di un processo all'interno del kernel%%link%%.
-2. **Allocazione delle risorse**: vengono allocate le risorse necessarie per il nuovo processo, come lo [spazio di memoria](Processi.md#2.4%20-%20Spazio%20di%20memoria), i descrittori dei file aperti dal processo padre che possono essere ereditati o copiati da lui, il tempo di CPU e così via.
+1. **Assegnazione di un PID**: a ogni processo viene assegnato un identificatore univoco, il [PID](Processi.md#2.4%20-%20Process%20ID%20(PID)), che può essere usato come indice per accedere a vari attributi di un processo all'interno del kernel%%link%%.
+2. **Allocazione delle risorse**: vengono allocate le risorse necessarie per il nuovo processo, come lo [spazio di memoria](Processi.md#2.5%20-%20Spazio%20di%20memoria), i descrittori dei file aperti dal processo padre che possono essere ereditati o copiati da lui, il tempo di CPU e così via.
 3. **Inizializzazione del contesto**: il sistema operativo crea un [PCB](Processi.md#2%20-%20Il%20PCB%20e%20le%20informazioni%20sul%20processo) per il processo figlio contenente tutte le informazioni di controllo necessarie, come lo stato del processo, i registri, i puntatori alla memoria, i file aperti e altro.
 4. **Inserimento nelle code di schedulazione**: il processo viene aggiunto alla [job queue](Processi.md#3.2.1%20-%20Principali%20code%20di%20schedulazione), cioè alla coda di schedulazione contenente tutti i processi nel sistema.
 
@@ -363,7 +391,7 @@ fare una sottosezione%%
 
 ## 5.2 - `fork()` in Unix/Linux
 
-Nei sistemi Unix/Linux, la creazione di un nuovo processo avviene tramite la chiamata di sistema `fork()`. Questa chiamata crea una copia esatta del processo padre, ma con un nuovo PID. Il valore restituito dalla chiamata `fork()` è diverso per il padre e per il figlio: mentre il processo padre riceve il PID del processo figlio, il processo figlio riceve un valore pari a `0`, indicando che è il processo appena creato.
+Nei sistemi Unix/Linux, la creazione di un nuovo processo avviene tramite la chiamata di sistema `fork()`. Questa chiamata crea una copia esatta del processo padre, ma con un nuovo PID. Il valore restituito dalla chiamata `fork()` è diverso per il padre e per il figlio: mentre il processo padre riceve il [PID](Processi.md#2.4%20-%20Process%20ID%20(PID)) del processo figlio, il processo figlio riceve un valore pari a `0`, indicando che è il processo appena creato.
 
 Un esempio di codice in linguaggio C che utilizza `fork()`:
 
@@ -464,7 +492,7 @@ Un processo può terminare per vari motivi. Quando termina, le risorse assegnate
 
 Le fasi principali della terminazione di un processo sono:
 1. **Richiesta di terminazione**: il processo chiama una funzione di uscita o riceve un segnale di terminazione. Questo avvia il processo di chiusura.
-2. **Chiusura e liberazione delle risorse**: il sistema operativo chiude automaticamente tutti i file aperti dal processo. Anche altri tipi di risorse come [socket](Socket.md), canali di comunicazione%%link%%, semafori%%link%% o altre strutture di dati vengono rilasciate, così come lo [spazio di memoria](Processi.md#2.4%20-%20Spazio%20di%20memoria) assegnato al processo (sia quella per il codice che per i dati) viene liberato, in modo che possa essere utilizzato da altri processi.
+2. **Chiusura e liberazione delle risorse**: il sistema operativo chiude automaticamente tutti i file aperti dal processo. Anche altri tipi di risorse come [socket](Socket.md), canali di comunicazione%%link%%, semafori%%link%% o altre strutture di dati vengono rilasciate, così come lo [spazio di memoria](Processi.md#2.5%20-%20Spazio%20di%20memoria) assegnato al processo (sia quella per il codice che per i dati) viene liberato, in modo che possa essere utilizzato da altri processi.
 3. **Aggiornamento dello stato del processo**: lo [stato del processo](Processi.md#2.3%20-%20Stato%20di%20un%20processo) nel [PCB](Processi.md#2%20-%20Il%20PCB%20e%20le%20informazioni%20sul%20processo) viene aggiornato in `terminated`. Finché il processo padre non recupera lo stato del processo figlio, si dice che quest'ultimo diventa un _processo zombie_ (in quanto il padre non sa che il processo figlio è morto).
 4. **Liberazione del PCB dalle code di schedulazione**: il processo viene rimosso dalla coda dei processi pronti (la [ready queue](Processi.md#3.2.1%20-%20Principali%20code%20di%20schedulazione)) o da altre [code di schedulazione](Processi.md#3.2%20-%20Code%20di%20schedulazione). Il [PCB](Processi.md#2%20-%20Il%20PCB%20e%20le%20informazioni%20sul%20processo) del processo viene marcato per la rimozione o, nel caso di un processo zombie, viene mantenuto in memoria fino a che il processo padre recupera il suo stato.
 5. **Notifica del processo padre**: se il processo è stato generato da un processo padre, quest'ultimo viene notificato della terminazione del figlio. Nei sistemi Unix/Linux, il padre può chiamare la funzione `wait()` per raccogliere il codice di uscita del figlio e permettere la completa rimozione del [PCB](Processi.md#2%20-%20Il%20PCB%20e%20le%20informazioni%20sul%20processo) del figlio dalla memoria.
@@ -484,7 +512,7 @@ La **terminazione a cascata** è un meccanismo che si verifica in un sistema ope
 
 Quando un processo padre termina, i processi figli possono essere influenzati in diversi modi a seconda della loro relazione con il processo padre e della gestione dei segnali. Alcuni punti chiave della terminazione a cascata sono:
 - **Segnale di terminazione**: quando un processo padre termina, può inviare segnali ai suoi processi figli. Se i processi figli non sono in grado di gestire il segnale di terminazione (come `SIGTERM` o `SIGKILL`), verranno terminati dal sistema operativo.
-- **Processi orfani**: se un processo padre termina, i suoi processi figli diventano _orfani_. In UNIX e Linux, i processi orfani vengono adottati dal processo `init` (che ha [PID](Processi.md#2.1%20-%20Informazioni%20contenute%20in%20un%20PCB) con valore `1`), che si occupa di gestire la loro terminazione. I processi orfani non vengono necessariamente terminati a meno che non vengano esplicitamente chiesti di farlo.
+- **Processi orfani**: se un processo padre termina, i suoi processi figli diventano _orfani_. In UNIX e Linux, i processi orfani vengono adottati dal processo `init` (che ha [PID](Processi.md#2.4%20-%20Process%20ID%20(PID)) con valore `1`), che si occupa di gestire la loro terminazione. I processi orfani non vengono necessariamente terminati a meno che non vengano esplicitamente chiesti di farlo.
 - **Comportamento di `wait()`**: quando un processo padre utilizza la funzione `wait()`, attende la terminazione di uno dei suoi processi figli. Se il padre termina prima dei figli, il sistema operativo può terminare i figli se la relazione di dipendenza è tale che non ha senso che continuino a vivere.
 
 ### 6.3.2 - Esempio di terminazione a cascata in linguaggio C
@@ -567,7 +595,6 @@ Le principali tecniche di comunicazione tra processi sono:
 
 \### 9. **Esecuzione di processi in foreground e background**
    Nei sistemi multiutente, è possibile eseguire un processo in **foreground** (in primo piano) o in **background** (sullo sfondo). Un processo in background può continuare a essere eseguito mentre l'utente esegue altre attività.
-
 %%
 
 # 8 - Multitasking

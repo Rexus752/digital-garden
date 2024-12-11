@@ -1,25 +1,6 @@
 ---
 draft: true
 ---
-# Process ID
-
-La syscall%%link%% `getpid()` restituisce il process ID del processo chiamante:
-
-```c
-#include <unistd.h>
-
-pid_t getpid(void);
-```
-
-Ogni processo ha un genitore: il processo che lo ha creato. La syscall%%link%% `getppid()` permette ad un processo di conoscere il process ID del proprio genitore:
-
-```c
-#include <unistd.h>
-
-ppid_t getpid(void);
-```
-
-Le relazioni tra processi costituiscono una struttura ad albero. Il genitore di ogni processo ha a sua volta un genitore, fino ad arrivare alla radice: il processo `init`.
 
 # Stati dei processi
 

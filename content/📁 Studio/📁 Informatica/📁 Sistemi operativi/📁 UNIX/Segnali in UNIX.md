@@ -9,7 +9,7 @@ iconColor: "#88FF88"
 - per i parametri delle funzioni, scegliere se mettere "`pid`: indica il PID del processo" o "`pid`: PID del processo"
 %%
 
-Nei sistemi [UNIX](UNIX.md), I **segnali** sono un meccanismo di [comunicazione tra processi](Processi.md#7%20-%20Comunicazione%20tra%20processi%20(IPC)) utilizzato per notificare a un processo l'occorrenza di un evento specifico, come un errore, un'interruzione dell'utente o un'operazione speciale.
+Nei sistemi [UNIX](UNIX.md), i **segnali** sono un meccanismo di [comunicazione tra processi](Processi.md#7%20-%20Comunicazione%20tra%20processi%20(IPC)) utilizzato per notificare a un processo l'occorrenza di un evento specifico, come un errore, un'interruzione dell'utente o un'operazione speciale.
 
 %%
 
@@ -48,7 +48,7 @@ Sono esempi di trap i tentativi di divisione per zero (`SIGFPE`), indirizzamento
 
 In [UNIX](UNIX.md), gli **interrupt** sono segnali inviati ad un processo da un agente esterno (come l'utente o un altro processo).
 
-Esempi di interrupt inviati dall'utente sono la pressione delle combinazione di tasti `Ctrl+C` (`SIGINT`) o `Ctrl+Z` (`SIGSTOP`) durante l'esecuzione di un processo, mentre un interrupt inviato da un altro processo può essere la system call `kill()`%%link%%.
+Esempi di interrupt inviati dall'utente sono la pressione delle combinazione di tasti `Ctrl + C` (`SIGINT`) o `Ctrl + Z` (`SIGSTOP`) durante l'esecuzione di un processo, mentre un interrupt inviato da un altro processo può essere la system call `kill()`%%link%%.
 
 # 3 - Ciclo di vita dei segnali in UNIX
 
@@ -76,7 +76,7 @@ Durante la **generazione del segnale**, il segnale viene creato come risultato d
 La **generazione di un segnale** può essere causato da diversi eventi o sorgenti:
 - **Evento hardware**: l'hardware ha verificato una condizione di errore che è stata notificata al kernel%%link%%, il quale a propria volta ha inviato un segnale corrispondente al processo in questione. Per esempio, l'esecuzione di istruzioni di linguaggio macchina malformate (`SIGILL`), divisioni per $0$ (`SIGFPE`), o riferimenti a parti di memoria inaccessibili (`SIGSEGV`).
 - [**Evento software**](Segnali%20in%20UNIX.md#4.2%20-%20Generazione%20di%20un%20segnale%20tramite%20eventi%20software): eventi che non derivano direttamente dall'hardware ma sono causati da azioni compiute da processi, dal kernel o da altre operazioni software. Per esempio, l'input è divenuto disponibile su un descrittore di file (`SIGIO`), un timer è arrivato a $0$ (`SIGALRM`), il tempo di processore per il processo è stato superato (`SIGXCPU`) o un figlio del processo è terminato (`SIGCHLD`).
-- **Azione dell'utente**: l'utente ha digitato sul terminale combinazioni di tasti che generano i segnali, per esempio `Ctrl+C` (`SIGINT`) o `Ctrl+Z` (`SIGTSTP`).
+- **Azione dell'utente**: l'utente ha digitato sul terminale combinazioni di tasti che generano i segnali, per esempio `Ctrl + C` (`SIGINT`) o `Ctrl + Z` (`SIGTSTP`).
 
 ## 4.2 - Generazione di un segnale tramite eventi software
 
@@ -462,7 +462,7 @@ dove:
 >         return 1;
 >     }
 > 
->     printf("SIGINT bloccato. Genera segnali con Ctrl+C.\n");
+>     printf("SIGINT bloccato. Genera segnali con Ctrl + C.\n");
 >     sleep(10);
 > 
 >     // Ripristino della maschera originale
@@ -482,7 +482,7 @@ dove:
 
 Nei sistemi [UNIX](UNIX.md)/Linux%%link%%, esistono **segnali non bloccabili**, ignorabili o gestibili da un processo tramite un [signal handler](Segnali%20in%20UNIX.md#7.2%20-%20Assegnazione%20di%20un%20signal%20handler%20con%20`signal()`%20e%20`sigaction()`). Questi segnali hanno comportamenti predefiniti che il sistema operativo applica sempre, indipendentemente dalle richieste del processo. Gli unici due segnali non bloccabili sono:
 - **`SIGKILL`**: termina immediatamente un processo, viene usato dal sistema operativo o dagli utenti per forzare la terminazione di un processo che non risponde a segnali ordinari.
-- **`SIGSTOP`**: sospende immediatamente l'esecuzione di un process, viene utilizzato per mettere in pausa un processo (ad esempio con **`Ctrl+Z`** o comandi come **`kill -STOP`**).
+- **`SIGSTOP`**: sospende immediatamente l'esecuzione di un process, viene utilizzato per mettere in pausa un processo (ad esempio con **`Ctrl + Z`** o comandi come **`kill -STOP`**).
 
 Rendere questi segnali non bloccabili assicura che il sistema operativo mantenga un controllo minimo indispensabile sui processi, evitando situazioni in cui un processo malintenzionato o malfunzionante possa eludere la gestione dei segnali.
 
@@ -554,10 +554,10 @@ Al momento della ricezione di un segnale, il [processo](Processi.md) può decide
 ## 7.1 - Esecuzione dell'azione predefinita
 
 Alla ricezione del segnale, se non è stato configurato diversamente, il processo esegue l'**azione predefinita** associata al segnale. Ogni segnale ha un proprio comportamento preimpostato, che varia in base alla sua natura e scopo. Le principali azioni predefinite sono:
-- **Terminazione del processo**: il processo termina immediatamente e il sistema libera le risorse allocate. Esempi di segnali con questa azione includono `SIGTERM` (terminazione ordinata) e `SIGINT` (interruzione da tastiera, azionabile con la combinazione di tasti `Ctrl+C`).
+- **Terminazione del processo**: il processo termina immediatamente e il sistema libera le risorse allocate. Esempi di segnali con questa azione includono `SIGTERM` (terminazione ordinata) e `SIGINT` (interruzione da tastiera, azionabile con la combinazione di tasti `Ctrl + C`).
 - **Terminazione con generazione di un core dump**: il processo termina e il sistema crea un _file di core dump_, utile per analizzare lo stato del programma al momento del crash. Esempi di segnali con questa azione sono `SIGSEGV` (violazione di segmentazione) e `SIGABRT` (interruzione forzata).
 - **Ignorazione del segnale**: il processo non intraprende alcuna azione e continua la sua esecuzione. Esempi di segnali ignorati per impostazione predefinita includono `SIGCHLD`, che notifica la terminazione di un processo figlio.
-- **Sospensione del processo**: il processo viene messo in stato di stop e rimane sospeso fino a quando non riceve un segnale per riprendere. Un esempio di segnali con questa azione è `SIGSTOP` (sospensione forzata, azionabile con la combinazione di tasti `Ctrl+Z`), che sospende il processo senza possibilità di blocco o gestione finché non riceve il segnale di ripresa `SIGCONT`.
+- **Sospensione del processo**: il processo viene messo in stato di stop e rimane sospeso fino a quando non riceve un segnale per riprendere. Un esempio di segnali con questa azione è `SIGSTOP` (sospensione forzata, azionabile con la combinazione di tasti `Ctrl + Z`), che sospende il processo senza possibilità di blocco o gestione finché non riceve il segnale di ripresa `SIGCONT`.
 - **Ripresa del processo**: il processo sospeso riprende la sua esecuzione. Un esempio è `SIGCONT`, utilizzato per continuare un processo precedentemente sospeso con `SIGSTOP`.
 
 ## 7.2 - Assegnazione di un signal handler con `signal()` e `sigaction()`
@@ -699,7 +699,7 @@ Consiglio: ogni volta che si vuole utilizzare una system call in un handler, con
 | **Segnale**                                                                  | **Numero** | **Quando viene generato**                                                        | **Azione predefinita**                                                                                                                            |
 | ---------------------------------------------------------------------------- | ---------- | -------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `SIGHUP`<br>(_**h**ang **up**_)                                              | `1`        | Disconnessione del terminale%%link%% o chiusura della shell%%link%%.             | Termina o ricarica il processo, spesso usato per configurazioni.                                                                                  |
-| `SIGINT`<br>(_**int**errupt_)                                                | `2`        | Interruzione da tastiera (`Ctrl+C`).                                             | Termina il processo.                                                                                                                              |
+| `SIGINT`<br>(_**int**errupt_)                                                | `2`        | Interruzione da tastiera (`Ctrl + C`).                                             | Termina il processo.                                                                                                                              |
 | `SIGQUIT`<br>(_**quit**_)                                                    | `3`        | Interruzione da tastiera con dump (`Ctrl+\`).                                    | Termina il processo e genera un core dump.                                                                                                        |
 | `SIGILL`<br>(_**ill**egal instruction_)                                      | `4`        | Istruzione illegale eseguita dal processo.                                       | Termina il processo segnalando un errore critico.                                                                                                 |
 | `SIGTRAP`<br>(_**trap**_)                                                    | `5`        | Breakpoint impostato da un debugger (es. GDB%%link%%) o sollevata un'eccezione.  | Termina il processo con generazione di un core dump.                                                                                              |
@@ -717,7 +717,7 @@ Consiglio: ogni volta che si vuole utilizzare una system call in un handler, con
 | `SIGCHLD`<br>(_**ch**i**ld**_)                                               | `17`       | Processo figlio terminato o sospeso.                                             | Notifica al processo padre della terminazione di un figlio.                                                                                       |
 | `SIGCONT`<br>(_**cont**inue_)                                                | `18`       | Ripresa di un processo sospeso.                                                  | Riprende l'esecuzione di un processo sospeso precedentemente con `SIGSTOP`.                                                                       |
 | `SIGSTOP`<br>(_**stop**_)                                                    | `19`       | Sospensione forzata di un processo.                                              | Sospende il processo ([non bloccabile](Segnali%20in%20UNIX.md#5.3%20-%20Segnali%20non%20bloccabili%20(`SIGKILL`%20e%20`SIGSTOP`))).               |
-| `SIGTSTP`<br>(_**t**erminal **st**o**p**_)                                   | `20`       | Sospensione da tastiera (`Ctrl+Z`).                                              | Sospende il processo, modificabile dal processo.                                                                                                  |
+| `SIGTSTP`<br>(_**t**erminal **st**o**p**_)                                   | `20`       | Sospensione da tastiera (`Ctrl + Z`).                                              | Sospende il processo, modificabile dal processo.                                                                                                  |
 | `SIGTTIN`<br>(_**t**erminal **in**put_)                                      | `21`       | Processo in background tenta di leggere dall'input.                              | Sospende il processo fino a che non è in primo piano.                                                                                             |
 | `SIGTTOU`<br>(_**t**erminal **ou**tput_)                                     | `22`       | Processo in background tenta di scrivere sull'output.                            | Sospende il processo fino a che non è in primo piano.                                                                                             |
 | `SIGPOLL`<br>(_**poll**able event_)<br>o `SIGIO`<br>(_**i**nput/**o**utput_) | `29`       | Evento su un descrittore di file monitorato.                                     | Notifica un input/output disponibile (POSIX%%link%%).                                                                                             |

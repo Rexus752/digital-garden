@@ -2,14 +2,19 @@
 icon: RiFlowChart
 iconColor: "#88FF88"
 ---
+%%
+introduzione sull'algoritmica
+%%
 
-Un **algoritmo** è la specificazione di una sequenza finita di operazioni (dette anche _istruzioni_) che consente di risolvere tutti i quesiti di una stessa classe, ognuno dei quali viene detto _istanza del problema_, o di calcolare il risultato di un'espressione matematica.
-
-Un algoritmo deve essere:
-- **Finito**: è costituito da un numero finito di istruzioni e deve sempre terminare;
-- **Deterministico**: partendo dagli stessi dati in ingresso, si devono ottenere i medesimi risultati;
-- **Non ambiguo**: le operazioni non devono poter essere interpretate in modi differenti;
-- **Generale**: deve essere applicabile a tutti i problemi della classe a cui si riferisce, o ai casi dell'espressione matematica.
+> [!definizione] Definizione: _algoritmo_
+> 
+> Un **algoritmo** è la specificazione di una sequenza finita di operazioni (dette anche _istruzioni_) che consente di risolvere tutti i quesiti di una stessa classe, ognuno dei quali viene detto _istanza del problema_, o di calcolare il risultato di un'espressione matematica.
+> 
+> Un algoritmo, per essere considerato tale, deve essere:
+> - **Finito**: costituito da un numero finito di istruzioni e deve sempre terminare;
+> - **Deterministico**: partendo dagli stessi dati in ingresso, si devono ottenere i medesimi risultati;
+> - **Non ambiguo**: le operazioni non devono poter essere interpretate in modi differenti;
+> - **Generale**: applicabile a tutti i problemi della classe a cui si riferisce, o ai casi dell'espressione matematica.
 
 # 1 - Esempio: algoritmo dell'addizione in colonna
 
