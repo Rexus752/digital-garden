@@ -1,5 +1,5 @@
 ---
-icon: OcGear24
+icon: FasDiagramProject
 iconColor: "#88FFFF"
 ---
 Il **processo** è un'istanza di un programma in esecuzione su un computer e rappresenta una delle unità fondamentali di gestione delle risorse da parte di un sistema operativo. Quando un programma viene eseguito, il sistema operativo crea un processo per esso, fornendogli le risorse necessarie, come CPU, memoria, accesso ai file e altri dispositivi.

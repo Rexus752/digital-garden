@@ -87,7 +87,9 @@ La **generazione di un segnale tramite eventi software** avviene tramite azioni 
 
 ### 4.2.1 - Invio di un segnale tramite `kill()`
 
-La **funzione `kill()`** è una chiamata di sistema%%link%% utilizzata per inviare segnali a un processo o gruppo di processi. Il suo prototipo è il seguente:
+La **funzione `kill()`** è una chiamata di sistema%%link%% utilizzata per inviare segnali a un processo o gruppo di processi.
+
+Il suo prototipo è il seguente:
 
 ```c
 #include <signal.h>
@@ -95,13 +97,13 @@ La **funzione `kill()`** è una chiamata di sistema%%link%% utilizzata per invia
 int kill(pid_t pid, int sig);
 ```
 
-dove:
-- **`pid`**: identifica il processo o gruppo di processi a cui inviare il segnale, in particolare:
+con:
+- **`pid`**: processo o gruppo di processi a cui inviare il segnale, in particolare:
     - **`pid > 0`**: invia il segnale al processo specifico con ID `pid`.
     - **`pid == 0`**: invia il segnale a tutti i processi nel gruppo di processi del chiamante.
     - **`pid < 0`**: invia il segnale a tutti i processi nel gruppo di processi specificato dal valore assoluto `pid` (cioè `-pid`).
     - **`pid == -1` (detto _broadcast signal_)**: invia il segnale a tutti i processi che l'utente può controllare (tranne i processi di sistema%%esempi?%% e il processo chiamante stesso).
-- **`sig`**: identifica il segnale da inviare.
+- **`sig`**: segnale da inviare.
 - **`int` restituito**: può assumere i seguenti valori:
 	- **`0`**: la funzione ha eseguito correttamente l'operazione.
 	- **`-1`**: c'è stato un errore durante l'esecuzione della funzione ed `errno`%%link%% viene impostato%%con che valori?%%.
@@ -133,7 +135,9 @@ sudo kill -9 -1
 
 ### 4.2.2 - Invio di un segnale allo stesso processo chiamante tramite `raise()`
 
-La **funzione `raise()`** è una chiamata di sistema%%link%% utilizzata per inviare un segnale allo stesso processo chiamante. È una forma semplificata per generare segnali all'interno di un programma, senza dover usare [`kill()`](Segnali%20in%20UNIX.md#4.2.1%20-%20Invio%20di%20un%20segnale%20tramite%20`kill()`) o identificare esplicitamente il processo. Il suo prototipo è il seguente:
+La **funzione `raise()`** è una chiamata di sistema%%link%% utilizzata per inviare un segnale allo stesso processo chiamante. È una forma semplificata per generare segnali all'interno di un programma, senza dover usare [`kill()`](Segnali%20in%20UNIX.md#4.2.1%20-%20Invio%20di%20un%20segnale%20tramite%20`kill()`) o identificare esplicitamente il processo.
+
+Il suo prototipo è il seguente:
 
 ```c
 #include <signal.h>
@@ -141,20 +145,17 @@ La **funzione `raise()`** è una chiamata di sistema%%link%% utilizzata per invi
 int raise(int sig);
 ```
 
-dove:
-- **`pid`**: identifica il processo o gruppo di processi a cui inviare il segnale, in particolare:
-    - **`pid > 0`**: invia il segnale al processo specifico con ID `pid`.
-    - **`pid == 0`**: invia il segnale a tutti i processi nel gruppo di processi del chiamante.
-    - **`pid < 0`**: invia il segnale a tutti i processi nel gruppo di processi specificato dal valore assoluto `pid` (cioè `-pid`).
-    - **`pid == -1` (detto _broadcast signal_)**: invia il segnale a tutti i processi che l'utente può controllare (tranne i processi di sistema%%esempi?%% e il processo chiamante stesso).
-- **`sig`**: identifica il segnale da inviare.
-- **`int` restituito**: può assumere i seguenti valori:
+con:
+- **`sig`**: segnale da inviare.
+- **`int` restituito**:
 	- **`0`**: la funzione ha eseguito correttamente l'operazione.
 	- **`-1`**: c'è stato un errore durante l'esecuzione della funzione ed `errno`%%link%% viene impostato%%con che valori?%%.
 
 ### 4.2.3 - Impostazione di un timer di sistema con `alarm()`
 
-La **funzione `alarm()`** è una chiamata di sistema%%link%% usata per impostare un timer di sistema al termine del quale viene inviato il segnale `SIGALRM`. È utile per gestire eventi basati sul tempo, come timeout per operazioni o esecuzioni periodiche. Il suo prototipo è il seguente:
+La **funzione `alarm()`** è una chiamata di sistema%%link%% usata per impostare un timer di sistema al termine del quale viene inviato il segnale `SIGALRM`. È utile per gestire eventi basati sul tempo, come timeout per operazioni o esecuzioni periodiche.
+
+Il suo prototipo è il seguente:
 
 ```c
 #include <unistd.h>
@@ -162,9 +163,9 @@ La **funzione `alarm()`** è una chiamata di sistema%%link%% usata per impostare
 unsigned int alarm(unsigned int seconds);
 ```
 
-dove:
-- **`seconds`**: indica il numero di secondi dopo il quale il segnale `SIGALRM` sarà inviato. Se `seconds` viene impostato a `0`, l'allarme già esistente (se presente) viene annullato.
-- **`unsigned int` restituito**: indica il numero di secondi rimanenti del precedente timer impostato, se esisteva. Altrimenti, restituisce `0` se non era impostato alcun timer.
+con:
+- **`seconds`**: numero di secondi dopo il quale il segnale `SIGALRM` sarà inviato. Se `seconds` viene impostato a `0`, l'allarme già esistente (se presente) viene annullato.
+- **`unsigned int` restituito**: numero di secondi rimanenti del precedente timer impostato, se esisteva. Altrimenti, restituisce `0` se non era impostato alcun timer.
 
 ## 4.3 - Segnali `SIGUSR1` e `SIGUSR2`
 
@@ -205,15 +206,19 @@ Le funzioni tipicamente usate per gestire una maschera dei segnali sono:
 
 ### 5.2.1 - Inizializzazione di una maschera vuota con `sigemptyset()`
 
-La **funzione `sigemptyset()`** permette di inizializzare una maschera vuota, rappresentata da un set di segnali. È spesso usata come primo passo per configurare una maschera di segnali o per costruire un set di segnali specifici. Il suo prototipo è il seguente:
+La **funzione `sigemptyset()`** permette di inizializzare una maschera vuota, rappresentata da un set di segnali. È spesso usata come primo passo per configurare una maschera di segnali o per costruire un set di segnali specifici.
+
+Il suo prototipo è il seguente:
+
 ```c
 #include <signal.h>
 
 int sigemptyset(sigset_t *set);
 ```
-dove:
-- **`set`**: è un puntatore a una variabile di tipo `sigset_t` (struttura dati che rappresenta un insieme di segnali). Questa variabile viene inizializzata come vuota dalla funzione.
-- **`int` restituito**: può assumere i seguenti valori:
+
+con:
+- **`set`**: puntatore a una variabile di tipo `sigset_t` (struttura dati che rappresenta un insieme di segnali). Questa variabile viene inizializzata come vuota dalla funzione.
+- **`int` restituito**:
 	- **`0`**: la funzione ha eseguito correttamente l'operazione.
 	- **`-1`**: c'è stato un errore durante l'esecuzione della funzione ed `errno`%%link%% viene impostato%%con che valori?%% (anche se nella pratica questa funzione non fallisce mai).
 
@@ -240,15 +245,19 @@ dove:
 
 ### 5.2.2 - Inizializzazione di una maschera piena con `sigfillset()`
 
-La **funzione `sigfillset()`** permette di inizializzare una maschera contenente tutti i segnali definiti dal sistema. È l'opposto di [`sigemptyset()`](Segnali%20in%20UNIX.md#5.2.1%20-%20Inizializzazione%20di%20una%20maschera%20vuota%20con%20`sigemptyset()`), che invece crea un set vuoto. Il suo prototipo è il seguente:
+La **funzione `sigfillset()`** permette di inizializzare una maschera contenente tutti i segnali definiti dal sistema. È l'opposto di [`sigemptyset()`](Segnali%20in%20UNIX.md#5.2.1%20-%20Inizializzazione%20di%20una%20maschera%20vuota%20con%20`sigemptyset()`), che invece crea un set vuoto.
+
+Il suo prototipo è il seguente:
+
 ```c
 #include <signal.h>
 
 int sigfillset(sigset_t *set);
 ```
-dove:
-- **`set`**: è un puntatore a una variabile di tipo `sigset_t` (struttura dati che rappresenta un insieme di segnali). La funzione riempie questa struttura con tutti i segnali supportati dal sistema.
-- **`int` restituito**: può assumere i seguenti valori:
+
+con:
+- **`set`**: puntatore a una variabile di tipo `sigset_t` (struttura dati che rappresenta un insieme di segnali). La funzione riempie questa struttura con tutti i segnali supportati dal sistema.
+- **`int` restituito**:
 	- **`0`**: la funzione ha eseguito correttamente l'operazione.
 	- **`-1`**: c'è stato un errore durante l'esecuzione della funzione ed `errno`%%link%% viene impostato%%con che valori?%% (anche se nella pratica questa funzione non fallisce mai).
 
@@ -275,17 +284,20 @@ dove:
 
 ### 5.2.3 - Verifica di un segnale nella maschera con `sigismember()`
 
-La **funzione `sigismember()`** verifica se un segnale specifico è presente in un set di segnali (di tipo `sigset_t`). È comunemente utilizzata per controllare la composizione di un set prima di applicare una maschera di segnali o eseguire altre operazioni. Il suo prototipo è il seguente:
+La **funzione `sigismember()`** verifica se un segnale specifico è presente in un set di segnali (di tipo `sigset_t`). È comunemente utilizzata per controllare la composizione di un set prima di applicare una maschera di segnali o eseguire altre operazioni.
+
+Il suo prototipo è il seguente:
+
 ```c
 #include <signal.h>
 
 int sigismember(const sigset_t *set, int signum);
 ```
-dove:
-- **`set`**: è un puntatore a un oggetto di tipo `sigset_t` che rappresenta un set di segnali.
-- **`signum`**: è un intero che rappresenta il numero del segnale da aggiungere al set (es. `SIGINT`, `SIGTERM`).
-- **`int` restituito**: è pari a `1` se il segnale è presente nel set, altrimenti `0`. Se c'è stato un errore, restituisce invece `-1` e imposta `errno`%%link%% con codice di errore `EINVAL`%%link%% (che indica un argomento non valido).
-- **`int` restituito**: può assumere i seguenti valori:
+
+con:
+- **`set`**: puntatore a un oggetto di tipo `sigset_t` che rappresenta un set di segnali.
+- **`signum`**: intero che rappresenta il numero del segnale da aggiungere al set (es. `SIGINT`, `SIGTERM`).
+- **`int` restituito**:
 	- **`1`**: il segnale è presente nel set.
 	- **`0`**: il segnale non è presente nel set.
 	- **`-1`**: c'è stato un errore durante l'esecuzione della funzione ed `errno`%%link%% viene impostato con codice di errore `EINVAL`%%link%% (che indica un argomento non valido).
@@ -332,15 +344,17 @@ dove:
 ### 5.2.4 - Aggiunta di un segnale con `sigaddset()`
 
 La **funzione `sigaddset()`** permette di aggiungere un segnale specifico a un set di segnali (di tipo `sigset_t`). Il suo prototipo è il seguente:
+
 ```c
 #include <signal.h>
 
 int sigaddset(sigset_t *set, int signum);
 ```
-dove:
-- **`set`**: è un puntatore a un oggetto di tipo `sigset_t` che rappresenta un set di segnali.
-- **`signum`**: è un intero che rappresenta il numero del segnale da aggiungere al set (es. `SIGINT`, `SIGTERM`).
-- **`int` restituito**: può assumere i seguenti valori:
+
+con:
+- **`set`**: puntatore a un oggetto di tipo `sigset_t` che rappresenta un set di segnali.
+- **`signum`**: intero che rappresenta il numero del segnale da aggiungere al set (es. `SIGINT`, `SIGTERM`).
+- **`int` restituito**:
 	- **`0`**: la funzione ha eseguito correttamente l'operazione.
 	- **`-1`**: c'è stato un errore durante l'esecuzione della funzione ed `errno`%%link%% viene impostato con codice di errore `EINVAL`%%link%% (che indica un argomento non valido).
 
@@ -379,15 +393,17 @@ dove:
 ### 5.2.5 - Rimozione di un segnale con `sigdelset()`
 
 La **funzione `sigdelset()`** permette di rimuovere un segnale specifico da un set di segnali (di tipo `sigset_t`). Il suo prototipo è il seguente:
+
 ```c
 #include <signal.h>
 
 int sigdelset(sigset_t *set, int signum);
 ```
-dove:
-- **`set`**: è un puntatore a un oggetto di tipo `sigset_t` che rappresenta un set di segnali.
-- **`signum`**: è un intero che rappresenta il numero del segnale da rimuovere dal set (es. `SIGINT`, `SIGTERM`).
-- **`int` restituito**: può assumere i seguenti valori:
+
+con:
+- **`set`**: puntatore a un oggetto di tipo `sigset_t` che rappresenta un set di segnali.
+- **`signum`**: intero che rappresenta il numero del segnale da rimuovere dal set.
+- **`int` restituito**:
 	- **`0`**: la funzione ha eseguito correttamente l'operazione.
 	- **`-1`**: c'è stato un errore durante l'esecuzione della funzione ed `errno`%%link%% viene impostato con codice di errore `EINVAL`%%link%% (che indica un argomento non valido).
 
@@ -425,20 +441,24 @@ dove:
 
 ### 5.2.6 - Applicazione di una maschera al processo con `sigprocmask()`
 
-La **funzione `sigprocmask()`** viene utilizzata per modificare la maschera associata a un processo. Il suo prototipo è il seguente:
+La **funzione `sigprocmask()`** viene utilizzata per modificare la maschera associata a un processo.
+
+Il suo prototipo è il seguente:
+
 ```c
 #include <signal.h>
 
 int sigprocmask(int how, const sigset_t *set, sigset_t *oldset);
 ```
-dove:
-- **`how`**: è un intero che specifica come modificare la maschera esistente (quella correntemente applicata al processo) e può assumere i seguenti valori:
-    - **`SIG_BLOCK`**: aggiunge i segnali alla maschera esistente.
-    - **`SIG_UNBLOCK`**: rimuove i segnali dalla maschera.
-    - **`SIG_SETMASK`**: sostituisce la maschera esistente con una nuova.
+
+con:
+- **`how`**: intero che specifica come modificare la maschera esistente (quella correntemente applicata al processo) e può assumere i seguenti valori:
+    - **`SIG_BLOCK`**: aggiunge i segnali specificati alla maschera già esistente.
+    - **`SIG_UNBLOCK`**: rimuove i segnali specificati dalla maschera esistente.
+    - **`SIG_SETMASK`**: sostituisce la maschera esistente con quella specificata.
 - **`set`**: puntatore alla nuova maschera da applicare.
-- **`oldset`** (opzionale): puntatore alla maschera precedente (utile per poterla salvare prima di sostituirla con la nuova).
-- **`int` restituito**: può assumere i seguenti valori:
+- **`oldset` (opzionale)**: puntatore alla maschera precedente (utile per poterla salvare prima di sostituirla con la nuova).
+- **`int` restituito**:
 	- **`0`**: la funzione ha eseguito correttamente l'operazione.
 	- **`-1`**: c'è stato un errore durante l'esecuzione della funzione ed `errno`%%link%% viene impostato%%con che valore?%%.
 
@@ -482,7 +502,7 @@ dove:
 
 Nei sistemi [UNIX](UNIX.md)/Linux%%link%%, esistono **segnali non bloccabili**, ignorabili o gestibili da un processo tramite un [signal handler](Segnali%20in%20UNIX.md#7.2%20-%20Assegnazione%20di%20un%20signal%20handler%20con%20`signal()`%20e%20`sigaction()`). Questi segnali hanno comportamenti predefiniti che il sistema operativo applica sempre, indipendentemente dalle richieste del processo. Gli unici due segnali non bloccabili sono:
 - **`SIGKILL`**: termina immediatamente un processo, viene usato dal sistema operativo o dagli utenti per forzare la terminazione di un processo che non risponde a segnali ordinari.
-- **`SIGSTOP`**: sospende immediatamente l'esecuzione di un process, viene utilizzato per mettere in pausa un processo (ad esempio con **`Ctrl + Z`** o comandi come **`kill -STOP`**).
+- **`SIGSTOP`**: sospende immediatamente l'esecuzione di un process, viene utilizzato per mettere in pausa un processo (ad esempio con `Ctrl + Z` o comandi come `kill -STOP`).
 
 Rendere questi segnali non bloccabili assicura che il sistema operativo mantenga un controllo minimo indispensabile sui processi, evitando situazioni in cui un processo malintenzionato o malfunzionante possa eludere la gestione dei segnali.
 
@@ -504,15 +524,19 @@ La **coda dei segnali pendenti** è una struttura utilizzata dal kernel%%link%% 
 
 ## 6.2 - Verifica dei segnali pendenti con `sigpending()`
 
-La **funzione `sigpending()`** permette di controllare quali segnali sono attualmente pendenti per il processo. Il suo prototipo è il seguente:
+La **funzione `sigpending()`** permette di controllare quali segnali sono attualmente pendenti per il processo.
+
+Il suo prototipo è il seguente:
+
 ```c
 #include <signal.h>
 
 int sigpending(sigset_t *set);
 ```
-dove:
-- **`set`**: è un puntatore a un oggetto `sigset_t` che verrà popolato con l'elenco dei segnali pendenti.
-- **`int` restituito**: può assumere i seguenti valori:
+
+con:
+- **`set`**: puntatore a un oggetto `sigset_t` che verrà popolato con l'elenco dei segnali pendenti.
+- **`int` restituito**:
 	- **`0`**: la funzione ha eseguito correttamente l'operazione.
 	- **`-1`**: c'è stato un errore durante l'esecuzione della funzione ed `errno`%%link%% viene impostato con codice di errore `EINVAL`%%link%% (che indica un argomento non valido).
 
@@ -564,15 +588,19 @@ Alla ricezione del segnale, se non è stato configurato diversamente, il process
 
 Le **funzioni `signal()` e `sigaction()`** sono utilizzate per gestire i segnali attraverso funzioni specificate dall'utente, dette _signal handler_.
 
-La funzione `signal()` è una maniera più semplice per associare un gestore a un segnale. Il suo prototipo è il seguente:
+La funzione `signal()` è una maniera più semplice per associare un gestore a un segnale.
+
+Il suo prototipo è il seguente:
+
 ```c
 #include <signal.h>
 
 void (*signal(int sig, void (*handler)(int)))(int);
 ```
-dove:
-- **`sig`**: è il numero del segnale (ad esempio, `SIGINT` per l'interruzione da tastiera).
-- **`handler`**: è il puntatore alla funzione che gestirà il segnale, la quale prende un parametro di tipo `int` (tipicamente il numero del segnale).
+
+con:
+- **`sig`**: segnale che si vuole gestire.
+- **`handler`**: puntatore alla funzione che gestirà il segnale, la quale prende un parametro di tipo `int` (tipicamente il numero del segnale).
 
 > [!esempio]
 > ```c
@@ -592,23 +620,28 @@ dove:
 > [!attenzione] Attenzione!
 > Vi sono differenze nel comportamento della funzione `signal()` fra le varie implementazioni di [UNIX](UNIX.md); se possibile, quindi, va evitato il suo uso in programmi complessi.
 
-La funzione `sigaction()` è una versione più potente e sicura per gestire i segnali. Permette un controllo più fine, come il blocco temporaneo dei segnali durante l'esecuzione del gestore. Il suo prototipo è il seguente:
+La funzione `sigaction()` è una versione più potente e sicura per gestire i segnali. Permette un controllo più fine, come il blocco temporaneo dei segnali durante l'esecuzione del gestore.
+
+Il suo prototipo è il seguente:
+
 ```c
 #include <signal.h>
 
 int sigaction(int sig, const struct sigaction *act, struct sigaction *oldact);
 ```
-dove:
-- **`sig`**: il segnale che si vuole gestire.
-- **`act`**: un puntatore a una struttura `sigaction` che descrive come deve essere gestito il segnale.
-- **`oldact`**: un puntatore a una struttura `sigaction` in cui verrà memorizzato il gestore precedente (può essere `NULL`).
-- **`int` restituito**: può assumere i seguenti valori:
+
+con:
+- **`sig`**: segnale che si vuole gestire.
+- **`act`**: puntatore a una struttura `sigaction` che descrive come deve essere gestito il segnale.
+- **`oldact`**: puntatore a una struttura `sigaction` in cui verrà memorizzato il gestore precedente (può essere `NULL`).
+- **`int` restituito**:
 	- **`0`**: la funzione ha eseguito correttamente l'operazione.
 	- **`-1`**: c'è stato un errore durante l'esecuzione della funzione ed `errno`%%link%% viene impostato con codice di errore `EINVAL`%%link%% (che indica un argomento non valido).
 
 ### 7.2.1 - Struttura `sigaction`
 
 La **struttura `sigaction`** è così definita:
+
 ```c
 struct sigaction {
     void (*sa_handler)(int);
@@ -617,7 +650,8 @@ struct sigaction {
     void (*sa_restorer)(void);
 };
 ```
-dove:
+
+con:
 - **`sa_handler`**: funzione che definisce il comportamento da adottare all'attivazione del segnale (_signal handler_).
 - **`sa_mask`**: [maschera dei segnali](Segnali%20in%20UNIX.md#5.2%20-%20Maschera%20dei%20segnali) temporanea applicata durante l'esecuzione dell'handler che sostituisce quella legata al processo in esecuzione. Insieme ai segnali specificati in questa maschera, viene automaticamente bloccato anche il segnale che ha attivato l'handler.
 - **`sa_flags`**: flag per personalizzare il comportamento dell'handler.
