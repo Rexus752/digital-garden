@@ -9,8 +9,6 @@ Il sito è ancora _work in progress_, per questo c'è poca roba e fatta molto al
 
 Un **giardino digitale** è uno spazio online personale a metà tra un taccuino e un blog, dove il _giardiniere_ che lo cura condivide i propri pensieri e le proprie conoscenze come _semi_ da far lasciar coltivare ai visitatori. A differenza dei blog, i giardini digitali si distinguono per essere meno strutturati (specie dal punto di vista cronologico), quanto più una collezione di informazioni in continua evoluzione (da qui la metafora del _giardino da curare_).
 
-Un **giardino digitale** è uno spazio online che si trova all'incrocio tra un quaderno e un blog, dove i giardinieri digitali condividono **semi di pensieri** da **coltivare in pubblico**. Invece di articoli rifiniti mostrati in ordine cronologico inverso come in un blog, un giardino digitale è più simile a una wiki in continuo sviluppo e senza una forma predefinita.
-
 # Appunti e materiale di studio
 
 - Musica
@@ -33,7 +31,7 @@ Un **giardino digitale** è uno spazio online che si trova all'incrocio tra un q
 			- [Chiamate di procedure remote (RPC)](Chiamate%20di%20procedure%20remote%20(RPC).md)
 			- [Thread](Thread.md)
 
-# Progetti/collettivi/gruppi/robe di cui faccio parte
+# Progetti/collettivi/robe di cui faccio parte
 
 ## Attuali
 
