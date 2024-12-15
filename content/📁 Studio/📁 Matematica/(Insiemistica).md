@@ -1,7 +1,7 @@
 ---
 icon: TiCirclesRelation
 iconColor: "#FF88FF"
-draft: "true"
+draft: true
 ---
 # 1 - Introduzione agli insiemi
 

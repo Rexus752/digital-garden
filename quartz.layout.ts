@@ -3,14 +3,14 @@ import * as Component from "./quartz/components"
 
 // components shared across all pages
 export const sharedPageComponents: SharedLayout = {
-	head: Component.Head(),
+  head: Component.Head(),
 	header: [],
 	afterBody: [
 		Component.Comments({
 			provider: 'giscus',
 			options: {
 				// from data-repo
-				repo: 'Rexus752/Digital-Garden',
+				repo: 'Rexus752/digital-garden',
 				// from data-repo-id
 				repoId: 'R_kgDONHp66Q',
 				// from data-category
@@ -22,7 +22,7 @@ export const sharedPageComponents: SharedLayout = {
 	],
 	footer: Component.Footer({
 		links: {
-			"GitHub Repository": "https://github.com/Rexus752/Digital-Garden",
+			"GitHub Repository": "https://github.com/Rexus752/digital-garden",
 		},
 	}),
 }
