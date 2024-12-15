@@ -224,3 +224,89 @@ contentMeta: {
   readingTime: ({ minutes }) => `${minutes} minuti di lettura`,
 },
 ```
+
+# Problemi di Quartz
+
+Ecco una lista di problemi che ho trovato usando Quartz e come li ho risolti. Per molti di questi problemi non ho ancora trovato una soluzione e, non avendo idea di come risolverli, credo che semplicemente aspetterò che il creatore di Quartz (Jacky Zhao) lo faccia.
+
+## `/` nei displayed name dei link
+
+### Problema
+
+Se ho un link del tipo
+
+```
+[processi I/O-bound](Processi.md#4.1%20-%20Processo%20I/O-bound)
+```
+
+Quel `/` nel displayed name del link crede sia tipo un path quindi compare solo come link [O-bound](Processi.md#4.1%20-%20Processo%20I/O-bound).
+
+### Soluzione
+
+Non l'ho ancora risolto (lol), infatti nella pagina [Processi](Processi.md) si trovano dei link [O-bound](Processi.md#4.1%20-%20Processo%20I/O-bound).
+
+## Table Of Contents non renderizza correttamente
+
+### Problema
+
+Il Table Of Contents (l'indice al lato) renderizza i pezzetti di codice inline come testo normale. Fin qui non ci sarebbe nessun problema, se non fosse che non renderizza neanche il LaTeX inline.
+
+Anche i tag HTML che usavo per cambiare colore al font (es. `<span style="color:#FF88FF; background:#00000000">Definizione: insieme</span>`) non me li renderizzava ma me li prendeva come testo normale.
+
+### Soluzione
+
+Non ho ancora risolto, però ho intenzione di provare a integrare una sorta di "renderer" in Quartz (però c'è da studiarsi come funziona il parsing dei dati per creare il Table Of Contents e se è effettivamente fattibile o meno).
+
+## Table Of Contents mezza colonna
+
+### Problema
+
+Se `Component.TableOfContents()` viene specificato come `DesktopOnly` (quindi con `Component.DesktopOnly(Component.TableOfContents())`), occupa solo mezza colonna anziché l'intero resto della colonna laterale in cui viene inserito.
+
+### Soluzione
+
+Non l'ho risolto, infatti occupa ancora solo mezza colonna laterale.
+
+## Table Of Contents fisso se non `DesktopOnly`
+
+### Problema
+
+Se `Component.TableOfContents()` non viene specificato come `DesktopOnly` (quindi con `Component.DesktopOnly(Component.TableOfContents())`), non si può scorrere.
+
+### Soluzione
+
+Devo ancora trovare un modo per risolverlo.
+
+## Click sul link all'heading non porta all'heading
+
+### Problema
+
+Se in una pagina clicco su un link che mi porta a un heading nella stessa pagina, a volte non succede nulla oppure porta a un altro heading.
+
+### Soluzione
+
+Cliccare sui link aprendoli in un'altra tab (col `Middle Click`) anziché nella stessa tab (col `Left Click`). È un workaround non ottimale, ma non ho idea di come si possa sistemare.
+
+## File e cartelle con stesso nome nella stessa cartella
+
+### Problema
+
+Quartz si rincoglionisce quando ci sono file e cartelle con lo stesso nome nella stessa cartella, in particolare:
+- Nell'explorer compare solo la pagina, ma non la cartella.
+- Sminchia completamente gli hyperlink nell'headcrumb.
+
+### Soluzione
+
+È un workaround, ma almeno funziona: mettere `📁` all'inizio del nome della cartella, così Quartz riesce a distinguerli.
+
+# TODO
+
+Lista delle cose che devo fare per migliorare questo Giardino Digitale:
+- Cambiare il font monospaziato usato per il codice (quando è inline è inguardabile per me).
+- Per la visualizzazione da mobile: aggiungere un pulsante fluttuante per vedere il Table Of Contents.
+- Per la visualizzazione da desktop: aggiungere un Table Of Contents fluttuante sul lato (stile Notion).
+- Risolvere problema dei [`/` nei displayed name dei link](Quartz.md#`/`%20nei%20displayed%20name%20dei%20link).
+- Risolvere il problema del [Table Of Contents non renderizza correttamente](Quartz.md#Table%20Of%20Contents%20non%20renderizza%20correttamente).
+- Risolvere il problema del [Table Of Contents mezza colonna](Quartz.md#Table%20Of%20Contents%20mezza%20colonna).
+- Risolvere il problema del [Table Of Contents fisso se non `DesktopOnly`](Quartz.md#Table%20Of%20Contents%20fisso%20se%20non%20`DesktopOnly`).
+- Risolvere il problema del [Click sul link all'heading non porta all'heading](Quartz.md#Click%20sul%20link%20all'heading%20non%20porta%20all'heading).

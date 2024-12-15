@@ -41,7 +41,6 @@ export const defaultContentPageLayout: PageLayout = {
 		Component.Search(),
 		// Component.Darkmode(),
 		Component.DesktopOnly(Component.TableOfContents()),
-		
 	],
 	right: [
 		Component.DesktopOnly(Component.Explorer()),
