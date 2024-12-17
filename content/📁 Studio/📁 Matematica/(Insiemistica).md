@@ -340,7 +340,7 @@ allora si ha che $A \cup B = \{a,b,c,d,e,f,g\}$, $B\cup C = \{d,e,f,g,h,i\}$, $A
 
 ### 4.2.3 - <span style="color:#8888FF; background:#00000000">Esempio: unione degli insiemi dei numeri pari e dispari</span>
 
-Dati due insiemi $A = \{n \in \mathbb{N} \mid n \mod 2 = 0\}$ e $B = \{n \in \mathbb{N} \mid n \mod 2 = 1\}$, ossia rispettivamente gli insiemi dei numeri naturali pari e dispari, allora $A \cup B = \mathbb{N}$.
+Dati due insiemi $A = \{n \in \mathbb{N} \mid n \bmod 2 = 0\}$ e $B = \{n \in \mathbb{N} \mid n \bmod 2 = 1\}$, ossia rispettivamente gli insiemi dei numeri naturali pari e dispari, allora $A \cup B = \mathbb{N}$.
 
 ## 4.3 - <span style="color:#FF88FF; background:#00000000">Definizione: differenza tra due insiemi</span>
 

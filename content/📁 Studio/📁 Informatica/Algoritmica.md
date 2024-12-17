@@ -14,7 +14,11 @@ introduzione sull'algoritmica
 > - **Finito**: costituito da un numero finito di istruzioni e deve sempre terminare;
 > - **Deterministico**: partendo dagli stessi dati in ingresso, si devono ottenere i medesimi risultati;
 > - **Non ambiguo**: le operazioni non devono poter essere interpretate in modi differenti;
-> - **Generale**: applicabile a tutti i problemi della classe a cui si riferisce, o ai casi dell'espressione matematica.
+> - **Generale**: applicabile a tutte le istanze del problema computazionale%%link%% che si intende risolva.
+
+%%
+Procedura: algoritmo che non necessariamente termina.
+%%
 
 # 1 - Esempio: algoritmo dell'addizione in colonna
 
@@ -89,7 +93,7 @@ Si può notare come anche questa sequenza di istruzioni rispetti le condizioni p
 
 # 3 - Etimologia ed origine
 
-Il termine deriva dalla trascrizione latina del nome del matematico persiano al-Khwarizmi, vissuto nel IX secolo d.C., che è considerato uno dei primi autori ad aver fatto riferimento a questo concetto scrivendo il libro _"Regole di ripristino e riduzione"_.
+Il termine deriva dalla trascrizione latina del nome del matematico persiano Muḥammad ibn Mūsā al-Khwārizmī, vissuto nel IX secolo d.C., che è considerato uno dei primi autori ad aver fatto riferimento a questo concetto scrivendo il libro _"Regole di ripristino e riduzione"_.
 
 Le prime nozioni di algoritmo si trovano in documenti risalenti al XVII secolo a.C., conosciuti come _papiri di Ahmes_ e noti anche come _papiri di Rhind_, che contengono una collezione di problemi con relativa soluzione comprendendo un problema di moltiplicazione che lo scrittore dichiara di aver copiato da altri papiri anteriori di due secoli.
 

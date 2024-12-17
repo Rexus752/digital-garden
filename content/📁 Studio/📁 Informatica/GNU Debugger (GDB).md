@@ -110,7 +110,7 @@ Risposta: In gdb utilizzare uno dei due comandi
 # Fonti
 
 - Slide del Prof. Schifanella Claudio del corso di Laboratorio di Sistemi Operativi (canale B, turno T4), Corso di Laurea in Informatica presso l'Università di Torino, A.A. 2024-25:
-	- [Slide: gdb](https://informatica.i-learn.unito.it/mod/resource/view.php?id=254492
+	- [Slide: gdb](https://informatica.i-learn.unito.it/mod/resource/view.php?id=254492)
 %%
 Da vedere:
 - https://en.wikipedia.org/wiki/GNU_Debugger

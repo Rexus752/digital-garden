@@ -64,12 +64,12 @@ graph LR
 1. [**Generazione del segnale**](Segnali%20in%20UNIX.md#4%20-%20Generazione%20di%20un%20segnale): il segnale viene creato come risultato di un evento specifico e viene posto in una  associata al processo destinatario.
 2. [**Blocco del segnale**](Segnali%20in%20UNIX.md#5%20-%20Blocco%20del%20segnale): dopo la sua generazione, si può impedire temporaneamente che un segnale venga consegnato a un processo. Invece di essere immediatamente gestito, il segnale rimane in uno stato di pendenza finché non viene sbloccato.
 3. **Consegna del segnale**: quando il processo destinatario è attivo, il kernel controlla se ci sono segnali pendenti per quel processo. Se il segnale non è bloccato, allora viene recapitato, altrimenti rimane in stato pendente fino a quando non può essere gestito. Alcuni segnali, come `SIGKILL`, vengono consegnati immediatamente e non possono essere bloccati o ignorati.
-4. [**Gestione del segnale**](Segnali%20in%20UNIX.md#5%20-%20Gestione%20del%20segnale): una volta consegnato, il segnale viene gestito dal processo a cui è stato recapitato. 
-5. **Conclusione del segnale**: una volta gestito, il segnale esce dalla [coda dei segnali pendenti](Segnali%20in%20UNIX.md#Coda%20dei%20segnali%20pendenti). Se il segnale ha attivato un'azione (ad esempio, la terminazione del processo), il ciclo di vita del segnale termina con l'esecuzione dell'azione predefinita o personalizzata.
+4. [**Gestione del segnale**](Segnali%20in%20UNIX.md#7%20-%20Gestione%20del%20segnale): una volta consegnato, il segnale viene gestito dal processo a cui è stato recapitato. 
+5. **Conclusione del segnale**: una volta gestito, il segnale esce dalla [coda dei segnali pendenti](Segnali%20in%20UNIX.md#6%20-%20Coda%20dei%20segnali%20pendenti). Se il segnale ha attivato un'azione (ad esempio, la terminazione del processo), il ciclo di vita del segnale termina con l'esecuzione dell'azione predefinita o personalizzata.
 
 # 4 - Generazione di un segnale
 
-Durante la **generazione del segnale**, il segnale viene creato come risultato di un evento specifico e  viene posto in una [coda di segnali pendenti](Segnali%20in%20UNIX.md#6%20-%20Coda%20dei%20segnali%20pendenti) associata al processo destinatario.
+Durante la **generazione del segnale**, il segnale viene creato come risultato di un evento specifico e  viene posto in una [coda dei segnali pendenti](Segnali%20in%20UNIX.md#6%20-%20Coda%20dei%20segnali%20pendenti) associata al processo destinatario.
 
 ## 4.1 - Fonti di generazione di un segnale
 
@@ -82,7 +82,7 @@ La **generazione di un segnale** può essere causato da diversi eventi o sorgent
 
 La **generazione di un segnale tramite eventi software** avviene tramite azioni compiute da processi, dal kernel o da altre operazioni software. In particolare, si può ottenere usando le seguenti chiamate di sistema%%link%%:
 - [**`kill()`**](Segnali%20in%20UNIX.md#4.2.1%20-%20Invio%20di%20un%20segnale%20tramite%20`kill()`): invia un segnale a un processo o a un gruppo di processi.
-- [**`raise()`**](Segnali%20in%20UNIX.md#4.2.2%20-%20Invio%20di%20un%20segnale%20allo%20stesso%20processo%20tramite%20`raise()`): invia un segnale allo stesso processo chiamante.
+- [**`raise()`**](Segnali%20in%20UNIX.md#4.2.2%20-%20Invio%20di%20un%20segnale%20allo%20stesso%20processo%20chiamante%20tramite%20`raise()`): invia un segnale allo stesso processo chiamante.
 - [**`alarm()`**](Segnali%20in%20UNIX.md#4.2.3%20-%20Impostazione%20di%20un%20timer%20di%20sistema%20con%20`alarm()`): imposta un timer di sistema al termine del quale invia il segnale `SIGALRM`.
 
 ### 4.2.1 - Invio di un segnale tramite `kill()`
@@ -181,7 +181,7 @@ I numeri assegnati a `SIGUSR1` e `SIGUSR2` possono variare tra i sistemi, ma tip
 
 # 5 - Blocco del segnale
 
-Il **blocco di un segnale** è una tecnica usata per impedire temporaneamente che un segnale venga consegnato a un processo, memorizzandolo all'interno della [coda dei segnali pendenti](Segnali%20in%20UNIX.md#Coda%20dei%20segnali%20pendenti).
+Il **blocco di un segnale** è una tecnica usata per impedire temporaneamente che un segnale venga consegnato a un processo, memorizzandolo all'interno della [coda dei segnali pendenti](Segnali%20in%20UNIX.md#6%20-%20Coda%20dei%20segnali%20pendenti).
 
 ## 5.1 - Uso tipico
 
@@ -194,7 +194,7 @@ Il **blocco di un segnale** è una tecnica usata per impedire temporaneamente ch
 
 La **maschera dei segnali** è un meccanismo che consente di specificare quali segnali un [processo](Processi.md) desidera bloccare temporaneamente. È una struttura cruciale per la gestione dei segnali, utilizzata per impedire che determinati segnali vengano consegnati al processo finché la maschera non viene modificata.
 
-Viene rappresentata da un oggetto di tipo `sigset_t`, che è una struttura dati per definire un set di segnali. Quando un segnale è "mascherato" (cioè bloccato), non viene consegnato immediatamente al processo, ma viene messo nella [coda dei segnali pendenti](Segnali%20in%20UNIX.md#Coda%20dei%20segnali%20pendenti).
+Viene rappresentata da un oggetto di tipo `sigset_t`, che è una struttura dati per definire un set di segnali. Quando un segnale è "mascherato" (cioè bloccato), non viene consegnato immediatamente al processo, ma viene messo nella [coda dei segnali pendenti](Segnali%20in%20UNIX.md#6%20-%20Coda%20dei%20segnali%20pendenti).
 
 Le funzioni tipicamente usate per gestire una maschera dei segnali sono:
 - [**`sigemptyset()`**](Segnali%20in%20UNIX.md#5.2.1%20-%20Inizializzazione%20di%20una%20maschera%20vuota%20con%20`sigemptyset()`): inizializza una nuova maschera vuota.

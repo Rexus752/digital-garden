@@ -3,7 +3,7 @@ icon:
 ---
 [Quartz](https://quartz.jzhao.xyz/) è un tool che genera siti completi a partire da note scritte in Markdown. Per scrivere queste note in Markdown, uso [Obsidian](https://obsidian.md/).
 
-# Installazione
+# 1 - Installazione
 
 Seguire la guida per l'installazione indicata sul [sito di Quartz](https://quartz.jzhao.xyz/#-get-started). Se durante l'installazione, dopo aver eseguito il comando `npm i`, esce un errore del genere:
 
@@ -23,17 +23,17 @@ Run npm audit for details.
 
 Allora eseguire il comando `npm audit fix` per risolvere.
 
-# Configurazione
+# 2 - Configurazione
 
 Ecco quello che ho modificato nei file di Quartz per ottenere la configurazione che adotta per generare questo sito.
 
-## `quartz.config.ts`
+## 2.1 - `quartz.config.ts`
 
 - **`pageTitle: "🪴 Giardino Digitale di Rexus752"`**: titolo che esce all'inizio di ogni pagina.
 - **`locale: "it-IT"`**: per impostare la lingua in italiano.
 - **`baseUrl: "rexus752.pages.dev"`**: URL del sito.
 
-## `quartz.layout.ts`
+## 2.2 - `quartz.layout.ts`
 
 Questo è il layout che uso nel mio sito.
 
@@ -52,11 +52,11 @@ export const sharedPageComponentypescript: SharedLayout = {
 				// from data-repo
 				repo: 'Rexus752/digital-garden',
 				// from data-repo-id
-				repoId: 'R_kgDONHp66Q',
+				repoId: '<repoId>',
 				// from data-category
 				category: 'Announcementypescript',
 				// from data-category-id
-				categoryId: 'DIC_kwDONHp66c4Cjzbq',
+				categoryId: '<categoryId>',
 			}
 		}),
 	],
@@ -110,11 +110,11 @@ export const defaultListPageLayout: PageLayout = {
 
 ```
 
-## `quartz/static`
+## 2.3 - `quartz/static`
 
 Nella cartella ho messo la mia `icon.png` per dare l'icona al sito. L'icona l'ho creata attraverso questo [generatore sul sito ufficiale di Obsidian](https://obsidian.md/blog/new-obsidian-icon/) che ti permette di personalizzare la nuova icona di Obsidian adottata nel 2023 con i propri colori (e io ho usato l'azzurro e il rosa perché ricordano la mia classica propic che uso ovunque). 
 
-## Modalità scura di default
+## 2.4 - Modalità scura di default
 
 Impostare la modalità scura di default sul sito è un bel casino, ci ho messo un bel po' per capire come diamine farlo, ma alla fine ho scelto l'opzione più stupida e più diretta per realizzarlo: nel file `quartz.config.ts` ho scambiato di posto le parole `lightMode` e `darkMode`.
 
@@ -156,11 +156,11 @@ Stessa cosa ho fatto per quanto riguarda il [syntax highlighting](https://quartz
       }),
 ```
 
-## `quartz/styles/customs.scss`
+## 2.5 - `quartz/styles/customs.scss`
 
 In questo file ci vanno le configurazioni personalizzate per lo stile.
 
-### Tabelle
+### 2.5.1 - Tabelle
 
 Il padding delle tabelle l'ho modificato in modo da renderle un po' più "compatte" senza lasciar passare l'intera Autostrada del Sole tra il contenuto della cella e il bordo.
 
@@ -194,7 +194,7 @@ tbody tr:nth-child(2n) {
 }
 ```
 
-## `quartz/styles/variables.scss`
+## 2.6 - `quartz/styles/variables.scss`
 
 In questo file, ho modificato le seguenti righe per evitare di avere spazio inutilmente occupato all'inizio della pagina e ai lati.
 
@@ -203,7 +203,7 @@ $sidePanelWidth: 300px; // Initial value: 380px
 $topSpacing: 2rem; // Initial value: 6rem
 ```
 
-## `quartz/i18n/locales/it-IT.ts`
+## 2.7 - `quartz/i18n/locales/it-IT.ts`
 
 Nel file delle traduzioni in italiano, ho modificato le seguenti traduzioni.
 
@@ -225,13 +225,72 @@ contentMeta: {
 },
 ```
 
-# Problemi di Quartz
+## 2.8 - Callout personalizzati
+
+All'interno del mio Giardino Digitale, uso i seguenti callout personalizzati, dichiarati nel file `custom.scss`. Sul [sito di Quartz](https://quartz.jzhao.xyz/features/callouts) viene spiegato come aggiungerne di nuovi.
+
+Io, per aggiungere nuovi callout, uso questo metodo:
+- Cerco una possibile icona su [FontAwesome](https://fontawesome.com/v6/search).
+- Copio il codice SVG.
+- Lo converto in URL tramite questo [tool](https://yoksel.github.io/url-encoder/).
+- Lo aggiungo nel file `custom.scss` con il seguente formato:
+	```scss
+	.callout {
+		&[data-callout="custom"] {
+			--color: #customcolor;
+		    --border: #custombordercolor;
+			--bg: #custombg;
+			--callout-icon: url("data:image/svg+xml; utf8, <custom formatted svg>"); //SVG icon code
+		}
+	}
+	```
+
+### 2.8.1 - Lista dei callout che uso
+
+#### 2.8.1.1 - Generici
+
+> [!esempio] Esempio
+> 
+> Per gli esempi.
+
+> [!trucco] Trucco
+> Per i trucchetti mnemonici.
+
+%%
+da aggiungere:
+- [!consiglio]
+- [!attenzione]
+%%
+
+#### 2.8.1.2 - Matematici
+
+> [!definizione]
+> 
+> Per le definizioni matematiche.
+
+> [!osservazione] Osservazione
+>
+> Per le osservazioni matematiche.
+
+> [!rappresentazione] Rappresentazione
+> Per le notazioni e le rappresentazioni di oggetti matematici.
+
+> [!proposizione] Proposizione
+> Per i teoremi, proposizioni, lemmi e corollari matematici.
+
+> [!dimostrazione] Dimostrazione
+> Per le dimostrazioni matematiche.
+
+> [!proprieta] Proprietà
+> Per le proprietà matematiche.
+
+# 3 - Problemi di Quartz
 
 Ecco una lista di problemi che ho trovato usando Quartz e come li ho risolti. Per molti di questi problemi non ho ancora trovato una soluzione e, non avendo idea di come risolverli, credo che semplicemente aspetterò che il creatore di Quartz (Jacky Zhao) lo faccia.
 
-## `/` nei displayed name dei link
+## 3.1 - `/` nei displayed name dei link
 
-### Problema
+### 3.1.1 - Problema
 
 Se ho un link del tipo
 
@@ -241,65 +300,85 @@ Se ho un link del tipo
 
 Quel `/` nel displayed name del link crede sia tipo un path quindi compare solo come link [O-bound](Processi.md#4.1%20-%20Processo%20I/O-bound).
 
-### Soluzione
+### 3.1.2 - Soluzione
 
 Non l'ho ancora risolto (lol), infatti nella pagina [Processi](Processi.md) si trovano dei link [O-bound](Processi.md#4.1%20-%20Processo%20I/O-bound).
 
-## Table Of Contents non renderizza correttamente
+## 3.2 - Table Of Contents non renderizza correttamente
 
-### Problema
+### 3.2.1 - Problema
 
 Il Table Of Contents (l'indice al lato) renderizza i pezzetti di codice inline come testo normale. Fin qui non ci sarebbe nessun problema, se non fosse che non renderizza neanche il LaTeX inline.
 
 Anche i tag HTML che usavo per cambiare colore al font (es. `<span style="color:#FF88FF; background:#00000000">Definizione: insieme</span>`) non me li renderizzava ma me li prendeva come testo normale.
 
-### Soluzione
+### 3.2.2 - Soluzione
 
 Non ho ancora risolto, però ho intenzione di provare a integrare una sorta di "renderer" in Quartz (però c'è da studiarsi come funziona il parsing dei dati per creare il Table Of Contents e se è effettivamente fattibile o meno).
 
-## Table Of Contents mezza colonna
+## 3.3 - Table Of Contents mezza colonna
 
-### Problema
+### 3.3.1 - Problema
 
 Se `Component.TableOfContents()` viene specificato come `DesktopOnly` (quindi con `Component.DesktopOnly(Component.TableOfContents())`), occupa solo mezza colonna anziché l'intero resto della colonna laterale in cui viene inserito.
 
-### Soluzione
+### 3.3.2 - Soluzione
 
 Non l'ho risolto, infatti occupa ancora solo mezza colonna laterale.
 
-## Table Of Contents fisso se non `DesktopOnly`
+## 3.4 - Table Of Contents fisso se non `DesktopOnly`
 
-### Problema
+### 3.4.1 - Problema
 
 Se `Component.TableOfContents()` non viene specificato come `DesktopOnly` (quindi con `Component.DesktopOnly(Component.TableOfContents())`), non si può scorrere.
 
-### Soluzione
+### 3.4.2 - Soluzione
 
 Devo ancora trovare un modo per risolverlo.
 
-## Click sul link all'heading non porta all'heading
+## 3.5 - Click sul link all'heading non porta all'heading
 
-### Problema
+### 3.5.1 - Problema
 
 Se in una pagina clicco su un link che mi porta a un heading nella stessa pagina, a volte non succede nulla oppure porta a un altro heading.
 
-### Soluzione
+### 3.5.2 - Soluzione
 
 Cliccare sui link aprendoli in un'altra tab (col `Middle Click`) anziché nella stessa tab (col `Left Click`). È un workaround non ottimale, ma non ho idea di come si possa sistemare.
 
-## File e cartelle con stesso nome nella stessa cartella
+## 3.6 - File e cartelle con stesso nome nella stessa cartella
 
-### Problema
+### 3.6.1 - Problema
 
 Quartz si rincoglionisce quando ci sono file e cartelle con lo stesso nome nella stessa cartella, in particolare:
 - Nell'explorer compare solo la pagina, ma non la cartella.
 - Sminchia completamente gli hyperlink nell'headcrumb.
 
-### Soluzione
+### 3.6.2 - Soluzione
 
 È un workaround, ma almeno funziona: mettere `📁` all'inizio del nome della cartella, così Quartz riesce a distinguerli.
 
-# TODO
+## 3.7 - Titoli dei callout non colorano il LaTeX
+
+### 3.7.1 - Problema
+
+Se ho un callout di questo tipo:
+
+> [!esempio] Esempio: $\{0\}$ e $\{\{1,2,3\}\}$ sono singoletti
+> 
+> Gli insiemi $\{0\}$ e $\{\{1,2,3\}\}$ sono singoletti: in particolare, il primo è formato unicamente dall'elemento $0$, mentre il secondo è formato dall'unico elemento $\{1,2,3\}$ che a sua volta è un insieme (non unitario).
+
+I blocchi di LaTeX inline nel titolo del callout non vengono colorati ma rimangono bianchi.
+
+### 3.7.2 - Soluzione
+
+È un workaround, ma almeno funziona: mettere `\color{<codice colore>}` nel blocco inline di LaTeX.
+
+> [!esempio] Esempio: $\color{#8888FF}\{0\}$ e $\color{#8888FF}\{\{1,2,3\}\}$ sono singoletti
+> 
+> Gli insiemi $\{0\}$ e $\{\{1,2,3\}\}$ sono singoletti: in particolare, il primo è formato unicamente dall'elemento $0$, mentre il secondo è formato dall'unico elemento $\{1,2,3\}$ che a sua volta è un insieme (non unitario).
+
+# 4 - TODO
 
 Lista delle cose che devo fare per migliorare questo Giardino Digitale:
 - Cambiare il font monospaziato usato per il codice (quando è inline è inguardabile per me).
