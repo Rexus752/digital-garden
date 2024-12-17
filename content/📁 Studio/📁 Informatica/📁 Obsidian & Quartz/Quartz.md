@@ -43,7 +43,7 @@ import * as Component from "./quartz/componentypescript"
 
 // componentypescript shared across all pages
 export const sharedPageComponentypescript: SharedLayout = {
-  head: Component.Head(),
+	head: Component.Head(),
 	header: [],
 	afterBody: [
 		Component.Commentypescript({
@@ -119,41 +119,42 @@ Nella cartella ho messo la mia `icon.png` per dare l'icona al sito. L'icona l'ho
 Impostare la modalità scura di default sul sito è un bel casino, ci ho messo un bel po' per capire come diamine farlo, ma alla fine ho scelto l'opzione più stupida e più diretta per realizzarlo: nel file `quartz.config.ts` ho scambiato di posto le parole `lightMode` e `darkMode`.
 
 ```typescript
-      colors: {
-        darkMode: {
-          light: "#faf8f8",
-          lightgray: "#e5e5e5",
-          gray: "#b8b8b8",
-          darkgray: "#4e4e4e",
-          dark: "#2b2b2b",
-          secondary: "#284b63",
-          tertiary: "#84a59d",
-          highlight: "rgba(143, 159, 169, 0.15)",
-          textHighlight: "#fff23688",
-        },
-        lightMode: {
-          light: "#161618",
-          lightgray: "#393639",
-          gray: "#646464",
-          darkgray: "#d4d4d4",
-          dark: "#ebebec",
-          secondary: "#7b97aa",
-          tertiary: "#84a59d",
-          highlight: "rgba(143, 159, 169, 0.15)",
-          textHighlight: "#b3aa0288",
-        },
+colors: {
+	darkMode: {
+		light: "#faf8f8",
+		lightgray: "#e5e5e5",
+		gray: "#b8b8b8",
+		darkgray: "#4e4e4e",
+		dark: "#2b2b2b",
+		secondary: "#284b63",
+		tertiary: "#84a59d",
+		highlight: "rgba(143, 159, 169, 0.15)",
+		textHighlight: "#fff23688",
+	},
+	lightMode: {
+		light: "#161618",
+		lightgray: "#393639",
+		gray: "#646464",
+		darkgray: "#d4d4d4",
+		dark: "#ebebec",
+		secondary: "#7b97aa",
+		tertiary: "#84a59d",
+		highlight: "rgba(143, 159, 169, 0.15)",
+		textHighlight: "#b3aa0288",
+	},
+},
 ```
 
 Stessa cosa ho fatto per quanto riguarda il [syntax highlighting](https://quartz.jzhao.xyz/features/syntax-highlighting) (sempre in `quartz.config.ts`), al quale ho applicato i colori scuri semplicemente scambiando i valori `github-light` e `github-dark`.
 
 ```typescript
-      Plugin.SyntaxHighlighting({
-        theme: {
-          light: "github-dark",
-          dark: "github-light",
-        },
-        keepBackground: false,
-      }),
+Plugin.SyntaxHighlighting({
+	theme: {
+		light: "github-dark",
+		dark: "github-light",
+	},
+	keepBackground: false,
+}),
 ```
 
 ## 2.5 - `quartz/styles/customs.scss`
@@ -389,3 +390,5 @@ Lista delle cose che devo fare per migliorare questo Giardino Digitale:
 - Risolvere il problema del [Table Of Contents mezza colonna](Quartz.md#Table%20Of%20Contents%20mezza%20colonna).
 - Risolvere il problema del [Table Of Contents fisso se non `DesktopOnly`](Quartz.md#Table%20Of%20Contents%20fisso%20se%20non%20`DesktopOnly`).
 - Risolvere il problema del [Click sul link all'heading non porta all'heading](Quartz.md#Click%20sul%20link%20all'heading%20non%20porta%20all'heading).
+- Aggiungere una funzionalità per aprire una nota casuale nel Giardino Digitale.
+- Cercare di integrare il plugin Iconize aggiungendo le icone alle pagine e le icone inline.

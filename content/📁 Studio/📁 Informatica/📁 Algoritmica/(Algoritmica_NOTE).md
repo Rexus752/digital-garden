@@ -226,7 +226,3 @@ Altrimenti, tramite leggi di Morgan, dalla negazione di quell'if si ottiene l'in
 Se il primo caso, allora il picco si trova nella parte a sinistra di p, nell'intervallo$[i,p-1]$, altrimenti a destra.
 Non è un caso che la chiamata ricorsiva corrisponda all'ipotesi induttiva.
 
-%%
-mettere a capo con \quad automatico dopo blocchi if e for
-mettere syntax highlighting
-%%

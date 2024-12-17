@@ -32,6 +32,9 @@ Questo sito è stato creato tramite l'uso di [Quartz](Quartz.md), un tool che ge
 			- [Socket](Socket.md)
 			- [Chiamate di procedure remote (RPC)](Chiamate%20di%20procedure%20remote%20(RPC).md)
 			- [Thread](Thread.md)
+	- Obsidian & Quartz
+		- [Obsidian Setup](Obsidian%20Setup.md)
+		- [Quartz](Quartz.md)
 
 # Progetti/collettivi/robe di cui faccio parte
 
