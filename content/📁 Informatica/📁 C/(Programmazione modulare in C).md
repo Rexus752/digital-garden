@@ -67,7 +67,7 @@ Organizzare il codice in tre componenti separati:
 
 Soluzione:
 
-![](content/📁%20Studio/📁%20Informatica/📁%20C/attachments/Soluzione.png)
+![](content/📁%20Informatica/📁%20C/attachments/Soluzione.png)
 
 # Compilazione dei moduli
 

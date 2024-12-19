@@ -385,10 +385,11 @@ Lista delle cose che devo fare per migliorare questo Giardino Digitale:
 - Cambiare il font monospaziato usato per il codice (quando è inline è inguardabile per me).
 - Per la visualizzazione da mobile: aggiungere un pulsante fluttuante per vedere il Table Of Contents.
 - Per la visualizzazione da desktop: aggiungere un Table Of Contents fluttuante sul lato (stile Notion).
-- Risolvere problema dei [`/` nei displayed name dei link](Quartz.md#`/`%20nei%20displayed%20name%20dei%20link).
-- Risolvere il problema del [Table Of Contents non renderizza correttamente](Quartz.md#Table%20Of%20Contents%20non%20renderizza%20correttamente).
-- Risolvere il problema del [Table Of Contents mezza colonna](Quartz.md#Table%20Of%20Contents%20mezza%20colonna).
-- Risolvere il problema del [Table Of Contents fisso se non `DesktopOnly`](Quartz.md#Table%20Of%20Contents%20fisso%20se%20non%20`DesktopOnly`).
-- Risolvere il problema del [Click sul link all'heading non porta all'heading](Quartz.md#Click%20sul%20link%20all'heading%20non%20porta%20all'heading).
+- Risolvere problema dei [`/` nei displayed name dei link](Quartz.md#3.1%20-%20`/`%20nei%20displayed%20name%20dei%20link).
+- Risolvere il problema del [Table Of Contents che non renderizza correttamente](Quartz.md#3.2%20-%20Table%20Of%20Contents%20non%20renderizza%20correttamente).
+- Risolvere il problema del [Table Of Contents mezza colonna](Quartz.md#3.3%20-%20Table%20Of%20Contents%20mezza%20colonna).
+- Risolvere il problema del [Table Of Contents fisso se non `DesktopOnly`](Quartz.md#3.4%20-%20Table%20Of%20Contents%20fisso%20se%20non%20`DesktopOnly`).
+- Risolvere il problema del [click sul link all'heading non porta all'heading](Quartz.md#3.5%20-%20Click%20sul%20link%20all'heading%20non%20porta%20all'heading).
 - Aggiungere una funzionalità per aprire una nota casuale nel Giardino Digitale.
 - Cercare di integrare il plugin Iconize aggiungendo le icone alle pagine e le icone inline.
+- Le tabelle non devono essere scrollabili in larghezza, ma devono essere fixed con larghezza pari alla larghezza del body.

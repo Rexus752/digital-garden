@@ -283,7 +283,7 @@ i & \text{se $i-1=2^k$ per qualche $k$} \\
 1 & \text{altrimenti}
 \end{cases}
 $$
-![](content/📁%20Studio/📁%20Informatica/📁%20Algoritmica/attachments/Dyn-Array-Insert-1.png)
+![](content/📁%20Informatica/📁%20Algoritmica/attachments/Dyn-Array-Insert-1.png)
 
 ![](Dyn-Array-Insert-1%20Formula.png)
 

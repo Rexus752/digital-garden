@@ -137,6 +137,8 @@ Questa è la lista delle configurazioni di Obsidian e dei suoi plugin che uso.
 		{trigger: "lr[", replacement: "\\left[ $0 \\right] $1", options: "mA"},
 		{trigger: "lr|", replacement: "\\left| $0 \\right| $1", options: "mA"},
 		{trigger: "lr<", replacement: "\\left< $0 \\right> $1", options: "mA"},
+		{trigger: "\\ceil", replacement: "\\lceil $0 \\rceil", options: "mA"},
+		{trigger: "\\floor", replacement: "\\lfloor $0 \\rfloor", options: "mA"},
 	
 		// Dots & Spaces
 		{trigger: "...", replacement: "\\ldots", options: "mA"},
@@ -171,10 +173,9 @@ Questa è la lista delle configurazioni di Obsidian e dei suoi plugin che uso.
 		{trigger: "\\C", replacement: "\\mathbb{C}", options: "tmA"},
 	
 	    // Probability
-		{trigger: "\\P", replacement: "\\mathbb{P}", options: "tmA"}, // Power set
+		{trigger: "\\P", replacement: "\\mathbb{P}", options: "tmA"},
 	
 		// Sets
-		{trigger: "\\p", replacement: "\\mathcal{P}", options: "tmA"}, // Power set
 		{trigger: "\\sube", replacement: "\\subseteq", options: "mA"},
 		{trigger: "\\empty", replacement: "\\emptyset", options: "mA"},
 	

@@ -16,7 +16,6 @@ Questo sito è stato creato tramite l'uso di [Quartz](Quartz.md), un tool che ge
 - Musica
 	- Basso
 		- [so, bassically-](so,%20bassically-.md)
-
 - Informatica
 	- [GNU Debugger (GDB)](GNU%20Debugger%20(GDB).md)
 	- [Algoritmica](Algoritmica.md)
@@ -35,6 +34,9 @@ Questo sito è stato creato tramite l'uso di [Quartz](Quartz.md), un tool che ge
 	- Obsidian & Quartz
 		- [Obsidian Setup](Obsidian%20Setup.md)
 		- [Quartz](Quartz.md)
+- Matematica
+	- Logica matematica
+		- [Teoremi e dimostrazioni](Teoremi%20e%20dimostrazioni.md)
 
 # Progetti/collettivi/robe di cui faccio parte
 
