@@ -1,5 +1,5 @@
 ---
-draft: false
+draft: true
 ---
 Tutte le variabili e le funzioni del C hanno 2 attributi: il tipo e la classe di memorizzazione.
 

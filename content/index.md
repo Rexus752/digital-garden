@@ -2,7 +2,7 @@
 title: Benvenuto nel mio Giardino Digitale
 icon: LiComponent
 ---
-Ciao, benvenut* nel mio Giardino Digitale (se non sai cos'è, [clicca qui](content/index.md#Cos'è%20un%20giardino%20digitale?)).
+Ciao, benvenut* nel mio Giardino Digitale.
 Il sito è ancora _work in progress_, per questo c'è poca roba e fatta molto alla cazzo di cane. _let me cook_.
 
 # Cos'è un giardino digitale?

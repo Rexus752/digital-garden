@@ -167,7 +167,7 @@ L'**identificatore del processo** (in inglese _**PID**_, _**P**rocess **ID**_) Ã
 ### 2.4.1 - Ottenere i PID con `getpid()` e `getppid()`
 
 %%
-SISTEMARE NEL FORMATO USATO NELLA PAGINA [Segnali in UNIX](Segnali%20in%20UNIX.md)
+SISTEMARE IL PROTOTIPO E LA DESCRIZIONE DEI PARAMETRI NEL FORMATO USATO NELLA PAGINA [Segnali in UNIX](Segnali%20in%20UNIX.md)
 %%
 
 La syscall%%link%% `getpid()` restituisce il process ID del processo chiamante:

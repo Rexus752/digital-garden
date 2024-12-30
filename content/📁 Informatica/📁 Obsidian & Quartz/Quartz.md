@@ -3,9 +3,11 @@ icon:
 ---
 [Quartz](https://quartz.jzhao.xyz/) è un tool che genera siti completi a partire da note scritte in Markdown. Per scrivere queste note in Markdown, uso [Obsidian](https://obsidian.md/).
 
-# 1 - Installazione
+# 1 - Installazione e troubleshooting
 
-Seguire la guida per l'installazione indicata sul [sito di Quartz](https://quartz.jzhao.xyz/#-get-started). Se durante l'installazione, dopo aver eseguito il comando `npm i`, esce un errore del genere:
+Seguire la guida per l'installazione indicata sul [sito di Quartz](https://quartz.jzhao.xyz/#-get-started).
+
+Se durante l'installazione, dopo aver eseguito il comando `npm i`, esce un errore del genere:
 
 ```
 added 526 packages, and audited 528 packages in 9s
@@ -22,6 +24,18 @@ Run npm audit for details.
 ```
 
 Allora eseguire il comando `npm audit fix` per risolvere.
+
+Se durante il clone vi esce il seguente messaggio:
+
+```
+error: RPC failed; curl 92 HTTP/2 stream 5 was not closed cleanly: CANCEL (err 8)
+error: 40 bytes of body are still expected
+fetch-pack: unexpected disconnect while reading sideband packet
+fatal: early EOF
+fatal: fetch-pack: invalid index-pack output
+```
+
+Allora significa che c'è stato un problema di connessione, quindi rieseguire il clone.
 
 # 2 - Configurazione
 

@@ -61,6 +61,9 @@ In matematica, per stabilire la verità di un'affermazione (detta _teorema_) si 
 
 Quando si analizza il ragionamento matematico, come faremo noi in questo corso, non si tiene conto di queste distinzioni e si parla sempre di teorema.
 
+%% Se il risultato dipende direttamente da un altro teorema, è un corollario.
+Se è un passaggio necessario per un teorema più grande, è un lemma.
+In alcuni casi, una stessa implicazione potrebbe essere chiamata corollario in un libro e proprietà in un altro, a seconda dell'enfasi o del pubblico. %%
 # 3 - La conseguenza logica
 
 %%
@@ -129,28 +132,28 @@ Stabilire che cosa sia un contesto/situazione in cui sia possibile valutare se u
 
 Mediante le tavole di verità è immediato osservare che
 $$
-P \lor \lnotP
+P \lor \lnot P
 $$
 è sempre vera, qualunque sia $P$.
 Proposizioni di questo tipo, ovvero affermazioni la cui tavola di verità assume sempre il valore $V$ si dicono _tautologie_. In simboli, scriviamo $\vDash Q$ per dire che $Q$ è una tautologia.
 Viceversa, il valore di verità di
 $$
-P \land \lnotP
+P \land \lnot P
 $$
 è sempre falso, qualunque sia $P$.
 Proposizioni di questo tipo, ovvero affermazioni la cui tavola di verità assume sempre il valore F si dicono _contraddizioni_.
 
 Osserviamo che
 $$
-Q \vDash P \lor \lnotP
+Q \vDash P \lor \lnot P
 $$
-qualunque siano $P$ e $Q$. Infatti presa una qualsiasi riga della tavola di verità di $P$ e $Q$ in cui $Q$ assume il valore VERO, allora in quella riga anche $P \lor \lnotP$ ha valore VERO. Infatti in ogni riga $P \lor \lnotP$ ha valore VERO.
+qualunque siano $P$ e $Q$. Infatti presa una qualsiasi riga della tavola di verità di $P$ e $Q$ in cui $Q$ assume il valore VERO, allora in quella riga anche $P \lor \lnot P$ ha valore VERO. Infatti in ogni riga $P \lor \lnot P$ ha valore VERO.
 Viceversa,
 $$
-P \land \lnotP \vDash Q
+P \land \lnot P \vDash Q
 $$
-indipendentemente da $P$ e $Q$. Infatti, poiché $P \land \lnotP$ è sempre falsa, quindi non c'è nessuna riga della tavola di verità di $P$ e $Q$ in cui $P \land \lnotP$ assuma il valore VERO ma $Q$ ha valore FALSO.
-Ovviamente $P \land \lnotP$ potrebbe essere sostituita da qualunque contraddizione.
+indipendentemente da $P$ e $Q$. Infatti, poiché $P \land \lnot P$ è sempre falsa, quindi non c'è nessuna riga della tavola di verità di $P$ e $Q$ in cui $P \land \lnot P$ assuma il valore VERO ma $Q$ ha valore FALSO.
+Ovviamente $P \land \lnot P$ potrebbe essere sostituita da qualunque contraddizione.
 Questo è il cosiddetto principio dell'_ex falso quodlibet_.
 
 # 5 - Tipi di dimostrazioni

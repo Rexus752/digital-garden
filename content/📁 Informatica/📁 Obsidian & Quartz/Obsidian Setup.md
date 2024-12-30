@@ -119,10 +119,18 @@ Questa è la lista delle configurazioni di Obsidian e dei suoi plugin che uso.
 
 ## LaTeX Suite
 
+%%
+> [!tip] Consiglio
+> Per gli Snippets, non usare i miei fin ma parti da zero e createli da te. Poi, eventualmente, prendi spunto dai miei se pensi che siano comodi per te.
+%%
+
 - _Snippets_:
 	```javascript
 	[
 	    // Single letter triggers like "\\N" in single dollar signs (i.e. $...$) don't work with "m" option, only with "t" option
+	    
+	    // Comments
+		{trigger: "%%", replacement: "%% $0 %%", options: "tA"},
 	    
 		// Math mode
 		{trigger: "$", replacement: "$$0$", options: "tA"},
@@ -137,13 +145,13 @@ Questa è la lista delle configurazioni di Obsidian e dei suoi plugin che uso.
 		{trigger: "lr[", replacement: "\\left[ $0 \\right] $1", options: "mA"},
 		{trigger: "lr|", replacement: "\\left| $0 \\right| $1", options: "mA"},
 		{trigger: "lr<", replacement: "\\left< $0 \\right> $1", options: "mA"},
-		{trigger: "\\ceil", replacement: "\\lceil $0 \\rceil", options: "mA"},
-		{trigger: "\\floor", replacement: "\\lfloor $0 \\rfloor", options: "mA"},
+		{trigger: "\\ceil", replacement: "\\lceil $0 \\rceil $1", options: "mA"},
+		{trigger: "\\floor", replacement: "\\lfloor $0 \\rfloor $1", options: "mA"},
 	
 		// Dots & Spaces
 		{trigger: "...", replacement: "\\ldots", options: "mA"},
 		{trigger: ".*", replacement: "\\cdot", options: "mA"},
-		{trigger: "\\q", replacement: "\\quad", options: "mA"},
+		{trigger: "\\q", replacement: "\\quad ", options: "mA"},
 	
 		// Arrows
 		{trigger: "<->", replacement: "\\leftrightarrow", options: "mA"},
@@ -176,22 +184,92 @@ Questa è la lista delle configurazioni di Obsidian e dei suoi plugin che uso.
 		{trigger: "\\P", replacement: "\\mathbb{P}", options: "tmA"},
 	
 		// Sets
+		{trigger: "\\{", replacement: "\\{ $0 \\}", options: "tmA"},
 		{trigger: "\\sube", replacement: "\\subseteq", options: "mA"},
 		{trigger: "\\empty", replacement: "\\emptyset", options: "mA"},
 	
 		// Functions
 		{trigger: "\\Dom", replacement: "\\text{Dom}(f)", options: "mA"},
 	
-	    // Algorithms
-	    {trigger: "\\algo", replacement: "\\begin{align*}\n & \\textbf{$0} \\quad \\rhd \\\\\n & \n\\end{align*}", options: "mA"},
-		{trigger: "if", replacement: "\\textrm{if } $0 \\textrm{ then} \\\\\n & ", options: "mA"},
-		{trigger: "else", replacement: "\\textrm{else} \\\\\n & ", options: "mA"},
-		{trigger: "end if", replacement: "\\textrm{end if} \\\\\n & ", options: "mA"},
-		{trigger: "while", replacement: "\\textrm{while } $0 \\textrm{ do} \\\\\n & ", options: "mA"},
-	    {trigger: "end while", replacement: "\\textrm{end while} \\\\\n & ", options: "mA"},
-		{trigger: "for", replacement: "\\textrm{for } $0 \\textrm{ to } $1 \\textrm{ do} \\\\\n & ", options: "mA"},
-		{trigger: "end for", replacement: "\\textrm{end for} \\\\\n & ", options: "mA"},
-		{trigger: "return", replacement: "\\textrm{return } $0 \\\\\n & ", options: "mA"},
+	    // Algorithm environment
+	    {
+		    // Creates the Algorithm environment
+		    trigger: "\\algo",
+		    replacement: "\\begin{align*} % Algorithm environment\n & \\textbf{$0} \\\\\n & \\rhd \\textrm{Pre: } $1 \\\\\n & \\rhd \\textrm{Post: } $2 \\\\\n & $3 \n\\end{align*}",
+		    options: "mA"
+		},
+		{
+			// Converts double quotes to \textrm{} in Algorithm environment
+			trigger: "(Algorithm environment(?:(?!\\$\\$)[\\s\\S])*?)\"",
+			replacement: "[[0]]\\textrm{$0} $1",
+			options: "rmA"
+		},
+		{
+			// Formats an inline comment in Algorithm environment
+			trigger: "(Algorithm environment(?:(?!\\$\\$)[\\s\\S])*?)\#",
+			replacement: "[[0]]\\quad \\rhd \\textrm{$0}",
+			options: "rmA"
+		},
+		{
+			// Formats "if" in Algorithm environment
+			trigger: "(Algorithm environment(?:(?!\\$\\$)[\\s\\S])*?)if",
+			replacement: "[[0]]\\textrm{if } $0 \\textrm{ then} \\\\\n & \\quad $1",
+			options: "rmA"
+		},
+		{
+			// Formats "else" in Algorithm environment
+			trigger: "(Algorithm environment(?:(?!\\$\\$)[\\s\\S])*?)else",
+			replacement: "[[0]]\\textrm{else} \\\\\n & \\quad $0",
+			options: "rmA"
+		},
+		{
+			// Formats "end if" in Algorithm environment
+			trigger: "(Algorithm environment(?:(?!\\$\\$)[\\s\\S])*?)end if",
+			replacement: "[[0]]\\textrm{end if} \\\\\n & $0",
+			options: "rmA"
+		},
+		{
+			// Formats "while" in Algorithm environment
+			trigger: "(Algorithm environment(?:(?!\\$\\$)[\\s\\S])*?)while",
+			replacement: "[[0]]\\textrm{while } $0 \\textrm{ do} \\\\\n & \\quad $1",
+			options: "rmA"
+		},
+	    {
+		    // Formats "end while" in Algorithm environment
+		    trigger: "(Algorithm environment(?:(?!\\$\\$)[\\s\\S])*?)end while",
+		    replacement: "[[0]]\\textrm{end while} \\\\\n & $0",
+			options: "rmA"
+		},
+		{
+			// Formats "for" in Algorithm environment
+			trigger: "(Algorithm environment(?:(?!\\$\\$)[\\s\\S])*?)for",
+			replacement: "[[0]]\\textrm{for } $0 \\textrm{ to } $1 \\textrm{ do} \\\\\n & \\quad $2",
+			options: "rmA"
+		},
+		{
+			// Formats "end for" in Algorithm environment
+			trigger: "(Algorithm environment(?:(?!\\$\\$)[\\s\\S])*?)end for",
+			replacement: "[[0]]\\textrm{end for} \\\\\n & $0",
+			options: "rmA"
+		},
+		{
+			// Formats "and" in Algorithm environment
+			trigger: "(Algorithm environment(?:(?!\\$\\$)[\\s\\S])*?)and",
+			replacement: "[[0]]\\textrm{ and } $0 ",
+			options: "rmA"
+		},
+		{
+			// Formats "or" in Algorithm environment
+			trigger: "(Algorithm environment(?:(?!\\$\\$)[\\s\\S])*?)or",
+			replacement: "[[0]]\\textrm{ or } $0 ",
+			options: "rmA"
+		},
+		{
+			// Formats "return" in Algorithm environment
+			trigger: "(Algorithm environment(?:(?!\\$\\$)[\\s\\S])*?)return",
+			replacement: "[[0]]\\textrm{return } $0 \\\\\n & $1",
+			options: "rmA"
+		}
 	]
 	```
 - _Matrix Shortcuts_:
