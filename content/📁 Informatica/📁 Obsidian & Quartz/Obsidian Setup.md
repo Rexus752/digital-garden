@@ -15,7 +15,7 @@ Questa è la lista delle configurazioni di Obsidian e dei suoi plugin che uso.
 
 - _Confirm file deletion_: ❌
 - _Automatically update internal links_: ✔️
-- _Use \[\[Wikilinks]]_: ❌
+- _Use Wikilinks_: ❌
 - _Detect all file extensions_: ✔️
 - _Default location for new attachments_: `In subfolder under current folder`
 - _Subfolder name_: `attachments`
