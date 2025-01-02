@@ -242,7 +242,7 @@ contentMeta: {
 
 ## 2.8 - Callout personalizzati
 
-All'interno del mio Giardino Digitale, uso i seguenti callout personalizzati, dichiarati nel file `custom.scss`. Sul [sito di Quartz](https://quartz.jzhao.xyz/features/callouts) viene spiegato come aggiungerne di nuovi.
+All'interno del mio Giardino Digitale, uso i seguenti callout personalizzati, dichiarati nel file `quartz/styles/custom.scss`. Sul [sito di Quartz](https://quartz.jzhao.xyz/features/callouts) viene spiegato come aggiungerne di nuovi.
 
 Io, per aggiungere nuovi callout, uso questo metodo:
 - Cerco una possibile icona su [FontAwesome](https://fontawesome.com/v6/search).
@@ -287,9 +287,6 @@ da aggiungere:
 >
 > Per le osservazioni matematiche.
 
-> [!rappresentazione] Rappresentazione
-> Per le notazioni e le rappresentazioni di oggetti matematici.
-
 > [!proposizione] Proposizione
 > Per i teoremi, proposizioni, lemmi e corollari matematici.
 
@@ -302,6 +299,8 @@ da aggiungere:
 # 3 - Problemi di Quartz
 
 Ecco una lista di problemi che ho trovato usando Quartz e come li ho risolti. Per molti di questi problemi non ho ancora trovato una soluzione e, non avendo idea di come risolverli, credo che semplicemente aspetterò che il creatore di Quartz (Jacky Zhao) lo faccia.
+%% collegare ogni problema a una issue sul repo di GitHub aperta da me o da qualcun altro %%
+%% da aggiungere: parseBlockReferences non funziona %%
 
 ## 3.1 - `/` nei displayed name dei link
 

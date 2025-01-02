@@ -409,3 +409,4 @@ Le varie tecniche di dimostrazione viste possono poi essere combinate tra loro i
 
 - Slide del Prof. Viale Matteo del corso di Logica Matematica (canale B), Corso di Laurea in Informatica presso l'Università di Torino, A.A. 2024-25:
 	- [1.1 - Teoremi e dimostrazioni_moodle.pdf](https://informatica.i-learn.unito.it/pluginfile.php/417200/mod_folder/content/0/1.1%20-%20Teoremi%20e%20dimostrazioni_moodle.pdf?forcedownload=1)
+	- [1.2 - Simboli logici_moodle.pdf](https://informatica.i-learn.unito.it/pluginfile.php/417200/mod_folder/content/0/1.2%20-%20Simboli%20logici_moodle.pdf?forcedownload=1)

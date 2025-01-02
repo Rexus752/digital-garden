@@ -22,6 +22,7 @@ Procedura: algoritmo che non necessariamente termina.
 
 # 1 - Esempio: algoritmo dell'addizione in colonna
 
+%% trasformare le parole colorate in LaTeX %%
 Quella dell'addizione in colonna è una sequenza finita di istruzioni che tutti conoscono e che, in realtà, è un vero e proprio algoritmo, usato per la somma di due numeri o più numeri. Ecco una possibile descrizione dell'algoritmo, usando come esempio la somma $712 + 2609 + 431$:
 1. Scrivere i numeri da sommare uno sotto l'altro, separando le singole cifre e allineando le cifre per colonna (unità sotto unità, decine sotto decine, centinaia sotto centinaia, ecc.);
 $$

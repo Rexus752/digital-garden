@@ -1,15 +1,25 @@
 ---
 draft: true
 ---
+La logica matematica è un ramo della matematica che studia i principi del ragionamento formale. Si occupa di definire e analizzare le strutture e le regole che governano il pensiero logico, con particolare attenzione ai concetti di verità, dimostrazione, validità e inferenza%%mettere link a ognuno di queste 4 parole%%. La logica matematica include diversi sottocampi, tra cui:
+- Logica proposizionale: si occupa delle proposizioni e delle loro combinazioni tramite connettivi logici (come *e*, *o*, *non*).
+- **Logica dei predicati**: estende la logica proposizionale introducendo variabili, quantificatori (come *per ogni* e *esiste*) e funzioni.
+- **Teoria della dimostrazione**: studia le regole e i sistemi formali per provare proposizioni.
+- **Teoria dei modelli**: esamina le relazioni tra formule logiche e strutture matematiche che soddisfano quelle formule.
+- **Teoria della ricorsione**: si concentra sui concetti di computabilità e funzioni ricorsive.
+- **Teoria degli insiemi**: analizza gli insiemi, le collezioni di oggetti, e i loro usi nella matematica.
+
+La logica matematica è fondamentale in molti campi della matematica pura e applicata, nonché nell'informatica teorica.
+
 # Viste
 
 Slide di Viale:
 - [1.1 - Teoremi e dimostrazioni_moodle.pdf](https://informatica.i-learn.unito.it/pluginfile.php/417200/mod_folder/content/0/1.1%20-%20Teoremi%20e%20dimostrazioni_moodle.pdf?forcedownload=1)
+- [1.2 - Simboli logici_moodle.pdf](https://informatica.i-learn.unito.it/pluginfile.php/417200/mod_folder/content/0/1.2%20-%20Simboli%20logici_moodle.pdf?forcedownload=1)
 
 # Da vedere
 
 Slide di Viale:
-- [1.2 - Simboli logici_moodle.pdf](https://informatica.i-learn.unito.it/pluginfile.php/417200/mod_folder/content/0/1.2%20-%20Simboli%20logici_moodle.pdf?forcedownload=1)
 - [2.1 - Insiemi_moodle.pdf](https://informatica.i-learn.unito.it/pluginfile.php/417200/mod_folder/content/0/2.1%20-%20Insiemi_moodle.pdf?forcedownload=1)
 - [2.2 - Relazioni_moodle.pdf](https://informatica.i-learn.unito.it/pluginfile.php/417200/mod_folder/content/0/2.2%20-%20Relazioni_moodle.pdf?forcedownload=1)
 - [2.3 - Funzioni_moodle.pdf](https://informatica.i-learn.unito.it/pluginfile.php/417200/mod_folder/content/0/2.3%20-%20Funzioni_moodle.pdf?forcedownload=1)

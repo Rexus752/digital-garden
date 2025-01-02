@@ -195,79 +195,79 @@ Questa è la lista delle configurazioni di Obsidian e dei suoi plugin che uso.
 	    {
 		    // Creates the Algorithm environment
 		    trigger: "\\algo",
-		    replacement: "\\begin{align*} % Algorithm environment\n & \\textbf{$0} \\\\\n & \\rhd \\textrm{Pre: } $1 \\\\\n & \\rhd \\textrm{Post: } $2 \\\\\n & $3 \n\\end{align*}",
+		    replacement: "\\begin{align*} % Algorithm environment\n & \\textbf{$0} \\\\\n & \\rhd \\text{Pre: } $1 \\\\\n & \\rhd \\text{Post: } $2 \\\\\n & $3\n\\end{align*}",
 		    options: "mA"
 		},
 		{
-			// Converts double quotes to \textrm{} in Algorithm environment
+			// Converts double quotes to \text{} in Algorithm environment
 			trigger: "(Algorithm environment(?:(?!\\$\\$)[\\s\\S])*?)\"",
-			replacement: "[[0]]\\textrm{$0} $1",
+			replacement: "[[0]]\\text{$0} $1",
 			options: "rmA"
 		},
 		{
 			// Formats an inline comment in Algorithm environment
 			trigger: "(Algorithm environment(?:(?!\\$\\$)[\\s\\S])*?)\#",
-			replacement: "[[0]]\\quad \\rhd \\textrm{$0}",
+			replacement: "[[0]]\\quad \\rhd \\text{$0}",
 			options: "rmA"
 		},
 		{
 			// Formats "if" in Algorithm environment
 			trigger: "(Algorithm environment(?:(?!\\$\\$)[\\s\\S])*?)if",
-			replacement: "[[0]]\\textrm{if } $0 \\textrm{ then} \\\\\n & \\quad $1",
+			replacement: "[[0]]\\text{if } $0 \\text{ then} \\\\\n & \\quad $1",
 			options: "rmA"
 		},
 		{
 			// Formats "else" in Algorithm environment
 			trigger: "(Algorithm environment(?:(?!\\$\\$)[\\s\\S])*?)else",
-			replacement: "[[0]]\\textrm{else} \\\\\n & \\quad $0",
+			replacement: "[[0]]\\text{else} \\\\\n & \\quad $0",
 			options: "rmA"
 		},
 		{
 			// Formats "end if" in Algorithm environment
 			trigger: "(Algorithm environment(?:(?!\\$\\$)[\\s\\S])*?)end if",
-			replacement: "[[0]]\\textrm{end if} \\\\\n & $0",
+			replacement: "[[0]]\\text{end if} \\\\\n & $0",
 			options: "rmA"
 		},
 		{
 			// Formats "while" in Algorithm environment
 			trigger: "(Algorithm environment(?:(?!\\$\\$)[\\s\\S])*?)while",
-			replacement: "[[0]]\\textrm{while } $0 \\textrm{ do} \\\\\n & \\quad $1",
+			replacement: "[[0]]\\text{while } $0 \\text{ do} \\\\\n & \\quad $1",
 			options: "rmA"
 		},
 	    {
 		    // Formats "end while" in Algorithm environment
 		    trigger: "(Algorithm environment(?:(?!\\$\\$)[\\s\\S])*?)end while",
-		    replacement: "[[0]]\\textrm{end while} \\\\\n & $0",
+		    replacement: "[[0]]\\text{end while} \\\\\n & $0",
 			options: "rmA"
 		},
 		{
 			// Formats "for" in Algorithm environment
 			trigger: "(Algorithm environment(?:(?!\\$\\$)[\\s\\S])*?)for",
-			replacement: "[[0]]\\textrm{for } $0 \\textrm{ to } $1 \\textrm{ do} \\\\\n & \\quad $2",
+			replacement: "[[0]]\\text{for } $0 \\text } $1 \\text{ do} \\\\\n & \\quad $2",
 			options: "rmA"
 		},
 		{
 			// Formats "end for" in Algorithm environment
 			trigger: "(Algorithm environment(?:(?!\\$\\$)[\\s\\S])*?)end for",
-			replacement: "[[0]]\\textrm{end for} \\\\\n & $0",
+			replacement: "[[0]]\\text{end for} \\\\\n & $0",
 			options: "rmA"
 		},
 		{
 			// Formats "and" in Algorithm environment
 			trigger: "(Algorithm environment(?:(?!\\$\\$)[\\s\\S])*?)and",
-			replacement: "[[0]]\\textrm{ and } $0 ",
+			replacement: "[[0]]\\text{ and } $0 ",
 			options: "rmA"
 		},
 		{
 			// Formats "or" in Algorithm environment
 			trigger: "(Algorithm environment(?:(?!\\$\\$)[\\s\\S])*?)or",
-			replacement: "[[0]]\\textrm{ or } $0 ",
+			replacement: "[[0]]\\text{ or } $0 ",
 			options: "rmA"
 		},
 		{
 			// Formats "return" in Algorithm environment
 			trigger: "(Algorithm environment(?:(?!\\$\\$)[\\s\\S])*?)return",
-			replacement: "[[0]]\\textrm{return } $0 \\\\\n & $1",
+			replacement: "[[0]]\\text{return } $0 \\\\\n & $1",
 			options: "rmA"
 		}
 	]

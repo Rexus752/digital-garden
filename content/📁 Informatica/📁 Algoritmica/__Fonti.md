@@ -29,13 +29,13 @@ draft: true
 	- [Relazioni di ricorrenza (1) - 11/10/24](https://unito.webex.com/recordingservice/sites/unito/recording/9748cf6069f3103dadeeea775fad1fb2/playback)
 	- [Relazioni di ricorrenza: Merge-Sort, Quick-Sort - 14/10/24](https://unito.webex.com/recordingservice/sites/unito/recording/d7b8a69e6c52103d8f7fc2cf82972f1a/playback)
 	- [Confine inferiore ed ottimalità - 18/10/24](https://unito.webex.com/recordingservice/sites/unito/recording/341e2e8f6f72103dbef78e42bf240fbe/playback)
+	- [Programmazione dinamica - 21/10/24](https://unito.webex.com/recordingservice/sites/unito/recording/e0b2cded71d4103d8efe5a85d2f80860/playback)
 
 # Da vedere
 - Tutto il capitolo 2
 - Capitolo 3 (prima del 3.1)
 - Slide di De Liguoro:
 - Videolezioni di De Liguoro:
-	- [Programmazione dinamica - 21/10/24](https://unito.webex.com/recordingservice/sites/unito/recording/e0b2cded71d4103d8efe5a85d2f80860/playback)
 	- [Array dinamici e tempo ammortizzato (geistrazione del 2023) - 25/10/24](https://unito.webex.com/recordingservice/sites/unito/recording/cd0dafc1ce50103cbfe37e2541b39aee/playback)
 	- [Le liste - 4/11/24](https://unito.webex.com/recordingservice/sites/unito/recording/f1831caf7cdc103d97bfb2d0302b4592/playback)
 	- [Esercitazione sul Merge-Sort - 8/11/24](https://unito.webex.com/recordingservice/sites/unito/recording/75f043877fff103d8fdb36f86da0444e/playback)

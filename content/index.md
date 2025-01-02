@@ -35,6 +35,7 @@ Questo sito è stato creato tramite l'uso di [Quartz](Quartz.md), un tool che ge
 		- [Obsidian Setup](Obsidian%20Setup.md)
 		- [Quartz](Quartz.md)
 - Matematica
+	- [Insiemistica](Insiemistica.md)
 	- Logica matematica
 		- [Teoremi e dimostrazioni](Teoremi%20e%20dimostrazioni.md)
 
@@ -49,6 +50,10 @@ Questo sito è stato creato tramite l'uso di [Quartz](Quartz.md), un tool che ge
 ## Roba passata
 
 - Ponti Sospesi
+
+# Altro
+
+- [La mia collezione di vinili su Discogs](https://www.discogs.com/user/Rexus752/collection)
 
 # Crediti
 
