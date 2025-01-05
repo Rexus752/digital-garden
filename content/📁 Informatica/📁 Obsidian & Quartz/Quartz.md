@@ -251,11 +251,11 @@ Io, per aggiungere nuovi callout, uso questo metodo:
 - Lo aggiungo nel file `custom.scss` con il seguente formato:
 	```scss
 	.callout {
-		&[data-callout="custom"] {
-			--color: #customcolor;
-		    --border: #custombordercolor;
-			--bg: #custombg;
-			--callout-icon: url("data:image/svg+xml; utf8, <custom formatted svg>"); //SVG icon code
+		&[data-callout="<name>"] {
+			--color: #<color>;
+		    --border: #<border color>;
+			--bg: #<bg color>;
+			--callout-icon: url("data:image/svg+xml; utf8, <custom formatted SVG icon code>");
 		}
 	}
 	```
@@ -288,13 +288,13 @@ da aggiungere:
 > Per le osservazioni matematiche.
 
 > [!proposizione] Proposizione
-> Per i teoremi, proposizioni, lemmi e corollari matematici.
+> Per i teoremi, proposizioni, lemmi, corollari e proprietà matematiche o, in genere, tutto ciò che va dimostrato.
 
 > [!dimostrazione] Dimostrazione
 > Per le dimostrazioni matematiche.
 
-> [!proprieta] Proprietà
-> Per le proprietà matematiche.
+> [!principio] Principio
+> Per i principi matematici.
 
 # 3 - Problemi di Quartz
 
@@ -396,6 +396,7 @@ I blocchi di LaTeX inline nel titolo del callout non vengono colorati ma rimango
 
 Lista delle cose che devo fare per migliorare questo Giardino Digitale:
 - Cambiare il font monospaziato usato per il codice (quando è inline è inguardabile per me).
+- Diminuire la grandezza del font del LaTeX (quello inline è più grande del testo normale).
 - Per la visualizzazione da mobile: aggiungere un pulsante fluttuante per vedere il Table Of Contents.
 - Per la visualizzazione da desktop: aggiungere un Table Of Contents fluttuante sul lato (stile Notion).
 - Risolvere problema dei [`/` nei displayed name dei link](Quartz.md#3.1%20-%20`/`%20nei%20displayed%20name%20dei%20link).
