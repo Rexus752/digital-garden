@@ -16,11 +16,11 @@ La logica matematica è fondamentale in molti campi della matematica pura e appl
 Slide di Viale:
 - [1.1 - Teoremi e dimostrazioni_moodle.pdf](https://informatica.i-learn.unito.it/pluginfile.php/417200/mod_folder/content/0/1.1%20-%20Teoremi%20e%20dimostrazioni_moodle.pdf)
 - [1.2 - Simboli logici_moodle.pdf](https://informatica.i-learn.unito.it/pluginfile.php/417200/mod_folder/content/0/1.2%20-%20Simboli%20logici_moodle.pdf)
+- [2.1 - Insiemi_moodle.pdf](https://informatica.i-learn.unito.it/pluginfile.php/417200/mod_folder/content/0/2.1%20-%20Insiemi_moodle.pdf)
 
 # Da vedere
 
 Slide di Viale:
-- [2.1 - Insiemi_moodle.pdf](https://informatica.i-learn.unito.it/pluginfile.php/417200/mod_folder/content/0/2.1%20-%20Insiemi_moodle.pdf)
 - [2.2 - Relazioni_moodle.pdf](https://informatica.i-learn.unito.it/pluginfile.php/417200/mod_folder/content/0/2.2%20-%20Relazioni_moodle.pdf)
 - [2.3 - Funzioni_moodle.pdf](https://informatica.i-learn.unito.it/pluginfile.php/417200/mod_folder/content/0/2.3%20-%20Funzioni_moodle.pdf)
 - [2.4 - Cenni di Cardinalita_moodle.pdf](https://informatica.i-learn.unito.it/pluginfile.php/417200/mod_folder/content/0/2.4%20-%20Cenni%20di%20Cardinalita_moodle.pdf)

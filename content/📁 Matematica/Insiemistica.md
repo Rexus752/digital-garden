@@ -155,6 +155,26 @@ La **rappresentazione per intervalli di un insieme** si può usare nel caso in c
 > 
 > Dato un insieme $A=\{x\in\mathbb{R}\mid x >-1 \land x \le 4\}$, esso si può anche rappresentare come l'intervallo $(-1,4]$ dal momento che esso racchiude tutti i numeri $x\in\mathbb{R}$ compresi tra $-1$ escluso e $4$ incluso.
 
+## 1.5 - Tuple
+
+> [!definizione] Definizione: tupla
+> 
+> Una **tupla** (o **lista ordinata**) è una collezione di oggetti disposti in un ordine specifico. [A differenza di un insieme](Insiemistica.md#^Osservazione-irrilevanza-dell-ordine-e-unicita-degli-elementi), l'ordine degli elementi in una tupla è significativo, e gli stessi elementi possono comparire più volte.
+> 
+> Una **$n$-upla** è una tupla di esattamente $n$ elementi, dove $n$ è un numero intero non-negativo e si denota similmente alla [rappresentazione per elencazione di un insieme](#1.4.1%20-%20Rappresentazione%20per%20elencazione%20di%20un%20insieme) nei seguenti modi:
+> $$
+> (a_1, a_2, \ldots, a_n)
+> $$
+> oppure:
+> $$
+> \langle a_1, a_2, \ldots, a_n \rangle
+> $$
+> Se la tupla è composta da solamente $2$ elementi $a$ e $b$, si parla di _**coppia ordinata**_ e solitamente si denota solo con le parentesi tonde:
+> $$
+> (a, b)
+> $$
+^Definizione-tupla
+
 # 2 - Sottoinsiemi
 
 > [!definizione]+ Definizione: sottoinsieme
@@ -535,7 +555,7 @@ https://en.wikipedia.org/wiki/Complement_(set_theory)
 
 > [!definizione]+ Definizione: complemento di un insieme
 > 
-> Dati un [insieme universo](Insiemistica.md#^Definizione-insieme-universo) $\mathcal{U}$ e un insieme $A \subseteq \mathcal{U}$, si dice _**complemento**_ di $A$ e si denota "$A^\complement$" (ma anche "$A'$", "$\overline{A}$", "$\complement_\mathcal{U}(A)$" e "$\complement(A)$") la [differenza](Insiemistica.md#^Definizione-differenza-tra-due-insiemi) $\mathcal{U} \setminus A$, cioè il sottoinsieme degli elementi di $\mathcal{U}$ non in $A$:
+> Dati un [insieme universo](Insiemistica.md#^Definizione-insieme-universo) $\mathcal{U}$ e un insieme $A \subseteq \mathcal{U}$, si dice _**complemento**_ di $A$ e si denota "$A^\complement$" (ma anche "$A'$", "$\overline{A}$", "$\complement_\mathcal{U}(A)$" e "$\complement(A)$") la [differenza](Insiemistica.md#^Definizione-differenza-tra-due-insiemi) $\mathcal{U} \setminus A$, cioè il [sottoinsieme](Insiemistica.md#^Definizione-sottoinsieme) degli elementi di $\mathcal{U}$ non in $A$:
 > $$
 > A^\complement = \mathcal{U} \setminus A = \{ x \mid x \in \mathcal{U} \land x \notin A \}
 > $$
@@ -671,12 +691,156 @@ In particolare, in insiemistica, le leggi di De Morgan descrivono la relazione t
 > > 
 > > $\blacksquare$
 
-# Fonti
+## 4.6 - Prodotto cartesiano di insiemi
+
+> [!definizione]+ Definizione: prodotto cartesiano di due insiemi
+> 
+> Dati due insiemi $A$ e $B$, si definisce ***prodotto cartesiano*** di $A$ e $B$ e si denota "$A \times B$" l'insieme i cui elementi sono [coppie ordinate](Insiemistica.md#^Definizione-tupla) di elementi con il primo elemento in $A$ e il secondo in $B$:
+> $$
+> A \times B = \{ (x, y) \mid x \in A \land y \in B \}
+> $$
+> Quando $A$ e $B$ coincidono, quindi si ha un prodotto cartesiano $A \times A$, si può anche denotare come $A^2$ o, se $A$ è ripetuto $n$ volte (cioè come $\underbrace{A \times A \times \ldots \times A}_{n \text{volte}}$), si può scrivere come $A^n$. Per convenzione, inoltre, si pone anche $A^0 = \{\emptyset\}$.
+^Definizione-prodotto-cartesiano-di-due-insiemi
+
+> [!esempio]+ Esempio: prodotto cartesiano di due insiemi
+> 
+> Dati due insiemi:
+> 
+> $$
+> \begin{align*}
+>  & A = \{ 1,2 \} \\
+>  & B = \{ 3,4,5 \}
+> \end{align*}
+> $$
+> il loro prodotto cartesiano è
+> $$
+> A \times B = \{(1,3),(1,4),(1,5),(2,3),(2,4),(2,5)\}
+> $$
 
 %%
-Libri di MD e di AG
-Lezioni di MD: lezioni terracini, chen
-Lezioni di AG: marco radeschi
+Esempio: prodotto cartesiano tra due intervalli e relativa rappresentazione grafica
+
+Dati due insiemi $A=\{x\mid 0\le x\le1\}$ e $B=\{x\mid -1\le x\le0\}$, %\%collegare a rappresentazione intervalli%\% rappresentabili anche con gli intervalli chiusi $A=[0,1]$ e $B=[-1,0]$, il loro prodotto cartesiano $A\times B$ è rappresentabile su un piano cartesiano come l'insieme di tutti i punti compresi tra il punto $\color{Red}A(0,1)$ e il punto $\color{Green}B(-1,0)$:
+
+![[Prodotto cartesiano tra due intervalli e relativa rappresentazione grafica.png]]
+Embeddare Geogebra o [Manim](https://www.manim.community/)
 %%
+
+> [!osservazione] Osservazione: $\color{#888888}A \times \emptyset = \emptyset$
+> 
+> Il prodotto cartesiano tra un insieme $A$ e l'insieme vuoto $\emptyset$ è sempre pari all'insieme vuoto $\emptyset$:
+> $$
+> A \times \emptyset = \emptyset
+> $$
+
+> [!osservazione] Osservazione: $\color{#888888}A \ne \emptyset \land B \ne \emptyset \implies A \times B \ne \emptyset$
+> 
+> Il prodotto cartesiano tra due insiemi A e B non vuoti è sempre pari a un insieme non vuoto:
+> $$
+> A \ne \emptyset \land B \ne \emptyset \implies A \times B \ne \emptyset
+> $$
+
+> [!osservazione] Osservazione: valenza geometrica del prodotto cartesiano
+> 
+> Se si interpreta l'insieme $\mathbb{R}$ dei numeri reali%% link %% come una retta, allora il prodotto cartesiano $\mathbb{R}^2=\mathbb{R}\times\mathbb{R}$ è l'insieme formato da tutte le [coppie ordinate](Insiemistica.md#^Definizione-tupla) $(x, y)$ di numeri reali:
+> $$
+> \mathbb{R}^2 = \{(x, y)\mid x \in \mathbb{R}\land y \in \mathbb{R}\}
+> $$
+> In altre parole, $\mathbb{R}^2$ non è nient'altro che il piano cartesiano, in cui un elemento di $\mathbb{R}^2$ è un punto identificato dalla coppia $(x, y)$; stesso discorso si può fare per l'insieme $\mathbb{R}^3$, ossia l'insieme che rappresenta lo spazio cartesiano in cui i punti sono identificati dalle tre coordinate $(x,y,z)$.
+
+%%Esempio: rappresentazione grafica del prodotto cartesiano
+![](Pasted%20image%2020240928175730.png)
+%% 
+
+%%
+Osservazione:
+Poiché i prodotti cartesiani sono costituiti da coppie ordinate, bisogna prestare attenzione al fatto che $A \times B$ è in genere distinto da $B \times A$ se $A \ne B$.
+Ad esempio, se A = {0, 1, 2, 3} e B = {a, b, c}, allora la coppia (0, a) appartiene ad A \times B ma non a B \times A.
+%%
+
+> [!proposizione] Proposizione: cardinalità del prodotto cartesiano
+> 
+> Dati due insiemi finiti $A$ e $B$, con $|A| = m$ e $|B| = n$, allora la cardinalità del loro prodotto cartesiano $|A\times B|$ è uguale al prodotto delle loro cardinalità $m\cdot n$; se, invece, almeno uno tra $A$ e $B$ è infinito, allora anche $|A \times B|$ è infinito:
+> $$
+> |A| = m, |B| = n
+> \implies
+> |A \times B| = \begin{cases}
+> m \cdot n & m, n \ne \infty \\
+> \infty & m, n = \infty
+> \end{cases}
+> $$
+> 
+> > [!dimostrazione] Dimostrazione
+> > 
+> > Se $A$ e $B$ sono finiti con $|A| = m$ e $|B| = n$, si possono numerare ed elencare i loro elementi come $A=\{a_1,a_2,...,a_m\}$ e $B=\{b_1,b_2,...,b_n\}$ e si possono organizzare gli elementi di $A \times B$ in una tabella:
+> > $$
+> > \begin{matrix}
+> > (a_1, b_1) & (a_1, b_2) & \dots & (a_1, b_n) \\
+> > (a_2, b_1) & (a_2, b_2) & \dots & (a_2, b_n) \\
+> > \vdots & \vdots & \ddots & \vdots \\
+> > (a_m, b_1) & (a_m, b_2) & \dots & (a_m, b_n)
+> > \end{matrix}
+> > $$
+> > La tabella include chiaramente tutti gli elementi di $A \times B$ una volta sola e, quindi, devono essere $m \cdot n$ in totale, essendo $m$ in verticale ed $n$ in orizzontale. Il caso in cui uno degli insieme è infinito è chiaro, in quanto la tabella risulterà avere righe o colonne infinite.
+> > 
+> > $\blacksquare$
+
+
+# 5 - Famiglia di insiemi
+
+> [!definizione]+ Definizione: famiglia di insiemi
+> 
+> Un [insieme](Insiemistica.md#^Definizione-insieme) è detto **_famiglia di insiemi_** se ognuno degli elementi è a sua volta un insieme e viene denotata come:
+> $$
+> \{ A_i \}_{i \in I}
+> $$
+> dove l'insieme $I$ è chiamato _**insieme degli indici**_ e ciascun $i \in I$ identifica univocamente un insieme $A_i$ della famiglia.
+^Definizione-famiglia-di-insiemi
+
+## 5.1 - Operazioni su famiglie di insiemi
+
+> [!definizione]+ Definizione: intersezione di una famiglia di insiemi
+> 
+> Data una [famiglia di insiemi](Insiemistica.md#^Definizione-famiglia-di-insiemi) $\{ A_i \}_{i \in I}$, l'[intersezione](Insiemistica.md#^Definizione-intersezione-di-due-insiemi) degli $A_i$ è l'insieme degli elementi che appartengono a ogni $A_i$:
+> $$
+> \bigcap_{i = 1}^n A_i = \{x \mid \forall i \in I (x \in A_i)\}
+> $$
+
+> [!definizione]+ Definizione: unione di una famiglia di insiemi
+> 
+> Data una [famiglia di insiemi](Insiemistica.md#^Definizione-famiglia-di-insiemi) $\{ A_i \}_{i \in I}$, l'[unione](Insiemistica.md#^Definizione-unione-di-due-insiemi) degli $A_i$ è l'insieme degli elementi che appartengono ad almeno un $A_i$:
+> $$
+> \bigcup_{i = 1}^n A_i = \{x \mid \exists i \in I (x \in A_i)\}
+> $$
+
+%%
+Esempio:
+
+![](Pasted%20image%2020240928160551.png)
+
+![](Pasted%20image%2020240928160603.png)
+%%
+
+%% 
+Esempio:
+Data una famiglia di insiemi $\mathcal A$ formata dagli $n$-esimi insiemi $A_n\in\mathcal A$ con $n \in \mathbb{N}\setminus\{0\}$ in cui ogni $A_n$ è definito come l'[intervallo aperto](#^Insieme) che va da $-\frac{1}{n}$ a $\frac{1}{n}$, quindi $A_n=(-\frac{1}{n},\frac{1}{n})$. Si ha quindi che $\displaystyle\bigcap_{n=0}^{+\infty}A_n=\{0\}$ perché $0 \in A_n$ per ogni $n \in \mathbb{N}\setminus\{0\}$.
+%%
+
+> [!definizione]+ Definizione: prodotto cartesiano di una famiglia di insiemi
+> 
+> Data una [famiglia di insiemi](Insiemistica.md#^Definizione-famiglia-di-insiemi) $\{ A_i \}_{i \in I}$, il [prodotto cartesiano](Insiemistica.md#^Definizione-prodotto-cartesiano-di-due-insiemi) degli $A_i$ è l'insieme delle [$n$-uple](Insiemistica.md#^Definizione-tupla) $(x_1, x_2, \ldots, x_n)$ con $x_i\in A_i$:
+> 
+> $$
+> \prod_{i = 1}^n A_i = \{(x_1, x_2, \ldots, x_n) \mid \forall i\in I(x_i \in A_i)\}
+> $$
+
+%%
+![](Pasted%20image%2020240928182758.png)
+%%
+
+# Fonti
+
+- Lezioni dei Prof. Chen Yu e Terracini Lea del corso di Matematica Discreta (canale C), Corso di Laurea in Informatica presso l'Università di Torino, A.A. 2023-24.
+- Lezioni del Prof. Radeschi Marco del corso di Algebra Lineare (canale C), Corso di Laurea in Informatica presso l'Università di Torino, A.A. 2023-24.
 - Slide del Prof. Viale Matteo del corso di Logica Matematica (canale B), Corso di Laurea in Informatica presso l'Università di Torino, A.A. 2024-25:
 	- [2.1 - Insiemi_moodle.pdf](https://informatica.i-learn.unito.it/pluginfile.php/417200/mod_folder/content/0/2.1%20-%20Insiemi_moodle.pdf)

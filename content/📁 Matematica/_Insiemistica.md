@@ -39,117 +39,7 @@ esempio, √2 ∈ R \ Q.
 Attenzione!
 Alcuni numeri ammettono due espansioni decimali diverse: ad esempio 0,99999 . . . e 1 indicano lo stesso numero reale.
 
-%%
-\##Liste ordinate
-
-Una **lista ordinata**, una **tupla** o una **n-upla** è una collezione di oggetti disposti in un ordine specifico. A differenza di un insieme, l'ordine degli elementi in una lista ordinata è significativo, e gli stessi elementi possono comparire più volte.
-
-\#### **Caratteristiche principali**
-
-1. **Ordine**: L'ordine degli elementi è fondamentale; due liste con gli stessi elementi ma in ordine diverso sono considerate diverse.
-2. **Ripetizioni**: Gli elementi possono ripetersi.
-3. **Numero di elementi (cardinalità)**: Una tupla di nnn elementi è detta **n-upla**.
-
----
-
-La coppia ordinata $(x, y)$ denota una lista ordinata di due elementi il cui primo elemento è $x$ e il cui secondo elemento è $y$.
-Attenzione! A differenza degli insiemi, nelle coppie ordinate l'ordine è fondamentale, cioè $\color{#FF8800}(x, y)$ è un oggetto diverso da $\color{#FF8800}(y, x)$, a meno che $\color{#FF8800}x$ non sia $\color{#FF8800}y$.
-Ad esempio, $(0, 1) \ne (1, 0)$ dato che, ad esempio, il primo elemento di $(0, 1)$ è diverso dal primo elemento di $(1, 0)$. Invece abbiamo visto che $\{0, 1\} = \{1, 0\}$ perché in un insieme l'ordine e le ripetizioni non contano.
-
-Più in generale, se n \ge 1
-(x_1 x_2, . . . , x_n)
-indica la n-upla (ossia una sequenza ordinata con n elementi) costituita dagli elementi x1, x2, . . . , xn.
-Attenzione! A differenza di quel che accade per gli insiemi, nelle n-uple ordinate contano sia l'ordine che eventuali ripetizioni.
-
-Le n-uple vengono anche dette sequenze (di lunghezza n). Come notazione, spesso si scrive
-$$
-\langle x_1, x_2, \ldots, x_n \rangle
-$$
-al posto di (x1, . . . , xn), specialmente quando si considerano triple, quadruple e, più in generale, n-uple di lunghezza \ge 3.
-%%
-
-## 4.5 - Definizione: prodotto cartesiano di due insiemi
-
-Dati due insiemi $A$ e $B$, si definisce ***prodotto cartesiano*** di $A$ e $B$ e si denota "$A \times B$" l'insieme i cui elementi sono coppie di elementi con il primo elemento in $A$ e il secondo in $B$:
-$$
-A \times B = \{ (x, y) \mid x \in A \land y \in B \}
-$$
-
-### 4.5.1 - Esempio: prodotto cartesiano tra due insiemi
-
-Dati due insiemi $A=\{1,2\}$ e $B=\{3,4,5\}$, si ha che il loro prodotto cartesiano è:
-$$
-A\times B=\{(1,3),(1,4),(1,5),(2,3),(2,4),(2,5)\}
-$$
-
-%%
-\### Esempio: prodotto cartesiano tra due intervalli e relativa rappresentazione grafica
-
-Dati due insiemi $A=\{x\mid 0\le x\le1\}$ e $B=\{x\mid -1\le x\le0\}$, %\%collegare a rappresentazione intervalli%\% rappresentabili anche con gli intervalli chiusi $A=[0,1]$ e $B=[-1,0]$, il loro prodotto cartesiano $A\times B$ è rappresentabile su un piano cartesiano come l'insieme di tutti i punti compresi tra il punto $\color{Red}A(0,1)$ e il punto $\color{Green}B(-1,0)$:
-
-![[Prodotto cartesiano tra due intervalli e relativa rappresentazione grafica.png]]
-Embeddare Geogebra o [Manim](https://www.manim.community/)
-%%
-
-### 4.5.2 - Osservazione: $\color{#888888}A \times \emptyset = \emptyset$
-
-Il prodotto cartesiano tra un insieme $A$ e l'insieme vuoto $\emptyset$ è sempre pari all'insieme vuoto $\emptyset$:
-$$
-A \times \emptyset = \emptyset
-$$
-
-### 4.5.3 - Osservazione: $\color{#888888}A \ne \emptyset \land B \ne \emptyset \implies A \times B \ne \emptyset$
-
-Il prodotto cartesiano tra due insiemi A e B non vuoti è sempre pari a un insieme non vuoto:
-$$
-A \ne \emptyset \land B \ne \emptyset \implies A \times B \ne \emptyset
-$$
-%%è corretta la scrittura logica?%%
-
-### 4.5.4 - Osservazione: valenza geometrica del prodotto cartesiano
-
-Se si interpreta l'insieme $\mathbb{R}$ dei numeri reali come una retta, allora il prodotto cartesiano $\mathbb{R}^2=\mathbb{R}\times\mathbb{R}$ è l'insieme formato da tutte le coppie $(x, y)$ di numeri reali:
-$$
-\mathbb{R}^2 = \{(x, y)\mid x \in \mathbb{R}\land y \in \mathbb{R}\}
-$$
-In altre parole, $\mathbb{R}^2$ non è nient'altro che il piano cartesiano, in cui un elemento di $\mathbb{R}^2$ è un punto identificato dalla coppia $(x, y)$; stesso discorso si può fare per l'insieme $\mathbb{R}^3$, ossia l'insieme che rappresenta lo spazio cartesiano in cui i punti sono identificati dalle tre coordinate $(x,y,z)$.
-
-%%Esempio: rappresentazione grafica del prodotto cartesiano
-![](Pasted%20image%2020240928175730.png)
-
-Poiché i prodotti cartesiani sono costituiti da coppie ordinate, bisogna prestare attenzione al fatto che $A \times B$ è in genere distinto da $B \times A$ se $A \ne B$.
-Ad esempio, se A = {0, 1, 2, 3} e B = {a, b, c}, allora la coppia (0, a) appartiene ad A \times B ma non a B \times A.
-Se invece A = B, allora A \times B = B \times A: in questo caso, tale prodotto cartesiano viene indicato con $A^2$.%%
-
-## 4.6 - Proposizione: cardinalità del prodotto cartesiano
-
-Dati due insiemi finiti $A$ e $B$, con $|A| = m$ e $|B| = n$, allora la cardinalità del loro prodotto cartesiano $|A\times B|$ è uguale al prodotto delle loro cardinalità $m\cdot n$; se, invece, almeno uno tra $A$ e $B$ è infinito, allora anche $|A \times B|$ è infinito:
-$$
-|A| = m, |B| = n
-\implies
-|A \times B| = \begin{cases}
-m \cdot n & \text{se } m, n \ne \infty \\
-\infty & \text{se } m, n = \infty
-\end{cases}
-$$
-
-### 4.6.1 - Dimostrazione
-
-Se $A$ e $B$ sono finiti con $|A| = m$ e $|B| = n$, si possono numerare ed elencare i loro elementi come $A=\{a_1,a_2,...,a_m\}$ e $B=\{b_1,b_2,...,b_n\}$ e si possono organizzare gli elementi di $A \times B$ in una tabella:
-$$
-\begin{matrix}
-(a_1, b_1) & (a_1, b_2) & \dots & (a_1, b_n) \\
-(a_2, b_1) & (a_2, b_2) & \dots & (a_2, b_n) \\
-\vdots & \vdots & \ddots & \vdots \\
-(a_m, b_1) & (a_m, b_2) & \dots & (a_m, b_n)
-\end{matrix}
-$$
-La tabella include chiaramente tutti gli elementi di $A \times B$ una volta sola e, quindi, devono essere $m \cdot n$ in totale, essendo $m$ in verticale ed $n$ in orizzontale. Il caso in cui uno degli insieme è infinito è chiaro, in quanto la tabella risulterà avere righe o colonne infinite.
-
-$\blacksquare$
-
-%%
-vedere in che posto ficcare sta roba
+# Vedere in che posto ficcare sta roba
 
 Proposizione:
 (A \cup B) \ (A \cap B) = (A \ B) \cup (B \ A)
@@ -179,7 +69,7 @@ Questa è una proposizione del tipo
 P \land (Q \lor R) \leftrightarrow P \lor (Q \land R),
 dove P, Q e R sono, rispettivamente, "x \in A", "x \in B" e "x \in C".
 ![](Pasted%20image%2020240928182940.png)
-%%
+
 
 
 # Proprietà delle operazioni sugli insiemi
@@ -248,78 +138,6 @@ Poiché la proposizione precedente è una tautologia (come si può verificare fa
 $\blacksquare$
 %%
 
-## _Proprietà:_ leggi di De Morgan
-
-Dato un insieme $X$ e due suoi sottoinsiemi $A,B\subseteq X$, allora valgono le seguenti identità dette ***leggi di De Morgan***:
-- $\complement_X(A\cap B)=\complement_X(A)\cup \complement_X(B)$;
-- $\complement_X(A\cup B)=\complement_X(A)\cap \complement_X(B)$.
-
-### _Dimostrazione:_ $\complement_X(A\cap B)=\complement_X(A)\cup \complement_X(B)$
-
-%%finire
-![[Pasted image 20240210184935.png]]
-%%
-
-### _Dimostrazione:_ $\complement_X(A\cup B)=\complement_X(A)\cap \complement_X(B)$
-
-%%finire%%
-
-# Famiglia di insiemi
-
-%%
-definire prima cos'è l'insieme $I$ degli indici, sostituire $[1, n]$ con $I$, scrivere bene proprietà degli insiemi
-%%
-
-## Definizione: famiglia di insiemi
-
-Un insieme $\mathcal A$ si definisce famiglia di insiemi se gli $n$ elementi che contiene sono tutti insiemi:
-
-$$
-\mathcal A = \{A_i \mid i \in I\}
-$$
-
-## Definizione: intersezione e unione su famiglie di insiemi
-
-Data una famiglia di insiemi $\mathcal A$, l'intersezione degli $A_i$ è l'insieme degli elementi che appartengono a ogni $A_i$:
-$$
-\bigcap_{i = 1}^n A_i = \{x \mid \forall i \in I (x \in A_i)\}
-$$
-L'unione degli $A_i$ è l'insieme degli elementi che appartengono a un qualsiasi $A_i$:
-$$
-\displaystyle
-\bigcup_{i=1}^n A_i = \{x \mid \exists i \in I (x \in A_i)\}
-$$
-
-### Esempio: intersezione di una famiglia di insiemi $\mathcal A$
-
-Data una famiglia di insiemi $\mathcal A$ formata dagli $n$-esimi insiemi $A_n\in\mathcal A$ con $n \in \mathbb{N}\setminus\{0\}$ in cui ogni $A_n$ è definito come l'[intervallo aperto](#^Insieme) che va da $-\frac{1}{n}$ a $\frac{1}{n}$, quindi $A_n=(-\frac{1}{n},\frac{1}{n})$. Si ha quindi che $\displaystyle\bigcap_{n=0}^{+\infty}A_n=\{0\}$ perché $0 \in A_n$ per ogni $n \in \mathbb{N}\setminus\{0\}$.
-
-Esempio interesezione e unione:
-![](Pasted%20image%2020240928160551.png)
-
-![](Pasted%20image%2020240928160603.png)
-
-## Definizione: prodotto cartesiano su famiglie di insiemi
-
-Data una famiglia di insiemi $\mathcal A=\{A_1,A_2,\ldots,A_n\}$, il prodotto cartesiano degli $A_i$ è l'insieme delle $n$-uple $(a_1,a_2,\ldots,a_n)$ con $x_i\in A_i$:
-
-$$
-\prod_{i = 1}^n A_i = \{(x_1, x_2, \ldots, x_n) \mid x_i \in A_i,\quad \forall i\in I\}
-$$
-
-### Esempio: prodotto cartesiano tra tre insiemi
-
-Dati tre insiemi $A=\{1,2\}$, $B=\{3,4\}$ e $C=\{5,6\}$, allora si ha che $A\times B\times C=\{(1,3,5),(1,3,6),(1,4,5),(1,4,6),(2,3,5),(2,3,6),(2,4,5),(2,4,6)\}$.
-
-%%
-Il prodotto cartesiano $\underbrace{A \times A \times \ldots \times A}_{n \text{ volte}}$ di $n$ copie dell’insieme A, ovvero l’insieme delle n-uple ⟨x1, . . . , xn⟩ tali che xi ∈ A per ogni $i \in I$, si indica più brevemente con $A^n$ e viene detto potenza $n$-esima di $A$.
-Per convenzione, si pone anche $A^0 = \{\emptyset\}$.
-%%
-
-%%
-![](Pasted%20image%2020240928182758.png)
-%%
-
 # Ricoprimento e partizione
 
 ## Definizione: ricoprimento
@@ -348,8 +166,8 @@ Dati un insieme $X=\mathbb{R}$ e una famiglia di insiemi $\mathcal A$ con $A_n=[
 
 Dati un insieme $X$ e una famiglia di insiemi $\mathcal A$ una famiglia di $n$ sottoinsiemi di $X$, allora la famiglia $\mathcal A$ è una **partizione** di $X$ se e solo se sono soddisfatte le seguenti condizioni:
 1. È un [ricoprimento](#^Ricoprimento) di $X$;
-2. Non ci sono sottoinsiemi vuoti, ossia $A_i \ne \emptyset, \quad \forall i \in [1,n]$;
-3. Non ci sono due diversi sottoinsiemi con elementi in comune, ossia $A_i\cap A_j = \emptyset,\quad\forall i,j \in [1,n]:i \ne j$.
+2. Non ci sono sottoinsiemi vuoti, ossia $\forall i \in I(A_i \ne \emptyset)$;
+3. Non ci sono due diversi sottoinsiemi con elementi in comune, ossia $\forall i,j \in I (i \ne j \land A_i \cap A_j = \emptyset)$.
 
 ### Esempio: partizione di $\mathbb{Z}$ tra numeri pari e dispari
 

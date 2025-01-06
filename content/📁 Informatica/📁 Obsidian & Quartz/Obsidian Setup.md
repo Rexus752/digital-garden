@@ -1,6 +1,6 @@
 ---
-icon: SiObsidian
-iconColor: "#CC88CC"
+icon: RiObsidianSetup
+iconColor: "#FF88FF"
 ---
 Questa è la lista delle configurazioni di Obsidian e dei suoi plugin che uso.
 
@@ -140,6 +140,7 @@ Questa è la lista delle configurazioni di Obsidian e dei suoi plugin che uso.
 		{trigger: "(", replacement: "($0)$1", options: "mA"},
 		{trigger: "{", replacement: "{$0}$1", options: "mA"},
 		{trigger: "[", replacement: "[$0]$1", options: "mA"},
+		{trigger: "\\langle", replacement: "\\langle $0 \\rangle $1", options: "mA"},
 		{trigger: "lr(", replacement: "\\left( $0 \\right) $1", options: "mA"},
 		{trigger: "lr{", replacement: "\\left\\{ $0 \\right\\} $1", options: "mA"},
 		{trigger: "lr[", replacement: "\\left[ $0 \\right] $1", options: "mA"},

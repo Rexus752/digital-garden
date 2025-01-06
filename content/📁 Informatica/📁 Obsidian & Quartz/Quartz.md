@@ -1,7 +1,5 @@
----
-icon:
----
 [Quartz](https://quartz.jzhao.xyz/) è un tool che genera siti completi a partire da note scritte in Markdown. Per scrivere queste note in Markdown, uso [Obsidian](https://obsidian.md/).
+
 
 # 1 - Installazione e troubleshooting
 
@@ -205,9 +203,11 @@ Inoltre, per alternare i colori delle righe (in modo da distinguerle più facilm
 
 ```scss
 tbody tr:nth-child(2n) {
-	background-color: #222224;
+	background-color: #22222488;
 }
 ```
+
+Nota: quell'`88` finale alla fine del codice del colore serve per rendere trasparente la riga della tabella, in modo che nei callout colorati faccia trasparire il colore dello sfondo.
 
 ## 2.6 - `quartz/styles/variables.scss`
 
