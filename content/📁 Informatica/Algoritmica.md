@@ -24,52 +24,52 @@ Procedura: algoritmo che non necessariamente termina.
 
 %% trasformare le parole colorate in LaTeX %%
 Quella dell'addizione in colonna è una sequenza finita di istruzioni che tutti conoscono e che, in realtà, è un vero e proprio algoritmo, usato per la somma di due numeri o più numeri. Ecco una possibile descrizione dell'algoritmo, usando come esempio la somma $712 + 2609 + 431$:
-1. Scrivere i numeri da sommare uno sotto l'altro, separando le singole cifre e allineando le cifre per colonna (unità sotto unità, decine sotto decine, centinaia sotto centinaia, ecc.);
+1. Scrivere i numeri da sommare uno sotto l'altro, separando le singole cifre e allineando le cifre per colonna (unità sotto unità, decine sotto decine, centinaia sotto centinaia, ecc.).
 $$
 \begin{array}{}
-& \color{Green}7 & \color{Red}1 & \color{Blue}2 & + \\
-\color{Orange}2 & \color{Green}6 & \color{Red}0 & \color{Blue}9 & + \\
-& \color{Green}4 & \color{Red}3 & \color{Blue}1 & = \\
+ & {\color{#88FF88} 7 } & {\color{#FF8888} 1 } & {\color{#8888FF} 2 } & + \\
+{\color{#FFFF88} 2 } & {\color{#88FF88} 6 } & {\color{#FF8888} 0 } & {\color{#8888FF} 9 } & + \\
+ & {\color{#88FF88} 4 } & {\color{#FF8888} 3 } & {\color{#8888FF} 1 } & = \\
 \hline
 \end{array}
 $$
-2. Sommare le cifre nella colonna delle <font color="Blue">unità</font>:
-   - Se la somma è inferiore a $10$, scrivere il risultato sotto la colonna;
-   - Se la somma è $10$ o maggiore, scrivere sotto la colonna delle unità la cifra delle unità della somma e "riportare" la decina in cima alla colonna delle decine;
+2. Sommare le cifre nella colonna delle <font color="#8888FF">unità</font>:
+   - Se la somma è inferiore a $10$, scrivere il risultato sotto la colonna.
+   - Se la somma è $10$ o maggiore, scrivere sotto la colonna delle unità la cifra delle unità della somma e "riportare" la decina in cima alla colonna delle decine:
 $$
 \begin{array}{}
-& & \color{Red}_1 \\
-& \color{Green}7 & \color{Red}1 & \color{Blue}2 & + \\
-\color{Orange}2 & \color{Green}6 & \color{Red}0 & \color{Blue}9 & + \\
-& \color{Green}4 & \color{Red}3 & \color{Blue}1 & = \\
+ &  & {\color{#FF8888} _1 } \\
+ & {\color{#88FF88} 7 } & {\color{#FF8888} 1 } & {\color{#8888FF} 2 } & + \\
+{\color{#FFFF88} 2 } & {\color{#88FF88} 6 } & {\color{#FF8888} 0 } & {\color{#8888FF} 9 } & + \\
+ & {\color{#88FF88} 4 } & {\color{#FF8888} 3 } & {\color{#8888FF} 1 } & = \\
 \hline
-& & & \color{Blue}2
+ &  &  & {\color{#8888FF} 2 }
 \end{array}
 $$
 
-4. Sommare le cifre nella colonna delle <font color="Red">decine</font>, inclusa quella dell'eventuale riporto presente in cima alla colonna ed effettuare nuovamente il riporto se il risultato dovesse essere maggiore o uguale a $10$;
+3. Sommare le cifre nella colonna delle <font color="#FF8888">decine</font>, inclusa quella dell'eventuale riporto presente in cima alla colonna ed effettuare nuovamente il riporto se il risultato dovesse essere maggiore o uguale a $10$:
 $$
 \begin{array}{}
-& & \color{Red}_1 \\
-& \color{Green}7 & \color{Red}1 & \color{Blue}2 & + \\
-\color{Orange}2 & \color{Green}6 & \color{Red}0 & \color{Blue}9 & + \\
-& \color{Green}4 & \color{Red}3 & \color{Blue}1 & = \\
+ &  & {\color{#FF8888} _1 } \\
+ & {\color{#88FF88} 7 } & {\color{#FF8888} 1 } & {\color{#8888FF} 2 } & + \\
+{\color{#FFFF88} 2 } & {\color{#88FF88} 6 } & {\color{#FF8888} 0 } & {\color{#8888FF} 9 } & + \\
+ & {\color{#88FF88} 4 } & {\color{#FF8888} 3 } & {\color{#8888FF} 1 } & = \\
 \hline
-& & \color{Red}5 & \color{Blue}2
+ &  & {\color{#FF8888} 5 } & {\color{#8888FF} 2 }
 \end{array}
 $$
-5. Ripetere lo stesso procedimento anche per le colonne delle <font color="Green">centinaia</font> e delle <font color="Orange">migliaia</font>;
+4. Ripetere lo stesso procedimento anche per le colonne delle <font color="#88FF88">centinaia</font> e delle <font color="#FFFF88">migliaia</font>:
 $$
 \begin{array}{}
-\color{Orange}_1 & & \color{Red}_1 \\
-& \color{Green}7 & \color{Red}1 & \color{Blue}2 & + \\
-\color{Orange}2 & \color{Green}6 & \color{Red}0 & \color{Blue}9 & + \\
-& \color{Green}4 & \color{Red}3 & \color{Blue}1 & = \\
+{\color{#FFFF88} _1 } &  & {\color{#FF8888} _1 } \\
+ & {\color{#88FF88} 7 } & {\color{#FF8888} 1 } & {\color{#8888FF} 2 } & + \\
+{\color{#FFFF88} 2 } & {\color{#88FF88} 6 } & {\color{#FF8888} 0 } & {\color{#8888FF} 9 } & + \\
+ & {\color{#88FF88} 4 } & {\color{#FF8888} 3 } & {\color{#8888FF} 1 } & = \\
 \hline
-\color{Orange}3 & \color{Green}7 & \color{Red}5 & \color{Blue}2
+{\color{#FFFF88} 3 } & {\color{#88FF88} 7 } & {\color{#FF8888} 5 } & {\color{#8888FF} 2 }
 \end{array}
 $$
-6. Il risultato finale dell'addizione è quello riportato nella riga in basso.
+5. Il risultato finale dell'addizione è quello riportato nella riga in basso.
 
 # 2 - Un algoritmo non è necessariamente matematico
 

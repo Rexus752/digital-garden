@@ -1,8 +1,6 @@
 ---
 draft: true
 ---
-
-
 # Descrizione informale dei principali insiemi numerici
 
 ## N

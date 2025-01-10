@@ -39,6 +39,7 @@ Questo sito è stato creato tramite l'uso di [Quartz](Quartz.md), un tool che ge
 		- [Relazioni tra insiemi](Relazioni%20tra%20insiemi.md)
 	- Logica matematica
 		- [Teoremi e dimostrazioni](Teoremi%20e%20dimostrazioni.md)
+		- [Principio di induzione](Principio%20di%20induzione.md)
 
 # Progetti/collettivi/robe di cui faccio parte
 

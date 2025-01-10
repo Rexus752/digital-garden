@@ -270,7 +270,15 @@ Questa è la lista delle configurazioni di Obsidian e dei suoi plugin che uso.
 			trigger: "(Algorithm environment(?:(?!\\$\\$)[\\s\\S])*?)return",
 			replacement: "[[0]]\\text{return } $0 \\\\\n & $1",
 			options: "rmA"
-		}
+		},
+	
+		// Colors
+		{trigger: "\\red", replacement: "{\\color{#FF8888} $0 }", options: "mA"},
+		{trigger: "\\green", replacement: "{\\color{#88FF88} $0 }", options: "mA"},
+		{trigger: "\\blue", replacement: "{\\color{#8888FF} $0 }", options: "mA"},
+		{trigger: "\\yellow", replacement: "{\\color{#FFFF88} $0 }", options: "mA"},
+		{trigger: "\\violet", replacement: "{\\color{#FF88FF} $0 }", options: "mA"},
+		{trigger: "\\aqua", replacement: "{\\color{#88FFFF} $0 }", options: "mA"}
 	]
 	```
 - _Matrix Shortcuts_:

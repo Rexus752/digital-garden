@@ -174,7 +174,7 @@ Se R è la relazione \le di minore o uguale su N, allora R^{-1} è la relazione 
 
 > [!definizione]+ Definizione: proprietà delle relazioni binarie
 > 
-> Dati un [insieme](Insiemistica.md#^Definizione-insieme) $A$ e una [relazione binaria](Relazioni%20tra%20insiemi.md#^Definizione-relazione-n-aria) $\mathcal{R}$ su $A$ (cioè $\mathcal{R} \subseteq A^2$), si definiscono le seguenti _**proprietà**_ su quest'ultima:
+> Dati un [insieme](Insiemistica.md#^Definizione-insieme) $A$ e una [relazione binaria](Relazioni%20tra%20insiemi.md#^Definizione-relazione-n-aria) $\mathcal{R}$ su $A$ (cioè $\mathcal{R} \subseteq A^2$), essa può avere le seguenti _**proprietà**_:
 > - **Riflessività**: $\forall a \in A (a \mathcal{R} a)$.
 > - **Irriflessività**: $\forall a \in A (\lnot(a \mathcal{R} a ))$.
 > - **Simmetria**: $\forall a,b \in A (a \mathcal{R} b \implies b \mathcal{R} a)$.
@@ -508,10 +508,10 @@ Domande e risposte:
 
 > [!definizione]+ Definizione: relazione di ordine
 > 
-> Dato un [insieme](Insiemistica.md#^Definizione-insieme) $A$, una **relazione di ordine** su $A$ (o, più semplicemente, un **ordine** o un **ordinamento** su $A$) è una [relazione](Relazioni%20tra%20insiemi.md#^Definizione-relazione-n-aria) che rispetta le seguenti [proprietà](Relazioni%20tra%20insiemi.md#^Definizione-proprieta-delle-relazioni-binarie):
-> - **Riflessività**: $\forall a \in A (a \mathcal{R} a)$.
-> - **Antisimmetria**: $\forall a,b \in A (a \mathcal{R} b \land b \mathcal{R} a \implies a = b)$.
-> - **Transitività**: $\forall a,b,c \in A (a \mathcal{R} b \land b \mathcal{R} c \implies a \mathcal{R} c)$.
+> Dato un [insieme](Insiemistica.md#^Definizione-insieme) $A$, una **relazione di ordine** $\le$ su $A$ (o, più semplicemente, un **ordine** o un **ordinamento** su $A$) è una [relazione](Relazioni%20tra%20insiemi.md#^Definizione-relazione-n-aria) che rispetta le seguenti [proprietà](Relazioni%20tra%20insiemi.md#^Definizione-proprieta-delle-relazioni-binarie):
+> - **Riflessività**: $\forall a \in A (a \le a)$.
+> - **Antisimmetria**: $\forall a,b \in A (a \le b \land b \le a \implies a = b)$.
+> - **Transitività**: $\forall a,b,c \in A (a \le b \land b \le c \implies a \le c)$.
 ^Definizione-relazione-di-ordine
 
 > [!esempio]+ Esempio: ordine non-decrescente $\le$ è una relazione di ordine
@@ -549,9 +549,9 @@ anche un elemento di D, ovvero B \subseteq D.
 
 > [!definizione]+ Definizione: relazione di ordine totale
 > 
-> Dato un [insieme](Insiemistica.md#^Definizione-insieme) $A$, una [relazione di ordine](Relazioni%20tra%20insiemi.md#^Definizione-relazione-di-ordine) $\mathcal{R}$ su $A$ si dice **totale** (o **lineare**) se:
+> Dato un [insieme](Insiemistica.md#^Definizione-insieme) $A$, una [relazione di ordine](Relazioni%20tra%20insiemi.md#^Definizione-relazione-di-ordine) $\le$ su $A$ si dice **totale** (o **lineare**) se:
 > $$
-> \forall a,b \in A(a \mathcal{R} b \lor b \mathcal{R} a)
+> \forall a,b \in A(a \le b \lor b \le a)
 > $$
 
 %% 
@@ -570,12 +570,13 @@ Disegnare il diagramma di Hasse degli ordini $\langle\mathcal{P}(\{0\}), \subset
 
 > [!definizione]+ Definizione: relazione di successione immediata
 > 
-> Dati un [insieme](Insiemistica.md#^Definizione-insieme) $A$ e una [relazione di ordine](Relazioni%20tra%20insiemi.md#^Definizione-relazione-di-ordine) $\le$ $A$, un elemento $y \in A$ è un **successore immediato** di $x \in A$ (e $x$ è un **predecessore immediato** di $y$), in simboli $x \lhd y$, se:
+> Dato, un [insieme](Insiemistica.md#^Definizione-insieme) $A$ e una [relazione di ordine](Relazioni%20tra%20insiemi.md#^Definizione-relazione-di-ordine) $\le$ $A$, un elemento $y \in A$ è un **successore immediato** di $x \in A$ (e $x$ è un **predecessore immediato** di $y$), in simboli $x \lhd y$, se:
 > $$
 > x \le y \land x \ne y \land \forall z \in A (x \le z \land z \le y \implies z = x \lor z = y)
 > $$
 > %% cioè, se nell'ordine non ci sono elementi in mezzo ai due %%
 > %% anche come b<a e ∄c(b<c<a) %%
+^Definizione-relazione-di-successione-immediata
 
 %% 
 ![](Pasted%20image%2020250106193233.png)
@@ -595,6 +596,7 @@ ATTENZIONE: il diagramma di Hasse in un ordine NON è unico!
 > Dati un [insieme](Insiemistica.md#^Definizione-insieme) $A$ e una [relazione di ordine](Relazioni%20tra%20insiemi.md#^Definizione-relazione-di-ordine) $\le$ $A$, un elemento $a \in A$ si dice:
 > - **Massimo** (rispetto a $\le$) se $\forall b \in A (b \le a)$.
 > - **Minimo** (rispetto a $\le$) se $\forall b \in A (a \le b)$.
+^Definizione-massimo-e-minimo-di-un-ordine
 
 %% 
 L'ordine \le su N ha minimo (il numero 0), ma non ha massimo.
@@ -678,6 +680,7 @@ Massimo `E il numero 1: si ha sempre n0 = 1, perciò n ⊴ 1.
 > Dato un [insieme](Insiemistica.md#^Definizione-insieme) $A$, una [relazione di ordine](Relazioni%20tra%20insiemi.md#^Definizione-relazione-di-ordine) $\mathcal{R}$ su $A$ si dice **stretta** se rispetta le seguenti [proprietà](Relazioni%20tra%20insiemi.md#^Definizione-proprieta-delle-relazioni-binarie):
 > - **Irriflessività**: $\forall a \in A (\lnot(a \mathcal{R} a ))$.
 > - **Transitività**: $\forall a,b,c \in A (a \mathcal{R} b \land b \mathcal{R} c \implies a \mathcal{R} c)$.
+^Definizione-relazione-di-ordine-stretto
 
 %% 
 Esempi:
@@ -729,9 +732,11 @@ Dunque ogni ordine stretto è necessariamente la parte stretta di un ordine.
 
 > [!definizione]+ Definizione: relazione di pre-ordine
 > 
-> Dato un [insieme](Insiemistica.md#^Definizione-insieme) $A$, una [relazione binaria](Relazioni%20tra%20insiemi.md#^Definizione-relazione-n-aria) $\precsim$ su $A$ si dice _**di pre-ordine**_ (o _**di quasi-ordine**_) se rispetta le seguenti [proprietà](Relazioni%20tra%20insiemi.md#^Definizione-proprieta-delle-relazioni-binarie):
-> - **Riflessività**: $\forall a \in A (a \mathcal{R} a )$.
-> - **Transitività**: $\forall a,b,c \in A (a \mathcal{R} b \land b \mathcal{R} c \implies a \mathcal{R} c)$.
+> Dato un [insieme](Insiemistica.md#^Definizione-insieme) $A$, una **relazione di pre-ordine** $\precsim$ su $A$ (o **relazione di quasi-ordine**) è una [relazione](Relazioni%20tra%20insiemi.md#^Definizione-relazione-n-aria) che rispetta le seguenti [proprietà](Relazioni%20tra%20insiemi.md#^Definizione-proprieta-delle-relazioni-binarie):
+> - **Riflessività**: $\forall a \in A (a \precsim a)$.
+> - **Antisimmetria**: $\forall a,b \in A (a \precsim b \land b \precsim a \implies a = b)$.
+> - **Transitività**: $\forall a,b,c \in A (a \precsim b \land b \precsim c \implies a \precsim c)$.
+^Definizione-di-pre-ordine
 
 %% 
 Esempio
@@ -762,7 +767,7 @@ questi gruppi di squadre in base al punteggio ottenuto: l'insieme delle
 squadre che hanno 20 punti formano una classe di equivalenza che precede
 la classe di equivalenza delle squadre che hanno 19 punti, e così via.
 
-Dimostrazione di "La relazione \sim definita da a \sim b \iff a \precsim b \land b \precsim a è una relazione d'equivalenza":
+Dimostrazione di "La relazione \sim definita da $a \sim b \iff a \precsim b \land b \precsim a$ è una relazione d'equivalenza":
 Dimostrazione.
 `E evidentemente riflessiva, dato che lo è \precsim.
 Se a \sim b allora a \precsim b \land b \precsim a e quindi b \precsim a \land a \precsim b, cioè b \sim a; quindi \sim
@@ -783,10 +788,107 @@ verificare che è antisimmetrica. Se [a]\sim \le [b]\sim e [b]\sim \le [a]\sim, 
 a \precsim b \land b \precsim a, da cui a \sim b per definizione, e quindi [a]\sim = [b]\sim.
 %%
 
+%% 
+Esempio di pre-ordine (1)
+La relazione di conseguenza logica |= sull’insieme di tutte le proposizioni `e un pre-ordine (ma non un ordine).
+Riflessivit`a: Chiaramente P |= P per ogni proposizione P, quindi |= `e
+riflessiva.
+Transivit`a: Assumiamo che P |= Q e Q |= R e dimostriamo che P |= R.
+Costruiamo la tavola di verit`a di P, Q, R su tutte le variabili proposizionali
+che compaiono in P o in Q o in R. Si ha che in ogni riga in cui P `e vera
+anche Q risulta vera (poich´e P |= Q), e che in ogni riga in cui Q `e vera
+anche R risulta vera (poich´e Q |= R). Quindi in ogni riga in cui P `e vera
+risulter`a vera anche R, cio`e P |= R.
+Tuttavia, la relazione |= non `e un ordine. Infatti, A → B |= ¬A ∨ B e
+¬A ∨ B |= A → B ma le due proposizioni sono distinte: quindi |= non `e
+antisimmetrica. Le relazione d’equivalenza associata a |= `e proprio la
+relazione di equivalenza logica ≡
+%%
+
+%% 
+Esempio di pre-ordine che non è un ordine
+Consideriamo la relazione ⪯ su N definita da
+n ⪯ m se e solo se m ha un numero di cifre maggiore o uguale
+a quelle di n (in notazione decimale).
+Allora ⪯ `e una relazione riflessiva e transitiva, ma non `e antisimmetrica
+poich´e, ad esempio, 10 ⪯ 25 e 25 ⪯ 10 (ma 10̸ = 25). Quindi ⪯ `e un
+esempio di un pre-ordine che non `e un ordine.
+La relazione di equivalenza associata a ⪯ `e la relazione E (“avere lo stesso
+numero di cifre”) della slide 48 . L’ordine indotto sul quoziente N/E rispetto
+a tale relazione d’equivalenza `e un ordine lineare: Ck precede Ck′ in tale
+ordine se e solo se k ≤ k′, dove le Ck sono le classi di equivalenza rispetto
+ad E definite nella slide 49 .
+%%
+
+%% 
+Esempio di pre-ordine (3)
+Consideriamo la relazione ≾ su Fin = {X ⊆ N | X `e finito} definita da
+X ≾ Y se e solo se il numero di elementi di X `e minore o uguale
+al numero di elementi di Y .
+La relazione ≾ `e chiaramente riflessiva e transitiva, ma non `e
+antisimmetrica poich´e, ad esempio, {1, 2} ≾ {5, 14} e {5, 14} ≾ {1, 2},
+ma chiaramente {1, 2}̸ = {5, 14}. Quindi ≾ `e un altro esempio di un
+pre-ordine che non `e un ordine.
+La relazione di equivalenza associata a ≾ `e la relazione ≈ (“avere lo stesso
+numero di elementi”) della slide 50 . Anche in questo caso, l’ordine indotto
+sul quoziente Fin/≈ rispetto a tale relazione d’equivalenza `e un ordine
+lineare: Ik precede Ik′ in tale ordine se e solo se k ≤ k′, dove le Ik sono le
+classi di equivalenza rispetto a ≈ definite nella slide 51 .
+%%
+
+%% 
+Esempio di pre-ordine (4)
+Sia ⊆∗ la relazione su P(N) definita per ogni A, B ⊆ N da
+A ⊆∗ B se e solo se A \ B `e finito.
+In altre parole, A ⊆∗ B se e solo se ogni n ∈ A appartiene anche a B
+tranne che per un numero finito di tali n.
+Dimostrare che ⊆∗ `e un pre-ordine su P(N).
+Riflessivit`a: A ⊆∗ A poich´e A \ A = ∅ `e finito.
+Transitivit`a: Siano A ⊆∗ B ⊆∗ C. Si ha
+A \ C ⊆ (A \ B) ∪ (B \ C).
+Infatti, sia n ∈ A \ C, ovvero n ∈ A ma n /∈ C. Distinguiamo due casi. Se
+n /∈ B, allora n ∈ A \ B e quindi n ∈ (A \ B) ∪ (B \ C). Se invece n ∈ B,
+allora n ∈ B \ C e quindi nuovamente n ∈ (A \ B) ∪ (B \ C). Poich´e
+A \ B e B \ C sono finiti, anche A \ C lo `e, ovvero A ⊆∗ C.
+Per definizione, la relazione di equivalenza =∗ indotta da ⊆∗ `e data da
+A =∗ B se e solo se A ⊆∗ B e B ⊆∗ A.
+`E facile vedere che A =∗ B se e solo se A △ B `e finito e che ogni classe di
+equivalenza rispetto alla relazione =∗ `e infinita.
+Poich´e A △ B := (A \ B) ∪ (B \ A), si ha che A △ B `e finito se e solo se
+entrambi gli insiemi A \ B e B \ A sono finiti, ovvero se e solo se A ⊆∗ B
+e B ⊆∗ A.
+Sia A ⊆ N. Se A `e finito, allora per ogni insieme finito B ⊆ N si ha che
+A △ B `e finito poich´e A △ B ⊆ A ∪ B, per cui A =∗ B. Poich´e la
+collezione dei sottoinsiemi di N finiti contiene infiniti elementi (ad esempio,
+contiene tutti gli {n} per n ∈ N), si ha che [A]=∗ `e infinita. Se invece
+A = {a0, a1, a2, . . .} `e infinito, allora posto An = A \ {an} per ogni n ∈ N
+si ha che gli An sono a due a due distinti e tali che An =∗ A (infatti
+A △ An = {an}). Quindi anche in questo caso [A]=∗ `e infinita.
+
+%%
+
+%% 
+Siano R e S relazioni su un insieme A, che ha almeno 3 elementi. Stabilire se ciascuna delle seguenti affermazioni `e vera o `e falsa:
+1.  Se R e S sono simmetriche, allora R ∩ S `e simmetrica.
+VERO:
+$$
+(x, y) ∈ R ∩ S → (x, y) ∈ R ∧ (x, y) ∈ S → (y, x) ∈ R ∧ (y, x) ∈ S → (y, x) ∈ R ∩ S
+$$
+2. Se R e S sono simmetriche, allora R ∪ S `e simmetrica.
+VERO
+$$
+(x, y) ∈ R ∪ S → (x, y) ∈ R ∨ (x, y) ∈ S → (y, x) ∈ R ∨ (y, x) ∈ S → (y, x) ∈ R ∪ S
+$$
+3. Se R e S sono transitive, allora R ∩ S `e transitiva.
+VERO:
+$$
+(x, y), (y, z) ∈ R ∩ S → (x, y), (y, z) ∈ R ∧ (x, y), (y, z) ∈ S → (x, z) ∈ R ∧ (x, z) ∈ S → (x, z) ∈ R ∩ S
+$$
+%%
+
 # Fonti
 
 - Lezioni dei Prof. Chen Yu e Terracini Lea del corso di Matematica Discreta (canale C), Corso di Laurea in Informatica presso l'Università di Torino, A.A. 2023-24.
 - Lezioni del Prof. Radeschi Marco del corso di Algebra Lineare (canale C), Corso di Laurea in Informatica presso l'Università di Torino, A.A. 2023-24.
 - Slide del Prof. Viale Matteo del corso di Logica Matematica (canale B), Corso di Laurea in Informatica presso l'Università di Torino, A.A. 2024-25:
 	- [2.2 - Relazioni_moodle.pdf](https://informatica.i-learn.unito.it/pluginfile.php/417200/mod_folder/content/0/2.2%20-%20Relazioni_moodle.pdf)
-
