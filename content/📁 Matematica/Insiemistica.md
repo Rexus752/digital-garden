@@ -785,7 +785,6 @@ Ad esempio, se A = {0, 1, 2, 3} e B = {a, b, c}, allora la coppia (0, a) apparti
 > > 
 > > $\blacksquare$
 
-
 # 5 - Famiglia di insiemi
 
 > [!definizione]+ Definizione: famiglia di insiemi

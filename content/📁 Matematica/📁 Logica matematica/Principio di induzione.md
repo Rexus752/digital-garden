@@ -1,5 +1,6 @@
 ---
-draft: false
+icon: LiArrowBigRightDash
+iconColor: "#88FFFF"
 ---
 %%
 In matematica (ed in informatica) `e spesso necessario dimostrare che una certa propriet`a `e vera per tutti i numeri naturali. Vediamo alcuni esempi.

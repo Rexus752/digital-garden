@@ -1,5 +1,5 @@
 ---
-icon: RiObsidianSetup
+icon: SiObsidian
 iconColor: "#FF88FF"
 ---
 Questa è la lista delle configurazioni di Obsidian e dei suoi plugin che uso.
@@ -111,17 +111,21 @@ Questa è la lista delle configurazioni di Obsidian e dei suoi plugin che uso.
 
 ## Iconize
 
-- _Recently used icons limit_: `25`
-- _Toggle icon in tabs_: ✔️
-- _Toggle icon in title_: `ON (Next to title)`
-- _Use icon in frontmatter_: ✔️
+- _General_:
+	- _Recently used icons limit_: `25`
+- _Visibility of icons_:
+	- _Toggle icon in tabs_: ✔️
+	- _Toggle icon in title_: `ON (Next to title)`
+	- _Use icon in frontmatter_: ✔️
 - _Add predefined icon packs_: **tutti**
 
 ## LaTeX Suite
 
 %%
+
 > [!tip] Consiglio
 > Per gli Snippets, non usare i miei fin ma parti da zero e createli da te. Poi, eventualmente, prendi spunto dai miei se pensi che siano comodi per te.
+
 %%
 
 - _Snippets_:
@@ -129,13 +133,25 @@ Questa è la lista delle configurazioni di Obsidian e dei suoi plugin che uso.
 	[
 	    // Single letter triggers like "\\N" in single dollar signs (i.e. $...$) don't work with "m" option, only with "t" option
 	    
-	    // Comments
+	    // Comments in Markdown
 		{trigger: "%%", replacement: "%% $0 %%", options: "tA"},
 	    
-		// Math mode
+		// Math Mode
 		{trigger: "$", replacement: "$$0$", options: "tA"},
 		{trigger: "$", replacement: "$\n$0\n$", options: "mA"},
+		
+		// Text
+		{trigger: "\"", replacement: "\\text{$0}$1", options: "mA"},
+		
 	
+		// Colors
+		{trigger: "\\red", replacement: "{\\color{#FF8888} $0 }", options: "mA"},
+		{trigger: "\\green", replacement: "{\\color{#88FF88} $0 }", options: "mA"},
+		{trigger: "\\blue", replacement: "{\\color{#8888FF} $0 }", options: "mA"},
+		{trigger: "\\yellow", replacement: "{\\color{#FFFF88} $0 }", options: "mA"},
+		{trigger: "\\violet", replacement: "{\\color{#FF88FF} $0 }", options: "mA"},
+		{trigger: "\\aqua", replacement: "{\\color{#88FFFF} $0 }", options: "mA"},
+		
 		// Brackets
 		{trigger: "(", replacement: "($0)$1", options: "mA"},
 		{trigger: "{", replacement: "{$0}$1", options: "mA"},
@@ -198,12 +214,6 @@ Questa è la lista delle configurazioni di Obsidian e dei suoi plugin che uso.
 		    trigger: "\\algo",
 		    replacement: "\\begin{align*} % Algorithm environment\n & \\textbf{$0} \\\\\n & \\rhd \\text{Pre: } $1 \\\\\n & \\rhd \\text{Post: } $2 \\\\\n & $3\n\\end{align*}",
 		    options: "mA"
-		},
-		{
-			// Converts double quotes to \text{} in Algorithm environment
-			trigger: "(Algorithm environment(?:(?!\\$\\$)[\\s\\S])*?)\"",
-			replacement: "[[0]]\\text{$0} $1",
-			options: "rmA"
 		},
 		{
 			// Formats an inline comment in Algorithm environment
@@ -270,15 +280,7 @@ Questa è la lista delle configurazioni di Obsidian e dei suoi plugin che uso.
 			trigger: "(Algorithm environment(?:(?!\\$\\$)[\\s\\S])*?)return",
 			replacement: "[[0]]\\text{return } $0 \\\\\n & $1",
 			options: "rmA"
-		},
-	
-		// Colors
-		{trigger: "\\red", replacement: "{\\color{#FF8888} $0 }", options: "mA"},
-		{trigger: "\\green", replacement: "{\\color{#88FF88} $0 }", options: "mA"},
-		{trigger: "\\blue", replacement: "{\\color{#8888FF} $0 }", options: "mA"},
-		{trigger: "\\yellow", replacement: "{\\color{#FFFF88} $0 }", options: "mA"},
-		{trigger: "\\violet", replacement: "{\\color{#FF88FF} $0 }", options: "mA"},
-		{trigger: "\\aqua", replacement: "{\\color{#88FFFF} $0 }", options: "mA"}
+		}
 	]
 	```
 - _Matrix Shortcuts_:

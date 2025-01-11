@@ -1,3 +1,7 @@
+---
+icon: TiCirclesRelation
+iconColor: "#FFFF88"
+---
 Le **relazioni tra insiemi** descrivono i legami che possono esistere tra due o più [insiemi](Insiemistica.md#^Definizione-insieme). Queste relazioni sono fondamentali in [insiemistica](Insiemistica.md) e matematica in generale.
 
 # 1 - Introduzione alle relazioni
@@ -260,7 +264,7 @@ Oltre al simbolo "$\sim$", spesso per denotare la relazione di equivalenza si us
 
 > [!definizione]+ Definizione: classe di equivalenza
 > 
-> Dati un [insieme](Insiemistica.md#^Definizione-insieme) $A$ e una [relazione di equivalenza](Relazioni%20tra%20insiemi.md#^Definizione-relazione-di-equivalenza) $\sim$ su $A$, la **classe di equivalenza** di un elemento $a \in A$ rispetto alla relazione di equivalenza $\sim$, indicata con "$[a]_\sim$", è l'insieme degli elementi di $A$ che hanno una [relazione di equivalenza](Relazioni%20tra%20insiemi.md#^Definizione-relazione-di-equivalenza) con $a$:
+> Dati un [insieme](Insiemistica.md#^Definizione-insieme) $A$ e una [relazione di equivalenza](Relazioni%20tra%20insiemi.md#^Definizione-relazione-di-equivalenza) $\sim$ su $A$, la **classe di equivalenza** di un elemento $a \in A$ rispetto alla relazione di equivalenza $\sim$, indicata con "$[a]_\sim$", è l'insieme degli elementi di $A$ che hanno la [relazione di equivalenza](Relazioni%20tra%20insiemi.md#^Definizione-relazione-di-equivalenza) $\sim$ con $a$:
 > $$
 > [a]_\sim = \{x \in A \mid x \sim a\}
 > $$
@@ -288,10 +292,20 @@ Oltre al simbolo "$\sim$", spesso per denotare la relazione di equivalenza si us
 > Ciò è verificabile se si interpreta la coppia $(p,q)$ come una frazione $\frac{p}{q}$, quindi questa [relazione di equivalenza](Relazioni%20tra%20insiemi.md#^Definizione-relazione-di-equivalenza) indica che due frazioni sono in relazione tra loro se sono uguali il prodotto tra il numeratore di uno e il denominatore dell'altro: $\frac{p}{q} = \frac{p'}{q'} \iff pq' = p'q$ (es. prendendo le frazioni $\frac{2}{3}$ e $\frac{4}{6}$, si può constatare che $2 \cdot 6 = 3 \cdot 4$).
 > Se si prende l'insieme quoziente di questa relazione, ossia $[\mathbb{Z} \times (\mathbb{Z} \setminus \{0\})] / \sim$, si può notare come esso corrisponda proprio all'insieme $\mathbb{Q}$ dei numeri razionali perché comprende tutte le combinazioni possibili di numeri presenti in $\mathbb{Q}$.
 
-%% 
-Osservazione:
-L'insieme quoziente è una famiglia di sottoinsiemi di A, cioè A/E \subseteq P(A).
-%%
+> [!osservazione]+ Osservazione: $(A/\sim) \subseteq \mathcal{P}(A)$
+> 
+> Dati un [insieme](Insiemistica.md#^Definizione-insieme) $A$ e una [relazione di equivalenza](Relazioni%20tra%20insiemi.md#^Definizione-relazione-di-equivalenza) $\sim$ su $A$, l'[insieme quoziente](Relazioni%20tra%20insiemi.md#^Definizione-insieme-quoziente) $A/\sim$ è una [famiglia](Insiemistica.md#^Definizione-famiglia-di-insiemi) di sottoinsiemi di $A$, cioè è un sottoinsieme dell'[insieme delle parti](Insiemistica.md#^Definizione-insieme-delle-parti) di $A$:
+> $$
+> (A/\sim) \subseteq \mathcal{P}(A) 
+> $$
+> 
+> Per costruzione, infatti, ogni elemento di $A / \sim$ è una classe di equivalenza $[a]_\sim$, e ogni classe di equivalenza è un sottoinsieme di $A$. Quindi:
+> $$
+> \forall a \in A ([a]_\sim \subseteq A) 
+> $$
+> Poiché $A / \sim$ è formato unicamente dalle classi di equivalenza, ogni elemento di $A / \sim$ è un sottoinsieme di $A$.
+> 
+> L'insieme delle parti $\mathcal{P}(A)$ è definito come l'insieme di tutti i sottoinsiemi di $A$ e, dal momento che ogni classe di equivalenza è un sottoinsieme di $A$, si ha che $A / \sim \subseteq \mathcal{P}(A)$.
 
 %% 
 Esempio: campionato di serie A
@@ -319,7 +333,7 @@ Il quoziente X/E consiste nell'insieme di tutte le regioni italiane.
 %% 
 Esempio: congruenza modulo 2
 Dati due interi a, b \in Z, a è congruente a b modulo 2 se a - b è pari
-(ovvero se a - b = 2 · k per qualche k \in Z). In questo caso scriviamo
+(ovvero se a - b = 2 \cdot k per qualche k \in Z). In questo caso scriviamo
 a \equiv b mod 2
 La relazione di congruenza modulo 2 è una relazione di equivalenza:
 Riflessivit`a: a - a = 0 è pari, quindi a \equiv a mod 2.
@@ -336,7 +350,7 @@ Z_2 ovvero Z/2Z
 %% 
 Esempio: congruenza modulo n
 Più in generale, dato 0̸ = n \in N e a, b \in Z, a è congruente a b modulo
-n se a - b è un multiplo di n (ovvero se a - b = n · k per qualche k \in Z).
+n se a - b è un multiplo di n (ovvero se a - b = n \cdot k per qualche k \in Z).
 In questo caso scriviamo
 a \equiv b mod n
 
@@ -344,19 +358,28 @@ Esercizio (perché Viale ha scritto che questo è un esercizio?)
 La relazione di congruenza modulo n è una relazione di equivalenza e
 ciascuna classe di equivalenza è della forma
 [k] = {a \in Z | la divisione intera di a per n ha resto k}
-per qualche k \in {0, . . . , n - 1}
+per qualche k \in {0, \ldots , n - 1}
 
 Dunque l'insieme quoziente risultante
 Z_n = Z/nZ := {[k] | 0 \le k \le n - 1}
 ha esattamente n elementi.
 %%
 
-%% 
-Proposizione
-Sia E una relazione d'equivalenza su A e consideriamo a, b \in A. Se a E b
-allora $[a]_E = [b]_E$, mentre se a NOT-E b (cioè \lnot(a E b)), allora [a]_E \cap [b]_E = \emptyset.
-In particolare, due classi di equivalenza sono disgiunte o coincidono.
- 
+> [!proposizione]+ Proposizione: due classi di equivalenza o sono disgiunte o coincidono
+> 
+> Data una [relazione di equivalenza](Relazioni%20tra%20insiemi.md#^Definizione-relazione-di-equivalenza) $\sim$ su un [insieme](Insiemistica.md#^Definizione-insieme) $A$ e due elementi $a,b \in A$, se $a \sim b$, allora $[a]_\sim = [b]_\sim$:
+> $$
+> a \sim b \implies [a]_\sim = [b]_\sim
+> $$
+> Inoltre, se $a \not\sim b$, cioè se $\lnot(a \sim b)$, allora $[a]_\sim \cap [b]_\sim = \emptyset$:
+> $$
+> a \not\sim b \implies [a]_\sim \cap [b]_\sim = \emptyset
+> $$
+> 
+> In particolare, due classi di equivalenza o sono disgiunte o coincidono.
+^Proposizione-due-classi-di-equivalenza-o-sono-disgiunte-o-coincidono
+
+%%
 Dimostrazione.
 Supponiamo a E b. Sia c \in [a]E : allora c E a e per la proprietà transitiva
 c E b, quindi c \in [b]E . Essendo c arbitrario, abbiamo dimostrato che
@@ -377,17 +400,24 @@ $\blacksquare$
 ## 2.1 - Relazioni di equivalenza e partizioni
 
 %% 
-Se E è una relazione di equivalenza su A, allora il quoziente A/E è una
-partizione di A: ogni [a]E \subseteq A è non vuota, due classi di equivalenza
-distinte sono disgiunte (Proposizione precedente) e per ogni a \in A si ha
-a \in [a]E \in A/E.
+> [!osservazione]+ Osservazione: insieme quoziente $A/\sim$ partizione di $A$
+> 
+> Data una [relazione di equivalenza](Relazioni%20tra%20insiemi.md#^Definizione-relazione-di-equivalenza) $\sim$ su un [insieme](Insiemistica.md#^Definizione-insieme) $A$, l'[insieme quoziente](Relazioni%20tra%20insiemi.md#^Definizione-insieme-quoziente) $A/\sim$ è una partizioneLINK di $A$, infatti:
+> - Ogni $[a]_\sim \subseteq A$ è non vuota.
+> - Due classi di equivalenza distinte sono disgiunte.#per la proposizione precedente
+> - Per ogni $a \in A$, si ha $a \in [a]_\sim \in A/\sim$.
+> associare alle relative regole delle partizioni
+
 Viceversa, data una partizione C di A, la relazione E su A definita da:
 
 > a E b se e solo se a e b appartengono allo stesso X \in C
 
-e una relazione di equivalenza su A, ovvero è riflessiva, simmetrica e
+E è una relazione di equivalenza su A, ovvero è riflessiva, simmetrica e
 transitiva (se a, b \in X \in C e b, c \in Y \in C, allora X = Y poiché b \in X \cap Y
-e C è una partizione: perciò a, c \in X \in C), e A/E = C. Quindi partizioni su A e insiemi quozienti di A sono la stessa cosa.
+e C è una partizione: perciò a, c \in X \in C), e A/E = C. Quindi
+
+> partizioni su A e insiemi quozienti di A sono la stessa cosa.
+
 %%
 
 %% 
@@ -512,6 +542,11 @@ Domande e risposte:
 > - **Riflessività**: $\forall a \in A (a \le a)$.
 > - **Antisimmetria**: $\forall a,b \in A (a \le b \land b \le a \implies a = b)$.
 > - **Transitività**: $\forall a,b,c \in A (a \le b \land b \le c \implies a \le c)$.
+> 
+> L'insieme $A$ è detto **_ordinato_** e, per esplicitarne la relazione di ordine $\le$ che insiste su di esso, si può scrivere come:
+> $$
+> (A, \le) 
+> $$
 ^Definizione-relazione-di-ordine
 
 > [!esempio]+ Esempio: ordine non-decrescente $\le$ è una relazione di ordine
@@ -528,9 +563,7 @@ Domande e risposte:
 chiarire perché "ordine non-decrescente" anziché "ordine crescente"
 %%
 
-Per indicare relazioni di ordine spesso si usano, oltre a "$\le$", altri simboli che in qualche misura gli somigliano, come "$\preceq$", "$\trianglelefteq$", "$\lesssim$", "$\sqsubseteq$", ecc.
-
-Quando vorremo esplicitare l'insieme $A$ su cui è definito l'ordine $\le$, scriveremo $\langle A, \le \rangle$. Questa notazione è utile per distinguere, ad esempio, l'ordine sui numeri naturali%% link %% $\langle \mathbb{N}, \le \rangle$ dall'ordine sui numeri interi%% link %% $\langle \mathbb{Z}, \le \rangle$.
+%%Per indicare relazioni di ordine spesso si usano, oltre a "$\le$", altri simboli che in qualche misura gli somigliano, come "$\preceq$", "$\trianglelefteq$", "$\lesssim$", "$\sqsubseteq$", ecc.%%
 
 %% 
 Esempio
@@ -553,6 +586,7 @@ anche un elemento di D, ovvero B \subseteq D.
 > $$
 > \forall a,b \in A(a \le b \lor b \le a)
 > $$
+^Definizione-relazione-di-ordine-totale
 
 %% 
 Esempio:
@@ -570,7 +604,7 @@ Disegnare il diagramma di Hasse degli ordini $\langle\mathcal{P}(\{0\}), \subset
 
 > [!definizione]+ Definizione: relazione di successione immediata
 > 
-> Dato, un [insieme](Insiemistica.md#^Definizione-insieme) $A$ e una [relazione di ordine](Relazioni%20tra%20insiemi.md#^Definizione-relazione-di-ordine) $\le$ $A$, un elemento $y \in A$ è un **successore immediato** di $x \in A$ (e $x$ è un **predecessore immediato** di $y$), in simboli $x \lhd y$, se:
+> Dato un [insieme ordinato](Relazioni%20tra%20insiemi.md#^Definizione-relazione-di-ordine) $(A, \le)$, un elemento $y \in A$ è un **successore immediato** di $x \in A$ (e $x$ è un **predecessore immediato** di $y$), in simboli $x \lhd y$, se:
 > $$
 > x \le y \land x \ne y \land \forall z \in A (x \le z \land z \le y \implies z = x \lor z = y)
 > $$
@@ -593,7 +627,7 @@ ATTENZIONE: il diagramma di Hasse in un ordine NON è unico!
 
 > [!definizione]+ Definizione: massimo e minimo di un ordine
 > 
-> Dati un [insieme](Insiemistica.md#^Definizione-insieme) $A$ e una [relazione di ordine](Relazioni%20tra%20insiemi.md#^Definizione-relazione-di-ordine) $\le$ $A$, un elemento $a \in A$ si dice:
+> Dato un [insieme ordinato](Relazioni%20tra%20insiemi.md#^Definizione-relazione-di-ordine) $(A, \le)$, un elemento $a \in A$ si dice:
 > - **Massimo** (rispetto a $\le$) se $\forall b \in A (b \le a)$.
 > - **Minimo** (rispetto a $\le$) se $\forall b \in A (a \le b)$.
 ^Definizione-massimo-e-minimo-di-un-ordine
@@ -609,27 +643,27 @@ L'ordine \subseteq su P(A) ha minimo (l'insieme \emptyset) e massimo (l'insieme 
 Esempio: la relazione di divisibilità fra numeri naturali
 Definiamo ⪯ su N come
 
-> n ⪯ m se e solo se m = n · k per qualche k \in N.
+> n ⪯ m se e solo se m = n \cdot k per qualche k \in N.
 
 Dimostrare che ⪯ è un ordine non totale su N che ha minimo e massimo.
 
 Siano n, m, l \in N arbitrari.
 
-Riflessività n ⪯ n poiché n = n · 1.
+Riflessività n ⪯ n poiché n = n \cdot 1.
 
 Antisimmetria Supponiamo che n ⪯ m e m ⪯ n. Allora esiste i \in N tale che
-m = n · i ed esiste j \in N tale che n = m · j. Se m = 0 allora
-n = 0 · j = 0, quindi m = n. Altrimenti per sostituzione si ha
-m = m · j · i, da cui, dividendo per m, si ottiene j · i = 1. Perci`o
-j = i = 1, da cui m = n · 1 = n.
+m = n \cdot i ed esiste j \in N tale che n = m \cdot j. Se m = 0 allora
+n = 0 \cdot j = 0, quindi m = n. Altrimenti per sostituzione si ha
+m = m \cdot j \cdot i, da cui, dividendo per m, si ottiene j \cdot i = 1. Perci`o
+j = i = 1, da cui m = n \cdot 1 = n.
 
-Transitività Supponiamo che n ⪯ m e m ⪯ l. Siano i, j \in N tali che l = m · i
-e m = n · j. Allora l = n · j · i, ovvero n ⪯ l.
+Transitività Supponiamo che n ⪯ m e m ⪯ l. Siano i, j \in N tali che l = m \cdot i
+e m = n \cdot j. Allora l = n \cdot j \cdot i, ovvero n ⪯ l.
 
 Non totale Ad esempio, 2̸ ⪯ 3 e 3̸ ⪯ 2.
 
-Minimo `E il numero 1: si ha sempre 1 ⪯ n poiché n = 1 · n.
-Massimo `E il numero 0: si ha sempre n ⪯ 0 perché 0 = n · 0.
+Minimo È il numero 1: si ha sempre 1 ⪯ n poiché n = 1 \cdot n.
+Massimo È il numero 0: si ha sempre n ⪯ 0 perché 0 = n \cdot 0.
 %%
 
 %% 
@@ -637,7 +671,7 @@ La relazione di divisibilità spesso si denota con il simbolo |:
 
 > n | m se e solo se n divide m,
 
-ovvero m = n · k per qualche k \in N.
+ovvero m = n \cdot k per qualche k \in N.
 Dato m \in N, l'insieme dei divisori di m `e
 Div(m) = {n \in N | n divide m} .
 Si osservi che Div(m)̸ = \emptyset poich´e, ad esempio, 1 ed m vi appartengono.
@@ -663,23 +697,23 @@ Soluzione:
 Siano n, m, l \in N \ {0} arbitrari.
 Riflessività n ⊴ n poiché n = n1.
 Antisimmetria Supponiamo che n ⊴ m e m ⊴ n. Allora esistono i, j \in N tali che
-m = ni e n = mj . Quindi m = (mj )i = mj·i, da cui o m = 1
-oppure j · i = 1. Nel primo caso, n = mj = 1j = 1, da cui m = n.
+m = ni e n = mj . Quindi m = (mj )i = mj\cdoti, da cui o m = 1
+oppure j \cdot i = 1. Nel primo caso, n = mj = 1j = 1, da cui m = n.
 Nel secondo caso j = i = 1, da cui m = n1 = n.
 Transitività Supponiamo che n ⊴ m e m ⊴ l. Siano i, j \in N tali che l = mi e
-m = nj . Allora l = (nj )i = nj·i, ovvero n ⊴ l.
+m = nj . Allora l = (nj )i = nj\cdoti, ovvero n ⊴ l.
 Non lineare Ad esempio, \lnot(2 ⊴ 3) e \lnot(3 ⊴ 2).
 Minimo Non esiste, perché non esiste alcun n tale che n ⊴ 2 e n ⊴ 3.
-Massimo `E il numero 1: si ha sempre n0 = 1, perciò n ⊴ 1.
+Massimo È il numero 1: si ha sempre n0 = 1, perciò n ⊴ 1.
 %%
 
 ## 3.4 - Relazione di ordine stretto
 
 > [!definizione]+ Definizione: relazione di ordine stretto
 > 
-> Dato un [insieme](Insiemistica.md#^Definizione-insieme) $A$, una [relazione di ordine](Relazioni%20tra%20insiemi.md#^Definizione-relazione-di-ordine) $\mathcal{R}$ su $A$ si dice **stretta** se rispetta le seguenti [proprietà](Relazioni%20tra%20insiemi.md#^Definizione-proprieta-delle-relazioni-binarie):
-> - **Irriflessività**: $\forall a \in A (\lnot(a \mathcal{R} a ))$.
-> - **Transitività**: $\forall a,b,c \in A (a \mathcal{R} b \land b \mathcal{R} c \implies a \mathcal{R} c)$.
+> Dato un [insieme](Insiemistica.md#^Definizione-insieme) $A$, una [relazione di ordine](Relazioni%20tra%20insiemi.md#^Definizione-relazione-di-ordine) $\le$ su $A$ si dice **stretta** se rispetta le seguenti [proprietà](Relazioni%20tra%20insiemi.md#^Definizione-proprieta-delle-relazioni-binarie):
+> - **Irriflessività**: $\forall a \in A (\lnot(a \le a ))$.
+> - **Transitività**: $\forall a,b,c \in A (a \le b \land b \le c \implies a \le c)$.
 ^Definizione-relazione-di-ordine-stretto
 
 %% 
@@ -691,7 +725,7 @@ Esempi:
 %% 
 Per indicare gli ordini stretti spesso si usano i simboli per gli ordini senza la
 parte che richiama l'uguaglianza, ad esempio
-< ≺ ◁ ⊏ . . .
+< ≺ ◁ ⊏ \ldots
 
 Scriveremo ad esempio \langleA, ≺\rangle per indicare che ≺ è definito su A.
 Vedremo a breve che un ordine stretto è esattamente la parte stretta di un ordine (che minghie significa?).
@@ -734,9 +768,13 @@ Dunque ogni ordine stretto è necessariamente la parte stretta di un ordine.
 > 
 > Dato un [insieme](Insiemistica.md#^Definizione-insieme) $A$, una **relazione di pre-ordine** $\precsim$ su $A$ (o **relazione di quasi-ordine**) è una [relazione](Relazioni%20tra%20insiemi.md#^Definizione-relazione-n-aria) che rispetta le seguenti [proprietà](Relazioni%20tra%20insiemi.md#^Definizione-proprieta-delle-relazioni-binarie):
 > - **Riflessività**: $\forall a \in A (a \precsim a)$.
-> - **Antisimmetria**: $\forall a,b \in A (a \precsim b \land b \precsim a \implies a = b)$.
 > - **Transitività**: $\forall a,b,c \in A (a \precsim b \land b \precsim c \implies a \precsim c)$.
-^Definizione-di-pre-ordine
+> 
+> L'insieme $A$ è detto **_parzialmente ordinato_** e, per esplicitarne la relazione di ordine $\precsim$ che insiste su di esso, si può scrivere come:
+> $$
+> (A, \precsim) 
+> $$
+^Definizione-relazione-di-pre-ordine
 
 %% 
 Esempio
@@ -769,7 +807,7 @@ la classe di equivalenza delle squadre che hanno 19 punti, e così via.
 
 Dimostrazione di "La relazione \sim definita da $a \sim b \iff a \precsim b \land b \precsim a$ è una relazione d'equivalenza":
 Dimostrazione.
-`E evidentemente riflessiva, dato che lo è \precsim.
+È evidentemente riflessiva, dato che lo è \precsim.
 Se a \sim b allora a \precsim b \land b \precsim a e quindi b \precsim a \land a \precsim b, cioè b \sim a; quindi \sim
 è simmetrica.
 Se a \sim b e b \sim c, allora a \precsim b \land b \precsim a e b \precsim c \land c \precsim b, da cui per
@@ -780,29 +818,29 @@ Dimostrazione di "La relazione su A/\sim
 [a]\sim \le [b]\sim ⇐⇒ a \precsim b
 è ben definita ed è un ordine.":
 Dimostrazione.
-Supponiamo che a \precsim b e a′ \sim a e b′ \sim b: allora a′ \precsim a e b \precsim b′ quindi
-a′ \precsim b′ per la transitività di \precsim. Ne segue che la definizione di \le su A/\sim `e
+Supponiamo che a \precsim b e a' \sim a e b' \sim b: allora a' \precsim a e b \precsim b' quindi
+a' \precsim b' per la transitività di \precsim. Ne segue che la definizione di \le su A/\sim `e
 ben posta, dato che non dipende dal rappresentante.
-`E immediato verificare che \le è riflessiva e transitiva, quindi è sufficiente
+È immediato verificare che \le è riflessiva e transitiva, quindi è sufficiente
 verificare che è antisimmetrica. Se [a]\sim \le [b]\sim e [b]\sim \le [a]\sim, allora
 a \precsim b \land b \precsim a, da cui a \sim b per definizione, e quindi [a]\sim = [b]\sim.
 %%
 
 %% 
 Esempio di pre-ordine (1)
-La relazione di conseguenza logica |= sull’insieme di tutte le proposizioni `e un pre-ordine (ma non un ordine).
-Riflessivit`a: Chiaramente P |= P per ogni proposizione P, quindi |= `e
+La relazione di conseguenza logica \vDash sull'insieme di tutte le proposizioni è un pre-ordine (ma non un ordine).
+Riflessivit`a: Chiaramente P \vDash P per ogni proposizione P, quindi \vDash `e
 riflessiva.
-Transivit`a: Assumiamo che P |= Q e Q |= R e dimostriamo che P |= R.
-Costruiamo la tavola di verit`a di P, Q, R su tutte le variabili proposizionali
-che compaiono in P o in Q o in R. Si ha che in ogni riga in cui P `e vera
-anche Q risulta vera (poich´e P |= Q), e che in ogni riga in cui Q `e vera
-anche R risulta vera (poich´e Q |= R). Quindi in ogni riga in cui P `e vera
-risulter`a vera anche R, cio`e P |= R.
-Tuttavia, la relazione |= non `e un ordine. Infatti, A → B |= ¬A ∨ B e
-¬A ∨ B |= A → B ma le due proposizioni sono distinte: quindi |= non `e
-antisimmetrica. Le relazione d’equivalenza associata a |= `e proprio la
-relazione di equivalenza logica ≡
+Transivit`a: Assumiamo che P \vDash Q e Q \vDash R e dimostriamo che P \vDash R.
+Costruiamo la tavola di verità di P, Q, R su tutte le variabili proposizionali
+che compaiono in P o in Q o in R. Si ha che in ogni riga in cui P è vera
+anche Q risulta vera (poiché P \vDash Q), e che in ogni riga in cui Q è vera
+anche R risulta vera (poiché Q \vDash R). Quindi in ogni riga in cui P è vera
+risulterà vera anche R, cioè P \vDash R.
+Tuttavia, la relazione \vDash non è un ordine. Infatti, A \to B \vDash \lnotA \lor B e
+\lnotA \lor B \vDash A \to B ma le due proposizioni sono distinte: quindi \vDash non `e
+antisimmetrica. Le relazione d'equivalenza associata a \vDash è proprio la
+relazione di equivalenza logica \equiv
 %%
 
 %% 
@@ -810,80 +848,361 @@ Esempio di pre-ordine che non è un ordine
 Consideriamo la relazione ⪯ su N definita da
 n ⪯ m se e solo se m ha un numero di cifre maggiore o uguale
 a quelle di n (in notazione decimale).
-Allora ⪯ `e una relazione riflessiva e transitiva, ma non `e antisimmetrica
-poich´e, ad esempio, 10 ⪯ 25 e 25 ⪯ 10 (ma 10̸ = 25). Quindi ⪯ `e un
-esempio di un pre-ordine che non `e un ordine.
-La relazione di equivalenza associata a ⪯ `e la relazione E (“avere lo stesso
-numero di cifre”) della slide 48 . L’ordine indotto sul quoziente N/E rispetto
-a tale relazione d’equivalenza `e un ordine lineare: Ck precede Ck′ in tale
-ordine se e solo se k ≤ k′, dove le Ck sono le classi di equivalenza rispetto
+Allora ⪯ è una relazione riflessiva e transitiva, ma non è antisimmetrica
+poich´e, ad esempio, 10 ⪯ 25 e 25 ⪯ 10 (ma 10̸ = 25). Quindi ⪯ è un
+esempio di un pre-ordine che non è un ordine.
+La relazione di equivalenza associata a ⪯ è la relazione E ("avere lo stesso
+numero di cifre") della slide 48 . L'ordine indotto sul quoziente N/E rispetto
+a tale relazione d'equivalenza è un ordine lineare: Ck precede Ck' in tale
+ordine se e solo se k \le k', dove le Ck sono le classi di equivalenza rispetto
 ad E definite nella slide 49 .
 %%
 
 %% 
 Esempio di pre-ordine (3)
-Consideriamo la relazione ≾ su Fin = {X ⊆ N | X `e finito} definita da
-X ≾ Y se e solo se il numero di elementi di X `e minore o uguale
+Consideriamo la relazione \precsim su Fin = {X \subseteq N | X è finito} definita da
+X \precsim Y se e solo se il numero di elementi di X è minore o uguale
 al numero di elementi di Y .
-La relazione ≾ `e chiaramente riflessiva e transitiva, ma non `e
-antisimmetrica poich´e, ad esempio, {1, 2} ≾ {5, 14} e {5, 14} ≾ {1, 2},
-ma chiaramente {1, 2}̸ = {5, 14}. Quindi ≾ `e un altro esempio di un
-pre-ordine che non `e un ordine.
-La relazione di equivalenza associata a ≾ `e la relazione ≈ (“avere lo stesso
-numero di elementi”) della slide 50 . Anche in questo caso, l’ordine indotto
-sul quoziente Fin/≈ rispetto a tale relazione d’equivalenza `e un ordine
-lineare: Ik precede Ik′ in tale ordine se e solo se k ≤ k′, dove le Ik sono le
+La relazione \precsim è chiaramente riflessiva e transitiva, ma non `e
+antisimmetrica poich´e, ad esempio, {1, 2} \precsim {5, 14} e {5, 14} \precsim {1, 2},
+ma chiaramente {1, 2}̸ = {5, 14}. Quindi \precsim è un altro esempio di un
+pre-ordine che non è un ordine.
+La relazione di equivalenza associata a \precsim è la relazione ≈ ("avere lo stesso
+numero di elementi") della slide 50 . Anche in questo caso, l'ordine indotto
+sul quoziente Fin/≈ rispetto a tale relazione d'equivalenza è un ordine
+lineare: Ik precede Ik' in tale ordine se e solo se k \le k', dove le Ik sono le
 classi di equivalenza rispetto a ≈ definite nella slide 51 .
 %%
 
 %% 
 Esempio di pre-ordine (4)
-Sia ⊆∗ la relazione su P(N) definita per ogni A, B ⊆ N da
-A ⊆∗ B se e solo se A \ B `e finito.
-In altre parole, A ⊆∗ B se e solo se ogni n ∈ A appartiene anche a B
+Sia \subseteq∗ la relazione su P(N) definita per ogni A, B \subseteq N da
+A \subseteq∗ B se e solo se A \ B è finito.
+In altre parole, A \subseteq∗ B se e solo se ogni n \in A appartiene anche a B
 tranne che per un numero finito di tali n.
-Dimostrare che ⊆∗ `e un pre-ordine su P(N).
-Riflessivit`a: A ⊆∗ A poich´e A \ A = ∅ `e finito.
-Transitivit`a: Siano A ⊆∗ B ⊆∗ C. Si ha
-A \ C ⊆ (A \ B) ∪ (B \ C).
-Infatti, sia n ∈ A \ C, ovvero n ∈ A ma n /∈ C. Distinguiamo due casi. Se
-n /∈ B, allora n ∈ A \ B e quindi n ∈ (A \ B) ∪ (B \ C). Se invece n ∈ B,
-allora n ∈ B \ C e quindi nuovamente n ∈ (A \ B) ∪ (B \ C). Poich´e
-A \ B e B \ C sono finiti, anche A \ C lo `e, ovvero A ⊆∗ C.
-Per definizione, la relazione di equivalenza =∗ indotta da ⊆∗ `e data da
-A =∗ B se e solo se A ⊆∗ B e B ⊆∗ A.
-`E facile vedere che A =∗ B se e solo se A △ B `e finito e che ogni classe di
-equivalenza rispetto alla relazione =∗ `e infinita.
-Poich´e A △ B := (A \ B) ∪ (B \ A), si ha che A △ B `e finito se e solo se
-entrambi gli insiemi A \ B e B \ A sono finiti, ovvero se e solo se A ⊆∗ B
-e B ⊆∗ A.
-Sia A ⊆ N. Se A `e finito, allora per ogni insieme finito B ⊆ N si ha che
-A △ B `e finito poich´e A △ B ⊆ A ∪ B, per cui A =∗ B. Poich´e la
+Dimostrare che \subseteq∗ è un pre-ordine su P(N).
+Riflessivit`a: A \subseteq∗ A poiché A \ A = \emptyset è finito.
+Transitivit`a: Siano A \subseteq∗ B \subseteq∗ C. Si ha
+A \ C \subseteq (A \ B) \cup (B \ C).
+Infatti, sia n \in A \ C, ovvero n \in A ma n /\in C. Distinguiamo due casi. Se
+n /\in B, allora n \in A \ B e quindi n \in (A \ B) \cup (B \ C). Se invece n \in B,
+allora n \in B \ C e quindi nuovamente n \in (A \ B) \cup (B \ C). Poich´e
+A \ B e B \ C sono finiti, anche A \ C lo `e, ovvero A \subseteq∗ C.
+Per definizione, la relazione di equivalenza =∗ indotta da \subseteq∗ è data da
+A =∗ B se e solo se A \subseteq∗ B e B \subseteq∗ A.
+È facile vedere che A =∗ B se e solo se A △ B è finito e che ogni classe di
+equivalenza rispetto alla relazione =∗ è infinita.
+Poiché A △ B := (A \ B) \cup (B \ A), si ha che A △ B è finito se e solo se
+entrambi gli insiemi A \ B e B \ A sono finiti, ovvero se e solo se A \subseteq∗ B
+e B \subseteq∗ A.
+Sia A \subseteq N. Se A è finito, allora per ogni insieme finito B \subseteq N si ha che
+A △ B è finito poiché A △ B \subseteq A \cup B, per cui A =∗ B. Poiché la
 collezione dei sottoinsiemi di N finiti contiene infiniti elementi (ad esempio,
-contiene tutti gli {n} per n ∈ N), si ha che [A]=∗ `e infinita. Se invece
-A = {a0, a1, a2, . . .} `e infinito, allora posto An = A \ {an} per ogni n ∈ N
+contiene tutti gli {n} per n \in N), si ha che [A]=∗ è infinita. Se invece
+A = {a0, a1, a2, \ldots} è infinito, allora posto An = A \ {an} per ogni n \in N
 si ha che gli An sono a due a due distinti e tali che An =∗ A (infatti
-A △ An = {an}). Quindi anche in questo caso [A]=∗ `e infinita.
+A △ An = {an}). Quindi anche in questo caso [A]=∗ è infinita.
 
 %%
 
 %% 
-Siano R e S relazioni su un insieme A, che ha almeno 3 elementi. Stabilire se ciascuna delle seguenti affermazioni `e vera o `e falsa:
-1.  Se R e S sono simmetriche, allora R ∩ S `e simmetrica.
+Siano R e S relazioni su un insieme A, che ha almeno 3 elementi. Stabilire se ciascuna delle seguenti affermazioni è vera o è falsa:
+1.  Se R e S sono simmetriche, allora R \cap S è simmetrica.
 VERO:
 $$
-(x, y) ∈ R ∩ S → (x, y) ∈ R ∧ (x, y) ∈ S → (y, x) ∈ R ∧ (y, x) ∈ S → (y, x) ∈ R ∩ S
+(x, y) \in R \cap S \to (x, y) \in R \land (x, y) \in S \to (y, x) \in R \land (y, x) \in S \to (y, x) \in R \cap S
 $$
-2. Se R e S sono simmetriche, allora R ∪ S `e simmetrica.
+2. Se R e S sono simmetriche, allora R \cup S è simmetrica.
 VERO
 $$
-(x, y) ∈ R ∪ S → (x, y) ∈ R ∨ (x, y) ∈ S → (y, x) ∈ R ∨ (y, x) ∈ S → (y, x) ∈ R ∪ S
+(x, y) \in R \cup S \to (x, y) \in R \lor (x, y) \in S \to (y, x) \in R \lor (y, x) \in S \to (y, x) \in R \cup S
 $$
-3. Se R e S sono transitive, allora R ∩ S `e transitiva.
+3. Se R e S sono transitive, allora R \cap S è transitiva.
 VERO:
 $$
-(x, y), (y, z) ∈ R ∩ S → (x, y), (y, z) ∈ R ∧ (x, y), (y, z) ∈ S → (x, z) ∈ R ∧ (x, z) ∈ S → (x, z) ∈ R ∩ S
+(x, y), (y, z) \in R \cap S \to (x, y), (y, z) \in R \land (x, y), (y, z) \in S \to (x, z) \in R \land (x, z) \in S \to (x, z) \in R \cap S
 $$
+4.  Se R e S sono transitive, allora R \cup S è transitiva.
+FALSO:
+Posto A = {1, 2, 3}, le relazioni R = {(1, 2)} e S = {(2, 3)} sono
+transitive, (1, 2), (2, 3) \in R \cup S ma (1, 3) /\in R \cup S
+5. Se R è antisimmetrica e S arbitraria, allora R \cap S è antisimmetrica.
+VERO:
+Supponiamo (x, y), (y, x) \in R \cap S, allora (x, y), (y, x) \in R e quindi x = y.
+6. Se R e S sono antisimmetriche, allora R \cup S è antisimmetrica.
+FALSO;
+Posto A = {1, 2, 3}, le relazioni R = {(1, 2)} e S = {(2, 1)} sono
+antisimmetriche, (1, 2), (2, 1) \in R \cup S ma 1̸ = 2.
+%%
+
+### 3.5.1 - Maggioranti e minoranti in una relazione di pre-ordine
+
+> [!definizione]+ Definizione: maggiorante, minorante, estremo superiore ed estremo inferiore
+> 
+> Dato un [insieme parzialmente ordinato](Relazioni%20tra%20insiemi.md#^Definizione-relazione-di-pre-ordine) $(A, \precsim)$ e un sottoinsieme $X \subseteq A$:
+> - Un **maggiorante** di $X$ è un elemento $a \in A$ tale che $\forall x \in X (x \precsim a)$.
+> - Un **minorante** di $X$ è un elemento $a \in A$ tale che $\forall x \in X (a \precsim x)$.
+> - Un **estremo superiore** di $X$, denotato con "$\sup X$", è un elemento $a \in A$ che è maggiorante di $X$ e tale che, per ogni $b \in A$, se $b$ è un maggiorante di $X$, allora $a \precsim b$.
+> - Un **estremo inferiore** di $X$, denotato con "$\inf X$", è un elemento $a \in A$ che è minorante di $X$ e tale che, per ogni $b \in A$, se $b$ è un minorante di $X$, allora $b \precsim a$.
+^Definizione-maggiorante-minorante-estremo-superiore-ed-estremo-inferiore
+
+%% 
+Osservazione
+Non è detto che un insieme X abbia un estremo superiore o inferiore,
+anche se X è finito.
+%%
+
+%% 
+Proposizione: unicità dell'estremo superiore e inferiore
+Sia (A, \precsim) un insieme parzialmente ordinato e sia X \subseteq A.
+L'estremo superiore di X, se esiste, è unico.
+L'estremo inferiore di X, se esiste, è unico.
+
+Dimostrazione.
+Se a1, a2 sono due estremi superiori di X, allora a1 \precsim a2 e a2 \precsim a1, quindi
+il risultato segue dalla proprietà antisimmetrica.
+Il caso dell'estremo inferiore è simile.
+%%
+
+### 3.5.2 - Massimi e minimi di un pre-ordine
+
+> [!definizione]+ Definizione: massimo e minimo di un pre-ordine
+> 
+> Dato un [insieme parzialmente ordinato](Relazioni%20tra%20insiemi.md#^Definizione-relazione-di-pre-ordine) $(A, \precsim)$, un elemento $a \in A$ si dice:
+> - **Massimo** (rispetto a $\precsim$) se $\forall b \in A (b \precsim a)$.
+> - **Minimo** (rispetto a $\precsim$) se $\forall b \in A (a \precsim b)$.
+^Definizione-massimo-e-minimo-di-un-pre-ordine
+
+%% 
+Come nel caso dell'estremo superiore/inferiore, il massimo ed il minimo, se
+esistono, sono unici e li si indicano con max X e min X.
+(stessa cosa anche per massimi e minimi di un ordine)
+%%
+
+%% 
+Quindi
+sup X = min{y \in A | \forall x \in X (x \le y)} è il minimo dei maggioranti di X.
+inf X = max{y \in A | \forall x \in X (y \le x)} è il massimo dei minoranti di X.
+Se max X esiste, allora coincide con sup X.
+Se sup X esiste ed appartiene ad X, allora sup(X) = max(X).
+Se min X esiste, allora coincide con inf X.
+Se inf X esiste ed appartiene ad X, allora inf(X) = min(X).
+
+Esempio
+Se X = {a}, allora sup X = inf X = max X = min X = a.
+
+Esempio:
+![](Pasted%20image%2020250110104126.png)
+Se X = {a, b} allora sup X non esiste, inf X = c e
+min X non esiste.
+
+Esercizio 3
+Per ciascun ordine parziale stabilire se esiste il massimo e il minimo. Per
+ogni sottoinsieme non vuoto X, di ciascuno di essi stabilire se esistono
+sup X e inf X.
+![](Pasted%20image%2020250110104154.png)
+
+%%
+
+# 4 - Reticoli
+
+> [!definizione]+ Definizione: reticolo
+> 
+> Un **reticolo** è un [insieme parzialmente ordinato](Relazioni%20tra%20insiemi.md#^Definizione-relazione-di-pre-ordine) non vuoto $(R, \precsim)$ in cui, per ogni coppia di elementi $x,y \in R$, esistono un [estremo superiore](Relazioni%20tra%20insiemi.md#^Definizione-maggiorante-minorante-estremo-superiore-ed-estremo-inferiore) $\sup \{ x,y \}$ e un [estremo inferiore](Relazioni%20tra%20insiemi.md#^Definizione-maggiorante-minorante-estremo-superiore-ed-estremo-inferiore) $\inf \{ x,y \}$.
+^Definizione-reticolo
+
+%% 
+Quindi (R, \le) è un reticolo se per ogni x, y \in R esistono due elementi \sup \{ x,y \} e \inf \{ x,y \} tali che
+- $x \precsim \sup \{ x,y \}$ e $y \precsim \sup \{ x,y \}$
+- $\inf \{ x,y \} \precsim x$ e $\inf \{ x,y \} \precsim y$,
+- $\forall z \in L (x \precsim z \land y \precsim z \to \sup \{ x,y \} \precsim z)$,
+- $\forall z \in L (z \precsim x \land z \precsim y \to z \precsim \inf \{ x,y \})$.
+%%
+
+%% 
+Esempi
+- Ogni ordine lineare è un reticolo: x \lor y = max{x, y} e x \land y = min{x, y}.
+- (P(A), \subseteq) è un reticolo: X \land Y = X \cap Y e X \lor Y = X \cup Y .
+- Sia \mathcal{F} = {f | f : \N \to \N} e poniamo f \precsim g se e solo se \foralln \in N (f (n) \le g(n)).
+È facile verificare che (F, ⪯) è un ordine parziale.
+In effetti è un reticolo: f \land g, f \lor g : N \to N sono definite da
+(f \land g)(n) = min{f (n), g(n)} e (f \lor g)(n) = max{f (n), g(n)}.
+- Sia | la relazione di divisibilit`a. (N, |) è un reticolo: n \lor m è il minimo
+comune multiplo e n \land m è il massimo comun divisore.
+- Sia \mathcal{I} := {X \subseteq N | X è infinito}. L'insieme ordinato (I, \subseteq) non è un
+reticolo.
+Infatti {2n | n \in N}, {2n + 1 | n \in N} \in I e tuttavia non esiste
+nessun insieme infinito X che sia contenuto nei pari e nei dispari.
+%%
+
+%% 
+sostituire $\precsim$ con $\lesssim$ per il pre-ordine?
+%%
+
+%% 
+Esercizio 4
+Quali dei seguenti ordini sono reticoli?
+
+![](Pasted%20image%2020250110105307.png)
+%%
+
+%% 
+Proposizione
+In un reticolo (R, \le) valgono le seguenti propriet`a, per ogni x, y, z:
+1. $\sup \{ x, y \} = \sup \{ y,x \}$ e $\inf \{ x, y \} = \inf \{ y,x \}$ (commutativa)
+2. $\sup \{ x, \sup \{ y,z \} \} = \sup \{ \sup \{ x, y \}, z \}$ e $\inf \{ x, \inf \{ y,z \} \} = \inf \{ \inf \{ x, y \}, z \}$ (associativa)
+3. $\sup \{ x, \inf \{ x,y \} \} = x$ e $\inf \{ x, \sup \{ x,y \} \} = x$.
+
+Dimostrazione.
+1 è ovvia.
+2 $\sup \{ x, \sup \{ y,z \} \}$ è $\precsim$ di $x$ e di $\sup \{ y,z \}$, che a sua volta è $\precsim$ di $y$ e di $z$, quindi $\sup \{ x, \sup \{ y,z \} \} \precsim x, y, z$. Quindi $\sup \{ x, \sup \{ y,z \} \}$ è $\precsim$ di $\sup \{ x, y \}$ e di $z$, e quindi $\sup \{ x, \sup \{ y,z \} \} = \sup \{ \sup \{ x, y \}, z \}$.
+Analogamente $\inf \{ x, \inf \{ y,z \} \} = \inf \{ \inf \{ x, y \}, z \}$. L'associatività di $\inf$ è simile ed è lasciata per esercizio.
+3 $x$ è $\precsim$ di $x$ e di $\inf \{ x,y \}$ quindi $x \precsim \sup \{ x, \inf \{ x,y \} \}$. Viceversa $\sup \{ x, \inf \{ x,y \} \} \precsim x$.
+La dimostrazione di $\inf \{ x, \sup \{ x,y \} \} = x$ è simile.
+%%
+
+## 4.1 - Algebra reticolare
+
+> [!definizione]+ Definizione: algebra reticolare
+> 
+> Un'**algebra reticolare** è un [insieme](Insiemistica.md#^Definizione-insieme) $R$ dotato di due operazioni binarie%% link %% $\lor$ e $\land$ per cui valgano le seguenti proprietà:
+> - $\forall x, y (x \land y = y \land x)$ e $\forall x, y (x \lor y = y \lor x)$.
+> - $\forall x, y, z (x \land (y \land z) = (x \land y) \land z)$ e $\forall x, y, z (x \lor (y \lor z) = (x \lor y) \lor z)$.
+> - $\forall x, y((x \lor y) \land y = y)$ e $\forall x, y((x \land y) \lor y = y)$%%(leggi di assorbimento)%%.
+^Definizione-algebra-reticolare
+
+%% 
+Per quanto visto, ogni reticolo (R, \le) definisce un'algebra reticolare (R, \lor, \land).
+%%
+
+%% 
+Proposizione
+Sia (R, \lor, \land) un'algebra reticolare. Allora valgono le seguenti proprietà:
+1. $\forall x(x = x \lor x)$ e $\forall x(x = x \land x)$ (legge di idempotenza),
+2. $\forall x, y (x \lor y = y \iff x \land y = x)$.
+Dimostrazione.
+1. Posto x = y nella legge di assorbimento, x = (x \lor x) \land x; per commutatività $x = x \land (x \lor x)$.
+Quindi $x \lor x = x \lor (x \land (x \lor x)) = (x \land (x \lor x)) \lor x = ((x \lor x) \land x) \lor x$, per commutativit`a. Sostituendo $x \lor x$ e $x$ al posto di $x$ e $y$ nella legge di assorbimento, $((x \lor x) \land x) \lor x = x$. Quindi $x \lor x = x$.
+Analogamente $x \land x = x \land (x \lor (x \land x)) = x$.
+2. Se $x \lor y = y$ allora $x = (x \lor y) \land x = x \land y$ per assorbimento e commutativit`a.
+Se $x \land y = x$ allora $x \lor y = (x \land y) \lor y = y$ per assorbimento e commutativit`a.
+%%
+
+%% 
+Proposizione
+Data un'algebra reticolare (R, \lor, \land) , definiamo la relazione binaria \le su
+R come
+a \le b \iff a \lor b = b \iff a \land b = a.
+Allora (L, \le) è un reticolo e sup {x, y} = x \lor y e inf {x, y} = x \land y.
+
+Dimostrazione.
+Per idempotenza x \le x. Supponiamo che x \le y e y \le x, cioè x \land y = x e
+y \lor x = x: allora x = x \land y = (y \lor x) \land y = y per assorbimento. Infine
+supponiamo x \le y e y \le z, cioè x = x \land y e y = y \land z: allora
+x \land z = (x \land y) \land z = x \land (y \land z) = x \land y = x.
+Ne segue che (R, \le) è un insieme parzialmente ordinato.
+Per assorbimento e commutatività (x \land y) \lor x = x e (x \land y) \lor y = y, cio`e
+x \land y \le x, y. Se z \le x, y, cioè z \land x = z e z \land y = z, allora
+z \land (x \land y) = (z \land x) \land y = z \land y = z, cioè z \le x \land y.
+Quindi inf {x, y} = x \land y. Analogamente x \lor y = sup {x, y}.
+%%
+
+%%
+Siano
+$$
+\mathcal{Ret} = \{ (R, \le) \mid (R, \le) \text{ è un reticolo} \}
+$$
+la [famiglia](Insiemistica.md#^Definizione-famiglia-di-insiemi) di tutti i [reticoli](Relazioni%20tra%20insiemi.md#^Definizione-reticolo) e
+$$
+\mathcal{AlgRet} = \{ (R, \land, \lor) \mid (R, \land, \lor) \text{ è un'algebra reticolare} \}
+$$
+la [famiglia](Insiemistica.md#^Definizione-famiglia-di-insiemi) di tutte le [algebre reticolari](Relazioni%20tra%20insiemi.md#^Definizione-algebra-reticolare).
+
+Abbiamo dimostrato che le trasformazioni
+Ret \to AlgRet (R, \le) 7 \to (R, \land, \lor)
+AlgRet \to Ret (R, \land, \lor) 7 \to (R, \le)
+sono l'una l'inversa dell'altra, quindi non distingueremo più tra la nozione
+d'ordine (reticolo) e quella algebrica (algebra reticolare) e parleremo
+semplicemente di reticoli.
+%%
+
+# 5 - Grafi
+
+> [!definizione]+ Definizione: grafo
+> 
+> Un **grafo** è una [coppia ordinata](Insiemistica.md#^Definizione-tupla) $(V,E)$ dove:
+> - $V$: è un [insieme](Insiemistica.md#^Definizione-insieme) non vuoto i cui elementi sono detti **_vertici_**.
+> - $E$: è una [relazione binaria](Relazioni%20tra%20insiemi.md#^Definizione-relazione-n-aria) su $V$ che è simmetrica e irriflessiva%% link %%, cioè $\forall v \in V (\lnot (v E v))$.
+> 
+> Se due vertici $v,w \in V$ soddisfano la relazione binaria $v E w$, essi si dicono **_adiacenti_**.
+^Definizione-grafo
+
+%%
+E possibile rappresentare un grafo (V, E) disegnando i vertici di V sul piano e unendo due
+vertici con una linea se e solo se sono in relazione E. Per esempio se V = {a, b, c, d, e} ed
+E = {(a, c), (c, a), (a, d), (d, a), (a, e), (e, a), (c, d), (d, c)}, allora:
+![](Pasted%20image%2020250111175512.png)
+%%
+
+%%
+Se in un grafo due vertici distinti $v, w \in V$ sono adiacenti, cioè $v E w$, allora anche $w E w$. Per questo motivo un grafo può essere visto come un [insieme](Insiemistica.md#^Definizione-insieme) $V$ di vertici ed una [famiglia](Insiemistica.md#^Definizione-famiglia-di-insiemi) $E$ di [sottoinsiemi](Insiemistica.md#^Definizione-sottoinsieme) di $V$ di [cardinalità](Insiemistica.md#^Definizione-cardinalita-di-un-insieme) $2$, cioè gli elementi di $E$ sono insiemi della forma $\{v, w\}$ con $v, w \in V$ e $v \ne w$; gli elementi di $E$ si dicono _spigoli_.
+%%
+
+%%
+
+> [!definizione]+ Definizione: spigolo
+> 
+^Definizione-spigolo
+
+%%
+
+%%
+Nell'esempio qui sopra E = {{a, c}, {a, d}, {a, e}, {c, d}}.
+%%
+
+%%
+Definizione: grafo completo
+
+Esempio:
+![](Pasted%20image%2020250111175857.png)
+Questo è un grafo completo, cioè ogni vertice `e
+adiacente ad ogni altro vertice: E = {{a, b}, {a, c},
+{a, d}, {a, e}, {b, c}, {b, d}, {b, e}, {c, d}, {c, e}, {d, e}}.
+%%
+
+%%
+Definizione: vertici indipendenti
+Un insieme $U$ formato da vertici indipendenti è detto indipendente
+Un grafo $V$ formato da vertici indipendenti è detto grafo indipendente.
+
+Osservazione: grafo indipendente => E = \emptyset
+
+Esempio:
+![](Pasted%20image%2020250111175943.png)
+In questo grafo, l'insieme U = {b, c} è indipendente, cioè nessun vertice di U è adiacente ad qualche altro.
+
+Esempio:
+![](Pasted%20image%2020250111180121.png)
+In questo grafo V è indipendente, cioè nessun vertice
+è adiacente a qualche altro vertice: E = \emptyset.
+%% 
+
+%%
+Definizione: grafo bipartito
+
+Esempio:
+![](Pasted%20image%2020250111180148.png)
+Questo è un grafo bipartito, cioè l'insieme dei ver-
+tici V può essere ripartito in due insiemi disgiunti
+U = {a, b, c} e W = {d, e} tali che sia U che W
+sono indipendenti.
+
+Attenzione!:
+Il modo di disegnare un grafo non è unico! Per esempio
+![](Pasted%20image%2020250111180303.png)
+denotano il medesimo grafo completo con 5 vertici.
+
+(al massimo fare simulazione con Manim che fa vedere la trasformazione di un grafo nell'altro)
 %%
 
 # Fonti
@@ -892,3 +1211,4 @@ $$
 - Lezioni del Prof. Radeschi Marco del corso di Algebra Lineare (canale C), Corso di Laurea in Informatica presso l'Università di Torino, A.A. 2023-24.
 - Slide del Prof. Viale Matteo del corso di Logica Matematica (canale B), Corso di Laurea in Informatica presso l'Università di Torino, A.A. 2024-25:
 	- [2.2 - Relazioni_moodle.pdf](https://informatica.i-learn.unito.it/pluginfile.php/417200/mod_folder/content/0/2.2%20-%20Relazioni_moodle.pdf)
+

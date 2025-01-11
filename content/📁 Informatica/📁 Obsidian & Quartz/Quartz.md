@@ -1,5 +1,8 @@
+---
+icon: SiObsidian
+iconColor: "#888888"
+---
 [Quartz](https://quartz.jzhao.xyz/) è un tool che genera siti completi a partire da note scritte in Markdown. Per scrivere queste note in Markdown, uso [Obsidian](https://obsidian.md/).
-
 
 # 1 - Installazione e troubleshooting
 
