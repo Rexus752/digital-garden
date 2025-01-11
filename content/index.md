@@ -36,6 +36,7 @@ Questo sito è stato creato tramite l'uso di [Quartz](Quartz.md), un tool che ge
 		- [Quartz](Quartz.md)
 - Matematica
 	- [Insiemistica](Insiemistica.md)
+		- [Funzioni](Funzioni.md)
 		- [Relazioni tra insiemi](Relazioni%20tra%20insiemi.md)
 	- Logica matematica
 		- [Teoremi e dimostrazioni](Teoremi%20e%20dimostrazioni.md)

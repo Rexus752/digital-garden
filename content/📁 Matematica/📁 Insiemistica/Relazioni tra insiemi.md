@@ -1211,4 +1211,3 @@ denotano il medesimo grafo completo con 5 vertici.
 - Lezioni del Prof. Radeschi Marco del corso di Algebra Lineare (canale C), Corso di Laurea in Informatica presso l'Università di Torino, A.A. 2023-24.
 - Slide del Prof. Viale Matteo del corso di Logica Matematica (canale B), Corso di Laurea in Informatica presso l'Università di Torino, A.A. 2024-25:
 	- [2.2 - Relazioni_moodle.pdf](https://informatica.i-learn.unito.it/pluginfile.php/417200/mod_folder/content/0/2.2%20-%20Relazioni_moodle.pdf)
-

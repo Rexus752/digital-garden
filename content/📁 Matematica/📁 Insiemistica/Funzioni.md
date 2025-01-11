@@ -2,32 +2,37 @@
 icon: BoBxArrowFromLeft
 iconColor: "#8888FF"
 ---
-# Introduzione alle funzioni
+# 1 - Introduzione alle funzioni
 
-> [!definizione] Definizione: funzione
+> [!definizione]+ Definizione: funzione
 > 
-> Una **funzione**, denotata con le lettere latine minuscole (solitamente "$f$", oppure anche "$g$" e "$h$" quando sono presenti più funzioni), è una [relazione binaria](Relazioni%20tra%20insiemi.md#^Definizione-relazione-n-aria) tra due [insiemi](Insiemistica.md#^Osservazione-insiemi-come-elementi-di-altri-insiemi) $A$ e $B$, chiamati rispettivamente **_dominio_** e **_codominio_** della funzione, che associa a ogni elemento $x \in A$ del dominio uno e un solo elemento $y \in B$ del codominio:
+> Una [relazione binaria](Relazioni%20tra%20insiemi.md#^Definizione-relazione-n-aria) $f$ tra due [insiemi](Insiemistica.md#^Osservazione-insiemi-come-elementi-di-altri-insiemi) $A$ e $B$ si dice **_funzione da $A$ in $B$_** se:
+> 1. Per ogni $a \in A$ c'è un $b \in B$ tale che $(a,b) \in f$.
+> 2. Se $(a,b_1) \in f$ e $(a,b_2) \in f$, allora $b_1 = b_2$.
+> 
+> In questo caso scriveremo:
 > 
 > $$
 > \begin{align*}
 > f \colon A & \to B \\
-> x & \mapsto y
+> a & \mapsto b
 > \end{align*}
 > $$
+> 
+> Inoltre:
+> - L'unico $b \in B$ tale che $(a,b) \in f$ si indica con "$f(a)$".
+> - L'insieme $A$ è detto **_dominio_** della funzione e si indica con "$\text{dom}(f)$".
+> - L'insieme $B$ è detto **_codominio_** della funzione.
 ^Definizione-funzione
 
-> [!esempio] Esempio: $f \colon \mathbb{R} \to \mathbb{R}, x \mapsto x^2$
+> [!esempio]+ Esempio: ${\color{#8888FF} f \colon \mathbb{R} \to \mathbb{R}, x \mapsto x^2 }$
 > 
-> La funzione $f \colon \mathbb{R} \to \mathbb{R}, x \mapsto x^2$ è una funzione che associa a ogni numero reale $x$ il suo quadrato $y=x^2$. Essa è una funzione perché per ogni numero il suo quadrato è unico e non può averne altri.
+> La funzione $f \colon \mathbb{R} \to \mathbb{R}, x \mapsto x^2$ o $f(x) = x^2$ è una funzione che associa a ogni numero reale $x$ il suo quadrato $y=x^2$. Essa è una funzione perché per ogni numero il suo quadrato è unico e non può averne altri.
 
-> [!esempio] Esempio: $R=\{(1,2),(1,3),(2,4)\}$ non è una funzione
-> Data una [relazione binaria](Relazioni%20tra%20insiemi.md#^Definizione-relazione-n-aria) $R=\{(1,2),(1,3),(2,4)\}$, essa non è una funzione in quanto c’è un elemento del dominio (l’elemento $1$) che è associato a più elementi del codominio (gli elementi $2$ e $3$).
+> [!esempio]+ Esempio: ${\color{#8888FF} R=\{(1,2),(1,3),(2,4)\} }$ non è una funzione
+> Data una [relazione binaria](Relazioni%20tra%20insiemi.md#^Definizione-relazione-n-aria) $R=\{(1,2),(1,3),(2,4)\}$, essa non è una funzione in quanto c'è un elemento del dominio (l'elemento $1$) che è associato a più elementi del codominio (gli elementi $2$ e $3$).
 
-Quando si vuole omettere il codominio della funzione (perché facilmente intuibili dal contesto), si può anche usare la dicitura "$\forall x \in A (f(x) = y)$" dove, al posto della $y$, c'è direttamente la trasformazione operata su $x$ (es. la funzione $f \colon \mathbb{R} \to \mathbb{R}, x \mapsto x^2$ si può anche scrivere come $\forall x \in \mathbb{R} (f(x) = x^2)$).
-
-Quando si vuole omettere anche il dominio della funzione (sempre perché facilmente intuibile dal contesto), specificando però una proprietà $P(x)$ che devono rispettare gli elementi del dominio, si può usare la dicitura "$P(x)(f(x) = y)$" dove, al posto della $y$, c'è sempre la trasformazione operata su $x$ (es. la funzione $f \colon \{ x \in \mathbb{R} \mid x > 0 \} \to \mathbb{R}, x \mapsto x^2$ si può scrivere come $\forall x > 0 (f(x) = x^2)$).
-
-> [!osservazione] Osservazione: funzione come dipendenza tra due grandezze
+> [!osservazione]+ Osservazione: funzione come dipendenza tra due grandezze
 > 
 > Il concetto di funzione è il modello matematico che esprime la *dipendenza* tra due grandezze. Se una certa grandezza $Y$ dipende da un'altra grandezza $X$ e se a ogni valore di $X$ è associato un unico valore di $Y$, allora $Y$ è una funzione di $X$: in questo caso si dice che $X$ è la grandezza _indipendente_ e che $Y$ è la grandezza _dipendente_.
 > 
@@ -37,7 +42,7 @@ Quando si vuole omettere anche il dominio della funzione (sempre perché facilme
 > \forall x > 0 (f(x)=x^{2}) 
 > $$
 
-> [!osservazione] Osservazione: funzione come concetto non strettamente algebrico
+> [!osservazione]+ Osservazione: funzione come concetto non strettamente algebrico
 > 
 > La nozione di "funzione" è molto generale e non si limita a considerare solo quelle funzioni che si possono scrivere esplicitamente usando le quattro operazioni aritmetiche ed altre funzioni note, come quelle trigonometriche.
 > Per esempio, si può scegliere di definire una funzione del tipo:
@@ -58,7 +63,7 @@ Quando si vuole omettere anche il dominio della funzione (sempre perché facilme
 > \end{align*}
 > $$
 
-> [!osservazione] Osservazione: funzione come processo con input e output
+> [!osservazione]+ Osservazione: funzione come processo con input e output
 > 
 > Il concetto di funzione può essere facilmente inteso in termini di processo che, dato un certo input, fornisce un determinato output.
 > 
@@ -68,16 +73,43 @@ Quando si vuole omettere anche il dominio della funzione (sempre perché facilme
 > \boxed{x} \to \boxed{f(x)}
 > $$
 > 
-> Il valore in uscita si ottiene spesso mediante una procedura che specifica le operazioni da effettuare sul valore in ingresso: per esempio, per la funzione $f \colon \mathbb{R} \to \mathbb{R}$ definita da $f(x)=2x+1$, la procedura può essere descritta dalle operazioni "moltiplica per 2" e "aggiungi 1":
+> Il valore in uscita si ottiene spesso mediante una procedura che specifica le operazioni da effettuare sul valore in ingresso: per esempio, per la funzione $f \colon \mathbb{R} \to \mathbb{R}$ definita come $f(x)=2x+1$, la procedura può essere descritta dalle operazioni "moltiplica per 2" e "aggiungi 1":
 > 
 > $$
 > \boxed{x} \xrightarrow{\text{moltiplica per }2} \boxed{2x} \xrightarrow{\text{aggiungi }1} \boxed{2x+1}
 > $$
 > 
-> Il modo più semplice per rappresentare il meccanismo input-output che soggiace al concetto di funzione è un diagramma a frecce come il seguente, che rappresenta una generica funzione $f \colon X \to Y, x \mapsto f(x)$:
-> ![asd](Pasted%20image%2020240220102800.png)
+> %% sottolineare importanza dell'ordine: prima moltiplicazione per 2, poi aggiungere 1 %%
 
-> [!definizione] Definizione: grafico di una funzione
+%%
+
+## 1.1 - Rappresentazione grafica di funzioni con diagrammi di Venn
+
+o di Eulero-Venn? 
+
+scrivere introduzione
+
+Rappresentazione grafica di una funzione come insieme di frecce tra
+diagrammi di Venn.
+
+![](Pasted%20image%2020250111194239.png)
+
+Rappresentazione grafica come insieme di frecce tra diagrammi di Venn di
+una relazione che non è una funzione (perché non è definita su tutto A).
+
+![](Pasted%20image%2020250111194301.png)
+
+Rappresentazione grafica come insieme di frecce tra diagrammi di Venn di
+una relazione che non è una funzione (perché c'è almeno un punto di A da
+cui parte più di una freccia).
+
+![](Pasted%20image%2020250111194319.png)
+
+%%
+
+## 1.2 - Grafico di una funzione
+
+> [!definizione]+ Definizione: grafico di una funzione
 > 
 > Data una [funzione](Funzioni.md#^Definizione-funzione) $f \colon A \to B, x \mapsto f(x)$, si definisce ***grafico*** di $f$ il [sottoinsieme](Insiemistica.md#^Definizione-sottoinsieme) $\Gamma_{f} \subseteq \mathbb{R}^{2}$ definito da:
 > 
@@ -94,7 +126,7 @@ Osservazione: parola "grafico"
 Significa sia il sottoinsieme $\Gamma_{f} \subseteq \mathbb{R}^{2}$ delle coppie di elementi in $\mathbb{R}^{2}$ legate tra di loro dalla funzione $f$, sia la rappresentazione grafica di $f$.
 %%
 
-# Piano cartesiano
+# 2 - Piano cartesiano
 
 Per rappresentare un grafico "visivamente" si usa il **piano cartesiano**, cioè un piano composto da due rette perpendicolari tra loro, dette **_assi cartesiani_**, che hanno alcune caratteristiche particolari:
 - Sono disegnate in modo che una di esse sia orizzontale e l'altra verticale.
@@ -108,14 +140,14 @@ come si disegna la funzione sul piano cartesiano?
 
 Inoltre, le quattro parti in cui viene diviso il piano dagli assi prendono il nome di **_quadranti_** e, partendo da quello in alto a destra e procedendo in senso antiorario, vengono numerati da $1$ a $4$.
 
-> [!esempio] Esempio: piano cartesiano di $f(x)=3x-1$
+> [!esempio]+ Esempio: piano cartesiano di ${\color{#8888FF} f(x)=3x-1 }$
 > 
 > Il [grafico](Funzioni.md#^Definizione-grafico-di-una-funzione) della [funzione](Funzioni.md#^Definizione-funzione) $f \colon \mathbb{R} \to \mathbb{R}, x \mapsto 3x-1$ è l'insieme $\Gamma_{f} = \{ (x,y) \in \mathbb{R}^{2} \mid y=3x-1 \}$ ed è rappresentato dalla seguente retta nel piano cartesiano:
 > ![350](Pasted%20image%2020240220105837.png)
 
 %% sostituire grafici con Geogebra %%
 
-> [!esempio] Esempio: ricavare le informazioni dal grafico di una funzione
+> [!esempio]+ Esempio: ricavare le informazioni dal grafico di una funzione
 > 
 > Si consideri la funzione $f$ che presenta il seguente grafico:
 > 
@@ -130,9 +162,9 @@ Inoltre, le quattro parti in cui viene diviso il piano dagli assi prendono il no
 > 
 > ![350](Pasted%20image%2020240220110901.png)
 
-# Uguaglianza di due funzioni
+# 3 - Uguaglianza di due funzioni
 
-> [!definizione] Definizione: uguaglianza di due funzioni
+> [!definizione]+ Definizione: uguaglianza di due funzioni
 > 
 > Date due [funzioni](Funzioni.md#^Definizione-funzione) $f$ e $g$, sono definite **uguali** se hanno lo stesso dominio e lo stesso codominio e se $f(x) = g(x)$ per ogni elemento $x$ del dominio.
 ^Definizione-uguaglianza-di-due-funzioni
@@ -142,17 +174,17 @@ Osservazione:
 quindi il loro grafico deve coincidere
 %%
 
-> [!esempio] Esempio: uguaglianza di due funzioni apparentemente diverse
+> [!esempio]+ Esempio: uguaglianza di due funzioni apparentemente diverse
 > Date due funzioni $f(x)=3x^2-1$ e $g(x)=x^3+2x-1$ definite in $\mathbb{R}$ e con dominio $\{0,1,2\}$, ossia $f,g \colon \{0,1,2\} \to \mathbb{R}$, allora $f=g$ perché:
 > - $f(0)=g(0)=-1$;
 > - $f(1)=g(1)=2$;
 > - $f(2)=g(2)=11$.
 
-# Funzioni particolari
+# 4 - Funzioni particolari
 
-> [!definizione] Definizione: funzione identità
+> [!definizione]+ Definizione: funzione identità
 > 
-> Dato un [insieme](Insiemistica.md#^Definizione-insieme) $X$, la **funzione identità** su $X$ è la [funzione](Funzioni.md#^Definizione-funzione) che associa a ogni elemento di $X$ se stesso:
+> Dato un [insieme](Insiemistica.md#^Definizione-insieme) $X$, la **funzione identità** $\text{id}_X$ su $X$ è la [funzione](Funzioni.md#^Definizione-funzione) che associa a ogni elemento di $X$ se stesso:
 > 
 > $$
 > \begin{align*}
@@ -162,9 +194,9 @@ quindi il loro grafico deve coincidere
 > $$
 ^Definizione-funzione-identita
 
-> [!definizione] Definizione: funzione costante
+> [!definizione]+ Definizione: funzione costante
 > 
-> Dati due [insiemi](Insiemistica.md#^Definizione-insieme) $A$ e $B$ non necessariamente distinti e un elemento fissato $\beta \in B$, la **funzione costante** con valore $\beta$ è la [funzione](Funzioni.md#^Definizione-funzione) che associa a ogni elemento di $A$ sempre lo stesso elemento $\beta$ di $B$:
+> Dati due [insiemi](Insiemistica.md#^Definizione-insieme) $A$ e $B$ non necessariamente distinti e un elemento fissato $\beta \in B$, la **funzione costante** $f_\beta$ con valore $\beta$ è la [funzione](Funzioni.md#^Definizione-funzione) che associa a ogni elemento di $A$ sempre lo stesso elemento $\beta$ di $B$:
 > 
 > $$
 > \begin{align*}
@@ -174,9 +206,9 @@ quindi il loro grafico deve coincidere
 > $$
 ^Definizione-funzione-costante
 
-> [!definizione] Definizione: funzione proiezione
+> [!definizione]+ Definizione: funzione proiezione
 > 
-> Dati due [insiemi](Insiemistica.md#^Definizione-insieme) $A$ e $B$, le **funzioni proiezioni** sui singoli fattori sono le funzioni che associano a ogni coppia di valori $(a,b) \in A \times B$ uno solo dei due valori:
+> Dati due [insiemi](Insiemistica.md#^Definizione-insieme) $A$ e $B$, le **funzioni proiezioni** $p_1$ e $p_2$ sui singoli fattori sono le funzioni che associano a ogni coppia di valori $(a,b) \in A \times B$ uno solo dei due valori:
 > 
 > $$
 > \begin{align*}
@@ -193,9 +225,9 @@ quindi il loro grafico deve coincidere
 > $$
 ^Definizione-funzione-proiezione
 
-> [!definizione] Definizione: funzione restrizione
+> [!definizione]+ Definizione: funzione restrizione
 > 
-> Data una [funzione](Funzioni.md#^Definizione-funzione) $f \colon A\to B$ e un [sottoinsieme](Insiemistica.md#^Definizione-sottoinsieme) $S \subseteq A$, si dice _**restrizione**_ di $f$ a $S$ la funzione che restringe il dominio di $f$ a $S$:
+> Data una [funzione](Funzioni.md#^Definizione-funzione) $f \colon A\to B$ e un [sottoinsieme](Insiemistica.md#^Definizione-sottoinsieme) $S \subseteq A$, si dice _**restrizione**_ di $f$ a $S$ la funzione $f_{\vert S}$ che restringe il dominio di $f$ a $S$:
 > 
 > $$
 > \begin{align*}
@@ -207,15 +239,16 @@ quindi il loro grafico deve coincidere
 > Essa è cioè una funzione che in $S$ si comporta esattamente come la funzione originaria si comporta in $A$, ma che si "dimentica" dei punti al di fuori di quel sottoinsieme.
 ^Definizione-funzione-restrizione
 
-> [!esempio] Esempio: $f|_\mathbb{N} \colon \mathbb{N} \to \mathbb{R}$
+> [!esempio]+ Esempio: ${\color{#8888FF} f|_\mathbb{N} \colon \mathbb{N} \to \mathbb{R} }$ restrizione di ${\color{#8888FF} f \colon \mathbb{R} \to \mathbb{R} }$
 > 
 > Data una funzione $f \colon \mathbb{R} \to \mathbb{R}, x \mapsto x^2$, essa si può restringere al sottoinsieme $\mathbb{N} \subsetneq \mathbb{R}$ e diventa la funzione $f|_\mathbb{N} \colon \mathbb{R} \to \mathbb{R} x \mapsto x^2$.
-
 
 # Fonti
 
 - Lezioni dei Prof. Chen Yu e Terracini Lea del corso di Matematica Discreta (canale C), Corso di Laurea in Informatica presso l'Università di Torino, A.A. 2023-24.
 - Lezioni del Prof. Radeschi Marco del corso di Algebra Lineare (canale C), Corso di Laurea in Informatica presso l'Università di Torino, A.A. 2023-24.
+- Slide del Prof. Viale Matteo del corso di Logica Matematica (canale B), Corso di Laurea in Informatica presso l'Università di Torino, A.A. 2024-25:
+	- [2.3 - Funzioni_moodle.pdf](https://informatica.i-learn.unito.it/pluginfile.php/417200/mod_folder/content/0/2.3%20-%20Funzioni_moodle.pdf)
 
 %%
 - libro di bruno martelli

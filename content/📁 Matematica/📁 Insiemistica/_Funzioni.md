@@ -1,7 +1,6 @@
 ---
 draft: true
 ---
-
 # Immagine e controimmagine
 
 > [!definizione] Definizione: immagine e controimmagine di una funzione
@@ -39,6 +38,16 @@ draft: true
 > 
 > > [!esempio] Esempio: funzioni $\text{Im}(f)$ e $\text{Co}(f)$ con $f\colon A\to B$
 > > Data una funzione $f\colon A\to B$, si ha che $\text{Im}(f)=B$ e $\text{Co}(f)=A$.
+
+![](Pasted%20image%2020250111194454.png)
+
+![](Pasted%20image%2020250111194505.png)
+
+![](Pasted%20image%2020250111194512.png)
+
+![](Pasted%20image%2020250111194520.png)
+
+![](Pasted%20image%2020250111194536.png)
 
 # Iniettività, suriettività e biettività
 
