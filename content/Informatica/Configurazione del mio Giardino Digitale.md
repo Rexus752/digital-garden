@@ -136,7 +136,7 @@ Problemino: Quartz%% link %% genera delle pagine web non solo per le note, ma an
 
 Per ovviare a questo problema, Quartz offre già a priori una soluzione: nella cartella desiderata, si può rinominare la sua "nota associata" in `_index.md` o `index.md` in modo da sostituirla alla nota della cartella. Il titolo della nota lo prende dalla proprietà `title` inserita nel frontmatter della nota.
 
-> [!attenzione]+ Attenzione: `_index.md` o `index.md`?
+> [!attenzione]- Attenzione: `_index.md` o `index.md`?
 > 
 > Riguardo quest'ultima cosa, sono stato costretto a scegliere `_index.md` come nome di default per le note associate alle cartelle, perché `index.md` l'ho riservato alla nota della homepage del sito (cioè `content/index.md`). Ho dovuto fare così perché, in questo modo, nelle premesse delle note posso mettere un link che reindirizza semplicemente all'unica nota che in tutto il vault di Obsidian ha come nome `index.md`, ossia proprio `content/index.md`. Se anche questa nota avesse come nome `_index.md`, Obsidian "forza" a inserire come percorso nell'hyperlink il percorso `content/_index.md`, generando il problema per cui, sul sito, questo hyperlink rimanda alla nota `https://rexus752.github.io/digital-garden/content/_index.md` che non esiste.
 
@@ -240,145 +240,74 @@ Ne ho approfittato anche per sostituire con questa icona il file `og-image.png`,
 
 ![Preview link Giardino Digitale|400](Preview%20link%20Giardino%20Digitale.png)
 
-Facendo ciò ho anche disabilitato il [plugin Custom OG Images](https://quartz.jzhao.xyz/plugins/CustomOgImages) nel file `quartz.config.yaml`, che è il plugin che si occupa di generare delle preview uniche per ogni nota del sito (e che, in realtà, rallenta anche il tempo di _build_ del sito):
+Facendo ciò ho anche disabilitato il [plugin `Custom OG Images`](https://quartz.jzhao.xyz/plugins/customogimages) nel file `quartz.config.yaml`, che è il plugin che si occupa di generare delle preview uniche per ogni nota del sito (e che, in realtà, rallenta anche il tempo di _build_ del sito):
 
 ```yaml title="quartz.config.yaml" showLineNumbers{142} {2}
   - source: github:quartz-community/og-image
     enabled: false
 ```
 
-# DA QUI IN POI STO FINENDO DI AGGIORNARLO ALLA VERSIONE 5 DI QUARTZ
+## 2.6 - Modalità scura forzata
 
-## 2.6 - Modalità scura di default
+Nel mio Giardino Digitale, per questione di comodità, ho scelto di inserire la modalità scura di default e tolto la possibilità di passare alla modalità chiara. Ciò l'ho fatto perché io in primis, quando scrivo le mie note su Obsidian, uso la modalità scura, e di conseguenza anche tutti i contenuti che ho inserito nelle note come le foto o gli schemi sono adattati a questo tema. Mantenere la possibilità di passare alla modalità chiara significherebbe dover creare un sistema per cui anche queste foto debbano adattarsi alla modalità chiara, cosa che non ho assolutamente intenzione di fare lol.
 
-Nel mio Giardino Digitale, per questione di comodità, ho scelto di inserire la modalità scura di default e tolto la possibilità di passare alla modalità chiara. Ciò l'ho fatto perché io in primis, quando scrivo le mie note su Obsidian, uso la modalità scura, e di conseguenza anche tutti i contenuti che ho inserito nelle note come le foto o gli schemi sono adattati a questo tema. Mantenere la possibilità di passare alla modalità chiara significherebbe dover  creare un sistema per cui anche queste foto debbano adattarsi alla modalità chiara, cosa che non ho assolutamente intenzione di fare lol.
+Per farlo, ho disabilitato il [plugin `Darkmode`](https://quartz.jzhao.xyz/plugins/darkmode) per eliminare il pulsantino sotto il titolo del sito che permette di cambiare alla modalità chiara:
 
-Impostare la modalità scura di default sul sito è un bel casino, ci ho messo un bel po' per capire come straminghie farlo, ma alla fine ho scelto l'opzione più stupida e più diretta per realizzarlo: nel file `quartz.config.ts` ho scambiato di posto le parole `lightMode` e `darkMode`:
-
-```typescript title="quartz.config.ts" {2,13}
-colors: {
-    darkMode: {
-        light: "#faf8f8",
-        lightgray: "#e5e5e5",
-        gray: "#b8b8b8",
-        darkgray: "#4e4e4e",
-        dark: "#2b2b2b",
-        secondary: "#284b63",
-        tertiary: "#84a59d",
-        highlight: "rgba(143, 159, 169, 0.15)",
-        textHighlight: "#fff23688",
-    },
-    lightMode: {
-        light: "#161618",
-        lightgray: "#393639",
-        gray: "#646464",
-        darkgray: "#d4d4d4",
-        dark: "#ebebec",
-        secondary: "#7b97aa",
-        tertiary: "#84a59d",
-        highlight: "rgba(143, 159, 169, 0.15)",
-        textHighlight: "#b3aa0288",
-    },
-},
+```yaml title="quartz.config.yaml" showLineNumbers{196} {2}
+  - source: github:quartz-community/darkmode
+    enabled: false
+    layout:
+      position: left
+      priority: 30
+      group: toolbar
 ```
 
-Per applicare la modalità scura fissa anche nel syntax highlighting%% link %% (cioè il colore nel codice) ho modificato le impostazioni del relativo plugin%% link %% che si possono trovare in `quartz.config.ts`, semplicemente scambiando i valori `github-light` e `github-dark`:
+E, nelle impostazioni del tema, ho scambiato di posto le parole `lightMode` e `darkMode` perché, senza il [plugin `Darkmode`](https://quartz.jzhao.xyz/plugins/darkmode), sceglie di default la `lightMode`:
 
-```typescript title="quartz.config.ts" {3,4}
-Plugin.SyntaxHighlighting({
-    theme: {
-        light: "github-dark",
-        dark: "github-light",
-    },
-}),
+```yaml title="quartz.config.yaml" showLineNumbers{22} {2, 12}
+    colors:
+      darkMode:
+        light: "#faf8f8"
+        lightgray: "#e5e5e5"
+        gray: "#b8b8b8"
+        darkgray: "#4e4e4e"
+        dark: "#2b2b2b"
+        secondary: "#284b63"
+        tertiary: "#84a59d"
+        highlight: rgba(143, 159, 169, 0.15)
+        textHighlight: "#fff23688"
+      lightMode:
+        light: "#161618"
+        lightgray: "#393639"
+        gray: "#646464"
+        darkgray: "#d4d4d4"
+        dark: "#ebebec"
+        secondary: "#7b97aa"
+        tertiary: "#84a59d"
+        highlight: rgba(143, 159, 169, 0.15)
+        textHighlight: "#b3aa0288"
 ```
 
-Per quanto riguarda invece i diagrammi Mermaid%% link %%, questi sono inclusi in tutto ciò che riguarda la [compatibilità di Quartz con Obsidian](https://quartz.jzhao.xyz/features/Obsidian-compatibility) e, di conseguenza, sono gestiti dal plugin [ObsidianFlavoredMarkdown](https://quartz.jzhao.xyz/plugins/ObsidianFlavoredMarkdown).
+Per applicare la modalità scura forzata anche nel syntax highlighting%% link %% (cioè il colore nel codice) ho modificato le impostazioni del relativo [plugin `Syntax Highlighting`](https://quartz.jzhao.xyz/features/syntax-highlighting) che si possono trovare in `quartz.config.yaml`, semplicemente scambiando i valori `github-light` e `github-dark`:
 
-Per invertire i colori anche nei diagrammi, non so come si possa fare ora nelle ultime versioni di Quartz (e per questo proverò ad astenermi dall'usare i diagrammi Mermaid nel sito, altrimenti sembrano uno schifo i diagrammi in modalità chiara con il resto del sito in modalità scura). Se può essere utile saperlo per trovare magari una soluzione, posso dirti che nella versione 4.4 di Quartz, nel file `quartz/plugins/transformers/ofm.ts`, approssimativamente alla riga 695, bisognava scambiare i valori `'dark'` e `'default'`:
-
-```typescript title="quartz/plugins/transformers/ofm.ts" {11}
-script: `
-let mermaidImport = undefined
-document.addEventListener('nav', async () => {
-if (document.querySelector("code.mermaid")) {
-  mermaidImport |\vDash await import('https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.7.0/mermaid.esm.min.mjs')
-  const mermaid = mermaidImport.default
-  const darkMode = document.documentElement.getAttribute('saved-theme') === 'dark'
-  mermaid.initialize({
-    startOnLoad: false,
-    securityLevel: 'loose',
-    theme: darkMode ? 'default' : 'dark'
-  })
-
-  await mermaid.run({
-    querySelector: '.mermaid'
-  })
-}
-});
-`,
+```yaml title="quartz.config.yaml" showLineNumbers{53} {5, 6}
+  - source: github:quartz-community/syntax-highlighting
+    enabled: true
+    options:
+      theme:
+        light: github-dark
+        dark: github-light
 ```
 
-Infine, ho rimosso il pulsante per passare dalla modalità chiara a quella scura e viceversa in `quartz.layout.ts`, sia in `defaultContentPageLayout` che in `defaultListPageLayout`:
-
-```typescript title="quartz.layout.ts" {14, 36}
-export const defaultContentPageLayout: PageLayout = {
-  beforeBody: [
-    // ...
-  ],
-  left: [
-    Component.PageTitle(),
-    Component.MobileOnly(Component.Spacer()),
-    Component.Flex({
-      components: [
-        {
-          Component: Component.Search(),
-          grow: true,
-        },
-        // { Component: Component.Darkmode() },
-        { Component: Component.ReaderMode() },
-      ],
-    }),
-    Component.Explorer(),
-  ],
-  right: [
-    // ...
-  ],
-}
-
-export const defaultListPageLayout: PageLayout = {
-  beforeBody: [Component.Breadcrumbs(), Component.ArticleTitle(), Component.ContentMeta()],
-  left: [
-    Component.PageTitle(),
-    Component.MobileOnly(Component.Spacer()),
-    Component.Flex({
-      components: [
-        {
-          Component: Component.Search(),
-          grow: true,
-        },
-        // { Component: Component.Darkmode() },
-      ],
-    }),
-    Component.Explorer(),
-  ],
-  right: [
-    // ...
-  ],
-}
-```
+Teoricamente ci sarebbe da fare la stessa cosa anche per i diagrammi Mermaid%% link %% ma, dato che non li uso in questo sito, non mi va di cimentarmi inutilmente nel capire come potrebbe essere fatto.
 
 ## 2.7 - Foto centrate
 
 Esattamente come avrai potuto notare con quelle che ho inserito qua sopra, le foto vengono automaticamente centrate nel mezzo della pagina.
 
-Ciò si può fare modificando il codice SCSS del sito, infatti Quartz%% link %% mette a disposizione il file `custom.scss` nella cartella `quartz/styles` per scriverci le proprie modifiche.
+Ciò si può fare modificando il codice SCSS del sito aggiungendo un modulo al file `custom.scss`. Ho aggiunto il file%% link %% `centered-img.scss` in `quartz/styles/custom` e ci ho scritto questo dentro:
 
-In nome del sacro principio della _modularità del codice_%% link %%, ho inserito questa modifica in un file `centered-photos.scss` in una sotto-cartella `custom` della cartella `quartz/styles` che, appunto, conterrà tutte le varie modifiche da applicare all'SCSS del sito.
-
-Quindi, nel file `centered-photos.scss` in `quartz/styles/custom` ci ho scritto questo:
-
-```scss title="quartz/styles/custom/centered-photos.scss"
+```scss title="quartz/styles/custom/centered-img.scss"
 img {
   display: block;
   margin: auto;
@@ -387,25 +316,19 @@ img {
 
 E, per dire a Quartz di leggere questo file, nel file `custom.scss` nella cartella `quartz/styles` ci ho scritto ciò:
 
-```scss title="quartz/styles/custom.scss" {3}
+```scss title="quartz/styles/custom.scss" {4}
 @use "./base.scss";
-
-@use "./custom/centered-photos.scss";
+  
+@use "./custom/disable-folder-page.scss";
+@use "./custom/centered-img.scss";
 ```
 
 ## 2.8 - Callout personalizzati
 
-All'interno del mio Giardino Digitale, uso diversi callout%% link %% personalizzati, descritti attraverso codice SCSS. Tutti i callout che ho aggiunto sono inseriti nel file `callouts.scss` nella cartella `quartz/styles/custom` col seguente formato:
+All'interno del mio Giardino Digitale, uso diversi callout%% link %% personalizzati, descritti attraverso codice SCSS e implementati dal [plugin `Callouts`](https://quartz.jzhao.xyz/features/callouts). Tutti i callout che ho aggiunto sono inseriti nel file `callouts.scss` nella cartella `quartz/styles/custom` col seguente formato:
 
 ```scss title="quartz/styles/custom/callouts.scss"
 .callout {
-  &[data-callout="<name>"] {
-    --color: #<color>;
-    --border: #<border color>;
-    --bg: #<background color>;
-    --callout-icon: url("data:image/svg+xml; utf8, <URL-encoded SVG>");
-  }
-
   &[data-callout="<name>"] {
     --color: #<color>;
     --border: #<border color>;
@@ -417,10 +340,11 @@ All'interno del mio Giardino Digitale, uso diversi callout%% link %% personalizz
 
 Ovviamente, il file `quartz/styles/custom.scss` dovrà importare `callouts.scss`:
 
-```scss title="quartz/styles/custom.scss" {4}
-@use "./base.scss";
+```scss title="quartz/styles/custom.scss" {5}
+@use "./variables.scss" as *;
 
-@use "./custom/centered-photos.scss";
+@use "./custom/disable-folder-page.scss";
+@use "./custom/centered-img.scss";
 @use "./custom/callouts.scss";
 ```
 
@@ -434,7 +358,7 @@ Qua sotto ho inserito una lista dei callout che uso, ognuno dei quali ha al prop
 
 ### 2.8.1 - Generici
 
-> [!premessa]+ Premessa
+> [!premessa]- Premessa
 > 
 > ```scss
 > &[data-callout="premessa"] {
@@ -445,7 +369,7 @@ Qua sotto ho inserito una lista dei callout che uso, ognuno dei quali ha al prop
 > }
 > ```
 
-> [!fonti]+ Fonti
+> [!fonti]- Fonti
 > 
 > ```scss
 > &[data-callout="fonti"] {
@@ -467,7 +391,7 @@ Qua sotto ho inserito una lista dei callout che uso, ognuno dei quali ha al prop
 > }
 > ```
 
-> [!osservazione]+ Osservazione
+> [!osservazione]- Osservazione
 > 
 > ```scss
 > &[data-callout="osservazione"] {
@@ -478,7 +402,7 @@ Qua sotto ho inserito una lista dei callout che uso, ognuno dei quali ha al prop
 > }
 > ```
 
-> [!trucco]+ Trucco
+> [!trucco]- Trucco
 > 
 > ```scss
 > &[data-callout="trucco"] {
@@ -489,7 +413,7 @@ Qua sotto ho inserito una lista dei callout che uso, ognuno dei quali ha al prop
 > }
 > ```
 
-> [!consiglio]+ Consiglio
+> [!consiglio]- Consiglio
 > 
 > ```scss
 > &[data-callout="consiglio"] {
@@ -500,7 +424,7 @@ Qua sotto ho inserito una lista dei callout che uso, ognuno dei quali ha al prop
 > }
 > ```
 
-> [!attenzione]+ Attenzione
+> [!attenzione]- Attenzione
 > 
 > ```scss
 > &[data-callout="attenzione"] {
@@ -511,7 +435,7 @@ Qua sotto ho inserito una lista dei callout che uso, ognuno dei quali ha al prop
 > }
 > ```
 
-> [!esercizio]+ Esercizio
+> [!esercizio]- Esercizio
 > 
 > ```scss
 > &[data-callout="esercizio"] {
@@ -533,7 +457,7 @@ Qua sotto ho inserito una lista dei callout che uso, ognuno dei quali ha al prop
 > }
 > ```
 
-> [!vantaggi]+ Vantaggi
+> [!vantaggi]- Vantaggi
 > 
 > ```scss
 > &[data-callout="vantaggi"] {
@@ -544,7 +468,7 @@ Qua sotto ho inserito una lista dei callout che uso, ognuno dei quali ha al prop
 > }
 > ```
 
-> [!svantaggi]+ Svantaggi
+> [!svantaggi]- Svantaggi
 > 
 > ```scss
 > &[data-callout="svantaggi"] {
@@ -557,7 +481,7 @@ Qua sotto ho inserito una lista dei callout che uso, ognuno dei quali ha al prop
 
 ### 2.8.2 - Per la matematica
 
-> [!assioma]+ Assioma
+> [!assioma]- Assioma
 > 
 > ```scss
 > &[data-callout="assioma"] {
@@ -568,7 +492,7 @@ Qua sotto ho inserito una lista dei callout che uso, ognuno dei quali ha al prop
 > }
 > ```
 
-> [!definizione]+ Definizione
+> [!definizione]- Definizione
 > 
 > ```scss
 > &[data-callout="definizione"] {
@@ -579,7 +503,7 @@ Qua sotto ho inserito una lista dei callout che uso, ognuno dei quali ha al prop
 > }
 > ```
 
-> [!notazione]+ Notazione
+> [!notazione]- Notazione
 > 
 > ```scss
 > &[data-callout="notazione"] {
@@ -590,7 +514,7 @@ Qua sotto ho inserito una lista dei callout che uso, ognuno dei quali ha al prop
 > }
 > ```
 
-> [!teorema]+ Teorema
+> [!teorema]- Teorema
 > 
 > ```scss
 > &[data-callout="teorema"] {
@@ -601,7 +525,7 @@ Qua sotto ho inserito una lista dei callout che uso, ognuno dei quali ha al prop
 > }
 > ```
 
-> [!proposizione]+ Proposizione
+> [!proposizione]- Proposizione
 > 
 > ```scss
 > &[data-callout="proposizione"] {
@@ -612,7 +536,7 @@ Qua sotto ho inserito una lista dei callout che uso, ognuno dei quali ha al prop
 > }
 > ```
 
-> [!lemma]+ Lemma
+> [!lemma]- Lemma
 > 
 > ```scss
 > &[data-callout="lemma"] {
@@ -623,7 +547,7 @@ Qua sotto ho inserito una lista dei callout che uso, ognuno dei quali ha al prop
 > }
 > ```
 
-> [!corollario]+ Corollario
+> [!corollario]- Corollario
 > 
 > ```scss
 > &[data-callout="corollario"] {
@@ -634,7 +558,7 @@ Qua sotto ho inserito una lista dei callout che uso, ognuno dei quali ha al prop
 > }
 > ```
 
-> [!congettura]+ Congettura
+> [!congettura]- Congettura
 > 
 > ```scss
 > &[data-callout="congettura"] {
@@ -656,7 +580,7 @@ Qua sotto ho inserito una lista dei callout che uso, ognuno dei quali ha al prop
 > }
 > ```
 
-> [!principio]+ Principio
+> [!principio]- Principio
 > 
 > ```scss
 > &[data-callout="principio"] {
@@ -667,7 +591,7 @@ Qua sotto ho inserito una lista dei callout che uso, ognuno dei quali ha al prop
 > }
 > ```
 
-> [!proprieta]+ Proprietà
+> [!proprieta]- Proprietà
 > 
 > ```scss
 > &[data-callout="proprieta"] {
@@ -678,7 +602,7 @@ Qua sotto ho inserito una lista dei callout che uso, ognuno dei quali ha al prop
 > }
 > ```
 
-> [!algoritmo]+ Algoritmo
+> [!algoritmo]- Algoritmo
 > 
 > ```scss
 > &[data-callout="algoritmo"] {
@@ -689,24 +613,15 @@ Qua sotto ho inserito una lista dei callout che uso, ognuno dei quali ha al prop
 > }
 > ```
 
-### 2.8.3 - Per l'informatica
-
-> [!sintassi]+ Sintassi
-> 
-> ```scss
-> &[data-callout="sintassi"] {
->   --color: #FFFF7F;
->   --border: #FFFF7F3F;
->   --bg: #FFFF7F1F;
->   --callout-icon: url("data:image/svg+xml; utf8, %3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 512'%3E%3C!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--%3E%3Cpath d='M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6zm80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3L562.7 256l-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3z'/%3E%3C/svg%3E");
-> }
-> ```
-
 ## 2.9 - Icone nei titoli delle note
 
-In questo Giardino Digitale, ogni nota ha associata una icona colorata in formato SVG. Le icone le prendo da [FontAwesome](https://fontawesome.com/) e da [Tabler Icons](https://tablericons.com/) e le inserisco nella cartella `content/_icons` con lo stesso nome della nota a cui fa riferimento.
+> [!attenzione]+ Attenzione: non aggiornato alla versione `v5` di Quartz
+> 
+> Non ho ancora aggiornato l'implementazione delle icone nei titoli delle note alla versione `v5` di Quartz, infatti quello che segue qua sotto è la scorsa implementazione che usavo per la versione `v4`. Ho lasciato comunque qui questa descrizione come promemoria al me del futuro per ricordarmi quello che c'è da fare per implementare queste icone.
 
-Per modificare il colore delle icone scaricate, prima le formatto usando lo script `svg-formatter.py` che ho scritto io con le mie manine (e che si trova ovviamente nella cartella `content/scripts`) e poi modifico a mano il codice SVG impostando il colore desiderato nel parametro `fill`.
+In questo Giardino Digitale, ogni nota ha associata una icona colorata in formato SVG. Le icone le prendo da varie fonti, tra cui [FontAwesome](https://fontawesome.com/) e [Tabler Icons](https://tablericons.com/), e le inserisco nella cartella `content/_icons` con lo stesso nome della nota a cui fa riferimento.
+
+Per modificare il colore delle icone scaricate, prima le formatto usando lo script `svg-formatter.py` che ho scritto io con le mie manine (e che puoi trovare nella cartella `scripts`) e poi modifico a mano il codice SVG impostando il colore desiderato nel parametro `fill`.
 
 Per aggiungere le icone affianco ai titoli delle note, ho modificato il file `quartz/components/ArticleTitle.tsx` in questo modo:
 
@@ -894,18 +809,12 @@ Quello che ho fatto è stato:
 	}
 	```
 
-## 2.10 - `.gitignore`
-
-Nel `.gitignore` ho rimosso le cartelle `.obsidian` e `private` così, in caso di eventi catastrofici, non perdo i loro contenuti e posso tranquillamente recuperarli dal repository del Giardino Digitale.
-
 # 3 - Da fare
 
 Questo è ciò che ho in mente di fare per migliorare il sito:
-- Migliorare l'interfaccia grafica
 - Trovare un modo per caricare nel repository anche quelle cartelle che Quartz inserisce di default nel `.gitignore` come la `.obsidian` contenente le impostazioni del vault di Obsidian ed eventuali cartelle `private` contenenti note private (che però io non uso) e `templates` contenenti template per le note, in modo da avere un backup completo nel repository nel caso in cui dovesse malauguratamente succedere qualcosa.
 - Ridurre lo spazio vuoto in cima alle pagine del sito.
 - Integrare le icone delle note anche nel _Breadcrumbs_.
-- Rinominare "Vista grafico" in qualcos'altro di più vicino all'italiano corretto.
 - Integrare Giscus.
 - Sostituire il codice CSS delle tabelle.
 - Trasformare la "Reader Mode" in una modalità dyslexic-friendly (es. usando il font [OpenDyslexic](https://opendyslexic.org/)). 

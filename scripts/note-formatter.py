@@ -1,7 +1,7 @@
 import re
 import os
 
-FOLDER_PATH = "/home/manuel/Manuel/obsidian/digital-garden/content/Matematica/Analisi matematica"
+FOLDER_PATH = "/home/manuel/Manuel/obsidian/digital-garden/content"
 OLD_FILES_PATH = "/home/manuel/Manuel/obsidian/digital-garden/private/_formatted"
 COLOR_HEADINGS = True
 
@@ -278,7 +278,7 @@ if __name__ == '__main__':
                             # "OG" at the beginning of the old file name for distinguishing in Obsidian file linking
                             og_file.write(content)
                         content = replace_chars(content)
-                        if not FILE_NAME.startswith("Quartz"):
+                        if not FILE_NAME.startswith("Quartz") and not FILE_NAME.startswith("Configurazione del mio Giardino Digitale"):
                             content = edit_callouts_folding(content)
                         content = remove_multiple_empty_lines(content)
 
