@@ -1,0 +1,24 @@
+term: |latex
+  @ \colon \alpha
+|
+term.shape: oval
+
+term -> m
+
+m: |latex
+  \text{Tree}[M] \colon \tau
+|
+
+term -> n
+
+n: |latex
+  \text{Tree}[N] \colon \sigma
+|
+
+Vincoli: {
+  a: |latex
+    \begin{array}{}
+      \tau = \sigma \to \alpha
+    \end{array}
+  |
+}

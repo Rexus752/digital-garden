@@ -1,0 +1,28 @@
+term: |latex
+  \text{if} \colon \tau_2
+|
+term.shape: circle
+
+term -> b
+b: |latex
+  \text{Tree}[b] \colon \tau_1
+|
+
+term -> m
+m: |latex
+  \text{Tree}[M] \colon \tau_2
+|
+
+term -> n
+n: |latex
+  \text{Tree}[N] \colon \tau_3
+|
+
+Vincoli: {
+  a: |latex
+    \begin{array}{}
+      \tau_1 = \text{Bool} \\
+      \tau_2 = \tau_3
+    \end{array}
+  |
+}
