@@ -208,79 +208,25 @@ Nel file `quartz.config.yaml` ho modificato il layout delle note, cioè la strut
 	    canvas: {}
 	    bases: {}
 	```
+- Nel layout delle pagine ho rimosso i _backlinks_, cambiando in `false` il valore di `enabled` tra le opzioni del [plugin `Backlinks`](https://quartz.jzhao.xyz/plugins/backlinks) in `quartz-config.yaml`:
+	```yaml title="quartz.config.yaml" showLineNumbers{171} {2}
+	  - source: github:quartz-community/backlinks
+	    enabled: false
+	    layout:
+	      position: right
+	      priority: 50
+	```
+
+- Nel layout delle pagine ho anche rimosso anche i _graph view_, che per quanto possano essere carini sono comunque inutili:
+```yaml title="quartz.config.yaml" showLineNumbers{158} {2}
+  - source: github:quartz-community/graph
+    enabled: false
+    layout:
+      position: right
+      priority: 10
+```
 
 # DA QUI IN POI STO FINENDO DI AGGIORNARLO ALLA VERSIONE 5 DI QUARTZ
-
-- Ho aggiunto anche in `defaultListPageLayout` le componenti incluse nel `right` di `defaultContentPageLayout` perché, dato il particolare file system che uso in questo Giardino Digitale, tutte le note associate alle cartelle (ossia quelle che si chiamano `_index.md`) prendono il layout da `defaultListPageLayout` e, di default, non avrebbero queste componenti:
-	```typescript title="quartz.layout.ts" {6-10}
-	export const defaultListPageLayout: PageLayout = {
-	  beforeBody: [Component.Breadcrumbs(), Component.ArticleTitle(), Component.ContentMeta()],
-	  left: [
-	    // ...
-	  ],
-	  right: [
-	    Component.Graph(),
-	    Component.DesktopOnly(Component.TableOfContents()),
-	    Component.Backlinks(),
-	  ],
-	}
-	```
-- Nel layout delle pagine ho rimosso i _backlinks_, sia in `defaultContentPageLayout` che in `defaultListPageLayout`:
-	```typescript title="quartz.layout.ts" {11, 23}
-	export const defaultContentPageLayout: PageLayout = {
-	  beforeBody: [
-	    // ...
-	  ],
-	  left: [
-	    // ...
-	  ],
-	  right: [
-	    Component.Graph(),
-	    Component.DesktopOnly(Component.TableOfContents()),
-	    // Component.Backlinks(),
-	  ],
-	}
-	
-	export const defaultListPageLayout: PageLayout = {
-	  beforeBody: [Component.Breadcrumbs(), Component.ArticleTitle(), Component.ContentMeta()],
-	  left: [
-	    // ...
-	  ],
-	  right: [
-	    Component.Graph(),
-	    Component.DesktopOnly(Component.TableOfContents()),
-	    // Component.Backlinks(),
-	  ],
-	}
-	```
-- Nel layout delle pagine ho anche rimosso i grafici, sia in `defaultContentPageLayout` che in `defaultListPageLayout`, che per quanto possano essere carini sono comunque inutili:
-	```typescript title="quartz.layout.ts" {9, 21}
-	export const defaultContentPageLayout: PageLayout = {
-	  beforeBody: [
-	    // ...
-	  ],
-	  left: [
-	    // ...
-	  ],
-	  right: [
-	    // Component.Graph(),
-	    Component.DesktopOnly(Component.TableOfContents()),
-	    // Component.Backlinks(),
-	  ],
-	}
-	
-	export const defaultListPageLayout: PageLayout = {
-	  beforeBody: [Component.Breadcrumbs(), Component.ArticleTitle(), Component.ContentMeta()],
-	  left: [
-	    // ...
-	  ],
-	  right: [
-	    // Component.Graph(),
-	    Component.DesktopOnly(Component.TableOfContents()),
-	    // Component.Backlinks(),
-	  ],
-	}
-	```
 
 ## 2.5 - Icona personalizzata
 
