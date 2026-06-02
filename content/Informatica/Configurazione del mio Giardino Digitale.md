@@ -226,8 +226,6 @@ Nel file `quartz.config.yaml` ho modificato il layout delle note, cioè la strut
       priority: 10
 ```
 
-# DA QUI IN POI STO FINENDO DI AGGIORNARLO ALLA VERSIONE 5 DI QUARTZ
-
 ## 2.5 - Icona personalizzata
 
 Nella cartella `quartz/static` ho sostituito il file `icon.png` con una mia icona personalizzata, che è appunto l'icona di questo Giardino Digitale:
@@ -242,31 +240,14 @@ Ne ho approfittato anche per sostituire con questa icona il file `og-image.png`,
 
 ![Preview link Giardino Digitale|400](Preview%20link%20Giardino%20Digitale.png)
 
-Facendo ciò ho anche disabilitato il [plugin Custom OG Images](https://quartz.jzhao.xyz/plugins/CustomOgImages) nel file `quartz.config.ts`, che è il plugin che si occupa di generare delle preview uniche per ogni nota del sito (e che, come specifica il commento nel codice, rallenta il tempo di _build_ del sito):
+Facendo ciò ho anche disabilitato il [plugin Custom OG Images](https://quartz.jzhao.xyz/plugins/CustomOgImages) nel file `quartz.config.yaml`, che è il plugin che si occupa di generare delle preview uniche per ogni nota del sito (e che, in realtà, rallenta anche il tempo di _build_ del sito):
 
-```typescript title="quartz.config.ts" {18}
-const config: QuartzConfig = {
-  plugins: {
-    emitters: [
-      Plugin.AliasRedirects(),
-      Plugin.ComponentResources(),
-      Plugin.ContentPage(),
-      Plugin.FolderPage(),
-      Plugin.TagPage(),
-      Plugin.ContentIndex({
-        enableSiteMap: true,
-        enableRSS: true,
-      }),
-      Plugin.Assets(),
-      Plugin.Static(),
-      Plugin.Favicon(),
-      Plugin.NotFoundPage(),
-      // Comment out CustomOgImages to speed up build time
-      // Plugin.CustomOgImages(),
-    ],
-  },
-}
+```yaml title="quartz.config.yaml" showLineNumbers{142} {2}
+  - source: github:quartz-community/og-image
+    enabled: false
 ```
+
+# DA QUI IN POI STO FINENDO DI AGGIORNARLO ALLA VERSIONE 5 DI QUARTZ
 
 ## 2.6 - Modalità scura di default
 
