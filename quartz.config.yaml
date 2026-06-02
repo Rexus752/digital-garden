@@ -1,12 +1,12 @@
 # yaml-language-server: $schema=./quartz/plugins/quartz-plugins.schema.json
 configuration:
-  pageTitle: Quartz 5
+  pageTitle: 🪴 Giardino Digitale di Rexus752
   pageTitleSuffix: ""
   enableSPA: true
   enablePopovers: true
   analytics:
     provider: plausible
-  locale: en-US
+  locale: it-IT
   baseUrl: rexus752.dev
   ignorePatterns:
     - private
@@ -17,8 +17,8 @@ configuration:
     cdnCaching: true
     typography:
       header: Schibsted Grotesk
-      body: Source Sans Pro
-      code: IBM Plex Mono
+      body: Inter
+      code: Fira Code
     colors:
       lightMode:
         light: "#faf8f8"
@@ -223,8 +223,8 @@ plugins:
     enabled: true
     options:
       links:
-        GitHub: https://github.com/jackyzha0/quartz
-        Discord Community: https://discord.gg/cRFFHYye7t
+        Repository: https://forgejo.it/Rexus752/digital-garden.git
+        Il mio Linktree: https://linktr.ee/rexus752
   - source: github:quartz-community/recent-notes
     enabled: false
   - source: github:quartz-community/spacer
@@ -256,13 +256,13 @@ plugins:
       position: beforeBody
       priority: 15
       display: all
-  - source:
-      name: quartz-themes
-      repo: github:saberzero1/quartz-themes
-      subdir: plugin
-    enabled: true
-    options:
-      theme: default
+#  - source:
+#      name: quartz-themes
+#      repo: github:saberzero1/quartz-themes
+#      subdir: plugin
+#    enabled: true
+#    options:
+#      theme: default
   - source: github:quartz-community/obsidian-plugin-excalidraw
     enabled: true
     options:
@@ -283,11 +283,7 @@ layout:
         left: []
         right: []
     content: {}
-    folder:
-      exclude:
-        - reader-mode
-      positions:
-        right: []
+    folder: {}
     tag:
       exclude:
         - reader-mode

@@ -16,7 +16,7 @@ Nel caso in cui non ti fosse chiaro quello che spiego qua in questa nota, puoi d
 
 # 1 - Punto di partenza
 
-Come punto di partenza c'è, ovviamente, la creazione del giardino digitale a partire dal template di default che Quartz offre.
+Come punto di partenza c'è, ovviamente, la creazione del giardino digitale a partire dal template di default che Quartz offre. La versione di Quartz che sto usando al momento in cui sto scrivendo questa nota è la `5.0.0`. Eventualmente, nel futuro, aggiornerò Quartz a versioni successive e, se si dovesse rompere qualcosa, specificherò qua come sistemarlo.
 
 Le istruzioni su come costruire e impostare inizialmente un giardino digitale si trovano nella [home page di Quartz](https://quartz.jzhao.xyz/#-get-started).
 
@@ -62,53 +62,60 @@ Ecco quindi tutte le modifiche che ho applicato al sito per personalizzarlo.
 
 ## 2.1 - Configurazione generale
 
-Nel file `quartz.config.ts` ho configurato queste impostazioni generali:
-- `pageTitle: "🪴 Giardino Digitale di Rexus752"{:typescript}`: titolo del Giardino Digitale che compare sulla sinistra di ogni nota.
-- `locale: "it-IT"{:typescript}`: per impostare la lingua in italiano.
-- `baseUrl: "rexus752.github.io/digital-garden"{:typescript}`: URL del sito (anche se in realtà nella mia configurazione non serve a qualcosa in particolare).
-- `ignorePatterns: []{:typescript}`: in questo modo salva nel repository ogni cartella, anche quelle nascoste di default come la `.obsidian` contenente le impostazioni del vault di Obsidian ed eventuali cartelle  `private` contenenti note private (che però io non uso) e `templates` contenenti template per le note.
+Nel file `quartz.config.yaml` ho configurato queste impostazioni generali:
+- `pageTitle: 🪴 Giardino Digitale di Rexus752`: titolo del Giardino Digitale che compare sulla sinistra di ogni nota.
+- `locale: it-IT`: per impostare la lingua in italiano.
+- `baseUrl: rexus752.dev`: URL del sito (anche se in realtà nella mia configurazione non serve a qualcosa in particolare).
 
-Il file `quartz.config.ts` risulta così:
+La prima parte del file `quartz.config.yaml` risulta così:
 
-```typescript title="quartz.config.ts" {3, 10, 11, 12}
-const config: QuartzConfig = {
-  configuration: {
-    pageTitle: "🪴 Giardino Digitale di Rexus752",
-    pageTitleSuffix: "",
-    enableSPA: true,
-    enablePopovers: true,
-    analytics: {
-      provider: "plausible",
-    },
-    locale: "it-IT",
-    baseUrl: "rexus752.github.io/digital-garden",
-    ignorePatterns: [],
-  },
-}
+```yaml title="quartz.config.yaml" {3, 9, 10}
+# yaml-language-server: $schema=./quartz/plugins/quartz-plugins.schema.json
+configuration:
+  pageTitle: 🪴 Giardino Digitale di Rexus752
+  pageTitleSuffix: ""
+  enableSPA: true
+  enablePopovers: true
+  analytics:
+    provider: plausible
+  locale: it-IT
+  baseUrl: rexus752.dev
+  ignorePatterns:
+    - private
+    - templates
+    - .obsidian
+```
+
+## 2.2 - Tema
+
+Ho disabilitato il plugin dei temi perché mi creava problemi nella personalizzazione dell'interfaccia sovrascrivendo le modifiche che provavo ad apportare (e anche perché il tema `default` che mi sceglie lui fa cacare al cazzo rispetto a quello originale di Quartz che stai vedendo ora):
+
+```yaml title="quartz.config.yaml" showLineNumbers{259}
+#  - source:
+#      name: quartz-themes
+#      repo: github:saberzero1/quartz-themes
+#      subdir: plugin
+#    enabled: true
+#    options:
+#      theme: default
 ```
 
 ## 2.2 - Font
 
 In questo sito:
-- Per il _body_, cioè il testo normale come questo che stai leggendo, uso il typeface Inter%% link %%, ossia lo stesso che GNOME%% link %% usa di default a partire dalla versione 47 e che io reputo uno dei migliori sulla piazza al momento (è anche completamente gratuito!).
+- Per i _body_ (cioè il testo normale come questo che stai leggendo) uso il typeface Inter%% link %%, ossia lo stesso che GNOME%% link %% usa di default a partire dalla versione 47 e che io reputo uno dei migliori sulla piazza al momento (è anche completamente gratuito!).
 - Per il codice, uso il typeface Fira Code%% link %%, studiato appositamente per creare _legature_, cioè unioni tra due o più glifi (simboli, lettere, ecc.). Per esempio, se scrivo due volte di fila `=`, Fira Code mi mostra un unico segno: `==`.
 
-Per usare questi font, ho modificato il file `quartz.config.ts` in questo modo:
+Per usare questi font, ho modificato il file `quartz.config.yaml` in questo modo:
 
-```typescript title="quartz.config.ts" {8, 9}
-const config: QuartzConfig = {
-  configuration: {
-    theme: {
-      fontOrigin: "googleFonts",
-      cdnCaching: true,
-      typography: {
-        header: "Schibsted Grotesk",
-        body: "Inter",
-        code: "Fira Code",
-      },
-    },
-  },
-}
+```yaml title="quartz.config.yaml" showLineNumbers{15} {6, 7}
+  theme:
+    fontOrigin: googleFonts
+    cdnCaching: true
+    typography:
+      header: Schibsted Grotesk
+      body: Inter
+      code: Fira Code
 ```
 
 ## 2.3 - File system
@@ -145,53 +152,65 @@ Il risultato è il seguente:
     └── 🗒 _index.md
 ```
 
-Per evitare che comunque le pagine associate delle cartelle mostrino sotto il contenuto della nota associata anche il contenuto della cartella, ho modificato il file `quartz/components/pages/FolderContent.tsx` commentando queste righe di codice:
+Per evitare che comunque le pagine associate delle cartelle mostrino sotto il contenuto della nota associata anche il contenuto della cartella, ho dovuto modificare il codice SCSS del sito perché non capivo come modificarlo dalle impostazioni del plugin, dato che le opzioni che il [plugin `FolderPage`](https://quartz.jzhao.xyz/plugins/folderpage) mette a disposizione non mi permette di disabilitarlo in toto e, se provo ad eliminarlo direttamente dal `quartz.config.yaml`, mi disabilita proprio l'intera pagina.
 
-```tsx title="quartz/components/pages/FolderContent.tsx" {9,20}
-export default ((opts?: Partial<FolderContentOptions>) => {
-  const options: FolderContentOptions = { ...defaultOptions, ...opts }
+Per modificare il codice SCSS, Quartz%% link %% mette a disposizione il file `custom.scss` nella cartella `quartz/styles` per scriverci le proprie modifiche. In nome del sacro principio della _modularità del codice_%% link %%, ho inserito questa modifica in un file `disable-folder-page.scss` in una sotto-cartella `custom` della cartella `quartz/styles` che, appunto, conterrà tutte le varie modifiche da applicare all'SCSS del sito.
 
-  const FolderContent: QuartzComponent = (props: QuartzComponentProps) => {
-    return (
-      <div class="popover-hint">
-        <article class={classes}>{content}</article>
-        <div class="page-listing">
-          {/* 
-          {options.showFolderCount && (
-            <p>
-              {i18n(cfg.locale).pages.folderContent.itemsUnderFolder({
-                count: allPagesInFolder.length,
-              })}
-            </p>
-          )}
-          <div>
-            <PageList {...listProps} />
-          </div>
-          */}
-        </div>
-      </div>
-    )
-  }
+Quindi, nel file `disable-folder-page.scss` in `quartz/styles/custom` ci ho scritto questo:
+
+```scss title="quartz/styles/custom/disable-folder-page.scss"
+.page-listing {
+  display: none;
 }
+```
+
+E, per dire a Quartz di leggere questo file, nel file `custom.scss` nella cartella `quartz/styles` ci ho scritto ciò:
+
+```scss title="quartz/styles/custom.scss" {3}
+@use "./base.scss";
+
+@use "./custom/disable-folder-page.scss";
 ```
 
 ## 2.4 - Layout delle note
 
-Nel file `quartz.layout.ts` ho modificato il layout delle note, cioè la struttura della nota. Ecco ciò che ho fatto:
+Nel file `quartz.config.yaml` ho modificato il layout delle note, cioè la struttura della nota. Ecco ciò che ho fatto:
 - Nei link nel footer ci ho messo il link al repository e al mio Linktree%% link %%:
-	```typescript title="quartz.layout.ts" {7, 8}
-	export const sharedPageComponents: SharedLayout = {
-	  head: Component.Head(),
-	  header: [],
-	  afterBody: [],
-	  footer: Component.Footer({
-	    links: {
-	      "Repository": "https://forgejo.it/Rexus752/digital-garden.git",
-	      "Il mio Linktree": "https://linktr.ee/rexus752",
-	    },
-	  }),
-	}
+	```yaml title="quartz.config.yaml" showLineNumbers{222} {5, 6}
+  - source: github:quartz-community/footer
+    enabled: true
+    options:
+      links:
+        Repository: https://forgejo.it/Rexus752/digital-garden.git
+        Il mio Linktree: https://linktr.ee/rexus752
 	```
+- Per fare in modo che anche nelle _folder page_ (cioè nelle pagine-cartelle come [Matematica](content/Matematica/_index.md)) escano tutti i componenti come l'indice, ho modificato le impostazioni del `layout` che si possono trovare in fondo al `quartz.config.yaml`:
+	```yaml title="quartz.config.yaml" showLineNumbers{273} {13}
+	layout:
+	  groups:
+	    toolbar:
+	      priority: 35
+	      direction: row
+	      gap: 0.5rem
+	  byPageType:
+	    "404":
+	      positions:
+	        beforeBody: []
+	        left: []
+	        right: []
+	    content: {}
+	    folder: {}
+	    tag:
+	      exclude:
+	        - reader-mode
+	      positions:
+	        right: []
+	    canvas: {}
+	    bases: {}
+	```
+
+# DA QUI IN POI STO FINENDO DI AGGIORNARLO ALLA VERSIONE 5 DI QUARTZ
+
 - Ho aggiunto anche in `defaultListPageLayout` le componenti incluse nel `right` di `defaultContentPageLayout` perché, dato il particolare file system che uso in questo Giardino Digitale, tutte le note associate alle cartelle (ossia quelle che si chiamano `_index.md`) prendono il layout da `defaultListPageLayout` e, di default, non avrebbero queste componenti:
 	```typescript title="quartz.layout.ts" {6-10}
 	export const defaultListPageLayout: PageLayout = {
@@ -428,7 +447,7 @@ Esattamente come avrai potuto notare con quelle che ho inserito qua sopra, le fo
 
 Ciò si può fare modificando il codice SCSS del sito, infatti Quartz%% link %% mette a disposizione il file `custom.scss` nella cartella `quartz/styles` per scriverci le proprie modifiche.
 
-In nome del sacro principio della _modularità del codice_, ho inserito questa modifica in un file `centered-photos.scss` in una sotto-cartella `custom` della cartella `quartz/styles` che, appunto, conterrà tutte le varie modifiche da applicare all'SCSS del sito.
+In nome del sacro principio della _modularità del codice_%% link %%, ho inserito questa modifica in un file `centered-photos.scss` in una sotto-cartella `custom` della cartella `quartz/styles` che, appunto, conterrà tutte le varie modifiche da applicare all'SCSS del sito.
 
 Quindi, nel file `centered-photos.scss` in `quartz/styles/custom` ci ho scritto questo:
 
@@ -955,6 +974,8 @@ Nel `.gitignore` ho rimosso le cartelle `.obsidian` e `private` così, in caso d
 # 3 - Da fare
 
 Questo è ciò che ho in mente di fare per migliorare il sito:
+- Migliorare l'interfaccia grafica
+- Trovare un modo per caricare nel repository anche quelle cartelle che Quartz inserisce di default nel `.gitignore` come la `.obsidian` contenente le impostazioni del vault di Obsidian ed eventuali cartelle `private` contenenti note private (che però io non uso) e `templates` contenenti template per le note, in modo da avere un backup completo nel repository nel caso in cui dovesse malauguratamente succedere qualcosa.
 - Ridurre lo spazio vuoto in cima alle pagine del sito.
 - Integrare le icone delle note anche nel _Breadcrumbs_.
 - Rinominare "Vista grafico" in qualcos'altro di più vicino all'italiano corretto.
