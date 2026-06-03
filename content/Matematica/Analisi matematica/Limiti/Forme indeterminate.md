@@ -127,10 +127,6 @@ Un'osservazione: come per $\infty - \infty$, il prodotto $f(x) \cdot g(x)$ è de
 > Le **forme indeterminate esponenziali** sono del tipo [$1^\infty$](Forme%20indeterminate.md#^definizione-forma-indeterminata-espnenziale-del-tipo-1-all-infinito), [$\infty^0$](Forme%20indeterminate.md#^definizione-forma-indeterminata-esponenziale-del-tipo-infinito-allo-zero) e [$0^0$](Forme%20indeterminate.md#^definizione-forma-indeterminata-esponenziale-del-tipo-0-alla-0).
 ^definizione-forma-indeterminata-esponenziale
 
-%%
-**Perché si dicono esponenziali?** A differenza di quelle algebriche (dove il conflitto è guidato da operazioni come somma, prodotto o divisione), in questo caso il contrasto nasce dall'operazione di **elevamento a potenza** $[f(x)]^{g(x)}$. Spesso, per essere risolte, vengono ricondotte a una forma indeterminata algebrica (in particolare la $0 \cdot \infty$) sfruttando l'identità fondamentale $[f(x)]^{g(x)} = e^{g(x) \cdot \ln[f(x)]}$.
-%%
-
 ## Tipo $1^\infty$
 
 > [!definizione] Definizione: forma indeterminata esponenziale del tipo $1^\infty$

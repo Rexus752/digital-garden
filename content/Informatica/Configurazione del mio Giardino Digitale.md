@@ -352,7 +352,7 @@ Sul [sito di Quartz](https://quartz.jzhao.xyz/features/callouts) viene spiegato 
 - Cerco una possibile icona su [FontAwesome](https://fontawesome.com/).
 - Copio il codice SVG.
 - Lo converto in URL tramite questo [URL-encoder per SVG](https://yoksel.github.io/url-encoder/).
-- Lo aggiungo nel file `callouts.scss` sostituendo la stringa `<URL-encoded SVG>{:typescript}` con quella appena copiata.
+- Lo aggiungo nel file `callouts.scss` sostituendo la stringa `<URL-encoded SVG>` con quella appena copiata.
 
 Qua sotto ho inserito una lista dei callout che uso, ognuno dei quali ha al proprio interno il codice SCSS per impostarlo (clicca sulla freccetta affianco al titolo del callout per espanderlo).
 

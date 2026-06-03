@@ -1,5 +1,6 @@
 ---
 title: Sfondi del desktop
+alias: desktop-wallpapers
 ---
 
 > [!premessa]+ Premessa
