@@ -136,9 +136,9 @@ Problemino: Quartz%% link %% genera delle pagine web non solo per le note, ma an
 
 Per ovviare a questo problema, Quartz offre già a priori una soluzione: nella cartella desiderata, si può rinominare la sua "nota associata" in `_index.md` o `index.md` in modo da sostituirla alla nota della cartella. Il titolo della nota lo prende dalla proprietà `title` inserita nel frontmatter della nota.
 
-> [!attenzione]- Attenzione: `_index.md` o `index.md`?
+> [!attenzione]+ Attenzione: `_index.md` o `index.md`?
 > 
-> Riguardo quest'ultima cosa, sono stato costretto a scegliere `_index.md` come nome di default per le note associate alle cartelle, perché `index.md` l'ho riservato alla nota della homepage del sito (cioè `content/index.md`). Ho dovuto fare così perché, in questo modo, nelle premesse delle note posso mettere un link che reindirizza semplicemente all'unica nota che in tutto il vault di Obsidian ha come nome `index.md`, ossia proprio `content/index.md`. Se anche questa nota avesse come nome `_index.md`, Obsidian "forza" a inserire come percorso nell'hyperlink il percorso `content/_index.md`, generando il problema per cui, sul sito, questo hyperlink rimanda alla nota `https://rexus752.github.io/digital-garden/content/_index.md` che non esiste.
+> Riguardo quest'ultima cosa, sono stato costretto a scegliere `_index.md` come nome di default per le note associate alle cartelle, perché `index.md` l'ho riservato alla nota della homepage del sito (cioè `content/index.md`). Ho dovuto fare così perché, in questo modo, nelle premesse delle note posso mettere un link che reindirizza semplicemente all'unica nota che in tutto il vault di Obsidian ha come nome `index.md`, ossia proprio `content/index.md`. Se anche questa nota avesse come nome `_index.md`, Obsidian "forza" a inserire come percorso nell'hyperlink il percorso `content/_index.md`, generando il problema per cui, sul sito, questo hyperlink rimanda alla nota `https://rexus752.dev/content/_index.md` che non esiste.
 
 Quindi, nella cartella `Matematica`, la nota `Matematica.md` diventa `_index.md` e, quando nell'Esplora sul lato della pagina cliccherò su `Matematica`, non mi porterà alla pagina della cartella, ma a quella della nota `Matematica.md`.
 
