@@ -852,6 +852,23 @@ esempi:
 - 1.1.17 pagina 18 libro di Analisi
 %%
 
+# Altre caratteristiche sulle funzioni
+
+## Funzione identicamente nulla
+
+> [!definizione] Definizione: funzione identicamente nulla
+> 
+> Una [funzione](content/Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-funzione) $f \colon A \to \mathbb{R}$ si dice **identicamente nulla** su un [insieme](content/Matematica/Teoria%20degli%20insiemi/_index.md#^definizione-insieme) $B \subseteq A$ se $f(x) = 0$ per ogni $x \in B$:
+> 
+> $$
+> \begin{array}{}
+> f \colon A \to \mathbb{R} \text{ è identicamente nulla su } B \subseteq A \\
+> \Updownarrow \\
+> \forall x \in B . \big( f(x) = 0 \big) 
+> \end{array}
+> $$
+^definizione-funzione-identicamente-nulla
+
 ---
 
 > [!fonti]+ Fonti

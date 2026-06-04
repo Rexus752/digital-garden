@@ -14,7 +14,7 @@ title: Topologia dei reali
 
 > [!definizione]+ Definizione: intorno di un punto
 > 
-> Dato un punto%% link %% $x_0 \in \mathbb{R}$ e un $r > 0$, si chiama **intorno di centro $x_0$ e raggio $r$** l'intervallo aperto%% link %%
+> Dato un punto%% link %% $x_0 \in \mathbb{R}$ e un $r > 0$, si chiama **intorno di centro $x_0$ e raggio $r$** e si indica con "$I(x_0)$" l'intervallo aperto%% link %%
 > 
 > $$
 > \begin{align*}
@@ -24,7 +24,7 @@ title: Topologia dei reali
 > \end{align*}
 > $$
 > 
-> ossia l'insieme di tutti e soli i punti di $\mathbb{R}$ aventi distanza da $x_0$ minore di $r$.
+> ossia l'insieme di tutti e soli i punti%% link %% di $\mathbb{R}$ aventi distanza da $x_0$ minore di $r$.
 > 
 > Si chiama **intorno destro di $x_0$ di raggio $r$** l'intervallo aperto%% link %% $(x_0, x_0 + r)$.
 > 
@@ -36,6 +36,15 @@ mettere rappresentazione grafica a pagina 115 di Lancelotti
 %%
 
 %% esempio %%
+
+> [!definizione] Definizione: intorno bucato di un punto
+> 
+> Un **intorno bucato** di un punto%% link %% $x_0$ è un [intorno](Topologia%20dei%20reali.md#^definizione-intorno-di-un-punto) $I(x_0)$ di $x_0$ da cui si esclude $x_0$ stesso.
+^definizione-intorno-bucato-di-un-punto
+
+> [!osservazione] Osservazione: utilità dell'intorno bucato
+> 
+> L'[_intorno bucato_](Topologia%20dei%20reali.md#^definizione-intorno-bucato) ci tornerà utile più in là quando studieremo i [_limiti_](content/Matematica/Analisi%20matematica/Limiti/_index.md#^definizione-limite) perché ci interesserà analizzare l'[intorno](Topologia%20dei%20reali.md#^definizione-intorno-di-un-punto) di un punto%% link %% $x_0$ escluso $x_0$ stesso, cioè proprio l'[intorno bucato](Topologia%20dei%20reali.md#^definizione-intorno-bucato) di $x_0$.
 
 > [!definizione]+ Definizione: intorno di un infinito
 > 

@@ -65,7 +65,7 @@ pag. 172-173 lancelotti
 
 ### Tendente a $0$
 
-> [!proposizione] Proposizione: Tendente a $0$
+> [!proposizione] Proposizione: limite notevole del coseno tendente a $0$
 > 
 > Vale il seguente [limite notevole](content/Matematica/Analisi%20matematica/Limiti/_index.md#^definizione-limite-notevole):
 > 
@@ -78,7 +78,7 @@ pag. 172-173 lancelotti
 
 ### Tendente all'infinito
 
-> [!proposizione] Proposizione: Tendente all'infinito
+> [!proposizione] Proposizione: limite notevole del coseno tendente all'infinito
 > 
 > Vale il seguente [limite notevole](content/Matematica/Analisi%20matematica/Limiti/_index.md#^definizione-limite-notevole):
 > 
@@ -225,7 +225,7 @@ con relative dimostrazioni
 
 > [!osservazione] Osservazione: base costantemente uguale a $1$ in un intorno di $x_0$
 > 
-> Se durante la [risoluzione delle forme indeterminate esponenziali](Limiti%20notevoli.md#^proposizione-risoluzione-delle-forme-indeterminate-esponenziali) abbiamo che la base%% link %% $f(x)$ è uguale a $1$ in tutto un [intorno](Topologia%20dei%20reali.md#^definizione-intorno-di-un-punto) di $x_0$, escluso $x_0$, allora il [limite](content/Matematica/Analisi%20matematica/Limiti/_index.md#^definizione-limite)
+> Se durante la [risoluzione delle forme indeterminate esponenziali](Limiti%20notevoli.md#^proposizione-risoluzione-delle-forme-indeterminate-esponenziali) abbiamo che la base%% link %% $f(x)$ è uguale a $1$ in tutto un [intorno bucato](Topologia%20dei%20reali.md#^definizione-intorno-bucato-di-un-punto) di $x_0$, allora il [limite](content/Matematica/Analisi%20matematica/Limiti/_index.md#^definizione-limite)
 > 
 > $$
 > \lim_{x \to x_0} [f(x)]^{g(x)}
