@@ -527,13 +527,11 @@ per questi ultimi due esempi possiamo dire che il PETT si può applicare sui pol
 > Date due [funzioni](content/Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-funzione) $f$ e $g$, si ha che se $f$ è [equivalente](Infiniti%20e%20infinitesimi.md#^definizione-equivalenza-asintotica) a $g$ per $x \to x_0$, allora anche $g$ è [equivalente](Infiniti%20e%20infinitesimi.md#^definizione-equivalenza-asintotica) a $f$ per $x \to x_0$, cioè l'[equivalenza asintotica](Infiniti%20e%20infinitesimi.md#^definizione-equivalenza-asintotica) gode della proprietà simmetrica%% link %%:
 > 
 > $$
-> \forall f, g . \left( 
 > \begin{array}{}
 > f \sim g \text{ per } x \to x_0 \\
 > \Updownarrow \\
 > g \sim f \text{ per } x \to x_0
 > \end{array}
-> \right)  
 > $$
 > 
 > > [!dimostrazione] Dimostrazione
@@ -541,13 +539,11 @@ per questi ultimi due esempi possiamo dire che il PETT si può applicare sui pol
 > > Per [definizione di _equivalenza asintotica_](Infiniti%20e%20infinitesimi.md#^definizione-equivalenza-asintotica), dobbiamo dimostrare che
 > > 
 > > $$
-> > \forall f, g . \left( 
 > > \begin{array}{}
 > > \displaystyle\lim_{x \to x_0} \dfrac{f(x)}{g(x)} = 1 \\
 > > \Updownarrow \\
 > > \displaystyle\lim_{x \to x_0} \dfrac{g(x)}{f(x)} = 1
 > > \end{array}
-> > \right)
 > > $$
 > > 
 > > Possiamo facilmente notare che
@@ -566,7 +562,6 @@ Proprietà transitiva dell'equivalenza asintotica pag. 196 lancelotti
 > Se una [funzione](content/Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-funzione) $f$ è [equivalente](Infiniti%20e%20infinitesimi.md#^definizione-equivalenza-asintotica) a un'altra [funzione](content/Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-funzione) $g$ per $x \to x_0$ e se esiste il [limite](content/Matematica/Analisi%20matematica/Limiti/_index.md#^definizione-limite) di $f(x)$ per $x \to x_0$, allora esiste il [limite](content/Matematica/Analisi%20matematica/Limiti/_index.md#^definizione-limite) di $g(x)$ per $x \to x_0$ ed è uguale a $l$:
 > 
 > $$
-> \forall f, g . \left( 
 > \begin{array}{}
 > f \sim g \text{ per } x \to x_0 \\
 > \land \\
@@ -574,7 +569,6 @@ Proprietà transitiva dell'equivalenza asintotica pag. 196 lancelotti
 > \end{array}
 > \implies
 > \displaystyle\lim_{x \to x_0} g(x) = l
-> \right) 
 > $$
 
 %% 
@@ -586,18 +580,228 @@ dimostrazione pag. 197 lancelotti
 > Si ha che una [funzione](content/Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-funzione) $f$ è [equivalente](Infiniti%20e%20infinitesimi.md#^definizione-equivalenza-asintotica) a un'altra [funzione](content/Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-funzione) $g$ per $x \to x_0$ se e solo se $f$ è [$o$-piccolo](Infiniti%20e%20infinitesimi.md#^definizione-o-piccolo) di $g + o(g)$ per $x \to x_0$:
 > 
 > $$
-> \forall f,g . \left( 
 > \begin{array}{}
 > f \sim g \text{ per } x \to x_0 \\
 > \Updownarrow \\
 > f = g + o(g) \text{ per } x \to x_0
 > \end{array}
-> \right)
 > $$
 ^proposizione-relazione-tra-l-equivalenza-asintotica-e-l-o-piccolo
 
 %% 
-dimostrazione
+dimostrazione pag. 197 lancelotti
+%%
+
+> [!osservazione] Osservazione: come interpretare $f = g + o(g)$
+> 
+> La notazione $f = g + o(g)$ non è da intendersi come un'uguaglianza%% link %% ma, [esattamente come già detto prima](Infiniti%20e%20infinitesimi.md#^attenzione-abuso-di-notazione-nei-simboli-di-landau), è un abuso di notazione che ci permette di indicare una proprietà qualitativa di $f$ rispetto a $g$: questa notazione indica che $f$ differisce da $g$ solo per un termine [trascurabile](Infiniti%20e%20infinitesimi.md#^definizione-trascurabilita-di-una-funzione) rispetto a $g$ stesso.
+> 
+> In altre parole, per $x \to x_0$, possiamo approssimare $f$ con $g$ e l'errore che commettiamo (cioè $f - g$) è uguale a $o(g)$, cioè $o(g)$ va intesa come una quantità minuscola.
+
+%% 
+esempi 4.14 pagina 197 lancelotti
+%%
+
+%% 
+esempio ultima parte di pagina 198 in cui parla della pericolosità di $\sim$, compresa tutta pag. 199 lancelotti
+%%
+
+%% 
+limiti notevoli con gli o-piccolo pagina 200 lancelotti
+
+(nel caso spostare tutto in una pagina a parte)
+%%
+
+%% 
+algebra degli o-piccolo pagg. 200-201 lancelotti
+%%
+
+%% 
+osservazione 4.18 ed esempio 4.19 pagg. 201-202
+%%
+
+# Confronto fra infiniti e infinitesimi
+
+Introduciamo una terminologia per confrontare fra loro gli [infiniti](Infiniti%20e%20infinitesimi.md#^definizione-infinito-e-infinitesimo) e fra loro gli [infinitesimi](Infiniti%20e%20infinitesimi.md#^definizione-infinito-e-infinitesimo), utilizzando le nozioni di [_$o$-piccolo_](Infiniti%20e%20infinitesimi.md#^definizione-o-piccolo) e di [_equivalenza asintotica_](Infiniti%20e%20infinitesimi.md#^definizione-equivalenza-asintotica).
+
+> [!definizione] Definizione: ordine di infinito
+> 
+> Date due [funzioni](content/Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-funzione) $f,g \colon A \subseteq \mathbb{R} \to \mathbb{R}$ (con $A \ne \emptyset$) e un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R} \cup \{ \pm \infty \}$ per $A$, con $f$ e $g$ [infiniti](Infiniti%20e%20infinitesimi.md#^definizione-infinito-e-infinitesimo) in $x_0$, se $f$ è [$o$-piccolo](Infiniti%20e%20infinitesimi.md#^definizione-o-piccolo) di $g$ per $x \to x_0$, allora diciamo che
+> - **$f$ ha un ordine di infinito inferiore a $g$ per $x \to x_0$** (o che **$f$ è un infinito di ordine inferiore a $g$ per $x \to x_0$**)  e
+> - **$g$ ha un ordine di infinito superiore a $f$ per $x \to x_0$** (o che **$g$ è un infinito di ordine superiore a $f$ per $x \to x_0$**):
+> 
+> $$
+> \begin{array}{}
+> f = o(g) \text{ per } x \to x_0 \\
+> \Updownarrow \\
+> f \text{ ha un ordine di infinito inferiore a } g \text{ per } x \to x_0 \\
+> \land\ g \text{ ha un ordine di infinito superiore a } f \text{ per } x \to x_0 \\
+> \end{array}
+> $$
+> 
+> Se invece $f$ è [equivalente](Infiniti%20e%20infinitesimi.md#^definizione-equivalenza-asintotica) a $l \cdot g$ per $x \to x_0$ (con $l \in \mathbb{R} \setminus \{ 0 \}$), allora diciamo che **$f$ e $g$ hanno lo stesso ordine di infinito per $x \to x_0$**:
+> 
+> $$
+> \forall l \in \mathbb{R} \setminus \{ 0 \} . \left( 
+> \begin{array}{}
+> f \sim l \cdot g \text{ per } x \to x_0 \\
+> \Updownarrow \\
+> f \text{ e } g \text{ hanno lo stesso ordine di infinito per } x \to x_0
+> \end{array}
+> \right) 
+> $$
+^definizione-ordine-di-infinito
+
+%% 
+Analoghe definizioni si introducono per $x \to x_0^\pm$ se $x_0 \in \mathbb{R}$
+%%
+
+%% 
+esempi 4.21 pagg. 202-203 lancelotti
+%%
+
+> [!definizione] Definizione: ordine di infinitesimo
+> 
+> Date due [funzioni](content/Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-funzione) $f,g \colon A \subseteq \mathbb{R} \to \mathbb{R}$ (con $A \ne \emptyset$) e un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R} \cup \{ \pm \infty \}$ per $A$, con $f$ e $g$ [infinitesimi](Infiniti%20e%20infinitesimi.md#^definizione-infinito-e-infinitesimo) in $x_0$, se $f$ è [$o$-piccolo](Infiniti%20e%20infinitesimi.md#^definizione-o-piccolo) di $g$ per $x \to x_0$, allora diciamo che
+> - **$f$ ha un ordine di infinitesimo superiore a $g$ per $x \to x_0$** (o che **$f$ è un infinitesimo di ordine superiore a $g$ per $x \to x_0$**)  e
+> - **$g$ ha un ordine di infinitesimo inferiore a $f$ per $x \to x_0$** (o che **$g$ è un infinitesimo di ordine inferiore a $f$ per $x \to x_0$**):
+> 
+> $$
+> \begin{array}{}
+> f = o(g) \text{ per } x \to x_0 \\
+> \Updownarrow \\
+> f \text{ ha un ordine di infinitesimo superiore a } g \text{ per } x \to x_0 \\
+> \land\ g \text{ ha un ordine di infinitesimo inferiore a } f \text{ per } x \to x_0 \\
+> \end{array}
+> $$
+> 
+> Se invece $f$ è [equivalente](Infiniti%20e%20infinitesimi.md#^definizione-equivalenza-asintotica) a $l \cdot g$ per $x \to x_0$ (con $l \in \mathbb{R} \setminus \{ 0 \}$), allora diciamo che **$f$ e $g$ hanno lo stesso ordine di infinitesimo per $x \to x_0$**:
+> 
+> $$
+> \forall l \in \mathbb{R} \setminus \{ 0 \} . \left( 
+> \begin{array}{}
+> f \sim l \cdot g \text{ per } x \to x_0 \\
+> \Updownarrow \\
+> f \text{ e } g \text{ hanno lo stesso ordine di infinitesimoo per } x \to x_0
+> \end{array}
+> \right) 
+> $$
+^definizione-ordine-di-infinitesimo
+
+%% 
+Analoghe definizioni si introducono per $x \to x_0^\pm$ se $x_0 \in \mathbb{R}$
+%%
+
+%% 
+esempi 4.23 pagg. 203-204 lancelotti
+%%
+
+> [!osservazione] Osservazione: differenza di significato di $f = o(g)$ tra infiniti e infinitesimi
+> 
+> Dalle definizioni sull'[_ordine di infinito_](Infiniti%20e%20infinitesimi.md#^definizione-ordine-di-infinito) e l'[_ordine di infinitesimo_](Infiniti%20e%20infinitesimi.md#^definizione-ordine-di-infinitesimo) possiamo evincere che la scrittura $f = o(g)$ ha un significato diverso a seconda che $f$ e $g$ siano entrambi [infiniti](Infiniti%20e%20infinitesimi.md#^definizione-infinito-e-infinitesimo) o [infinitesimi](Infiniti%20e%20infinitesimi.md#^definizione-infinito-e-infinitesimo). In particolare:
+> 
+> |                            | **$f$ e $g$ [infiniti](Infiniti%20e%20infinitesimi.md#^definizione-infinito-e-infinitesimo)**                  | **$f$ e $g$ [infinitesimi](Infiniti%20e%20infinitesimi.md#^definizione-infinito-e-infinitesimo)**                      |
+> | -------------------------- | -------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+> | $f = o(g)$ per $x \to x_0$ | $f$ ha un [ordine di infinito](Infiniti%20e%20infinitesimi.md#^definizione-ordine-di-infinito) inferiore a $g$ | $f$ ha un [ordine di infinitesimo](Infiniti%20e%20infinitesimi.md#^definizione-ordine-di-infinitesimo) superiore a $g$ |
+
+%% 
+esercizi 4.25 pag. 204 lancelotti
+%%
+
+## Infiniti e infinitesimi campione
+
+Sin qui abbiamo introdotto una terminologia per confrontare fra loro gli [infiniti](Infiniti%20e%20infinitesimi.md#^definizione-infinito-e-infinitesimo) e gli [infinitesimi](Infiniti%20e%20infinitesimi.md#^definizione-infinito-e-infinitesimo). Poiché la casistica è vasta, per poterli confrontare in modo rapido è necessario avere a disposizione delle [funzioni](content/Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-funzione) che svolgano il ruolo di "sistemi di riferimento" con cui confrontarli. Queste [funzioni](content/Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-funzione) sono gli _infiniti e gli infinitesimi campione_%% link %%.
+
+Poiché le [funzioni](content/Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-funzione) più "semplici" sono quelle razionali%% link %%, questi _infiniti e gli infinitesimi campione_%% link %% sono proprio funzioni razionali%% link %%.
+
+> [!definizione] Definizione: infiniti e infinitesimi campione
+> 
+> Dato un punto%% link %% $x_0$:
+> - Se $x_0 \in \mathbb{R}$, allora l'**infinito campione** è la [funzione](content/Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-funzione) $u(x) = \dfrac{1}{|x -x _0|}$.
+> - Se $x_0 = \pm \infty$, allora l'**infinito campione** è la [funzione](content/Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-funzione) $u(x) = |x|$.
+> - Se $x_0 \in \mathbb{R}$, allora l'**infinitesimo campione** è la [funzione](content/Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-funzione) $u(x) = |x - x_0|$.
+> - Se $x_0 = \pm \infty$, allora l'**infinitesimo campione** è la [funzione](content/Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-funzione) $u(x) = \dfrac{1}{|x|}$.
+> 
+> |                      | **Infinito campione**           | **Infinitesimo campione** |
+> | -------------------- | ------------------------------- | ------------------------- |
+> | $x_0 \in \mathbb{R}$ | $u(x) = \dfrac{1}{\|x - x_0\|}$ | $u(x) = \|x - x_0\|$      |
+> | $x_0 = \pm \infty$   | $u(x) = \|x\|$                  | $u(x) = \dfrac{1}{\|x\|}$ |
+^definizione-infiniti-e-infinitesimi-campione
+
+La presenza del valore assoluto%% link %% negli [infiniti e infinitesimi campione](Infiniti%20e%20infinitesimi.md#^definizione-infiniti-e-infinitesimi-campione) è giustificata dalla seguente definizione.
+
+> [!definizione] Definizione: infinit(esim)o di ordine $\alpha$ rispetto all'infinit(esim)o campione $u$
+> 
+> Date due [funzioni](content/Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-funzione) $f,g \colon A \subseteq \mathbb{R} \to \mathbb{R}$ (con $A \ne \emptyset$) e un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R} \cup \{ \pm \infty \}$ per $A$ con $f$ [infinito](Infiniti%20e%20infinitesimi.md#^definizione-infinito-e-infinitesimo) (o [infinitesimo](Infiniti%20e%20infinitesimi.md#^definizione-infinito-e-infinitesimo)) in $x_0$, diciamo che **$f$ è un [infinito (o infinitesimo)](Infiniti%20e%20infinitesimi.md#^definizione-infinito-e-infinitesimo) di ordine $\alpha > 0$ rispetto all'[infinito (o infinitesimo) campione](Infiniti%20e%20infinitesimi.md#^definizione-infiniti-e-infinitesimi-campione) $u$ per $x \to x_0$** se
+> 
+> $$
+> \begin{array}{}
+> \displaystyle\lim_{x \to x_0} \dfrac{f(x)}{[u(x)]^\alpha} = l \in \mathbb{R} \setminus \{ 0 \} \\
+> \Updownarrow \\
+> f(x) \sim l[u(x)]^\alpha \text{ per } x \to x_0 \text{ con } l \in \mathbb{R} \setminus \{ 0 \} \\
+> \Updownarrow \\
+> f(x) = l[u(x)]^\alpha + o([u(x)]^\alpha) \text{ per } x \to x_0 \text{ con } l \in \mathbb{R} \setminus \{ 0 \}
+> \end{array}
+> $$
+> 
+> In tal caso diciamo che $l[u(x)]^\alpha$ è la **parte principale dell'[infinito (o infinitesimo)](Infiniti%20e%20infinitesimi.md#^definizione-infinito-e-infinitesimo) $f$ rispetto all'[infinito (o infinitesimo) campione](Infiniti%20e%20infinitesimi.md#^definizione-infiniti-e-infinitesimi-campione) $u$ per $x \to x_0$**.
+^definizione-infinitesimo-di-ordine-alfa-rispetto-all-infinitesimo-campione-u
+
+%% 
+Analoghe definizioni si introducono per $x \to x_0^\pm$ se $x_0 \in \mathbb{R}$
+%%
+
+> [!osservazione] Osservazione: come va inteso un infinit(esim)o di ordine $\alpha$ rispetto all'infinit(esim)o campione $u$
+> 
+> Quando diciamo che $f$ è un [infinito (o infinitesimo) di ordine $\alpha$ rispetto all'infinito (o infinitesimo) campione $u(x)$](Infiniti%20e%20infinitesimi.md#^definizione-infinitesimo-di-ordine-alfa-rispetto-all-infinitesimo-campione-u) per $x \to x_0$, stiamo dicendo che $f$ si comporta come $u^\alpha$, a meno di una costante.
+> 
+> In pratica, l'ordine $\alpha$ misura la velocità di avvicinamento a $0$ (o di fuga verso $\pm \infty$) usando l'[infinito (o infinitesimo) campione](Infiniti%20e%20infinitesimi.md#^definizione-infiniti-e-infinitesimi-campione) $u$ come "righello": più è alto l'ordine, più rapidamente la funzione va verso $0$ o verso $\pm \infty$.
+> 
+> Per esempio, prendendo per $x \to 0$ l'[infinitesimo campione](Infiniti%20e%20infinitesimi.md#^definizione-infiniti-e-infinitesimi-campione) $u(x) = |x - x_0| = |x|$, si ha una gerarchia naturale:
+> 
+> | Ordine $\alpha$         | **[Infinitesimi](Infiniti%20e%20infinitesimi.md#^definizione-infinito-e-infinitesimo) di esempio** | **Comportamento**                        |
+> | ----------------------- | -------------------------------------------------------------------------------------------------- | ---------------------------------------- |
+> | $\alpha = \dfrac{1}{2}$ | $\sqrt x$                                                                                          | Tendono a $0$ più lentamente di $\|x\|$  |
+> | $\alpha = 1$            | $\sin x$, $\tan x$, $3x$                                                                           | Tendono a $0$ come $\|x\|$               |
+> | $\alpha = 2$            | $x^2 - x^4$, $1 - \cos x$                                                                          | Tendono a $0$ più velocemente di $\|x\|$ |
+> | $\alpha = 3$            | $x - \sin x$, $x^3$                                                                                | Tendono a $0$ ancora più velocemente     |
+
+> [!osservazione] Osservazione: perché serve che $l \in \mathbb{R} \setminus \{ 0 \}$?
+> 
+> Il [limite](content/Matematica/Analisi%20matematica/Limiti/_index.md#^definizione-limite) di $\dfrac{f(x)}{[u(x)]^\alpha}$ deve essere finito%% link %% e non nullo%% link %% perché:
+> - Se fosse $0$, significherebbe che $[u(x)]^\alpha$ cresce (o decresce) molto più velocemente di $f$, quindi l'ordine $\alpha$ va abbassato. 
+> - Se fosse $\pm \infty$, significherebbe che $[u(x)]^\alpha$ cresce (o decresce) molto più lentamente di $f$, quindi l'ordine $\alpha$ va alzato. 
+> 
+> L'ordine $\alpha$ è dunque il valore "giusto" che risponde alla domanda: "alzando $u$ alla potenza $\alpha$, riesco a tenere il passo con $f$?". Quando il [limite](content/Matematica/Analisi%20matematica/Limiti/_index.md#^definizione-limite) dà un $l \in \mathbb{R} \setminus \{0\}$, la risposta è sì: $\alpha$ è quello corretto, e $l[u(x)]^\alpha$ è la [parte principale](Infiniti%20e%20infinitesimi.md#^definizione-infinitesimo-di-ordine-alfa-rispetto-all-infinitesimo-campione-u), cioè l'approssimazione più semplice di $f$ vicino a $x_0$.
+
+> [!esempio] Esempio: $\sin x$ infinitesimo di ordine $1$ rispetto all'infinitesimo campione $u(x) = |x|$
+> 
+> Supponiamo che valga il [limite](content/Matematica/Analisi%20matematica/Limiti/_index.md#^definizione-limite)
+> 
+> $$
+> \lim_{x \to 0} \sin x = 0
+> $$
+> 
+> Ciò significa che $\sin x$ è un [infinitesimo](Infiniti%20e%20infinitesimi.md#^definizione-infinito-e-infinitesimo) in $0$. Essendo un [infinitesimo](Infiniti%20e%20infinitesimi.md#^definizione-infinito-e-infinitesimo) con $l = 0 \in \mathbb{R}$, il suo [infinitesimo campione](Infiniti%20e%20infinitesimi.md#^definizione-infiniti-e-infinitesimi-campione) è
+> 
+> $$
+> u(x) = |x - x_0| = |x - 0| = |x|
+> $$
+> 
+> Dal momento che vale il [limite](content/Matematica/Analisi%20matematica/Limiti/_index.md#^definizione-limite) (con $\alpha = 1$)
+> 
+> $$
+> \lim_{x \to 0} \dfrac{\sin x}{|x|^1} = 1
+> $$
+> 
+> possiamo concludere che $\sin x$ è un [infinitesimo di ordine $1$ rispetto all'infinitesimo campione $u(x) = |x|$](Infiniti%20e%20infinitesimi.md#^definizione-infinitesimo-di-ordine-alfa-rispetto-all-infinitesimo-campione-u) per $x \to 0$, con [parte principale](Infiniti%20e%20infinitesimi.md#^definizione-infinitesimo-di-ordine-alfa-rispetto-all-infinitesimo-campione-u) $1 \cdot |x|^1 = x$.
+
+%% 
+osservazioni c,d,e, pagg. 206-207
+%%
+
+%% 
+esempi pagg. 207-208
 %%
 
 ---
@@ -609,3 +813,4 @@ dimostrazione
 > 		- 4 - _Confronto locale fra funzioni_:
 > 			- 4.1 - _Infiniti e infinitesimi_.
 > 			- 4.2 - _Simboli di Landau_.
+> 			- 4.3 - _Confronto fra infiniti e infinitesimi_.
