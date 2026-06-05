@@ -710,9 +710,9 @@ esercizi 4.25 pag. 204 lancelotti
 
 ## Infiniti e infinitesimi campione
 
-Sin qui abbiamo introdotto una terminologia per confrontare fra loro gli [infiniti](Infiniti%20e%20infinitesimi.md#^definizione-infinito-e-infinitesimo) e gli [infinitesimi](Infiniti%20e%20infinitesimi.md#^definizione-infinito-e-infinitesimo). Poiché la casistica è vasta, per poterli confrontare in modo rapido è necessario avere a disposizione delle [funzioni](content/Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-funzione) che svolgano il ruolo di "sistemi di riferimento" con cui confrontarli. Queste [funzioni](content/Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-funzione) sono gli _infiniti e gli infinitesimi campione_%% link %%.
+Sin qui abbiamo introdotto una terminologia per confrontare fra loro gli [infiniti](Infiniti%20e%20infinitesimi.md#^definizione-infinito-e-infinitesimo) e gli [infinitesimi](Infiniti%20e%20infinitesimi.md#^definizione-infinito-e-infinitesimo). Poiché la casistica è vasta, per poterli confrontare in modo rapido è necessario avere a disposizione delle [funzioni](content/Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-funzione) che svolgano il ruolo di "sistemi di riferimento" con cui confrontarli. Queste [funzioni](content/Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-funzione) sono gli [_infiniti e gli infinitesimi campione_](Infiniti%20e%20infinitesimi.md#^definizione-infiniti-e-infinitesimi-campione).
 
-Poiché le [funzioni](content/Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-funzione) più "semplici" sono quelle razionali%% link %%, questi _infiniti e gli infinitesimi campione_%% link %% sono proprio funzioni razionali%% link %%.
+Poiché le [funzioni](content/Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-funzione) più "semplici" sono quelle razionali%% link %%, questi [_infiniti e gli infinitesimi campione_](Infiniti%20e%20infinitesimi.md#^definizione-infiniti-e-infinitesimi-campione) sono proprio funzioni razionali%% link %%.
 
 > [!definizione] Definizione: infiniti e infinitesimi campione
 > 
@@ -802,6 +802,132 @@ osservazioni c,d,e, pagg. 206-207
 
 %% 
 esempi pagg. 207-208
+%%
+
+> [!definizione] Definizione: infinit(esim)o di ordine superiore o inferiore a qualsiasi potenza di $u(x)$
+> 
+> Data una [funzione](content/Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-funzione) $f \colon A \subseteq \mathbb{R} \to \mathbb{R}$ (con $A \ne \emptyset$) e un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R} \cup \{ \pm \infty \}$ per $A$ con $f$ [infinito](Infiniti%20e%20infinitesimi.md#^definizione-infinito-e-infinitesimo) (o [infinitesimo](Infiniti%20e%20infinitesimi.md#^definizione-infinito-e-infinitesimo)) in $x_0$, diciamo che $f(x)$ è un **[infinito](Infiniti%20e%20infinitesimi.md#^definizione-infinito-e-infinitesimo) di ordine superiore o [infinitesimo](Infiniti%20e%20infinitesimi.md#^definizione-infinito-e-infinitesimo) di ordine inferiore a qualsiasi potenza di un [infinito o infinitesimo campione](Infiniti%20e%20infinitesimi.md#^definizione-infiniti-e-infinitesimi-campione) $u(x)$** per $x \to x_0$ se:
+> 
+> $$
+> \forall k \in \mathbb{R}^{> 0} . \big( [u(x)]^k = o(f(x)) \big)
+> $$
+> 
+> cioè se $f(x)$ è un [infinito](Infiniti%20e%20infinitesimi.md#^definizione-infinito-e-infinitesimo) tende a $\pm\infty$ più velocemente di $|u(x)|^k$ per ogni $k$, mentre se è un [infinitesimo](Infiniti%20e%20infinitesimi.md#^definizione-infinito-e-infinitesimo) tende a $0$ più lentamente di $|u(x)|^k$ per ogni $k$.
+> 
+> Al contrario, $f(x)$ è un **[infinito](Infiniti%20e%20infinitesimi.md#^definizione-infinito-e-infinitesimo) di ordine inferiore o [infinitesimo](Infiniti%20e%20infinitesimi.md#^definizione-infinito-e-infinitesimo) di ordine superiore a qualsiasi potenza di un [infinito o infinitesimo campione](Infiniti%20e%20infinitesimi.md#^definizione-infiniti-e-infinitesimi-campione) $u(x)$** per $x \to x_0$ se:
+> 
+> $$
+> \forall k \in \mathbb{R}^{> 0} . \big( f(x) = o([u(x)]^k) \big)
+> $$
+> 
+> cioè se $f(x)$ è un [infinito](Infiniti%20e%20infinitesimi.md#^definizione-infinito-e-infinitesimo) tende a $\pm\infty$ più lentamente di $|u(x)|^k$ per ogni $k$, mentre se è un [infinitesimo](Infiniti%20e%20infinitesimi.md#^definizione-infinito-e-infinitesimo) tende a $0$ più velocemente di $|u(x)|^k$ per ogni $k$.
+> 
+> |                                                                   | **$f(x)$ è un [infinito](Infiniti%20e%20infinitesimi.md#^definizione-infinito-e-infinitesimo)**                                                                              | **$f(x)$ è un [infinitesimo](Infiniti%20e%20infinitesimi.md#^definizione-infinito-e-infinitesimo)**                                                                     |
+> | ----------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+> | $\forall k \in \mathbb{R}^{> 0} . \big( [u(x)]^k = o(f(x)) \big)$ | $f(x)$ è un [infinito](Infiniti%20e%20infinitesimi.md#^definizione-infinito-e-infinitesimo) di ordine _superiore_,<br>tende a $\pm \infty$ più _velocemente_ di $\|u(x)\|^k$ | $f(x)$ è un [infinitesimo](Infiniti%20e%20infinitesimi.md#^definizione-infinito-e-infinitesimo) di ordine _inferiore_,<br>tende a $0$ più _lentamente_ di $\|u(x)\|^k$  |
+> | $\forall k \in \mathbb{R}^{> 0} . \big( f(x) = o([u(x)]^k) \big)$ | $f(x)$ è un [infinito](Infiniti%20e%20infinitesimi.md#^definizione-infinito-e-infinitesimo) di ordine _inferiore_,<br>tende a $\pm \infty$ più _lentamente_ di $\|u(x)\|^k$  | $f(x)$ è un [infinitesimo](Infiniti%20e%20infinitesimi.md#^definizione-infinito-e-infinitesimo) di ordine _superiore_,<br>tende a $0$ più _velocemente_ di $\|u(x)\|^k$ |
+^definizione-infinitesimo-di-ordine-superiore-o-inferiore-a-qualsiasi-potenza-di-u-x
+
+> [!esempio] Esempio: $f(x) = a^x$ con $a > 1$
+> 
+> La [funzione](content/Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-funzione) $f(x) = a^x$ (con $a > 1$) è un [infinito](Infiniti%20e%20infinitesimi.md#^definizione-infinito-e-infinitesimo) per $x \to + \infty$ e il suo [infinito campione](Infiniti%20e%20infinitesimi.md#^definizione-infiniti-e-infinitesimi-campione) è $u(x) = |x|$. Poiché si ha che
+> 
+> $$
+> \forall k \in \mathbb{R}^{> 0} . \big( |x|^k = o(a^x) \big)
+> $$
+> 
+> allora $a^x$ è un [infinito di ordine superiore a qualsiasi potenza di $|x|$](Infiniti%20e%20infinitesimi.md#^definizione-infinitesimo-di-ordine-superiore-o-inferiore-a-qualsiasi-potenza-di-u-x) per $x \to + \infty$, cioè $a^x$ tende a $x \to + \infty$ più velocemente di $|x|^k$, qualsiasi sia la potenza%% link %% $k$.
+> 
+> Inoltre, la [funzione](content/Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-funzione) $f(x) = a^x$ (con $a > 1$) è un [infinitesimo](Infiniti%20e%20infinitesimi.md#^definizione-infinito-e-infinitesimo) per $x \to - \infty$ e il suo [infinito campione](Infiniti%20e%20infinitesimi.md#^definizione-infiniti-e-infinitesimi-campione) è $u(x) = \dfrac{1}{|x|}$. Poiché si ha che
+> 
+> $$
+> \forall k \in \mathbb{R}^{> 0} . \left( a^x = o\left(\left( \dfrac{1}{|x|} \right) ^k\right) \right)
+> $$
+> 
+> allora $a^x$ è un [infinitesimo di ordine inferiore a qualsiasi potenza di $\dfrac{1}{|x|}$](Infiniti%20e%20infinitesimi.md#^definizione-infinitesimo-di-ordine-superiore-o-inferiore-a-qualsiasi-potenza-di-u-x) per $x \to - \infty$, cioè $a^x$ tende a $x \to - \infty$ più lentamente di $\left( \dfrac{1}{|x|} \right)^k$, qualsiasi sia la potenza%% link %% $k$.
+
+%%
+---
+
+**Per $x \to -\infty$** — $f$ è un **infinitesimo** (poiché $a > 1 \Rightarrow a^x \to 0$). L'infinitesimo campione è $u(x) = \tfrac{1}{|x|}$.
+
+$$\forall k > 0: \quad a^x = o\!\left(\frac{1}{|x|^k}\right) \quad \Longrightarrow \quad \frac{a^x}{1/|x|^k} = |x|^k a^x \to 0$$
+
+✦ $a^x$ è un **infinitesimo di ordine superiore a qualunque potenza di $\tfrac{1}{|x|}$** → **nessun ordine, nessuna parte principale** rispetto a $u(x) = \tfrac{1}{|x|}$.
+
+---
+
+**Caso $0 < a < 1$** (i ruoli si invertono):
+
+| Limite | Comportamento | Ordine |
+|---|---|---|
+| $x \to +\infty$ | infinitesimo | superiore a qualunque potenza di $\tfrac{1}{x}$ |
+| $x \to -\infty$ | infinito | superiore a qualunque potenza di $|x|$ |
+
+---
+
+### Esempio 2 — $f(x) = \log_a x$ con $a > 0,\ a \neq 1$
+
+**Per $x \to +\infty$** — $f$ è un **infinito**. Campione $u(x) = x$.
+
+$$\forall k > 0: \quad \log_a x = o(x^k) \quad \Longrightarrow \quad \frac{\log_a x}{x^k} \to 0$$
+
+✦ $\log_a x$ è un **infinito di ordine inferiore a qualunque potenza di $x$** → **nessun ordine, nessuna parte principale** rispetto a $u(x) = x$.
+
+---
+
+**Per $x \to 0^+$** — $f$ è ancora un **infinito** (con segno, ma $|\log_a x| \to +\infty$). Campione $u(x) = \tfrac{1}{x}$.
+
+$$\forall k > 0: \quad \log_a x = o\!\left(\frac{1}{x^k}\right) \quad \Longrightarrow \quad \frac{\log_a x}{1/x^k} = x^k \log_a x \to 0$$
+
+✦ $\log_a x$ è un **infinito di ordine inferiore a qualunque potenza di $\tfrac{1}{x}$** → **nessun ordine, nessuna parte principale** rispetto a $u(x) = \tfrac{1}{x}$.
+
+---
+
+### Schema riassuntivo
+
+| Funzione | Limite | Tipo | Ordine rispetto al campione |
+|---|---|---|---|
+| $a^x,\ a>1$ | $x\to+\infty$ | infinito | **superiore** a qualunque $x^k$ |
+| $a^x,\ a>1$ | $x\to-\infty$ | infinitesimo | **superiore** a qualunque $(1/\|x\|)^k$ |
+| $a^x,\ 0<a<1$ | $x\to+\infty$ | infinitesimo | **superiore** a qualunque $(1/x)^k$ |
+| $a^x,\ 0<a<1$ | $x\to-\infty$ | infinito | **superiore** a qualunque $\|x\|^k$ |
+| $\log_a x$ | $x\to+\infty$ | infinito | **inferiore** a qualunque $x^k$ |
+| $\log_a x$ | $x\to 0^+$ | infinito | **inferiore** a qualunque $(1/x)^k$ |
+
+In tutti questi casi **non esiste un ordine finito** $\alpha$ né una **parte principale** rispetto all'infinito campione naturale.
+---
+
+### Esempio classico: $e^x$
+
+$$\lim_{x \to +\infty} \frac{e^x}{x^n} = +\infty \quad \forall n \in \mathbb{N}$$
+
+Questo si dimostra facilmente con il teorema di de l'Hôpital applicato $n$ volte:
+
+$$\frac{e^x}{x^n} \xrightarrow{n \text{ volte H}} \frac{e^x}{n!} \to +\infty$$
+
+---
+
+### Altri esempi
+
+| Funzione | Comportamento |
+|---|---|
+| $e^x$ | infinito di ordine superiore a qualsiasi $x^n$ |
+| $e^{x^2}$ | ancora più rapido di $e^x$ |
+| $x!$ (o $\Gamma(x)$) | cresce più di ogni potenza |
+| $x^x$ | crescita ultrarapida |
+
+---
+
+### Confronto con la scala degli infiniti
+
+La gerarchia classica per $x \to +\infty$ è:
+
+$$\ln x \ll x^\alpha \ll e^x \ll e^{x^2} \ll x^x$$
+
+dove $f \ll g$ significa $\dfrac{f}{g} \to 0$.
+
+Quindi $e^x$ "batte" qualsiasi polinomio o potenza di $x$, ed è l'esempio prototipico di questa categoria.
 %%
 
 ---
