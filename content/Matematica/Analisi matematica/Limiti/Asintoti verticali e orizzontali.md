@@ -1,5 +1,5 @@
 ---
-title: Asintoti
+title: Asintoti verticali e orizzontali
 ---
 
 > [!premessa] Premessa
@@ -39,13 +39,13 @@ esempio pag. 148 lancelotti
 
 > [!osservazione] Osservazione: asintoti verticali dal punto di vista grafico
 > 
-> Graficamente, se la retta%% link %% $x = x_0$ è un [asintoto verticale destro/sinistro](Asintoti.md#^definizione-asintoto-verticale) per $f$, allora il grafico%% link %% di $f$ si avvicina sempre più a questa retta per $x$ che tende a $x_0$ da destra/sinistra, senza però mai attraversarlo (cioè senza poter andare "dall'altro lato" rispetto a $x = x_0$).
+> Graficamente, se la retta%% link %% $x = x_0$ è un [asintoto verticale destro/sinistro](Asintoti%20verticali%20e%20orizzontali.md#^definizione-asintoto-verticale) per $f$, allora il grafico%% link %% di $f$ si avvicina sempre più a questa retta per $x$ che tende a $x_0$ da destra/sinistra, senza però mai attraversarlo (cioè senza poter andare "dall'altro lato" rispetto a $x = x_0$).
 > 
-> Nonostante ciò, il grafico%% link %% di $f$ e l'[asintoto](Asintoti.md#^definizione-asintoto-verticale) possono avere uno e un solo punto%% link %% in comune, ossia $x_0$.
+> Nonostante ciò, il grafico%% link %% di $f$ e l'[asintoto](Asintoti%20verticali%20e%20orizzontali.md#^definizione-asintoto-verticale) possono avere uno e un solo punto%% link %% in comune, ossia $x_0$.
 
 > [!osservazione] Osservazione: multipli asintoti verticali per una stessa funzione
 > 
-> Una stessa [funzione](content/Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-funzione) $f$ può avere anche più di un [asintoto verticale](Asintoti.md#^definizione-asintoto-verticale): per esempio, la [funzione](content/Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-funzione) $f(x) = \tan x$ ammette infiniti [asintoti verticali](Asintoti.md#^definizione-asintoto-verticale) di equazione
+> Una stessa [funzione](content/Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-funzione) $f$ può avere anche più di un [asintoto verticale](Asintoti%20verticali%20e%20orizzontali.md#^definizione-asintoto-verticale): per esempio, la [funzione](content/Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-funzione) $f(x) = \tan x$ ammette infiniti [asintoti verticali](Asintoti%20verticali%20e%20orizzontali.md#^definizione-asintoto-verticale) di equazione
 > 
 > $$
 > \forall k \in \mathbb{Z} \left( x = \dfrac{\pi}{2} + k\pi \right) 
@@ -59,7 +59,7 @@ esempio pag. 148 lancelotti
 > \lim_{x \to \pm \infty} f(x) = \pm \infty
 > $$
 > 
-> allora **non** si può parlare di [asintoti verticali](Asintoti.md#^definizione-asintoto-verticale) perché, per definizione, un asintoto verticale si presenta al tendersi di $x$ verso un determinato punto%% link %% $x_0 \in \mathbb{R}$, mentre $\pm \infty \not\in \mathbb{R}$.
+> allora **non** si può parlare di [asintoti verticali](Asintoti%20verticali%20e%20orizzontali.md#^definizione-asintoto-verticale) perché, per definizione, un asintoto verticale si presenta al tendersi di $x$ verso un determinato punto%% link %% $x_0 \in \mathbb{R}$, mentre $\pm \infty \not\in \mathbb{R}$.
 
 # Asintoti orizzontali
 
@@ -90,7 +90,7 @@ esempi pag. 149 lancelotti
 
 > [!osservazione] Osservazione: asintoti orizzontali dal punto di vista grafico
 > 
-> Graficamente, se la retta%% link %% $y = l$ è un [asintoto orizzontale destro/sinistro](Asintoti.md#^definizione-asintoto-orizzontale) per $f$, allora il grafico%% link %% di $f$ si avvicina sempre più a questa retta per $x$ che tende a $\pm \infty$ e può anche attraversarlo (cioè può andare "dall'altro lato" rispetto a $y = l$, l'importante è che, per $x \to \pm \infty$, si abbia che $f(x) \to l$).
+> Graficamente, se la retta%% link %% $y = l$ è un [asintoto orizzontale destro/sinistro](Asintoti%20verticali%20e%20orizzontali.md#^definizione-asintoto-orizzontale) per $f$, allora il grafico%% link %% di $f$ si avvicina sempre più a questa retta per $x$ che tende a $\pm \infty$ e può anche attraversarlo (cioè può andare "dall'altro lato" rispetto a $y = l$, l'importante è che, per $x \to \pm \infty$, si abbia che $f(x) \to l$).
 
 %% 
 **Esempio:** $f(x) = \dfrac{\sin x}{x}$​ ha asintoto orizzontale y=0y = 0 y=0, ma attraversa l'asse xx x infinite volte.
@@ -98,7 +98,7 @@ esempi pag. 149 lancelotti
 
 > [!osservazione] Osservazione: un asintoto orizzontale destro/sinistro per funzione
 > 
-> Una [funzione](content/Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-funzione) $f$ può avere al massimo un [asintoto orizzontale destro](Asintoti.md#^definizione-asintoto-orizzontale) e al massimo un [asintoto orizzontale sinistro](Asintoti.md#^definizione-asintoto-orizzontale).
+> Una [funzione](content/Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-funzione) $f$ può avere al massimo un [asintoto orizzontale destro](Asintoti%20verticali%20e%20orizzontali.md#^definizione-asintoto-orizzontale) e al massimo un [asintoto orizzontale sinistro](Asintoti%20verticali%20e%20orizzontali.md#^definizione-asintoto-orizzontale).
 
 ---
 

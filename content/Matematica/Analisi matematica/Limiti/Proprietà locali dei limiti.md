@@ -11,7 +11,7 @@ title: Proprietà locali dei limiti
 ---
 
 %% 
-vedere se questa pagina si può ficcare in [Asintoti](Asintoti.md) o [Limiti](content/Matematica/Analisi%20matematica/Limiti/_index.md)
+vedere se questa pagina si può ficcare in [Asintoti verticali e orizzontali](Asintoti%20verticali%20e%20orizzontali.md) o [Limiti](content/Matematica/Analisi%20matematica/Limiti/_index.md)
 %%
 
 > [!teorema] Teorema di limitatezza locale
