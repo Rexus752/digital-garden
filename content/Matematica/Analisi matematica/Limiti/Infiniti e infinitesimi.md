@@ -718,14 +718,14 @@ Poiché le [funzioni](content/Matematica/Teoria%20degli%20insiemi/Funzioni/_inde
 > 
 > Dato un punto%% link %% $x_0$:
 > - Se $x_0 \in \mathbb{R}$, allora l'**infinito campione** è la [funzione](content/Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-funzione) $u(x) = \dfrac{1}{|x -x _0|}$.
-> - Se $x_0 = \pm \infty$, allora l'**infinito campione** è la [funzione](content/Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-funzione) $u(x) = |x|$.
+> - Se $x_0 = \pm \infty$, allora l'**infinito campione** è la [funzione](content/Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-funzione) $u(x) = \vert x \vert$.
 > - Se $x_0 \in \mathbb{R}$, allora l'**infinitesimo campione** è la [funzione](content/Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-funzione) $u(x) = |x - x_0|$.
-> - Se $x_0 = \pm \infty$, allora l'**infinitesimo campione** è la [funzione](content/Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-funzione) $u(x) = \dfrac{1}{|x|}$.
+> - Se $x_0 = \pm \infty$, allora l'**infinitesimo campione** è la [funzione](content/Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-funzione) $u(x) = \dfrac{1}{\vert x \vert}$.
 > 
 > |                      | **Infinito campione**           | **Infinitesimo campione** |
 > | -------------------- | ------------------------------- | ------------------------- |
-> | $x_0 \in \mathbb{R}$ | $u(x) = \dfrac{1}{\|x - x_0\|}$ | $u(x) = \|x - x_0\|$      |
-> | $x_0 = \pm \infty$   | $u(x) = \|x\|$                  | $u(x) = \dfrac{1}{\|x\|}$ |
+> | $x_0 \in \mathbb{R}$ | $u(x) = \dfrac{1}{\vert x - x_0 \vert}$ | $u(x) = \vert x - x_0 \vert$      |
+> | $x_0 = \pm \infty$   | $u(x) = \vert x \vert$                  | $u(x) = \dfrac{1}{\vert x \vert}$ |
 ^definizione-infiniti-e-infinitesimi-campione
 
 La presenza del valore assoluto%% link %% negli [infiniti e infinitesimi campione](Infiniti%20e%20infinitesimi.md#^definizione-infiniti-e-infinitesimi-campione) è giustificata dalla seguente definizione.
@@ -757,13 +757,13 @@ Analoghe definizioni si introducono per $x \to x_0^\pm$ se $x_0 \in \mathbb{R}$
 > 
 > In pratica, l'ordine $\alpha$ misura la velocità di avvicinamento a $0$ (o di fuga verso $\pm \infty$) usando l'[infinito (o infinitesimo) campione](Infiniti%20e%20infinitesimi.md#^definizione-infiniti-e-infinitesimi-campione) $u$ come "righello": più è alto l'ordine, più rapidamente la funzione va verso $0$ o verso $\pm \infty$.
 > 
-> Per esempio, prendendo per $x \to 0$ l'[infinitesimo campione](Infiniti%20e%20infinitesimi.md#^definizione-infiniti-e-infinitesimi-campione) $u(x) = |x - x_0| = |x|$, si ha una gerarchia naturale:
+> Per esempio, prendendo per $x \to 0$ l'[infinitesimo campione](Infiniti%20e%20infinitesimi.md#^definizione-infiniti-e-infinitesimi-campione) $u(x) = |x - x_0| = \vert x \vert$, si ha una gerarchia naturale:
 > 
 > | Ordine $\alpha$         | **[Infinitesimi](Infiniti%20e%20infinitesimi.md#^definizione-infinito-e-infinitesimo) di esempio** | **Comportamento**                        |
 > | ----------------------- | -------------------------------------------------------------------------------------------------- | ---------------------------------------- |
-> | $\alpha = \dfrac{1}{2}$ | $\sqrt x$                                                                                          | Tendono a $0$ più lentamente di $\|x\|$  |
-> | $\alpha = 1$            | $\sin x$, $\tan x$, $3x$                                                                           | Tendono a $0$ come $\|x\|$               |
-> | $\alpha = 2$            | $x^2 - x^4$, $1 - \cos x$                                                                          | Tendono a $0$ più velocemente di $\|x\|$ |
+> | $\alpha = \dfrac{1}{2}$ | $\sqrt x$                                                                                          | Tendono a $0$ più lentamente di $\vert x \vert$  |
+> | $\alpha = 1$            | $\sin x$, $\tan x$, $3x$                                                                           | Tendono a $0$ come $\vert x \vert$               |
+> | $\alpha = 2$            | $x^2 - x^4$, $1 - \cos x$                                                                          | Tendono a $0$ più velocemente di $\vert x \vert$ |
 > | $\alpha = 3$            | $x - \sin x$, $x^3$                                                                                | Tendono a $0$ ancora più velocemente     |
 
 > [!osservazione] Osservazione: perché serve che $l \in \mathbb{R} \setminus \{ 0 \}$?
@@ -774,7 +774,7 @@ Analoghe definizioni si introducono per $x \to x_0^\pm$ se $x_0 \in \mathbb{R}$
 > 
 > L'ordine $\alpha$ è dunque il valore "giusto" che risponde alla domanda: "alzando $u$ alla potenza $\alpha$, riesco a tenere il passo con $f$?". Quando il [limite](content/Matematica/Analisi%20matematica/Limiti/_index.md#^definizione-limite) dà un $l \in \mathbb{R} \setminus \{0\}$, la risposta è sì: $\alpha$ è quello corretto, e $l[u(x)]^\alpha$ è la [parte principale](Infiniti%20e%20infinitesimi.md#^definizione-infinitesimo-di-ordine-alfa-rispetto-all-infinitesimo-campione-u), cioè l'approssimazione più semplice di $f$ vicino a $x_0$.
 
-> [!esempio] Esempio: $\sin x$ infinitesimo di ordine $1$ rispetto all'infinitesimo campione $u(x) = |x|$
+> [!esempio] Esempio: $\sin x$ infinitesimo di ordine $1$ rispetto all'infinitesimo campione $u(x) = \vert x \vert$
 > 
 > Supponiamo che valga il [limite](content/Matematica/Analisi%20matematica/Limiti/_index.md#^definizione-limite)
 > 
@@ -785,16 +785,16 @@ Analoghe definizioni si introducono per $x \to x_0^\pm$ se $x_0 \in \mathbb{R}$
 > Ciò significa che $\sin x$ è un [infinitesimo](Infiniti%20e%20infinitesimi.md#^definizione-infinito-e-infinitesimo) in $0$. Essendo un [infinitesimo](Infiniti%20e%20infinitesimi.md#^definizione-infinito-e-infinitesimo) con $l = 0 \in \mathbb{R}$, il suo [infinitesimo campione](Infiniti%20e%20infinitesimi.md#^definizione-infiniti-e-infinitesimi-campione) è
 > 
 > $$
-> u(x) = |x - x_0| = |x - 0| = |x|
+> u(x) = |x - x_0| = |x - 0| = \vert x \vert
 > $$
 > 
 > Dal momento che vale il [limite](content/Matematica/Analisi%20matematica/Limiti/_index.md#^definizione-limite) (con $\alpha = 1$)
 > 
 > $$
-> \lim_{x \to 0} \dfrac{\sin x}{|x|^1} = 1
+> \lim_{x \to 0} \dfrac{\sin x}{\vert x \vert^1} = 1
 > $$
 > 
-> possiamo concludere che $\sin x$ è un [infinitesimo di ordine $1$ rispetto all'infinitesimo campione $u(x) = |x|$](Infiniti%20e%20infinitesimi.md#^definizione-infinitesimo-di-ordine-alfa-rispetto-all-infinitesimo-campione-u) per $x \to 0$, con [parte principale](Infiniti%20e%20infinitesimi.md#^definizione-infinitesimo-di-ordine-alfa-rispetto-all-infinitesimo-campione-u) $1 \cdot |x|^1 = x$.
+> possiamo concludere che $\sin x$ è un [infinitesimo di ordine $1$ rispetto all'infinitesimo campione $u(x) = \vert x \vert$](Infiniti%20e%20infinitesimi.md#^definizione-infinitesimo-di-ordine-alfa-rispetto-all-infinitesimo-campione-u) per $x \to 0$, con [parte principale](Infiniti%20e%20infinitesimi.md#^definizione-infinitesimo-di-ordine-alfa-rispetto-all-infinitesimo-campione-u) $1 \cdot \vert x \vert^1 = x$.
 
 %% 
 osservazioni c,d,e, pagg. 206-207
@@ -824,110 +824,53 @@ esempi pagg. 207-208
 > 
 > |                                                                   | **$f(x)$ è un [infinito](Infiniti%20e%20infinitesimi.md#^definizione-infinito-e-infinitesimo)**                                                                              | **$f(x)$ è un [infinitesimo](Infiniti%20e%20infinitesimi.md#^definizione-infinito-e-infinitesimo)**                                                                     |
 > | ----------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-> | $\forall k \in \mathbb{R}^{> 0} . \big( [u(x)]^k = o(f(x)) \big)$ | $f(x)$ è un [infinito](Infiniti%20e%20infinitesimi.md#^definizione-infinito-e-infinitesimo) di ordine _superiore_,<br>tende a $\pm \infty$ più _velocemente_ di $\|u(x)\|^k$ | $f(x)$ è un [infinitesimo](Infiniti%20e%20infinitesimi.md#^definizione-infinito-e-infinitesimo) di ordine _inferiore_,<br>tende a $0$ più _lentamente_ di $\|u(x)\|^k$  |
-> | $\forall k \in \mathbb{R}^{> 0} . \big( f(x) = o([u(x)]^k) \big)$ | $f(x)$ è un [infinito](Infiniti%20e%20infinitesimi.md#^definizione-infinito-e-infinitesimo) di ordine _inferiore_,<br>tende a $\pm \infty$ più _lentamente_ di $\|u(x)\|^k$  | $f(x)$ è un [infinitesimo](Infiniti%20e%20infinitesimi.md#^definizione-infinito-e-infinitesimo) di ordine _superiore_,<br>tende a $0$ più _velocemente_ di $\|u(x)\|^k$ |
+> | $\forall k \in \mathbb{R}^{> 0} . \big( [u(x)]^k = o(f(x)) \big)$ | $f(x)$ è un [infinito](Infiniti%20e%20infinitesimi.md#^definizione-infinito-e-infinitesimo) di ordine _superiore_,<br>tende a $\pm \infty$ più _velocemente_ di $\vert u(x)\vert^k$ | $f(x)$ è un [infinitesimo](Infiniti%20e%20infinitesimi.md#^definizione-infinito-e-infinitesimo) di ordine _inferiore_,<br>tende a $0$ più _lentamente_ di $\vert u(x)\vert^k$  |
+> | $\forall k \in \mathbb{R}^{> 0} . \big( f(x) = o([u(x)]^k) \big)$ | $f(x)$ è un [infinito](Infiniti%20e%20infinitesimi.md#^definizione-infinito-e-infinitesimo) di ordine _inferiore_,<br>tende a $\pm \infty$ più _lentamente_ di $\vert u(x)\vert^k$  | $f(x)$ è un [infinitesimo](Infiniti%20e%20infinitesimi.md#^definizione-infinito-e-infinitesimo) di ordine _superiore_,<br>tende a $0$ più _velocemente_ di $\vert u(x)\vert^k$ |
 ^definizione-infinitesimo-di-ordine-superiore-o-inferiore-a-qualsiasi-potenza-di-u-x
 
 > [!esempio] Esempio: $f(x) = a^x$ con $a > 1$
 > 
-> La [funzione](content/Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-funzione) $f(x) = a^x$ (con $a > 1$) è un [infinito](Infiniti%20e%20infinitesimi.md#^definizione-infinito-e-infinitesimo) per $x \to + \infty$ e il suo [infinito campione](Infiniti%20e%20infinitesimi.md#^definizione-infiniti-e-infinitesimi-campione) è $u(x) = |x|$. Poiché si ha che
+> La [funzione](content/Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-funzione) $f(x) = a^x$ (con $a > 1$) è un [infinito](Infiniti%20e%20infinitesimi.md#^definizione-infinito-e-infinitesimo) per $x \to + \infty$ e il suo [infinito campione](Infiniti%20e%20infinitesimi.md#^definizione-infiniti-e-infinitesimi-campione) è $u(x) = \vert x \vert$. Poiché si ha che
 > 
 > $$
-> \forall k \in \mathbb{R}^{> 0} . \big( |x|^k = o(a^x) \big)
+> \forall k \in \mathbb{R}^{> 0} . \big( \vert x \vert^k = o(a^x) \big)
 > $$
 > 
-> allora $a^x$ è un [infinito di ordine superiore a qualsiasi potenza di $|x|$](Infiniti%20e%20infinitesimi.md#^definizione-infinitesimo-di-ordine-superiore-o-inferiore-a-qualsiasi-potenza-di-u-x) per $x \to + \infty$, cioè $a^x$ tende a $x \to + \infty$ più velocemente di $|x|^k$, qualsiasi sia la potenza%% link %% $k$.
+> allora $a^x$ è un [infinito di ordine superiore a qualsiasi potenza di $\vert x \vert$](Infiniti%20e%20infinitesimi.md#^definizione-infinitesimo-di-ordine-superiore-o-inferiore-a-qualsiasi-potenza-di-u-x) per $x \to + \infty$, cioè $a^x$ tende a $x \to + \infty$ più velocemente di $\vert x \vert^k$, qualsiasi sia la potenza%% link %% $k$.
 > 
-> Inoltre, la [funzione](content/Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-funzione) $f(x) = a^x$ (con $a > 1$) è un [infinitesimo](Infiniti%20e%20infinitesimi.md#^definizione-infinito-e-infinitesimo) per $x \to - \infty$ e il suo [infinito campione](Infiniti%20e%20infinitesimi.md#^definizione-infiniti-e-infinitesimi-campione) è $u(x) = \dfrac{1}{|x|}$. Poiché si ha che
+> Inoltre, è un [infinitesimo](Infiniti%20e%20infinitesimi.md#^definizione-infinito-e-infinitesimo) per $x \to - \infty$ e il suo [infinito campione](Infiniti%20e%20infinitesimi.md#^definizione-infiniti-e-infinitesimi-campione) è $u(x) = \dfrac{1}{\vert x \vert}$. Poiché si ha che
 > 
 > $$
-> \forall k \in \mathbb{R}^{> 0} . \left( a^x = o\left(\left( \dfrac{1}{|x|} \right) ^k\right) \right)
+> \forall k \in \mathbb{R}^{> 0} . \left( a^x = o\left(\left( \dfrac{1}{\vert x \vert} \right) ^k\right) \right)
 > $$
 > 
-> allora $a^x$ è un [infinitesimo di ordine inferiore a qualsiasi potenza di $\dfrac{1}{|x|}$](Infiniti%20e%20infinitesimi.md#^definizione-infinitesimo-di-ordine-superiore-o-inferiore-a-qualsiasi-potenza-di-u-x) per $x \to - \infty$, cioè $a^x$ tende a $x \to - \infty$ più lentamente di $\left( \dfrac{1}{|x|} \right)^k$, qualsiasi sia la potenza%% link %% $k$.
+> allora $a^x$ è un [infinitesimo di ordine superiore a qualsiasi potenza di $\dfrac{1}{\vert x \vert}$](Infiniti%20e%20infinitesimi.md#^definizione-infinitesimo-di-ordine-superiore-o-inferiore-a-qualsiasi-potenza-di-u-x) per $x \to - \infty$, cioè $a^x$ tende a $x \to - \infty$ più velocemente di $\left( \dfrac{1}{\vert x \vert} \right)^k$, qualsiasi sia la potenza%% link %% $k$.
 
+%% 
+Esercizio: cosa avviene con $f(x) = a^x$ con $0 < a < 1$?
+Soluzione: i ruoli si invertono
 %%
----
 
-**Per $x \to -\infty$** — $f$ è un **infinitesimo** (poiché $a > 1 \Rightarrow a^x \to 0$). L'infinitesimo campione è $u(x) = \tfrac{1}{|x|}$.
+> [!esempio] Esempio: $f(x) = \log_a x$ con $a \in \mathbb{R}^{> 0} \setminus \{ 1 \}$
+> 
+> La [funzione](content/Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-funzione) $f(x) = \log_a x$ (con $a \in \mathbb{R}^{> 0} \setminus \{ 1 \}$) è un [infinito](Infiniti%20e%20infinitesimi.md#^definizione-infinito-e-infinitesimo) per $x \to + \infty$ e il suo [infinito campione](Infiniti%20e%20infinitesimi.md#^definizione-infiniti-e-infinitesimi-campione) è $u(x) = \vert x \vert$. Poiché si ha che
+> 
+> $$
+> \forall k \in \mathbb{R}^{> 0} . \left( \log_a x = o\left(|x|^k\right) \right) 
+> $$
+> 
+> allora $\log_a x$ è un [infinito di ordine inferiore a qualsiasi potenza di $|x|$](Infiniti%20e%20infinitesimi.md#^definizione-infinitesimo-di-ordine-superiore-o-inferiore-a-qualsiasi-potenza-di-u-x) per $x \to + \infty$, cioè $\log_a x$ tende a $x \to + \infty$ più velocemente di $\vert x \vert^k$, qualsiasi sia la potenza%% link %% $k$.
+> 
+> Inoltre, è un [infinito](Infiniti%20e%20infinitesimi.md#^definizione-infinito-e-infinitesimo) anche per $x \to 0^+$ e il suo [infinito campione](Infiniti%20e%20infinitesimi.md#^definizione-infiniti-e-infinitesimi-campione) è $u(x) = \dfrac{1}{\vert x - x_0 \vert} = \dfrac{1}{\vert x - 0 \vert} = \dfrac{1}{\vert x \vert}$. Poiché si ha che
+> 
+> $$
+> \forall k \in \mathbb{R}^{> 0} . \left( \log_a x = o\left( \left( \dfrac{1}{\vert x \vert} \right)^k \right) \right) 
+> $$
+> 
+> allora $\log_a x$ è un [infinito di ordine inferiore a qualsiasi potenza di $\dfrac{1}{\vert x \vert}$](Infiniti%20e%20infinitesimi.md#^definizione-infinitesimo-di-ordine-superiore-o-inferiore-a-qualsiasi-potenza-di-u-x) per $x \to 0^+$, cioè $\log_a x$ tende a $x \to 0^+$ più velocemente di $\left( \dfrac{1}{\vert x \vert} \right)^k$, qualsiasi sia la potenza%% link %% $k$.
 
-$$\forall k > 0: \quad a^x = o\!\left(\frac{1}{|x|^k}\right) \quad \Longrightarrow \quad \frac{a^x}{1/|x|^k} = |x|^k a^x \to 0$$
-
-✦ $a^x$ è un **infinitesimo di ordine superiore a qualunque potenza di $\tfrac{1}{|x|}$** → **nessun ordine, nessuna parte principale** rispetto a $u(x) = \tfrac{1}{|x|}$.
-
----
-
-**Caso $0 < a < 1$** (i ruoli si invertono):
-
-| Limite | Comportamento | Ordine |
-|---|---|---|
-| $x \to +\infty$ | infinitesimo | superiore a qualunque potenza di $\tfrac{1}{x}$ |
-| $x \to -\infty$ | infinito | superiore a qualunque potenza di $|x|$ |
-
----
-
-### Esempio 2 — $f(x) = \log_a x$ con $a > 0,\ a \neq 1$
-
-**Per $x \to +\infty$** — $f$ è un **infinito**. Campione $u(x) = x$.
-
-$$\forall k > 0: \quad \log_a x = o(x^k) \quad \Longrightarrow \quad \frac{\log_a x}{x^k} \to 0$$
-
-✦ $\log_a x$ è un **infinito di ordine inferiore a qualunque potenza di $x$** → **nessun ordine, nessuna parte principale** rispetto a $u(x) = x$.
-
----
-
-**Per $x \to 0^+$** — $f$ è ancora un **infinito** (con segno, ma $|\log_a x| \to +\infty$). Campione $u(x) = \tfrac{1}{x}$.
-
-$$\forall k > 0: \quad \log_a x = o\!\left(\frac{1}{x^k}\right) \quad \Longrightarrow \quad \frac{\log_a x}{1/x^k} = x^k \log_a x \to 0$$
-
-✦ $\log_a x$ è un **infinito di ordine inferiore a qualunque potenza di $\tfrac{1}{x}$** → **nessun ordine, nessuna parte principale** rispetto a $u(x) = \tfrac{1}{x}$.
-
----
-
-### Schema riassuntivo
-
-| Funzione | Limite | Tipo | Ordine rispetto al campione |
-|---|---|---|---|
-| $a^x,\ a>1$ | $x\to+\infty$ | infinito | **superiore** a qualunque $x^k$ |
-| $a^x,\ a>1$ | $x\to-\infty$ | infinitesimo | **superiore** a qualunque $(1/\|x\|)^k$ |
-| $a^x,\ 0<a<1$ | $x\to+\infty$ | infinitesimo | **superiore** a qualunque $(1/x)^k$ |
-| $a^x,\ 0<a<1$ | $x\to-\infty$ | infinito | **superiore** a qualunque $\|x\|^k$ |
-| $\log_a x$ | $x\to+\infty$ | infinito | **inferiore** a qualunque $x^k$ |
-| $\log_a x$ | $x\to 0^+$ | infinito | **inferiore** a qualunque $(1/x)^k$ |
-
-In tutti questi casi **non esiste un ordine finito** $\alpha$ né una **parte principale** rispetto all'infinito campione naturale.
----
-
-### Esempio classico: $e^x$
-
-$$\lim_{x \to +\infty} \frac{e^x}{x^n} = +\infty \quad \forall n \in \mathbb{N}$$
-
-Questo si dimostra facilmente con il teorema di de l'Hôpital applicato $n$ volte:
-
-$$\frac{e^x}{x^n} \xrightarrow{n \text{ volte H}} \frac{e^x}{n!} \to +\infty$$
-
----
-
-### Altri esempi
-
-| Funzione | Comportamento |
-|---|---|
-| $e^x$ | infinito di ordine superiore a qualsiasi $x^n$ |
-| $e^{x^2}$ | ancora più rapido di $e^x$ |
-| $x!$ (o $\Gamma(x)$) | cresce più di ogni potenza |
-| $x^x$ | crescita ultrarapida |
-
----
-
-### Confronto con la scala degli infiniti
-
-La gerarchia classica per $x \to +\infty$ è:
-
-$$\ln x \ll x^\alpha \ll e^x \ll e^{x^2} \ll x^x$$
-
-dove $f \ll g$ significa $\dfrac{f}{g} \to 0$.
-
-Quindi $e^x$ "batte" qualsiasi polinomio o potenza di $x$, ed è l'esempio prototipico di questa categoria.
+%% 
+esempi 4.33 pagg. 208-209
 %%
 
 ---

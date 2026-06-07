@@ -1,6 +1,6 @@
 from pprint import pprint
 
-icon_name = "Forme indeterminate"
+icon_name = "Infiniti e infinitesimi"
 
 with open(f"./content/_icons/{icon_name}.svg") as svg:
     svg = svg.read().split("<")
