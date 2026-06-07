@@ -27,6 +27,47 @@ Dopo aver definito gli [asintoti verticali](Asintoti%20verticali%20e%20orizzonta
 esempi 4.35 pagg. 209-210 lancelotti
 %%
 
+%% 
+Osservazioni 4.36 pagg. 210-211
+%%
+
+> [!teorema] Teorema di caratterizzazione degli asintoti obliqui
+> 
+> Data una [funzione](content/Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ con $\text{dom}(f)$ illimitato superiormente%% Link %% (o inferiormente%% link %%) e dati $m,q \in \mathbb{R}$ con $m \ne 0$, la retta%% link %% $y = mx + q$ è un [asintoto obliquo destro](Asintoti%20obliqui.md#^definizione-asintoto-obliquo) (o [sinistro](Asintoti%20obliqui.md#^definizione-asintoto-obliquo)) se e solo se
+> 1. $f$ è un [infinito](Infiniti%20e%20infinitesimi.md#^definizione-infinito-e-infinitesimo) per $x \to + \infty$ (o per $x \to - \infty$):
+> 	$$
+> 	\lim_{x \to \pm \infty} f(x) = \pm \infty
+> 	$$
+> 2. $f$ è un [infinito di ordine $1$ rispetto all'infinito campione $u(x) = |x|$](Infiniti%20e%20infinitesimi.md#^definizione-infinitesimo-di-ordine-alfa-rispetto-all-infinitesimo-campione-u) per $x \to + \infty$ (o per $x \to - \infty$):
+> 	$$
+> 	\lim_{x \to \pm \infty} \dfrac{f(x)}{|x|} = m
+> 	$$
+> 3. Vale il seguente [limite](content/Matematica/Analisi%20matematica/Limiti/_index.md#^definizione-limite):
+> 	$$
+> 	\lim_{x \to \pm \infty} \left( f(x) - mx \right) = q
+> 	$$
+^teorema-di-caratterizzazione-degli-asintoti-obliqui
+
+%% 
+Dimostrazione per esercizio
+%%
+
+%% 
+Osservazione 4.38 pag. 211 Lancelotti
+%%
+
+%% 
+Esercizio 4.39 pag. 211 Lancelotti
+%%
+
+%% 
+Osservazione 4.40 pagg. 210-211 Lancelotti
+%%
+
+%% 
+Esempi pagg. 212-214 Lancelotti
+%%
+
 ---
 
 > [!fonti]+ Fonti
