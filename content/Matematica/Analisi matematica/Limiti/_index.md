@@ -61,7 +61,7 @@ Se, tuttavia, $x$ si avvicina a $x_0 = 0$ in modo casuale, cambiando anche segno
 
 Da questi esempi si capisce che la nozione di [_limite_](content/Matematica/Analisi%20matematica/Limiti/_index.md#^definizione-limite) ci dice qual è il _comportamento_ (o _andamento_) di una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-funzione) e dei valori che essa può assumere a seconda di come la sua variabile indipendente%% link %% _tende_ a un determinato "punto"%% link %% (e qui la parola _punto_ viene messa tra virgolette perché la variabile%% link %% può anche tendere verso $+\infty$ o $-\infty$ che **non** sono punti%% link %% di $\mathbb{R}$).
 
-> [!definizione]+ Definizione: limite
+> [!definizione]+ Definizione: limite di funzione
 > 
 > Data una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$, un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R} \cup \{ \pm \infty \}$ per $\text{dom}(f)$ e un valore%% link %% $l \in \mathbb{R} \cup \{ \pm \infty \}$, diciamo che **$f$ ha limite $l$ per $x$ che tende a $x_0$** se, per ogni [intorno](Topologia%20dei%20reali.md#^definizione-intorno-di-un-punto) $I(l)$ di $l$, esiste un [intorno](Topologia%20dei%20reali.md#^definizione-intorno-di-un-punto) $I(x_0)$ di $x_0$ tale che, per ogni $x \in \text{dom}(f)$ con $x \in I(x_0)$ e $x \ne x_0$, si ha che $f(x) \in I(l)$:
 > 
@@ -76,7 +76,7 @@ Da questi esempi si capisce che la nozione di [_limite_](content/Matematica/Anal
 > $$
 > 
 > che si legge "_limite per $x$ che tende a $x_0$ di $f(x)$ uguale a $l$_" o "_$f(x)$ tende a $l$ per $x$ che tende a $x_0$_".
-^definizione-limite
+^definizione-limite-di-funzione
 
 > [!osservazione]+ Osservazione: non è necessario che $\color{#7F7F7F} x_0 \in \text{dom}(f)$
 > 
@@ -97,7 +97,7 @@ La [definizione di _limite_](content/Matematica/Analisi%20matematica/Limiti/_ind
 > $$
 > \begin{array}{}
 > I(x_0) = I_\delta(x_0) = (x_0 - \delta, x_0 + \delta) \\
-> I(l) = I_\epsilon(l) = (l - \epsilon, l + \epsilon)
+> I(l) = I_\varepsilon(l) = (l - \varepsilon, l + \varepsilon)
 > \end{array}
 > $$
 > 
@@ -108,11 +108,11 @@ La [definizione di _limite_](content/Matematica/Analisi%20matematica/Limiti/_ind
 > \displaystyle
 > \lim_{x \to x_0} f(x) = l \\
 > \Updownarrow \\
-> \forall \epsilon > 0, \exists \delta > 0, \forall x \in \text{dom}(f) . \big( 0 < |x - x_0| < \delta \implies |f(x) - l| < \epsilon \big)
+> \forall \varepsilon > 0, \exists \delta > 0, \forall x \in \text{dom}(f) . \big( 0 < |x - x_0| < \delta \implies |f(x) - l| < \varepsilon \big)
 > \end{array}
 > $$
 > 
-> Questa definizione ci dice che, più $x$ è vicino a $x_0$, più $f(x)$ è vicino a $l$. Infatti, per quanto ci si voglia avvicinare a $l$ (ossia per quanto sia piccolo il valore della distanza $\epsilon$ tra $f(x)$ ed $l$), si trova che per tutti i punti%% link %% $x$ in $\text{dom}(f)$ (escluso $x_0$) abbastanza vicini a $x_0$ (ossia contenuti nella distanza $\delta$ tra $x$ ed $x_0$) il corrispondente valore $f(x)$ è nella distanza $\epsilon$ prestabilita da $l$.
+> Questa definizione ci dice che, più $x$ è vicino a $x_0$, più $f(x)$ è vicino a $l$. Infatti, per quanto ci si voglia avvicinare a $l$ (ossia per quanto sia piccolo il valore della distanza $\varepsilon$ tra $f(x)$ ed $l$), si trova che per tutti i punti%% link %% $x$ in $\text{dom}(f)$ (escluso $x_0$) abbastanza vicini a $x_0$ (ossia contenuti nella distanza $\delta$ tra $x$ ed $x_0$) il corrispondente valore $f(x)$ è nella distanza $\varepsilon$ prestabilita da $l$.
 ^osservazione-limite-con-x0-finito-l-finito
 
 > [!esempio]- Esempio di un limite con $\color{#7F7FFF} x_0 \in \mathbb{R} \land l \in \mathbb{R}$
@@ -131,7 +131,7 @@ La [definizione di _limite_](content/Matematica/Analisi%20matematica/Limiti/_ind
 > 
 > Prendendo un certo punto%% link %% $x'$ "lontano" da $x_0$, dobbiamo dimostrare che la sua immagine%% link %% $f(x')$ sia più distante da $l$ di quanto lo saranno le immagini%% link %% di altri punti%% link %% $x_1, x_2, \ldots$ più vicini a $x_0$.
 > 
-> Per esempio, prendiamo il punto%% link %% $x' = 1.4$ distante da $x_0$ per $\delta' = |x' - x_0| = 0.4$ la cui immagine%% Link %% $f(x') = f(1.4) = 2.4$ è distante da $l=2$ per un valore $\epsilon' = f(x') - l = 0.4$.
+> Per esempio, prendiamo il punto%% link %% $x' = 1.4$ distante da $x_0$ per $\delta' = |x' - x_0| = 0.4$ la cui immagine%% Link %% $f(x') = f(1.4) = 2.4$ è distante da $l=2$ per un valore $\varepsilon' = f(x') - l = 0.4$.
 > 
 > Prendiamo tutti i punti $x_1 = 1.05, x_2 = 1.1, \ldots$ più vicini a $x_0$ di quanto non lo sia $x'$, ossia con distanze
 > 
@@ -143,25 +143,25 @@ La [definizione di _limite_](content/Matematica/Analisi%20matematica/Limiti/_ind
 > \end{array}
 > $$
 > 
-> Questi punti avranno la propria immagine $f(x_1) = 2.05, f(x_2) =2.1, \ldots$ molto più vicina a $l$ di quanto non lo sia quella di $f(x)$, cioè $\epsilon' = 0.4$:
+> Questi punti avranno la propria immagine $f(x_1) = 2.05, f(x_2) =2.1, \ldots$ molto più vicina a $l$ di quanto non lo sia quella di $f(x)$, cioè $\varepsilon' = 0.4$:
 > 
 > $$
 > \begin{array}{}
-> \epsilon_1 = |f(x_1) - l| = 0.05 \\
-> \epsilon_2 = |f(x_2) - l| = 0.01 \\
+> \varepsilon_1 = |f(x_1) - l| = 0.05 \\
+> \varepsilon_2 = |f(x_2) - l| = 0.01 \\
 > \ldots
 > \end{array}
 > $$
 > 
 > Riassumendo, abbiamo:
 > 
-> | Valori di $x$ | $\delta = \|x - x_0\|$     | $f(x)$          | $\epsilon = \|f(x) - l\|$    |
+> | Valori di $x$ | $\delta = \|x - x_0\|$     | $f(x)$          | $\varepsilon = \|f(x) - l\|$    |
 > | ------------- | ----------------- | --------------- | ----------------- |
-> | $x' = 1.4$    | $\delta' = 0.4$   | $f(x') = 2.4$   | $\epsilon' = 0.4$ |
-> | $x_2 = 1.1$   | $\delta_2 = 0.1$  | $f(x_2) = 2.1$  | $\epsilon' = 0.1$ |
-> | $x_1 = 1.05$  | $\delta_1 = 0.05$ | $f(x_1) = 2.05$ | $\epsilon' = 0.5$ |
+> | $x' = 1.4$    | $\delta' = 0.4$   | $f(x') = 2.4$   | $\varepsilon' = 0.4$ |
+> | $x_2 = 1.1$   | $\delta_2 = 0.1$  | $f(x_2) = 2.1$  | $\varepsilon' = 0.1$ |
+> | $x_1 = 1.05$  | $\delta_1 = 0.05$ | $f(x_1) = 2.05$ | $\varepsilon' = 0.5$ |
 > 
-> Abbiamo cioè dimostrato che, per un $\epsilon$ qualsiasi (in questo caso $e' = 0.4$), esiste un $\delta$ (in questo caso $\delta' = 0.4$) tale che, per ogni $x \in \text{dom}(f)$ (come, per esempio, $x_1$ e $x_2$), se la distanza tra questi e $x_0$ è minore di $\delta$ allora la distanza tra $f(x)$ ed $l$ è minore di $\epsilon$.
+> Abbiamo cioè dimostrato che, per un $\varepsilon$ qualsiasi (in questo caso $e' = 0.4$), esiste un $\delta$ (in questo caso $\delta' = 0.4$) tale che, per ogni $x \in \text{dom}(f)$ (come, per esempio, $x_1$ e $x_2$), se la distanza tra questi e $x_0$ è minore di $\delta$ allora la distanza tra $f(x)$ ed $l$ è minore di $\varepsilon$.
 
 %% rappresentare graficamente %%
 
@@ -187,30 +187,30 @@ La [definizione di _limite_](content/Matematica/Analisi%20matematica/Limiti/_ind
 > Secondo la [definizione del caso $x_0 \in \mathbb{R} \land l \in \mathbb{R}$](content/Matematica/Analisi%20matematica/Limiti/_index.md#^osservazione-limite-con-x0-finito-l-finito), abbiamo che
 > 
 > $$
-> \forall \epsilon > 0, \exists \delta > 0, \forall x \in \mathbb{R} . \big( 0 < |x - 1| < \delta \implies |f(x) - 5| < \epsilon \big)
+> \forall \varepsilon > 0, \exists \delta > 0, \forall x \in \mathbb{R} . \big( 0 < |x - 1| < \delta \implies |f(x) - 5| < \varepsilon \big)
 > $$
 > 
-> Consideriamo un $\epsilon > 0$ qualunque: esiste un $\delta$ che rispetta questa definizione?
+> Consideriamo un $\varepsilon > 0$ qualunque: esiste un $\delta$ che rispetta questa definizione?
 > 
-> Partiamo dall'obiettivo che vogliamo dimostrare, cioè che $|f(x) - 5| < \epsilon$. Si ha che, se $x \ne x_0 = 1$, allora
+> Partiamo dall'obiettivo che vogliamo dimostrare, cioè che $|f(x) - 5| < \varepsilon$. Si ha che, se $x \ne x_0 = 1$, allora
 > 
 > $$
 > \begin{array}{}
-> |f(x) - 5| < \epsilon \\
+> |f(x) - 5| < \varepsilon \\
 > \Updownarrow \\
-> |(3x+2) - 5| < \epsilon \\
+> |(3x+2) - 5| < \varepsilon \\
 > \Updownarrow \\
-> |3x - 3| < \epsilon \\
+> |3x - 3| < \varepsilon \\
 > \Updownarrow \\
-> |x - 1| < \dfrac{\epsilon}{3}
+> |x - 1| < \dfrac{\varepsilon}{3}
 > \end{array}
 > $$
 > 
-> Dato che, per definizione, abbiamo anche $|x-1| < \delta$, prendiamo arbitrariamente $\displaystyle\delta = \dfrac{\epsilon}{3}$, che non è necessariamente il $\delta$ più piccolo che possiamo prendere in questo [limite](content/Matematica/Analisi%20matematica/Limiti/_index.md#^definizione-limite).
+> Dato che, per definizione, abbiamo anche $|x-1| < \delta$, prendiamo arbitrariamente $\displaystyle\delta = \dfrac{\varepsilon}{3}$, che non è necessariamente il $\delta$ più piccolo che possiamo prendere in questo [limite](content/Matematica/Analisi%20matematica/Limiti/_index.md#^definizione-limite).
 > 
-> Ciò ci porta al fatto che, per ogni $x$ tale che $0 < |x-1| < \delta$, soddisfiamo automaticamente l'obiettivo $|f(x) - 5| < \epsilon$, verificando così il [limite](content/Matematica/Analisi%20matematica/Limiti/_index.md#^definizione-limite). 
+> Ciò ci porta al fatto che, per ogni $x$ tale che $0 < |x-1| < \delta$, soddisfiamo automaticamente l'obiettivo $|f(x) - 5| < \varepsilon$, verificando così il [limite](content/Matematica/Analisi%20matematica/Limiti/_index.md#^definizione-limite). 
 > 
-> Perché $\displaystyle\delta = \dfrac{\epsilon}{3}$ è "arbitrario"? Perché avremmo potuto prendere $\displaystyle\delta = \dfrac{\epsilon}{4}$ o $\displaystyle\delta = \dfrac{\epsilon}{10}$ o qualunque altro valore più piccolo di $\dfrac{\epsilon}{3}$, ma tanto funzionerebbero tutti: $\dfrac{\epsilon}{3}$ è semplicemente il più comodo che emerge dal calcolo.
+> Perché $\displaystyle\delta = \dfrac{\varepsilon}{3}$ è "arbitrario"? Perché avremmo potuto prendere $\displaystyle\delta = \dfrac{\varepsilon}{4}$ o $\displaystyle\delta = \dfrac{\varepsilon}{10}$ o qualunque altro valore più piccolo di $\dfrac{\varepsilon}{3}$, ma tanto funzionerebbero tutti: $\dfrac{\varepsilon}{3}$ è semplicemente il più comodo che emerge dal calcolo.
 > 
 > Notiamo anche il fatto che $f(1) = 4 \ne 5$, ma è irrilevante: la condizione $0 < |x - 1|$ esclude esattamente $x = 1$, quindi il valore in quel punto%% link %% non conta.
 
@@ -366,7 +366,7 @@ perché nelle parentesi tonde viene già richiesto che $x \ne 0$
 > $$
 > \begin{array}{}
 > I(x_0) = (a, + \infty)\\
-> I(l) = I_\epsilon(l) = (l - \epsilon, l + \epsilon)
+> I(l) = I_\varepsilon(l) = (l - \varepsilon, l + \varepsilon)
 > \end{array}
 > $$
 > 
@@ -377,11 +377,11 @@ perché nelle parentesi tonde viene già richiesto che $x \ne 0$
 > \displaystyle
 > \lim_{x \to + \infty} f(x) = l \\
 > \Updownarrow \\
-> \forall \epsilon > 0, \exists a \in \mathbb{R}, \forall x \in \text{dom}(f) . \big( x > a \implies |f(x) - l| < \epsilon \big)
+> \forall \varepsilon > 0, \exists a \in \mathbb{R}, \forall x \in \text{dom}(f) . \big( x > a \implies |f(x) - l| < \varepsilon \big)
 > \end{array}
 > $$
 > 
-> Questa definizione ci dice che, più $x$ è positivo, più $f(x)$ è vicino a $l$. Infatti, per quanto ci si voglia avvicinare a $l$ (ossia per quanto sia piccolo il valore della distanza $\epsilon$ tra $f(x)$ ed $l$), si trova che per tutti i punti%% link %% $x$ in $\text{dom}(f)$ (escluso $x_0$) maggiori di un certo punto $a$ il corrispondente valore $f(x)$ è nella distanza $\epsilon$ prestabilita da $l$.
+> Questa definizione ci dice che, più $x$ è positivo, più $f(x)$ è vicino a $l$. Infatti, per quanto ci si voglia avvicinare a $l$ (ossia per quanto sia piccolo il valore della distanza $\varepsilon$ tra $f(x)$ ed $l$), si trova che per tutti i punti%% link %% $x$ in $\text{dom}(f)$ (escluso $x_0$) maggiori di un certo punto $a$ il corrispondente valore $f(x)$ è nella distanza $\varepsilon$ prestabilita da $l$.
 ^osservazione-limite-con-x0-piu-infinito-l-finito
 
 > [!osservazione]+ Osservazione: basta un $\color{#7F7F7F} a$ qualsiasi nei limiti con $\color{#7F7F7F} x_0 = + \infty \land l \in \mathbb{R}$
@@ -403,26 +403,26 @@ perché nelle parentesi tonde viene già richiesto che $x \ne 0$
 > Secondo la [definizione del caso $x_0 = + \infty \land l \in \mathbb{R}$](content/Matematica/Analisi%20matematica/Limiti/_index.md#^osservazione-limite-con-x0-piu-infinito-l-finito), abbiamo che
 > 
 > $$
-> \forall \epsilon > 0, \exists a \in \mathbb{R}, \forall x \in \mathbb{R} \setminus \{ 0 \} . \left( x > a \implies \left| \dfrac{1}{x} \right| < \epsilon \right)
+> \forall \varepsilon > 0, \exists a \in \mathbb{R}, \forall x \in \mathbb{R} \setminus \{ 0 \} . \left( x > a \implies \left| \dfrac{1}{x} \right| < \varepsilon \right)
 > $$
 > 
-> Consideriamo un $\epsilon > 0$ qualunque: esiste un $a$ che rispetta questa definizione?
+> Consideriamo un $\varepsilon > 0$ qualunque: esiste un $a$ che rispetta questa definizione?
 > 
-> Partiamo dall'obiettivo che vogliamo dimostrare, cioè che $\displaystyle\left| \dfrac{1}{x} \right| < \epsilon$. Si ha che, se $x \ne 0$, allora
+> Partiamo dall'obiettivo che vogliamo dimostrare, cioè che $\displaystyle\left| \dfrac{1}{x} \right| < \varepsilon$. Si ha che, se $x \ne 0$, allora
 > 
 > $$
 > \begin{array}{}
-> \displaystyle \left| \dfrac{1}{x} \right| < \epsilon \\
+> \displaystyle \left| \dfrac{1}{x} \right| < \varepsilon \\
 > \Updownarrow \\
-> |x| > \dfrac{1}{\epsilon} \\
+> |x| > \dfrac{1}{\varepsilon} \\
 > \Updownarrow \\
-> x < - \dfrac{1}{\epsilon} \land x > \dfrac{1}{\epsilon}
+> x < - \dfrac{1}{\varepsilon} \land x > \dfrac{1}{\varepsilon}
 > \end{array}
 > $$
 > 
-> Dato che, per definizione, abbiamo anche $x > a$, prendiamo arbitrariamente $a = \dfrac{1}{\epsilon}$, che non è necessariamente l'$a$ più piccolo che possiamo prendere in questo [limite](content/Matematica/Analisi%20matematica/Limiti/_index.md#^definizione-limite).
+> Dato che, per definizione, abbiamo anche $x > a$, prendiamo arbitrariamente $a = \dfrac{1}{\varepsilon}$, che non è necessariamente l'$a$ più piccolo che possiamo prendere in questo [limite](content/Matematica/Analisi%20matematica/Limiti/_index.md#^definizione-limite).
 > 
-> Ciò ci porta al fatto che, per ogni $x\in \mathbb{R} \setminus \{ 0 \}$ tale che $x > a$, soddisfiamo automaticamente l'obiettivo $\displaystyle\left| \dfrac{1}{x} \right| < \epsilon$, verificando così il [limite](content/Matematica/Analisi%20matematica/Limiti/_index.md#^definizione-limite).
+> Ciò ci porta al fatto che, per ogni $x\in \mathbb{R} \setminus \{ 0 \}$ tale che $x > a$, soddisfiamo automaticamente l'obiettivo $\displaystyle\left| \dfrac{1}{x} \right| < \varepsilon$, verificando così il [limite](content/Matematica/Analisi%20matematica/Limiti/_index.md#^definizione-limite).
 
 ## 1.5 - $x_0 = - \infty \land l \in \mathbb{R}$
 
@@ -433,7 +433,7 @@ perché nelle parentesi tonde viene già richiesto che $x \ne 0$
 > $$
 > \begin{array}
 > I(x_0) = (- \infty, a) \\
-> I(l) = I_\epsilon(l) = (l - \epsilon, l + \epsilon)
+> I(l) = I_\varepsilon(l) = (l - \varepsilon, l + \varepsilon)
 > \end{array}
 > $$
 > 
@@ -444,11 +444,11 @@ perché nelle parentesi tonde viene già richiesto che $x \ne 0$
 > \displaystyle
 > \lim_{x \to - \infty} f(x) = l \\
 > \Updownarrow \\
-> \forall \epsilon > 0, \exists a \in \mathbb{R}, \forall x \in \text{dom}(f) . \big( x < a \implies |f(x) - l| < \epsilon \big)
+> \forall \varepsilon > 0, \exists a \in \mathbb{R}, \forall x \in \text{dom}(f) . \big( x < a \implies |f(x) - l| < \varepsilon \big)
 > \end{array}
 > $$
 > 
-> Questa definizione ci dice che, più $x$ è negativo, più $f(x)$ è vicino a $l$. Infatti, per quanto ci si voglia avvicinare a $l$ (ossia per quanto sia piccolo il valore della distanza $\epsilon$ tra $f(x)$ ed $l$), si trova che per tutti i punti%% link %% $x$ in $\text{dom}(f)$ (escluso $x_0$) minori di un certo punto $a$ il corrispondente valore $f(x)$ è nella distanza $\epsilon$ prestabilita da $l$.
+> Questa definizione ci dice che, più $x$ è negativo, più $f(x)$ è vicino a $l$. Infatti, per quanto ci si voglia avvicinare a $l$ (ossia per quanto sia piccolo il valore della distanza $\varepsilon$ tra $f(x)$ ed $l$), si trova che per tutti i punti%% link %% $x$ in $\text{dom}(f)$ (escluso $x_0$) minori di un certo punto $a$ il corrispondente valore $f(x)$ è nella distanza $\varepsilon$ prestabilita da $l$.
 ^osservazione-limite-con-x0-meno-infinito-l-finito
 
 ## 1.6 - $x_0 = + \infty \land l = + \infty$
@@ -558,11 +558,11 @@ perché nelle parentesi tonde viene già richiesto che $x \ne 0$
 > > Per la [definizione di limite con $x_0 \in \mathbb{R} \land l \in \mathbb{R}$](content/Matematica/Analisi%20matematica/Limiti/_index.md#^osservazione-limite-con-x0-finito-l-finito), abbiamo che
 > > 
 > > $$
-> > \forall \epsilon > 0, \exists \delta > 0, \forall x \in \mathbb{R} . \big( 0 < |x| < \delta \implies |\text{sgn}(x) - l| < \epsilon \big)
+> > \forall \varepsilon > 0, \exists \delta > 0, \forall x \in \mathbb{R} . \big( 0 < |x| < \delta \implies |\text{sgn}(x) - l| < \varepsilon \big)
 > > $$
 > > 
 > > Abbiamo allora tre casi possibili:
-> > - Se $l>0$, allora preso un $\displaystyle\epsilon = \dfrac{l}{2}$ esiste un $\delta > 0$ tale che, per ogni $x \in \mathbb{R}$ con $0 < |x| < \delta$, si ha che
+> > - Se $l>0$, allora preso un $\displaystyle\varepsilon = \dfrac{l}{2}$ esiste un $\delta > 0$ tale che, per ogni $x \in \mathbb{R}$ con $0 < |x| < \delta$, si ha che
 > > 	$$
 > > 	\begin{array}{}
 > > 	|\text{sgn}(x)-l| < \dfrac{l}{2} \\
@@ -573,7 +573,7 @@ perché nelle parentesi tonde viene già richiesto che $x \ne 0$
 > > 	\end{array}
 > > 	$$
 > > 	e in particolare, per ogni $x \in \mathbb{R}$ tale che $0 < |x| < \delta$, si ha che $\text{sgn}(x) > \dfrac{l}{2} > 0$: otteniamo però un assurdo perché, se $x < 0$, allora $\text{sgn}(x)= -1 < 0$.
-> > - Se $l < 0$, allora preso un $\displaystyle\epsilon = - \dfrac{l}{2}$ esiste un $\delta > 0$ tale che, per ogni $x \in \mathbb{R}$ con $0 < |x| < \delta$, si ha che
+> > - Se $l < 0$, allora preso un $\displaystyle\varepsilon = - \dfrac{l}{2}$ esiste un $\delta > 0$ tale che, per ogni $x \in \mathbb{R}$ con $0 < |x| < \delta$, si ha che
 > > 	$$
 > > 	\begin{array}{}
 > > 	|\text{sgn}(x)-l| < -\dfrac{l}{2} \\
@@ -584,7 +584,7 @@ perché nelle parentesi tonde viene già richiesto che $x \ne 0$
 > > 	\end{array}
 > > 	$$
 > > 	e in particolare, per ogni $x \in \mathbb{R}$ tale che $0 < |x| < \delta$, si ha che $\text{sgn}(x) < \dfrac{l}{2} < 0$: otteniamo però un assurdo perché, se $x > 0$, allora $\text{sgn}(x)= 1 > 0$.
-> > - Se $l = 0$, allora preso un $\displaystyle\epsilon = \dfrac{l}{2}$ esiste un $\delta > 0$ tale che, per ogni $x \in \mathbb{R}$ con $0 < |x| < \delta$, si ha che $|\text{sgn}(x)| < \dfrac{l}{2}$: otteniamo però un assurdo perché, se $x > 0$, allora $|\text{sgn}(x)| =1 >\dfrac{l}{2}$.
+> > - Se $l = 0$, allora preso un $\displaystyle\varepsilon = \dfrac{l}{2}$ esiste un $\delta > 0$ tale che, per ogni $x \in \mathbb{R}$ con $0 < |x| < \delta$, si ha che $|\text{sgn}(x)| < \dfrac{l}{2}$: otteniamo però un assurdo perché, se $x > 0$, allora $|\text{sgn}(x)| =1 >\dfrac{l}{2}$.
 > > 
 > > $\blacksquare$
 
@@ -673,7 +673,7 @@ I limiti laterali non si definiscono per $+\infty$ e $- \infty$.
 > \begin{array}{}
 > \displaystyle\lim_{x \to x_0^+} f(x) = l \\
 > \Updownarrow \\
-> \forall \epsilon > 0, \exists \delta > 0, \forall x \in \text{dom}(f) . \big( x_0 < x < x_0 + \delta \implies |f(x) - l| < \epsilon \big) 
+> \forall \varepsilon > 0, \exists \delta > 0, \forall x \in \text{dom}(f) . \big( x_0 < x < x_0 + \delta \implies |f(x) - l| < \varepsilon \big) 
 > \end{array}
 > $$
 > 

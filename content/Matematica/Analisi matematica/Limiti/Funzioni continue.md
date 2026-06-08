@@ -17,7 +17,7 @@ title: Funzioni continue
 > Poiché gli [intorni](Topologia%20dei%20reali.md#^definizione-intorno-di-un-punto) di $f(x_0)$ e di $x_0$ sono rispettivamente della forma
 > 
 > $$
-> I(f(x_0)) = I_\epsilon(f(x_0)) = (f(x_0) - \epsilon, f(x_0) + \epsilon)
+> I(f(x_0)) = I_\varepsilon(f(x_0)) = (f(x_0) - \varepsilon, f(x_0) + \varepsilon)
 > $$
 > 
 > e
@@ -32,7 +32,7 @@ title: Funzioni continue
 > \begin{array}{}
 > f \text{ è continua in } x_0 \\
 > \Updownarrow \\
-> \forall \epsilon > 0, \exists \delta < 0, \forall x \in \text{dom}(f) . \big( | x - x_0| < \delta \implies |f(x) - f(x_0)| < \epsilon \big) 
+> \forall \varepsilon > 0, \exists \delta < 0, \forall x \in \text{dom}(f) . \big( | x - x_0| < \delta \implies |f(x) - f(x_0)| < \varepsilon \big) 
 > \end{array}
 > $$
 > 
@@ -44,7 +44,7 @@ title: Funzioni continue
 ^definizione-funzione-continua
 
 %% CHE SIGNIFICA?
-L'interpretazione è simile a quella del $\displaystyle\lim_{x \to x_0} f(x) = l$ nel caso in cui $x_0,l \in \mathbb{R}$. Si osserva che $\delta$ può dipendere oltre che da $\epsilon$ anche da $x_0$.
+L'interpretazione è simile a quella del $\displaystyle\lim_{x \to x_0} f(x) = l$ nel caso in cui $x_0,l \in \mathbb{R}$. Si osserva che $\delta$ può dipendere oltre che da $\varepsilon$ anche da $x_0$.
 %%
 
 > [!osservazione] Osservazione: interpretazione informale di _funzione continua_
@@ -56,7 +56,7 @@ L'interpretazione è simile a quella del $\displaystyle\lim_{x \to x_0} f(x) = l
 > Osserviamo che la [definizione di _continuità_](Funzioni%20continue.md#^definizione-funzione-continua) di $f$ in $x_0$ si applica in tutti e soli i punti del suo dominio%% link %%: rispetto alla [definizione di _limite_ con $x_0 \in \mathbb{R} \land l \in \mathbb{R}$](content/Matematica/Analisi%20matematica/Limiti/_index.md#^osservazione-limite-con-x0-finito-l-finito), infatti, in questa **non** si impone che $x \ne x_0$. Infatti, per $x = x_0$, è automaticamente verificato che
 > 
 > $$
-> |f(x) - f(x_0)| < \epsilon
+> |f(x) - f(x_0)| < \varepsilon
 > $$
 
 Inoltre, dal confronto fra queste due nozioni, seguono le seguenti proposizioni.

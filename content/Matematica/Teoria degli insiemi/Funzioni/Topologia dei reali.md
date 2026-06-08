@@ -105,7 +105,7 @@ Allora l'intersezione di un numero finito di intorni di x0 è un intorno di x0.
 > > mettere grafico di pagina 117
 > > %%
 > > 
-> > Evidentemente né $a$ né $b$ sono [punti interni](Topologia%20dei%20reali.md#^definizione-punto-interno-e-parte-interna) ad $A$. Infatti, ogni [intorno](Topologia%20dei%20reali.md#^definizione-intorno-di-un-punto) $I_\delta = (a - \delta, a + \delta)$ di $a$, con $\delta > 0$, contiene punti di $\mathbb{R}$ non appartenenti ad $A$ (ossia i punti $a - \delta < x < a$). Analogamente, ogni intorno $I_\epsilon = (b - \epsilon, b + \epsilon)$ di $b$, con $\epsilon > 0$, contiene punti di $\mathbb{R}$ non appartenenti ad $A$ (ossia i punti $b < x < b + \epsilon$).
+> > Evidentemente né $a$ né $b$ sono [punti interni](Topologia%20dei%20reali.md#^definizione-punto-interno-e-parte-interna) ad $A$. Infatti, ogni [intorno](Topologia%20dei%20reali.md#^definizione-intorno-di-un-punto) $I_\delta = (a - \delta, a + \delta)$ di $a$, con $\delta > 0$, contiene punti di $\mathbb{R}$ non appartenenti ad $A$ (ossia i punti $a - \delta < x < a$). Analogamente, ogni intorno $I_\varepsilon = (b - \varepsilon, b + \varepsilon)$ di $b$, con $\varepsilon > 0$, contiene punti di $\mathbb{R}$ non appartenenti ad $A$ (ossia i punti $b < x < b + \varepsilon$).
 > > 
 > > %% 
 > > mettere grafico di pagina 117
