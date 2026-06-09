@@ -414,7 +414,7 @@ osservazioni c, d pagina 194 lancelotti
 > 
 > > [!dimostrazione] Dimostrazione
 > > 
-> > Per il [teorema della permanenza del segno](Proprietà%20locali%20dei%20limiti.md#^teorema-della-permanenza-del-segno) esiste un [intorno](Topologia%20dei%20reali.md#^definizione-intorno-di-un-punto) $I(x_0)$ di $x_0$ tale che
+> > Per il [teorema della permanenza del segno](Proprietà%20locali%20delle%20funzioni%20continue.md#^teorema-della-permanenza-del-segno) esiste un [intorno](Topologia%20dei%20reali.md#^definizione-intorno-di-un-punto) $I(x_0)$ di $x_0$ tale che
 > > 
 > > $$
 > > \forall x \in \big( I(x_0) \cap A \big)  \setminus \{ x_0 \} . \left( \dfrac{f(x)}{g(x)} > 0 \right) 

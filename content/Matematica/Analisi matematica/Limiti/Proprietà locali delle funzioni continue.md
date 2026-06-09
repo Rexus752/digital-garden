@@ -1,5 +1,5 @@
 ---
-title: Proprietà locali dei limiti
+title: Proprietà locali delle funzioni continue
 ---
 
 > [!premessa] Premessa

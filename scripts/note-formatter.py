@@ -258,7 +258,7 @@ def color_callout_titles(f):
 
 if __name__ == '__main__':
     # Deletes the old formatted files
-    for root, dirs, files in os.walk("{OLD_FILES_PATH}"):
+    for root, dirs, files in os.walk(OLD_FILES_PATH):
         for file in files:
             if file.endswith(".md") and file.startswith("OG_"):
                 os.remove(os.path.join(root, file))
@@ -271,8 +271,8 @@ if __name__ == '__main__':
                 print(f"Formattando il file '{FILE_PATH}'...")
 
                 try:
-                    with open(f"{FILE_PATH}", mode='r') as file:
-                        content = file.read()
+                    with open(f"{FILE_PATH}", mode='r') as f:
+                        content = f.read()
                         FILE_NAME = FILE_PATH.split("/")[-1]
                         with open(f"{OLD_FILES_PATH}/OG_{FILE_NAME}", mode='w') as og_file:
                             # "OG" at the beginning of the old file name for distinguishing in Obsidian file linking

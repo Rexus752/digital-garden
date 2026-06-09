@@ -15,6 +15,8 @@ title: Limiti di successioni
 > Una **successione** è una [funzione](content/Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-funzione) $a \colon \mathbb{N} \to \mathbb{R}$, denotata con "$(a_n)_{n \in \mathbb{N}}$" o "$\{ a_n \}_{n \in \mathbb{N}}$" (o, quando non c'è ambiguità di notazione, anche $(a_n)$ o $\{ a_n \}$), che associa a ogni numero naturale%% link %% $n \in \mathbb{N}$, detto **indice della successione**, un valore $a(n) \in \mathbb{R}$ denotato con "$a_n$" e detto **termine della successione**.
 ^definizione-successione
 
+%% specificare che la usccessione è in $A \to \mathbb{R}$ e se $A = \mathbb{N}$ allora è illimitata %%
+
 %% 
 esempio 5.2 pag. 215 lancelotti
 %%
@@ -93,8 +95,8 @@ In base al valore%% link %% che può assumere il [limite](Limiti%20di%20successi
 > 
 > Poiché i [limiti di successioni](Limiti%20di%20successioni.md#^definizione-limite-di-successioni) non sono altro che [limiti](content/Matematica/Analisi%20matematica/Limiti/_index.md#^definizione-limite) di [funzioni](content/Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-funzione) per $n \to + \infty$, per essi valgono tutti i teoremi%% link %% e le considerazioni fatte per questi ultimi, in particolare:
 > - il [teorema di unicità del limite](content/Matematica/Analisi%20matematica/Limiti/_index.md#^teorema-di-unicita-del-limite),
-> - il [teorema di limitatezza locale](Proprietà%20locali%20dei%20limiti.md#^teorema-di-limitatezza-locale),
-> - il [teorema della permanenza del segno](Proprietà%20locali%20dei%20limiti.md#^teorema-della-permanenza-del-segno) e le sue conseguenze,
+> - il [teorema di limitatezza locale](Proprietà%20locali%20delle%20funzioni%20continue.md#^teorema-di-limitatezza-locale),
+> - il [teorema della permanenza del segno](Proprietà%20locali%20delle%20funzioni%20continue.md#^teorema-della-permanenza-del-segno) e le sue conseguenze,
 > - l'algebra dei limiti (somma, prodotto, quoziente e composizione)%% link %%,
 > - i teoremi del confronto%% link %% e le loro conseguenze,
 > - il teorema sui limiti delle successioni monotone%% link %%.
