@@ -2,7 +2,7 @@
 title: Proprietà locali delle funzioni continue
 ---
 
-> [!premessa] Premessa
+> [!premessa]+ Premessa
 > 
 > Ciao! Se è la prima volta che capiti su questo sito, ti consiglio di consultare la [pagina principale](index.md) di questo cosiddetto _Giardino Digitale_ per scoprire meglio cos'è e come navigarlo.
 > 
@@ -11,12 +11,12 @@ title: Proprietà locali delle funzioni continue
 ---
 
 %% 
-vedere se questa pagina si può ficcare in [Asintoti verticali e orizzontali](Asintoti%20verticali%20e%20orizzontali.md) o [Limiti](content/Matematica/Analisi%20matematica/Limiti/_index.md)
+vedere se questa pagina si può ficcare in [Asintoti verticali e orizzontali](Asintoti%20verticali%20e%20orizzontali.md) o [Limiti](Matematica/Analisi%20matematica/Limiti/_index.md)
 %%
 
-> [!teorema] Teorema di limitatezza locale
+> [!teorema]+ Teorema di limitatezza locale
 > 
-> Data una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R} \cup \{ \pm \infty \}$ per $\text{dom}(f)$, se esiste un [limite](content/Matematica/Analisi%20matematica/Limiti/_index.md#^definizione-limite)
+> Data una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R} \cup \{ \pm \infty \}$ per $\text{dom}(f)$, se esiste un [limite](Matematica/Analisi%20matematica/Limiti/_index.md#^definizione-limite)
 > 
 > $$
 > \lim_{x \to x_0} f(x) = l \in \mathbb{R}
@@ -33,9 +33,9 @@ dimostrazione pag. 156 lancelotti
 osservazioni 3.2 pag. 156 lancelotti
 %%
 
-> [!teorema] Teorema della permanenza del segno
+> [!teorema]+ Teorema della permanenza del segno
 > 
-> Data una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R} \cup \{ \pm \infty \}$ per $\text{dom}(f)$, se esiste un [limite](content/Matematica/Analisi%20matematica/Limiti/_index.md#^definizione-limite)
+> Data una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R} \cup \{ \pm \infty \}$ per $\text{dom}(f)$, se esiste un [limite](Matematica/Analisi%20matematica/Limiti/_index.md#^definizione-limite)
 > 
 > $$
 > \lim_{x \to x_0} f(x) = l \in \mathbb{R} \cup \{ \pm \infty \}
@@ -54,9 +54,9 @@ dimostrazione pag. 157 lancelotti
 osservazioni 3.4 pag. 157 lancelotti
 %%
 
-> [!corollario] Corollario del teorema della permanenza del segno
+> [!corollario]+ Corollario del teorema della permanenza del segno
 > 
-> Data una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R} \cup \{ \pm \infty \}$ per $\text{dom}(f)$, se esiste un [limite](content/Matematica/Analisi%20matematica/Limiti/_index.md#^definizione-limite)
+> Data una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R} \cup \{ \pm \infty \}$ per $\text{dom}(f)$, se esiste un [limite](Matematica/Analisi%20matematica/Limiti/_index.md#^definizione-limite)
 > 
 >  $$
 > \lim_{x \to x_0} f(x) = l \in \mathbb{R}

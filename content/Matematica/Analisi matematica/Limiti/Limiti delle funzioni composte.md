@@ -2,7 +2,7 @@
 title: Limiti delle funzioni composte
 ---
 
-> [!premessa] Premessa
+> [!premessa]+ Premessa
 > 
 > Ciao! Se è la prima volta che capiti su questo sito, ti consiglio di consultare la [pagina principale](index.md) di questo cosiddetto _Giardino Digitale_ per scoprire meglio cos'è e come navigarlo.
 > 
@@ -16,9 +16,9 @@ Nei paragrafi precedenti abbiamo studiato l'algebra delle funzioni continue e qu
 resto dell'introduzione a pag. 178-179
 %%
 
-> [!teorema] Teorema del limite della funzione composta
+> [!teorema]+ Teorema del limite della funzione composta
 > 
-> Date due [funzioni](content/Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-funzione)
+> Date due [funzioni](Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-funzione)
 > 
 > $$
 > \begin{array}{}
@@ -28,9 +28,9 @@ resto dell'introduzione a pag. 178-179
 > $$
 > 
 > con $\text{rng}(f) \subseteq \text{dom}(g)$ e un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R} \cup \{ \pm \infty \}$ per $\text{dom}(f)$:
-> 1. se esiste il [limite](content/Matematica/Analisi%20matematica/Limiti/_index.md#^definizione-limite) $\displaystyle\lim_{x \to x_0} f(x) = y_0 \in \mathbb{R} \cup \{ \pm \infty \}$ e $y_0$ è un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) per $\text{dom}(g)$,
+> 1. se esiste il [limite](Matematica/Analisi%20matematica/Limiti/_index.md#^definizione-limite) $\displaystyle\lim_{x \to x_0} f(x) = y_0 \in \mathbb{R} \cup \{ \pm \infty \}$ e $y_0$ è un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) per $\text{dom}(g)$,
 > 2. se $y_0 \in \mathbb{R}$, supponiamo che $y_0 \in \text{dom}(g)$ e che $g$ sia [continua](Funzioni%20continue.md#^definizione-funzione-continua) in $y_0$ con $g(y_0) = l \in \mathbb{R}$ e
-> 3. se $y_0 = \pm \infty$, supponiamo che esista il [limite](content/Matematica/Analisi%20matematica/Limiti/_index.md#^definizione-limite) $\displaystyle\lim_{y \to y_0} g(y) = l \in \mathbb{R} \cup \{ \pm \infty \}$,
+> 3. se $y_0 = \pm \infty$, supponiamo che esista il [limite](Matematica/Analisi%20matematica/Limiti/_index.md#^definizione-limite) $\displaystyle\lim_{y \to y_0} g(y) = l \in \mathbb{R} \cup \{ \pm \infty \}$,
 > 
 > allora
 > 
@@ -47,9 +47,9 @@ dimostrazione pag. 179 lancelotti
 esempi pagg. 180-181 lancelotti
 %%
 
-> [!teorema] Teorema del limite della funzione composta continua
+> [!teorema]+ Teorema del limite della funzione composta continua
 > 
-> Date due [funzioni](content/Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-funzione)
+> Date due [funzioni](Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-funzione)
 > 
 > $$
 > \begin{array}{}
@@ -59,8 +59,8 @@ esempi pagg. 180-181 lancelotti
 > $$
 > 
 > con $\text{rng}(f) \subseteq \text{dom}(g)$ e un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R} \cup \{ \pm \infty \}$ per $\text{dom}(f)$:
-> 1. se esiste il [limite](content/Matematica/Analisi%20matematica/Limiti/_index.md#^definizione-limite) $\displaystyle\lim_{x \to x_0} f(x) = y_0 \in \mathbb{R} \cup \{ \pm \infty \}$ e $y_0$ è un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) per $\text{dom}(g)$,
-> 2. se esiste il [limite](content/Matematica/Analisi%20matematica/Limiti/_index.md#^definizione-limite) $\displaystyle\lim_{x \to x_0} g(y) = l \in \mathbb{R} \cup \{ \pm \infty \}$ e
+> 1. se esiste il [limite](Matematica/Analisi%20matematica/Limiti/_index.md#^definizione-limite) $\displaystyle\lim_{x \to x_0} f(x) = y_0 \in \mathbb{R} \cup \{ \pm \infty \}$ e $y_0$ è un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) per $\text{dom}(g)$,
+> 2. se esiste il [limite](Matematica/Analisi%20matematica/Limiti/_index.md#^definizione-limite) $\displaystyle\lim_{x \to x_0} g(y) = l \in \mathbb{R} \cup \{ \pm \infty \}$ e
 > 3. se esiste un [intorno](Topologia%20dei%20reali.md#^definizione-intorno-di-un-punto) $I(x_0)$ di $x_0$ tale che $f(x) \ne y_0$ per ogni $x \in (\text{dom}(f) \cap I(x_0)= \setminus \{ x_0 \}$,
 > 
 > allora
@@ -78,9 +78,9 @@ esempi pagg. 180-181 lancelotti
 
 %% esempi pagg. 182-183 lancelotti %%
 
-> [!proposizione] Proposizione: limiti di funzioni pari o dispari
+> [!proposizione]+ Proposizione: limiti di funzioni pari o dispari
 > 
-> Data una [funzione pari (o dispari)](content/Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-funzioni-pari-e-dispari) $f \colon \text{dom}(f) \to \mathbb{R}$ e un [punto di acucmulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R} \cup \{ \pm \infty \}$ per $\text{dom}(f)$, allora si ha che
+> Data una [funzione pari (o dispari)](Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-funzioni-pari-e-dispari) $f \colon \text{dom}(f) \to \mathbb{R}$ e un [punto di acucmulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R} \cup \{ \pm \infty \}$ per $\text{dom}(f)$, allora si ha che
 > 
 > $$
 > \begin{array}{}

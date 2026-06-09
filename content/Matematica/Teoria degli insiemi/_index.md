@@ -18,7 +18,7 @@ prerequisito: Logica Matematica per teoremi e dimostrazioni
 
 > [!definizione]+ Definizione: teoria degli insiemi
 > 
-> La **teoria degli insiemi** è una branca della [matematica](content/Matematica/_index.md#^definizione-matematica) che si occupa dello studio degli [insiemi](Matematica/Teoria%20degli%20insiemi/_index.md#^definizione-insieme), cioè collezioni di oggetti distinti che possono essere definiti e manipolati secondo determinate regole.
+> La **teoria degli insiemi** è una branca della [matematica](Matematica/_index.md#^definizione-matematica) che si occupa dello studio degli [insiemi](Matematica/Teoria%20degli%20insiemi/_index.md#^definizione-insieme), cioè collezioni di oggetti distinti che possono essere definiti e manipolati secondo determinate regole.
 ^definizione-teoria-degli-insiemi
 
 %% 

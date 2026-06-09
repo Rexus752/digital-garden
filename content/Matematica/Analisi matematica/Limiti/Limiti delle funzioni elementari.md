@@ -2,7 +2,7 @@
 title: Limiti delle funzioni elementari
 ---
 
-> [!premessa] Premessa
+> [!premessa]+ Premessa
 > 
 > Ciao! Se è la prima volta che capiti su questo sito, ti consiglio di consultare la [pagina principale](index.md) di questo cosiddetto _Giardino Digitale_ per scoprire meglio cos'è e come navigarlo.
 > 
@@ -10,7 +10,7 @@ title: Limiti delle funzioni elementari
 
 ---
 
-# Limiti delle funzioni costanti
+# 1 - Limiti delle funzioni costanti
 
 $$
 f(x) = c \in \mathbb{R}
@@ -22,9 +22,9 @@ $$
 \forall x_0 \in \mathbb{R}. \big( \lim_{x \to x_0} f(x) = \lim_{x \to \pm \infty} f(x) = c \big) 
 $$
 
-# Limiti delle funzioni potenza
+# 2 - Limiti delle funzioni potenza
 
-## $f(x) = x^n$
+## 2.1 - $f(x) = x^n$
 
 con $n \in \mathbb{N}^{\ge 1}$
 
@@ -45,7 +45,7 @@ $$
 \end{cases}
 $$
 
-## $f(x) = \dfrac{1}{x^n}$
+## 2.2 - $f(x) = \dfrac{1}{x^n}$
 
 %% che è uguale a $x^n$ con $n < 0$? %%
 
@@ -66,7 +66,7 @@ Se $n$ è dispari, allora $\lim_{x \to 0^\pm} \dfrac{1}{x^n} = \pm \infty$ ma no
 
 La retta $x = 0$ è un asintoto verticale, la retta $y = 0$ è un asintoto orizzontale.
 
-## $f(x) = \dfrac{1}{(x-a)^n}$
+## 2.3 - $f(x) = \dfrac{1}{(x-a)^n}$
 
 con $a \in \mathbb{R} \setminus \{ 0 \} \land n \in \mathbb{N}^{> 0}$
 
@@ -75,7 +75,6 @@ abbiamo che
 $$
 \text{dom}(f) = (-\infty, a) \cup (a, + \infty)
 $$
-
 
 %% 
 continuare pagg. 152-155 Lancelotti

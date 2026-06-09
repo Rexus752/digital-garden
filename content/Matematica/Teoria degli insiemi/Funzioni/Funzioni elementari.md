@@ -2,7 +2,7 @@
 title: Funzioni elementari
 ---
 
-> [!premessa] Premessa
+> [!premessa]+ Premessa
 > 
 > Ciao! Se è la prima volta che capiti su questo sito, ti consiglio di consultare la [pagina principale](index.md) di questo cosiddetto _Giardino Digitale_ per scoprire meglio cos'è e come navigarlo.
 > 
@@ -10,11 +10,11 @@ title: Funzioni elementari
 
 ---
 
-# Funzioni lineari
+# 1 - Funzioni lineari
 
-> [!definizione] Definizione: funzione lineare
+> [!definizione]+ Definizione: funzione lineare
 > 
-> Una **funzione lineare** è una [funzione](content/Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-funzione) del tipo
+> Una **funzione lineare** è una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-funzione) del tipo
 > 
 > $$
 > f(x) = mx + q
@@ -46,7 +46,7 @@ Si può quindi evincere che il coefficiente $m$ assume due significati fondament
 	$$
 - È il tasso medio di variazione di $f$ in ogni intervallo.
 
-> [!esempio] Esempio: funzione lineare passante per un punto assegnato e con pendenza assegnata
+> [!esempio]- Esempio: funzione lineare passante per un punto assegnato e con pendenza assegnata
 > 
 > Determiniamo l'unica funzione lineare $f$ di pendenza $m_0 \in \mathbb{R}$ assegnata e il cui grafico passa per un punto $(x_0, y_0)$ assegnato.
 > 
@@ -74,7 +74,7 @@ Si può quindi evincere che il coefficiente $m$ assume due significati fondament
 > f(x) = -2(x - 1) + 4 = -2x + 6
 > $$
 
-[!esempio] Esempio: funzione lineare passante per due punti assegnati
+[!esempio]- Esempio: funzione lineare passante per due punti assegnati
 
 Determiniamo l'unica funzione lineare $f$ il cui grafico passa per due punti $(x_1, y_1)$ e $(x_2, y_2)$ assegnati (con $x_1 \ne x_2$). Osserviamo che la pendenza di $f$, in accordo con la relazione della pendenza della retta, abbiamo
 
@@ -102,11 +102,11 @@ f(x) &= \dfrac{-2 - 4}{3 - 1}(x - 1) + 4 \\
 \end{align*}
 $$
 
-# Funzioni potenza
+# 2 - Funzioni potenza
 
-> [!definizione] Definizione: funzione potenza
+> [!definizione]+ Definizione: funzione potenza
 > 
-> Una **funzione potenza** è una [funzione](content/Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-funzione) del tipo
+> Una **funzione potenza** è una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-funzione) del tipo
 > 
 > $$
 > f(x) = x^n
@@ -141,11 +141,11 @@ Il comportamento delle funzioni potenza dipende dall'esponente $n$:
 | **Comportamento** | $\displaystyle \lim_{x \to + \infty} f(x) = + \infty$        | $\displaystyle \lim_{x \to \pm \infty} f(x) = \pm \infty$ |
 |    **Inversa**    | $f$ è l'inversa della restrizione di $x^n$ su $[0; +\infty)$ | $f$ è l'inversa di $x^n$                                  |
 
-# Funzioni esponenziali
+# 3 - Funzioni esponenziali
 
-> [!definizione] Definizione: funzione esponenziale
+> [!definizione]+ Definizione: funzione esponenziale
 > 
-> Una **funzione esponenziale** è una [funzione](content/Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-funzione) del tipo
+> Una **funzione esponenziale** è una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-funzione) del tipo
 > 
 > $$
 > f(x) = a^x
@@ -163,11 +163,11 @@ Il comportamento delle funzioni potenza dipende dalla base $a$:
 |   **Monotonia**   | $f$ crescente su $\mathbb{R}$                                                                          | $f$ decrescente su $\mathbb{R}$                                                                        |
 | **Comportamento** | $\displaystyle \lim_{x \to - \infty} f(x) = 0$ e $\displaystyle \lim_{x \to + \infty} f(x) = + \infty$ | $\displaystyle \lim_{x \to - \infty} f(x) = + \infty$ e $\displaystyle \lim_{x \to + \infty} f(x) = 0$ |
 
-# Funzioni logaritmiche
+# 4 - Funzioni logaritmiche
 
-> [!definizione] Definizione: funzione logaritmica
+> [!definizione]+ Definizione: funzione logaritmica
 > 
-> Una **funzione logaritmica** è una [funzione](content/Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-funzione) del tipo
+> Una **funzione logaritmica** è una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-funzione) del tipo
 > 
 > $$
 > f(x) = \log_a x
@@ -186,11 +186,11 @@ Il comportamento delle funzioni potenza dipende dalla base del logaritmo $a$:
 | **Comportamento** | $\displaystyle \lim_{x \to 0^+} f(x) = -\infty$ e $\displaystyle \lim_{x \to + \infty} f(x) = + \infty$ | $\displaystyle \lim_{x \to 0^+} f(x) = +\infty$ e $\displaystyle \lim_{x \to + \infty} f(x) = - \infty$ |
 |    **Inversa**    | $f$ è l'inversa di $a^x$                                                                                | $f$ è l'inversa di $a^x$                                                                                |
 
-# Funzioni goniometriche
+# 5 - Funzioni goniometriche
 
-> [!definizione] Definizione: funzione goniometrica
+> [!definizione]+ Definizione: funzione goniometrica
 > 
-> Una **funzione goniometrica** è una [funzione](content/Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-funzione) del tipo
+> Una **funzione goniometrica** è una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-funzione) del tipo
 > 
 > $$
 > f(x) = \sin x
@@ -217,7 +217,7 @@ Il comportamento delle funzioni potenza dipende dalla base del logaritmo $a$:
 |  **Simmetrie**  | $f$ dispari                     | $f$ pari                        | $f$ dispari                                                                                                 |
 |  **Monotonia**  |                                 |                                 | $f$ crescente su $\left( - \dfrac{\pi}{2} + k \pi; + \dfrac{\pi}{2} + k \pi \right)$                          |
 
-## Funzioni goniometriche inverse
+## 5.1 - Funzioni goniometriche inverse
 
 |               | $f(x) = \arcsin x$                                                                                | $f(x) = \arctan x$                                                                                |
 | ------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
@@ -233,7 +233,7 @@ Fare da 2.4 in poi del libro di Analisi
 
 ---
 
-> [!fonti] Fonti
+> [!fonti]+ Fonti
 > 
 > - 📚 _Analisi matematica - Fare e comprendere_ di Walter Dambrosio, Zanichelli, 2018 (ISBN: `9788808220745`):
 > 	- 1 - _Funzioni e modelli_:

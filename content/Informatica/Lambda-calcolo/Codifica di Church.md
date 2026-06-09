@@ -387,7 +387,7 @@ $$
 
 Ora verifichiamo che [$\text{SUCC}$](Codifica%20di%20Church.md#^definizione-succ), per come l'abbiamo definito, si comporti come vorremmo.
 
-> [!proposizione]+ Verifica della correttezza semantica di $\text{SUCC}$
+> [!proposizione]+ Verifica della correttezza semantica di $\color{#FF7F7F} \text{SUCC}$
 > 
 > Dato un [numerale di Church](Codifica%20di%20Church.md#^definizione-numerale-di-church) $\underline n$, vale:
 > 
@@ -395,7 +395,7 @@ Ora verifichiamo che [$\text{SUCC}$](Codifica%20di%20Church.md#^definizione-succ
 > \text{SUCC}\ \underline n \Leftrightarrow \underline{n + 1}
 > $$
 
-> [!dimostrazione]- Dimostrazione della correttezza semantica di $\text{SUCC}$
+> [!dimostrazione]- Dimostrazione della correttezza semantica di $\color{#7FFF7F} \text{SUCC}$
 > 
 > SUCC n=($\Lambda$a.$\Lambda$f.$\Lambda$x.a f (f x)) ($\Lambda$f.$\Lambda$x.fn x)\toβ($\Lambda$f.$\Lambda$x.a f (f x))[($\Lambda$f.$\Lambda$x.fn x)/a]=$\Lambda$f.$\Lambda$x.$\Lambda$f.$\Lambda$x.fn x) f (f x)\toβ$\Lambda$f.$\Lambda$x.($\Lambda$x.fn x)[f/f] (f x)=$\Lambda$f.$\Lambda$x.($\Lambda$x.fn x) (f x)\toβ$\Lambda$f.$\Lambda$x.(fn x)[(f x)/x]=$\Lambda$f.$\Lambda$x.fn (f x)=$\Lambda$f.$\Lambda$x.fn+1 x=SUCC n+1definizione di SUCC e del numerale di Church n$\beta$-riduzionesostituzione$\beta$-riduzionesostituzione$\beta$-riduzionesostituzionedefinizione dell'applicazione esponenzialedefinizione del numerale di Church
 

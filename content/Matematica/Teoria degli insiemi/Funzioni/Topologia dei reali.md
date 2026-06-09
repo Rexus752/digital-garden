@@ -37,14 +37,14 @@ mettere rappresentazione grafica a pagina 115 di Lancelotti
 
 %% esempio %%
 
-> [!definizione] Definizione: intorno bucato di un punto
+> [!definizione]+ Definizione: intorno bucato di un punto
 > 
 > Un **intorno bucato** di un punto%% link %% $x_0$ è un [intorno](Topologia%20dei%20reali.md#^definizione-intorno-di-un-punto) $I(x_0)$ di $x_0$ da cui si esclude $x_0$ stesso.
 ^definizione-intorno-bucato-di-un-punto
 
-> [!osservazione] Osservazione: utilità dell'intorno bucato
+> [!osservazione]+ Osservazione: utilità dell'intorno bucato
 > 
-> L'[_intorno bucato_](Topologia%20dei%20reali.md#^definizione-intorno-bucato) ci tornerà utile più in là quando studieremo i [_limiti_](content/Matematica/Analisi%20matematica/Limiti/_index.md#^definizione-limite) perché ci interesserà analizzare l'[intorno](Topologia%20dei%20reali.md#^definizione-intorno-di-un-punto) di un punto%% link %% $x_0$ escluso $x_0$ stesso, cioè proprio l'[intorno bucato](Topologia%20dei%20reali.md#^definizione-intorno-bucato) di $x_0$.
+> L'[_intorno bucato_](Topologia%20dei%20reali.md#^definizione-intorno-bucato) ci tornerà utile più in là quando studieremo i [_limiti_](Matematica/Analisi%20matematica/Limiti/_index.md#^definizione-limite) perché ci interesserà analizzare l'[intorno](Topologia%20dei%20reali.md#^definizione-intorno-di-un-punto) di un punto%% link %% $x_0$ escluso $x_0$ stesso, cioè proprio l'[intorno bucato](Topologia%20dei%20reali.md#^definizione-intorno-bucato) di $x_0$.
 
 > [!definizione]+ Definizione: intorno di un infinito
 > 

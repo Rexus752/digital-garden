@@ -91,16 +91,16 @@ configuration:
 Ho disabilitato il plugin dei temi perché mi creava problemi nella personalizzazione dell'interfaccia sovrascrivendo le modifiche che provavo ad apportare (e anche perché il tema `default` che mi sceglie lui fa cacare al cazzo rispetto a quello originale di Quartz che stai vedendo ora):
 
 ```yaml title="quartz.config.yaml" showLineNumbers{259}
-#  - source:
-#      name: quartz-themes
-#      repo: github:saberzero1/quartz-themes
-#      subdir: plugin
-#    enabled: true
-#    options:
-#      theme: default
+# source:
+#   - name: quartz-themes
+#   - repo: github:saberzero1/quartz-themes
+#   - subdir: plugin
+#   - enabled: true
+#   - options:
+#   - theme: default
 ```
 
-## 2.2 - Font
+## 2.3 - Font
 
 In questo sito:
 - Per i _body_ (cioè il testo normale come questo che stai leggendo) uso il typeface Inter%% link %%, ossia lo stesso che GNOME%% link %% usa di default a partire dalla versione 47 e che io reputo uno dei migliori sulla piazza al momento (è anche completamente gratuito!).
@@ -118,7 +118,7 @@ Per usare questi font, ho modificato il file `quartz.config.yaml` in questo modo
       code: Fira Code
 ```
 
-## 2.3 - File system
+## 2.4 - File system
 
 Il mio Giardino Digitale contiene note divise per cartelle a seconda dell'argomento di cui trattano. Ogni cartella ha una nota associata e le relative sotto-cartelle e sotto-note comprese in quell'argomento.
 
@@ -172,7 +172,7 @@ E, per dire a Quartz di leggere questo file, nel file `custom.scss` nella cartel
 @use "./custom/disable-folder-page.scss";
 ```
 
-## 2.4 - Layout delle note
+## 2.5 - Layout delle note
 
 Nel file `quartz.config.yaml` ho modificato il layout delle note, cioè la struttura della nota. Ecco ciò che ho fatto:
 - Nei link nel footer ci ho messo il link al repository e al mio Linktree%% link %%:
@@ -184,7 +184,7 @@ Nel file `quartz.config.yaml` ho modificato il layout delle note, cioè la strut
         Repository: https://forgejo.it/Rexus752/digital-garden.git
         Il mio Linktree: https://linktr.ee/rexus752
 	```
-- Per fare in modo che anche nelle _folder page_ (cioè nelle pagine-cartelle come [Matematica](content/Matematica/_index.md)) escano tutti i componenti come l'indice, ho modificato le impostazioni del `layout` che si possono trovare in fondo al `quartz.config.yaml`:
+- Per fare in modo che anche nelle _folder page_ (cioè nelle pagine-cartelle come [Matematica](Matematica/_index.md)) escano tutti i componenti come l'indice, ho modificato le impostazioni del `layout` che si possono trovare in fondo al `quartz.config.yaml`:
 	```yaml title="quartz.config.yaml" showLineNumbers{273} {13}
 	layout:
 	  groups:
@@ -226,7 +226,7 @@ Nel file `quartz.config.yaml` ho modificato il layout delle note, cioè la strut
       priority: 10
 ```
 
-## 2.5 - Icona personalizzata
+## 2.6 - Icona personalizzata
 
 Nella cartella `quartz/static` ho sostituito il file `icon.png` con una mia icona personalizzata, che è appunto l'icona di questo Giardino Digitale:
 
@@ -247,7 +247,7 @@ Facendo ciò ho anche disabilitato il [plugin `Custom OG Images`](https://quartz
     enabled: false
 ```
 
-## 2.6 - Modalità scura forzata
+## 2.7 - Modalità scura forzata
 
 Nel mio Giardino Digitale, per questione di comodità, ho scelto di inserire la modalità scura di default e tolto la possibilità di passare alla modalità chiara. Ciò l'ho fatto perché io in primis, quando scrivo le mie note su Obsidian, uso la modalità scura, e di conseguenza anche tutti i contenuti che ho inserito nelle note come le foto o gli schemi sono adattati a questo tema. Mantenere la possibilità di passare alla modalità chiara significherebbe dover creare un sistema per cui anche queste foto debbano adattarsi alla modalità chiara, cosa che non ho assolutamente intenzione di fare lol.
 
@@ -301,7 +301,7 @@ Per applicare la modalità scura forzata anche nel syntax highlighting%% link %%
 
 Teoricamente ci sarebbe da fare la stessa cosa anche per i diagrammi Mermaid%% link %% ma, dato che non li uso in questo sito, non mi va di cimentarmi inutilmente nel capire come potrebbe essere fatto.
 
-## 2.7 - Foto centrate
+## 2.8 - Foto centrate
 
 Esattamente come avrai potuto notare con quelle che ho inserito qua sopra, le foto vengono automaticamente centrate nel mezzo della pagina.
 
@@ -323,7 +323,7 @@ E, per dire a Quartz di leggere questo file, nel file `custom.scss` nella cartel
 @use "./custom/centered-img.scss";
 ```
 
-## 2.8 - Callout personalizzati
+## 2.9 - Callout personalizzati
 
 All'interno del mio Giardino Digitale, uso diversi callout%% link %% personalizzati, descritti attraverso codice SCSS e implementati dal [plugin `Callouts`](https://quartz.jzhao.xyz/features/callouts). Tutti i callout che ho aggiunto sono inseriti nel file `callouts.scss` nella cartella `quartz/styles/custom` col seguente formato:
 
@@ -356,7 +356,7 @@ Sul [sito di Quartz](https://quartz.jzhao.xyz/features/callouts) viene spiegato 
 
 Qua sotto ho inserito una lista dei callout che uso, ognuno dei quali ha al proprio interno il codice SCSS per impostarlo (clicca sulla freccetta affianco al titolo del callout per espanderlo).
 
-### 2.8.1 - Generici
+### 2.9.1 - Generici
 
 > [!premessa]- Premessa
 > 
@@ -479,7 +479,7 @@ Qua sotto ho inserito una lista dei callout che uso, ognuno dei quali ha al prop
 > }
 > ```
 
-### 2.8.2 - Per la matematica
+### 2.9.2 - Per la matematica
 
 > [!assioma]- Assioma
 > 
@@ -613,7 +613,7 @@ Qua sotto ho inserito una lista dei callout che uso, ognuno dei quali ha al prop
 > }
 > ```
 
-## 2.9 - Icone nei titoli delle note
+## 2.10 - Icone nei titoli delle note
 
 > [!attenzione]+ Attenzione: non aggiornato alla versione `v5` di Quartz
 > 

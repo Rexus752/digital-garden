@@ -72,7 +72,7 @@ Questo modo di definire "astrattamente" una [funzione](Matematica/Teoria%20degl
 
 > [!definizione]+ Definizione: astrazione
 > 
-> Nel [$\lambda$-calcolo](Informatica/Lambda-calcolo/_index.md#^definizione-lambda-calcolo), un'**astrazione** (anche detta **$\lambda$-astrazione** o, nell'ambito del [$\lambda$-calcolo](content/Informatica/Lambda-calcolo/_index.md#^definizione-lambda-calcolo), chiamata anche semplicemente **funzione**) è una definizione di una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-funzione) anonima, cioè una funzione che non ha un nome ma è identificata direttamente dalla sua regola di trasformazione.
+> Nel [$\lambda$-calcolo](Informatica/Lambda-calcolo/_index.md#^definizione-lambda-calcolo), un'**astrazione** (anche detta **$\lambda$-astrazione** o, nell'ambito del [$\lambda$-calcolo](Informatica/Lambda-calcolo/_index.md#^definizione-lambda-calcolo), chiamata anche semplicemente **funzione**) è una definizione di una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-funzione) anonima, cioè una funzione che non ha un nome ma è identificata direttamente dalla sua regola di trasformazione.
 > 
 > Un'**astrazione** ha la forma:
 > 
@@ -86,7 +86,7 @@ Questo modo di definire "astrattamente" una [funzione](Matematica/Teoria%20degl
 > - $M$ è un [termine](Informatica/Lambda-calcolo/_index.md#^definizione-termine) del [$\lambda$-calcolo](Informatica/Lambda-calcolo/_index.md#^definizione-lambda-calcolo) che rappresenta il corpo%% link %% della [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-funzione).
 ^definizione-astrazione
 
-> [!osservazione] Osservazione: $\lambda x.M \equiv M(x)$
+> [!osservazione]+ Osservazione: $\color{#7F7F7F} \lambda x.M \equiv M(x)$
 > 
 > La notazione
 > 
@@ -94,7 +94,7 @@ Questo modo di definire "astrattamente" una [funzione](Matematica/Teoria%20degl
 > \lambda x.M
 > $$
 > 
-> di un'[astrazione](content/Informatica/Lambda-calcolo/_index.md#^definizione-astrazione) equivale alla notazione classica di una [funzione](content/Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md) qualsiasi con argomento%% link %% $x$ e corpo%% link %% $M$:
+> di un'[astrazione](Informatica/Lambda-calcolo/_index.md#^definizione-astrazione) equivale alla notazione classica di una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md) qualsiasi con argomento%% link %% $x$ e corpo%% link %% $M$:
 > 
 > $$
 > M(x)
@@ -236,16 +236,16 @@ Ora che abbiamo definito cosa sono un'[astrazione](Informatica/Lambda-calcolo/_i
 > **NON** si può riscrivere come $T = M_1\ M_2\ M_3\ M_4$ perché $(M_3\ M_4)$ è l'argomento dell'[applicazione](Informatica/Lambda-calcolo/_index.md#^definizione-applicazione).
 ^notazione-omissione-delle-parentesi-in-un-applicazione
 
-> [!trucco] Trucco: astrazione associativa a destra, applicazione associativa a sinistra
+> [!trucco]+ Trucco: astrazione associativa a destra, applicazione associativa a sinistra
 > 
-> Per ricordare più facilmente come funziona l'[omissione delle parentesi in un'astrazione](content/Informatica/Lambda-calcolo/_index.md#^notazione-omissione-delle-parentesi-in-un-astrazione) e [in un'applicazione](content/Informatica/Lambda-calcolo/_index.md#^notazione-omissione-delle-parentesi-in-un-applicazione), ti basta ricordare che:
-> - L'[astrazione](content/Informatica/Lambda-calcolo/_index.md#^definizione-astrazione) è associativa a destra, cioè tutto quello che c'è a destra del punto è parte del corpo%% link %% dell'[astrazione](content/Informatica/Lambda-calcolo/_index.md#^definizione-astrazione):
+> Per ricordare più facilmente come funziona l'[omissione delle parentesi in un'astrazione](Informatica/Lambda-calcolo/_index.md#^notazione-omissione-delle-parentesi-in-un-astrazione) e [in un'applicazione](Informatica/Lambda-calcolo/_index.md#^notazione-omissione-delle-parentesi-in-un-applicazione), ti basta ricordare che:
+> - L'[astrazione](Informatica/Lambda-calcolo/_index.md#^definizione-astrazione) è associativa a destra, cioè tutto quello che c'è a destra del punto è parte del corpo%% link %% dell'[astrazione](Informatica/Lambda-calcolo/_index.md#^definizione-astrazione):
 > 	$$
 > 	\lambda x.{\color{#7FFF7F} \underbrace{T_1\ T_2 (T_3\ T_4)}_{\text{a destra del punto}} }
 > 	\equiv
 > 	\lambda x.\big( {\color{#7FFF7F} T_1\ T_2 (T_3\ T_4) } \big) 
 > 	$$
-> - L'[applicazione](content/Informatica/Lambda-calcolo/_index.md#^definizione-applicazione) è associativa a sinistra, cioè tutto quello che c'è a sinistra dell'ultimo [termine](content/Informatica/Lambda-calcolo/_index.md#^definizione-termine) (cioè l'argomento%% Link %%) è la [funzione](content/Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-funzione) su cui viene applicato l'argomento%% Link %%:
+> - L'[applicazione](Informatica/Lambda-calcolo/_index.md#^definizione-applicazione) è associativa a sinistra, cioè tutto quello che c'è a sinistra dell'ultimo [termine](Informatica/Lambda-calcolo/_index.md#^definizione-termine) (cioè l'argomento%% Link %%) è la [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-funzione) su cui viene applicato l'argomento%% Link %%:
 > 	$$
 > 	{\color{#FF7F7F}
 > 	\underbrace{T_1\ T_2\ T_3}_{
@@ -302,7 +302,7 @@ Ora che abbiamo definito cosa sono un'[astrazione](Informatica/Lambda-calcolo/_i
 > (\lambda x.(\lambda y.(\lambda y.((x\ z)\ (y\ z)))))
 > $$
 > 
-> > [!soluzione] Soluzione
+> > [!soluzione]- Soluzione
 > > 
 > > È possibile [rimuovere le parentesi più esterne del termine](Informatica/Lambda-calcolo/_index.md#^notazione-omissione-delle-parentesi-piu-esterne-di-un-termine):
 > > 
@@ -336,7 +336,7 @@ Ora che abbiamo definito cosa sono un'[astrazione](Informatica/Lambda-calcolo/_i
 > > \lambda x.\lambda y.\lambda y.(x\ z)\ (y\ z)
 > > $$
 > > 
-> > Avendo un'[applicazione](content/Informatica/Lambda-calcolo/_index.md#^definizione-applicazione) con funzione%% link %% $(x\ z)$ e argomento $(y\ z)$, è possibile [rimuovere le parentesi più esterne della funzione](content/Informatica/Lambda-calcolo/_index.md#^notazione-omissione-delle-parentesi-in-un-applicazione):
+> > Avendo un'[applicazione](Informatica/Lambda-calcolo/_index.md#^definizione-applicazione) con funzione%% link %% $(x\ z)$ e argomento $(y\ z)$, è possibile [rimuovere le parentesi più esterne della funzione](Informatica/Lambda-calcolo/_index.md#^notazione-omissione-delle-parentesi-in-un-applicazione):
 > > 
 > > $$
 > > \lambda x.\lambda y.\lambda y.{\color{#FF7F7F} ( }x\ z{\color{#FF7F7F} ) }\ (y\ z)
@@ -443,18 +443,17 @@ Definiamo formalmente quindi questa differenza.
 > \end{align*}
 > $$
 
-
-> [!osservazione] Osservazione: una variabile che compare sia libera che legata
+> [!osservazione]+ Osservazione: una variabile che compare sia libera che legata
 > 
-> Consideriamo il [termine](content/Informatica/Lambda-calcolo/_index.md#^definizione-termine)
+> Consideriamo il [termine](Informatica/Lambda-calcolo/_index.md#^definizione-termine)
 > 
 > $$
 > (\lambda x.x\ y)\ x
 > $$
 > 
-> Dato che $x$ compare sia come argomento%% link %% dell'[astrazione](content/Informatica/Lambda-calcolo/_index.md#^definizione-astrazione) (e quindi [legata](content/Informatica/Lambda-calcolo/_index.md#^definizione-variabili-libere-e-legate)), sia come argomento%% link %% dell'[applicazione](content/Informatica/Lambda-calcolo/_index.md#^definizione-applicazione) esterna (e quindi [libera](content/Informatica/Lambda-calcolo/_index.md#^definizione-variabili-libere-e-legate)), deve essere considerata libera o legata?
+> Dato che $x$ compare sia come argomento%% link %% dell'[astrazione](Informatica/Lambda-calcolo/_index.md#^definizione-astrazione) (e quindi [legata](Informatica/Lambda-calcolo/_index.md#^definizione-variabili-libere-e-legate)), sia come argomento%% link %% dell'[applicazione](Informatica/Lambda-calcolo/_index.md#^definizione-applicazione) esterna (e quindi [libera](Informatica/Lambda-calcolo/_index.md#^definizione-variabili-libere-e-legate)), deve essere considerata libera o legata?
 > 
-> La risposta è che in realtà queste due $x$ non vanno considerate come la stessa $x$ ma separatamente, proprio perché vengono usate per due scopi diversi: per evitare confusioni quindi sarebbe opportuno _rinominare_ una delle due $x$ (per esempio in $z$) ed effettuando quindi un'operazione che prende il nome di [$\alpha$-conversione](content/Informatica/Lambda-calcolo/_index.md#^definizione-alfa-conversione) (che vedremo più tardi).
+> La risposta è che in realtà queste due $x$ non vanno considerate come la stessa $x$ ma separatamente, proprio perché vengono usate per due scopi diversi: per evitare confusioni quindi sarebbe opportuno _rinominare_ una delle due $x$ (per esempio in $z$) ed effettuando quindi un'operazione che prende il nome di [$\alpha$-conversione](Informatica/Lambda-calcolo/_index.md#^definizione-alfa-conversione) (che vedremo più tardi).
 
 %% 
 trucco per ricordarsi come trovare le variabili libere: togliere tutte le variabili legate da un'astrazione

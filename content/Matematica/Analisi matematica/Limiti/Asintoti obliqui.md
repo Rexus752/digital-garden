@@ -2,7 +2,7 @@
 title: Asintoti obliqui
 ---
 
-> [!premessa] Premessa
+> [!premessa]+ Premessa
 > 
 > Ciao! Se è la prima volta che capiti su questo sito, ti consiglio di consultare la [pagina principale](index.md) di questo cosiddetto _Giardino Digitale_ per scoprire meglio cos'è e come navigarlo.
 > 
@@ -12,9 +12,9 @@ title: Asintoti obliqui
 
 Dopo aver definito gli [asintoti verticali](Asintoti%20verticali%20e%20orizzontali.md#^definizione-asintoto-verticale) e quelli [orizzontali](Asintoti%20verticali%20e%20orizzontali.md#^definizione-asintoto-orizzontale), ora vediamo quelli [_obliqui_](Asintoti%20obliqui.md#^definizione-asintoto-obliquo).
 
-> [!definizione] Definizione: asintoto obliquo
+> [!definizione]+ Definizione: asintoto obliquo
 > 
-> Data una [funzione](content/Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ con $\text{dom}(f)$ illimitato superiormente%% Link %% (o inferiormente%% link %%) e dati $m,q \in \mathbb{R}$ con $m \ne 0$, diciamo che la retta%% link %% $y = mx + q$ è un **asintoto obliquo destro per $x \to + \infty$ (o sinistro per $x \to - \infty$) per $f$** se
+> Data una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ con $\text{dom}(f)$ illimitato superiormente%% Link %% (o inferiormente%% link %%) e dati $m,q \in \mathbb{R}$ con $m \ne 0$, diciamo che la retta%% link %% $y = mx + q$ è un **asintoto obliquo destro per $x \to + \infty$ (o sinistro per $x \to - \infty$) per $f$** se
 > 
 > $$
 > f(x) = mx + q + o(1)
@@ -31,9 +31,9 @@ esempi 4.35 pagg. 209-210 lancelotti
 Osservazioni 4.36 pagg. 210-211
 %%
 
-> [!teorema] Teorema di caratterizzazione degli asintoti obliqui
+> [!teorema]+ Teorema di caratterizzazione degli asintoti obliqui
 > 
-> Data una [funzione](content/Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ con $\text{dom}(f)$ illimitato superiormente%% Link %% (o inferiormente%% link %%) e dati $m,q \in \mathbb{R}$ con $m \ne 0$, la retta%% link %% $y = mx + q$ è un [asintoto obliquo destro](Asintoti%20obliqui.md#^definizione-asintoto-obliquo) (o [sinistro](Asintoti%20obliqui.md#^definizione-asintoto-obliquo)) se e solo se
+> Data una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ con $\text{dom}(f)$ illimitato superiormente%% Link %% (o inferiormente%% link %%) e dati $m,q \in \mathbb{R}$ con $m \ne 0$, la retta%% link %% $y = mx + q$ è un [asintoto obliquo destro](Asintoti%20obliqui.md#^definizione-asintoto-obliquo) (o [sinistro](Asintoti%20obliqui.md#^definizione-asintoto-obliquo)) se e solo se
 > 1. $f$ è un [infinito](Infiniti%20e%20infinitesimi.md#^definizione-infinito-e-infinitesimo) per $x \to + \infty$ (o per $x \to - \infty$):
 > 	$$
 > 	\lim_{x \to \pm \infty} f(x) = \pm \infty
@@ -42,7 +42,7 @@ Osservazioni 4.36 pagg. 210-211
 > 	$$
 > 	\lim_{x \to \pm \infty} \dfrac{f(x)}{|x|} = m
 > 	$$
-> 3. Vale il seguente [limite](content/Matematica/Analisi%20matematica/Limiti/_index.md#^definizione-limite):
+> 3. Vale il seguente [limite](Matematica/Analisi%20matematica/Limiti/_index.md#^definizione-limite):
 > 	$$
 > 	\lim_{x \to \pm \infty} \left( f(x) - mx \right) = q
 > 	$$
