@@ -300,7 +300,7 @@ esempio pag. 169 lancelotti
 
 > [!fonti]+ Fonti
 > 
-> - 📚 _Lezioni di Analisi Matematica I_ di Sergio Lancelotti, Celid, 2020 (ISBN: `978-8867891979`):
+> - 📚 Sergio Lancelotti, _Lezioni di Analisi Matematica I_, Celid, 2020 (ISBN: `978-8867891979`):
 > 	- Capitolo 3 - _Limiti e continuità_:
 > 		- 3 - _Teoremi su limiti e continuità_:
 > 			- 3.4 - _Forme indeterminate di tipo algebrico_.

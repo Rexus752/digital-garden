@@ -72,7 +72,7 @@ Esempi pagg. 212-214 Lancelotti
 
 > [!fonti]+ Fonti
 > 
-> - 📚 _Lezioni di Analisi Matematica I_ di Sergio Lancelotti, Celid, 2020 (ISBN: `978-8867891979`):
+> - 📚 Sergio Lancelotti, _Lezioni di Analisi Matematica I_, Celid, 2020 (ISBN: `978-8867891979`):
 > 	- Capitolo 3 - _Limiti e continuità_:
 > 		- 4 - _Confronto locale fra funzioni_:
 > 			- 4.4 - _Asintoti obliqui_.

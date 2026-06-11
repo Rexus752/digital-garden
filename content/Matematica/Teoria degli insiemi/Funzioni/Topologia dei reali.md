@@ -427,6 +427,6 @@ nel caso precedente. Analoga conclusione se a  \in A.
 
 > [!fonti]+ Fonti
 > 
-> - 📚 _Lezioni di Analisi Matematica I_ di Sergio Lancelotti, Celid, 2020 (ISBN: `978-8867891979`):
+> - 📚 Sergio Lancelotti, _Lezioni di Analisi Matematica I_, Celid, 2020 (ISBN: `978-8867891979`):
 > 	- Capitolo 3 - _Limiti e continuità_:
 > 		- 1 - _Topologia di $\mathbb{R}$_.

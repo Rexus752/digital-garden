@@ -875,11 +875,11 @@ esempi:
 > 
 > - 🏫 Corso di Laurea in Informatica (`L-31 R`) presso l'Università di Torino:
 > 	- Corso di _Matematica Discreta, Algebra e Geometria - parte di Matematica Discreta & Algebra (parte 1) - canale C_, A.A. 2023-24 ([pagina Moodle](https://informatica.i-learn.unito.it/course/view.php?id=2750)):
-> 		- Lezioni in aula dei Proff. Chen Yu e Terracini Lea.
+> 		- Proff. Chen Yu e Terracini Lea, lezioni in aula.
 > 	- Corso di _Matematica Discreta, Algebra e Geometria - parte di Algebra Lineare & Geometria (parte 2) - canale C_, A.A. 2023-24 ([pagina Moodle](https://informatica.i-learn.unito.it/course/view.php?id=2750)):
-> 		- Lezioni in aula del Prof. Radeschi Marco.
+> 		- Prof. Radeschi Marco, lezioni in aula.
 > 	- Corso di _Logica Matematica_, A.A. 2022-23 ([pagina Moodle](https://informatica.i-learn.unito.it/course/view.php?id=2480)):
-> 		- Slide dei Proff. Andretta Alessandro, Motto Ros Luca e Viale Matteo:
+> 		- Proff. Andretta Alessandro, Motto Ros Luca e Viale Matteo, slide:
 > 			- [_2.3 - Funzioni_](https://informatica.i-learn.unito.it/pluginfile.php/336712/mod_folder/content/0/Capitolo%202%20-%20Elementi%20di%20teoria%20degli%20insiemi/2.3%20-%20Funzioni_moodle.pdf).
 > - 📚 _Analisi matematica - Fare e comprendere_ di Walter Dambrosio, Zanichelli, 2018 (ISBN: `9788808220745`):
 > 	- Parte I - _I concetti dell'analisi matematica_:
@@ -887,6 +887,6 @@ esempi:
 > 			- 1 - _Funzioni e grafici_:
 > 				- 1.1 - _Funzioni e loro rappresentazioni_.
 > 				- 1.2 - _Funzione composta e funzione inversa_.
-> - 📚 _Lezioni di Analisi Matematica I_ di Sergio Lancelotti, Celid, 2020 (ISBN: `978-8867891979`):
+> - 📚 Sergio Lancelotti, _Lezioni di Analisi Matematica I_, Celid, 2020 (ISBN: `978-8867891979`):
 > 	- Capitolo 2 - _Funzioni_:
 > 		- 1 - _Nozioni preliminari_.

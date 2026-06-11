@@ -843,7 +843,7 @@ Osservazioni 3.28 e 3.29 pag. 172 lancelotti
 
 > [!fonti]+ Fonti
 > 
-> - 📚 _Lezioni di Analisi Matematica I_ di Sergio Lancelotti, Celid, 2020 (ISBN: `978-8867891979`):
+> - 📚 Sergio Lancelotti, _Lezioni di Analisi Matematica I_, Celid, 2020 (ISBN: `978-8867891979`):
 > 	- Capitolo 3 - _Limiti e continuità_:
 > 		- 2 - _Limiti di funzioni_:
 > 			- 2.2 - _Limiti laterali_.

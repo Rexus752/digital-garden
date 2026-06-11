@@ -18,7 +18,7 @@ prerequisiti:
 
 > [!definizione]+ Definizione: Haskell
 > 
-> **Haskell** è un linguaggio di programmazione%% link %% puramente funzionale%% link %% [lazy](Informatica/Lambda-calcolo/_index.md#^definizione-ordine-normale), general-purpose%% link %%%% e fortemente tipizzato%% link %%, creato da un apposito comitato alla fine degli anni ottanta%% principalmente per analizzare le caratteristiche dei linguaggi%% link %%. È stato chiamato così in onore del matematico e logico statunitense Haskell Curry%% link %%.
+> **Haskell** è un linguaggio di programmazione%% link %% puramente funzionale%% link %% [lazy](Informatica/Lambda-calcolo/_index.md#^definizione-ordine-normale), general-purpose%% link %% e fortemente tipizzato%% link %%, creato%% da un apposito comitato alla fine degli anni ottanta%% principalmente per analizzare le caratteristiche dei linguaggi%% link %%. È stato chiamato così in onore del matematico e logico statunitense Haskell Curry%% link %%.
 ^definizione-haskell
 
 %% 
@@ -101,4 +101,4 @@ https://downloads.haskell.org/ghc/latest/docs/users_guide/ghci.html
 > 			- Introduzione:
 > 				- [_Installazione_](https://boystrange.github.io/LPP/Installazione).
 > - 📚 Miran Lipovača, _Learn You a Haskell for Great Good!_:
-> 	- 1 - [_Introduction_](https://learnyouahaskell.github.io/introduction.html).
+> 	- [1 - _Introduction_](https://learnyouahaskell.github.io/introduction.html).

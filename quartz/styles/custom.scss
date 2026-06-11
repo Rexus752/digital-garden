@@ -1,5 +1,6 @@
 @use "./variables.scss" as *;
 
-@use "./custom/disable-folder-page.scss";
-@use "./custom/centered-img.scss";
 @use "./custom/callouts.scss";
+@use "./custom/centered-img.scss";
+@use "./custom/disable-folder-page.scss";
+@use "./custom/fix-collapsed-callouts.scss";

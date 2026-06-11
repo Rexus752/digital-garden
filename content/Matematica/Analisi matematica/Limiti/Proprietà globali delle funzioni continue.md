@@ -210,7 +210,7 @@ dimostrazione pagg. 234-235 lancelotti
 
 > [!fonti]+ Fonti
 > 
-> - 📚 _Lezioni di Analisi Matematica I_ di Sergio Lancelotti, Celid, 2020 (ISBN: `978-8867891979`):
+> - 📚 Sergio Lancelotti, _Lezioni di Analisi Matematica I_, Celid, 2020 (ISBN: `978-8867891979`):
 > 	- Capitolo 3 - _Limiti e continuità_:
 > 		- 6 - _Proprietà globali delle funzioni continue_:
 > 			- 6.1 - _Funzioni uniformemente continue_.

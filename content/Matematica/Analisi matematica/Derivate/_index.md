@@ -14,6 +14,6 @@ title: Derivate
 
 > [!fonti]+ Fonti
 > 
-> - 📚 _Lezioni di Analisi Matematica I_ di Sergio Lancelotti, Celid, 2020 (ISBN: `978-8867891979`):
+> - 📚 Sergio Lancelotti, _Lezioni di Analisi Matematica I_, Celid, 2020 (ISBN: `978-8867891979`):
 > 	- Capitolo 4 - _Calcolo differenziale per funzioni di una variabile_:
 > 		- 1 - _Derivata di una funzione_.

@@ -982,13 +982,13 @@ Data una famiglia di insiemi $\mathcal A$ formata dagli $n$-esimi insiemi $A_n\i
 > 
 > - 🏫 Corso di Laurea in Informatica (`L-31 R`) presso l'Università di Torino:
 >     - Corso di _Matematica Discreta, Algebra e Geometria - parte di Matematica Discreta & Algebra (parte 1) - canale C_, A.A. 2023-24 ([pagina Moodle](https://informatica.i-learn.unito.it/course/view.php?id=2750)):
-> 		- Lezioni in aula dei Proff. Chen Yu e Terracini Lea.
+> 		- Proff. Chen Yu e Terracini Lea, lezioni in aula.
 >     - Corso di _Matematica Discreta, Algebra e Geometria - parte di Algebra Lineare & Geometria (parte 2) - canale C_, A.A. 2023-24 ([pagina Moodle](https://informatica.i-learn.unito.it/course/view.php?id=2750)):
-> 		- Lezioni in aula del Prof. Radeschi Marco.
+> 		- Prof. Radeschi Marco, lezioni in aula.
 >     - Corso di _Logica Matematica_, A.A. 2022-23 ([pagina Moodle](https://informatica.i-learn.unito.it/course/view.php?id=2480)):
-> 		- Slide dei Proff. Andretta Alessandro, Motto Ros Luca e Viale Matteo:
+> 		- Proff. Andretta Alessandro, Motto Ros Luca e Viale Matteo, slide:
 > 			- [_2.1 - Insiemi_](https://informatica.i-learn.unito.it/pluginfile.php/336712/mod_folder/content/0/Capitolo%202%20-%20Elementi%20di%20teoria%20degli%20insiemi/2.1%20-%20Insiemi_moodle.pdf).
-> - 📚 _Lezioni di Analisi Matematica I_ di Sergio Lancelotti, Celid, 2020 (ISBN: `978-8867891979`):
+> - 📚 Sergio Lancelotti, _Lezioni di Analisi Matematica I_, Celid, 2020 (ISBN: `978-8867891979`):
 > 	- Capitolo 1 - _Nozioni preliminari_:
 > 		- 1 - _Richiami di teoria degli insiemi_:
 > 			- 1.1 - _Insiemi e loro proprietà_.

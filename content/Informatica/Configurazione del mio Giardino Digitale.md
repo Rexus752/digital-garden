@@ -613,7 +613,34 @@ Qua sotto ho inserito una lista dei callout che uso, ognuno dei quali ha al prop
 > }
 > ```
 
-## 2.10 - Icone nei titoli delle note
+### Per l'informatica
+
+## 2.10 - Callout chiusi con spazio vuoto
+
+I callout contenenti dei blocchi LaTeX, quando vengono chiusi, mantengono uno spazio vuoto sotto il titolo:
+
+![Callout chiuso rotto](Callout%20chiuso%20rotto.png)
+
+Per risolvere questo problema, ho creato un file `quartz/styles/custom/fix-collapsed-callouts.scss`:
+
+```scss title="quartz/styles/custom/fix-collapsed-callouts.scss" 
+.callout.is-collapsed .callout-content {
+  display: none !important;
+}
+```
+
+e l'ho aggiunto a `quartz/styles/custom.scss`:
+
+```scss title="quartz/styles/custom.scss" {6}
+@use "./variables.scss" as *;
+
+@use "./custom/callouts.scss";
+@use "./custom/centered-img.scss";
+@use "./custom/disable-folder-page.scss";
+@use "./custom/fix-collapsed-callouts.scss";
+```
+
+## 2.11 - Icone nei titoli delle note
 
 > [!attenzione]+ Attenzione: non aggiornato alla versione `v5` di Quartz
 > 
@@ -814,7 +841,7 @@ Quello che ho fatto è stato:
 Questo è ciò che ho in mente di fare per migliorare il sito:
 - Trovare un modo per caricare nel repository anche quelle cartelle che Quartz inserisce di default nel `.gitignore` come la `.obsidian` contenente le impostazioni del vault di Obsidian ed eventuali cartelle `private` contenenti note private (che però io non uso) e `templates` contenenti template per le note, in modo da avere un backup completo nel repository nel caso in cui dovesse malauguratamente succedere qualcosa.
 - Ridurre lo spazio vuoto in cima alle pagine del sito.
-- Integrare le icone delle note anche nel _Breadcrumbs_.
+- Integrare le icone delle note nel titolo della nota, nell'_Explorer_ e anche nel _Breadcrumbs_.
 - Integrare Giscus.
 - Sostituire il codice CSS delle tabelle.
 - Trasformare la "Reader Mode" in una modalità dyslexic-friendly (es. usando il font [OpenDyslexic](https://opendyslexic.org/)). 
