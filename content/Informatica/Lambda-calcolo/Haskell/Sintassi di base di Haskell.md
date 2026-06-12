@@ -89,7 +89,7 @@ Ora proviamo a esplorare un po' la sintassi di base di [Haskell](Informatica/Lam
 > 
 > Ogni errore in [Haskell](Informatica/Lambda-calcolo/Haskell/_index.md#^definizione-haskell) ha un _codice identificativo_ della forma `X-Y`, dove `X` è il programma in cui è avvenuto l'errore (es. [`GHC`](Informatica/Lambda-calcolo/Haskell/_index.md#^definizione-glasgow-haskell-compiler-ghc)) e `Y` indica il numero dell'errore.
 > 
-> Per esempio, l'[errore di prima](Informatica/Lambda-calcolo/Haskell/_index.md#^attenzione-errori-in-haskell) è rappresentato dal codice `GHC-39999`. Puoi approfondire il significato di ogni codice nell'[Haskell Error Index](https://errors.haskell.org/).
+> Per esempio, l'[errore di prima](Sintassi%20di%20base%20di%20Haskell.md#^attenzione-errori-in-haskell) è rappresentato dal codice `GHC-39999`. Puoi approfondire il significato di ogni codice nell'[Haskell Error Index](https://errors.haskell.org/).
 
 > [!definizione] Definizione: funzione in Haskell
 > 
@@ -292,20 +292,20 @@ Esattamente come per il C%% link %%, anche [Haskell](Informatica/Lambda-calcolo/
 
 > [!attenzione]+ Attenzione: concatenazione di liste troppo grandi
 > 
-> Quando [concateniamo](Sintassi%20di%20base%20di%20Haskell.md#^sintassi-concatenazione-di-liste) due [liste](Sintassi%20di%20base%20di%20Haskell.md#^sintassi-lista-in-haskell), anche se si concatena una [lista](Sintassi%20di%20base%20di%20Haskell.md#^sintassi-lista-in-haskell) _singoletto_%% link %% (cioè con un singolo elemento) a una lista, per esempio `[1,2,3] ++ [4]`, internamente [Haskell](Informatica/Lambda-calcolo/Haskell/_index.md#^definizione-haskell) deve attraversare l'intera [lista](Sintassi%20di%20base%20di%20Haskell.md#^sintassi-lista-in-haskell) a sinistra del `++` per trovarne l'ultimo elemento e concatenarle la seconda lista.
+> Quando [concateniamo](Sintassi%20di%20base%20di%20Haskell.md#^definizione-operatore-di-concatenazione-di-liste) due [liste](Sintassi%20di%20base%20di%20Haskell.md#^definizione-lista-in-haskell), anche se si concatena una [lista](Sintassi%20di%20base%20di%20Haskell.md#^definizione-lista-in-haskell) _singoletto_%% link %% (cioè con un singolo elemento) a una lista, per esempio `[1,2,3] ++ [4]`, internamente [Haskell](Informatica/Lambda-calcolo/Haskell/_index.md#^definizione-haskell) deve attraversare l'intera [lista](Sintassi%20di%20base%20di%20Haskell.md#^definizione-lista-in-haskell) a sinistra del `++` per trovarne l'ultimo elemento e concatenarle la seconda lista.
 > 
-> Ciò non è un problema con [liste](Sintassi%20di%20base%20di%20Haskell.md#^sintassi-lista-in-haskell) anche con qualche centinaio di elementi, però se si usa l'[operatore di concatenazione `++`](Sintassi%20di%20base%20di%20Haskell.md#^sintassi-concatenazione-di-liste) su [liste](Sintassi%20di%20base%20di%20Haskell.md#^sintassi-lista-in-haskell) troppo grandi (es. da centinaia di milioni di elementi) [Haskell](Informatica/Lambda-calcolo/Haskell/_index.md#^definizione-haskell) ci metterà un pochino a scorrerla tutta.
+> Ciò non è un problema con [liste](Sintassi%20di%20base%20di%20Haskell.md#^definizione-lista-in-haskell) anche con qualche centinaio di elementi, però se si usa l'[operatore di concatenazione `++`](Sintassi%20di%20base%20di%20Haskell.md#^definizione-operatore-di-concatenazione-di-liste) su [liste](Sintassi%20di%20base%20di%20Haskell.md#^definizione-lista-in-haskell) troppo grandi (es. da centinaia di milioni di elementi) [Haskell](Informatica/Lambda-calcolo/Haskell/_index.md#^definizione-haskell) ci metterà un pochino a scorrerla tutta.
 
 > [!definizione]+ Definizione: operatore di anteposizione di un elemento a una lista
 > 
-> In [Haskell](Informatica/Lambda-calcolo/Haskell/_index.md#^definizione-haskell) è possibile anteporre un elemento a una [lista](Sintassi%20di%20base%20di%20Haskell.md#^sintassi-lista-in-haskell) (cioè metterlo all'inizio della lista) attraverso l'operatore `:`, detto **operatore di anteposizione** o, in inglese, **_cons operator_**:
+> In [Haskell](Informatica/Lambda-calcolo/Haskell/_index.md#^definizione-haskell) è possibile anteporre un elemento a una [lista](Sintassi%20di%20base%20di%20Haskell.md#^definizione-lista-in-haskell) (cioè metterlo all'inizio della lista) attraverso l'operatore `:`, detto **operatore di anteposizione** o, in inglese, **_cons operator_**:
 > 
 > ```haskell
 > ghci> 1 : [2, 3, 4] == [1, 2, 3, 4]
 > True
 > ```
 > 
-> Ovviamente anche questo operatore vale anche per le [stringhe](Sintassi%20di%20base%20di%20Haskell.md#^sintassi-stringa-in-haskell), essendo anch'esse [liste](Sintassi%20di%20base%20di%20Haskell.md#^sintassi-lista-in-haskell):
+> Ovviamente anche questo operatore vale anche per le [stringhe](Sintassi%20di%20base%20di%20Haskell.md#^definizione-stringa-in-haskell), essendo anch'esse [liste](Sintassi%20di%20base%20di%20Haskell.md#^definizione-lista-in-haskell):
 > 
 > ```haskell
 > ghci> "A" : " small cat" == "A small cat"
@@ -339,7 +339,7 @@ perché If we prepend `3` to it, it becomes `[3]`. If we prepend `2` to that, it
 
 > [!definizione]+ Definizione: operatore di accesso agli elementi di una lista
 > 
-> In [Haskell](Informatica/Lambda-calcolo/Haskell/_index.md#^definizione-haskell) è possibile accedere a un elemento di una [lista](Sintassi%20di%20base%20di%20Haskell.md#^sintassi-lista-in-haskell) in base alla sua posizione (indice) attraverso l'operatore `!!`. Gli indici iniziano da `0`:
+> In [Haskell](Informatica/Lambda-calcolo/Haskell/_index.md#^definizione-haskell) è possibile accedere a un elemento di una [lista](Sintassi%20di%20base%20di%20Haskell.md#^definizione-lista-in-haskell) in base alla sua posizione (indice) attraverso l'operatore `!!`. Gli indici iniziano da `0`:
 > 
 > ```haskell
 > ghci> "Steve Buscemi" !! 6  
@@ -348,11 +348,11 @@ perché If we prepend `3` to it, it becomes `[3]`. If we prepend `2` to that, it
 > 33.2  
 > ```
 > 
-> Questo operatore funziona anche con le [stringhe](Sintassi%20di%20base%20di%20Haskell.md#^sintassi-stringa-in-haskell), essendo anch'esse [liste](Sintassi%20di%20base%20di%20Haskell.md#^sintassi-lista-in-haskell) di caratteri. Se si tenta di accedere a un indice fuori dai limiti della lista, Haskell genererà un errore.
+> Questo operatore funziona anche con le [stringhe](Sintassi%20di%20base%20di%20Haskell.md#^definizione-stringa-in-haskell), essendo anch'esse [liste](Sintassi%20di%20base%20di%20Haskell.md#^definizione-lista-in-haskell) di caratteri. Se si tenta di accedere a un indice fuori dai limiti della lista, Haskell genererà un errore.
 
 > [!definizione]+ Definizione: operatori di confronto di liste
 > 
-> In [Haskell](Informatica/Lambda-calcolo/Haskell/_index.md#^definizione-haskell) è possibile confrontare [liste](Sintassi%20di%20base%20di%20Haskell.md#^sintassi-lista-in-haskell) usando gli operatori `<`, `<=`, `>` e `>=`, a condizione che gli elementi contenuti siano confrontabili. Le liste vengono confrontate in **ordine lessicografico**: prima si confrontano gli elementi in testa (il primo elemento), se sono uguali si confrontano i secondi elementi, e così via:
+> In [Haskell](Informatica/Lambda-calcolo/Haskell/_index.md#^definizione-haskell) è possibile confrontare [liste](Sintassi%20di%20base%20di%20Haskell.md#^definizione-lista-in-haskell) usando gli operatori `<`, `<=`, `>` e `>=`, a condizione che gli elementi contenuti siano confrontabili. Le liste vengono confrontate in **ordine lessicografico**: prima si confrontano gli elementi in testa (il primo elemento), se sono uguali si confrontano i secondi elementi, e così via:
 > 
 > ```haskell
 > ghci> [3,2,1] > [2,1,0]
@@ -369,7 +369,7 @@ perché If we prepend `3` to it, it becomes `[3]`. If we prepend `2` to that, it
 
 > [!definizione]+ Definizione: funzione `head`
 > 
-> La **funzione%% link %% `head`** prende una [lista](Sintassi%20di%20base%20di%20Haskell.md#^sintassi-lista-in-haskell) e restituisce il suo primo elemento:
+> La **funzione%% link %% `head`** prende una [lista](Sintassi%20di%20base%20di%20Haskell.md#^definizione-lista-in-haskell) e restituisce il suo primo elemento:
 > 
 > ```haskell
 > ghci> head [5,4,3,2,1]
@@ -379,7 +379,7 @@ perché If we prepend `3` to it, it becomes `[3]`. If we prepend `2` to that, it
 
 > [!definizione]+ Definizione: funzione%% link %% `tail`
 > 
-> La **funzione%% link %% `tail`** prende una [lista](Sintassi%20di%20base%20di%20Haskell.md#^sintassi-lista-in-haskell) e restituisce la sua coda, cioè tutto ciò che rimane dopo aver rimosso il primo elemento:
+> La **funzione%% link %% `tail`** prende una [lista](Sintassi%20di%20base%20di%20Haskell.md#^definizione-lista-in-haskell) e restituisce la sua coda, cioè tutto ciò che rimane dopo aver rimosso il primo elemento:
 > 
 > ```haskell
 > ghci> tail [5,4,3,2,1]
@@ -389,7 +389,7 @@ perché If we prepend `3` to it, it becomes `[3]`. If we prepend `2` to that, it
 
 > [!definizione]+ Definizione: funzione%% link %% `last`
 > 
-> La **funzione%% link %% `last`** prende una [lista](Sintassi%20di%20base%20di%20Haskell.md#^sintassi-lista-in-haskell) e restituisce il suo ultimo elemento:
+> La **funzione%% link %% `last`** prende una [lista](Sintassi%20di%20base%20di%20Haskell.md#^definizione-lista-in-haskell) e restituisce il suo ultimo elemento:
 > 
 > ```haskell
 > ghci> last [5,4,3,2,1]
@@ -399,7 +399,7 @@ perché If we prepend `3` to it, it becomes `[3]`. If we prepend `2` to that, it
 
 > [!definizione]+ Definizione: funzione%% link %% `init`
 > 
-> La **funzione%% link %% `init`** prende una [lista](Sintassi%20di%20base%20di%20Haskell.md#^sintassi-lista-in-haskell) e restituisce tutto ciò che rimane dopo aver rimosso l'ultimo elemento:
+> La **funzione%% link %% `init`** prende una [lista](Sintassi%20di%20base%20di%20Haskell.md#^definizione-lista-in-haskell) e restituisce tutto ciò che rimane dopo aver rimosso l'ultimo elemento:
 > 
 > ```haskell
 > ghci> init [5,4,3,2,1]
@@ -409,7 +409,7 @@ perché If we prepend `3` to it, it becomes `[3]`. If we prepend `2` to that, it
 
 > [!attenzione]+ Attenzione: funzioni su liste vuote
 > 
-> Le funzioni%% link %% [`head`](Sintassi%20di%20base%20di%20Haskell.md#^definizione-funzione-head), [`tail`](Sintassi%20di%20base%20di%20Haskell.md#^definizione-funzione-tail), [`last`](Sintassi%20di%20base%20di%20Haskell.md#^definizione-funzione-last) e [`init`](Sintassi%20di%20base%20di%20Haskell.md#^definizione-funzione-init) generano un errore se applicate a [liste vuote](Sintassi%20di%20base%20di%20Haskell.md#^sintassi-lista-in-haskell). Se tenti di ottenere l'elemento in testa di una lista vuota, Haskell genererà un'eccezione%% link %%:
+> Le funzioni%% link %% [`head`](Sintassi%20di%20base%20di%20Haskell.md#^definizione-funzione-head), [`tail`](Sintassi%20di%20base%20di%20Haskell.md#^definizione-funzione-tail), [`last`](Sintassi%20di%20base%20di%20Haskell.md#^definizione-funzione-last) e [`init`](Sintassi%20di%20base%20di%20Haskell.md#^definizione-funzione-init) generano un errore se applicate a [liste vuote](Sintassi%20di%20base%20di%20Haskell.md#^definizione-lista-in-haskell). Se tenti di ottenere l'elemento in testa di una lista vuota, Haskell genererà un'eccezione%% link %%:
 > 
 > ```haskell
 > ghci> head []
@@ -422,7 +422,7 @@ Questo errore **non può essere catturato in fase di compilazione**, quindi è s
 
 > [!definizione]+ Definizione: funzione%% link %% `length`
 > 
-> La **funzione%% link %% `length`** prende una [lista](Sintassi%20di%20base%20di%20Haskell.md#^sintassi-lista-in-haskell) e restituisce la sua lunghezza:
+> La **funzione%% link %% `length`** prende una [lista](Sintassi%20di%20base%20di%20Haskell.md#^definizione-lista-in-haskell) e restituisce la sua lunghezza:
 > 
 > ```haskell
 > ghci> length [5,4,3,2,1]
@@ -432,7 +432,7 @@ Questo errore **non può essere catturato in fase di compilazione**, quindi è s
 
 > [!definizione]+ Definizione: funzione%% link %% `null`
 > 
-> La **funzione%% link %% `null`** verifica se una [lista](Sintassi%20di%20base%20di%20Haskell.md#^sintassi-lista-in-haskell) è vuota, restituendo `True` se la lista è vuota o `False` altrimenti:
+> La **funzione%% link %% `null`** verifica se una [lista](Sintassi%20di%20base%20di%20Haskell.md#^definizione-lista-in-haskell) è vuota, restituendo `True` se la lista è vuota o `False` altrimenti:
 > 
 > ```haskell
 > ghci> null [1,2,3]
@@ -444,7 +444,7 @@ Questo errore **non può essere catturato in fase di compilazione**, quindi è s
 
 > [!definizione]+ Definizione: funzione%% link %% `reverse`
 > 
-> La **funzione%% link %% `reverse`** inverte l'ordine degli elementi di una [lista](Sintassi%20di%20base%20di%20Haskell.md#^sintassi-lista-in-haskell):
+> La **funzione%% link %% `reverse`** inverte l'ordine degli elementi di una [lista](Sintassi%20di%20base%20di%20Haskell.md#^definizione-lista-in-haskell):
 > 
 > ```haskell
 > ghci> reverse [5,4,3,2,1]
@@ -454,7 +454,7 @@ Questo errore **non può essere catturato in fase di compilazione**, quindi è s
 
 > [!definizione]+ Definizione: funzione%% link %% `take`
 > 
-> La **funzione%% link %% `take`** prende un numero e una [lista](Sintassi%20di%20base%20di%20Haskell.md#^sintassi-lista-in-haskell) ed estrae quel numero di elementi partendo dall'inizio della lista:
+> La **funzione%% link %% `take`** prende un numero e una [lista](Sintassi%20di%20base%20di%20Haskell.md#^definizione-lista-in-haskell) ed estrae quel numero di elementi partendo dall'inizio della lista:
 > 
 > ```haskell
 > ghci> take 3 [5,4,3,2,1]
@@ -472,7 +472,7 @@ Questo errore **non può essere catturato in fase di compilazione**, quindi è s
 
 > [!definizione]+ Definizione: funzione%% link %% `drop`
 > 
-> La **funzione%% link %% `drop`** prende un numero e una [lista](Sintassi%20di%20base%20di%20Haskell.md#^sintassi-lista-in-haskell) e scarta il numero di elementi specificato dall'inizio della [lista](Sintassi%20di%20base%20di%20Haskell.md#^sintassi-lista-in-haskell):
+> La **funzione%% link %% `drop`** prende un numero e una [lista](Sintassi%20di%20base%20di%20Haskell.md#^definizione-lista-in-haskell) e scarta il numero di elementi specificato dall'inizio della [lista](Sintassi%20di%20base%20di%20Haskell.md#^definizione-lista-in-haskell):
 > 
 > ```haskell
 > ghci> drop 3 [8,4,2,1,5,6]
@@ -486,7 +486,7 @@ Questo errore **non può essere catturato in fase di compilazione**, quindi è s
 
 > [!definizione]+ Definizione: funzioni `maximum` e `minimum`
 > 
-> La **funzione%% link %% `maximum`** prende una [lista](Sintassi%20di%20base%20di%20Haskell.md#^sintassi-lista-in-haskell) di elementi ordinabili e restituisce l'elemento più grande, mentre la **funzione%% link %% `minimum`** restituisce l'elemento più piccolo:
+> La **funzione%% link %% `maximum`** prende una [lista](Sintassi%20di%20base%20di%20Haskell.md#^definizione-lista-in-haskell) di elementi ordinabili e restituisce l'elemento più grande, mentre la **funzione%% link %% `minimum`** restituisce l'elemento più piccolo:
 > 
 > ```haskell
 > ghci> minimum [8,4,2,1,5,6]
@@ -498,7 +498,7 @@ Questo errore **non può essere catturato in fase di compilazione**, quindi è s
 
 > [!definizione]+ Definizione: funzioni `sum` e `product`
 > 
-> La **funzione%% link %% `sum`** prende una [lista](Sintassi%20di%20base%20di%20Haskell.md#^sintassi-lista-in-haskell) di numeri e restituisce la loro somma%% link %%, mentre la **funzione%% link %% `product`** prende una lista di numeri e restituisce il loro prodotto%% link %%:
+> La **funzione%% link %% `sum`** prende una [lista](Sintassi%20di%20base%20di%20Haskell.md#^definizione-lista-in-haskell) di numeri e restituisce la loro somma%% link %%, mentre la **funzione%% link %% `product`** prende una lista di numeri e restituisce il loro prodotto%% link %%:
 > 
 > ```haskell
 > ghci> sum [5,2,1,6,3,2,5,7]
@@ -512,7 +512,7 @@ Questo errore **non può essere catturato in fase di compilazione**, quindi è s
 
 > [!definizione]+ Definizione: funzione%% link %% `elem`
 > 
-> La **funzione%% link %% `elem`** prende un elemento e una [lista](Sintassi%20di%20base%20di%20Haskell.md#^sintassi-lista-in-haskell) e ci dice se quell'elemento è presente nella lista:
+> La **funzione%% link %% `elem`** prende un elemento e una [lista](Sintassi%20di%20base%20di%20Haskell.md#^definizione-lista-in-haskell) e ci dice se quell'elemento è presente nella lista:
 > 
 > ```haskell
 > ghci> elem 4 [3,4,5,6]
@@ -529,11 +529,11 @@ Questo errore **non può essere catturato in fase di compilazione**, quindi è s
 
 ## 2.2 - Range list
 
-In [Haskell](Informatica/Lambda-calcolo/Haskell/_index.md#^definizione-haskell), quando vogliamo creare una [lista](Sintassi%20di%20base%20di%20Haskell.md#^sintassi-lista-in-haskell) di numeri che seguono una sequenza aritmetica%% link %%, non è necessario scrivere manualmente ogni elemento. Le [range list](Sintassi%20di%20base%20di%20Haskell.md#^sintassi-range-list) sono una sintassi conveniente per generare [liste](Sintassi%20di%20base%20di%20Haskell.md#^sintassi-lista-in-haskell) di elementi enumerabili, come numeri e caratteri. Un elemento è enumerabile%% link %% se fa parte di una sequenza ordinata (i numeri naturali, le lettere dell'alfabeto, ecc.), mentre nomi arbitrari non lo sono.
+In [Haskell](Informatica/Lambda-calcolo/Haskell/_index.md#^definizione-haskell), quando vogliamo creare una [lista](Sintassi%20di%20base%20di%20Haskell.md#^definizione-lista-in-haskell) di numeri che seguono una sequenza aritmetica%% link %%, non è necessario scrivere manualmente ogni elemento. Le [range list](Sintassi%20di%20base%20di%20Haskell.md#^sintassi-range-list) sono una sintassi conveniente per generare [liste](Sintassi%20di%20base%20di%20Haskell.md#^definizione-lista-in-haskell) di elementi enumerabili, come numeri e caratteri. Un elemento è enumerabile%% link %% se fa parte di una sequenza ordinata (i numeri naturali, le lettere dell'alfabeto, ecc.), mentre nomi arbitrari non lo sono.
 
 > [!definizione]+ Definizione: range list
 > 
-> In [Haskell](Informatica/Lambda-calcolo/Haskell/_index.md#^definizione-haskell) una **range list** è una [lista](Sintassi%20di%20base%20di%20Haskell.md#^sintassi-lista-in-haskell) definita attraverso un intervallo, cioè usando la sintassi `[inizio..fine]` per creare una lista di elementi contenente tutti i valori compresi tra il valore `inizio` e il valore `fine`, compresi questi ultimi:
+> In [Haskell](Informatica/Lambda-calcolo/Haskell/_index.md#^definizione-haskell) una **range list** è una [lista](Sintassi%20di%20base%20di%20Haskell.md#^definizione-lista-in-haskell) definita attraverso un intervallo, cioè usando la sintassi `[inizio..fine]` per creare una lista di elementi contenente tutti i valori compresi tra il valore `inizio` e il valore `fine`, compresi questi ultimi:
 > 
 > ```haskell
 > ghci> [1..20]
@@ -553,14 +553,14 @@ In [Haskell](Informatica/Lambda-calcolo/Haskell/_index.md#^definizione-haskell),
 > [3,6,9,12,15,18]
 > ```
 > 
-> Per creare [liste](Sintassi%20di%20base%20di%20Haskell.md#^sintassi-lista-in-haskell) decrescenti, specifica esplicitamente il passo negativo:
+> Per creare [liste](Sintassi%20di%20base%20di%20Haskell.md#^definizione-lista-in-haskell) decrescenti, specifica esplicitamente il passo negativo:
 > 
 > ```haskell
 > ghci> [20,19..1]
 > [20,19,18,17,16,15,14,13,12,11,10,9,8,7,6,5,4,3,2,1]
 > ```
 > 
-> Omettendo il limite superiore, puoi creare [liste](Sintassi%20di%20base%20di%20Haskell.md#^sintassi-lista-in-haskell) infinite. [Haskell](Informatica/Lambda-calcolo/Haskell/_index.md#^definizione-haskell) le valuta in modo [lazy](Informatica/Lambda-calcolo/_index.md#^definizione-ordine-normale), quindi calcola solo gli elementi di cui hai bisogno:
+> Omettendo il limite superiore, puoi creare [liste](Sintassi%20di%20base%20di%20Haskell.md#^definizione-lista-in-haskell) infinite. [Haskell](Informatica/Lambda-calcolo/Haskell/_index.md#^definizione-haskell) le valuta in modo [lazy](Informatica/Lambda-calcolo/_index.md#^definizione-ordine-normale), quindi calcola solo gli elementi di cui hai bisogno:
 > 
 > ```haskell
 > ghci> take 24 [13,26..]
@@ -583,7 +583,7 @@ In [Haskell](Informatica/Lambda-calcolo/Haskell/_index.md#^definizione-haskell),
 
 > [!definizione]+ Definizione: funzione `cycle`
 > 
-> La **funzione%% link %% `cycle`** prende una [lista](Sintassi%20di%20base%20di%20Haskell.md#^sintassi-lista-in-haskell) e la ripete infinitamente. Poiché il risultato è una lista infinita, bisogna sempre troncarla usando funzioni%% link %% come [`take`](Sintassi%20di%20base%20di%20Haskell.md#^definizione-funzione-take) per ottenere un numero finito di elementi:
+> La **funzione%% link %% `cycle`** prende una [lista](Sintassi%20di%20base%20di%20Haskell.md#^definizione-lista-in-haskell) e la ripete infinitamente. Poiché il risultato è una lista infinita, bisogna sempre troncarla usando funzioni%% link %% come [`take`](Sintassi%20di%20base%20di%20Haskell.md#^definizione-funzione-take) per ottenere un numero finito di elementi:
 > 
 > ```haskell
 > ghci> take 10 (cycle [1,2,3])
@@ -595,7 +595,7 @@ In [Haskell](Informatica/Lambda-calcolo/Haskell/_index.md#^definizione-haskell),
 
 > [!definizione]+ Definizione: funzione `repeat`
 > 
-> La **funzione%% link %% `repeat`** prende un elemento e produce una [lista](Sintassi%20di%20base%20di%20Haskell.md#^sintassi-lista-in-haskell) infinita contenente solo quel elemento. È equivalente a ciclare una lista con un solo elemento:
+> La **funzione%% link %% `repeat`** prende un elemento e produce una [lista](Sintassi%20di%20base%20di%20Haskell.md#^definizione-lista-in-haskell) infinita contenente solo quel elemento. È equivalente a ciclare una lista con un solo elemento:
 > 
 > ```haskell
 > ghci> take 10 (repeat 5)
@@ -605,7 +605,7 @@ In [Haskell](Informatica/Lambda-calcolo/Haskell/_index.md#^definizione-haskell),
 
 > [!definizione]+ Definizione: funzione `replicate`
 > 
-> La **funzione%% link %% `replicate`** prende un numero e un elemento, e restituisce una [lista](Sintassi%20di%20base%20di%20Haskell.md#^sintassi-lista-in-haskell) finita contenente quel numero di copie dell'elemento. È conveniente usarla al posto di [`repeat`](Sintassi%20di%20base%20di%20Haskell.md#^definizione-funzione-repeat) quando si sa esattamente quanti elementi servono:
+> La **funzione%% link %% `replicate`** prende un numero e un elemento, e restituisce una [lista](Sintassi%20di%20base%20di%20Haskell.md#^definizione-lista-in-haskell) finita contenente quel numero di copie dell'elemento. È conveniente usarla al posto di [`repeat`](Sintassi%20di%20base%20di%20Haskell.md#^definizione-funzione-repeat) quando si sa esattamente quanti elementi servono:
 > 
 > ```haskell
 > ghci> replicate 3 10
@@ -615,11 +615,11 @@ In [Haskell](Informatica/Lambda-calcolo/Haskell/_index.md#^definizione-haskell),
 
 ## 2.4 - List comprehension
 
-Un modo molto più comodo per definire una [lista](Sintassi%20di%20base%20di%20Haskell.md#^sintassi-lista-in-haskell) contenente solo elementi che rispettano un certo criterio è la [list comprehension](Sintassi%20di%20base%20di%20Haskell.md#^sintassi-list-comprehension).
+Un modo molto più comodo per definire una [lista](Sintassi%20di%20base%20di%20Haskell.md#^definizione-lista-in-haskell) contenente solo elementi che rispettano un certo criterio è la [list comprehension](Sintassi%20di%20base%20di%20Haskell.md#^sintassi-list-comprehension).
 
 > [!definizione]+ Definizione: list comprehension
 > 
-> In [Haskell](Informatica/Lambda-calcolo/Haskell/_index.md#^definizione-haskell) una **list comprehension** è una [lista](Sintassi%20di%20base%20di%20Haskell.md#^sintassi-lista-in-haskell) definita attraverso una funzione%% link %% [applicata](Informatica/Lambda-calcolo/_index.md#^definizione-applicazione) a ogni elemento di un'altra [lista](Sintassi%20di%20base%20di%20Haskell.md#^sintassi-lista-in-haskell) passata in input. Ha la forma: `[funzione_output | variabile <- lista_input]`
+> In [Haskell](Informatica/Lambda-calcolo/Haskell/_index.md#^definizione-haskell) una **list comprehension** è una [lista](Sintassi%20di%20base%20di%20Haskell.md#^definizione-lista-in-haskell) definita attraverso una funzione%% link %% [applicata](Informatica/Lambda-calcolo/_index.md#^definizione-applicazione) a ogni elemento di un'altra [lista](Sintassi%20di%20base%20di%20Haskell.md#^definizione-lista-in-haskell) passata in input. Ha la forma: `[funzione_output | variabile <- lista_input]`
 > 
 > ```haskell
 > ghci> [x*2 | x <- [1..10]]
@@ -680,7 +680,7 @@ Un modo molto più comodo per definire una [lista](Sintassi%20di%20base%20di%20H
 > [55,80,100,110]
 > ```
 > 
-> Si possono anche combinare [stringhe](Sintassi%20di%20base%20di%20Haskell.md#^sintassi-stringa-in-haskell) (ossia [liste](Sintassi%20di%20base%20di%20Haskell.md#^sintassi-lista-in-haskell) di caratteri):
+> Si possono anche combinare [stringhe](Sintassi%20di%20base%20di%20Haskell.md#^definizione-stringa-in-haskell) (ossia [liste](Sintassi%20di%20base%20di%20Haskell.md#^definizione-lista-in-haskell) di caratteri):
 > 
 > ```haskell
 > ghci> nouns = ["hobo","frog","pope"]
@@ -694,7 +694,7 @@ Un modo molto più comodo per definire una [lista](Sintassi%20di%20base%20di%20H
 
 [!definizione]+ Definizione: list comprehension con segnaposto
 
-Una [list comprehension](Sintassi%20di%20base%20di%20Haskell.md#^sintassi-list-comprehension-con-condizionali) può usare un **segnaposto**, identificato dal `_`, quando non si è interessati al valore estratto dalla [lista](Sintassi%20di%20base%20di%20Haskell.md#^sintassi-lista-in-haskell), senza nominare una variabileLINK inutilizzata:
+Una [list comprehension](Sintassi%20di%20base%20di%20Haskell.md#^sintassi-list-comprehension-con-condizionali) può usare un **segnaposto**, identificato dal `_`, quando non si è interessati al valore estratto dalla [lista](Sintassi%20di%20base%20di%20Haskell.md#^definizione-lista-in-haskell), senza nominare una variabileLINK inutilizzata:
 
 ```haskell
 length' xs = sum [1 | _ <- xs]
@@ -709,7 +709,7 @@ In questo esempio, `_` rappresenta ogni elemento della lista, che viene sostitui
 
 > [!esempio]- Esempio: list comprehension su stringhe
 > 
-> Poiché le [stringhe](Sintassi%20di%20base%20di%20Haskell.md#^sintassi-stringa-in-haskell) sono [liste](Sintassi%20di%20base%20di%20Haskell.md#^sintassi-lista-in-haskell) di caratteri in [Haskell](Informatica/Lambda-calcolo/Haskell/_index.md#^definizione-haskell), si può usare una [list comprehension](Sintassi%20di%20base%20di%20Haskell.md#^sintassi-list-comprehension) per filtrare e processare stringhe:
+> Poiché le [stringhe](Sintassi%20di%20base%20di%20Haskell.md#^definizione-stringa-in-haskell) sono [liste](Sintassi%20di%20base%20di%20Haskell.md#^definizione-lista-in-haskell) di caratteri in [Haskell](Informatica/Lambda-calcolo/Haskell/_index.md#^definizione-haskell), si può usare una [list comprehension](Sintassi%20di%20base%20di%20Haskell.md#^sintassi-list-comprehension) per filtrare e processare stringhe:
 > 
 > ```haskell
 > removeNonUppercase st = [ c | c <- st, c `elem` ['A'..'Z']]
@@ -724,7 +724,7 @@ In questo esempio, `_` rappresenta ogni elemento della lista, che viene sostitui
 
 > [!definizione]+ Definizione: list comprehension annidate
 > 
-> Una **list comprehension annidata** è una [list comprehension](Sintassi%20di%20base%20di%20Haskell.md#^sintassi-list-comprehension) che contiene altre [list comprehension](Sintassi%20di%20base%20di%20Haskell.md#^sintassi-list-comprehension) al suo interno. Questo permette di operare su [liste annidate](Sintassi%20di%20base%20di%20Haskell.md#^sintassi-lista-annidata-in-haskell) e filtrarne gli elementi senza appiattire la struttura:
+> Una **list comprehension annidata** è una [list comprehension](Sintassi%20di%20base%20di%20Haskell.md#^sintassi-list-comprehension) che contiene altre [list comprehension](Sintassi%20di%20base%20di%20Haskell.md#^sintassi-list-comprehension) al suo interno. Questo permette di operare su [liste annidate](Sintassi%20di%20base%20di%20Haskell.md#^definizione-lista-annidata-in-haskell) e filtrarne gli elementi senza appiattire la struttura:
 > 
 > ```haskell
 > ghci> let xxs = [[1,3,5,2,3,1,2,4,5],[1,2,3,4,5,6,7,8,9],[1,2,4,2,1,6,3,1,3,2,3,6]]
@@ -737,7 +737,7 @@ In questo esempio, `_` rappresenta ogni elemento della lista, che viene sostitui
 
 # 3 - Tuple
 
-Le [tupla](Sintassi%20di%20base%20di%20Haskell.md#^definizione-tupla-in-haskell) sono un modo per memorizzare più valori in un'unica struttura, simile alle [liste](Sintassi%20di%20base%20di%20Haskell.md#^sintassi-lista-in-haskell), ma la loro dimensione e i tipi dei loro componenti sono fissi e definiti al momento della creazione.
+Le [tuple](Sintassi%20di%20base%20di%20Haskell.md#^definizione-tupla-in-haskell) sono un modo per memorizzare più valori in un'unica struttura, simile alle [liste](Sintassi%20di%20base%20di%20Haskell.md#^definizione-lista-in-haskell), ma la loro dimensione e i tipi dei loro componenti sono fissi e definiti al momento della creazione.
 
 > [!definizione]+ Definizione: tupla in Haskell
 > 
@@ -753,11 +753,11 @@ Le [tupla](Sintassi%20di%20base%20di%20Haskell.md#^definizione-tupla-in-haskell)
 > ```
 > 
 > Una **tupla** di due elementi si chiama **coppia** (in inglese **_pair_**), una di tre elementi si chiama **tripla** (in inglese **_triple_**) e così via.
-^sintassi-tupla-in-haskell
+^definizione-tupla-in-haskell
 
 > [!osservazione]+ Osservazione: il tipo delle tuple dipende da numero e tipi dei componenti
 > 
-> Il tipo%% link %% di una [tupla](Sintassi%20di%20base%20di%20Haskell.md#^sintassi-tupla-in-haskell) è determinato da due fattori: il numero di [componenti](Sintassi%20di%20base%20di%20Haskell.md#^sintassi-tupla-in-haskell) e i tipi di ciascun [componente](Sintassi%20di%20base%20di%20Haskell.md#^sintassi-tupla-in-haskell). Questo significa che ogni tupla di diversa dimensione o con diversi tipi è considerata un tipo completamente diverso. Per esempio:
+> Il tipo%% link %% di una [tupla](Sintassi%20di%20base%20di%20Haskell.md#^definizione-tupla-in-haskell) è determinato da due fattori: il numero di [componenti](Sintassi%20di%20base%20di%20Haskell.md#^definizione-tupla-in-haskell) e i tipi di ciascun [componente](Sintassi%20di%20base%20di%20Haskell.md#^definizione-tupla-in-haskell). Questo significa che ogni tupla di diversa dimensione o con diversi tipi è considerata un tipo completamente diverso. Per esempio:
 > - `(1, 2)` è di tipo `(Integer, Integer)`,
 > - `(1, 2, 3)` è di tipo `(Integer, Integer, Integer)`,
 > - `(1, "hello")` è di tipo `(Integer, String)` e
@@ -766,12 +766,12 @@ Le [tupla](Sintassi%20di%20base%20di%20Haskell.md#^definizione-tupla-in-haskell)
 
 > [!osservazione]+ Osservazione: tuple e liste
 > 
-> A differenza delle [liste](Sintassi%20di%20base%20di%20Haskell.md#^sintassi-lista-in-haskell), le [tuple](Sintassi%20di%20base%20di%20Haskell.md#^sintassi-tupla-in-haskell):
+> A differenza delle [liste](Sintassi%20di%20base%20di%20Haskell.md#^definizione-lista-in-haskell), le [tuple](Sintassi%20di%20base%20di%20Haskell.md#^definizione-tupla-in-haskell):
 > - Hanno una dimensione fissa, nota al momento della creazione.
 > - Possono contenere elementi di tipi diversi (sono cioè strutture dati%% link %% eterogenee%% link %%).
 > - Il loro tipo dipende dal numero di componenti e dai loro tipi, come già [osservato](Sintassi%20di%20base%20di%20Haskell.md#^osservazione-il-tipo-delle-tuple-dipende-da-numero-e-tipi-dei-componenti) poco fa.
 > 
-> Proprio per quest'ultimo punto, se una [lista](Sintassi%20di%20base%20di%20Haskell.md#^sintassi-lista-in-haskell) ha come elementi delle [tuple](Sintassi%20di%20base%20di%20Haskell.md#^sintassi-tupla-in-haskell), esse devono avere [componenti](Sintassi%20di%20base%20di%20Haskell.md#^sintassi-tupla-in-haskell) dello stesso tipo e dello stesso numero. Non possiamo avere una [lista](Sintassi%20di%20base%20di%20Haskell.md#^sintassi-lista-in-haskell) mista di [coppie](Sintassi%20di%20base%20di%20Haskell.md#^sintassi-tupla-in-haskell) e [triple](Sintassi%20di%20base%20di%20Haskell.md#^sintassi-tupla-in-haskell), né puoi possiamo una [lista](Sintassi%20di%20base%20di%20Haskell.md#^sintassi-lista-in-haskell) che contenga sia `(1,2)` che `(1,"hello")` perché il primo elemento sarebbe una coppia di numeri e il secondo sarebbe una coppia di numero e stringa:
+> Proprio per quest'ultimo punto, se una [lista](Sintassi%20di%20base%20di%20Haskell.md#^definizione-lista-in-haskell) ha come elementi delle [tuple](Sintassi%20di%20base%20di%20Haskell.md#^definizione-tupla-in-haskell), esse devono avere [componenti](Sintassi%20di%20base%20di%20Haskell.md#^definizione-tupla-in-haskell) dello stesso tipo e dello stesso numero. Non possiamo avere una [lista](Sintassi%20di%20base%20di%20Haskell.md#^definizione-lista-in-haskell) mista di [coppie](Sintassi%20di%20base%20di%20Haskell.md#^definizione-tupla-in-haskell) e [triple](Sintassi%20di%20base%20di%20Haskell.md#^definizione-tupla-in-haskell), né puoi possiamo una [lista](Sintassi%20di%20base%20di%20Haskell.md#^definizione-lista-in-haskell) che contenga sia `(1,2)` che `(1,"hello")` perché il primo elemento sarebbe una coppia di numeri e il secondo sarebbe una coppia di numero e stringa:
 > 
 > ```haskell
 > ghci> [(1,2), (8,11,5), (4,5)]
@@ -787,15 +787,15 @@ Le [tupla](Sintassi%20di%20base%20di%20Haskell.md#^definizione-tupla-in-haskell)
 
 > [!attenzione]+ Attenzione: non esiste la tupla _singoletto_
 > 
-> In [Haskell](Informatica/Lambda-calcolo/Haskell/_index.md#^definizione-haskell) non esiste il concetto di [tupla](Sintassi%20di%20base%20di%20Haskell.md#^sintassi-tupla-in-haskell) _singoletto_, cioè con un solo elemento: una [tupla](Sintassi%20di%20base%20di%20Haskell.md#^sintassi-tupla-in-haskell) di un elemento sarebbe semplicemente il valore stesso, quindi non avrebbe utilità pratica.
+> In [Haskell](Informatica/Lambda-calcolo/Haskell/_index.md#^definizione-haskell) non esiste il concetto di [tupla](Sintassi%20di%20base%20di%20Haskell.md#^definizione-tupla-in-haskell) _singoletto_, cioè con un solo elemento: una [tupla](Sintassi%20di%20base%20di%20Haskell.md#^definizione-tupla-in-haskell) di un elemento sarebbe semplicemente il valore stesso, quindi non avrebbe utilità pratica.
 
 ## 3.1 - Funzioni su tuple
 
-Ora vediamo un po' di funzioni%% link %% che agiscono sulle [tuple](Sintassi%20di%20base%20di%20Haskell.md#^sintassi-tupla-in-haskell).
+Ora vediamo un po' di funzioni%% link %% che agiscono sulle [tuple](Sintassi%20di%20base%20di%20Haskell.md#^definizione-tupla-in-haskell).
 
 > [!definizione]+ Definizione: funzione `fst`
 > 
-> **`fst`** è una funzione%% link %% di [Haskell](Informatica/Lambda-calcolo/Haskell/_index.md#^definizione-haskell) che prende una [coppia](Sintassi%20di%20base%20di%20Haskell.md#^sintassi-tupla-in-haskell) e restituisce il suo primo [componente](Sintassi%20di%20base%20di%20Haskell.md#^sintassi-tupla-in-haskell):
+> **`fst`** è una funzione%% link %% di [Haskell](Informatica/Lambda-calcolo/Haskell/_index.md#^definizione-haskell) che prende una [coppia](Sintassi%20di%20base%20di%20Haskell.md#^definizione-tupla-in-haskell) e restituisce il suo primo [componente](Sintassi%20di%20base%20di%20Haskell.md#^definizione-tupla-in-haskell):
 > 
 > ```haskell
 > ghci> fst (9,11)
@@ -804,12 +804,12 @@ Ora vediamo un po' di funzioni%% link %% che agiscono sulle [tuple](Sintassi%20d
 > "Wow"
 > ```
 > 
-> Questa funzione%% link %% opera solo su [coppie](Sintassi%20di%20base%20di%20Haskell.md#^sintassi-tupla-in-haskell), cioè [tuple](Sintassi%20di%20base%20di%20Haskell.md#^sintassi-tupla-in-haskell) di 2 [componenti](Sintassi%20di%20base%20di%20Haskell.md#^sintassi-tupla-in-haskell), non su [triple](Sintassi%20di%20base%20di%20Haskell.md#^sintassi-tupla-in-haskell) o tuple più grandi.
+> Questa funzione%% link %% opera solo su [coppie](Sintassi%20di%20base%20di%20Haskell.md#^definizione-tupla-in-haskell), cioè [tuple](Sintassi%20di%20base%20di%20Haskell.md#^definizione-tupla-in-haskell) di 2 [componenti](Sintassi%20di%20base%20di%20Haskell.md#^definizione-tupla-in-haskell), non su [triple](Sintassi%20di%20base%20di%20Haskell.md#^definizione-tupla-in-haskell) o tuple più grandi.
 ^definizione-funzione-fst
 
 > [!definizione]+ Definizione: funzione `snd`
 > 
-> **`snd`** è una funzione%% link %% di [Haskell](Informatica/Lambda-calcolo/Haskell/_index.md#^definizione-haskell) che prende una [coppia](Sintassi%20di%20base%20di%20Haskell.md#^sintassi-tupla-in-haskell) e restituisce il suo secondo [componente](Sintassi%20di%20base%20di%20Haskell.md#^sintassi-tupla-in-haskell):
+> **`snd`** è una funzione%% link %% di [Haskell](Informatica/Lambda-calcolo/Haskell/_index.md#^definizione-haskell) che prende una [coppia](Sintassi%20di%20base%20di%20Haskell.md#^definizione-tupla-in-haskell) e restituisce il suo secondo [componente](Sintassi%20di%20base%20di%20Haskell.md#^definizione-tupla-in-haskell):
 > 
 > ```haskell
 > ghci> snd (8,11)
@@ -818,12 +818,12 @@ Ora vediamo un po' di funzioni%% link %% che agiscono sulle [tuple](Sintassi%20d
 > False
 > ```
 > 
-> Questa funzione%% link %% opera solo su [coppie](Sintassi%20di%20base%20di%20Haskell.md#^sintassi-tupla-in-haskell), cioè [tuple](Sintassi%20di%20base%20di%20Haskell.md#^sintassi-tupla-in-haskell) di 2 [componenti](Sintassi%20di%20base%20di%20Haskell.md#^sintassi-tupla-in-haskell), non su [triple](Sintassi%20di%20base%20di%20Haskell.md#^sintassi-tupla-in-haskell) o tuple più grandi.
+> Questa funzione%% link %% opera solo su [coppie](Sintassi%20di%20base%20di%20Haskell.md#^definizione-tupla-in-haskell), cioè [tuple](Sintassi%20di%20base%20di%20Haskell.md#^definizione-tupla-in-haskell) di 2 [componenti](Sintassi%20di%20base%20di%20Haskell.md#^definizione-tupla-in-haskell), non su [triple](Sintassi%20di%20base%20di%20Haskell.md#^definizione-tupla-in-haskell) o tuple più grandi.
 ^definizione-funzione-snd
 
 > [!definizione]+ Definizione: funzione `zip`
 > 
-> **`zip`** è una funzione%% link %% di [Haskell](Informatica/Lambda-calcolo/Haskell/_index.md#^definizione-haskell) che prende due [liste](Sintassi%20di%20base%20di%20Haskell.md#^sintassi-lista-in-haskell) e le "cuce" insieme (come una cerniera lampo, cioè in inglese _zip_), creando una [lista](Sintassi%20di%20base%20di%20Haskell.md#^sintassi-lista-in-haskell) di [coppie](Sintassi%20di%20base%20di%20Haskell.md#^sintassi-tupla-in-haskell) con gli elementi corrispondenti abbinati a due a due:
+> **`zip`** è una funzione%% link %% di [Haskell](Informatica/Lambda-calcolo/Haskell/_index.md#^definizione-haskell) che prende due [liste](Sintassi%20di%20base%20di%20Haskell.md#^definizione-lista-in-haskell) e le "cuce" insieme (come una cerniera lampo, cioè in inglese _zip_), creando una [lista](Sintassi%20di%20base%20di%20Haskell.md#^definizione-lista-in-haskell) di [coppie](Sintassi%20di%20base%20di%20Haskell.md#^definizione-tupla-in-haskell) con gli elementi corrispondenti abbinati a due a due:
 > 
 > ```haskell
 > ghci> zip [1,2,3,4,5] [5,5,5,5,5]
@@ -832,7 +832,7 @@ Ora vediamo un po' di funzioni%% link %% che agiscono sulle [tuple](Sintassi%20d
 > [(1,"one"),(2,"two"),(3,"three"),(4,"four"),(5,"five")]
 > ```
 > 
-> Se le [liste](Sintassi%20di%20base%20di%20Haskell.md#^sintassi-lista-in-haskell) hanno lunghezze diverse, la lista più lunga viene troncata per corrispondere alla lunghezza di quella più corta:
+> Se le [liste](Sintassi%20di%20base%20di%20Haskell.md#^definizione-lista-in-haskell) hanno lunghezze diverse, la lista più lunga viene troncata per corrispondere alla lunghezza di quella più corta:
 > 
 > ```haskell
 > ghci> zip [5,3,2,6,2,7,2,5,4,6,6] ["im","a","turtle"]
@@ -842,7 +842,7 @@ Ora vediamo un po' di funzioni%% link %% che agiscono sulle [tuple](Sintassi%20d
 
 > [!osservazione]+ Osservazione: zip tra una lista finita e una infinita
 > 
-> Poiché [Haskell](Informatica/Lambda-calcolo/Haskell/_index.md#^definizione-haskell) è [lazy](Informatica/Lambda-calcolo/_index.md#^definizione-ordine-normale), è possibile fare una [`zip`](Sintassi%20di%20base%20di%20Haskell.md#^definizione-funzione-zip) tra una [lista](Sintassi%20di%20base%20di%20Haskell.md#^sintassi-lista-in-haskell) finita%% link %% e una infinita%% link %%, perché quest'ultima verrà valutata solo finché serve (cioè per un numero di [componenti](Sintassi%20di%20base%20di%20Haskell.md#^sintassi-tupla-in-haskell) pari a quello della lista finita):
+> Poiché [Haskell](Informatica/Lambda-calcolo/Haskell/_index.md#^definizione-haskell) è [lazy](Informatica/Lambda-calcolo/_index.md#^definizione-ordine-normale), è possibile fare una [`zip`](Sintassi%20di%20base%20di%20Haskell.md#^definizione-funzione-zip) tra una [lista](Sintassi%20di%20base%20di%20Haskell.md#^definizione-lista-in-haskell) finita%% link %% e una infinita%% link %%, perché quest'ultima verrà valutata solo finché serve (cioè per un numero di [componenti](Sintassi%20di%20base%20di%20Haskell.md#^definizione-tupla-in-haskell) pari a quello della lista finita):
 > 
 > ```haskell
 > ghci> zip [1..] ["apple", "orange", "cherry", "mango"]

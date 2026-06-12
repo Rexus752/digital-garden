@@ -200,7 +200,7 @@ Tuples are types but they are dependent on their length as well as the types of 
 
 # Variabili di tipi
 
-Secondo te qual è il [tipo](Tipizzazione%20in%20Haskell.md#^definizione-tipo-in-haskell) della [funzione `head`](Sintassi%20di%20base%20di%20Haskell.md#^sintassi-funzione-head)? Non è una domanda banale, perché [`head`](Sintassi%20di%20base%20di%20Haskell.md#^sintassi-funzione-head) prende una [lista](Sintassi%20di%20base%20di%20Haskell.md#^sintassi-lista-in-haskell) di un [tipo](Tipizzazione%20in%20Haskell.md#^definizione-tipo-in-haskell) qualsiasi ne restituisce il primo elemento, quindi quale [tipo](Tipizzazione%20in%20Haskell.md#^definizione-tipo-in-haskell) assume? Controlliamo su [GHCi](content/Informatica/Lambda-calcolo/Haskell/_index.md#^definizione-ghci):
+Secondo te qual è il [tipo](Tipizzazione%20in%20Haskell.md#^definizione-tipo-in-haskell) della [funzione `head`](Sintassi%20di%20base%20di%20Haskell.md#^definizione-funzione-head)? Non è una domanda banale, perché [`head`](Sintassi%20di%20base%20di%20Haskell.md#^definizione-funzione-head) prende una [lista](Sintassi%20di%20base%20di%20Haskell.md#^definizione-lista-in-haskell) di un [tipo](Tipizzazione%20in%20Haskell.md#^definizione-tipo-in-haskell) qualsiasi ne restituisce il primo elemento, quindi quale [tipo](Tipizzazione%20in%20Haskell.md#^definizione-tipo-in-haskell) assume? Controlliamo su [GHCi](content/Informatica/Lambda-calcolo/Haskell/_index.md#^definizione-ghci):
 
 ```haskell
 ghci> :t head  
