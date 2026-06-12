@@ -81,13 +81,13 @@ Ora verifichiamo formalmente che l'[$\text{IF}$](Codifica%20di%20Church.md#^defi
 > 
 > Dati due [termini](Informatica/Lambda-calcolo/_index.md#^definizione-termine) $M,N \in\Lambda$:
 > 
-> 1. La [$\lambda$-espressione](Informatica/Lambda-calcolo/_index.md#^definizione-termine) $\text{IF}\ \text{TRUE}\ M\ N$ è [convertibile](Informatica/Lambda-calcolo/_index.md#^definizione-convertibilita) in $M$:
+> 1. La [$\lambda$-espressione](Informatica/Lambda-calcolo/_index.md#^definizione-termine) $\text{IF}\ \text{TRUE}\ M\ N$ è [convertibile](Informatica/Lambda-calcolo/_index.md#^definizione-conversione) in $M$:
 > 
 > 	$$
 > 	\text{IF}\ \text{TRUE}\ M\ N \Leftrightarrow M
 > 	$$
 > 
-> 2. La [$\lambda$-espressione](Informatica/Lambda-calcolo/_index.md#^definizione-termine) $\text{IF}\ \text{FALSE}\ M\ N$ è [convertibile](Informatica/Lambda-calcolo/_index.md#^definizione-convertibilita) in $N$:
+> 2. La [$\lambda$-espressione](Informatica/Lambda-calcolo/_index.md#^definizione-termine) $\text{IF}\ \text{FALSE}\ M\ N$ è [convertibile](Informatica/Lambda-calcolo/_index.md#^definizione-conversione) in $N$:
 > 
 > 	$$
 > 	\text{IF}\ \text{FALSE}\ M\ N \Leftrightarrow N
@@ -152,18 +152,18 @@ $$
 > $$
 ^definizione-negazione-logica-nella-codifica-di-church
 
-Verifichiamo che semanticamente il [$\text{NOT}$](Codifica%20di%20Church.md#^definizione-not) si comporti come ci aspettiamo.
+Verifichiamo che semanticamente il [$\text{NOT}$](Codifica%20di%20Church.md#^definizione-negazione-logica-nella-codifica-di-church) si comporti come ci aspettiamo.
 
 > [!proposizione]+ Verifica della correttezza semantica del $\color{#FF7F7F} \text{NOT}$
 > 
-> 1. La [$\lambda$-espressione](Informatica/Lambda-calcolo/_index.md#^definizione-termine) $\text{NOT}\ \text{TRUE}$ è [convertibile](Informatica/Lambda-calcolo/_index.md#^definizione-convertibilita) in $\text{FALSE}$:
+> 1. La [$\lambda$-espressione](Informatica/Lambda-calcolo/_index.md#^definizione-termine) $\text{NOT}\ \text{TRUE}$ è [convertibile](Informatica/Lambda-calcolo/_index.md#^definizione-conversione) in $\text{FALSE}$:
 > 
 > $$
 > % Lambda Calculus environment 
 > \text{NOT}\ \text{TRUE} \Leftrightarrow \text{FALSE}
 > $$
 > 
-> 2. La [$\lambda$-espressione](Informatica/Lambda-calcolo/_index.md#^definizione-termine) $\text{NOT}\ \text{FALSE}$ è [convertibile](Informatica/Lambda-calcolo/_index.md#^definizione-convertibilita) in $\text{TRUE}$:
+> 2. La [$\lambda$-espressione](Informatica/Lambda-calcolo/_index.md#^definizione-termine) $\text{NOT}\ \text{FALSE}$ è [convertibile](Informatica/Lambda-calcolo/_index.md#^definizione-conversione) in $\text{TRUE}$:
 > 
 > $$
 > % Lambda Calculus environment 
@@ -189,25 +189,25 @@ $$
 
 > [!proposizione]+ Verifica della correttezza semantica dell'$\text{AND}$
 > 
-> 1. La [$\lambda$-espressione](Informatica/Lambda-calcolo/_index.md#^definizione-termine) $\text{AND} \ \text{TRUE}\ \text{TRUE}$ è [convertibile](Informatica/Lambda-calcolo/_index.md#^definizione-convertibilita) in $\text{TRUE}$:
+> 1. La [$\lambda$-espressione](Informatica/Lambda-calcolo/_index.md#^definizione-termine) $\text{AND} \ \text{TRUE}\ \text{TRUE}$ è [convertibile](Informatica/Lambda-calcolo/_index.md#^definizione-conversione) in $\text{TRUE}$:
 > 
 > 	$$
 > 	\text{AND}\ \text{TRUE}\ \text{TRUE} \Leftrightarrow \text{TRUE}
 > 	$$
 > 
-> 2. La [$\lambda$-espressione](Informatica/Lambda-calcolo/_index.md#^definizione-termine) $\text{AND} \ \text{TRUE}\ \text{FALSE}$ è [convertibile](Informatica/Lambda-calcolo/_index.md#^definizione-convertibilita) in $\text{FALSE}$:
+> 2. La [$\lambda$-espressione](Informatica/Lambda-calcolo/_index.md#^definizione-termine) $\text{AND} \ \text{TRUE}\ \text{FALSE}$ è [convertibile](Informatica/Lambda-calcolo/_index.md#^definizione-conversione) in $\text{FALSE}$:
 > 
 > 	$$
 > 	\text{AND}\ \text{TRUE}\ \text{FALSE} \Leftrightarrow \text{FALSE}
 > 	$$
 > 
-> 3. La [$\lambda$-espressione](Informatica/Lambda-calcolo/_index.md#^definizione-termine) $\text{AND} \ \text{FALSE}\ \text{TRUE}$ è [convertibile](Informatica/Lambda-calcolo/_index.md#^definizione-convertibilita) in $\text{FALSE}$:
+> 3. La [$\lambda$-espressione](Informatica/Lambda-calcolo/_index.md#^definizione-termine) $\text{AND} \ \text{FALSE}\ \text{TRUE}$ è [convertibile](Informatica/Lambda-calcolo/_index.md#^definizione-conversione) in $\text{FALSE}$:
 > 
 > 	$$
 > 	\text{AND}\ \text{FALSE}\ \text{TRUE} \Leftrightarrow \text{FALSE}
 > 	$$
 > 
-> 4. La [$\lambda$-espressione](Informatica/Lambda-calcolo/_index.md#^definizione-termine) $\text{AND} \ \text{FALSE}\ \text{FALSE}$ è [convertibile](Informatica/Lambda-calcolo/_index.md#^definizione-convertibilita) in $\text{FALSE}$:
+> 4. La [$\lambda$-espressione](Informatica/Lambda-calcolo/_index.md#^definizione-termine) $\text{AND} \ \text{FALSE}\ \text{FALSE}$ è [convertibile](Informatica/Lambda-calcolo/_index.md#^definizione-conversione) in $\text{FALSE}$:
 > 
 > 	$$
 > 	\text{AND}\ \text{FALSE}\ \text{FALSE} \Leftrightarrow \text{FALSE}
@@ -234,25 +234,25 @@ $$
 
 > [!proposizione]+ Verifica della correttezza semantica dell'$\text{OR}$
 > 
-> 1. La [$\lambda$-espressione](Informatica/Lambda-calcolo/_index.md#^definizione-termine) $\text{OR}\ \text{TRUE}\ \text{TRUE}$ è [convertibile](Informatica/Lambda-calcolo/_index.md#^definizione-convertibilita) in $\text{TRUE}$:
+> 1. La [$\lambda$-espressione](Informatica/Lambda-calcolo/_index.md#^definizione-termine) $\text{OR}\ \text{TRUE}\ \text{TRUE}$ è [convertibile](Informatica/Lambda-calcolo/_index.md#^definizione-conversione) in $\text{TRUE}$:
 > 
 > 	$$
 > 	\text{OR}\ \text{TRUE}\ \text{TRUE} \Leftrightarrow \text{TRUE}
 > 	$$
 > 
-> 2. La [$\lambda$-espressione](Informatica/Lambda-calcolo/_index.md#^definizione-termine) $\text{OR} \ \text{TRUE}\ \text{FALSE}$ è [convertibile](Informatica/Lambda-calcolo/_index.md#^definizione-convertibilita) in $\text{TRUE}$:
+> 2. La [$\lambda$-espressione](Informatica/Lambda-calcolo/_index.md#^definizione-termine) $\text{OR} \ \text{TRUE}\ \text{FALSE}$ è [convertibile](Informatica/Lambda-calcolo/_index.md#^definizione-conversione) in $\text{TRUE}$:
 > 
 > 	$$
 > 	\text{OR}\ \text{TRUE}\ \text{FALSE} \Leftrightarrow \text{TRUE}
 > 	$$
 > 
-> 3. La [$\lambda$-espressione](Informatica/Lambda-calcolo/_index.md#^definizione-termine) $\text{OR} \ \text{FALSE}\ \text{TRUE}$ è [convertibile](Informatica/Lambda-calcolo/_index.md#^definizione-convertibilita) in $\text{TRUE}$:
+> 3. La [$\lambda$-espressione](Informatica/Lambda-calcolo/_index.md#^definizione-termine) $\text{OR} \ \text{FALSE}\ \text{TRUE}$ è [convertibile](Informatica/Lambda-calcolo/_index.md#^definizione-conversione) in $\text{TRUE}$:
 > 
 > 	$$
 > 	\text{OR}\ \text{FALSE}\ \text{TRUE} \Leftrightarrow \text{TRUE}
 > 	$$
 > 
-> 4. La [$\lambda$-espressione](Informatica/Lambda-calcolo/_index.md#^definizione-termine) $\text{OR} \ \text{FALSE}\ \text{FALSE}$ è [convertibile](Informatica/Lambda-calcolo/_index.md#^definizione-convertibilita) in $\text{FALSE}$:
+> 4. La [$\lambda$-espressione](Informatica/Lambda-calcolo/_index.md#^definizione-termine) $\text{OR} \ \text{FALSE}\ \text{FALSE}$ è [convertibile](Informatica/Lambda-calcolo/_index.md#^definizione-conversione) in $\text{FALSE}$:
 > 
 > 	$$
 > 	\text{OR}\ \text{FALSE}\ \text{FALSE} \Leftrightarrow \text{FALSE}
@@ -291,13 +291,13 @@ dimostrazione
 > 
 > Dati due [termini](Informatica/Lambda-calcolo/_index.md#^definizione-termine) $M, N \in \Lambda$:
 > 
-> 1. La [$\lambda$-espressione](Informatica/Lambda-calcolo/_index.md#^definizione-termine) $\text{FIRST (PAIR}\ M\ N)$ è [convertibile](Informatica/Lambda-calcolo/_index.md#^definizione-convertibilita) in $\text{M}$:
+> 1. La [$\lambda$-espressione](Informatica/Lambda-calcolo/_index.md#^definizione-termine) $\text{FIRST (PAIR}\ M\ N)$ è [convertibile](Informatica/Lambda-calcolo/_index.md#^definizione-conversione) in $\text{M}$:
 > 
 > 	$$
 > 	\text{FIRST (PAIR}\ M\ N) \Leftrightarrow M
 > 	$$
 > 
-> 2. La [$\lambda$-espressione](Informatica/Lambda-calcolo/_index.md#^definizione-termine) $\text{SECOND (PAIR}\ M\ N)$ è [convertibile](Informatica/Lambda-calcolo/_index.md#^definizione-convertibilita) in $N$:
+> 2. La [$\lambda$-espressione](Informatica/Lambda-calcolo/_index.md#^definizione-termine) $\text{SECOND (PAIR}\ M\ N)$ è [convertibile](Informatica/Lambda-calcolo/_index.md#^definizione-conversione) in $N$:
 > 
 > 	$$
 > 	\text{SECOND (PAIR}\ M\ N) \Leftrightarrow N
@@ -384,8 +384,9 @@ $$
 > $$
 > \text{SUCC} \overset{\text{def}}{=} \lambda a.\lambda f.\lambda x.a\ f\ (f\ x)
 > $$
+^definizione-successore-naturale-nella-codifica-di-church
 
-Ora verifichiamo che [$\text{SUCC}$](Codifica%20di%20Church.md#^definizione-succ), per come l'abbiamo definito, si comporti come vorremmo.
+Ora verifichiamo che [$\text{SUCC}$](Codifica%20di%20Church.md#^definizione-successore-naturale-nella-codifica-di-church), per come l'abbiamo definito, si comporti come vorremmo.
 
 > [!proposizione]+ Verifica della correttezza semantica di $\color{#FF7F7F} \text{SUCC}$
 > 
@@ -407,7 +408,7 @@ PRED n=n-1
 
 con PRED 0=0.
 
-Prendendo ispirazione da [SUCC](Codifica%20di%20Church.md#^definizione-succ), definito come
+Prendendo ispirazione da [SUCC](Codifica%20di%20Church.md#^definizione-successore-naturale-nella-codifica-di-church), definito come
 
 SUCC\overset{\text{def}}{=}$\Lambda$a.$\Lambda$f.$\Lambda$x.a f (f x)
 
@@ -456,6 +457,7 @@ PRED\overset{\text{def}}{=}$\Lambda$n.FIRST (n NEXT (PAIR 0 0))
 > dove
 > 
 > NEXT\overset{\text{def}}{=}$\Lambda$p.PAIR (SECOND p) (SUCC (SECOND p))
+^definizione-predecessore-naturale-nella-codifica-di-church
 
 > [!proposizione]+ Verifica della correttezza semantica di PRED
 > 
@@ -465,7 +467,7 @@ PRED\overset{\text{def}}{=}$\Lambda$n.FIRST (n NEXT (PAIR 0 0))
 > 
 > NEXT (PAIR n-1 n)⇔PAIR n n+1
 > 
-> 2. Il [predecessore](Codifica%20di%20Church.md#^definizione-pred) di 0 è 0 e il predecessore di n è n-1:
+> 1. Il [predecessore](Codifica%20di%20Church.md#^definizione-predecessore-naturale-nella-codifica-di-church) di 0 è 0 e il predecessore di n è n-1:
 > 
 > PRED n⇔{0n-1n=0n>0
 
@@ -519,7 +521,7 @@ PRED\overset{\text{def}}{=}$\Lambda$n.FIRST (n NEXT (PAIR 0 0))
 > 
 > ISZERO n⇔{TRUEFALSEn=0n=0
 
-# 4 - Punti fissi e funzioni ricorsive[](#punti-fissi-e-funzioni-ricorsive)
+# 4 - Punti fissi e funzioni ricorsive
 
 Ora che abbiamo le operazioni aritmetiche per calcolare con i [numerali di Church](Codifica%20di%20Church.md#^definizione-numerale-di-church), possiamo cimentarci nella codifica di una prima funzione ricorsiva nel [$\lambda$-calcolo](Informatica/Lambda-calcolo/_index.md#^definizione-lambda-calcolo): il fattoriale.
 
@@ -547,17 +549,18 @@ FACT\overset{\text{def}}{=}AUX AUX AUX ...
 
 Ma a noi serve avere una definizione **finita** per poter operare con questo [termine](Informatica/Lambda-calcolo/_index.md#^definizione-termine) e ottenere il risultato che vogliamo. È per questo che ci torna utile il concetto di punto fisso di una funzione che ci permetterà di definirla in maniera finita.
 
-Non preoccuparti, a breve sarà tutto più chiaro, ma intanto beccati questa definizione di un punto fisso nel [$\lambda$-calcolo](Informatica/Lambda-calcolo/_index.md#^definizione-lambda-calcolo) espresso mediante questo particolare [combinatore](Informatica/Lambda-calcolo/_index.md#^definizione-combinatore) scoperto da Haskell Curry: il _combinatore di punto fisso_.
+Non preoccuparti, a breve sarà tutto più chiaro, ma intanto beccati questa definizione di un punto fisso nel [$\lambda$-calcolo](Informatica/Lambda-calcolo/_index.md#^definizione-lambda-calcolo) espresso mediante questo particolare [combinatore](Informatica/Lambda-calcolo/_index.md#^definizione-combinatore) scoperto da Haskell Curry: il _combinatore di punto fisso_%% link %%.
 
-> [!definizione]+ Definizione: combinatore di punto fisso Y
+> [!definizione]+ Definizione: combinatore di punto fisso $\text Y$
 > 
 > Il **combinatore di punto fisso** (anche detto **combinatore di Curry** perché scoperto da Haskell Curry) Y è un [combinatore](Informatica/Lambda-calcolo/_index.md#^definizione-combinatore) definito nel seguente modo:
 > 
 > Y\overset{\text{def}}{=}$\Lambda$f.($\Lambda$x.f(x x)) ($\Lambda$x.f(x x))
+^definizione-combinatore-di-punto-fisso-y
 
-Possiamo dimostrare che questo [combinatore di punto fisso Y](Codifica%20di%20Church.md#^definizione-combinatore-di-punto-fisso-y) si comporta semanticamente proprio come un punto fisso.
+Possiamo dimostrare che questo [combinatore di punto fisso $\text Y$](Codifica%20di%20Church.md#^definizione-combinatore-di-punto-fisso-y) si comporta semanticamente proprio come un punto fisso.
 
-> [!proposizione]+ Verifica della correttezza semantica del combinatore di punto fisso Y
+> [!proposizione]+ Verifica della correttezza semantica del combinatore di punto fisso $\text Y$
 > 
 > Sia $\Lambda$ l'[insieme](Matematica/Teoria%20degli%20insiemi/_index.md#^definizione-insieme) di [termini](Informatica/Lambda-calcolo/_index.md#^definizione-termine) del [$\lambda$-calcolo](Informatica/Lambda-calcolo/_index.md#^definizione-lambda-calcolo).
 > 
@@ -584,12 +587,13 @@ possiamo renderci ora conto che, passandogli come argomento al posto della f il 
 > Nella [codifica di Church](Codifica%20di%20Church.md#^definizione-codifica-di-church), il fattoriale è codificato nel [termine](Informatica/Lambda-calcolo/_index.md#^definizione-termine) FACT definito come segue:
 > 
 > FACT\overset{\text{def}}{=}($\Lambda$f.$\Lambda$a.IF (ISZERO a) 1 (MUL a (f (PRED a)))) Y
+^definizione-fattoriale-nella-codifica-di-church
 
 Sì, ma siamo sicuri che quella che abbiamo appena scritto non sia una cazzata colossale e che effettivamente la ricorsione funzioni? Verifichiamolo.
 
 > [!proposizione]+ Verifica della ricorsione nel fattoriale nella codifica di Church
 > 
-> Il [termine FACT](Codifica%20di%20Church.md#^definizione-fact) è [convertibile](Informatica/Lambda-calcolo/_index.md#^definizione-convertibilita) nel seguente modo:
+> Il [termine FACT](Codifica%20di%20Church.md#^definizione-fattoriale-nella-codifica-di-church) è [convertibile](Informatica/Lambda-calcolo/_index.md#^definizione-conversione) nel seguente modo:
 > 
 > FACT⇔$\Lambda$a.IF (ISZERO a) 1 (MUL a (FACT (PRED a)))
 

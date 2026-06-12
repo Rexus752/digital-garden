@@ -427,33 +427,144 @@ The `Eq` typeclass provides an interface for testing for equality. Any type wher
 > True
 > ```
 
+%% 
+Read is sort of the opposite typeclass of Show. The read function takes a string and returns a type which is a member of Read.
+
+```haskell
+ghci> read "True" || False  
+True  
+ghci> read "8.2" + 3.8  
+12.0  
+ghci> read "5" - 2  
+3  
+ghci> read "[1,2,3,4]" ++ [3]  
+[1,2,3,4,3]  
+```
+
+So far so good. Again, all types covered so far are in this typeclass. But what happens if we try to do just read "4"?
+
+```haskell
+ghci> read "4"  
+<interactive>:1:0:  
+	Ambiguous type variable `a' in the constraint:  
+	  `Read a' arising from a use of `read' at <interactive>:1:0-7  
+	Probable fix: add a type signature that fixes these type variable(s)  
+```
+
+What GHCi is telling us here is that it doesn’t know what we want in return. Notice that in the previous uses of read we did something with the result afterwards. That way, GHCi could infer what kind of result we wanted out of our read. If we used it as a boolean, it knew it had to return a Bool. But now, it knows we want some type that is part of the Read class, it just doesn’t know which one. Let’s take a look at the type signature of read.
+
+```haskell
+ghci> :t read  
+read :: (Read a) => String -> a  
+```
+
+See? It returns a type that’s part of Read but if we don’t try to use it in some way later, it has no way of knowing which type. That’s why we can use explicit type annotations. Type annotations are a way of explicitly saying what the type of an expression should be. We do that by adding :: at the end of the expression and then specifying a type. Observe:
+
+```haskell
+ghci> read "5" :: Int  
+5  
+ghci> read "5" :: Float  
+5.0  
+ghci> (read "5" :: Float) * 4  
+20.0  
+ghci> read "[1,2,3,4]" :: [Int]  
+[1,2,3,4]  
+ghci> read "(3, 'a')" :: (Int, Char)  
+(3, 'a')  
+```
+
+Most expressions are such that the compiler can infer what their type is by itself. But sometimes, the compiler doesn’t know whether to return a value of type Int or Float for an expression like read "5". To see what the type is, Haskell would have to actually evaluate read "5". But since Haskell is a statically typed language, it has to know all the types before the code is compiled (or in the case of GHCi, evaluated). So we have to tell Haskell: “Hey, this expression should have this type, in case you don’t know!”.
+%%
+
 > [!definizione] Definizione: classe di tipo `Enum`
 >
 > **`Enum`** è una [classe di tipo](Tipizzazione%20in%20Haskell.md#^definizione-classe-di-tipo) a cui appartiene qualsiasi [tipo](Tipizzazione%20in%20Haskell.md#^definizione-tipo-in-haskell) i cui valori sono enumerabili%% link %%, ovvero hanno un predecessore e un successore ben definiti. Questo permette di usarli nelle range notation%% link %% delle liste, come `[LT .. GT]` o `['a' .. 'z']`.
 
----
+%% 
+They also have defined successors and predecessors, which you can get with the `succ` and `pred` functions. Types in this class: `()`, `Bool`, `Char`, `Ordering`, `Int`, `Integer`, `Float` and `Double`.
+
+```haskell
+ghci> ['a'..'e']  
+"abcde"  
+ghci> [LT .. GT]  
+[LT,EQ,GT]  
+ghci> [3 .. 5]  
+[3,4,5]  
+ghci> succ 'B'  
+'C'  
+```
+%%
 
 > [!definizione] Definizione: classe di tipo `Bounded`
 >
 > **`Bounded`** è una [classe di tipo](Tipizzazione%20in%20Haskell.md#^definizione-classe-di-tipo) a cui appartiene qualsiasi [tipo](Tipizzazione%20in%20Haskell.md#^definizione-tipo-in-haskell) che ha un valore minimo e un valore massimo%% link %%, accessibili tramite le funzioni%% link %% `minBound` e `maxBound`.
 
----
+%% 
+```haskell
+ghci> minBound :: Int  
+-2147483648  
+ghci> maxBound :: Char  
+'\1114111'  
+ghci> maxBound :: Bool  
+True  
+ghci> minBound :: Bool  
+False  
+```
+
+`minBound` and `maxBound` are interesting because they have a type of `(Bounded a) => a`. In a sense they are polymorphic constants.
+
+All tuples are also part of `Bounded` if the components are also in it.
+
+```haskell
+ghci> maxBound :: (Bool, Int, Char)  
+(True,2147483647,'\1114111')  
+```
+%%
 
 > [!definizione] Definizione: classe di tipo `Num`
 >
 > **`Num`** è una [classe di tipo](Tipizzazione%20in%20Haskell.md#^definizione-classe-di-tipo) a cui appartiene qualsiasi [tipo](Tipizzazione%20in%20Haskell.md#^definizione-tipo-in-haskell) numerico%% link %% i cui valori supportano le operazioni aritmetiche%% link %% di base, come `+`, `-` e `*`%% link a tutti %%.
 
----
+%% 
+```haskell
+ghci> :t 20  
+20 :: (Num t) => t  
+```
+
+It appears that whole numbers are also polymorphic constants. They can act like any type that’s a member of the Num typeclass.
+
+    ghci> 20 :: Int  
+    20  
+    ghci> 20 :: Integer  
+    20  
+    ghci> 20 :: Float  
+    20.0  
+    ghci> 20 :: Double  
+    20.0  
+
+Those are types that are in the Num typeclass. If we examine the type of *, we’ll see that it accepts all numbers.
+
+    ghci> :t (*)  
+    (*) :: (Num a) => a -> a -> a  
+
+It takes two numbers of the same type and returns a number of that type. That’s why (5 :: Int) * (6 :: Integer) will result in a type error whereas 5 * (6 :: Integer) will work just fine and produce an Integer because 5 can act like an Integer or an Int.
+
+To join Num, a type must already be friends with Show and Eq.
+%%
 
 > [!definizione] Definizione: classe di tipo `Integral`
 >
 > **`Integral`** è una [classe di tipo](Tipizzazione%20in%20Haskell.md#^definizione-classe-di-tipo) a cui appartiene qualsiasi [tipo](Tipizzazione%20in%20Haskell.md#^definizione-tipo-in-haskell) numerico intero%% link %%, come `Int` e `Integer`. Estende `Num`%% link %% e aggiunge la divisione intera%% link %% e il modulo%% link %% tramite le funzioni%% link %% `div` e `mod`.
 
----
-
 > [!definizione] Definizione: classe di tipo `Floating`
 >
 > **`Floating`** è una [classe di tipo](Tipizzazione%20in%20Haskell.md#^definizione-classe-di-tipo) a cui appartiene qualsiasi [tipo](Tipizzazione%20in%20Haskell.md#^definizione-tipo-in-haskell) numerico in virgola mobile%% link %%, come `Float` e `Double`. Estende `Num`%% link %% e aggiunge operazioni matematiche avanzate%% link %% come `sqrt`, `sin`, `cos` e `**`%% link a tutti %%.
+
+%% 
+A very useful function for dealing with numbers is `fromIntegral`. It has a type declaration of `fromIntegral :: (Num b, Integral a) => a -> b`. From its type signature we see that it takes an integral number and turns it into a more general number. That’s useful when you want integral and floating point types to work together nicely. For instance, the `length` function has a type declaration of `length :: [a] -> Int` instead of having a more general type of `(Num b) => length :: [a] -> b`. If we try to get a length of a list and then add it to `3.2`, we’ll get an error because we tried to add together an `Int` and a floating point number. So to get around this, we do `fromIntegral (length [1,2,3,4]) + 3.2` and it all works out.
+
+Notice that `fromIntegral` has several class constraints in its type signature. That’s completely valid and as you can see, the class constraints are separated by commas inside the parentheses.
+%%
 
 %%
 **Sintassi:**

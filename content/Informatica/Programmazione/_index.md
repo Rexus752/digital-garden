@@ -14,6 +14,7 @@ title: Programmazione
 - linguaggio di programmazione
 - compilazione/interpretazione
 - funzioni, tipi, stringhe, ecc.
+- sintassi e semantica
 %%
 
 ---

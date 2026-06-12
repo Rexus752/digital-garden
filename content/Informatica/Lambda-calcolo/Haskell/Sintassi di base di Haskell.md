@@ -275,7 +275,7 @@ Esattamente come per il C%% link %%, anche [Haskell](Informatica/Lambda-calcolo/
 
 > [!definizione]+ Definizione: operatore di concatenazione di liste
 > 
-> In [Haskell](Informatica/Lambda-calcolo/Haskell/_index.md#^definizione-haskell) è possibile concatenare due [liste](Sintassi%20di%20base%20di%20Haskell.md#^definizione-lista-in-haskell) (cioè unire le due liste giustapponendo agli elementi della prima quella della seconda) attraverso l'operatore `++`, detto **operatore di concatenazione** o, in inglese, **_concat operator_**:
+> In [Haskell](Informatica/Lambda-calcolo/Haskell/_index.md#^definizione-haskell) l'**operatore di concatenazione** (o, in inglese, **_concat operator_**) **`++`** è un operatore%% link %% che prende come argomenti%% link %% due [liste](Sintassi%20di%20base%20di%20Haskell.md#^definizione-lista-in-haskell) e le concatena, cioè unisce le due [liste](Sintassi%20di%20base%20di%20Haskell.md#^definizione-lista-in-haskell) giustapponendo agli elementi della prima quella della seconda:
 > 
 > ```haskell
 > ghci> [1,2,3,4] ++ [5,6,7] == [1,2,3,4,5,6,7]
@@ -298,7 +298,7 @@ Esattamente come per il C%% link %%, anche [Haskell](Informatica/Lambda-calcolo/
 
 > [!definizione]+ Definizione: operatore di anteposizione di un elemento a una lista
 > 
-> In [Haskell](Informatica/Lambda-calcolo/Haskell/_index.md#^definizione-haskell) è possibile anteporre un elemento a una [lista](Sintassi%20di%20base%20di%20Haskell.md#^definizione-lista-in-haskell) (cioè metterlo all'inizio della lista) attraverso l'operatore `:`, detto **operatore di anteposizione** o, in inglese, **_cons operator_**:
+> In [Haskell](Informatica/Lambda-calcolo/Haskell/_index.md#^definizione-haskell) l'**operatore di anteposizione** (o, in inglese, **_cons operator_**) `:` è un operatore%% link %% che prende come argomenti%% Link %% un elemento e una [lista](Sintassi%20di%20base%20di%20Haskell.md#^definizione-lista-in-haskell) e antepone l'elemento alla [lista](Sintassi%20di%20base%20di%20Haskell.md#^definizione-lista-in-haskell), cioè lo mette all'inizio della [lista](Sintassi%20di%20base%20di%20Haskell.md#^definizione-lista-in-haskell):
 > 
 > ```haskell
 > ghci> 1 : [2, 3, 4] == [1, 2, 3, 4]
@@ -335,6 +335,10 @@ True
 ```
 
 perché If we prepend `3` to it, it becomes `[3]`. If we prepend `2` to that, it becomes `[2,3]`, and so on.
+%%
+
+%% 
+formattare tutte le definizioni nel formato "In Haskell x è ..."
 %%
 
 > [!definizione]+ Definizione: operatore di accesso agli elementi di una lista
