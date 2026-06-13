@@ -2,7 +2,7 @@
 title: Sistemi operativi
 ---
 
-> [!premessa] Premessa
+> [!premessa]+ Premessa
 > 
 > Ciao! Se è la prima volta che capiti su questo sito, ti consiglio di consultare la [pagina principale](index.md) di questo cosiddetto _Giardino Digitale_ per scoprire meglio cos'è e come navigarlo.
 > 
@@ -57,22 +57,22 @@ Multiprocessori di due tipi:
 
 > [!osservazione]+ Osservazione: cosa fa parte di un sistema operativo e cosa no?
 > 
-> Non esiste una definizione universalmente accettata di che cosa faccia parte o meno di un [sistema operativo](Sistemi%20operativi.md#^definizione-sistema-operativo): il confine tra il SO e le altre componenti software non è sempre ben definibile.
+> Non esiste una definizione universalmente accettata di che cosa faccia parte o meno di un [sistema operativo](Informatica/Sistemi%20operativi/_index.md#^definizione-sistema-operativo): il confine tra il SO e le altre componenti software non è sempre ben definibile.
 > 
-> Per esempio, l'interfaccia grafica (cioè quella parte del [sistema operativo](Sistemi%20operativi.md#^definizione-sistema-operativo) che gestisce la grafica che ci viene mostrata) non ne fa sempre parte: nel passaggio da MS-DOS%% link %% a Windows%% link %%, l'interfaccia grafica si è integrata nel SO, ma inizialmente non ne faceva parte, così come in [UNIX](UNIX.md#^definizione-unix) i comandi a disposizione dell'utente non sono parte del SO, come pure le varie interfacce grafiche a disposizione.
+> Per esempio, l'interfaccia grafica (cioè quella parte del [sistema operativo](Informatica/Sistemi%20operativi/_index.md#^definizione-sistema-operativo) che gestisce la grafica che ci viene mostrata) non ne fa sempre parte: nel passaggio da MS-DOS%% link %% a Windows%% link %%, l'interfaccia grafica si è integrata nel SO, ma inizialmente non ne faceva parte, così come in [UNIX](UNIX.md#^definizione-unix) i comandi a disposizione dell'utente non sono parte del SO, come pure le varie interfacce grafiche a disposizione.
 > 
 > Il problema di definire esattamente quali siano i componenti di un sistema operativo sembra avere poca importanza, ma da un punto di vista commerciale/economico può avere una rilevanza fondamentale: basti pensare, per esempio, a un cliente che ha bisogno di acquistare la licenza di un sistema operativo completo, ma che poi scopre non essere fornito dell'interfaccia grafica (essenziale per coloro che non hanno molta domestichezza con l'informatica).
 
-Ogni [sistema operativo](Sistemi%20operativi.md#^definizione-sistema-operativo), in un dato momento del suo utilizzo, ha una determinata [_configurazione_](Sistemi%20operativi.md#^definizione-configurazione-di-un-sistema-operativo).
+Ogni [sistema operativo](Informatica/Sistemi%20operativi/_index.md#^definizione-sistema-operativo), in un dato momento del suo utilizzo, ha una determinata [_configurazione_](Sistemi%20operativi.md#^definizione-configurazione-di-un-sistema-operativo).
 
-> [!definizione] Definizione: configurazione di un sistema operativo
+> [!definizione]+ Definizione: configurazione di un sistema operativo
 > 
-> La **configurazione di un [sistema operativo](Sistemi%20operativi.md#^definizione-sistema-operativo)** è l'insieme delle impostazioni, regole e componenti software che determinano come il [sistema operativo](Sistemi%20operativi.md#^definizione-sistema-operativo) è organizzato, quali funzioni svolge e in che modo le svolge.
+> La **configurazione di un [sistema operativo](Informatica/Sistemi%20operativi/_index.md#^definizione-sistema-operativo)** è l'insieme delle impostazioni, regole e componenti software che determinano come il [sistema operativo](Informatica/Sistemi%20operativi/_index.md#^definizione-sistema-operativo) è organizzato, quali funzioni svolge e in che modo le svolge.
 ^definizione-configurazione-di-un-sistema-operativo
 
-> [!osservazione] Osservazione: cosa fa parte della configurazione di un SO e cosa no?
+> [!osservazione]+ Osservazione: cosa fa parte della configurazione di un SO e cosa no?
 > 
-> All'interno della definizione di [_configurazione di un sistema operativo_](Sistemi%20operativi.md#^definizione-configurazione-di-un-sistema-operativo) solitamente si include unicamente ciò che, indica _come_ il [sistema operativo](Sistemi%20operativi.md#^definizione-sistema-operativo) si deve comportare: per esempio, le impostazioni di sistema, i driver%% link %% installati, i servizi%% link %% attivi, le politiche di sicurezza%% link %%, la configurazione della rete%% link %% e la gestione degli utenti%% link %% e dei permessi%% link %%.
+> All'interno della definizione di [_configurazione di un sistema operativo_](Sistemi%20operativi.md#^definizione-configurazione-di-un-sistema-operativo) solitamente si include unicamente ciò che, indica _come_ il [sistema operativo](Informatica/Sistemi%20operativi/_index.md#^definizione-sistema-operativo) si deve comportare: per esempio, le impostazioni di sistema, i driver%% link %% installati, i servizi%% link %% attivi, le politiche di sicurezza%% link %%, la configurazione della rete%% link %% e la gestione degli utenti%% link %% e dei permessi%% link %%.
 > 
 > I dati%% link %% dell'utente%% link %% (come documenti%% link %%, salvataggi di giochi, foto, ecc.) non fanno parte della [configurazione del sistema operativo](Sistemi%20operativi.md#^definizione-configurazione-di-un-sistema-operativo), anche se possono dipendere da essa.
 ^osservazione-cosa-fa-parte-della-configurazione-di-un-so-e-cosa-no
@@ -138,7 +138,7 @@ Altre componenti del sistema operativo:
 
 > [!definizione]+ Definizione: kernel
 > 
-> Il **kernel** è il nucleo fondamentale di un [sistema operativo](Sistemi%20operativi.md#^definizione-sistema-operativo) ed è il software che funge da intermediario tra l'hardware del computer (come CPU%% link %%, memoria%% link %%, dispositivi di I/O%% link %%) e tutte le altre applicazioni. Il kernel gestisce le risorse del sistema e ne controlla l'accesso, garantendo che i [processi](Processi.md#^definizione-processo) possano operare in modo sicuro ed efficiente.
+> Il **kernel** è il nucleo fondamentale di un [sistema operativo](Informatica/Sistemi%20operativi/_index.md#^definizione-sistema-operativo) ed è il software che funge da intermediario tra l'hardware del computer (come CPU%% link %%, memoria%% link %%, dispositivi di I/O%% link %%) e tutte le altre applicazioni. Il kernel gestisce le risorse del sistema e ne controlla l'accesso, garantendo che i [processi](Processi.md#^definizione-processo) possano operare in modo sicuro ed efficiente.
 ^definizione-kernel
 
 > [!osservazione]+ Osservazione: kernel apposito per ogni sistema operativo
@@ -366,23 +366,23 @@ L'SO si progetta seguendo obiettivi generici dell'utente e del sistema.
 
 Separation of concerns: nella progettazione bisogna separare policy (che cosa fa) dal mechanism (come lo fa) per garantire maggiore flessibilità all'SO.
 
-# Installazione e avvio di un sistema operativo
+# 5 - Installazione e avvio di un sistema operativo
 
 %% 
 https://it.wikipedia.org/wiki/Sistema_operativo#Installazione_e_avvio
 
 https://it.wikipedia.org/wiki/Live_USB
 
-Tipicamente il [sistema operativo](Sistemi%20operativi.md#^definizione-sistema-operativo), una volta installato sulla macchina, risiede nell'hard disk pronto ad essere caricato nella RAM durante la fase di avvio della macchina.
+Tipicamente il [sistema operativo](Informatica/Sistemi%20operativi/_index.md#^definizione-sistema-operativo), una volta installato sulla macchina, risiede nell'hard disk pronto ad essere caricato nella RAM durante la fase di avvio della macchina.
 
-È possibile installare più [sistemi operativi](Sistemi%20operativi.md#^definizione-sistema-operativo) sulla stessa macchina in modalità dual boot, selezionando poi il sistema desiderato nella fase di avvio del PC attraverso il boot manager. Tutto ciò è possibile solo in virtù dell'operazione di partizionamento della memoria secondaria (hard disk) in più settori logici indipendenti dove ciascuno può ospitare un diverso sistema.
+È possibile installare più [sistemi operativi](Informatica/Sistemi%20operativi/_index.md#^definizione-sistema-operativo) sulla stessa macchina in modalità dual boot, selezionando poi il sistema desiderato nella fase di avvio del PC attraverso il boot manager. Tutto ciò è possibile solo in virtù dell'operazione di partizionamento della memoria secondaria (hard disk) in più settori logici indipendenti dove ciascuno può ospitare un diverso sistema.
 
 All'accensione del computer il BIOS, dopo la fase di POST, esegue nella cosiddetta fase di boot, attraverso il boot loader, il caricamento del kernel del sistema operativo dall'hard disk alla RAM, come qualunque programma, pronto ad essere eseguito dal processore, rendendo la macchina pronta all'uso da parte dell'utente. Nel caso di sistemi operativi ad interazione con l'utente questa fase, dopo il login iniziale da parte dell'utente stesso, tipicamente comporta anche il caricamento di tutte le impostazioni di configurazione (settings) e profilo utente inizializzando così lo spazio utente.
 %%
 
 %% 
 
-## Installazione
+## 5.1 - Installazione
 
 Ecco i tool che puoi usare:
 - Ventoy (MS, Linux)
@@ -391,19 +391,18 @@ Ecco i tool che puoi usare:
 - WoeUSB su Linux per installare Windows
 - USBImager su Linux per installare Windows ma mi dava problemi perché il boot manager non vedeva la chiavetta
 
-
-### Ventoy
+### 5.1.1 - Ventoy
 
 Carino, ma ho avuto problemi quando ho provato a fare il dual boot Windows-NixOS perché NixOS con Ventoy non sa dove andare a pescare l'ISO da montare e contemporaneamente mantiene tutti i dispositivi come _busy_ senza la possibilità di sbloccarli
 
-### Rufus
+### 5.1.2 - Rufus
 
-### `dd`
+### 5.1.3 - `dd`
 
 ```
 sudo dd if="~/Downloads/nixos-graphical-25.11.8107.1073dad219cb-x86_64-linux.iso" of="/dev/sdb" status="progress" conv="fsync" bs=4M
 ```
-### WoeUSB
+### 5.1.4 - WoeUSB
 
 ```
 sudo woeusb --device ~/Downloads/Win10_22H2_EnglishInternational_x64v1.iso /dev/sdb
@@ -433,19 +432,19 @@ WoeUSB (Linux)
 %%
 
 %% 
-## Linux’s ISOHybrids vs. Windows ISOs
+## 5.2 - Linux’s ISOHybrids vs. Windows ISOs
 
-The differences between Linux and Windows installation ISO images and the concept of an “isohybrid” image are essential to understand, especially if you’re working with bootable USB drives.
+The differences between Linux and Windows installation ISO images and the concept of an "isohybrid" image are essential to understand, especially if you’re working with bootable USB drives.
 
-### Linux ISO Images
+### 5.2.1 - Linux ISO Images
 
-Many Linux distributions use ISO images that are “isohybrid.” It’s a type of ISO file that combines features of a traditional [ISO 9660 CD-ROM](https://en.wikipedia.org/wiki/ISO_9660) and a hard disk image.
+Many Linux distributions use ISO images that are "isohybrid." It’s a type of ISO file that combines features of a traditional [ISO 9660 CD-ROM](https://en.wikipedia.org/wiki/ISO_9660) and a hard disk image.
 
 Unlike traditional ISO images, such as Windows ones, **an isohybrid image contains special code in its boot sector** that allows it to be bootable when written directly to a USB flash drive and bootable when written to a CD or DVD.
 
 As a result, they are generally more flexible regarding the methods used for creating bootable USB drives. Here’s why tools like `dd` can directly write these ISO images to USB drives, and the drives will boot correctly.
 
-### Windows ISO Images
+### 5.2.2 - Windows ISO Images
 
 Windows installation ISOs are typically not isohybrid. They are designed with the assumption that they will be burned to a DVD. As such, simply writing these ISOs directly to a USB drive using a method like `dd` will not make them bootable.
 
@@ -456,7 +455,7 @@ Fortunately, Linux offers excellent tools that are ideally suited for this job. 
 
 ---
 
-> [!fonti] Fonti
+> [!fonti]+ Fonti
 > 
 > - 🏫 Corso di Laurea in Informatica (`L-31 R`) presso l'Università di Torino:
 >     - Corso di _Sistemi Operativi - canale B_, A.A. 2024-25 ([pagina Moodle](https://informatica.i-learn.unito.it/course/view.php?id=2956)):

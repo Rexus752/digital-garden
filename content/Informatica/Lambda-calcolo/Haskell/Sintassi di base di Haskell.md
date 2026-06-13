@@ -91,9 +91,9 @@ Ora proviamo a esplorare un po' la sintassi di base di [Haskell](Informatica/Lam
 > 
 > Per esempio, l'[errore di prima](Sintassi%20di%20base%20di%20Haskell.md#^attenzione-errori-in-haskell) è rappresentato dal codice `GHC-39999`. Puoi approfondire il significato di ogni codice nell'[Haskell Error Index](https://errors.haskell.org/).
 
-> [!definizione] Definizione: funzione in Haskell
+> [!definizione]+ Definizione: funzione in Haskell
 > 
-> In [Haskell](content/Informatica/Lambda-calcolo/Haskell/_index.md#^definizione-haskell) una **funzione**%% link %% è una trasformazione che prende un valore e produce un valore. È composta da due parti: la **firma di tipo**, che dichiara il nome della funzione e il [tipo](Tipizzazione%20in%20Haskell.md#^definizione-tipo-in-haskell) dei suoi argomenti%% link %% e del suo risultato%% link %%, e il **corpo**, che definisce come il risultato viene calcolato a partire dall'argomento.
+> In [Haskell](Informatica/Lambda-calcolo/Haskell/_index.md#^definizione-haskell) una **funzione**%% link %% è una trasformazione che prende un valore e produce un valore. È composta da due parti: la **firma di tipo**, che dichiara il nome della funzione e il [tipo](Tipizzazione%20in%20Haskell.md#^definizione-tipo-in-haskell) dei suoi argomenti%% link %% e del suo risultato%% link %%, e il **corpo**, che definisce come il risultato viene calcolato a partire dall'argomento.
 > 
 > Ad esempio:
 > 

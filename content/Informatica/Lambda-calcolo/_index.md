@@ -487,7 +487,7 @@ esempi di combinatori
 
 ## 2.1 - Sostituzione
 
-Come abbiamo visto, un'[applicazione](Informatica/Lambda-calcolo/_index.md#^definizione-applicazione) $M\ N$ rappresenta essenzialmente la sostituzione delle variabili contenute in $M$ con i valori di $N$. Ma ciò non è un'operazione banale: le uniche variabili sostituibili sono quelle [libere](Informatica/Lambda-calcolo/_index.md#^definizione-variabili-libere-e-legate) e questa è una cosa di cui bisogna tener conto per evitare che diventino [legate](content/Informatica/Lambda-calcolo/_index.md#^definizione-variabili-libere-e-legate). Definiamo quindi correttamente come deve funzionare una [_sostituzione_](Informatica/Lambda-calcolo/_index.md#^definizione-sostituzione) in un [termine](Informatica/Lambda-calcolo/_index.md#^definizione-termine).
+Come abbiamo visto, un'[applicazione](Informatica/Lambda-calcolo/_index.md#^definizione-applicazione) $M\ N$ rappresenta essenzialmente la sostituzione delle variabili contenute in $M$ con i valori di $N$. Ma ciò non è un'operazione banale: le uniche variabili sostituibili sono quelle [libere](Informatica/Lambda-calcolo/_index.md#^definizione-variabili-libere-e-legate) e questa è una cosa di cui bisogna tener conto per evitare che diventino [legate](Informatica/Lambda-calcolo/_index.md#^definizione-variabili-libere-e-legate). Definiamo quindi correttamente come deve funzionare una [_sostituzione_](Informatica/Lambda-calcolo/_index.md#^definizione-sostituzione) in un [termine](Informatica/Lambda-calcolo/_index.md#^definizione-termine).
 
 > [!definizione]+ Definizione: sostituzione
 > 

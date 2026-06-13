@@ -2,7 +2,7 @@
 title: Funzioni in Haskell
 ---
 
-> [!premessa] Premessa
+> [!premessa]+ Premessa
 > 
 > Ciao! Se è la prima volta che capiti su questo sito, ti consiglio di consultare la [pagina principale](index.md) di questo cosiddetto _Giardino Digitale_ per scoprire meglio cos'è e come navigarlo.
 > 
@@ -10,13 +10,13 @@ title: Funzioni in Haskell
 
 ---
 
-In questa nota approfondiamo alcuni costrutti sintattici fighi che [Haskell](content/Informatica/Lambda-calcolo/Haskell/_index.md#^definizione-haskell) ha per scrivere le proprie [funzioni](Sintassi%20di%20base%20di%20Haskell.md#^definizione-funzione-in-haskell), tra cui il pattern matching%% link %%.
+In questa nota approfondiamo alcuni costrutti sintattici fighi che [Haskell](Informatica/Lambda-calcolo/Haskell/_index.md#^definizione-haskell) ha per scrivere le proprie [funzioni](Sintassi%20di%20base%20di%20Haskell.md#^definizione-funzione-in-haskell), tra cui il pattern matching%% link %%.
 
-# Pattern matching
+# 1 - Pattern matching
 
-> [!definizione] Definizione: pattern matching
+> [!definizione]+ Definizione: pattern matching
 > 
-> In [Haskell](content/Informatica/Lambda-calcolo/Haskell/_index.md#^definizione-haskell) il **pattern matching** è un costrutto sintattico%% link %% usato nel [corpo di una funzione](Sintassi%20di%20base%20di%20Haskell.md#^definizione-funzione-in-haskell) per selezionare un ramo di esecuzione%% link %% della [funzione](Sintassi%20di%20base%20di%20Haskell.md#^definizione-funzione-in-haskell) a seconda della forma dell'argomento%% link %% (detto **pattern**) che le viene passato:
+> In [Haskell](Informatica/Lambda-calcolo/Haskell/_index.md#^definizione-haskell) il **pattern matching** è un costrutto sintattico%% link %% usato nel [corpo di una funzione](Sintassi%20di%20base%20di%20Haskell.md#^definizione-funzione-in-haskell) per selezionare un ramo di esecuzione%% link %% della [funzione](Sintassi%20di%20base%20di%20Haskell.md#^definizione-funzione-in-haskell) a seconda della forma dell'argomento%% link %% (detto **pattern**) che le viene passato:
 > 
 > ```haskell
 > describe :: Int -> String
@@ -43,11 +43,11 @@ mettere un esempio migliore di `testa`
 al massimo spostare la definizione del pattern wildcard in un'altra definizione
 %%
 
-> [!osservazione] Osservazione: codice pulito col pattern matching
+> [!osservazione]+ Osservazione: codice pulito col pattern matching
 > 
 > This leads to really neat code that’s simple and readable.Without pattern matching, we’d have to make a pretty convoluted if then else tree.
 
-> [!osservazione] Osservazione: è importante l'ordine dei pattern
+> [!osservazione]+ Osservazione: è importante l'ordine dei pattern
 > 
 > Essendo dall'alto verso il basso, se mettiamo la variabile o la wildcard all'inizio verrà sempre eseguito quello:
 > 
@@ -61,7 +61,7 @@ al massimo spostare la definizione del pattern wildcard in un'altra definizione
 > 
 > in questo caso uscirà sempre `"something else"`
 
-> [!osservazione] Osservazione: ricorsione col pattern matching
+> [!osservazione]+ Osservazione: ricorsione col pattern matching
 > 
 > Remember the factorial function we implemented previously? We defined the factorial of a number `n` as `product [1..n]`. We can also define a factorial function _recursively_, the way it is usually defined in mathematics. We start by saying that the factorial of 0 is 1. Then we state that the factorial of any positive integer is that integer multiplied by the factorial of its predecessor. Here’s how that looks like translated in Haskell terms.
 > 
@@ -73,7 +73,7 @@ al massimo spostare la definizione del pattern wildcard in un'altra definizione
 > 
 > This is the first time we’ve defined a function recursively. Recursion is important in Haskell and we’ll take a closer look at it later. But in a nutshell, this is what happens if we try to get the factorial of, say, 3. It tries to compute `3 * factorial 2`. The factorial of 2 is `2 * factorial 1`, so for now we have `3 * (2 * factorial 1)`. `factorial 1` is `1 * factorial 0`, so we have `3 * (2 * (1 * factorial 0))`. Now here comes the trick — we’ve defined the factorial of 0 to be just 1 and because it encounters that pattern before the catch-all one, it just returns 1. So the final result is equivalent to `3 * (2 * (1 * 1))`. Had we written the second pattern on top of the first one, it would catch all numbers, including 0 and our calculation would never terminate. That’s why order is important when specifying patterns and it’s always best to specify the most specific ones first and then the more general ones later.
 
-> [!attenzione] Attenzione: pattern matching non esaustivo
+> [!attenzione]+ Attenzione: pattern matching non esaustivo
 > 
 > Pattern matching can also fail. If we define a function like this:
 > 
@@ -97,7 +97,7 @@ al massimo spostare la definizione del pattern wildcard in un'altra definizione
 > 
 > It complains that we have non-exhaustive patterns, and rightfully so. When making patterns, we should always include a catch-all pattern so that our program doesn’t crash if we get some unexpected input.
 
-> [!osservazione] Osservazione: pattern matching nelle tuple
+> [!osservazione]+ Osservazione: pattern matching nelle tuple
 > 
 > Pattern matching can also be used on tuples. What if we wanted to make a function that takes two vectors in a 2D space (that are in the form of pairs) and adds them together? To add together two vectors, we add their x components separately and then their y components separately. Here’s how we would have done it if we didn’t know about pattern matching:
 > 
@@ -115,7 +115,7 @@ al massimo spostare la definizione del pattern wildcard in un'altra definizione
 > 
 > There we go! Much better. Note that this is already a catch-all pattern. The type of addVectors (in both cases) is addVectors :: (Num a) => (a, a) -> (a, a) - > (a, a), so we are guaranteed to get two pairs as parameters.
 
-> [!osservazione] Osservazione: pattern matching con le triple
+> [!osservazione]+ Osservazione: pattern matching con le triple
 > 
 > `fst` and `snd` extract the components of pairs. But what about triples? Well, there are no provided functions that do that but we can make our own.
 > 
@@ -132,7 +132,7 @@ al massimo spostare la definizione del pattern wildcard in un'altra definizione
 > 
 > The `_` means the same thing as it does in list comprehensions. It means that we really don’t care what that part is, so we just write a `_`.
 
-> [!osservazione] Osservazione: pattern matching nelle list comprehension
+> [!osservazione]+ Osservazione: pattern matching nelle list comprehension
 > 
 > Which reminds me, you can also pattern match in list comprehensions. Check this out:
 > 
@@ -144,19 +144,19 @@ al massimo spostare la definizione del pattern wildcard in un'altra definizione
 > 
 > Should a pattern match fail, it will just move on to the next element.
 
-> [!osservazione] Osservazione: liste nel pattern matching
+> [!osservazione]+ Osservazione: liste nel pattern matching
 > 
 > Lists themselves can also be used in pattern matching. You can match with the empty list `[]` or any pattern that involves `:` and the empty list. But since `[1,2,3]` is just syntactic sugar for `1:2:3:[]`, you can also use the former pattern. A pattern like `x:xs` will bind the head of the list to `x` and the rest of it to `xs`, even if there’s only one element so `xs` ends up being an empty list.
 > 
 > If you want to bind, say, the first three elements to variables and the rest of the list to another variable, you can use something like `x:y:z:zs`. It will only match against lists that have three elements or more.
 
-> [!notazione] Notazione: pattern `x:xs`
+> [!notazione]+ Notazione: pattern `x:xs`
 > 
 > **Note**: The `x:xs` pattern is used a lot, especially with recursive functions. But patterns that have `:` in them only match against lists of length 1 or more.
 > 
 > `xs` va inteso come "`x`s" (nel senso di "multipli `x`" in inglese).
 
-> [!esempio] Esempio: implementazione della funzione `head` col pattern matching
+> [!esempio]- Esempio: implementazione della funzione `head` col pattern matching
 > 
 > Now that we know how to pattern match against list, let’s make our own implementation of the `head` function.
 > 
@@ -177,7 +177,7 @@ al massimo spostare la definizione del pattern wildcard in un'altra definizione
 > 
 > Nice! Notice that if you want to bind to several variables (even if one of them is just `_` and doesn’t actually bind at all), we have to surround them in parentheses. Also notice the `error` function that we used. It takes a string and generates a runtime error, using that string as information about what kind of error occurred. It causes the program to crash, so it’s not good to use it too much. But calling `head` on an empty list doesn’t make sense.
 
-> [!esempio] Esempio: funzione `tell` col pattern matching
+> [!esempio]- Esempio: funzione `tell` col pattern matching
 > 
 > Let’s make a trivial function that tells us some of the first elements of the list in (in)convenient English form.
 > 
@@ -191,7 +191,7 @@ al massimo spostare la definizione del pattern wildcard in un'altra definizione
 > 
 > This function is safe because it takes care of the empty list, a singleton list, a list with two elements and a list with more than two elements. Note that `(x:[])` and `(x:y:[])` could be rewritten as `[x]` and `[x,y]` (because its syntactic sugar, we don’t need the parentheses). We can’t rewrite `(x:y:_)` with square brackets because it matches any list of length 2 or more.
 
-> [!esempio] Esempio: implementazione della funzione `length` col pattern matching
+> [!esempio]- Esempio: implementazione della funzione `length` col pattern matching
 > 
 > We already implemented our own `length` function using list comprehension. Now we’ll do it by using pattern matching and a little recursion:
 > 
@@ -205,7 +205,7 @@ al massimo spostare la definizione del pattern wildcard in un'altra definizione
 > 
 > Let’s see what happens if we call `length'` on `"ham"`. First, it will check if it’s an empty list. Because it isn’t, it falls through to the second pattern. It matches on the second pattern and there it says that the length is `1 + length' "am"`, because we broke it into a head and a tail and discarded the head. O-kay. The `length'` of `"am"` is, similarly, `1 + length' "m"`. So right now we have `1 + (1 + length' "m")`. `length' "m"` is `1 + length' ""` (could also be written as `1 + length' []`). And we’ve defined `length' []` to be `0`. So in the end we have `1 + (1 + (1 + 0))`.
 
-> [!esempio] Esempio: implementazione della funzione `sum` col pattern matching
+> [!esempio]- Esempio: implementazione della funzione `sum` col pattern matching
 > 
 > Let’s implement `sum`. We know that the sum of an empty list is 0. We write that down as a pattern. And we also know that the sum of a list is the head plus the sum of the rest of the list. So if we write that down, we get:
 > 
@@ -215,7 +215,7 @@ al massimo spostare la definizione del pattern wildcard in un'altra definizione
 > sum' (x:xs) = x + sum' xs
 > ```
 
-> [!definizione] Definizione: as patterns
+> [!definizione]+ Definizione: as patterns
 > 
 > There’s also a thing called _as patterns_. Those are a handy way of breaking something up according to a pattern and binding it to names whilst still keeping a reference to the whole thing. You do that by putting a name and an `@` in front of a pattern. For instance, the pattern `xs@(x:y:ys)`. This pattern will match exactly the same thing as `x:y:ys` but you can easily get the whole list via `xs` instead of repeating yourself by typing out `x:y:ys` in the function body again. Here’s a quick and dirty example:
 > 
@@ -230,17 +230,17 @@ al massimo spostare la definizione del pattern wildcard in un'altra definizione
 > 
 > Normally we use as patterns to avoid repeating ourselves when matching against a bigger pattern when we have to use the whole thing again in the function body.
 
-> [!attenzione] Attenzione: non si può usare `++` nel pattern matching
+> [!attenzione]+ Attenzione: non si può usare `++` nel pattern matching
 > 
 > One more thing — you can’t use `++` in pattern matches. If you tried to pattern match against `(xs ++ ys)`, what would be in the first and what would be in the second list? It doesn’t make much sense. It would make sense to match stuff against `(xs ++ [x,y,z])` or just `(xs ++ [x])`, but because of the nature of lists, you can’t do that.
 
-# Guardie
+# 2 - Guardie
 
 Whereas patterns are a way of making sure a value conforms to some form and deconstructing it, guards are a way of testing whether some property of a value (or several of them) are true or false. That sounds a lot like an if statement and it’s very similar. The thing is that guards are a lot more readable when you have several conditions and they play really nicely with patterns.
 
-> [!definizione] Definizione: guardia
+> [!definizione]+ Definizione: guardia
 > 
-> In [Haskell](content/Informatica/Lambda-calcolo/Haskell/_index.md#^definizione-haskell) la **guardia** è un costrutto sintattico%% link %% usato nel [corpo di una funzione](Sintassi%20di%20base%20di%20Haskell.md#^definizione-funzione-in-haskell) per selezionare un ramo di esecuzione%% link %% della [funzione](Sintassi%20di%20base%20di%20Haskell.md#^definizione-funzione-in-haskell) a seconda del valore di espressioni booleane%% link %% in cui vengono valutati i valori degli argomenti%% link %%:
+> In [Haskell](Informatica/Lambda-calcolo/Haskell/_index.md#^definizione-haskell) la **guardia** è un costrutto sintattico%% link %% usato nel [corpo di una funzione](Sintassi%20di%20base%20di%20Haskell.md#^definizione-funzione-in-haskell) per selezionare un ramo di esecuzione%% link %% della [funzione](Sintassi%20di%20base%20di%20Haskell.md#^definizione-funzione-in-haskell) a seconda del valore di espressioni booleane%% link %% in cui vengono valutati i valori degli argomenti%% link %%:
 > 
 > ```haskell
 > classificaVoto :: Int -> String
@@ -257,15 +257,15 @@ Whereas patterns are a way of making sure a value conforms to some form and deco
 esempio nella definizione in inglese
 %%
 
-> [!attenzione] Attenzione: ordine delle guardie
+> [!attenzione]+ Attenzione: ordine delle guardie
 > 
 > anche qui è importante l'ordine delle guardie
 
-> [!attenzione] Attenzione: no `=` nelle guardie
+> [!attenzione]+ Attenzione: no `=` nelle guardie
 > 
 > Note that there’s no `=` right after the function name and its parameters, before the first guard. Many newbies get syntax errors because they sometimes put it there.
 
-> [!esempio] Esempio: funzione `densityTell` definita con le guardie
+> [!esempio]- Esempio: funzione `densityTell` definita con le guardie
 > 
 > Instead of explaining their syntax, let’s just dive in and make a function using guards. We’re going to make a simple function that responds differently depending on the [density](https://en.wikipedia.org/wiki/Density) given. Density (or specific mass) is a substance’s mass per unit of volume (here, grams per liter). If a substance has a density of less than 1.2, it will float in air, as 1.2g/L is the density of air. If it has more than 1000g/L (the density of water), it will sink in water. Between are things (like people, usually) that will neither float away nor sink in water. So here’s the function (we won’t be calculating density right now, this function just gets a density and responds)
 > 
@@ -279,17 +279,17 @@ esempio nella definizione in inglese
 > 
 > Guards are indicated by pipes that follow a function’s name and its parameters. Usually, they’re indented a bit to the right and lined up. A guard is basically a boolean expression. If it evaluates to `True`, then the corresponding function body is used. If it evaluates to `False`, checking drops through to the next guard and so on. If we call this function with `24.3`, it will first check if that’s smaller than `1.2`. Because it isn’t, it falls through to the next guard. The check is carried out with the second guard and because `24.3` is less than `1000.0`, the second string is returned.
 
-> [!osservazione] Osservazione: codice più leggibile
+> [!osservazione]+ Osservazione: codice più leggibile
 > 
 > Anche qui vale la stessa osservazione fatta prima per il pattern matching
 > 
 > This is very reminiscent of a big if else tree in imperative languages, only this is far better and more readable. While big if else trees are usually frowned upon, sometimes a problem is defined in such a discrete way that you can’t get around them. Guards are a very nice alternative for this.
 
-> [!osservazione] Osservazione: affinità e divergenze tra il pattern matching e le guardie
+> [!osservazione]+ Osservazione: affinità e divergenze tra il pattern matching e le guardie
 > 
 > This is very similar to patterns, only they check if the input satisfies a pattern but guards check for boolean conditions. If all the guards of a function evaluate to `False` (and we haven’t provided an `otherwise` catch-all guard), evaluation falls through to the next **pattern**. That’s how patterns and guards play nicely together. If no suitable guards or patterns are found, an error is thrown.
 
-> [!esempio] Esempio: guardia a più parametri
+> [!esempio]- Esempio: guardia a più parametri
 > 
 > Of course we can use guards with functions that take as many parameters as we want. Instead of having the user calculate the density of the substance on their own before calling the function, let’s modify this function so that it takes a mass (in grams) and volume (in liters).
 > 
@@ -301,16 +301,16 @@ esempio nella definizione in inglese
 >     | otherwise   = "If it's sink or swim, you're going to sink."  
 > ```
 > 
-> Let’s see if cat food will float …
+> Let’s see if cat food will float ...
 > 
 > ```haskell
 > ghci> densityTell 400 1  
 > "Have fun swimming, but watch out for sharks!"  
 > ```
 > 
-> Looks like it will! At least until it dissolves into the pool… Yuck!
+> Looks like it will! At least until it dissolves into the pool... Yuck!
 
-> [!esempio] Esempio: implementazione della funzione `max` con le guardie
+> [!esempio]- Esempio: implementazione della funzione `max` con le guardie
 > 
 > Another very simple example: let’s implement our own max function. If you remember, it takes two things that can be compared and returns the larger of them.
 > 
@@ -330,7 +330,7 @@ esempio nella definizione in inglese
 > 
 > Non molto leggibile però, meglio scrivere su più righe
 
-> [!esempio] Esempio: implementazione della funzione `compare` con le guardie
+> [!esempio]- Esempio: implementazione della funzione `compare` con le guardie
 > 
 > ```haskell
 > myCompare :: (Ord a) => a -> a -> Ordering  
@@ -343,11 +343,11 @@ esempio nella definizione in inglese
 > GT  
 > ```
 
-> [!notazione] Notazione
+> [!notazione]+ Notazione
 > 
 > Note: Not only can we call functions as infix with backticks, we can also define them using backticks. Sometimes it’s easier to read that way.
 
-# Costrutto `where`
+# 3 - Costrutto `where`
 
 In the previous section, we defined a density calculator function and responder like this:
 
@@ -385,14 +385,14 @@ densityTell mass volume
 
 The names we define in the `where` block of a function are only visible to that function, so we don’t have to worry about them polluting the namespace of other functions. Notice that all the names are aligned at a single column. If we don’t align them nice and proper, Haskell gets confused because then it doesn’t know they’re all part of the same block.
 
-> [!definizione] Definizione: `where`
+> [!definizione]+ Definizione: `where`
 > 
-> In [Haskell](content/Informatica/Lambda-calcolo/Haskell/_index.md#^definizione-haskell) **`where`** è un costrutto sintattico%% link %% usato nel [corpo di una funzione](Sintassi%20di%20base%20di%20Haskell.md#^definizione-funzione-in-haskell) per definire variabili%% link %% o [funzioni](Sintassi%20di%20base%20di%20Haskell.md#^definizione-funzione-in-haskell) locali visibili in tutto il corpo della funzione in cui sono dichiarate.
+> In [Haskell](Informatica/Lambda-calcolo/Haskell/_index.md#^definizione-haskell) **`where`** è un costrutto sintattico%% link %% usato nel [corpo di una funzione](Sintassi%20di%20base%20di%20Haskell.md#^definizione-funzione-in-haskell) per definire variabili%% link %% o [funzioni](Sintassi%20di%20base%20di%20Haskell.md#^definizione-funzione-in-haskell) locali visibili in tutto il corpo della funzione in cui sono dichiarate.
 ^definizione-where
 
 `where` bindings aren’t shared across function bodies of different patterns. If you want several patterns of one function to access some shared name, you have to define it globally.
 
-> [!osservazione] Osservazione: `where` col pattern matching
+> [!osservazione]+ Osservazione: `where` col pattern matching
 > 
 > You can also use `where` bindings to **pattern match**! We could have rewritten the `where` block of our previous function as:
 > 
@@ -412,7 +412,7 @@ The names we define in the `where` block of a function are only visible to that 
 > 
 > We could have done this pattern matching directly in the function’s parameters (it would have been shorter and clearer actually) but this just goes to show that it’s possible to do it in `where` bindings as well.
 
-> [!osservazione] Osservazione: usare `where` per definire funzioni
+> [!osservazione]+ Osservazione: usare `where` per definire funzioni
 > 
 > Just like we’ve defined constants in `where` blocks, you can also define functions. Staying true to our solids programming theme, let’s make a function that takes a list of mass-volume pairs and returns a list of densities.
 > 
@@ -424,11 +424,11 @@ The names we define in the `where` block of a function are only visible to that 
 > 
 > And that’s all there is to it! The reason we had to introduce `density` as a function in this example is because we can’t just calculate one density from the function’s parameters. We have to examine the list passed to the function and there’s a different density for every pair in there.
 
-> [!osservazione] Osservazione: `where` innestati
+> [!osservazione]+ Osservazione: `where` innestati
 > 
 > `where` bindings can also be nested. It’s a common idiom to make a function and define some helper function in its `where` block and then to give those functions helper functions as well, each with its own `where` block.
 
-# Costrutto `let in`
+# 4 - Costrutto `let in`
 
 Very similar to `where` bindings are `let` bindings. `where` bindings are a syntactic construct that let you bind to variables at the end of a function and the whole function can see them, including all the guards. `let` bindings let you bind to variables anywhere and are expressions themselves, but are very local, so they don’t span across guards. Just like any construct in Haskell that is used to bind values to names, `let` bindings can be used for pattern matching. Let’s see them in action! This is how we could define a function that gives us a cylinder’s surface area based on its height and radius:
 
@@ -440,19 +440,19 @@ cylinder r h =
     in  sideArea + 2 * topArea  
 ```
 
-> [!definizione] Definizione: `let in`
+> [!definizione]+ Definizione: `let in`
 > 
-> In [Haskell](content/Informatica/Lambda-calcolo/Haskell/_index.md#^definizione-haskell) **`let in`** è un costrutto sintattico%% link %% usato per definire variabili%% link %% o funzioni%% link %% locali visibili esclusivamente nell'espressione%% link %% che segue la parola chiave `in`.
+> In [Haskell](Informatica/Lambda-calcolo/Haskell/_index.md#^definizione-haskell) **`let in`** è un costrutto sintattico%% link %% usato per definire variabili%% link %% o funzioni%% link %% locali visibili esclusivamente nell'espressione%% link %% che segue la parola chiave `in`.
 
 %% 
 esempio nella definizione
 %%
 
-> [!osservazione] Osservazione: affinità e divergenze tra `where` e `let in`
+> [!osservazione]+ Osservazione: affinità e divergenze tra `where` e `let in`
 > 
 > The form is `let <bindings> in <expression>`. The names that you define in the `let` part are accessible to the expression after the `in` part. As you can see, we could have also defined this with a `where` binding. Notice that the names are also aligned in a single column. So what’s the difference between the two? For now it just seems that `let` puts the bindings first and the expression that uses them later whereas `where` is the other way around.
 
-> [!osservazione] Osservazione: usare `let in` nelle espressioni inline
+> [!osservazione]+ Osservazione: usare `let in` nelle espressioni inline
 > 
 > The difference is that `let` bindings are expressions themselves. `where` bindings are just syntactic constructs. Remember when we did the if statement and it was explained that an if else statement is an expression and you can cram it in almost anywhere?
 > 
@@ -491,7 +491,7 @@ esempio nella definizione
 > 600 
 > ```
 
-> [!osservazione] Osservazione: `let in` nella list comprehension
+> [!osservazione]+ Osservazione: `let in` nella list comprehension
 > 
 > You can also put `let` bindings inside list comprehensions. Let’s rewrite our previous example of calculating lists of mass-volume pairs to use a `let` inside a list comprehension instead of defining an auxiliary function with a `where`.
 > 
@@ -521,11 +521,11 @@ esempio nella definizione
 > <interactive>:1:0: Not in scope: `boot'  
 > ```
 
-> [!osservazione] Osservazione: perché non usare `let in` al posto di `where`?
+> [!osservazione]+ Osservazione: perché non usare `let in` al posto di `where`?
 > 
 > If `let` bindings are so cool, why not use them all the time instead of `where` bindings, you ask? Well, since `let` bindings are expressions and are fairly local in their scope, they can’t be used across guards. Some people prefer `where` bindings because the names come after the function they’re being used in. That way, the function body is closer to its name and type declaration and to some that’s more readable.
 
-# Case expressions
+# 5 - Case expressions
 
 Many imperative languages (C, C++, Java, etc.) have case syntax and if you’ve ever programmed in them, you probably know what it’s about. It’s about taking a variable and then executing blocks of code for specific values of that variable and then maybe including a catch-all block of code in case the variable has some value for which we didn’t set up a case.
 

@@ -551,7 +551,7 @@ Ma a noi serve avere una definizione **finita** per poter operare con questo [te
 
 Non preoccuparti, a breve sarà tutto più chiaro, ma intanto beccati questa definizione di un punto fisso nel [$\lambda$-calcolo](Informatica/Lambda-calcolo/_index.md#^definizione-lambda-calcolo) espresso mediante questo particolare [combinatore](Informatica/Lambda-calcolo/_index.md#^definizione-combinatore) scoperto da Haskell Curry: il _combinatore di punto fisso_%% link %%.
 
-> [!definizione]+ Definizione: combinatore di punto fisso $\text Y$
+> [!definizione]+ Definizione: combinatore di punto fisso $\color{#FF7FFF} \text Y$
 > 
 > Il **combinatore di punto fisso** (anche detto **combinatore di Curry** perché scoperto da Haskell Curry) Y è un [combinatore](Informatica/Lambda-calcolo/_index.md#^definizione-combinatore) definito nel seguente modo:
 > 
@@ -560,7 +560,7 @@ Non preoccuparti, a breve sarà tutto più chiaro, ma intanto beccati questa def
 
 Possiamo dimostrare che questo [combinatore di punto fisso $\text Y$](Codifica%20di%20Church.md#^definizione-combinatore-di-punto-fisso-y) si comporta semanticamente proprio come un punto fisso.
 
-> [!proposizione]+ Verifica della correttezza semantica del combinatore di punto fisso $\text Y$
+> [!proposizione]+ Verifica della correttezza semantica del combinatore di punto fisso $\color{#FF7F7F} \text Y$
 > 
 > Sia $\Lambda$ l'[insieme](Matematica/Teoria%20degli%20insiemi/_index.md#^definizione-insieme) di [termini](Informatica/Lambda-calcolo/_index.md#^definizione-termine) del [$\lambda$-calcolo](Informatica/Lambda-calcolo/_index.md#^definizione-lambda-calcolo).
 > 
