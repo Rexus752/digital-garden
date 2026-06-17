@@ -317,6 +317,10 @@ Osservazione "e", "f" di pagina 191 lancelotti
 
 ### 1.1.3 - Principio di eliminazione dei termini trascurabili (PETT)
 
+%% 
+usare $f_1$ ed $f_2$ al posto di $f$ e $f'$ per non confondersi con le derivate
+%%
+
 > [!teorema]+ Principio di eliminazione dei termini trascurabili (PETT)
 > 
 > Date quattro [funzioni](Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-funzione) $f,g,f',g' \colon A \subseteq \mathbb{R} \to \mathbb{R}$ (con $A \ne \emptyset$) e un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R} \cup \{ \pm \infty \}$ per $A$, abbiamo che se $f'$ è [$o$-piccolo](Infiniti%20e%20infinitesimi.md#^definizione-o-piccolo) di $f$ per $x \to x_0$ e $g'$ è [$o$-piccolo](Infiniti%20e%20infinitesimi.md#^definizione-o-piccolo) di $g$ per $x \to x_0$, allora $f'$ e $g'$ sono [trascurabili](Infiniti%20e%20infinitesimi.md#^definizione-trascurabilita-di-una-funzione) nella rispettiva somma con $f$ e $g$:
