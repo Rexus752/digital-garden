@@ -235,8 +235,9 @@ Fare da 2.4 in poi del libro di Analisi
 
 > [!fonti]+ Fonti
 > 
-> - 📚 _Analisi matematica - Fare e comprendere_ di Walter Dambrosio, Zanichelli, 2018 (ISBN: `9788808220745`):
-> 	- 1 - _Funzioni e modelli_:
-> 		- 2 - _Grafici delle funzioni elementari_:
-> 			- 2.1 - _Funzioni lineari e funzioni potenza_.
-> 			- 2.2 - _Funzioni esponenziali e logaritmiche_.
+> - 📚 Walter Dambrosio, _Analisi matematica - Fare e comprendere_, Zanichelli, 2018 (ISBN: `9788808220745`):
+> 	- Parte I - _I concetti dell'analisi matematica_:
+> 		- Capitolo 1 - _Funzioni e modelli_:
+>	 		- 2 - _Grafici delle funzioni elementari_:
+>	 			- 2.1 - _Funzioni lineari e funzioni potenza_.
+>	 			- 2.2 - _Funzioni esponenziali e logaritmiche_.

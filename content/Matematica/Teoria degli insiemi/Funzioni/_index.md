@@ -881,9 +881,9 @@ esempi:
 > 	- Corso di _Logica Matematica_, A.A. 2022-23 ([pagina Moodle](https://informatica.i-learn.unito.it/course/view.php?id=2480)):
 > 		- Proff. Andretta Alessandro, Motto Ros Luca e Viale Matteo, slide:
 > 			- [_2.3 - Funzioni_](https://informatica.i-learn.unito.it/pluginfile.php/336712/mod_folder/content/0/Capitolo%202%20-%20Elementi%20di%20teoria%20degli%20insiemi/2.3%20-%20Funzioni_moodle.pdf).
-> - 📚 _Analisi matematica - Fare e comprendere_ di Walter Dambrosio, Zanichelli, 2018 (ISBN: `9788808220745`):
+> - 📚 Walter Dambrosio, _Analisi matematica - Fare e comprendere_, Zanichelli, 2018 (ISBN: `9788808220745`):
 > 	- Parte I - _I concetti dell'analisi matematica_:
-> 		- 1 - _Funzioni e modelli_:
+> 		- Capitolo 1 - _Funzioni e modelli_:
 > 			- 1 - _Funzioni e grafici_:
 > 				- 1.1 - _Funzioni e loro rappresentazioni_.
 > 				- 1.2 - _Funzione composta e funzione inversa_.

@@ -78,7 +78,7 @@ Introduciamo ora delle nozioni che ci permettono di confrontare localmente%% lin
 > 
 > $$
 > \begin{array}{}
-> f o(g) \text{ per } x \to x_0 \\
+> f = o(g) \text{ per } x \to x_0 \\
 > \Downarrow \\
 > g \text{ non identicamente nulla per ogni } (I(x_0) \cap A) \setminus \{ x_0 \}
 > \end{array}
@@ -728,6 +728,74 @@ Poiché le [funzioni](Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^de
 > | $x_0 = \pm \infty$   | $u(x) = \vert x \vert$                  | $u(x) = \dfrac{1}{\vert x \vert}$ |
 ^definizione-infiniti-e-infinitesimi-campione
 
+%% 
+Sì, **in questa definizione il valore assoluto è opportuno**, perché rende la nozione indipendente dal lato da cui ci si avvicina a (x_0) e garantisce che le funzioni campione siano sempre positive.
+
+Per esempio, se (x_0 \in \mathbb{R}):
+
+[  
+u(x)=\frac1{|x-x_0|}  
+]
+
+ha la proprietà che
+
+[  
+\lim_{x\to x_0} u(x)=+\infty,  
+]
+
+sia da destra sia da sinistra.
+
+Se invece scrivessi
+
+[  
+u(x)=\frac1{x-x_0},  
+]
+
+allora:
+
+[  
+\lim_{x\to x_0^+}\frac1{x-x_0}=+\infty,  
+\qquad  
+\lim_{x\to x_0^-}\frac1{x-x_0}=-\infty,  
+]
+
+quindi non avresti un "infinito campione" che tende semplicemente a (+\infty), ma una funzione che cambia segno.
+
+Lo stesso vale per l'infinitesimo campione:
+
+[  
+u(x)=|x-x_0|  
+]
+
+soddisfa
+
+[  
+\lim_{x\to x_0}u(x)=0^+.  
+]
+
+Senza valore assoluto,
+
+[  
+u(x)=x-x_0,  
+]
+
+tende comunque a (0), quindi come infinitesimo potrebbe ancora funzionare, ma assumerebbe valori positivi e negativi.
+
+In molti testi si usa il valore assoluto perché gli **infiniti e infinitesimi campione** servono come modelli di riferimento e si preferisce che siano sempre positivi. Se invece stai studiando limiti unilaterali, puoi tranquillamente usare
+
+[  
+\frac1{x-x_0}  
+\quad\text{oppure}\quad  
+x-x_0,  
+]
+
+specificando il verso di avvicinamento.
+
+Quindi:
+- per un **infinito campione bilaterale**: il valore assoluto è sostanzialmente necessario;
+- per un **infinitesimo campione**: non è strettamente necessario per avere limite (0), ma è comodo e coerente con la convenzione di considerare infinitesimi positivi.
+%%
+
 La presenza del valore assoluto%% link %% negli [infiniti e infinitesimi campione](Infiniti%20e%20infinitesimi.md#^definizione-infiniti-e-infinitesimi-campione) è giustificata dalla seguente definizione.
 
 > [!definizione]+ Definizione: infinit(esim)o di ordine $\color{#FF7FFF} \alpha$ rispetto all'infinit(esim)o campione $\color{#FF7FFF} u$
@@ -828,6 +896,10 @@ esempi pagg. 207-208
 > | $\forall k \in \mathbb{R}^{> 0} . \big( f(x) = o([u(x)]^k) \big)$ | $f(x)$ è un [infinito](Infiniti%20e%20infinitesimi.md#^definizione-infinito-e-infinitesimo) di ordine _inferiore_,<br>tende a $\pm \infty$ più _lentamente_ di $\vert u(x)\vert^k$  | $f(x)$ è un [infinitesimo](Infiniti%20e%20infinitesimi.md#^definizione-infinito-e-infinitesimo) di ordine _superiore_,<br>tende a $0$ più _velocemente_ di $\vert u(x)\vert^k$ |
 ^definizione-infinitesimo-di-ordine-superiore-o-inferiore-a-qualsiasi-potenza-di-u-x
 
+%% 
+Fare le tre formule equivalenti come nella [definizione dell'ordine $\alpha$](Infiniti%20e%20infinitesimi.md#^definizione-infinitesimo-di-ordine-alfa-rispetto-all-infinitesimo-campione-u)
+%%
+
 > [!esempio]- Esempio: $\color{#7F7FFF} f(x) = a^x$ con $\color{#7F7FFF} a > 1$
 > 
 > La [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-funzione) $f(x) = a^x$ (con $a > 1$) è un [infinito](Infiniti%20e%20infinitesimi.md#^definizione-infinito-e-infinitesimo) per $x \to + \infty$ e il suo [infinito campione](Infiniti%20e%20infinitesimi.md#^definizione-infiniti-e-infinitesimi-campione) è $u(x) = \vert x \vert$. Poiché si ha che
@@ -871,6 +943,39 @@ Soluzione: i ruoli si invertono
 
 %% 
 esempi 4.33 pagg. 208-209
+%%
+
+Ci sono casi però in cui un [infinito](Infiniti%20e%20infinitesimi.md#^definizione-infinito-e-infinitesimo) o un [infinitesimo](Infiniti%20e%20infinitesimi.md#^definizione-infinito-e-infinitesimo) non sono di un [ordine $\alpha$](Infiniti%20e%20infinitesimi.md#^definizione-infinitesimo-di-ordine-alfa-rispetto-all-infinitesimo-campione-u) preciso, ma non sono neanche [superiori o inferiori a qualsiasi potenza](Infiniti%20e%20infinitesimi.md#^definizione-infinitesimo-di-ordine-superiore-o-inferiore-a-qualsiasi-potenza-di-u-x) rispetto all'[infinito o infinitesimo campione](Infiniti%20e%20infinitesimi.md#^definizione-infiniti-e-infinitesimi-campione) $u(x)$, bensì il loro ordine $\alpha$ si trova in un intervallo.
+
+%% 
+![[Ordini alfa.png]]
+
+Sistemare questa foto mettendo anche sulla prima retta le varie potenze di u
+%%
+
+> [!definizione]+ Definizione: infinit(esim)o di ordine superiore o inferiore all'ordine $\color{#FF7FFF}\alpha$ rispetto all'infinit(esim)o campione $\color{#FF7FFF}u$
+>
+> Data una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-funzione) $f \colon A \subseteq \mathbb{R} \to \mathbb{R}$ (con $A \ne \emptyset$) e un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R} \cup \{ \pm \infty \}$ per $A$ con $f$ [infinito](Infiniti%20e%20infinitesimi.md#^definizione-infinito-e-infinitesimo) (o [infinitesimo](Infiniti%20e%20infinitesimi.md#^definizione-infinito-e-infinitesimo)) in $x_0$, diciamo che **$f(x)$ è un [infinito](Infiniti%20e%20infinitesimi.md#^definizione-infinito-e-infinitesimo) di ordine superiore o [infinitesimo](Infiniti%20e%20infinitesimi.md#^definizione-infinito-e-infinitesimo) di ordine inferiore all'ordine $\alpha$ rispetto all'[infinito o infinitesimo campione](Infiniti%20e%20infinitesimi.md#^definizione-infiniti-e-infinitesimi-campione) $u(x)$ per $x \to x_0$** se
+>
+> $$
+> \lim_{x \to x_0} \frac{f(x)}{[u(x)]^\alpha} = \pm\infty
+> $$
+> 
+> %%cioè se $f(x)$ è O-grande??? di $[u(x)]^\alpha$ (nel caso metterlo come biimplicazione qua%%
+> 
+> Al contrario, **$f(x)$ è un [infinito](Infiniti%20e%20infinitesimi.md#^definizione-infinito-e-infinitesimo) di ordine inferiore o [infinitesimo](Infiniti%20e%20infinitesimi.md#^definizione-infinito-e-infinitesimo) di ordine superiore all'ordine $\alpha$ rispetto all'[infinito o infinitesimo campione](Infiniti%20e%20infinitesimi.md#^definizione-infiniti-e-infinitesimi-campione) $u(x)$ per $x \to x_0$** se
+>
+> $$
+> \begin{array}{}
+> f(x) = o([u(x)]^\alpha) \\
+> \Updownarrow \\
+> \displaystyle\lim_{x \to x_0} \frac{f(x)}{[u(x)]^\alpha} = 0
+> \end{array}
+> $$
+^definizione-infinitesimo-di-ordine-superiore-o-inferiore-all-ordine-alpha-rispetto-all-infinitesimo-campione-u
+
+%% 
+Fare le tre formule equivalenti come nella [definizione dell'ordine $\alpha$](Infiniti%20e%20infinitesimi.md#^definizione-infinitesimo-di-ordine-alfa-rispetto-all-infinitesimo-campione-u)
 %%
 
 ---
