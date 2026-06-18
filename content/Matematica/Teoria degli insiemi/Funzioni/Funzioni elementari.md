@@ -23,34 +23,11 @@ title: Funzioni elementari
 > con $m, q \in \mathbb{R}$.
 ^definizione-funzione-lineare
 
-Il grafico di una [funzione lineare](Funzioni%20elementari.md#^definizione-funzione-lineare) è la retta di equazione
-
-$$
-y = mx + q
-$$
-
-Analizziamo il comportamento di $f$ al variare di $m$:
-
-|           | Dominio      | Immagine     | Monotonia                       | Comportamento asintotico al'infinito                      |
-| --------- | ------------ | ------------ | ------------------------------- | --------------------------------------------------------- |
-| $m > 0$   | $\mathbb{R}$ | $\mathbb{R}$ | $f$ crescente su $\mathbb{R}$   | $\displaystyle \lim_{x \to \pm \infty} f(x) = \pm \infty$ |
-| $m < 0$   | $\mathbb{R}$ | $\mathbb{R}$ | $f$ decrescente su $\mathbb{R}$ | $\displaystyle \lim_{x \to \pm \infty} f(x) = \mp \infty$ |
-| $m =<= 0$ | $\mathbb{R}$ | $\{ q \}$    | $f$ costante su $\mathbb{R}$    | $\displaystyle \lim_{x \to \pm \infty} f(x) = q$          |
-
-%% inserire grafici per mostrarlo %%
-
-Si può quindi evincere che il coefficiente $m$ assume due significati fondamentali:
-- È la pendenza della retta $y = mx + q$: per ogni coppia di punti $x_1 \ne x_2$ abbiamo:
-	$$
-	\dfrac{\Delta f}{\Delta x} = \dfrac{f(x_2) - f(x_1)}{x_2 - x_1} = m
-	$$
-- È il tasso medio di variazione di $f$ in ogni intervallo.
-
 > [!esempio]- Esempio: funzione lineare passante per un punto assegnato e con pendenza assegnata
 > 
 > Determiniamo l'unica funzione lineare $f$ di pendenza $m_0 \in \mathbb{R}$ assegnata e il cui grafico passa per un punto $(x_0, y_0)$ assegnato.
 > 
-> Dato un generico punto $(x, f(x))$ sulla retta grafico di $f$, in accordo con la relazione della pendenza della retta abbiamo
+> Dato un generico punto $(x, f(x))$ sulla retta grafico di $f$, in accordo con la relazione della pendenza della retta%% link %% abbiamo
 > 
 > $$
 > \dfrac{\Delta f}{\Delta x} = \dfrac{f(x) - f(x_0)}{x - x_0} = m_0
@@ -74,33 +51,92 @@ Si può quindi evincere che il coefficiente $m$ assume due significati fondament
 > f(x) = -2(x - 1) + 4 = -2x + 6
 > $$
 
-[!esempio]- Esempio: funzione lineare passante per due punti assegnati
+> [!esempio]- Esempio: funzione lineare passante per due punti assegnati
+> 
+> Determiniamo l'unica funzione lineare $f$ il cui grafico passa per due punti $(x_1, y_1)$ e $(x_2, y_2)$ assegnati (con $x_1 \ne x_2$). Osserviamo che la pendenza di $f$, in accordo con la relazione della pendenza della retta, abbiamo
+> 
+> $$
+> \dfrac{\Delta f}{\Delta x} = \dfrac{f(x_2) - f(x_1)}{x_2 - x_1} = \dfrac{y_2 - y_1}{x_2 - x_1} = m
+> $$
+> 
+> Applicando la formula di prima della retta passante per un dato punto ($f(x) = m_0(x - x_0) + y_0$), abbiamo
+> 
+> $$
+> \begin{align*}
+> f(x) &= m (x - x_1) + y_1 \\
+> &= \dfrac{y_2 - y_1}{x_2 - x_1} (x - x_1) + y_1
+> \end{align*}
+> $$
+> 
+> Per esempio, la funzione lineare il cui grafico passa per $(1,4)$ e per $(3, -2)$ è
+> 
+> $$
+> \begin{align*}
+> f(x) &= \dfrac{-2 - 4}{3 - 1}(x - 1) + 4 \\
+> &= -3(x - 1) + 4 \\
+> &= -3x + 3 + 4 \\
+> &= -3x + 7
+> \end{align*}
+> $$
 
-Determiniamo l'unica funzione lineare $f$ il cui grafico passa per due punti $(x_1, y_1)$ e $(x_2, y_2)$ assegnati (con $x_1 \ne x_2$). Osserviamo che la pendenza di $f$, in accordo con la relazione della pendenza della retta, abbiamo
+> [!osservazione] Osservazione: $m$ indica la pendenza di una funzione lineare
+> 
+> Analizziamo il comportamento di $f$ al variare di $m$:
+> 
+> |         | Dominio      | Immagine     | Monotonia                       | Comportamento asintotico al'infinito                      |
+> | ------- | ------------ | ------------ | ------------------------------- | --------------------------------------------------------- |
+> | $m > 0$ | $\mathbb{R}$ | $\mathbb{R}$ | $f$ crescente su $\mathbb{R}$   | $\displaystyle \lim_{x \to \pm \infty} f(x) = \pm \infty$ |
+> | $m < 0$ | $\mathbb{R}$ | $\mathbb{R}$ | $f$ decrescente su $\mathbb{R}$ | $\displaystyle \lim_{x \to \pm \infty} f(x) = \mp \infty$ |
+> | $m = 0$ | $\mathbb{R}$ | $\{ q \}$    | $f$ costante su $\mathbb{R}$    | $\displaystyle \lim_{x \to \pm \infty} f(x) = q$          |
+> 
+> %% inserire grafici per mostrarlo %%
+> 
+> Si può quindi evincere che la pendenza della retta dipende dal coefficiente $m$ e, in particolare, quando $m = 0$ la retta è orizzontale e parallela al piano delle ascisse.
+^osservazione-m-indica-la-pendenza-di-una-funzione-lineare
 
-$$
-\dfrac{\Delta f}{\Delta x} = \dfrac{f(x_2) - f(x_1)}{x_2 - x_1} = \dfrac{y_2 - y_1}{x_2 - x_1} = m
-$$
+> [!osservazione] Osservazione: funzione lineare rappresenta (quasi) ogni retta del piano cartesiano
+> 
+> Ogni retta del piano cartesiano può essere rappresentata da una [funzione lineare](Funzioni%20elementari.md#^definizione-funzione-lineare), eccetto una retta particolare: quella verticale, cioè la retta che ha pendenza infinita. Dal momento che, per avere pendenza infinita, $m$ dovrebbe essere uguale a $\pm \infty$ ma le [funzioni lineari](Funzioni%20elementari.md#^definizione-funzione-lineare) accettano solo valori reali%% link %% di $m$ (perché $m \in \mathbb{R}$), con le [funzioni lineari](Funzioni%20elementari.md#^definizione-funzione-lineare) non si possono rappresentare le rette verticali.
 
-Applicando la formula di prima della retta passante per un dato punto ($f(x) = m_0(x - x_0) + y_0$), abbiamo
+> [!osservazione] Osservazione: $q$ indica la distanza dall'origine
+> 
+> Analizziamo ora il comportamento di $f$ al variare di $q$. Possiamo osservare che una [funzione lineare](Funzioni%20elementari.md#^definizione-funzione-lineare) interseca l'asse delle ordinate%% link %% sempre nel punto $(0,q)$, quindi quando $q = 0$ la retta passa per l'origine%% link %% $O(0,0)$. 
 
-$$
-\begin{align*}
-f(x) &= m (x - x_1) + y_1 \\
-&= \dfrac{y_2 - y_1}{x_2 - x_1} (x - x_1) + y_1
-\end{align*}
-$$
+%% 
+mettere variazioni e quoziente di Newton qua
+%%
 
-Per esempio, la funzione lineare il cui grafico passa per $(1,4)$ e per $(3, -2)$ è
+> [!teorema] Teorema della pendenza costante della funzione lineare
+> 
+> Data una [funzione lineare](Funzioni%20elementari.md#^definizione-funzione-lineare) $f(x) = mx+q$ con $x \in \mathbb{R}$ e $m,q \in \mathbb{R}$ fissati, allora per ogni $x_1, x_2 \in \mathbb{R}$ si ha che il quoziente di Newton%% link %% è sempre pari a $m$:
+> 
+> $$
+> \forall x_1, x_2 \in \mathbb{R} . \left( x_1 \ne x_2 \implies \dfrac{\Delta f}{\Delta x} = \dfrac{f(x_2) - f(x_1)}{x_2 - x_1} = m \right) 
+> $$
+^teorema-della-pendenza-costante-della-funzione-lineare
 
-$$
-\begin{align*}
-f(x) &= \dfrac{-2 - 4}{3 - 1}(x - 1) + 4 \\
-&= -3(x - 1) + 4 \\
-&= -3x + 3 + 4 \\
-&= -3x + 7
-\end{align*}
-$$
+> [!dimostrazione] Dimostrazione del teorema della pendenza costante della funzione lineare
+> 
+> Dimostriamo il [teorema della pendenza costante della funzione lineare](Funzioni%20elementari.md#^teorema-della-pendenza-costante-della-funzione-lineare).
+> 
+> Tramite una serie di passaggi, dimostriamo che vale l'equivalenza:
+> 
+> $$
+> \begin{align*}
+> \dfrac{\Delta f}{\Delta x} &= \dfrac{f(x_2) - f(x_1)}{x_2 - x_1} \\
+> &= \dfrac{(mx_2 + q) - (mx_1 + q)}{x_2 - x_1} \\
+> &= \dfrac{m(x_2 \cancel{+ q} - x_1 \cancel{- q})}{x_2 - x_1} \\
+> &= \dfrac{m\cancel{(x_2 - x_1)}}{\cancel{x_2 - x_1}} \\
+> &= m
+> \end{align*}
+> $$
+> 
+> $\blacksquare$
+
+> [!definizione] Definizione: coefficiente angolare
+> 
+> In una [funzione lineare](Funzioni%20elementari.md#^definizione-funzione-lineare) $y = mx + q$ il coefficiente $m$ viene detto **coefficiente angolare** o **pendenza della retta** o **coefficiente di proporzionalità tra la variazione di $f$ e quella di $x$**.
+^definizione-coefficiente-angolare
 
 # 2 - Funzioni potenza
 
@@ -235,6 +271,10 @@ Fare da 2.4 in poi del libro di Analisi
 
 > [!fonti]+ Fonti
 > 
+> - 🏫 Corso di Laurea in Informatica (`L-31 R`) presso l'Università di Torino:
+> 	- Corso di _Analisi Matematica - canale C_, A.A. 2020-21 ([pagina Moodle](https://informatica.i-learn.unito.it/course/view.php?id=2075)):
+> 		- Prof. Barutello Vivina Laura, videolezioni:
+> 			- [_L1a_](https://informatica.i-learn.unito.it/local/streamingfilemanager/file.php/informatica.i-learn.unito.it/2075/L1a.mp4).
 > - 📚 Walter Dambrosio, _Analisi matematica - Fare e comprendere_, Zanichelli, 2018 (ISBN: `9788808220745`):
 > 	- Parte I - _I concetti dell'analisi matematica_:
 > 		- Capitolo 1 - _Funzioni e modelli_:
