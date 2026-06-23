@@ -10,12 +10,14 @@ title: Derivate
 
 ---
 
+Proviamo a introdurre il concetto di _derivata_%% link %%, uno dei concetti fondamentali dell'analisi matematica%% link %%, partendo da un concetto molto semplice: la _pendenza_ di un grafico%% link %%.
+
+# 1 - Pendenza di un grafico e introduzione alle derivate
+
 <!--
-Proviamo ora a introdurre il concetto di _derivata_%% link %%, uno dei concetti fondamentali dell'analisi matematica%% link %%, partendo da un concetto molto semplice: la _pendenza_ di un grafico%% link %%.
+Prendendo una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-funzione) $f$ qualsiasi, possiamo definire intuitivamente la _pendenza_ come l'inclinazione del grafico della funzione: per esempio. nel caso delle [funzioni lineari](Funzioni%20elementari.md#^definizione-funzione-lineare), il cui grafico%% link %% è una retta%% link %%, [la pendenza è costante e uguale al coefficiente $m$](Funzioni%20elementari.md#^teorema-della-pendenza-costante-della-funzione-lineare).
 
-Prendendo una [funzione](content/Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-funzione) $f$ qualsiasi, possiamo definire intuitivamente la _pendenza_ come l'inclinazione del grafico della funzione: per esempio. nel caso delle [funzioni lineari](Funzioni%20elementari.md#^definizione-funzione-lineare), il cui grafico%% link %% è una retta%% link %%, [la pendenza è costante e uguale al coefficiente $m$](Funzioni%20elementari.md#^osservazione-funzioni-lineari-uniche-con-la-pendenza-costante).
-
-Diversa è però la situazione per le [funzioni](content/Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-funzione) non [lineari](Funzioni%20elementari.md#^definizione-funzione-lineare): per esempio, nel caso della [funzione](content/Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-funzione) ${\color{#FF7F7F} f(x) = \log_2 x - 1 }$, la _pendenza_ varia in base al punto in cui la misuriamo: la pendenza della tangente%% link %% ${\color{#7FFF7F} t_1 }$ al punto%% link %% ${\color{#7FFF7F} P_1(-1,1) }$ sarà sicuramente maggiore della pendenza della tangente%% link %% ${\color{#7F7FFF} t_2 }$ al punto%% link %% ${\color{#7F7FFF} P_2(4,1) }$.
+Diversa è però la situazione per le [funzioni](Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-funzione) non [lineari](Funzioni%20elementari.md#^definizione-funzione-lineare): per esempio, nel caso della [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-funzione) ${\color{#FF7F7F} f(x) = \log_2 x - 1 }$, la _pendenza_ varia in base al punto in cui la misuriamo: la pendenza della tangente%% link %% ${\color{#7FFF7F} t_1 }$ al punto%% link %% ${\color{#7FFF7F} P_1(-1,1) }$ sarà sicuramente maggiore della pendenza della tangente%% link %% ${\color{#7F7FFF} t_2 }$ al punto%% link %% ${\color{#7F7FFF} P_2(4,1) }$.
 
 %% 
 fare grafico
@@ -23,7 +25,7 @@ fare grafico
 
 Possiamo quindi notare come il concetto di _pendenza_ è legato al singolo punto%% link %% del grafico%% link %%: a seconda del punto%% link %% cambia la pendenza, quindi parleremo di _pendenza in un punto_.
 
-Prendiamo ora la [funzione](content/Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-funzione) ${\color{#7FFFFF} f(x) = \ln(1 + 2x) }$ e supponiamo di voler determinare la pendenza di ${\color{#7FFFFF} f(x) }$ nel punto%% Link %% ${\color{#FFFF7F} P(0,0) }$.
+Prendiamo ora la [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-funzione) ${\color{#7FFFFF} f(x) = \ln(1 + 2x) }$ e supponiamo di voler determinare la pendenza di ${\color{#7FFFFF} f(x) }$ nel punto%% Link %% ${\color{#FFFF7F} P(0,0) }$.
 
 %% mettere grafico %%
 
@@ -34,34 +36,18 @@ mettere grafico
 %%
 
 Possiamo notare una cosa molto interessante: se ingrandiamo abbastanza troviamo che il grafico è praticamente rettilineo: si ha quindi che, ingrandendo il grafico di ${\color{#7FFFFF} f(x) }$
-
 -->
 
-> [!definizione] Definizione: tasso medio di variazione di $f$ nel passaggio da $x_1$ a $x_2$
+Se prendiamo il [quoziente di Newton](Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-quoziente-di-newton) e sfruttiamo la nozione di [limite](Matematica/Analisi%20matematica/Limiti/_index.md#^definizione-limite) per far tendere un punto%% link %% verso l'altro, in modo da diminuire quanto più possibile la distanza tra i due fino a farli combaciare in un unico punto%% link %%, la retta secante i due punti diventerà tangente a quell'unico punto e diventerà proprio il valore della pendenza in quel punto.
+
+> [!definizione]+ Definizione: pendenza di una funzione in un punto
 > 
-> Data una [funzione](content/Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e due punti distinti%% Link %% $x_1, x_2 \in \text{dom}(f)$, diciamo che il **tasso medio di variazione di $f$ nel passaggio da $x_1$ a $x_2$** è il quoziente%% link %%
+> Data una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e un punto%% link %% $x_0 \in \text{dom}(f)$, la **pendenza di $f$ in $x_0$**, indicata con $p_f(x_0)$, è il [limite](Matematica/Analisi%20matematica/Limiti/_index.md#^definizione-limite) per $x \to x_0$ del [quoziente di Newton](Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-quoziente-di-newton):
 > 
 > $$
-> \dfrac{\Delta f}{\Delta x} = \dfrac{f(x_2) - f(x_1)}{x_2 - x_1}
+> p_f(x_0) \overset{\text{def}}{=} \lim_{x \to x_0} \dfrac{\Delta f}{\Delta x} = \lim_{x \to x_0} \dfrac{f(x) - f(x_0)}{x - x_0}
 > $$
-^definizione-tasso-medio-di-variazione-di-f-nel-passaggio-da-x1-a-x2
-
-%% 
-Osservazione:
-Nel caso della [funzione lineare](Funzioni%20elementari.md#^definizione-funzione-lineare), il [tasso medio di variazione di $f$ nel passaggio da $x_1$ a $x_2$](content/Matematica/Analisi%20matematica/Derivate/_index.md#^definizione-tasso-medio-di-variazione-di-f-nel-passaggio-da-x1-a-x2) corrisponde proprio al [coefficiente angolare](Funzioni%20elementari.md#^definizione-coefficiente-angolare).
-%%
-
-%% 
-Per arrivare alla nozione di pendenza in un punto specifico, sfruttiamo la nozione di limite per far tendere un punto verso l'altro, in modo da diminuire quanto più possibile la distanza tra i due fino a farli combaciare in un unico punto
-%%
-
-%%
-La retta secante i due punti diventerà tangente a quell'unico punto, quindi possiamo definire la pendenza di $f$ in $x_1$ come la pendenza della tangente al grafico in $(x_1, f(x_1))$:
-
-$$
-p_f(x_1) \overset{\text{def}}{=} \lim_{x_2 \to x_1} \dfrac{\Delta f}{\Delta x}
-$$
-%%
+^definizione-pendenza-di-una-funzione-in-un-punto
 
 %%
 Esempio: $f(x)=\ln(1+2x)$
@@ -73,9 +59,55 @@ Abbiamo che:
 proviamo a calcolare la pendenza in $0$ (ammesso che esista!)
 
 $$
-\lim_{x_2 \to 0} \dfrac{\Delta f}{\Delta x} = \lim_{x_2 \to 0} \dfrac{f(x_2) - f(0)}{x_2 - 0} = \lim_{x_2 \to 0} \dfrac{\ln(1 + 2x_2)}{x_2}
+p_f(0) = \lim_{x_2 \to 0} \dfrac{\Delta f}{\Delta x} = \lim_{x_2 \to 0} \dfrac{f(x_2) - f(0)}{x_2 - 0} = \lim_{x_2 \to 0} \dfrac{\ln(1 + 2x_2)}{x_2}
 $$
+
+Provando a calcolare i valori vicini a $x_2 = 0$ possiamo notare come $p_f(0)$ tenda a 2. Ma è effettivamente uguale a 2? 
+
+Provando a ingrandire il grafico, possiamo notare come vicino a $O(0,0)$ il grafico di $f$ "diventa" il grafico di $y=2x$, quindi effettivamente $p_f(0)=2$. 
+
+In questo caso ingrandendo il grafico di $f$ vicino a $P(x_0, f(x_0))$ vediamo un grafico sempre più simile a una retta., per questo possiamo dire che è localmente dritta
 %%
+
+> [!esempio]- Esempio di pendenza non definita
+> 
+> Prendiamo la [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-funzione) del valore assoluto%% link %% di $x$, definità così:
+> 
+> $$
+> f(x) = |x| = \begin{cases}
+> x & \text{se } x \ge 0 \\
+> -x & \text{se } x < 0
+> \end{cases}
+> $$
+> 
+> Proviamo a calcolare la [pendenza](Matematica/Analisi%20matematica/Derivate/_index.md#^definizione-pendenza-di-una-funzione-in-un-punto) $p_f(0)$:
+> - Se proviamo a prendere il [limite destro](Matematica/Analisi%20matematica/Limiti/_index.md#^definizione-limite-destro) (cioè $x > 0$):
+> 	$$
+> 	\lim_{x \to x_0^+} \dfrac{\Delta f}{\Delta x} = 1
+> 	$$
+> - Se proviamo a prendere il [limite sinistro](Matematica/Analisi%20matematica/Limiti/_index.md#^definizione-limite-sinistro) (cioè $x < 0$):
+> 	$$
+> 	\lim_{x \to x_0^-} \dfrac{\Delta f}{\Delta x} = -1
+> 	$$
+> 
+> Dal momento che i due limiti laterali%% link %% differiscono e non sapremmo quale dei due scegliere, possiamo concludere che la [pendenza](Matematica/Analisi%20matematica/Derivate/_index.md#^definizione-pendenza-di-una-funzione-in-un-punto) in questo punto non è definita.
+^esempio-di-pendenza-non-definita
+
+> [!definizione]+ Definizione: funzione localmente dritta in un punto
+> 
+> Data una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e un punto%% link %% $x_0 \in \text{dom}(f)$, diciamo che **$f$ è localmente dritta in $x_0$** se è possibile definire la [pendenza](Matematica/Analisi%20matematica/Derivate/_index.md#^definizione-pendenza-di-una-funzione-in-un-punto) in $x_0$ (cioè $p_f(x_0)$).
+^definizione-funzione-localmente-dritta-in-un-punto
+
+> [!esempio]- Esempio di funzione non localmente dritta in un punto
+> 
+> [Riprendendo l'esempio della funzione $f(x) = |x|$](Matematica/Analisi%20matematica/Derivate/_index.md#^esempio-di-pendenza-non-definita), dato che la [pendenza](Matematica/Analisi%20matematica/Derivate/_index.md#^definizione-pendenza-di-una-funzione-in-un-punto) in $x_0$ non è definita, possiamo dire che $f$ **non** è [localmente dritta](Matematica/Analisi%20matematica/Derivate/_index.md#^definizione-funzione-localmente-dritta-in-un-punto) in $0$.
+
+> [!definizione]+ Definizione: retta tangente a una funzione in un punto
+> 
+> Data una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e un punto%% link %% $x_0 \in \text{dom}(f)$, diciamo che la **retta tangente a $f$ in $x_0$** è la retta passante%% link %% per il punto%% link %% $P(x_0, f(x_0))$ e con [pendenza](Matematica/Analisi%20matematica/Derivate/_index.md#^definizione-pendenza-di-una-funzione-in-un-punto) $p_f(x_0)$.
+^definizione-retta-tangente-a-una-funzione-in-un-punto
+
+## Derivabilità di una funzione in un punto
 
 > [!definizione]+ Definizione: derivabilità e derivata (prima) di una funzione in un punto
 > 
@@ -226,7 +258,50 @@ trasformare tutte in proposizioni da dimostrare, pagg. 243-245:
 ecc.
 %%
 
-# 1 - Differenziale
+<!--
+
+## Interpretazione cinematica della derivata
+
+Proviamo ora a dare un'interpretazione cinematica della [derivata di una funzione in un punto](content/Matematica/Analisi%20matematica/Derivate/_index.md#^definizione-derivabilita-e-derivata-prima-di-una-funzione-in-un-punto)%% spiegare cos'è la cinematica %%.
+
+Consideriamo un oggetto puntiforme che si muove di moto rettilineo. La sua posizione sulla retta del moto è misurata rispetto a un punto fissato, detto _origine_. A destra dell'origine la posizione sarà positiva, a sinistra negativa.
+
+La posizione del punto viene misurata a istanti diversi attraverso la funzione $s(t)$ che determina la posizione del punto al tempo $t$.
+
+Abbiamo il grafico dell'oggetto così:
+- $s(0)=1$
+- $s(3)=3$
+- $s(6) = -3$
+
+Quoziente di Newton = velocità media
+
+Derivata in un punto = velocità istantanea
+
+-->
+
+<!--
+
+## Interpretazione demografica della derivata
+
+Ora intrepretiamo la derivata dal punto di vista demografico come tasso di crescita di una popolazione.
+
+Funzione $N(t)$ è il numero di individui al tempo $t$ (con $N(t) \ge 0$ perché non può essere negativa una popolazione)
+
+Quoziente di Newton = tasso medio di crescita della popolazione
+Derivata in un punto = tasso istantaneo di crescita della popolazione in un punto
+
+- $N(0) = 1$
+- $N(10) = 2$
+- $N(20) = 1$
+- poi continua a diminuire fino a estinguersi
+
+stimare tasso di crescita in (20,1) = -1/6 milioni all'ano
+
+tabella riassuntiva delle varie interpretazioni con quoziente di Newton e derivata
+-->
+
+
+# 2 - Differenziale
 
 > [!definizione]+ Definizione: differenziale di una funzione
 > 
@@ -258,7 +333,7 @@ $$
 > - $f(x) = e^x \implies df(x) = f'(x)dx = e^xdx$
 > - $f(x) = \log x \implies df(x) = f'(x)dx = \dfrac{1}{x}dx$
 
-# 2 - Derivate laterali
+# 3 - Derivate laterali
 
 > [!definizione]+ Definizione: derivate laterali di una funzione
 > 
@@ -335,7 +410,7 @@ dimostrazione pag. 247 lancelotti
 > 
 > Quindi $f$ è [derivabile da destra](Matematica/Analisi%20matematica/Derivate/_index.md#^definizione-derivate-laterali-di-una-funzione) in $0$ solo se $q > 1$ e in tal caso $D^+f(0) = 0$.
 
-# 3 - Punti di non derivabilità
+# 4 - Punti di non derivabilità
 
 Introduciamo una classificazione per i punti di non derivabilità%% link %% di una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-funzione), ossia per i punti%% link %% in cui $f$ è [continua](Funzioni%20continue.md#^definizione-funzione-continua) ma non [derivabile](Matematica/Analisi%20matematica/Derivate/_index.md#^definizione-derivabilita-e-derivata-prima-di-una-funzione).
 
@@ -346,6 +421,10 @@ Introduciamo una classificazione per i punti di non derivabilità%% link %% di u
 
 %% 
 Osserviamo che per il teorema del legame fra la derivata e le derivate laterali $f$ è continua in $x_0$
+%%
+
+%% 
+riprendere l'esempio della pendenza di $f(x) = |x|$
 %%
 
 > [!esempio]- Esempio di punto angoloso per $\color{#7F7FFF} f(x) =|x|$
@@ -404,7 +483,7 @@ esempio 1.22 pag. 250 lancelotti
 osservazione 1.23 pag. 250-251 lancelotti
 %%
 
-# 4 - Algebra delle derivate
+# 5 - Algebra delle derivate
 
 > [!teorema]+ Teorema della derivata della somma
 > 
@@ -520,13 +599,13 @@ proposizione 1.37 pag. 259 lancelotti
 I teoremi 1.24, 1.28 e 1.34 valgono anche per le derivate laterali
 %%
 
-# 5 - Teoremi fondamentali del calcolo differenziale
+# 6 - Teoremi fondamentali del calcolo differenziale
 
 %% 
 definizione di "calcolo differenziale"
 %%
 
-## 5.1 - Teorema di Fermat
+## 6.1 - Teorema di Fermat
 
 > [!osservazione]+ Osservazione: comportamento di $\color{#7F7F7F} f$ nei punti di estremo locale
 > 
@@ -595,7 +674,7 @@ osservazione 2.5 pagg. 262-263 lancelotti
 osservazione 2.6 pag. 263 lancelotti
 %%
 
-## 5.2 - Teorema di Lagrange e sue conseguenze
+## 6.2 - Teorema di Lagrange e sue conseguenze
 
 > [!teorema]+ Teorema di Rolle
 > 
@@ -757,7 +836,11 @@ Abbiamo visto che se $f$ è una funzione costante%% link %% ed è [derivabile](M
 
 %% esercizio 2.24 pag. 273 lancelotti %%
 
-## 5.3 - Teoremi di De l'Hôpital
+%% 
+Teorema del legame tra la convessità e la monotonia della derivata, L2a
+%%
+
+## 6.3 - Teoremi di De l'Hôpital
 
 Questi teoremi%% link %% sono uno strumento molto potente per calcolare alcuni [limiti](Matematica/Analisi%20matematica/Limiti/_index.md#^definizione-limite) che sono [forme indeterminate algebriche del tipo $\dfrac{0}{0}$](Forme%20indeterminate.md#^forma-indeterminata-algebrica-del-tipo-0-su-0) o [$\dfrac{\infty}{\infty}$](Forme%20indeterminate.md#^definizione-forma-indeterminata-algebrica-del-tipo-infinito-su-infinito).
 
@@ -895,7 +978,7 @@ esempio 2-30 pagg- 275-276 lancelotti
 > 
 > Non possiamo quindi applicare il [teorema di De l'Hôpital della forma indeterminata algebrica del tipo $\dfrac{\infty}{\infty}$](Matematica/Analisi%20matematica/Derivate/_index.md#^teorema-di-de-l-hopital-della-forma-indeterminata-algebrica-del-tipo-infinito-su-infinito) perché non arriveremo mai a risolvere il [limite](Matematica/Analisi%20matematica/Limiti/_index.md#^definizione-limite), quindi meglio se tentiamo un altro metodo.
 
-### 5.3.1 - Conseguenze dei teoremi di De l'Hôpital
+### 6.3.1 - Conseguenze dei teoremi di De l'Hôpital
 
 > [!teorema]+ Teorema di derivabilità in un punto mediante il limite della derivata
 > 
@@ -951,9 +1034,9 @@ esempio 2.39 pag. 278-279 lancelotti
 esercizio 2.40 pag. 279 lancelotti
 %%
 
-> [!teorema] Teorema di discontinuità della derivata
+> [!teorema]+ Teorema di discontinuità della derivata
 > 
-> Dato un intervallo aperto%% link %% $I \subseteq \mathbb{R}$ e una [funzione derivabile](content/Matematica/Analisi%20matematica/Derivate/_index.md#^definizione-derivabilita-e-derivata-prima-di-una-funzione) $f \colon I \to \mathbb{R}$, la sua [derivata](content/Matematica/Analisi%20matematica/Derivate/_index.md#^definizione-derivabilita-e-derivata-prima-di-una-funzione) $f'$ non può presentare [punti di discontinuità eliminabile](Funzioni%20continue.md#^definizione-discontinuita-eliminabile) o [di prima specie](Funzioni%20continue.md#^definizione-discontinuita-di-prima-specie-o-salto), cioè se $f'$ è [discontinua](Funzioni%20continue.md#^definizione-funzione-continua) allora presenta solo [punti di discontinuità di seconda specie](Funzioni%20continue.md#^definizione-discontinuita-di-seconda-specie).
+> Dato un intervallo aperto%% link %% $I \subseteq \mathbb{R}$ e una [funzione derivabile](Matematica/Analisi%20matematica/Derivate/_index.md#^definizione-derivabilita-e-derivata-prima-di-una-funzione) $f \colon I \to \mathbb{R}$, la sua [derivata](Matematica/Analisi%20matematica/Derivate/_index.md#^definizione-derivabilita-e-derivata-prima-di-una-funzione) $f'$ non può presentare [punti di discontinuità eliminabile](Funzioni%20continue.md#^definizione-discontinuita-eliminabile) o [di prima specie](Funzioni%20continue.md#^definizione-discontinuita-di-prima-specie-o-salto), cioè se $f'$ è [discontinua](Funzioni%20continue.md#^definizione-funzione-continua) allora presenta solo [punti di discontinuità di seconda specie](Funzioni%20continue.md#^definizione-discontinuita-di-seconda-specie).
 > 
 > In particolare, se un punto%% link %% $x_0 \in I$ è [di discontinuità](Funzioni%20continue.md#^definizione-funzione-continua) di $f'$, allora non esistono i limiti laterali%% link %% $\displaystyle\lim_{x \to x_0^\pm} f'(x)$.
 
@@ -963,20 +1046,20 @@ esercizio 2.40 pag. 279 lancelotti
 La funzione $f$ dell'esempio 2.39 pag. 278.279 lancelotti è derivabile su R e 0 è un punto di discontinuità di seconda specie per $f'$
 %%
 
-> [!osservazione] Osservazione: riformulazione dei punti di non derivabilità con De l'Hôpital
+> [!osservazione]+ Osservazione: riformulazione dei punti di non derivabilità con De l'Hôpital
 > 
-> Grazie al [teorema di De l'Hôpital della forma indeterminata algebrica del tipo $\dfrac{0}{0}$](content/Matematica/Analisi%20matematica/Derivate/_index.md#^teorema-di-de-l-hopital-della-forma-indeterminata-algebrica-del-tipo-0-su-0) abbiamo un modo più semplice per classificare i punti di non derivabilità%% link %%.
+> Grazie al [teorema di De l'Hôpital della forma indeterminata algebrica del tipo $\dfrac{0}{0}$](Matematica/Analisi%20matematica/Derivate/_index.md#^teorema-di-de-l-hopital-della-forma-indeterminata-algebrica-del-tipo-0-su-0) abbiamo un modo più semplice per classificare i punti di non derivabilità%% link %%.
 > 
-> Infatti, data una [funzione](content/Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e un punto%% link %% $x_0$ [interno](Topologia%20dei%20reali.md#^definizione-punto-interno) a $\text{dom}(f)$, se $f$ è [continua](Funzioni%20continue.md#^definizione-funzione-continua) in $x_0$ e [derivabile](content/Matematica/Analisi%20matematica/Derivate/_index.md#^definizione-derivabilita-di-una-funzione-in-un-sottoinsieme-del-dominio) in tutto un [intorno](Topologia%20dei%20reali.md#^definizione-intorno-di-un-punto) $I \subseteq \text{dom}(f)$ escluso $x_0$ stesso in cui non sappiamo se $f$ è [derivabile](content/Matematica/Analisi%20matematica/Derivate/_index.md#^definizione-derivabilita-e-derivata-prima-di-una-funzione-in-un-punto), allora:
-> - Se i limiti laterali%% link %% della [derivata](content/Matematica/Analisi%20matematica/Derivate/_index.md#^definizione-derivabilita-e-derivata-prima-di-una-funzione) $\displaystyle\lim_{x \to x_0^\pm} f'(x)$ esistono finiti%% link %% e diversi fra loro, oppure se uno è finito%% link %% e l'altro è infinito%% link %%, allora $x_0$ è un [punto angoloso](content/Matematica/Analisi%20matematica/Derivate/_index.md#^definizione-punto-angoloso) per $f$.
-> - Se i limiti laterali%% link %% della [derivata](content/Matematica/Analisi%20matematica/Derivate/_index.md#^definizione-derivabilita-e-derivata-prima-di-una-funzione) $\displaystyle\lim_{x \to x_0^\pm} f'(x)$ esistono infiniti%% link %% e diversi fra loro, allora $x_0$ è una [cuspide](content/Matematica/Analisi%20matematica/Derivate/_index.md#^definizione-cuspide) per $f$.
-> - Se i limiti laterali%% link %% della [derivata](content/Matematica/Analisi%20matematica/Derivate/_index.md#^definizione-derivabilita-e-derivata-prima-di-una-funzione) $\displaystyle\lim_{x \to x_0^\pm} f'(x)$ esistono infiniti%% link %% e uguali, allora $x_0$ è un [punto di flesso a tangente verticale](content/Matematica/Analisi%20matematica/Derivate/_index.md#^definizione-punto-di-flesso-a-tangente-verticale) per $f$.
+> Infatti, data una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e un punto%% link %% $x_0$ [interno](Topologia%20dei%20reali.md#^definizione-punto-interno) a $\text{dom}(f)$, se $f$ è [continua](Funzioni%20continue.md#^definizione-funzione-continua) in $x_0$ e [derivabile](Matematica/Analisi%20matematica/Derivate/_index.md#^definizione-derivabilita-di-una-funzione-in-un-sottoinsieme-del-dominio) in tutto un [intorno](Topologia%20dei%20reali.md#^definizione-intorno-di-un-punto) $I \subseteq \text{dom}(f)$ escluso $x_0$ stesso in cui non sappiamo se $f$ è [derivabile](Matematica/Analisi%20matematica/Derivate/_index.md#^definizione-derivabilita-e-derivata-prima-di-una-funzione-in-un-punto), allora:
+> - Se i limiti laterali%% link %% della [derivata](Matematica/Analisi%20matematica/Derivate/_index.md#^definizione-derivabilita-e-derivata-prima-di-una-funzione) $\displaystyle\lim_{x \to x_0^\pm} f'(x)$ esistono finiti%% link %% e diversi fra loro, oppure se uno è finito%% link %% e l'altro è infinito%% link %%, allora $x_0$ è un [punto angoloso](Matematica/Analisi%20matematica/Derivate/_index.md#^definizione-punto-angoloso) per $f$.
+> - Se i limiti laterali%% link %% della [derivata](Matematica/Analisi%20matematica/Derivate/_index.md#^definizione-derivabilita-e-derivata-prima-di-una-funzione) $\displaystyle\lim_{x \to x_0^\pm} f'(x)$ esistono infiniti%% link %% e diversi fra loro, allora $x_0$ è una [cuspide](Matematica/Analisi%20matematica/Derivate/_index.md#^definizione-cuspide) per $f$.
+> - Se i limiti laterali%% link %% della [derivata](Matematica/Analisi%20matematica/Derivate/_index.md#^definizione-derivabilita-e-derivata-prima-di-una-funzione) $\displaystyle\lim_{x \to x_0^\pm} f'(x)$ esistono infiniti%% link %% e uguali, allora $x_0$ è un [punto di flesso a tangente verticale](Matematica/Analisi%20matematica/Derivate/_index.md#^definizione-punto-di-flesso-a-tangente-verticale) per $f$.
 > 
 > |                                                                                  | $\displaystyle\lim_{x \to x_0^+} f'(x) = \underbrace{l}_{\ne l'} \in \mathbb{R}$                                            | $\displaystyle\lim_{x \to x_0^+} f'(x) = - \infty$                                                                                                                      | $\displaystyle\lim_{x \to x_0^+} f'(x) = + \infty$                                                                                                                      |
 > | -------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-> | $\displaystyle\lim_{x \to x_0^-} f'(x) = \underbrace{l'}_{\ne l} \in \mathbb{R}$ | $x_0$ è un [punto angoloso](content/Matematica/Analisi%20matematica/Derivate/_index.md#^definizione-punto-angoloso) per $f$ | $x_0$ è un [punto angoloso](content/Matematica/Analisi%20matematica/Derivate/_index.md#^definizione-punto-angoloso) per $f$                                             | $x_0$ è un [punto angoloso](content/Matematica/Analisi%20matematica/Derivate/_index.md#^definizione-punto-angoloso) per $f$                                             |
-> | $\displaystyle\lim_{x \to x_0^-} f'(x) = - \infty$                               | $x_0$ è un [punto angoloso](content/Matematica/Analisi%20matematica/Derivate/_index.md#^definizione-punto-angoloso) per $f$ | $x_0$ è un [punto di flesso a tangente verticale](content/Matematica/Analisi%20matematica/Derivate/_index.md#^definizione-punto-di-flesso-a-tangente-verticale) per $f$ | $x_0$ è una [cuspide](content/Matematica/Analisi%20matematica/Derivate/_index.md#^definizione-cuspide) per $f$                                                          |
-> | $\displaystyle\lim_{x \to x_0^-} f'(x) = + \infty$                               | $x_0$ è un [punto angoloso](content/Matematica/Analisi%20matematica/Derivate/_index.md#^definizione-punto-angoloso) per $f$ | $x_0$ è una [cuspide](content/Matematica/Analisi%20matematica/Derivate/_index.md#^definizione-cuspide) per $f$                                                          | $x_0$ è un [punto di flesso a tangente verticale](content/Matematica/Analisi%20matematica/Derivate/_index.md#^definizione-punto-di-flesso-a-tangente-verticale) per $f$ |
+> | $\displaystyle\lim_{x \to x_0^-} f'(x) = \underbrace{l'}_{\ne l} \in \mathbb{R}$ | $x_0$ è un [punto angoloso](Matematica/Analisi%20matematica/Derivate/_index.md#^definizione-punto-angoloso) per $f$ | $x_0$ è un [punto angoloso](Matematica/Analisi%20matematica/Derivate/_index.md#^definizione-punto-angoloso) per $f$                                             | $x_0$ è un [punto angoloso](Matematica/Analisi%20matematica/Derivate/_index.md#^definizione-punto-angoloso) per $f$                                             |
+> | $\displaystyle\lim_{x \to x_0^-} f'(x) = - \infty$                               | $x_0$ è un [punto angoloso](Matematica/Analisi%20matematica/Derivate/_index.md#^definizione-punto-angoloso) per $f$ | $x_0$ è un [punto di flesso a tangente verticale](Matematica/Analisi%20matematica/Derivate/_index.md#^definizione-punto-di-flesso-a-tangente-verticale) per $f$ | $x_0$ è una [cuspide](Matematica/Analisi%20matematica/Derivate/_index.md#^definizione-cuspide) per $f$                                                          |
+> | $\displaystyle\lim_{x \to x_0^-} f'(x) = + \infty$                               | $x_0$ è un [punto angoloso](Matematica/Analisi%20matematica/Derivate/_index.md#^definizione-punto-angoloso) per $f$ | $x_0$ è una [cuspide](Matematica/Analisi%20matematica/Derivate/_index.md#^definizione-cuspide) per $f$                                                          | $x_0$ è un [punto di flesso a tangente verticale](Matematica/Analisi%20matematica/Derivate/_index.md#^definizione-punto-di-flesso-a-tangente-verticale) per $f$ |
 
 %% 
 Dimostrazione lasciata per esercizio
@@ -990,6 +1073,8 @@ Dimostrazione lasciata per esercizio
 > 	- Corso di _Analisi Matematica - canale C_, A.A. 2020-21 ([pagina Moodle](https://informatica.i-learn.unito.it/course/view.php?id=2075)):
 > 		- Prof. Barutello Vivina Laura, videolezioni:
 > 			- [_L1a_](https://informatica.i-learn.unito.it/local/streamingfilemanager/file.php/informatica.i-learn.unito.it/2075/L1a.mp4), [_L1b_](https://informatica.i-learn.unito.it/local/streamingfilemanager/file.php/informatica.i-learn.unito.it/2075/L1b.mp4).
+> 			- [_L2a_](https://informatica.i-learn.unito.it/local/streamingfilemanager/file.php/informatica.i-learn.unito.it/2075/L2a.mp4), [_L2b_](https://informatica.i-learn.unito.it/local/streamingfilemanager/file.php/informatica.i-learn.unito.it/2075/L2b.mp4).
+> 			- [_L3a_](https://informatica.i-learn.unito.it/local/streamingfilemanager/file.php/informatica.i-learn.unito.it/2075/L3a.mp4).
 > - 📚 Sergio Lancelotti, _Lezioni di Analisi Matematica I_, Celid, 2020 (ISBN: `978-8867891979`):
 > 	- Capitolo 4 - _Calcolo differenziale per funzioni di una variabile_:
 > 		- 1 - _Derivata di una funzione_:

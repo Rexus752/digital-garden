@@ -23,6 +23,13 @@ title: Funzioni elementari
 > con $m, q \in \mathbb{R}$.
 ^definizione-funzione-lineare
 
+%% 
+Osservazione:
+Nel caso della [funzione lineare](Funzioni%20elementari.md#^definizione-funzione-lineare), il quoziente di Newton corrisponde proprio al [coefficiente angolare](Funzioni%20elementari.md#^definizione-coefficiente-angolare).
+
+citare questa osservazione anche negli esempi e osservazioni successivi
+%%
+
 > [!esempio]- Esempio: funzione lineare passante per un punto assegnato e con pendenza assegnata
 > 
 > Determiniamo l'unica funzione lineare $f$ di pendenza $m_0 \in \mathbb{R}$ assegnata e il cui grafico passa per un punto $(x_0, y_0)$ assegnato.
@@ -79,7 +86,7 @@ title: Funzioni elementari
 > \end{align*}
 > $$
 
-> [!osservazione] Osservazione: $m$ indica la pendenza di una funzione lineare
+> [!osservazione]+ Osservazione: $\color{#7F7F7F} m$ indica la pendenza di una funzione lineare
 > 
 > Analizziamo il comportamento di $f$ al variare di $m$:
 > 
@@ -94,28 +101,33 @@ title: Funzioni elementari
 > Si può quindi evincere che la pendenza della retta dipende dal coefficiente $m$ e, in particolare, quando $m = 0$ la retta è orizzontale e parallela al piano delle ascisse.
 ^osservazione-m-indica-la-pendenza-di-una-funzione-lineare
 
-> [!osservazione] Osservazione: funzione lineare rappresenta (quasi) ogni retta del piano cartesiano
+Proprio perché [$m$ indica la pendenza di una funzione lineare](Funzioni%20elementari.md#^osservazione-m-indica-la-pendenza-di-una-funzione-lineare), viene spesso chiamato _coefficiente angolare_%% perchè indica l'angolo ??? %%.
+
+> [!definizione]+ Definizione: coefficiente angolare
+> 
+> In una [funzione lineare](Funzioni%20elementari.md#^definizione-funzione-lineare) $y = mx + q$ il coefficiente $m$ viene detto **coefficiente angolare** o **pendenza della retta** o **coefficiente di proporzionalità tra la variazione di $f$ e quella di $x$**.
+^definizione-coefficiente-angolare
+
+> [!osservazione]+ Osservazione: funzione lineare rappresenta (quasi) ogni retta del piano cartesiano
 > 
 > Ogni retta del piano cartesiano può essere rappresentata da una [funzione lineare](Funzioni%20elementari.md#^definizione-funzione-lineare), eccetto una retta particolare: quella verticale, cioè la retta che ha pendenza infinita. Dal momento che, per avere pendenza infinita, $m$ dovrebbe essere uguale a $\pm \infty$ ma le [funzioni lineari](Funzioni%20elementari.md#^definizione-funzione-lineare) accettano solo valori reali%% link %% di $m$ (perché $m \in \mathbb{R}$), con le [funzioni lineari](Funzioni%20elementari.md#^definizione-funzione-lineare) non si possono rappresentare le rette verticali.
 
-> [!osservazione] Osservazione: $q$ indica la distanza dall'origine
+> [!osservazione]+ Osservazione: $\color{#7F7F7F} q$ indica la distanza dall'origine
 > 
 > Analizziamo ora il comportamento di $f$ al variare di $q$. Possiamo osservare che una [funzione lineare](Funzioni%20elementari.md#^definizione-funzione-lineare) interseca l'asse delle ordinate%% link %% sempre nel punto $(0,q)$, quindi quando $q = 0$ la retta passa per l'origine%% link %% $O(0,0)$. 
 
-%% 
-mettere variazioni e quoziente di Newton qua
-%%
-
-> [!teorema] Teorema della pendenza costante della funzione lineare
+> [!teorema]+ Teorema della pendenza costante della funzione lineare
 > 
-> Data una [funzione lineare](Funzioni%20elementari.md#^definizione-funzione-lineare) $f(x) = mx+q$ con $x \in \mathbb{R}$ e $m,q \in \mathbb{R}$ fissati, allora per ogni $x_1, x_2 \in \mathbb{R}$ si ha che il quoziente di Newton%% link %% è sempre pari a $m$:
+> Data una [funzione lineare](Funzioni%20elementari.md#^definizione-funzione-lineare) $f(x) = mx+q$ con $x \in \mathbb{R}$ e $m,q \in \mathbb{R}$ fissati, allora per ogni coppia di punti%% link %% distinti%% link %% $x_1, x_2 \in \mathbb{R}$ si ha che il [quoziente di Newton](Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-quoziente-di-newton) è sempre pari a $m$:
 > 
 > $$
 > \forall x_1, x_2 \in \mathbb{R} . \left( x_1 \ne x_2 \implies \dfrac{\Delta f}{\Delta x} = \dfrac{f(x_2) - f(x_1)}{x_2 - x_1} = m \right) 
 > $$
+> 
+> Cioè, in una [funzione lineare](Funzioni%20elementari.md#^definizione-funzione-lineare), il [coefficiente angolare $m$](Funzioni%20elementari.md#^definizione-coefficiente-angolare) (che [rappresenta la pendenza](Funzioni%20elementari.md#^osservazione-m-indica-la-pendenza-di-una-funzione-lineare)) è costante%% link %%.
 ^teorema-della-pendenza-costante-della-funzione-lineare
 
-> [!dimostrazione] Dimostrazione del teorema della pendenza costante della funzione lineare
+> [!dimostrazione]- Dimostrazione del teorema della pendenza costante della funzione lineare
 > 
 > Dimostriamo il [teorema della pendenza costante della funzione lineare](Funzioni%20elementari.md#^teorema-della-pendenza-costante-della-funzione-lineare).
 > 
@@ -132,11 +144,6 @@ mettere variazioni e quoziente di Newton qua
 > $$
 > 
 > $\blacksquare$
-
-> [!definizione] Definizione: coefficiente angolare
-> 
-> In una [funzione lineare](Funzioni%20elementari.md#^definizione-funzione-lineare) $y = mx + q$ il coefficiente $m$ viene detto **coefficiente angolare** o **pendenza della retta** o **coefficiente di proporzionalità tra la variazione di $f$ e quella di $x$**.
-^definizione-coefficiente-angolare
 
 # 2 - Funzioni potenza
 
@@ -274,10 +281,12 @@ Fare da 2.4 in poi del libro di Analisi
 > - 🏫 Corso di Laurea in Informatica (`L-31 R`) presso l'Università di Torino:
 > 	- Corso di _Analisi Matematica - canale C_, A.A. 2020-21 ([pagina Moodle](https://informatica.i-learn.unito.it/course/view.php?id=2075)):
 > 		- Prof. Barutello Vivina Laura, videolezioni:
-> 			- [_L1a_](https://informatica.i-learn.unito.it/local/streamingfilemanager/file.php/informatica.i-learn.unito.it/2075/L1a.mp4).
+> 			- [_L1a_](https://informatica.i-learn.unito.it/local/streamingfilemanager/file.php/informatica.i-learn.unito.it/2075/L1a.mp4), [_L1b_](https://informatica.i-learn.unito.it/local/streamingfilemanager/file.php/informatica.i-learn.unito.it/2075/L1b.mp4).
 > - 📚 Walter Dambrosio, _Analisi matematica - Fare e comprendere_, Zanichelli, 2018 (ISBN: `9788808220745`):
 > 	- Parte I - _I concetti dell'analisi matematica_:
 > 		- Capitolo 1 - _Funzioni e modelli_:
->	 		- 2 - _Grafici delle funzioni elementari_:
->	 			- 2.1 - _Funzioni lineari e funzioni potenza_.
->	 			- 2.2 - _Funzioni esponenziali e logaritmiche_.
+> 			- 1 - _Funzioni e grafici_:
+> 				- 1.1 - _Funzioni e loro rappresentazioni_.
+> 			- 2 - _Grafici delle funzioni elementari_:
+> 				- 2.1 - _Funzioni lineari e funzioni potenza_.
+> 				- 2.2 - _Funzioni esponenziali e logaritmiche_.

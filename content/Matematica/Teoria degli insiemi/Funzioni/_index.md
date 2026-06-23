@@ -475,7 +475,9 @@ rng(f|C) = f [C].
 ![](Pasted%20image%2020250112010435.png)
 %%
 
-## 3.5 - Funzioni limitate
+# 4 - Caratteristiche di funzioni
+
+## 4.1 - Funzioni limitate
 
 > [!definizione]+ Definizione: funzioni limitate
 > 
@@ -498,7 +500,7 @@ rng(f|C) = f [C].
 Esempio di funzioni limitate dal punto di vista grafico (definizione 1.1.3 a pagina 8 del libro di Analisi)
 %%
 
-## 3.6 - Funzioni pari e dispari
+## 4.2 - Funzioni pari e dispari
 
 > [!definizione]+ Definizione: funzioni pari e dispari
 > 
@@ -531,7 +533,7 @@ Esempio di funzioni limitate dal punto di vista grafico (definizione 1.1.3 a pag
 
 %% esempio definizione 1.1.5 pagina 11 del libro di Analisi %%
 
-## 3.7 - Funzioni periodiche
+## 4.3 - Funzioni periodiche
 
 > [!definizione]+ Definizione: funzione periodica
 > 
@@ -551,9 +553,38 @@ Esempio di funzioni limitate dal punto di vista grafico (definizione 1.1.3 a pag
 > 
 > È semplice osservare che il grafico%% link grafico grafico %% di una [funzione periodica](Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-funzione-periodica) $f$ di periodo $T$ è invariante per traslazioni orizzontali di ampiezza $T$: questo significa che è sufficiente tracciare il grafico di $f$ su un intervallo di lunghezza $T$ e ripeterlo infinite volte a destra e a sinistra dell'intervallo considerato.
 
-# 4 - Iniettività, suriettività e biettività
+## 4.4 - Variazione e pendenza
 
-## 4.1 - Iniettività
+> [!definizione]+ Definizione: variazione di $\color{#FF7FFF} x$ nel passaggio da $\color{#FF7FFF} x_1$ a $\color{#FF7FFF} x_2$
+> 
+> Data una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e due punti%% Link %% $x_1, x_2 \in \text{dom}(f)$, chiamiamo **variazione (o incremento) di $x$ nel passaggio da $x_1$ a $x_2$** la loro differenza%% link %%, denotata con $\Delta x$:
+> 
+> $$
+> \Delta x \overset{\text{def}}{=} x_2 - x_1
+> $$
+^definizione-variazione-di-x-nel-passaggio-da-x1-a-x2
+
+> [!definizione]+ Definizione: variazione di $\color{#FF7FFF} f$ nel passaggio da $\color{#FF7FFF} x_1$ a $\color{#FF7FFF} x_2$
+> 
+> Data una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e due punti%% Link %% $x_1, x_2 \in \text{dom}(f)$, chiamiamo **variazione (o incremento) di $f$ nel passaggio da $x_1$ a $x_2$** la differenza%% link %% delle loro immagini%% link %% $f(x_2)$ e $f(x_1)$, denotata con $\Delta f$:
+> 
+> $$
+> \Delta f \overset{\text{def}}{=} f(x_2) - f(x_1)
+> $$
+^definizione-variazione-di-f-nel-passaggio-da-x1-a-x2
+
+> [!definizione]+ Definizione: quoziente di Newton
+> 
+> Data una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e due punti distinti%% Link %% $x_1, x_2 \in \text{dom}(f)$, diciamo che il **quoziente di Newton** (o **tasso medio di variazione di $f$ nel passaggio da $x_1$ a $x_2$**) è il quoziente%% link %% tra la [variazione di $x$](Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-variazione-di-x-nel-passaggio-da-x1-a-x2) e la [variazione di $f$](Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-variazione-di-f-nel-passaggio-da-x1-a-x2):
+> 
+> $$
+> \dfrac{\Delta f}{\Delta x} = \dfrac{f(x_2) - f(x_1)}{x_2 - x_1}
+> $$
+^definizione-quoziente-di-newton
+
+# 5 - Iniettività, suriettività e biettività
+
+## 5.1 - Iniettività
 
 > [!definizione]+ Definizione: iniettività
 > 
@@ -586,7 +617,7 @@ f : A \to B è tale che ogni punto di B è raggiunto al più da una freccia.
 > [!osservazione]+ Osservazione: rendere una funzione iniettiva restringendo il dominio
 > Una funzione $f\colon A\to B$ non iniettiva può diventare iniettiva [restringendo](Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-funzione-restrizione) opportunamente il dominio. Per esempio, la funzione $f(x)=x^2$ che non è iniettiva sul dominio $\mathbb{R}$, può diventarlo se viene ristretto il dominio ai numeri reali non-negativi. Infatti, per ogni coppia di due numeri reali non-negativi distinti $x_1$ e $x_2$, si avrà sicuramente $x_1^2 \ne x_2^2$.
 
-## 4.2 - Suriettività
+## 5.2 - Suriettività
 
 > [!definizione]+ Definizione: suriettività
 > Una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-funzione) $f\colon A\to B$ si dice che è _**suriettiva**_ o che è una _**suriezione**_ se ogni elemento del codominio è immagine di almeno un elemento del dominio:
@@ -623,7 +654,7 @@ f : A \to B è tale che ogni punto di B è raggiunto almeno da una freccia.
 > $$
 > In questo caso, infatti, si ha che non ci sono elementi del codominio senza una controimmagine in $A$.
 
-## 4.3 - Biettività
+## 5.3 - Biettività
 
 > [!definizione]+ Definizione: biettività
 > 
@@ -668,7 +699,7 @@ f -1(b) contiene al più un elemento per ogni b \in B, ed è una
 suriezione se e solo se f -1(b) \ne \emptyset per ogni b \in B
 %%
 
-## 4.4 - Relazioni con la cardinalità
+## 5.4 - Relazioni con la cardinalità
 
 > [!proposizione]+ Proposizione: iniettività, suriettività e biettività dipendono dalla cardinalità
 > Data una funzione $f\colon A\to B$, la sua iniettività, suriettività o biettività dipendono dalla sua cardinalità:
@@ -687,7 +718,7 @@ suriezione se e solo se f -1(b) \ne \emptyset per ogni b \in B
 > > $\blacksquare$
 ^proposizione-iniettivita-suriettivita-e-biettivita-dipendono-dalla-cardinalita
 
-# 5 - Composizione di funzioni
+# 6 - Composizione di funzioni
 
 > [!definizione]+ Definizione: composizione di due funzioni
 > Date due [funzioni](Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-funzione) $f\colon A\to B$ e $g\colon B \to C$, la **composizione** di $f$ e $g$, denotata con "$g \circ f$", è la funzione:
@@ -797,7 +828,7 @@ Osservazione 1.1.12 di pagina 14 del libro di Analisi, mettere il grafico a cent
 > 
 > Osserviamo quindi il motivo per cui, nella [definizione di _funzione composta_](Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-composizione-di-due-funzioni), viene richiesto che il [codominio](Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-funzione) di $f$ debba coincidere con il dominio di $g$.
 
-# 6 - Funzioni inverse
+# 7 - Funzioni inverse
 
 I valori della temperatura in gradi Celsius ($C$) e in Kelvin ($K$) sono legati dalla relazione
 
@@ -852,9 +883,9 @@ esempi:
 - 1.1.17 pagina 18 libro di Analisi
 %%
 
-# 7 - Altre caratteristiche sulle funzioni
+# 8 - Altre caratteristiche sulle funzioni
 
-## 7.1 - Funzione identicamente nulla
+## 8.1 - Funzione identicamente nulla
 
 > [!definizione]+ Definizione: funzione identicamente nulla
 > 
