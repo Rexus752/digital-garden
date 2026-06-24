@@ -8,7 +8,87 @@ title: Limiti
 > 
 > Lo stato di questa nota è al momento: 🔴 <font color="#FF7F7F">_Bozza_</font>.
 
+%% 
+in realtà è **Calcolo infinitesimale**
+%%
+
 ---
+
+%%
+Parlando di pendenza di f nel punto c, abbiamo
+
+$$
+\lim_{\Delta x \to 0} \dfrac{f(c + \Delta x) - f(c)}{\Delta x}
+$$
+
+e se questo oggetto esiste finito allora è $f'(c)$.
+
+Per esempio, $f(x) = 4x^2$ con $c = 1$, abbiamo che
+$$
+f'(1) = \lim_{\Delta x \to 0} (8 + 4\Delta x) = 0
+$$
+
+Con questa scrittura vogliamo indicare che i valori di $8 + 4\Delta x$ si avvicinano a $8$ quando quello di $\Delta x$ si avvicina a $0$.
+
+Però ora ci chiediamo: quanto piccolo deve essere $\Delta x$ affinché $8 + 4\Delta x$ si trovi a una distanza da $8$ inferiore (per esempio) a $10^{-2}$ (cioè al massimo $8 \pm 0.01$)?
+
+Calcoliamo:
+
+$$
+d(8 + 4\Delta x, 8) < 10^{-2} \iff |4\Delta x| < 10^{-2} \iff |\Delta x| < 0.04
+$$
+
+Quindi
+
+$$
+\Delta x \in I_{0.04}(0) \implies 8+4\Delta x \in I_{0.01}(8)
+$$
+
+Invece di fissare $10^{-2}$ come soglia, potevamo prendere un qualsiasi numero $\varepsilon > 0$ piccolo a piacere e chiedere: quanto vicino a $0$ devo prendere $\Delta x$ affinché $8 + 4\Delta x$ sia a una distanza da $8$ inferiore a $\varepsilon$?
+
+$$
+d(8 + 4\Delta x, 8) < \varepsilon \iff |4\Delta x| < \varepsilon \iff |\Delta x| < \dfrac{\varepsilon}{4}
+$$
+
+Conclusione:
+
+$$
+\forall \epsilon > 0 . \left( \Delta x \in I_{\dfrac{\varepsilon}{4}}(0) \implies 8 + 4\Delta x \in I_{\varepsilon}(8) \right)
+$$
+
+Attenzione: l'ampiezza dell'intorno in cui devo prendere $\Delta x$ dipende da "quanto vicino a $8$" voglio avere $8 + 4 \Delta x$.
+
+Formalizzando, abbiamo che $\lim_{\Delta x \to 0} (8 + 4 \Delta x) = 8$ significa che, per ogni $\varepsilon > 0$ esiste un $\delta$ (in questo caso uguale a $\dfrac{\varepsilon}{4}$) tale che se $\Delta x \in I_\delta(0)$ allora $8 + 4\Delta x \in I_\varepsilon(8)$.
+
+Questa è la definizione di limite finito al finito.
+
+[!definizione] Definizione: limite finito al finito
+
+Data una [funzione](content/Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-funzione) $f \colon I_r(c) \setminus \{ c \} \to \mathbb{R}$ per qualche $r > 0$, si dice che $f$ ammette limite finito $l$ per $x$ che tende a $c$ e si scrive
+
+$$
+\lim_{x \to c} f(x) = l
+$$
+
+se
+
+$$
+\forall \varepsilon > 0, \exists \delta > 0 . \left( x \in I_\delta(c) \setminus \{ c \} \implies f(x) \in I_\varepsilon(l) \right) 
+$$
+
+Osservazioni:
+1. Gli intorni possono essere sostituiti dalla distanza:
+	$$
+	\forall \varepsilon > 0, \exists \delta > 0 . \left( 0 < |x - c| < \delta \implies |f(x) - l| < \varepsilon  \right) 
+	$$
+2. Il valore di $\delta$ dipende da $\varepsilon$, motivo per cui alcuni usano la notazione $\delta(\varepsilon)$ per indicare che $\delta$ è in funzione di $\varepsilon$
+3. Il limite per $x \to c$ non prescrive il comportamento della funzione in $x = c$, cioè non è necessario che la funzione sia definita anche in $c$.
+	Esempio:
+	- Una funzione non definita in $c$
+	- Una funzione per cui $f(x) = l$
+	- Una funzione per cui $f(x) \ne l$
+	hanno tutte limite uguale a $l$!
+%%
 
 Introduciamo quindi una delle nozioni più importanti dell'analisi matematica, ossia quella di [_limite_](Matematica/Analisi%20matematica/Limiti/_index.md#^definizione-limite). È alla base di altre nozioni fondamentali, quali ad esempio quella di _derivata_%% link %% e di _integrale_%% link %%. Prima di vedere la definizione, introduciamo questo concetto attraverso alcuni esempi che ci permettono di capire il suo significato.
 
@@ -843,6 +923,10 @@ Osservazioni 3.28 e 3.29 pag. 172 lancelotti
 
 > [!fonti]+ Fonti
 > 
+> - 🏫 Corso di Laurea in Informatica (`L-31 R`) presso l'Università di Torino:
+> 	- Corso di _Analisi Matematica - canale C_, A.A. 2020-21 ([pagina Moodle](https://informatica.i-learn.unito.it/course/view.php?id=2075)):
+> 		- Prof. Barutello Vivina Laura, videolezioni:
+> 			- [_L6b_](https://informatica.i-learn.unito.it/local/streamingfilemanager/file.php/informatica.i-learn.unito.it/2075/L6b.mp4).
 > - 📚 Sergio Lancelotti, _Lezioni di Analisi Matematica I_, Celid, 2020 (ISBN: `978-8867891979`):
 > 	- Capitolo 3 - _Limiti e continuità_:
 > 		- 2 - _Limiti di funzioni_:

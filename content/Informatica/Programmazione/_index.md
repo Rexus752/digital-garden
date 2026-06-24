@@ -26,7 +26,7 @@ I linguaggi di programmazione nascono proprio per colmare questo divario: permet
 
 > [!definizione]+ Definizione: programmazione
 > 
-> La **programmazione** è l'attività di scrivere [istruzioni](Informatica/_index.md#^definizione-istruzione) in un [linguaggio di programmazione](Programmazione.md#^definizione-linguaggio-di-programmazione) per far eseguire a un [computer](Informatica/_index.md#^definizione-computer) un determinato compito.
+> La **programmazione** è l'attività di scrivere [istruzioni](Informatica/_index.md#^definizione-istruzione) in un [linguaggio di programmazione](content/Informatica/Programmazione/_index.md#^definizione-linguaggio-di-programmazione) per far eseguire a un [computer](Informatica/_index.md#^definizione-computer) un determinato compito.
 ^definizione-programmazione
 
 %%
@@ -35,7 +35,7 @@ Non è solo scrivere codice — è prima di tutto **risolvere un problema**: cap
 
 > [!definizione]+ Definizione: linguaggio di programmazione
 > 
-> Un **linguaggio di programmazione** è un insieme di regole e simboli che permette a un essere umano di scrivere [istruzioni](Informatica/_index.md#^definizione-istruzioni) comprensibili a un [computer](Informatica/_index.md#^definizione-computer).
+> Un **linguaggio di programmazione** è un insieme di regole e simboli che permette a un essere umano di scrivere [istruzioni](Informatica/_index.md#^definizione-istruzione) comprensibili a un [computer](Informatica/_index.md#^definizione-computer).
 ^definizione-linguaggio-di-programmazione
 
 %% 

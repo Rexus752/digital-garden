@@ -8,6 +8,10 @@ title: Derivate
 > 
 > Lo stato di questa nota è al momento: 🔴 <font color="#FF7F7F">_Bozza_</font>.
 
+%% 
+in realtà è **Calcolo differenziale**
+%%
+
 ---
 
 Proviamo a introdurre il concetto di _derivata_%% link %%, uno dei concetti fondamentali dell'analisi matematica%% link %%, partendo da un concetto molto semplice: la _pendenza_ di un grafico%% link %%.

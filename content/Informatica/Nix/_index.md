@@ -49,12 +49,12 @@ Ecco perché [Nix](Informatica/Nix/_index.md#^definizione-package-manager-nix) �
 > Una **derivazione** è racchiusa in una cartella il cui nome è del formato
 > 
 > ```
-> <hash>-<nome>
+> hash-nome
 > ```
 > 
 > dove:
-> - **`<hash>`** è una stringa che identifica univocamente la [derivazione](Informatica/Nix/_index.md#^definizione-derivazione) e
-> - **`<nome>`** è il nome della [derivazione](Informatica/Nix/_index.md#^definizione-derivazione).
+> - **`hash`** è una stringa che identifica univocamente la [derivazione](Informatica/Nix/_index.md#^definizione-derivazione) e
+> - **`nome`** è il nome della [derivazione](Informatica/Nix/_index.md#^definizione-derivazione).
 ^definizione-derivazione
 
 %% 
@@ -113,10 +113,6 @@ Ovviamente, per rendere questi programmi comodi da usare%% link %%, [Nix](Inform
 
 Ciò evita anche il problema di avere pacchetti%% link %% sparsi per tutto il file system%% link %%: se stiamo cercando un pacchetto%% link %% (o meglio, in questo caso una [derivazione](Informatica/Nix/_index.md#^definizione-derivazione), sappiamo che la troveremo sicuramente nel [Nix store](Informatica/Nix/_index.md#^definizione-nix-store)).
 
-%% 
-![615](Pasted%20image%2020260117015358.png)
-%%
-
 In sostanza, quello che abbiamo è un archivio (il [Nix store](Informatica/Nix/_index.md#^definizione-nix-store)) di tutti i pacchetti (sotto forma di [derivazioni](Informatica/Nix/_index.md#^definizione-derivazione)), a volte anche con versioni multiple ma distinte (grazie all'univocità%% link %% della [derivazione](Informatica/Nix/_index.md#^definizione-derivazione)).
 
 > [!osservazione]+ Osservazione: comportamento di Nix con le dipendenze
@@ -127,7 +123,7 @@ In sostanza, quello che abbiamo è un archivio (il [Nix store](Informatica/Nix/_
 > 
 > In altre parole, [Nix](Informatica/Nix/_index.md#^definizione-package-manager-nix) offre solo [dipendenze](Informatica/_index.md#^definizione-dipendenza) "dirette" da una [derivazione](Informatica/Nix/_index.md#^definizione-derivazione) a un'altra [derivazione](Informatica/Nix/_index.md#^definizione-derivazione).
 
-Insomma, [Nix](Informatica/Nix/_index.md#^definizione-package-manager-nix) ti permette di usare pacchetti%% link %% e [configurazioni](Sistemi%20operativi.md#^definizione-configurazione-di-un-sistema-operativo) in modo isolato, riproducibile e senza conflitti e gestendo più versioni dello stesso [software](Informatica/_index.md#^definizione-software) contemporaneamente. Rappresenta un _deus ex machina_ per chi ha sempre voluto un [sistema](Informatica/Sistemi%20operativi/_index.md#^definizione-sistema-operativo) in cui la gestione di pacchetti%% link %% e delle loro [dipendenze](Informatica/_index.md#^definizione-dipendenza) non sono un incubo.
+Insomma, [Nix](Informatica/Nix/_index.md#^definizione-package-manager-nix) ti permette di usare pacchetti%% link %% e [configurazioni](Informatica/Sistemi%20operativi/_index.md#^definizione-configurazione-di-un-sistema-operativo) in modo isolato, riproducibile e senza conflitti e gestendo più versioni dello stesso [software](Informatica/_index.md#^definizione-software) contemporaneamente. Rappresenta un _deus ex machina_ per chi ha sempre voluto un [sistema](Informatica/Sistemi%20operativi/_index.md#^definizione-sistema-operativo) in cui la gestione di pacchetti%% link %% e delle loro [dipendenze](Informatica/_index.md#^definizione-dipendenza) non sono un incubo.
 
 > [!definizione]+ Definizione: package manager Nix
 > 
@@ -182,7 +178,7 @@ Lo script contenuto nella [derivazione](Informatica/Nix/_index.md#^definizione-d
 
 Questo script viene poi costruito come derivazione nel Nix store, come un codice sorgente che viene prima trasformato in bytecode e poi compilato nel codice macchina.
 
-![](Pasted%20image%2020260117024132.png)
+mettere foto della sequenza da espressioni Nix a derivaizoni
 
 Durante la traduzione dell'espressione in derivazione, viene creato un hash dal contenuto del file derivato e viene messo come valore del campo `output`.
 

@@ -8,6 +8,10 @@ title: Integrali
 > 
 > Lo stato di questa nota è al momento: 🔴 <font color="#FF7F7F">_Bozza_</font>.
 
+%% 
+in realtà è **Calcolo integrale**
+%%
+
 ---
 
 Un oggetto si muove su una retta sotto l'azine di una forza $F$ che dipende solo dalla posizione in cui si trova:
@@ -129,9 +133,158 @@ $$
 
 ---
 
+Qual è il significato dell'integrale della velocità?
+
+Riprendiamo l'oggetto che si muove su una retta:
+- $s(t)$: posizione dell'oggetto al tempo $t$
+- $v(t)$: velocità istantena dell'oggetto al tempo $t$
+
+Che cosa rappresenta $\int_a^b v(t)dt$?
+
+In termini di unità di misura, se $f$ è $[Y]$ e $x$ è $[X]$, allora $\int_a^b f(x)dx$ è $[Y \cdot X]$
+
+Allo stesso modo, $\int_a^b v(t)dt$ è $\left[ \dfrac{m}{s} \cdot s \right] = [m]$, cioè l'integrale definito della velocità è dimensionalmente uno spostamento
+
+Ma di quale spostamento si tratta?
+
+$$
+\int_a^b v(t)dt = \lim_{N \to \infty} \sum_{i = 1}^N v(z_i) \dfrac{b-a}{N}
+$$
+dove:
+- $z_i$ è il punto medio in $[t_{i-1},t_i)$
+- $a = t_0 < t_1 < \ldots < t_{n-1} < t_n = b$
+- $v(z_i)$ è la velocità istantanea in $z_i$
+
+$v(z_i)$ è la pendenza della retta tangente al grafico di $s$ nel punto $(z_i, s(z_i))$ e possiamo approssimarla alla pendenza della retta secante che passa per i punti $(t_{i-1}, s(t_{i-1}))$ e $(t_i, s(t_i))$, ovvero si può approssimare col rapporto di Newton:
+
+$$
+\begin{align*}
+v(z_i) &\approx \dfrac{s(t_i) - s(t_{i-1})}{t_i - t_{i-1}} \\
+&= \dfrac{s(t_i) - s(t_{i-1})}{\dfrac{b-a}{N}} \implies v(z_i) \cdot \dfrac{b-a}{N} \approx s(t_i) - s(t_{i-1})
+\end{align*}
+$$
+
+Con la costruzione che abbiamo fatto, $t_i - t_{i-1}$ è uguale a $\dfrac{b-a}{N}$, quindi moltiplichiamo entrambe le quantità per $\dfrac{b-a}{N}$ e otteniamo dopo il $\implies$ che $v(z_i) \cdot \dfrac{b-a}{N}$ è il termine delle somme di Riemann, quindi
+
+$$
+\begin{align*}
+\int_a^b v(t)dt &= \lim_{N \to \infty} \sum_{i = 1}^N v(z_i) \dfrac{b-a}{N} \\
+&\approx \sum_{i=1}^N v(z_i) \dfrac{b-a}{N} \\
+&= \sum_{i=1}^N s(t_i) - s(t_{i-1}) \\
+&= \cancel{s(t_1)} - s(t_0) \cancel{+ s(t_2)} \cancel{- s(t_1)} \cancel{+ s(t_3)} \cancel{- s(t_2)} + \ldots + s(t_n) \cancel{- s(t_{n-1})} \\
+&= s(t_N) - s(t_0) \\
+&= s(b) - s(a)
+\end{align*}
+$$
+
+Conclusione:
+
+$$
+\int_a^b v(t)dt = s(b) - s(a)
+$$
+
+e non dipende da $N$! È quindi lo spostamento netto tra il tempo $a$ e il tempo $b$.
+
+Con questo quindi possiamo passare dal grafico della velocità a quello dello spostamento.
+
+---
+
+Dal momento che $v$ è la derivata di $s$, abbiamo che
+
+$$
+\int_a^b s'(t)dt = s(b) - s(a)
+$$
+
+e, semplicemente cambiando nome agli oggetti, potevamo dedurre
+
+$$
+\int_a^b f'(t)dt = f(b) - f(a)
+$$
+
+oppure
+
+$$
+\int_a^b f(t)dt = F(b) - F(a)
+$$
+
+con $F'(t) = f(t)$ (cioè $F$ è la primitiva di $f$)
+
+cioè il Teorema di Torricelli-Barrow o Teorema di valutazione
+
+---
+
+Se $f \ge 0$ su $[a,b]$, allora $\int_a^b f(t)dt = F(b) - F(a)$ rappresenta l'area.
+
+---
+
+Possiamo ora sostituire $b$ con qualsiasi $x \in [a,b]$ e considerare solo una porzione di quest'area:
+
+$$
+\int_a^x f(t)dt = F(x) - F(a)
+$$
+
+definiamo questo integrale come $G(x)$ e notiamo che:
+- $G(a) = 0$
+- $G$ è una primitiva di $f$, infatti $G'(x) = (F(x) - F(a))' = (F(x))' - (F(a))' = F'(x) + 0$ (perché $F(a)$ è una costante)
+
+$G(x)$ è una funzione integrale.
+
+Arriviamo quindi al seguente risultato:
+
+Teorema fondamentale del calcolo integrale:
+Data una [funzione](content/Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-funzione) $f \colon [a,b] \to \mathbb{R}$ tale che $G(x) = \int_a^b f(t)dt$, allora $G$ è derivabile e $G'(x)=f(x)$ per ogni $x \in [a,b]$.
+
+---
+
+Esempio: grafico rappresenta la velocità di un oggetto che si muove su una retta. Stimare la posizione dell'oggetto quando $t=2$ sapendo che $s(0)=2$.
+
+Ora sappiamo che $\int_0^2 v(t)dt = s(2)-s(0)$ quindi $s(2) = s(0) + \int_0^2 v(t)dt$ e possiamo stimare $\int_0^2 v(t)dt$ con una somma del tipo $\sum_{i=1}^n v(z_i)\dfrac{(b-a)}{N}$
+
+Scegliamo $N = 4$ così ogni intervallo è $0.5$ e determiniamo i vari punti $x_i$, $z_i$ e $v(z_i)$.
+
+Facciamo quindi i calcoli:
+
+$$
+s(2) \approx s(0) + \sum_{i=1}^4 v(z_i)\dfrac{(2-0)}{4} = 2 + 0.66 = 2.66
+$$
+
+Se avessimo usato $N=3$ avremmo ottenuto $s(1.5) \approx 2.95$
+
+---
+
+Data una [funzione](content/Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-funzione) $f \colon [a,b] \to \mathbb{R}$, cos'è la sua media?
+Sappiamo cos'è la media aritmetica, quindi se prendiamo $N$ valori assunti dalla $f$ su $[a,b]$ e facciamo la media di questi valori, otteniamo
+
+$$
+\dfrac{f(z_i) + \ldots + f(z_n)}{n}
+$$
+
+ma
+1. quanto grande prendiamo $n$?
+2. quali $z_i$ prendiamo?
+
+
+Risposte:
+1. più grande è $n$, più è precisa l'approssimazione!
+2. come nella costruzione dell'integrale, prendiamo i putni medi
+$$
+\lim_{n \to + \infty} \dfrac{1}{n} \sum_{i=1}^n f(z_i) = \lim_{n \to + \infty} \dfrac{1}{b-a} \sum_{i=1}^n f(z_i) \dfrac{b-a}{n} = \dfrac{1}{b-a} \int_a^b f(t)dt
+$$
+
+che è il teorema della media integrale.
+
+---
+
+Interpretazione geometrica del teorema della media integrale:
+
+se $f \ge 0$ allora la media di $f$ su $[a,b]$ è il numero che moltiplicato per la lunghezza di $[a,b]$ ci fornisce l'area $\int_a^b f$, cioè è l'altezza dell'area $\int_a^b f$.
+
+---
+
 > [!fonti]+ Fonti
 > 
 > - 🏫 Corso di Laurea in Informatica (`L-31 R`) presso l'Università di Torino:
 > 	- Corso di _Analisi Matematica - canale C_, A.A. 2020-21 ([pagina Moodle](https://informatica.i-learn.unito.it/course/view.php?id=2075)):
 > 		- Prof. Barutello Vivina Laura, videolezioni:
 > 			- [_L4a_](https://informatica.i-learn.unito.it/local/streamingfilemanager/file.php/informatica.i-learn.unito.it/2075/L4a.mp4), [_L4b_](https://informatica.i-learn.unito.it/local/streamingfilemanager/file.php/informatica.i-learn.unito.it/2075/L4b.mp4).
+> 			- [_L5a_](https://informatica.i-learn.unito.it/local/streamingfilemanager/file.php/informatica.i-learn.unito.it/2075/L5a.mp4), [_L5b_](https://informatica.i-learn.unito.it/local/streamingfilemanager/file.php/informatica.i-learn.unito.it/2075/L5b.mp4).

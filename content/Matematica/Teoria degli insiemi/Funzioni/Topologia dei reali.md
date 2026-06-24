@@ -14,29 +14,66 @@ title: Topologia dei reali
 
 > [!definizione]+ Definizione: intorno di un punto
 > 
-> Dato un punto%% link %% $x_0 \in \mathbb{R}$ e un $r > 0$, si chiama **intorno di centro $x_0$ e raggio $r$** e si indica con "$I(x_0)$" l'intervallo aperto%% link %%
+> Dato un punto%% link %% $c \in \mathbb{R}$ e un $r > 0$, si chiama **intorno di centro $c$ e raggio $r$** e si indica con "$I_r(c)$" l'intervallo aperto%% link %%
 > 
 > $$
 > \begin{align*}
-> (x_0 - r, x_0 + r) &= \{ x \in \mathbb{R} \mid x_0 - r < x < x_0 + r \} \\
-> &= \{ x \in \mathbb{R} \mid -r < x - x_0 < r \} \\
-> &= \{ x \in \mathbb{R} \mid |x - x_0| < r \}
+> I_r(x_0) &= (c - r, c + r) \\
+> &= \{ x \in \mathbb{R} \mid d(x,c) < r \} \\
+> &= \{ x \in \mathbb{R} \mid |x - c| < r \}
 > \end{align*}
 > $$
 > 
-> ossia l'insieme di tutti e soli i punti%% link %% di $\mathbb{R}$ aventi distanza da $x_0$ minore di $r$.
+> ossia l'insieme di tutti e soli i punti%% link %% di $\mathbb{R}$ aventi distanza%% link %% da $c$ minore di $r$.
 > 
-> Si chiama **intorno destro di $x_0$ di raggio $r$** l'intervallo aperto%% link %% $(x_0, x_0 + r)$.
+> Si chiama **intorno destro di $c$ di raggio $r$** l'intervallo aperto%% link %% $(c, c + r)$.
 > 
-> Si chiama **intorno sinistro di $x_0$ di raggio $r$** l'intervallo aperto%% link %% $(x_0 - r, x_0)$.
+> Si chiama **intorno sinistro di $c$ di raggio $r$** l'intervallo aperto%% link %% $(c - r, c)$.
 ^definizione-intorno-di-un-punto
+
+%% 
+intorno senza specificare il raggio
+%%
 
 %% 
 mettere rappresentazione grafica a pagina 115 di Lancelotti
 %%
 
-%% esempio %%
+> [!esempio] Esempio di intorno $I_3(1)$
+> 
+> L'[intorno](Topologia%20dei%20reali.md#^definizione-intorno-di-un-punto) $I_1(3)$ corrisponde all'intervallo aperto%% link %% dei punti%% link %% di $\mathbb{R}$ aventi distanza%% link %% da $1$ strettamente minore di $3$:
+> 
+> $$
+> I_3(1) = (1 - 3, 1 + 3) = (-2, 4)
+> $$
 
+%%
+[!definizione] Definizione: proprietà vera definitivamente per $x \to c$
+
+Si dice che una proprietà è **vera definitivamente per $x$ che tende a $c$** se esiste un $r > 0$ tale per cui tale proprietà è vera per ogni $x \in I_r(c)$, tranne al più per $x=c$.
+%%
+
+%% cosa significa "definitivamente" in questo caso? %%
+
+%%
+[!esempio] Esempio: $x^2 < 4$ vera definitivamente per $x \to 0$
+
+Dimostriamo che $x^2 < 4$ è vera definitivamente per $x \to 0$: vogliamo mostrare che esiste un $r > 0$ tale che $x^2 < 4$ per ogni $x \in I_r(0)$.
+
+Risolviamo:
+
+$$
+\begin{align*}
+x^2 < 4 &\iff x^2 - 4 < 0 \\
+&\iff (x-2)(x+2) < 0 \\
+&\iff -2 < x < + 2 \\
+&\iff x \in (-2,2) = I_2(0)
+\end{align*}
+$$
+
+Possiamo scegliere quindi un $r \in (0,2]$ per cui è definitivamente vera questa proprietà, es. per $r = 1$ abbiamo che per ogni $x \in I_1(0) = (-1,1)$ vale $x^2 < 4$.%%
+
+ 
 > [!definizione]+ Definizione: intorno bucato di un punto
 > 
 > Un **intorno bucato** di un punto%% link %% $x_0$ è un [intorno](Topologia%20dei%20reali.md#^definizione-intorno-di-un-punto) $I(x_0)$ di $x_0$ da cui si esclude $x_0$ stesso.
@@ -46,13 +83,45 @@ mettere rappresentazione grafica a pagina 115 di Lancelotti
 > 
 > L'[_intorno bucato_](Topologia%20dei%20reali.md#^definizione-intorno-bucato) ci tornerà utile più in là quando studieremo i [_limiti_](Matematica/Analisi%20matematica/Limiti/_index.md#^definizione-limite) perché ci interesserà analizzare l'[intorno](Topologia%20dei%20reali.md#^definizione-intorno-di-un-punto) di un punto%% link %% $x_0$ escluso $x_0$ stesso, cioè proprio l'[intorno bucato](Topologia%20dei%20reali.md#^definizione-intorno-bucato) di $x_0$.
 
+%%
+[!esempio] Esempio: $\dfrac{1}{x^2} > 1$ vera definitivamente per $x \to 0$
+
+Dimostriamo che $\dfrac{1}{x^2} > 1$ è vera definitivamente per $x \to 0$: vogliamo mostrare che esiste un $r > 0$ tale che $\dfrac{1}{x^2} > 1$ per ogni $x \in I_r(0)$.
+
+Risolviamo:
+
+$$
+\begin{align*}
+\dfrac{1}{x^2} > 1 & \iff \begin{cases}
+x^2 < 1 \\
+x \ne 0
+\end{cases} \\
+&\iff \begin{cases}
+(x-1)(x+1) < 0 \\
+x \ne 0
+\end{cases} \\
+&\iff x \in (-1,1) \setminus \{ 0 \} = I_1(0) \setminus \{ 0 \}
+\end{align*}
+$$
+
+Possiamo quindi scegliere un $r \in (0,1]$ e ottenere che la proprietà è vera nell'intorno bucato $I_1(0) \setminus \{ 0 \}$.
+%%
+
+%% 
+Definizione: retta reale estesa
+
+$$
+\bar{\mathbb{R}} = \mathbb{R} \cup \{ + \infty \} \cup \{ - \infty \}
+$$
+%%
+
 > [!definizione]+ Definizione: intorno di un infinito
 > 
-> Dato un $a \in \mathbb{R}$:
-> - L'**intorno di $+ \infty$** è l'intervallo aperto%% link %% $(a, + \infty)$.
-> - L'**intorno di $- \infty$** è l'intervallo aperto%% link %% $(-\infty, a)$.
+> Dato un $x_0 \in \mathbb{R}$:
+> - L'**intorno di $+ \infty$** è l'intervallo aperto%% link %% $(x_0, + \infty)$.
+> - L'**intorno di $- \infty$** è l'intervallo aperto%% link %% $(-\infty, x_0)$.
 ^definizione-intorno-di-un-infinito
-
+ 
 %% 
 mettere rappresentazione grafica a pagina 116 di Lancelotti
 %%
@@ -60,6 +129,24 @@ mettere rappresentazione grafica a pagina 116 di Lancelotti
 %% 
 (1.5) Osservazione Sia x0 \in R \cup {±∞}.
 Allora l'intersezione di un numero finito di intorni di x0 è un intorno di x0.
+%%
+
+%%
+[!definizione] Definizione: proprietà vera definitivamente per $x \to + \infty$ (risp. per $x \to - \infty$)
+
+Si dice che una proprietà è **vera definitivamente per $x$ che tende a $+\infty$** (risp. **per $x$ che tende a $- \infty$**) se esiste un $r > 0$ tale per cui tale proprietà è vera per ogni $x \in I_r(+\infty)$ (risp. per ogni $x \in I_r(-\infty)$).
+%%
+
+%% 
+[!esempio] Esempio: $x^3 > 8$ è vera definitivamente per $x \to + \infty$
+
+Infatti è valida in $(2, + \infty) = I_2(+ \infty)$ e anche in ogni $I_r(+ \infty)$ con $r > 2$.
+%%
+
+%% 
+[!esempio] Esempio: $10^x < 10^{-10}$ è vera definitivamente per $x \to - \infty$
+
+Infatti è valida in $(-\infty, -10) = I_{-10}(-\infty)$ e anche in ogni $I_r(-\infty)$ con $r < -10$
 %%
 
 > [!definizione]+ Definizione: punto interno
@@ -421,12 +508,16 @@ nel caso precedente. Analoga conclusione se a  \in A.
 > A = \text{int}(A) \cup \partial A
 > $$
 
-%% dimostrazione a pagina 123 %%
+%% dimostrazione a pagina 123%%
 
 ---
 
 > [!fonti]+ Fonti
 > 
+> - 🏫 Corso di Laurea in Informatica (`L-31 R`) presso l'Università di Torino:
+> 	- Corso di _Analisi Matematica - canale C_, A.A. 2020-21 ([pagina Moodle](https://informatica.i-learn.unito.it/course/view.php?id=2075)):
+> 		- Prof. Barutello Vivina Laura, videolezioni:
+> 			- [_L6a_](https://informatica.i-learn.unito.it/local/streamingfilemanager/file.php/informatica.i-learn.unito.it/2075/L6a.mp4).
 > - 📚 Sergio Lancelotti, _Lezioni di Analisi Matematica I_, Celid, 2020 (ISBN: `978-8867891979`):
 > 	- Capitolo 3 - _Limiti e continuità_:
 > 		- 1 - _Topologia di $\mathbb{R}$_.

@@ -1,0 +1,20 @@
+.table-container {
+  & > table {
+    margin: 0rem;
+    padding: 0rem;
+    & > * {
+      line-height: 1.2rem;
+    }
+    align-items: center;
+  }
+  overflow-x: auto;
+}
+
+th {
+  font-weight: normal;
+  border: 1px solid var(--lightgray);
+}
+
+td {
+  border: 1px solid var(--lightgray);
+}

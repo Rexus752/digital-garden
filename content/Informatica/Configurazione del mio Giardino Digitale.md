@@ -651,6 +651,48 @@ e l'ho aggiunto a `quartz/styles/custom.scss`:
 @use "./custom/fix-collapsed-callouts.scss";
 ```
 
+## Stile delle tabelle personalizzate
+
+Le tabelle, nel tema di default di Quartz, sono orribili: non hanno le linee che separano le colonne, sono fin troppo piene di spazi vuoti e le righe si distinguono difficilmente.
+
+Per risolvere questo problema, ho creato un file `quartz/styles/custom/table-style.scss`:
+
+```scss title="quartz/styles/custom/table-style.scss" 
+.table-container {
+  & > table {
+    margin: 0rem;
+    padding: 0rem;
+    & > * {
+      line-height: 1.2rem;
+    }
+  }
+  overflow-x: auto;
+}
+
+th {
+  font-weight: normal;
+  border: 1px solid var(--lightgray);
+}
+
+td {
+  border: 1px solid var(--lightgray);
+}
+
+```
+
+e l'ho aggiunto a `quartz/styles/custom.scss`:
+
+```scss title="quartz/styles/custom.scss" {7}
+@use "./variables.scss" as *;
+
+@use "./custom/callouts.scss";
+@use "./custom/centered-img.scss";
+@use "./custom/disable-folder-page.scss";
+@use "./custom/fix-collapsed-callouts.scss";
+@use "./custom/table-style.scss";
+```
+
+
 ## 2.11 - Icone nei titoli delle note
 
 > [!attenzione]+ Attenzione: non aggiornato alla versione `v5` di Quartz
@@ -836,7 +878,7 @@ Quello che ho fatto è stato:
 	  return Explorer
 	}) satisfies QuartzComponentConstructor
 	```
-1. Per evitare che l'icona faccia allineare il nome della cartella a destra, nel file `quartz/components/styles/explorer.scss` ho modificato il tipo di `display`:
+3. Per evitare che l'icona faccia allineare il nome della cartella a destra, nel file `quartz/components/styles/explorer.scss` ho modificato il tipo di `display`:
 	```scss title="quartz/components/styles/explorer.scss" {3}
 	.folder-container {
 	  flex-direction: row;
@@ -852,8 +894,7 @@ Quello che ho fatto è stato:
 Questo è ciò che ho in mente di fare per migliorare il sito:
 - Trovare un modo per caricare nel repository anche quelle cartelle che Quartz inserisce di default nel `.gitignore` come la `.obsidian` contenente le impostazioni del vault di Obsidian ed eventuali cartelle `private` contenenti note private (che però io non uso) e `templates` contenenti template per le note, in modo da avere un backup completo nel repository nel caso in cui dovesse malauguratamente succedere qualcosa.
 - Ridurre lo spazio vuoto in cima alle pagine del sito.
+- Quando in una pagina non è presente l'indice sul lato, far continuare 
 - Integrare le icone delle note nel titolo della nota, nell'_Explorer_ e anche nel _Breadcrumbs_.
-- Integrare Giscus.
-- Sostituire il codice CSS delle tabelle.
 - Trasformare la "Reader Mode" in una modalità dyslexic-friendly (es. usando il font [OpenDyslexic](https://opendyslexic.org/)). 
 - Renderizzare il LaTeX nei titoli dell'indice sul lato delle pagine.

@@ -21,9 +21,8 @@ Gli sfondi presenti in questa sezione appartengono a un particolare genere di "e
 
 ## 1.1 - City Pop
 
-| ![200](Alena%20Aenami%20-%20From%20This%20Moment.png)                                                                                                                     | ![200](Alena%20Aenami%20-%20Lost%20In%20Between.png)                                                                                                                     |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| [🗄](Alena%20Aenami%20-%20From%20This%20Moment.png) [Alena Aenami](https://www.artstation.com/aenamiart) - [_From This Moment_](https://www.artstation.com/artwork/6Az0r) | [🗄](Alena%20Aenami%20-%20Lost%20In%20Between.png) [Alena Aenami](https://www.artstation.com/aenamiart) - [_Lost In Between_](https://www.artstation.com/artwork/J91ZxD) |
+| ![200](Alena%20Aenami%20-%20From%20This%20Moment.png)<br>[🗄](Alena%20Aenami%20-%20From%20This%20Moment.png) [Alena Aenami](https://www.artstation.com/aenamiart) - [_From This Moment_](https://www.artstation.com/artwork/6Az0r) | ![200](Alena%20Aenami%20-%20Lost%20In%20Between.png)<br>[🗄](Alena%20Aenami%20-%20Lost%20In%20Between.png) [Alena Aenami](https://www.artstation.com/aenamiart) - [_Lost In Between_](https://www.artstation.com/artwork/J91ZxD) |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 
 # 2 - Music
 
@@ -31,56 +30,46 @@ Gli sfondi presenti in questa sezione sono tutti a tema musicale.
 
 ## 2.1 - Aphex Twin
 
-| ![200](Selected%20Ambient%20Works%2085-92.png)                              |
-| ---------------------------------------------------------------------------------------------- |
-| [🗄](Selected%20Ambient%20Works%2085-92.png) _Selected Ambient Works 85-92_ |
+| ![200](Selected%20Ambient%20Works%2085-92.png)<br>[🗄](Selected%20Ambient%20Works%2085-92.png) _Selected Ambient Works 85-92_ |
+| ---------------------------------------------------------------------------------------------------------------------------- |
 
 ## 2.2 - Arctic Monkeys
 
-| ![200](Tranquility%20Base%20Hotel%20&%20Casino.png)                                  |
-| ----------------------------------------------------------------------------------------------------------- |
-| [🗄️](Tranquility%20Base%20Hotel%20&%20Casino.png) _Tranquility Base Hotel & Casino_ |
+| ![200](Tranquility%20Base%20Hotel%20&%20Casino.png)<br>[🗄️](Tranquility%20Base%20Hotel%20&%20Casino.png) _Tranquility Base Hotel & Casino_ |
+| ------------------------------------------------------------------------------------------------------------------------------------------ |
 
 ## 2.3 - Caparezza
 
-| ![200](Exuvia.png)         | ![200](Domenico%20Dambrosio%20-%20La%20Scelta.png)                                                                                                                        |
-| -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [🗄️](Exuvia.png) _Exuvia_ | [🗄️](Domenico%20Dambrosio%20-%20La%20Scelta.png) [Domenico Dambrosio](https://www.instagram.com/dumbrosio_dd/) - [_La Scelta_](https://www.instagram.com/p/COh-FSkDAs-/) |
+| ![200](public/_attachments/exuvia.png)<br>[🗄️](public/_attachments/exuvia.png) _Exuvia_ | ![200](Domenico%20Dambrosio%20-%20La%20Scelta.png)<br>[🗄️](Domenico%20Dambrosio%20-%20La%20Scelta.png) [Domenico Dambrosio](https://www.instagram.com/dumbrosio_dd/) - [_La Scelta_](https://www.instagram.com/p/COh-FSkDAs-/) |
+| ----------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 
 ## 2.4 - Fedeli Alla Linea
 
-| ![200](CCCP%20-%20Fedeli%20Alla%20Linea.png)                         |
-| -------------------------------------------------------------------- |
-| [🗄️](CCCP%20-%20Fedeli%20Alla%20Linea.png) CCCP - Fedeli Alla Linea |
+| ![200](CCCP%20-%20Fedeli%20Alla%20Linea.png)<br>[🗄️](CCCP%20-%20Fedeli%20Alla%20Linea.png) CCCP - Fedeli Alla Linea |
+| ------------------------------------------------------------------------------------------------------------------- |
 
 ## 2.5 - Daft Punk
 
-| ![200](Homework.png)                                          | ![200](Discovery.png)           | ![200](Human%20After%20All.png)                 | ![200](Get%20Lucky.png)           |
-| ------------------------------------------------------------- | ------------------------------- | ----------------------------------------------- | --------------------------------- |
-| [🗄️](Homework.png) _Homework_                                 | [🗄️](Discovery.png) _Discovery_ | [🗄️](Human%20After%20All.png) _Human After All_ | [🗄️](Get%20Lucky.png) _Get Lucky_ |
-| ![200](Random%20Access%20Memories.png)                        |                                 |                                                 |                                   |
-| [🗄️](Random%20Access%20Memories.png) _Random Access Memories_ |                                 |                                                 |                                   |
+| ![200](public/_attachments/homework.png)<br>[🗄️](public/_attachments/homework.png) _Homework_<br>                                               | ![200](public/_attachments/discovery.png)<br>[🗄️](public/_attachments/discovery.png) _Discovery_ | ![200](Human%20After%20All.png)<br>[🗄️](Human%20After%20All.png) _Human After All_ | ![200](Get%20Lucky.png)<br>[🗄️](Get%20Lucky.png) _Get Lucky_ |
+| ------------------------------------------------------------------------------------------------------- | -------------------------------------------------------- | ---------------------------------------------------------------------------------- | ------------------------------------------------------------ |
+| ![200](Random%20Access%20Memories.png)<br>[🗄️](Random%20Access%20Memories.png) _Random Access Memories_ |                                                          |                                                                                    |                                                              |
 
 ## 2.6 - Glass Beams
 
-| ![200](Glass%20Beams.png)           |
-| ----------------------------------- |
-| [🗄️](Glass%20Beams.png) Glass Beams |
+| ![200](Glass%20Beams.png)<br>[🗄️](Glass%20Beams.png) Glass Beams |
+| ---------------------------------------------------------------- |
 
 ## 2.7 - Post Nebbia
 
-| ![200](Cuore%20Semplice.png)                 | ![200](Entropia%20Padrepio.png)                    |
-| -------------------------------------------- | -------------------------------------------------- |
-| [🗄️](Cuore%20Semplice.png) _Cuore Semplice_ | [🗄️](Entropia%20Padrepio.png) _Entropia Padrepio_ |
+| ![200](Cuore%20Semplice.png)<br>[🗄️](Cuore%20Semplice.png) _Cuore Semplice_ | ![200](Entropia%20Padrepio.png)<br>[🗄️](Entropia%20Padrepio.png) _Entropia Padrepio_ |
+| --------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
 
 ## 2.8 - Tame Impala
 
-| ![200](The%20Slow%20Rush.png)               |
-| ------------------------------------------- |
-| [🗄️](The%20Slow%20Rush.png) _The Slow Rush_ |
+| ![200](The%20Slow%20Rush.png)<br>[🗄️](The%20Slow%20Rush.png) _The Slow Rush_ |
+| ---------------------------------------------------------------------------- |
 
 ## 2.9 - Under The Skin Vibration
 
-| ![200](Delia%20Delion%20-%20Under%20The%20Skin%20Vibration.png)                                                                                                                                                                                                           |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [🗄️](Delia%20Delion%20-%20Under%20The%20Skin%20Vibration.png) [Delia Delion](https://www.facebook.com/profile.php?id=100011391857267) - [_Under The Skin Vibration_](https://www.facebook.com/photo.php?fbid=2530454284010942&set=pb.100011391857267.-2207520000&type=3) |
+| ![200](Delia%20Delion%20-%20Under%20The%20Skin%20Vibration.png)<br>[🗄️](Delia%20Delion%20-%20Under%20The%20Skin%20Vibration.png) [Delia Delion](https://www.facebook.com/profile.php?id=100011391857267) - [_Under The Skin Vibration_](https://www.facebook.com/photo.php?fbid=2530454284010942&set=pb.100011391857267.-2207520000&type=3) |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
