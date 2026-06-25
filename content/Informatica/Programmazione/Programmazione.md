@@ -1,6 +1,3 @@
----
-title: Programmazione
----
 
 > [!premessa]+ Premessa
 > 
@@ -17,7 +14,7 @@ title: Programmazione
 ---
 
 %%
-Un [computer](Informatica/_index.md#^definizione-computer), essendo una macchina, a livello fisico non è in grado di comprendere direttamente il linguaggio umano: è solo in grado di ragionare in termini di [istruzioni](Informatica/_index.md#^definizione-istruzione) elementari che dicono alle singole componenti [hardware](Informatica/_index.md#^definizione-hardware) come operare, sotto forma di quello che viene detto _sistema binario_.
+Un [computer](Informatica.md#^definizione-computer), essendo una macchina, a livello fisico non è in grado di comprendere direttamente il linguaggio umano: è solo in grado di ragionare in termini di [istruzioni](Informatica.md#^definizione-istruzione) elementari che dicono alle singole componenti [hardware](Informatica.md#^definizione-hardware) come operare, sotto forma di quello che viene detto _sistema binario_.
 
 Scrivere programmi direttamente in questo formato sarebbe praticamente impossibile: sarebbe come cercare di costruire una cattedrale spostando ogni singolo mattone a mano, uno alla volta, senza mai poter ragionare sull'edificio nel suo insieme.
 
@@ -26,7 +23,7 @@ I linguaggi di programmazione nascono proprio per colmare questo divario: permet
 
 > [!definizione]+ Definizione: programmazione
 > 
-> La **programmazione** è l'attività di scrivere [istruzioni](Informatica/_index.md#^definizione-istruzione) in un [linguaggio di programmazione](content/Informatica/Programmazione/_index.md#^definizione-linguaggio-di-programmazione) per far eseguire a un [computer](Informatica/_index.md#^definizione-computer) un determinato compito.
+> La **programmazione** è l'attività di scrivere [istruzioni](Informatica.md#^definizione-istruzione) in un [linguaggio di programmazione](Programmazione.md#^definizione-linguaggio-di-programmazione) per far eseguire a un [computer](Informatica.md#^definizione-computer) un determinato compito.
 ^definizione-programmazione
 
 %%
@@ -35,7 +32,7 @@ Non è solo scrivere codice — è prima di tutto **risolvere un problema**: cap
 
 > [!definizione]+ Definizione: linguaggio di programmazione
 > 
-> Un **linguaggio di programmazione** è un insieme di regole e simboli che permette a un essere umano di scrivere [istruzioni](Informatica/_index.md#^definizione-istruzione) comprensibili a un [computer](Informatica/_index.md#^definizione-computer).
+> Un **linguaggio di programmazione** è un insieme di regole e simboli che permette a un essere umano di scrivere [istruzioni](Informatica.md#^definizione-istruzione) comprensibili a un [computer](Informatica.md#^definizione-computer).
 ^definizione-linguaggio-di-programmazione
 
 %% 

@@ -1,6 +1,3 @@
----
-title: Musica
----
 
 > [!premessa]+ Premessa
 > 

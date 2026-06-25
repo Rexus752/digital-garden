@@ -1,6 +1,3 @@
----
-title: Paradigma dichiarativo
----
 
 > [!premessa] Premessa
 > 

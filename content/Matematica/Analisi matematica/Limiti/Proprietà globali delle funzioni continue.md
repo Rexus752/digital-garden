@@ -1,6 +1,3 @@
----
-title: Proprietà globali delle funzioni continue
----
 
 > [!premessa]+ Premessa
 > 
@@ -33,7 +30,7 @@ esempio 6.3 pag. 227-228 lancelotti
 
 > [!corollario]+ Corollario del teorema degli zeri
 > 
-> Dato un intervallo%% link %% $I \subseteq \mathbb{R}$ e una [funzione continua](Funzioni%20continue.md#^definizione-funzione-continua) $f \colon I \to \mathbb{R}$, se $f$ ammette [limiti](Matematica/Analisi%20matematica/Limiti/_index.md#^definizione-limite) per $x$ che tende agli estremi dell'intervallo%% link %% $I$ e questi [limiti](Matematica/Analisi%20matematica/Limiti/_index.md#^definizione-limite) hanno segni opposti, allora esiste un punto%% link %% $x_0 \in I$ tale che $f(x_0) = 0$.
+> Dato un intervallo%% link %% $I \subseteq \mathbb{R}$ e una [funzione continua](Funzioni%20continue.md#^definizione-funzione-continua) $f \colon I \to \mathbb{R}$, se $f$ ammette [limiti](Limiti.md#^definizione-limite) per $x$ che tende agli estremi dell'intervallo%% link %% $I$ e questi [limiti](Limiti.md#^definizione-limite) hanno segni opposti, allora esiste un punto%% link %% $x_0 \in I$ tale che $f(x_0) = 0$.
 > 
 > Inoltre, se $f$ è strettamente monotona%% Link %%, allora questo punto%% link %% $x_0$ è unico.
 ^corollario-del-teorema-degli-zeri
@@ -72,7 +69,7 @@ Questa proprietà è molto utile per determinare l'immagine di una funzione cont
 
 > [!corollario]+ Corollario 2 del teorema dei valori intermedi
 > 
-> Data una [funzione continua](Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-funzione) e monotona%% link %% $f \colon [a,b] \to \mathbb{R}$, si ha che:
+> Data una [funzione continua](Funzioni.md#^definizione-funzione) e monotona%% link %% $f \colon [a,b] \to \mathbb{R}$, si ha che:
 > - se $f$ è crescente%% link %%, allora $\text{rng}(f) = [f(a), f(b)]$ e
 > - se $f$ è decrescente%% link %%, allora $\text{rng}(f) = [f(b),f(a)]$.
 ^corollario-2-del-teorema-dei-valori-intermedi
@@ -104,7 +101,7 @@ Esempio 6.11 pag. 230 Lancelotti
 
 > [!lemma]+ Lemma delle successioni minimizzanti e massimizzanti
 > 
-> Dato un [sottoinsieme](Matematica/Teoria%20degli%20insiemi/_index.md#^definizione-sottoinsieme) non [vuoto](Matematica/Teoria%20degli%20insiemi/_index.md#^definizione-insieme-vuoto) $A \subseteq \mathbb{R}$, esistono due [successioni](Limiti%20di%20successioni.md#^definizione-successione) $(x_n)$ e $(y_n)$ in $A$ tali che
+> Dato un [sottoinsieme](Teoria%20degli%20insiemi.md#^definizione-sottoinsieme) non [vuoto](Teoria%20degli%20insiemi.md#^definizione-insieme-vuoto) $A \subseteq \mathbb{R}$, esistono due [successioni](Limiti%20di%20successioni.md#^definizione-successione) $(x_n)$ e $(y_n)$ in $A$ tali che
 > 
 > $$
 > \lim_n x_n = \inf A \land \lim_n y_n = \sup A
@@ -143,7 +140,7 @@ dimostrazione pag. 231-232 lancelotti
 
 > [!teorema]+ Teorema di monotonia per funzioni continue iniettive
 > 
-> Dato un intervallo%% link %% $I \subseteq R$ e una [funzione continua](Funzioni%20continue.md#^definizione-funzione-continua) $f \colon I \to \mathbb{R}$, quest'ultima è [iniettiva](Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-iniettivita) se e solo se è strettamente monotona%% Link %%.
+> Dato un intervallo%% link %% $I \subseteq R$ e una [funzione continua](Funzioni%20continue.md#^definizione-funzione-continua) $f \colon I \to \mathbb{R}$, quest'ultima è [iniettiva](Proprietà%20delle%20funzioni.md#^definizione-iniettivita) se e solo se è strettamente monotona%% Link %%.
 
 %% 
 dimostrazione pag. 232 lancelotti
@@ -169,7 +166,7 @@ dimsotrazione pag. 233 lancelotti
 
 > [!definizione]+ Definizione: funzione uniformemente continua
 > 
-> Data una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-funzione) $f \colon A \subseteq \mathbb{R} \to \mathbb{R}$ (con $A \ne \emptyset$), diciamo che **$f$ è uniformemente continua in $A$** se, per ogni $\varepsilon > 0$, esiste un $\delta > 0$ tale che, per ogni $x,x_0 \in A$ con $|x - x_0| < \delta$, si ha che $|f(x) - f(x_0)| < \varepsilon$:
+> Data una [funzione](Funzioni.md#^definizione-funzione) $f \colon A \subseteq \mathbb{R} \to \mathbb{R}$ (con $A \ne \emptyset$), diciamo che **$f$ è uniformemente continua in $A$** se, per ogni $\varepsilon > 0$, esiste un $\delta > 0$ tale che, per ogni $x,x_0 \in A$ con $|x - x_0| < \delta$, si ha che $|f(x) - f(x_0)| < \varepsilon$:
 > 
 > $$
 > \begin{array}{}
@@ -192,7 +189,7 @@ esempio 6.18 paagg. 233-234
 
 > [!teorema]+ Teorema di regolarità della continuità uniforme 
 > 
-> Se una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ è [uniformemente continua](Proprietà%20globali%20delle%20funzioni%20continue.md#^definizione-funzione-uniformemente-continua), allora è anche [continua](Funzioni%20continue.md#^definizione-funzione-continua).
+> Se una [funzione](Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ è [uniformemente continua](Proprietà%20globali%20delle%20funzioni%20continue.md#^definizione-funzione-uniformemente-continua), allora è anche [continua](Funzioni%20continue.md#^definizione-funzione-continua).
 
 %% 
 Osservazione: il viceversa non è vero, coem mostra la funzione $f(x) = x^2$. Lo è se per esempio $f$ è definita su un intervallo chiuso e limitato, come evidenzia il prossimo risultato.
@@ -200,7 +197,7 @@ Osservazione: il viceversa non è vero, coem mostra la funzione $f(x) = x^2$. Lo
 
 > [!teorema]+ Teorema di Heine-Cantor
 > 
-> Se una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-funzione) $f \colon [a,b] \to \mathbb{R}$ è [continua](Funzioni%20continue.md#^definizione-funzione-continua), allora è anche [uniformemente continua](Proprietà%20globali%20delle%20funzioni%20continue.md#^definizione-funzione-uniformemente-continua) in $[a,b]$.
+> Se una [funzione](Funzioni.md#^definizione-funzione) $f \colon [a,b] \to \mathbb{R}$ è [continua](Funzioni%20continue.md#^definizione-funzione-continua), allora è anche [uniformemente continua](Proprietà%20globali%20delle%20funzioni%20continue.md#^definizione-funzione-uniformemente-continua) in $[a,b]$.
 
 %% 
 dimostrazione pagg. 234-235 lancelotti

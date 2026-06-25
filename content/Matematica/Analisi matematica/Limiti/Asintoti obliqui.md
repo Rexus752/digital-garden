@@ -1,6 +1,3 @@
----
-title: Asintoti obliqui
----
 
 > [!premessa]+ Premessa
 > 
@@ -14,7 +11,7 @@ Dopo aver definito gli [asintoti verticali](Asintoti%20verticali%20e%20orizzonta
 
 > [!definizione]+ Definizione: asintoto obliquo
 > 
-> Data una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ con $\text{dom}(f)$ illimitato superiormente%% Link %% (o inferiormente%% link %%) e dati $m,q \in \mathbb{R}$ con $m \ne 0$, diciamo che la retta%% link %% $y = mx + q$ è un **asintoto obliquo destro per $x \to + \infty$ (o sinistro per $x \to - \infty$) per $f$** se
+> Data una [funzione](Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ con $\text{dom}(f)$ illimitato superiormente%% Link %% (o inferiormente%% link %%) e dati $m,q \in \mathbb{R}$ con $m \ne 0$, diciamo che la retta%% link %% $y = mx + q$ è un **asintoto obliquo destro per $x \to + \infty$ (o sinistro per $x \to - \infty$) per $f$** se
 > 
 > $$
 > f(x) = mx + q + o(1)
@@ -33,7 +30,7 @@ Osservazioni 4.36 pagg. 210-211
 
 > [!teorema]+ Teorema di caratterizzazione degli asintoti obliqui
 > 
-> Data una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ con $\text{dom}(f)$ illimitato superiormente%% Link %% (o inferiormente%% link %%) e dati $m,q \in \mathbb{R}$ con $m \ne 0$, la retta%% link %% $y = mx + q$ è un [asintoto obliquo destro](Asintoti%20obliqui.md#^definizione-asintoto-obliquo) (o [sinistro](Asintoti%20obliqui.md#^definizione-asintoto-obliquo)) se e solo se
+> Data una [funzione](Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ con $\text{dom}(f)$ illimitato superiormente%% Link %% (o inferiormente%% link %%) e dati $m,q \in \mathbb{R}$ con $m \ne 0$, la retta%% link %% $y = mx + q$ è un [asintoto obliquo destro](Asintoti%20obliqui.md#^definizione-asintoto-obliquo) (o [sinistro](Asintoti%20obliqui.md#^definizione-asintoto-obliquo)) se e solo se
 > 1. $f$ è un [infinito](Infiniti%20e%20infinitesimi.md#^definizione-infinito-e-infinitesimo) per $x \to + \infty$ (o per $x \to - \infty$):
 > 	$$
 > 	\lim_{x \to \pm \infty} f(x) = \pm \infty
@@ -42,7 +39,7 @@ Osservazioni 4.36 pagg. 210-211
 > 	$$
 > 	\lim_{x \to \pm \infty} \dfrac{f(x)}{|x|} = m
 > 	$$
-> 3. Vale il seguente [limite](Matematica/Analisi%20matematica/Limiti/_index.md#^definizione-limite):
+> 3. Vale il seguente [limite](Limiti.md#^definizione-limite):
 > 	$$
 > 	\lim_{x \to \pm \infty} \left( f(x) - mx \right) = q
 > 	$$

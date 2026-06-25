@@ -1,6 +1,3 @@
----
-title: Paradigma funzionale
----
 
 > [!premessa] Premessa
 > 

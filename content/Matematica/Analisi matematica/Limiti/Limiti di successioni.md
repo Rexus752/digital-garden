@@ -1,6 +1,3 @@
----
-title: Limiti di successioni
----
 
 > [!premessa]+ Premessa
 > 
@@ -12,7 +9,7 @@ title: Limiti di successioni
 
 > [!definizione]+ Definizione: successione
 > 
-> Una **successione** è una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-funzione) $a \colon \mathbb{N} \to \mathbb{R}$, denotata con "$(a_n)_{n \in \mathbb{N}}$" o "$\{ a_n \}_{n \in \mathbb{N}}$" (o, quando non c'è ambiguità di notazione, anche $(a_n)$ o $\{ a_n \}$), che associa a ogni numero naturale%% link %% $n \in \mathbb{N}$, detto **indice della successione**, un valore $a(n) \in \mathbb{R}$ denotato con "$a_n$" e detto **termine della successione**.
+> Una **successione** è una [funzione](Funzioni.md#^definizione-funzione) $a \colon \mathbb{N} \to \mathbb{R}$, denotata con "$(a_n)_{n \in \mathbb{N}}$" o "$\{ a_n \}_{n \in \mathbb{N}}$" (o, quando non c'è ambiguità di notazione, anche $(a_n)$ o $\{ a_n \}$), che associa a ogni numero naturale%% link %% $n \in \mathbb{N}$, detto **indice della successione**, un valore $a(n) \in \mathbb{R}$ denotato con "$a_n$" e detto **termine della successione**.
 ^definizione-successione
 
 %% specificare che la usccessione è in $A \to \mathbb{R}$ e se $A = \mathbb{N}$ allora è illimitata %%
@@ -21,15 +18,15 @@ title: Limiti di successioni
 esempio 5.2 pag. 215 lancelotti
 %%
 
-Poiché una [successione](Limiti%20di%20successioni.md#^definizione-successione) è una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-funzione) definita su $\mathbb{N}$ o su un suo [sottoinsieme](Matematica/Teoria%20degli%20insiemi/_index.md#^definizione-sottoinsieme) illimitato superiormente%% Link %%, il dominio%% Link %% della [successione](Limiti%20di%20successioni.md#^definizione-successione) è un [insieme](Matematica/Teoria%20degli%20insiemi/_index.md#^definizione-insieme) discreto%% link %%, cioè costituito solo da [punti isolati](Topologia%20dei%20reali.md#^definizione-punto-isolato)%% perché? %%, pertanto la [successione](Limiti%20di%20successioni.md#^definizione-successione) è una [funzione continua](Funzioni%20continue.md#^definizione-funzione-continua)%% perché? %%.
+Poiché una [successione](Limiti%20di%20successioni.md#^definizione-successione) è una [funzione](Funzioni.md#^definizione-funzione) definita su $\mathbb{N}$ o su un suo [sottoinsieme](Teoria%20degli%20insiemi.md#^definizione-sottoinsieme) illimitato superiormente%% Link %%, il dominio%% Link %% della [successione](Limiti%20di%20successioni.md#^definizione-successione) è un [insieme](Teoria%20degli%20insiemi.md#^definizione-insieme) discreto%% link %%, cioè costituito solo da [punti isolati](Topologia%20dei%20reali.md#^definizione-punto-isolato)%% perché? %%, pertanto la [successione](Limiti%20di%20successioni.md#^definizione-successione) è una [funzione continua](Funzioni%20continue.md#^definizione-funzione-continua)%% perché? %%.
 
-Inoltre, essendo illimitato superiormente%% link %%, si ha che $+\infty$ è un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) per il dominio%% link %% della [successione](Limiti%20di%20successioni.md#^definizione-successione)%% perché? %%. È quindi l'unico [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione)%% perché? %%. Ne segue che per le [successioni](Limiti%20di%20successioni.md#^definizione-successione) l'unico [limite](Matematica/Analisi%20matematica/Limiti/_index.md#^definizione-limite) che ha senso calcolare è quello per la variabile $n$ che tende a $+ \infty$.
+Inoltre, essendo illimitato superiormente%% link %%, si ha che $+\infty$ è un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) per il dominio%% link %% della [successione](Limiti%20di%20successioni.md#^definizione-successione)%% perché? %%. È quindi l'unico [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione)%% perché? %%. Ne segue che per le [successioni](Limiti%20di%20successioni.md#^definizione-successione) l'unico [limite](Limiti.md#^definizione-limite) che ha senso calcolare è quello per la variabile $n$ che tende a $+ \infty$.
 
-Richiamiamo la [definizione di _limite_](Matematica/Analisi%20matematica/Limiti/_index.md#^definizione-limite), adattandola alle [successioni](Limiti%20di%20successioni.md#^definizione-successione), per $n \to + \infty$.
+Richiamiamo la [definizione di _limite_](Limiti.md#^definizione-limite), adattandola alle [successioni](Limiti%20di%20successioni.md#^definizione-successione), per $n \to + \infty$.
 
 > [!definizione]+ Definizione: limite di successione
 > 
-> Data una [successione](Limiti%20di%20successioni.md#^definizione-successione) $(a_n)$ e un valore%% link %% $l \in \mathbb{R} \cup \{ \pm \infty \}$, diciamo che **$(a_n)$ ha [limite](Matematica/Analisi%20matematica/Limiti/_index.md#^definizione-limite) $l$ per $n$ che tende a $+ \infty$** se, per ogni [intorno](Topologia%20dei%20reali.md#^definizione-intorno-di-un-punto) $I(l)$ di $l$, esiste un $n_0 \in \mathbb{N}$ tale che per ogni $n \ge n_0$ si ha che $a_n \in I(l)$. In tal caso scriviamo
+> Data una [successione](Limiti%20di%20successioni.md#^definizione-successione) $(a_n)$ e un valore%% link %% $l \in \mathbb{R} \cup \{ \pm \infty \}$, diciamo che **$(a_n)$ ha [limite](Limiti.md#^definizione-limite) $l$ per $n$ che tende a $+ \infty$** se, per ogni [intorno](Topologia%20dei%20reali.md#^definizione-intorno-di-un-punto) $I(l)$ di $l$, esiste un $n_0 \in \mathbb{N}$ tale che per ogni $n \ge n_0$ si ha che $a_n \in I(l)$. In tal caso scriviamo
 > 
 > $$
 > \lim_{n \to + \infty} a_n = l
@@ -52,7 +49,7 @@ Richiamiamo la [definizione di _limite_](Matematica/Analisi%20matematica/Limiti/
 > $$
 ^definizione-limite-di-successione
 
-In base al valore%% link %% che può assumere il [limite](Limiti%20di%20successioni.md#^definizione-limite-di-successioni), la [successione](Limiti%20di%20successioni.md#^definizione-successione) può essere [_convergente_](Limiti%20di%20successioni.md#^definizione-convergenza-e-divergenza-di-successioni), [_divergente (positivamente o negativamente)_](Limiti%20di%20successioni.md#^definizione-convergenza-e-divergenza-di-successioni) o [_indeterminata_](Limiti%20di%20successioni.md#^definizione-convergenza-e-divergenza-di-successioni).
+In base al valore%% link %% che può assumere il [limite](Limiti%20di%20successioni.md#^definizione-limite-di-successione), la [successione](Limiti%20di%20successioni.md#^definizione-successione) può essere [_convergente_](Limiti%20di%20successioni.md#^definizione-convergenza-e-divergenza-di-successioni), [_divergente (positivamente o negativamente)_](Limiti%20di%20successioni.md#^definizione-convergenza-e-divergenza-di-successioni) o [_indeterminata_](Limiti%20di%20successioni.md#^definizione-convergenza-e-divergenza-di-successioni).
 
 > [!definizione]+ Definizione: convergenza e divergenza di successioni
 > 
@@ -60,12 +57,12 @@ In base al valore%% link %% che può assumere il [limite](Limiti%20di%20successi
 > - **converge a $l$** (oppure **$a_n$ è una [successione](Limiti%20di%20successioni.md#^definizione-successione) convergente**) se $\displaystyle\lim_{n} a_n = l \in \mathbb{R}$.
 > - **diverge positivamente** (oppure **$a_n$ è una [successione](Limiti%20di%20successioni.md#^definizione-successione) divergente positivamente**) se $\displaystyle\lim_{n} a_n = + \infty$.
 > - **diverge negativamente** (oppure **$a_n$ è una [successione](Limiti%20di%20successioni.md#^definizione-successione) divergente negativamente**) se $\displaystyle\lim_{n} a_n = - \infty$.
-> - **è indeterminata** se non esiste il [limite](Limiti%20di%20successioni.md#^definizione-limite-di-successioni) $\displaystyle\lim_{n} a_n$.
+> - **è indeterminata** se non esiste il [limite](Limiti%20di%20successioni.md#^definizione-limite-di-successione) $\displaystyle\lim_{n} a_n$.
 ^definizione-convergenza-e-divergenza-di-successioni
 
 > [!osservazione]+ Osservazione: casi specifici del limite di successioni
 > 
-> Se una [successione](Limiti%20di%20successioni.md#^definizione-successione) ha [limite](Limiti%20di%20successioni.md#^definizione-limite-di-successioni) $l \in \mathbb{R}$ (cioè è una [successione convergente](Limiti%20di%20successioni.md#^definizione-convergenza-e-divergenza-di-successioni)), si ha che
+> Se una [successione](Limiti%20di%20successioni.md#^definizione-successione) ha [limite](Limiti%20di%20successioni.md#^definizione-limite-di-successione) $l \in \mathbb{R}$ (cioè è una [successione convergente](Limiti%20di%20successioni.md#^definizione-convergenza-e-divergenza-di-successioni)), si ha che
 > 
 > $$
 > \begin{array}{}
@@ -75,7 +72,7 @@ In base al valore%% link %% che può assumere il [limite](Limiti%20di%20successi
 > \end{array}
 > $$
 > 
-> Invece, se ha [limite](Limiti%20di%20successioni.md#^definizione-limite-di-successioni) $l = \pm \infty$ (cioè è una [successione divergente positivamente o negativamente](Limiti%20di%20successioni.md#^definizione-convergenza-e-divergenza-di-successioni)), si ha che
+> Invece, se ha [limite](Limiti%20di%20successioni.md#^definizione-limite-di-successione) $l = \pm \infty$ (cioè è una [successione divergente positivamente o negativamente](Limiti%20di%20successioni.md#^definizione-convergenza-e-divergenza-di-successioni)), si ha che
 > 
 > $$
 > \begin{array}{}
@@ -93,21 +90,21 @@ In base al valore%% link %% che può assumere il [limite](Limiti%20di%20successi
 
 > [!osservazione]+ Osservazione: validità dei teoremi dei limiti nei limiti di successioni
 > 
-> Poiché i [limiti di successioni](Limiti%20di%20successioni.md#^definizione-limite-di-successioni) non sono altro che [limiti](Matematica/Analisi%20matematica/Limiti/_index.md#^definizione-limite) di [funzioni](Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-funzione) per $n \to + \infty$, per essi valgono tutti i teoremi%% link %% e le considerazioni fatte per questi ultimi, in particolare:
-> - il [teorema di unicità del limite](Matematica/Analisi%20matematica/Limiti/_index.md#^teorema-di-unicita-del-limite),
+> Poiché i [limiti di successioni](Limiti%20di%20successioni.md#^definizione-limite-di-successione) non sono altro che [limiti](Limiti.md#^definizione-limite) di [funzioni](Funzioni.md#^definizione-funzione) per $n \to + \infty$, per essi valgono tutti i teoremi%% link %% e le considerazioni fatte per questi ultimi, in particolare:
+> - il [teorema di unicità del limite](Limiti.md#^teorema-di-unicita-del-limite),
 > - il [teorema di limitatezza locale](Proprietà%20locali%20delle%20funzioni%20continue.md#^teorema-di-limitatezza-locale),
 > - il [teorema della permanenza del segno](Proprietà%20locali%20delle%20funzioni%20continue.md#^teorema-della-permanenza-del-segno) e le sue conseguenze,
 > - l'algebra dei limiti (somma, prodotto, quoziente e composizione)%% link %%,
 > - i teoremi del confronto%% link %% e le loro conseguenze,
 > - il teorema sui limiti delle successioni monotone%% link %%.
 > 
-> Inoltre, anche per i [limiti di successioni](Limiti%20di%20successioni.md#^definizione-limite-di-successioni) si introducono le stesse [forme indeterminate](Forme%20indeterminate.md#^definizione-forma-indeterminata) e si hanno i seguenti [limiti notevoli](Limiti%20notevoli.md#^definizione-limite-notevole):
+> Inoltre, anche per i [limiti di successioni](Limiti%20di%20successioni.md#^definizione-limite-di-successione) si introducono le stesse [forme indeterminate](Forme%20indeterminate.md#^definizione-forma-indeterminata) e si hanno i seguenti [limiti notevoli](Limiti%20notevoli.md#^definizione-limite-notevole):
 > - $\displaystyle\lim_n \left(1 + \dfrac{1}{n}\right)^n = e$,
 > - $\forall k \in \mathbb{R}^{> 0}, \forall a \in \mathbb{R}^{>1} . \left( \displaystyle\lim_n \dfrac{n^k}{a_n} = 0 \right)$,
 > - $\forall k \in \mathbb{R}^{> 0}, \forall a \in \mathbb{R}^{>0} \setminus \{ 1 \} . \left( \displaystyle\lim_n \dfrac{\log_a n}{n^k} = 0 \right)$,
 > - $\forall k \in \mathbb{R}^{> 0}, \forall a \in (0,1) . \left( \displaystyle\lim_n n^ka^n = 0 \right)$.
 > 
-> Inoltre, anche ai [limiti di successioni](Limiti%20di%20successioni.md#^definizione-limite-di-successioni) si associano le nozioni di [infinito](Infiniti%20e%20infinitesimi.md#^definizione-infinito-e-infinitesimo), [infinitesimo](Infiniti%20e%20infinitesimi.md#^definizione-infinito-e-infinitesimo), [$o$-piccolo](Infiniti%20e%20infinitesimi.md#^definizione-o-piccolo), [equivalenza asintotica](Infiniti%20e%20infinitesimi.md#^definizione-equivalenza-asintotica), [ordini di infinito](Infiniti%20e%20infinitesimi.md#^definizione-ordine-di-infinito) e [di infinitesimo](Infiniti%20e%20infinitesimi.md#^definizione-ordine-di-infinitesimo), [infiniti e infinitesimi campione](Infiniti%20e%20infinitesimi.md#^definizione-infiniti-e-infinitesimi-campione) e [parte principale](Infiniti%20e%20infinitesimi.md#^definizione-infinitesimo-di-ordine-alfa-rispetto-all-infinitesimo-campione-u).
+> Inoltre, anche ai [limiti di successioni](Limiti%20di%20successioni.md#^definizione-limite-di-successione) si associano le nozioni di [infinito](Infiniti%20e%20infinitesimi.md#^definizione-infinito-e-infinitesimo), [infinitesimo](Infiniti%20e%20infinitesimi.md#^definizione-infinito-e-infinitesimo), [$o$-piccolo](Infiniti%20e%20infinitesimi.md#^definizione-o-piccolo), [equivalenza asintotica](Infiniti%20e%20infinitesimi.md#^definizione-equivalenza-asintotica), [ordini di infinito](Infiniti%20e%20infinitesimi.md#^definizione-ordine-di-infinito) e [di infinitesimo](Infiniti%20e%20infinitesimi.md#^definizione-ordine-di-infinitesimo), [infiniti e infinitesimi campione](Infiniti%20e%20infinitesimi.md#^definizione-infiniti-e-infinitesimi-campione) e [parte principale](Infiniti%20e%20infinitesimi.md#^definizione-infinitesimo-di-ordine-alfa-rispetto-all-infinitesimo-campione-u).
 
 %% 
 forse mettere a parte i limtii notevoli e dimostrarli uno a uno
@@ -119,11 +116,11 @@ esempio 5.6 pag. 217 lancelotti
 
 ## 1.1 - Teorema di caratterizzazione del limite
 
-Il prossimo teorema%% link %% lega tra loro le nozioni di [limite di funzione](Matematica/Analisi%20matematica/Limiti/_index.md#^definizione-limite) e di [limite di successione](Limiti%20di%20successioni.md#^definizione-limite-di-successioni).
+Il prossimo teorema%% link %% lega tra loro le nozioni di [limite di funzione](Limiti.md#^definizione-limite) e di [limite di successione](Limiti%20di%20successioni.md#^definizione-limite-di-successione).
 
 > [!teorema]+ Teorema di caratterizzazione del limite
 > 
-> Data una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-funzione) $f \colon A \subseteq \mathbb{R} \to \mathbb{R}$ (con $A \ne \emptyset$), un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R} \cup \{ \pm \infty \}$ per $A$ e un valore%% link %% $l \in \mathbb{R} \cup \{ \pm \infty \}$, allora $\displaystyle\lim_{x \to x_0} f(x) = l$ se e solo se, per ogni [successione](Limiti%20di%20successioni.md#^definizione-successione) $(x_n)$ in $A \setminus \{ x_0 \}$ che tende a $x_0$ si ha che $\displaystyle\lim_n f(x_n) = l$:
+> Data una [funzione](Funzioni.md#^definizione-funzione) $f \colon A \subseteq \mathbb{R} \to \mathbb{R}$ (con $A \ne \emptyset$), un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R} \cup \{ \pm \infty \}$ per $A$ e un valore%% link %% $l \in \mathbb{R} \cup \{ \pm \infty \}$, allora $\displaystyle\lim_{x \to x_0} f(x) = l$ se e solo se, per ogni [successione](Limiti%20di%20successioni.md#^definizione-successione) $(x_n)$ in $A \setminus \{ x_0 \}$ che tende a $x_0$ si ha che $\displaystyle\lim_n f(x_n) = l$:
 > 
 > $$
 > \begin{array}{}
@@ -194,9 +191,9 @@ Se da una [successione](Limiti%20di%20successioni.md#^definizione-successione) s
 > \end{array}
 > $$
 > 
-> Cioè, quello che stiamo facendo è selezionare tramite la [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-funzione) $\varphi$ gli indici dei [termini](Limiti%20di%20successioni.md#^definizione-successione) di $(a_n)$ che vogliamo associare a $(b_n)$.
+> Cioè, quello che stiamo facendo è selezionare tramite la [funzione](Funzioni.md#^definizione-funzione) $\varphi$ gli indici dei [termini](Limiti%20di%20successioni.md#^definizione-successione) di $(a_n)$ che vogliamo associare a $(b_n)$.
 > 
-> Una [sottosuccessione](Limiti%20di%20successioni.md#^definizione-sottosuccessione) di una [successione](Limiti%20di%20successioni.md#^definizione-successione) è quindi una [successione](Limiti%20di%20successioni.md#^definizione-successione) i cui [termini](Limiti%20di%20successioni.md#^definizione-successione) sono selezionati tra quelli della [successione](Limiti%20di%20successioni.md#^definizione-successione) di partenza, in modo che se un [elemento](Matematica/Teoria%20degli%20insiemi/_index.md#^definizione-insieme) è selezionato (per esempio $a_2$), allora i successivi sono selezionati tra quelli che hanno un indice maggiore di quest'ultimo (cioè $a_4$, $a_5$, $a_{13}$, ecc.).
+> Una [sottosuccessione](Limiti%20di%20successioni.md#^definizione-sottosuccessione) di una [successione](Limiti%20di%20successioni.md#^definizione-successione) è quindi una [successione](Limiti%20di%20successioni.md#^definizione-successione) i cui [termini](Limiti%20di%20successioni.md#^definizione-successione) sono selezionati tra quelli della [successione](Limiti%20di%20successioni.md#^definizione-successione) di partenza, in modo che se un [elemento](Teoria%20degli%20insiemi.md#^definizione-insieme) è selezionato (per esempio $a_2$), allora i successivi sono selezionati tra quelli che hanno un indice maggiore di quest'ultimo (cioè $a_4$, $a_5$, $a_{13}$, ecc.).
 
 %% 
 esempio 5.13 pag. 220 lancelotti

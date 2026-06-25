@@ -1,6 +1,3 @@
----
-title: PoliTeK
----
 
 > [!premessa]+ Premessa
 > 

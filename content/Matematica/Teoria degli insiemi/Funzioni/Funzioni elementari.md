@@ -1,6 +1,3 @@
----
-title: Funzioni elementari
----
 
 > [!premessa]+ Premessa
 > 
@@ -14,7 +11,7 @@ title: Funzioni elementari
 
 > [!definizione]+ Definizione: funzione lineare
 > 
-> Una **funzione lineare** è una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-funzione) del tipo
+> Una **funzione lineare** è una [funzione](Funzioni.md#^definizione-funzione) del tipo
 > 
 > $$
 > f(x) = mx + q
@@ -118,7 +115,7 @@ Proprio perché [$m$ indica la pendenza di una funzione lineare](Funzioni%20elem
 
 > [!teorema]+ Teorema della pendenza costante della funzione lineare
 > 
-> Data una [funzione lineare](Funzioni%20elementari.md#^definizione-funzione-lineare) $f(x) = mx+q$ con $x \in \mathbb{R}$ e $m,q \in \mathbb{R}$ fissati, allora per ogni coppia di punti%% link %% distinti%% link %% $x_1, x_2 \in \mathbb{R}$ si ha che il [quoziente di Newton](Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-quoziente-di-newton) è sempre pari a $m$:
+> Data una [funzione lineare](Funzioni%20elementari.md#^definizione-funzione-lineare) $f(x) = mx+q$ con $x \in \mathbb{R}$ e $m,q \in \mathbb{R}$ fissati, allora per ogni coppia di punti%% link %% distinti%% link %% $x_1, x_2 \in \mathbb{R}$ si ha che il [quoziente di Newton](Variazioni%20e%20quoziente%20di%20Newton.md#^definizione-quoziente-di-newton) è sempre pari a $m$:
 > 
 > $$
 > \forall x_1, x_2 \in \mathbb{R} . \left( x_1 \ne x_2 \implies \dfrac{\Delta f}{\Delta x} = \dfrac{f(x_2) - f(x_1)}{x_2 - x_1} = m \right) 
@@ -149,7 +146,7 @@ Proprio perché [$m$ indica la pendenza di una funzione lineare](Funzioni%20elem
 
 > [!definizione]+ Definizione: funzione potenza
 > 
-> Una **funzione potenza** è una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-funzione) del tipo
+> Una **funzione potenza** è una [funzione](Funzioni.md#^definizione-funzione) del tipo
 > 
 > $$
 > f(x) = x^n
@@ -188,7 +185,7 @@ Il comportamento delle funzioni potenza dipende dall'esponente $n$:
 
 > [!definizione]+ Definizione: funzione esponenziale
 > 
-> Una **funzione esponenziale** è una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-funzione) del tipo
+> Una **funzione esponenziale** è una [funzione](Funzioni.md#^definizione-funzione) del tipo
 > 
 > $$
 > f(x) = a^x
@@ -210,7 +207,7 @@ Il comportamento delle funzioni potenza dipende dalla base $a$:
 
 > [!definizione]+ Definizione: funzione logaritmica
 > 
-> Una **funzione logaritmica** è una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-funzione) del tipo
+> Una **funzione logaritmica** è una [funzione](Funzioni.md#^definizione-funzione) del tipo
 > 
 > $$
 > f(x) = \log_a x
@@ -233,7 +230,7 @@ Il comportamento delle funzioni potenza dipende dalla base del logaritmo $a$:
 
 > [!definizione]+ Definizione: funzione goniometrica
 > 
-> Una **funzione goniometrica** è una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-funzione) del tipo
+> Una **funzione goniometrica** è una [funzione](Funzioni.md#^definizione-funzione) del tipo
 > 
 > $$
 > f(x) = \sin x
@@ -285,8 +282,6 @@ Fare da 2.4 in poi del libro di Analisi
 > - 📚 Walter Dambrosio, _Analisi matematica - Fare e comprendere_, Zanichelli, 2018 (ISBN: `9788808220745`):
 > 	- Parte I - _I concetti dell'analisi matematica_:
 > 		- Capitolo 1 - _Funzioni e modelli_:
-> 			- 1 - _Funzioni e grafici_:
-> 				- 1.1 - _Funzioni e loro rappresentazioni_.
 > 			- 2 - _Grafici delle funzioni elementari_:
 > 				- 2.1 - _Funzioni lineari e funzioni potenza_.
 > 				- 2.2 - _Funzioni esponenziali e logaritmiche_.

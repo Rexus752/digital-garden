@@ -1,6 +1,3 @@
----
-title: Haskell
----
 
 > [!premessa]+ Premessa
 > 
@@ -18,7 +15,7 @@ prerequisiti:
 
 > [!definizione]+ Definizione: Haskell
 > 
-> **Haskell** è un linguaggio di programmazione%% link %% puramente funzionale%% link %% [lazy](Informatica/Lambda-calcolo/_index.md#^definizione-ordine-normale), general-purpose%% link %% e fortemente tipizzato%% link %%, creato%% da un apposito comitato alla fine degli anni ottanta%% principalmente per analizzare le caratteristiche dei linguaggi%% link %%. È stato chiamato così in onore del matematico e logico statunitense Haskell Curry%% link %%.
+> **Haskell** è un linguaggio di programmazione%% link %% puramente funzionale%% link %% [lazy](Lambda-calcolo.md#^definizione-ordine-normale), general-purpose%% link %% e fortemente tipizzato%% link %%, creato%% da un apposito comitato alla fine degli anni ottanta%% principalmente per analizzare le caratteristiche dei linguaggi%% link %%. È stato chiamato così in onore del matematico e logico statunitense Haskell Curry%% link %%.
 ^definizione-haskell
 
 %% 
@@ -55,37 +52,37 @@ Haskell was made by some **really smart folk** (with PhDs). Work on Haskell bega
 
 ## 1.1 - Installazione e compilatori
 
-Per usare [Haskell](Informatica/Lambda-calcolo/Haskell/_index.md#^definizione-haskell), come ogni altro linguaggio di programmazione%% Link %%, c'è bisogno di un IDE%% link %% e di un compilatore%% Link %%. Uno dei compilatori%% link %% più diffusi per [Haskell](Informatica/Lambda-calcolo/Haskell/_index.md#^definizione-haskell) è il [_Glasgow Haskell Compiler (GHC)_](Informatica/Lambda-calcolo/Haskell/_index.md#^definizione-glasgow-haskell-compiler-ghc).
+Per usare [Haskell](Haskell.md#^definizione-haskell), come ogni altro linguaggio di programmazione%% Link %%, c'è bisogno di un IDE%% link %% e di un compilatore%% Link %%. Uno dei compilatori%% link %% più diffusi per [Haskell](Haskell.md#^definizione-haskell) è il [_Glasgow Haskell Compiler (GHC)_](Haskell.md#^definizione-glasgow-haskell-compiler-ghc).
 
 > [!definizione]+ Definizione: Glasgow Haskell Compiler (GHC)
 > 
-> Il **Glasgow Haskell Compiler (GHC)** è un compilatore%% link %% per il linguaggio di programmazione%% link %% [Haskell](Informatica/Lambda-calcolo/Haskell/_index.md#^definizione-haskell), chiamato così perché inizialmente sviluppato presso l'Università di Glasgow in Scozia.
+> Il **Glasgow Haskell Compiler (GHC)** è un compilatore%% link %% per il linguaggio di programmazione%% link %% [Haskell](Haskell.md#^definizione-haskell), chiamato così perché inizialmente sviluppato presso l'Università di Glasgow in Scozia.
 > 
-> Permette di compilare%% link %% file%% link %% di codice%% Link %% [Haskell](Informatica/Lambda-calcolo/Haskell/_index.md#^definizione-haskell) (solitamente con estensione%% link %% `.hs`), ma supporta anche una modalità interattiva%% link %% da terminale%% link %% tramite il [GHCi](Informatica/Lambda-calcolo/Haskell/_index.md#^definizione-ghci).
+> Permette di compilare%% link %% file%% link %% di codice%% Link %% [Haskell](Haskell.md#^definizione-haskell) (solitamente con estensione%% link %% `.hs`), ma supporta anche una modalità interattiva%% link %% da terminale%% link %% tramite il [GHCi](Haskell.md#^definizione-ghci).
 ^definizione-glasgow-haskell-compiler-ghc
 
-Puoi trovare [qui](https://downloads.haskell.org/ghc/latest/docs/users_guide/index.html) la documentazione%% link %% completa sul [GHC](Informatica/Lambda-calcolo/Haskell/_index.md#^definizione-glasgow-haskell-compiler-ghc).
+Puoi trovare [qui](https://downloads.haskell.org/ghc/latest/docs/users_guide/index.html) la documentazione%% link %% completa sul [GHC](Haskell.md#^definizione-glasgow-haskell-compiler-ghc).
 
 > [!definizione]+ Definizione: GHCi
 > 
-> **GHCi** è l'interfaccia interattiva (REPL)%% link %% del [GHC](Informatica/Lambda-calcolo/Haskell/_index.md#^definizione-glasgow-haskell-compiler-ghc) che permette di eseguire espressioni%% Link %% [Haskell](Informatica/Lambda-calcolo/Haskell/_index.md#^definizione-haskell) direttamente da riga di comando%% Link %% senza dover compilare%% link %% un file sorgente%% link %%.
+> **GHCi** è l'interfaccia interattiva (REPL)%% link %% del [GHC](Haskell.md#^definizione-glasgow-haskell-compiler-ghc) che permette di eseguire espressioni%% Link %% [Haskell](Haskell.md#^definizione-haskell) direttamente da riga di comando%% Link %% senza dover compilare%% link %% un file sorgente%% link %%.
 ^definizione-ghci
 
-Per imparare a usare [Haskell](Informatica/Lambda-calcolo/Haskell/_index.md#^definizione-haskell) è molto più facile e veloce usare il [GHCi](Informatica/Lambda-calcolo/Haskell/_index.md#^definizione-ghci) anziché compilare%% Link %% ed eseguire%% Link %% nuovamente il programma%% Link %% per ogni modifica che si fa. Il [GHCi](Informatica/Lambda-calcolo/Haskell/_index.md#^definizione-ghci) è accessibile da terminale%% link %% tramite il comando%% Link %% `ghci`.
+Per imparare a usare [Haskell](Haskell.md#^definizione-haskell) è molto più facile e veloce usare il [GHCi](Haskell.md#^definizione-ghci) anziché compilare%% Link %% ed eseguire%% Link %% nuovamente il programma%% Link %% per ogni modifica che si fa. Il [GHCi](Haskell.md#^definizione-ghci) è accessibile da terminale%% link %% tramite il comando%% Link %% `ghci`.
 
 > [!sintassi]+ Sintassi: uso del GHCi
 > 
-> All'interno del [GHCi](Informatica/Lambda-calcolo/Haskell/_index.md#^definizione-ghci) si possono chiamare%% link %% funzioni%% Link %% da file%% link %% [Haskell](Informatica/Lambda-calcolo/Haskell/_index.md#^definizione-haskell) che vengono _caricati_. Per _caricare_ un file%% link %% nel [GHCi](Informatica/Lambda-calcolo/Haskell/_index.md#^definizione-ghci), si usa il comando
+> All'interno del [GHCi](Haskell.md#^definizione-ghci) si possono chiamare%% link %% funzioni%% Link %% da file%% link %% [Haskell](Haskell.md#^definizione-haskell) che vengono _caricati_. Per _caricare_ un file%% link %% nel [GHCi](Haskell.md#^definizione-ghci), si usa il comando
 > 
 > ```haskell
 > :l <file_name.hs>
 > ```
 > 
-> Per esempio, per caricare un file%% link %% [Haskell](Informatica/Lambda-calcolo/Haskell/_index.md#^definizione-haskell) con nome `myfunctions.hs`, bisogna scrivere nel [GHCi](Informatica/Lambda-calcolo/Haskell/_index.md#^definizione-ghci) `:l myfunctions.hs`.
+> Per esempio, per caricare un file%% link %% [Haskell](Haskell.md#^definizione-haskell) con nome `myfunctions.hs`, bisogna scrivere nel [GHCi](Haskell.md#^definizione-ghci) `:l myfunctions.hs`.
 > 
-> Se il file%% Link %% `myfunctions.hs` viene modificato, per aggiornare le modifiche anche nel [GHCi](Informatica/Lambda-calcolo/Haskell/_index.md#^definizione-ghci) basta nuovamente scrivere `:l myfunctions.hs`, oppure equivalentemente `:r` che ricarica tutti i file già caricati.
+> Se il file%% Link %% `myfunctions.hs` viene modificato, per aggiornare le modifiche anche nel [GHCi](Haskell.md#^definizione-ghci) basta nuovamente scrivere `:l myfunctions.hs`, oppure equivalentemente `:r` che ricarica tutti i file già caricati.
 > 
-> Per uscire dal [GHCi](Informatica/Lambda-calcolo/Haskell/_index.md#^definizione-ghci) e tornare al terminale%% link %% basta premere `Ctrl+D`.
+> Per uscire dal [GHCi](Haskell.md#^definizione-ghci) e tornare al terminale%% link %% basta premere `Ctrl+D`.
 
 ---
 

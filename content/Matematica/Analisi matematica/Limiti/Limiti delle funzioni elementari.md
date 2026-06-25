@@ -1,6 +1,3 @@
----
-title: Limiti delle funzioni elementari
----
 
 > [!premessa]+ Premessa
 > 

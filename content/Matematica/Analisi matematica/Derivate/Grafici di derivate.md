@@ -1,6 +1,3 @@
----
-title: Grafici di derivate
----
 
 > [!premessa]+ Premessa
 > 
@@ -10,11 +7,11 @@ title: Grafici di derivate
 
 ---
 
-Proviamo a costruire i grafici delle [derivate](Matematica/Analisi%20matematica/Derivate/_index.md#^definizione-derivabilita-e-derivata-prima-di-una-funzione) a partire dalle [funzioni](Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-funzione).
+Proviamo a costruire i grafici delle [derivate](Derivate.md#^definizione-derivabilita-e-derivata-prima-di-una-funzione) a partire dalle [funzioni](Funzioni.md#^definizione-funzione).
 
-Per esempio, nella [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-funzione) $f(x) = x^3$, abbiamo che, dati $a,b$ punti di flesso verticale, per $x < a$ la pendenza è positiva, per $a < x < b$ la pendenza è negativa e per $x > b$ è nuovamente positiva. Nei punti $a$ e $b$, essendo punti di flesso, passerà per $(a,0)$ e per $(b,0)$.
+Per esempio, nella [funzione](Funzioni.md#^definizione-funzione) $f(x) = x^3$, abbiamo che, dati $a,b$ punti di flesso verticale, per $x < a$ la pendenza è positiva, per $a < x < b$ la pendenza è negativa e per $x > b$ è nuovamente positiva. Nei punti $a$ e $b$, essendo punti di flesso, passerà per $(a,0)$ e per $(b,0)$.
 
-Possiamo eliminare fin da subito le zone in cui sappiamo che la derivata sarà certamente positiva o negativa grazie al [teorema del legame fra la continuità e la derivabilità](content/Matematica/Analisi%20matematica/Derivate/_index.md#^teorema-del-legame-fra-la-continuita-e-la-derivabilita).
+Possiamo eliminare fin da subito le zone in cui sappiamo che la derivata sarà certamente positiva o negativa grazie al [teorema del legame fra la continuità e la derivabilità](Derivate.md#^teorema-del-legame-fra-la-continuita-e-la-derivabilita).
 
 ---
 

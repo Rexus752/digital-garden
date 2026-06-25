@@ -1,6 +1,3 @@
----
-title: Analisi matematica
----
 
 > [!premessa]+ Premessa
 > 

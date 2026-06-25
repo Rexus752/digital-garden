@@ -1,6 +1,3 @@
----
-title: Teoremi e dimostrazioni
----
 
 > [!premessa]+ Premessa
 > 

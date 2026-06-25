@@ -1,6 +1,3 @@
----
-title: Informatica a UniTo
----
 
 > [!premessa]+ Premessa
 > 

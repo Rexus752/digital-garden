@@ -1,6 +1,3 @@
----
-title: Relazioni tra insiemi
----
 
 > [!premessa]+ Premessa
 > 
@@ -10,19 +7,19 @@ title: Relazioni tra insiemi
 
 ---
 
-Le **relazioni tra insiemi** descrivono i legami che possono esistere tra due o più [insiemi](Matematica/Teoria%20degli%20insiemi/_index.md#^definizione-insieme). Queste relazioni sono fondamentali in [teoria degli insiemi](Matematica/Teoria%20degli%20insiemi/_index.md#^definizione-teoria-degli-insiemi).
+Le **relazioni tra insiemi** descrivono i legami che possono esistere tra due o più [insiemi](Teoria%20degli%20insiemi.md#^definizione-insieme). Queste relazioni sono fondamentali in [teoria degli insiemi](Teoria%20degli%20insiemi.md#^definizione-teoria-degli-insiemi).
 
 # 1 - Introduzione alle relazioni
 
 > [!definizione]+ Definizione: relazione $\color{#FF7FFF}n$-aria
 > 
-> Dati $n \ge 1$ [insiemi](Matematica/Teoria%20degli%20insiemi/_index.md#^definizione-insieme) non [vuoti](Matematica/Teoria%20degli%20insiemi/_index.md#^definizione-insieme-vuoto) $A_0, A_1, \ldots, A_{n-1}$, si definisce _**relazione $n$-aria**_ o _**relazione di grado $n$**_ e si denota "$\mathcal{R}$" un [sottoinsieme](Matematica/Teoria%20degli%20insiemi/_index.md#^definizione-sottoinsieme) del [prodotto cartesiano](Matematica/Teoria%20degli%20insiemi/_index.md#^definizione-prodotto-cartesiano-di-due-insiemi) tra tutti gli insiemi:
+> Dati $n \ge 1$ [insiemi](Teoria%20degli%20insiemi.md#^definizione-insieme) non [vuoti](Teoria%20degli%20insiemi.md#^definizione-insieme-vuoto) $A_0, A_1, \ldots, A_{n-1}$, si definisce _**relazione $n$-aria**_ o _**relazione di grado $n$**_ e si denota "$\mathcal{R}$" un [sottoinsieme](Teoria%20degli%20insiemi.md#^definizione-sottoinsieme) del [prodotto cartesiano](Teoria%20degli%20insiemi.md#^definizione-prodotto-cartesiano-di-due-insiemi) tra tutti gli insiemi:
 > 
 > $$
 > \mathcal{R} \subseteq A_0 \times A_1 \times \ldots \times A_{n-1}
 > $$
 > 
-> Nel caso di una relazione sottoinsieme di una [potenza $n$-sima](Matematica/Teoria%20degli%20insiemi/_index.md#^definizione-potenza-ennesima-di-un-insieme) $A^n$, si parla di _**relazione $n$-aria su $A$**_:
+> Nel caso di una relazione sottoinsieme di una [potenza $n$-sima](Teoria%20degli%20insiemi.md#^definizione-potenza-ennesima-di-un-insieme) $A^n$, si parla di _**relazione $n$-aria su $A$**_:
 > 
 > $$
 > R \subseteq A^n = \underbrace{A \times A \times \ldots \times A}_{n \text{volte}} 
@@ -87,7 +84,7 @@ Slide 13-14 di Viale
 
 > [!definizione]+ Definizione: relazione inversa
 > 
-> Dati due [insiemi](Matematica/Teoria%20degli%20insiemi/_index.md#^definizione-insieme) $A$ e $B$ e una loro [relazione binaria](Relazioni%20tra%20insiemi.md#^definizione-relazione-n-aria) $\mathcal{R} \subseteq A \times B$, si definisce _**relazione inversa**_ di $\mathcal{R}$ e si indica con "$\mathcal{R}^{-1}$" un [sottoinsieme](Matematica/Teoria%20degli%20insiemi/_index.md#^definizione-sottoinsieme) del [prodotto cartesiano](Matematica/Teoria%20degli%20insiemi/_index.md#^definizione-prodotto-cartesiano-di-due-insiemi) $B \times A$:
+> Dati due [insiemi](Teoria%20degli%20insiemi.md#^definizione-insieme) $A$ e $B$ e una loro [relazione binaria](Relazioni%20tra%20insiemi.md#^definizione-relazione-n-aria) $\mathcal{R} \subseteq A \times B$, si definisce _**relazione inversa**_ di $\mathcal{R}$ e si indica con "$\mathcal{R}^{-1}$" un [sottoinsieme](Teoria%20degli%20insiemi.md#^definizione-sottoinsieme) del [prodotto cartesiano](Teoria%20degli%20insiemi.md#^definizione-prodotto-cartesiano-di-due-insiemi) $B \times A$:
 > 
 > $$
 > \mathcal{R}^{-1} = \{ (b,a) \in B \times A \mid (a,b) \in \mathcal{R} \} \subseteq B \times A
@@ -128,7 +125,7 @@ Slide 19 di Viale
 
 > [!definizione]+ Definizione: proprietà delle relazioni binarie
 > 
-> Dati un [insieme](Matematica/Teoria%20degli%20insiemi/_index.md#^definizione-insieme) $A$ e una [relazione binaria](Relazioni%20tra%20insiemi.md#^definizione-relazione-n-aria) $\mathcal{R}$ su $A$ (cioè $\mathcal{R} \subseteq A^2$), essa può avere le seguenti _**proprietà**_:
+> Dati un [insieme](Teoria%20degli%20insiemi.md#^definizione-insieme) $A$ e una [relazione binaria](Relazioni%20tra%20insiemi.md#^definizione-relazione-n-aria) $\mathcal{R}$ su $A$ (cioè $\mathcal{R} \subseteq A^2$), essa può avere le seguenti _**proprietà**_:
 > - **Riflessività**: $\forall a \in A (a \mathcal{R} a)$.
 > - **Irriflessività**: $\forall a \in A (\lnot(a \mathcal{R} a ))$.
 > - **Simmetria**: $\forall a,b \in A (a \mathcal{R} b \implies b \mathcal{R} a)$.
@@ -139,7 +136,7 @@ Slide 19 di Viale
 
 > [!osservazione]+ Osservazione: relazione simmetrica solo se $\color{#7F7F7F} \mathcal{R} = \mathcal{R}^{-1}$
 > 
-> Dati un [insieme](Matematica/Teoria%20degli%20insiemi/_index.md#^definizione-insieme) $A$ e una [relazione binaria](Relazioni%20tra%20insiemi.md#^definizione-relazione-n-aria) $\mathcal{R}$ su $A$ (cioè $\mathcal{R} \subseteq A^2$), $\mathcal{R}$ è simmetrica se e solo se $\mathcal{R} = \mathcal{R}^{-1}$, ovvero se:
+> Dati un [insieme](Teoria%20degli%20insiemi.md#^definizione-insieme) $A$ e una [relazione binaria](Relazioni%20tra%20insiemi.md#^definizione-relazione-n-aria) $\mathcal{R}$ su $A$ (cioè $\mathcal{R} \subseteq A^2$), $\mathcal{R}$ è simmetrica se e solo se $\mathcal{R} = \mathcal{R}^{-1}$, ovvero se:
 > $$
 > \forall (a,b) \in A^2 (a \mathcal{R} b \iff a \mathcal{R}^{-1}b)
 > $$
@@ -204,7 +201,7 @@ Slide 19 di Viale
 
 > [!definizione]+ Definizione: relazione di equivalenza
 > 
-> Dato un [insieme](Matematica/Teoria%20degli%20insiemi/_index.md#^definizione-insieme) $A$, si definisce _**relazione di equivalenza**_ su $A$ e si denota con "$\sim$" una [relazione binaria](Relazioni%20tra%20insiemi.md#^definizione-relazione-n-aria) che rispetta le seguenti [proprietà](Relazioni%20tra%20insiemi.md#^definizione-proprieta-delle-relazioni-binarie):
+> Dato un [insieme](Teoria%20degli%20insiemi.md#^definizione-insieme) $A$, si definisce _**relazione di equivalenza**_ su $A$ e si denota con "$\sim$" una [relazione binaria](Relazioni%20tra%20insiemi.md#^definizione-relazione-n-aria) che rispetta le seguenti [proprietà](Relazioni%20tra%20insiemi.md#^definizione-proprieta-delle-relazioni-binarie):
 > - **Riflessività**: $\forall a \in A (a \mathcal{R} a)$.
 > - **Simmetria**: $\forall a,b \in A (a \mathcal{R} b \implies b \mathcal{R} a)$.
 > - **Transitività**: $\forall a,b,c \in A (a \mathcal{R} b \land b \mathcal{R} c \implies a \mathcal{R} c)$.
@@ -227,7 +224,7 @@ Slide 19 di Viale
 
 > [!definizione]+ Definizione: classe di equivalenza
 > 
-> Dati un [insieme](Matematica/Teoria%20degli%20insiemi/_index.md#^definizione-insieme) $A$ e una [relazione di equivalenza](Relazioni%20tra%20insiemi.md#^definizione-relazione-di-equivalenza) $\sim$ su $A$, la **classe di equivalenza** di un elemento $a \in A$ rispetto alla relazione di equivalenza $\sim$, indicata con "$[a]_\sim$", è l'insieme degli elementi di $A$ che hanno la [relazione di equivalenza](Relazioni%20tra%20insiemi.md#^definizione-relazione-di-equivalenza) $\sim$ con $a$:
+> Dati un [insieme](Teoria%20degli%20insiemi.md#^definizione-insieme) $A$ e una [relazione di equivalenza](Relazioni%20tra%20insiemi.md#^definizione-relazione-di-equivalenza) $\sim$ su $A$, la **classe di equivalenza** di un elemento $a \in A$ rispetto alla relazione di equivalenza $\sim$, indicata con "$[a]_\sim$", è l'insieme degli elementi di $A$ che hanno la [relazione di equivalenza](Relazioni%20tra%20insiemi.md#^definizione-relazione-di-equivalenza) $\sim$ con $a$:
 > $$
 > [a]_\sim = \{x \in A \mid x \sim a\}
 > $$
@@ -236,7 +233,7 @@ Slide 19 di Viale
 
 > [!definizione]+ Definizione: insieme quoziente
 >
-> Dati un [insieme](Matematica/Teoria%20degli%20insiemi/_index.md#^definizione-insieme) $A$ e una [relazione di equivalenza](Relazioni%20tra%20insiemi.md#^definizione-relazione-di-equivalenza) $\sim$ su $A$, l'insieme delle [classi di equivalenza](Relazioni%20tra%20insiemi.md#^definizione-classe-di-equivalenza) $[a]_\sim$ si dice _**insieme quoziente**_ di $X$ per la relazione $\sim$ e si indica con "$A/\sim$":
+> Dati un [insieme](Teoria%20degli%20insiemi.md#^definizione-insieme) $A$ e una [relazione di equivalenza](Relazioni%20tra%20insiemi.md#^definizione-relazione-di-equivalenza) $\sim$ su $A$, l'insieme delle [classi di equivalenza](Relazioni%20tra%20insiemi.md#^definizione-classe-di-equivalenza) $[a]_\sim$ si dice _**insieme quoziente**_ di $X$ per la relazione $\sim$ e si indica con "$A/\sim$":
 > $$
 > A/\sim = \{[a]_\sim \mid a \in A\}
 > $$
@@ -244,11 +241,11 @@ Slide 19 di Viale
 
 > [!esempio]- Esempio: relazione di equivalenza su automobili con stesso colore
 > 
-> Dati un [insieme](Matematica/Teoria%20degli%20insiemi/_index.md#^definizione-insieme) $A$ e una [relazione di equivalenza](Relazioni%20tra%20insiemi.md#^definizione-relazione-di-equivalenza) $\sim$ su $A$ letta come _"ha lo stesso colore di"_, allora una [classe di equivalenza](Relazioni%20tra%20insiemi.md#^definizione-classe-di-equivalenza) $[a]_\sim$ può essere quella che comprende tutte le automobili verdi, mentre l'[insieme quoziente](Relazioni%20tra%20insiemi.md#^definizione-insieme-quoziente) $A/\sim$ è l'insieme dei colori delle automobili.
+> Dati un [insieme](Teoria%20degli%20insiemi.md#^definizione-insieme) $A$ e una [relazione di equivalenza](Relazioni%20tra%20insiemi.md#^definizione-relazione-di-equivalenza) $\sim$ su $A$ letta come _"ha lo stesso colore di"_, allora una [classe di equivalenza](Relazioni%20tra%20insiemi.md#^definizione-classe-di-equivalenza) $[a]_\sim$ può essere quella che comprende tutte le automobili verdi, mentre l'[insieme quoziente](Relazioni%20tra%20insiemi.md#^definizione-insieme-quoziente) $A/\sim$ è l'insieme dei colori delle automobili.
 
 > [!esempio]- Esempio: insieme $\color{#7F7FFF} \mathbb{Q}$ dei numeri razionali come insieme quoziente
 > 
-> L'insieme $\mathbb{Q}$ dei numeri razionali%% link %% può essere espresso come un [insieme quoziente](Relazioni%20tra%20insiemi.md#^definizione-insieme-quoziente). Data una coppia $(p,q)$ ottenuta dal [prodotto cartesiano](Matematica/Teoria%20degli%20insiemi/_index.md#^definizione-prodotto-cartesiano-di-due-insiemi) $\mathbb{Z}\times (\mathbb{Z}\setminus\{0\})$ (quindi $p$ può essere qualsiasi numero intero, mentre $q$ qualsiasi numero intero eccetto lo $0$), si può definire una relazione di equivalenza come:
+> L'insieme $\mathbb{Q}$ dei numeri razionali%% link %% può essere espresso come un [insieme quoziente](Relazioni%20tra%20insiemi.md#^definizione-insieme-quoziente). Data una coppia $(p,q)$ ottenuta dal [prodotto cartesiano](Teoria%20degli%20insiemi.md#^definizione-prodotto-cartesiano-di-due-insiemi) $\mathbb{Z}\times (\mathbb{Z}\setminus\{0\})$ (quindi $p$ può essere qualsiasi numero intero, mentre $q$ qualsiasi numero intero eccetto lo $0$), si può definire una relazione di equivalenza come:
 > $$
 > (p, q) \sim (p', q') \iff pq' = p'q
 > $$
@@ -257,7 +254,7 @@ Slide 19 di Viale
 
 > [!osservazione]+ Osservazione: $\color{#7F7F7F} (A/\sim) \subseteq \mathcal{P}(A)$
 > 
-> Dati un [insieme](Matematica/Teoria%20degli%20insiemi/_index.md#^definizione-insieme) $A$ e una [relazione di equivalenza](Relazioni%20tra%20insiemi.md#^definizione-relazione-di-equivalenza) $\sim$ su $A$, l'[insieme quoziente](Relazioni%20tra%20insiemi.md#^definizione-insieme-quoziente) $A/\sim$ è una [famiglia](Matematica/Teoria%20degli%20insiemi/_index.md#^definizione-famiglia-di-insiemi) di sottoinsiemi di $A$, cioè è un sottoinsieme dell'[insieme delle parti](Matematica/Teoria%20degli%20insiemi/_index.md#^definizione-insieme-delle-parti) di $A$:
+> Dati un [insieme](Teoria%20degli%20insiemi.md#^definizione-insieme) $A$ e una [relazione di equivalenza](Relazioni%20tra%20insiemi.md#^definizione-relazione-di-equivalenza) $\sim$ su $A$, l'[insieme quoziente](Relazioni%20tra%20insiemi.md#^definizione-insieme-quoziente) $A/\sim$ è una [famiglia](Teoria%20degli%20insiemi.md#^definizione-famiglia-di-insiemi) di sottoinsiemi di $A$, cioè è un sottoinsieme dell'[insieme delle parti](Teoria%20degli%20insiemi.md#^definizione-insieme-delle-parti) di $A$:
 > $$
 > (A/\sim) \subseteq \mathcal{P}(A) 
 > $$
@@ -272,14 +269,14 @@ Slide 19 di Viale
 
 > [!esempio]- Esempio: campionato di serie A come insieme quoziente
 > 
-> Dato un [insieme](Matematica/Teoria%20degli%20insiemi/_index.md#^definizione-insieme) $X$ di tutti i giocatori di squadre di serie A e una [relazione binaria](Relazioni%20tra%20insiemi.md#^definizione-relazione-n-aria) $\mathcal{R}$ su $X$ stabilendo che due giocatori $a,b \in X$ sono in relazione ($a \mathcal{R} b$) se e solo se $a$ e $b$ giocano nella stessa squadra.
+> Dato un [insieme](Teoria%20degli%20insiemi.md#^definizione-insieme) $X$ di tutti i giocatori di squadre di serie A e una [relazione binaria](Relazioni%20tra%20insiemi.md#^definizione-relazione-n-aria) $\mathcal{R}$ su $X$ stabilendo che due giocatori $a,b \in X$ sono in relazione ($a \mathcal{R} b$) se e solo se $a$ e $b$ giocano nella stessa squadra.
 > 
 > La relazione $\mathcal{R}$ è chiaramente riflessiva, simmetrica e transitiva, quindi è una [relazione di equivalenza](Relazioni%20tra%20insiemi.md#^definizione-relazione-di-equivalenza) su $X$.%% far vedere come sono rispettate queste proprietà %%
 > Le [classi di equivalenza](Relazioni%20tra%20insiemi.md#^definizione-classe-di-equivalenza) sono le squadre del campionato di serie A, mentre il [quoziente](Relazioni%20tra%20insiemi.md#^definizione-insieme-quoziente) $X / \mathcal{R}$ consiste nel campionato di serie A, ossia è l'insieme delle squadre che giocano in quel campionato.
 
 > [!esempio]- Esempio: regioni italiane come insieme quoziente
 > 
-> Dato un [insieme](Matematica/Teoria%20degli%20insiemi/_index.md#^definizione-insieme) $X$ di tutti i comuni italiani e una [relazione binaria](Relazioni%20tra%20insiemi.md#^definizione-relazione-n-aria) $\mathcal{R}$ su $X$ stabilendo che due comuni $a,b \in X$ sono in relazione ($a \mathcal{R} b$) se e solo se $a$ e $b$ si trovano nella stessa regione.
+> Dato un [insieme](Teoria%20degli%20insiemi.md#^definizione-insieme) $X$ di tutti i comuni italiani e una [relazione binaria](Relazioni%20tra%20insiemi.md#^definizione-relazione-n-aria) $\mathcal{R}$ su $X$ stabilendo che due comuni $a,b \in X$ sono in relazione ($a \mathcal{R} b$) se e solo se $a$ e $b$ si trovano nella stessa regione.
 > 
 > La relazione $\mathcal{R}$ è chiaramente riflessiva, simmetrica e transitiva, quindi è una [relazione di equivalenza](Relazioni%20tra%20insiemi.md#^definizione-relazione-di-equivalenza) su $X$.%% far vedere come sono rispettate queste proprietà %%
 > Le [classi di equivalenza](Relazioni%20tra%20insiemi.md#^definizione-classe-di-equivalenza) sono le regioni italiane, mentre il [quoziente](Relazioni%20tra%20insiemi.md#^definizione-insieme-quoziente) $X / \mathcal{R}$ consiste nell'insieme di tutte le regioni italiane.
@@ -325,7 +322,7 @@ Slide 19 di Viale
 
 > [!proposizione]+ Proposizione: due classi di equivalenza o sono disgiunte o coincidono
 > 
-> Data una [relazione di equivalenza](Relazioni%20tra%20insiemi.md#^definizione-relazione-di-equivalenza) $\sim$ su un [insieme](Matematica/Teoria%20degli%20insiemi/_index.md#^definizione-insieme) $A$ e due elementi $a,b \in A$, se $a \sim b$, allora $[a]_\sim = [b]_\sim$:
+> Data una [relazione di equivalenza](Relazioni%20tra%20insiemi.md#^definizione-relazione-di-equivalenza) $\sim$ su un [insieme](Teoria%20degli%20insiemi.md#^definizione-insieme) $A$ e due elementi $a,b \in A$, se $a \sim b$, allora $[a]_\sim = [b]_\sim$:
 > $$
 > a \sim b \implies [a]_\sim = [b]_\sim
 > $$
@@ -360,7 +357,7 @@ Slide 19 di Viale
 
 > [!esempio]- Esempio: relazione di congruenza modulo $\color{#7F7FFF} 3$
 > 
-> Consideriamo l'[insieme](Matematica/Teoria%20degli%20insiemi/_index.md#^definizione-insieme) $A = \{0, 1, 2, 3, 4, 5\}$ e la [relazione di equivalenza](Relazioni%20tra%20insiemi.md#^definizione-relazione-di-equivalenza) $\sim$ definita dalla congruenza modulo $3$%% link %%:
+> Consideriamo l'[insieme](Teoria%20degli%20insiemi.md#^definizione-insieme) $A = \{0, 1, 2, 3, 4, 5\}$ e la [relazione di equivalenza](Relazioni%20tra%20insiemi.md#^definizione-relazione-di-equivalenza) $\sim$ definita dalla congruenza modulo $3$%% link %%:
 > $$
 > a \sim b \iff a \equiv b (\text{mod} \ 3)
 > $$
@@ -384,7 +381,7 @@ Slide 19 di Viale
 
 > [!osservazione]+ Osservazione: insieme quoziente $\color{#7F7F7F} A/\sim$ partizione di $\color{#7F7F7F} A$
 > 
-> Data una [relazione di equivalenza](Relazioni%20tra%20insiemi.md#^definizione-relazione-di-equivalenza) $\sim$ su un [insieme](Matematica/Teoria%20degli%20insiemi/_index.md#^definizione-insieme) $A$, l'[insieme quoziente](Relazioni%20tra%20insiemi.md#^definizione-insieme-quoziente) $A/\sim$ è una partizione%% link %% di $A$, infatti:
+> Data una [relazione di equivalenza](Relazioni%20tra%20insiemi.md#^definizione-relazione-di-equivalenza) $\sim$ su un [insieme](Teoria%20degli%20insiemi.md#^definizione-insieme) $A$, l'[insieme quoziente](Relazioni%20tra%20insiemi.md#^definizione-insieme-quoziente) $A/\sim$ è una partizione%% link %% di $A$, infatti:
 > - Ogni $[a]_\sim \subseteq A$ è non vuota.
 > - Due classi di equivalenza distinte sono disgiunte (per la [proposizione](Relazioni%20tra%20insiemi.md#^proposizione-due-classi-di-equivalenza-o-sono-disgiunte-o-coincidono) precedente).
 > - Per ogni $a \in A$, si ha $a \in [a]_\sim \in A/\sim$.
@@ -529,7 +526,7 @@ Su questa osservazione:
 
 > [!definizione]+ Definizione: relazione di ordine
 > 
-> Dato un [insieme](Matematica/Teoria%20degli%20insiemi/_index.md#^definizione-insieme) $A$, una **relazione di ordine** $\le$ su $A$ (o, più semplicemente, un **ordine** o un **ordinamento** su $A$) è una [relazione](Relazioni%20tra%20insiemi.md#^definizione-relazione-n-aria) che rispetta le seguenti [proprietà](Relazioni%20tra%20insiemi.md#^definizione-proprieta-delle-relazioni-binarie):
+> Dato un [insieme](Teoria%20degli%20insiemi.md#^definizione-insieme) $A$, una **relazione di ordine** $\le$ su $A$ (o, più semplicemente, un **ordine** o un **ordinamento** su $A$) è una [relazione](Relazioni%20tra%20insiemi.md#^definizione-relazione-n-aria) che rispetta le seguenti [proprietà](Relazioni%20tra%20insiemi.md#^definizione-proprieta-delle-relazioni-binarie):
 > - **Riflessività**: $\forall a \in A (a \le a)$.
 > - **Antisimmetria**: $\forall a,b \in A (a \le b \land b \le a \implies a = b)$.
 > - **Transitività**: $\forall a,b,c \in A (a \le b \land b \le c \implies a \le c)$.
@@ -578,7 +575,7 @@ chiarire perché "ordine non-decrescente" anziché "ordine crescente"
 
 > [!definizione]+ Definizione: relazione di ordine totale
 > 
-> Dato un [insieme](Matematica/Teoria%20degli%20insiemi/_index.md#^definizione-insieme) $A$, una [relazione di ordine](Relazioni%20tra%20insiemi.md#^definizione-relazione-di-ordine) $\le$ su $A$ si dice **totale** (o **lineare**) se:
+> Dato un [insieme](Teoria%20degli%20insiemi.md#^definizione-insieme) $A$, una [relazione di ordine](Relazioni%20tra%20insiemi.md#^definizione-relazione-di-ordine) $\le$ su $A$ si dice **totale** (o **lineare**) se:
 > $$
 > \forall a,b \in A(a \le b \lor b \le a)
 > $$
@@ -740,7 +737,7 @@ le linee rosse sono per far vedere $c \preceq g$ e $b \preceq e$.
 
 > [!definizione]+ Definizione: relazione di ordine stretto
 > 
-> Dato un [insieme](Matematica/Teoria%20degli%20insiemi/_index.md#^definizione-insieme) $A$, una [relazione binaria](Relazioni%20tra%20insiemi.md#^definizione-relazione-n-aria) $<$ su $A$ si dice **stretta** se rispetta le seguenti [proprietà](Relazioni%20tra%20insiemi.md#^definizione-proprieta-delle-relazioni-binarie):
+> Dato un [insieme](Teoria%20degli%20insiemi.md#^definizione-insieme) $A$, una [relazione binaria](Relazioni%20tra%20insiemi.md#^definizione-relazione-n-aria) $<$ su $A$ si dice **stretta** se rispetta le seguenti [proprietà](Relazioni%20tra%20insiemi.md#^definizione-proprieta-delle-relazioni-binarie):
 > - **Irriflessività**: $\forall a \in A (\lnot(a < a ))$.
 > - **Transitività**: $\forall a,b,c \in A (a < b \land b < c \implies a < c)$.
 ^definizione-relazione-di-ordine-stretto
@@ -798,7 +795,7 @@ Vedremo a breve che un ordine stretto è esattamente la parte stretta di un ordi
 
 > [!definizione]+ Definizione: relazione di pre-ordine
 > 
-> Dato un [insieme](Matematica/Teoria%20degli%20insiemi/_index.md#^definizione-insieme) $A$, una **relazione di pre-ordine** $\precsim$ su $A$ (o **relazione di quasi-ordine**) è una [relazione](Relazioni%20tra%20insiemi.md#^definizione-relazione-n-aria) che rispetta le seguenti [proprietà](Relazioni%20tra%20insiemi.md#^definizione-proprieta-delle-relazioni-binarie):
+> Dato un [insieme](Teoria%20degli%20insiemi.md#^definizione-insieme) $A$, una **relazione di pre-ordine** $\precsim$ su $A$ (o **relazione di quasi-ordine**) è una [relazione](Relazioni%20tra%20insiemi.md#^definizione-relazione-n-aria) che rispetta le seguenti [proprietà](Relazioni%20tra%20insiemi.md#^definizione-proprieta-delle-relazioni-binarie):
 > - **Riflessività**: $\forall a \in A (a \precsim a)$.
 > - **Transitività**: $\forall a,b,c \in A (a \precsim b \land b \precsim c \implies a \precsim c)$.
 > 
@@ -1103,7 +1100,7 @@ sostituire $\precsim$ con $\lesssim$ per il pre-ordine?
 
 > [!definizione]+ Definizione: algebra reticolare
 > 
-> Un'**algebra reticolare** è un [insieme](Matematica/Teoria%20degli%20insiemi/_index.md#^definizione-insieme) $R$ dotato di due operazioni binarie%% link %% $\lor$ e $\land$ per cui valgano le seguenti proprietà:
+> Un'**algebra reticolare** è un [insieme](Teoria%20degli%20insiemi.md#^definizione-insieme) $R$ dotato di due operazioni binarie%% link %% $\lor$ e $\land$ per cui valgano le seguenti proprietà:
 > - $\forall x, y (x \land y = y \land x)$ e $\forall x, y (x \lor y = y \lor x)$.
 > - $\forall x, y, z (x \land (y \land z) = (x \land y) \land z)$ e $\forall x, y, z (x \lor (y \lor z) = (x \lor y) \lor z)$.
 > - $\forall x, y((x \lor y) \land y = y)$ e $\forall x, y((x \land y) \lor y = y)$%%(leggi di assorbimento)%%.
@@ -1154,11 +1151,11 @@ sostituire $\precsim$ con $\lesssim$ per il pre-ordine?
 > $$
 > \mathcal{Ret} = \{ (R, \le) \mid (R, \le) \text{ è un reticolo} \}
 > $$
-> la [famiglia](Matematica/Teoria%20degli%20insiemi/_index.md#^definizione-famiglia-di-insiemi) di tutti i [reticoli](Relazioni%20tra%20insiemi.md#^definizione-reticolo) e
+> la [famiglia](Teoria%20degli%20insiemi.md#^definizione-famiglia-di-insiemi) di tutti i [reticoli](Relazioni%20tra%20insiemi.md#^definizione-reticolo) e
 > $$
 > \mathcal{AlgRet} = \{ (R, \land, \lor) \mid (R, \land, \lor) \text{ è un'algebra reticolare} \}
 > $$
-> la [famiglia](Matematica/Teoria%20degli%20insiemi/_index.md#^definizione-famiglia-di-insiemi) di tutte le [algebre reticolari](Relazioni%20tra%20insiemi.md#^definizione-algebra-reticolare).
+> la [famiglia](Teoria%20degli%20insiemi.md#^definizione-famiglia-di-insiemi) di tutte le [algebre reticolari](Relazioni%20tra%20insiemi.md#^definizione-algebra-reticolare).
 > 
 > Abbiamo dimostrato che le trasformazioni
 > Ret \to AlgRet (R, \le) 7 \to (R, \land, \lor)
@@ -1173,8 +1170,8 @@ sostituire $\precsim$ con $\lesssim$ per il pre-ordine?
 
 > [!definizione]+ Definizione: grafo
 > 
-> Un **grafo** è una [coppia ordinata](Matematica/Teoria%20degli%20insiemi/_index.md#^definizione-tupla) $(V,E)$ dove:
-> - $V$: è un [insieme](Matematica/Teoria%20degli%20insiemi/_index.md#^definizione-insieme) non vuoto i cui elementi sono detti **_vertici_**.
+> Un **grafo** è una [coppia ordinata](Teoria%20degli%20insiemi.md#^definizione-tupla) $(V,E)$ dove:
+> - $V$: è un [insieme](Teoria%20degli%20insiemi.md#^definizione-insieme) non vuoto i cui elementi sono detti **_vertici_**.
 > - $E$: è una [relazione binaria](Relazioni%20tra%20insiemi.md#^definizione-relazione-n-aria) su $V$ che è simmetrica e irriflessiva%% link %%, cioè $\forall v \in V (\lnot (v E v))$.
 > 
 > Se due vertici $v,w \in V$ soddisfano la relazione binaria $v E w$, essi si dicono **_adiacenti_**.
@@ -1191,7 +1188,7 @@ sostituire $\precsim$ con $\lesssim$ per il pre-ordine?
 
 > [!osservazione]+ Osservazione: $\color{#7F7F7F} E$ come famiglia di sottoinsiemi di $\color{#7F7F7F} V$
 > 
-> Se in un grafo due vertici distinti $v, w \in V$ sono adiacenti, cioè $v E w$, allora anche $w E w$. Per questo motivo un grafo può essere visto come un [insieme](Matematica/Teoria%20degli%20insiemi/_index.md#^definizione-insieme) $V$ di vertici ed una [famiglia](Matematica/Teoria%20degli%20insiemi/_index.md#^definizione-famiglia-di-insiemi) $E$ di [sottoinsiemi](Matematica/Teoria%20degli%20insiemi/_index.md#^definizione-sottoinsieme) di $V$ di [cardinalità](Matematica/Teoria%20degli%20insiemi/_index.md#^definizione-cardinalita-di-un-insieme) $2$, cioè gli elementi di $E$ sono insiemi della forma $\{v, w\}$ con $v, w \in V$ e $v \ne w$; gli elementi di $E$ si dicono _spigoli_.
+> Se in un grafo due vertici distinti $v, w \in V$ sono adiacenti, cioè $v E w$, allora anche $w E w$. Per questo motivo un grafo può essere visto come un [insieme](Teoria%20degli%20insiemi.md#^definizione-insieme) $V$ di vertici ed una [famiglia](Teoria%20degli%20insiemi.md#^definizione-famiglia-di-insiemi) $E$ di [sottoinsiemi](Teoria%20degli%20insiemi.md#^definizione-sottoinsieme) di $V$ di [cardinalità](Teoria%20degli%20insiemi.md#^definizione-cardinalita-di-un-insieme) $2$, cioè gli elementi di $E$ sono insiemi della forma $\{v, w\}$ con $v, w \in V$ e $v \ne w$; gli elementi di $E$ si dicono _spigoli_.
 
 > [!definizione]+ Definizione: spigolo
 > 

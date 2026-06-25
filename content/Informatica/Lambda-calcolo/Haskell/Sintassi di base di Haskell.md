@@ -1,6 +1,3 @@
----
-title: Sintassi di base di Haskell
----
 
 > [!premessa]+ Premessa
 > 
@@ -14,11 +11,11 @@ trasformare [!sintassi]+ in [!definizione]+ e [!osservazione]
 
 ---
 
-Ora proviamo a esplorare un po' la sintassi di base di [Haskell](Informatica/Lambda-calcolo/Haskell/_index.md#^definizione-haskell).
+Ora proviamo a esplorare un po' la sintassi di base di [Haskell](Haskell.md#^definizione-haskell).
 
 > [!sintassi]+ Sintassi: aritmetica di base in Haskell
 > 
-> In [Haskell](Informatica/Lambda-calcolo/Haskell/_index.md#^definizione-haskell), è valido usare i soliti operatori aritmetici%% Link %% `+`, `-`, `*`, `/` e parentesi per dare precedenze alle operazioni:
+> In [Haskell](Haskell.md#^definizione-haskell), è valido usare i soliti operatori aritmetici%% Link %% `+`, `-`, `*`, `/` e parentesi per dare precedenze alle operazioni:
 > 
 > ```haskell
 > ghci> 2 + 15
@@ -37,7 +34,7 @@ Ora proviamo a esplorare un po' la sintassi di base di [Haskell](Informatica/Lam
 > -244950
 > ```
 > 
-> Se come secondo operando%% link %% c'è un numero negativo, bisogna racchiuderlo tra parentesi, altrimenti [GHC](Informatica/Lambda-calcolo/Haskell/_index.md#^definizione-glasgow-haskell-compiler-ghc) non capisce cosa vogliamo fare. Per esempio, la moltiplicazione%% Link %% tra `5` e `-3` si scrive `5 * (-3)` e non `5 * -3` perché in questo caso [GHC](Informatica/Lambda-calcolo/Haskell/_index.md#^definizione-glasgow-haskell-compiler-ghc) interpreta quel `-` non come segno negativo del `3` ma come una sottrazione%% link %%.
+> Se come secondo operando%% link %% c'è un numero negativo, bisogna racchiuderlo tra parentesi, altrimenti [GHC](Haskell.md#^definizione-glasgow-haskell-compiler-ghc) non capisce cosa vogliamo fare. Per esempio, la moltiplicazione%% Link %% tra `5` e `-3` si scrive `5 * (-3)` e non `5 * -3` perché in questo caso [GHC](Haskell.md#^definizione-glasgow-haskell-compiler-ghc) interpreta quel `-` non come segno negativo del `3` ma come una sottrazione%% link %%.
 > 
 > Anche l'algebra booleana%% link %% è, come al solito, utilizzabile tramite i valori di verità%% Link %% `True` e `False`, manipolabili attraverso le operazioni `&&`, `||` e `not`:
 > 
@@ -71,7 +68,7 @@ Ora proviamo a esplorare un po' la sintassi di base di [Haskell](Informatica/Lam
 
 > [!attenzione]+ Attenzione: errori in Haskell
 > 
-> Se proviamo a eseguire del codice%% link %% [Haskell](Informatica/Lambda-calcolo/Haskell/_index.md#^definizione-haskell) non corretto dal punto di vista sintattico, [GHC](Informatica/Lambda-calcolo/Haskell/_index.md#^definizione-glasgow-haskell-compiler-ghc) terminerà il programma%% link %% con un errore. Per esempio, provando a sommare il numero `5` e la stringa%% link %% `"llama"`, otteniamo:
+> Se proviamo a eseguire del codice%% link %% [Haskell](Haskell.md#^definizione-haskell) non corretto dal punto di vista sintattico, [GHC](Haskell.md#^definizione-glasgow-haskell-compiler-ghc) terminerà il programma%% link %% con un errore. Per esempio, provando a sommare il numero `5` e la stringa%% link %% `"llama"`, otteniamo:
 > 
 > ```haskell
 > ghci> 5 + "llama"
@@ -82,18 +79,18 @@ Ora proviamo a esplorare un po' la sintassi di base di [Haskell](Informatica/Lam
 > In an equation for ‘it': it = 5 + "llama"
 > ```
 > 
-> Ciò accade perché la stringa%% link %% `"llama"` non è un numero e [GHC](Informatica/Lambda-calcolo/Haskell/_index.md#^definizione-glasgow-haskell-compiler-ghc) non sa come sommargli `5`. La stessa cosa accadrebbe anche se al posto di `"llama"` mettessimo `"four"` o `"4"` perché anche queste sono stringhe e non numeri (fai caso alle virgolette `"` attorno al numero!).
+> Ciò accade perché la stringa%% link %% `"llama"` non è un numero e [GHC](Haskell.md#^definizione-glasgow-haskell-compiler-ghc) non sa come sommargli `5`. La stessa cosa accadrebbe anche se al posto di `"llama"` mettessimo `"four"` o `"4"` perché anche queste sono stringhe e non numeri (fai caso alle virgolette `"` attorno al numero!).
 ^attenzione-errori-in-haskell
 
 > [!consiglio]+ Consiglio: codici identificativi degli errori in Haskell
 > 
-> Ogni errore in [Haskell](Informatica/Lambda-calcolo/Haskell/_index.md#^definizione-haskell) ha un _codice identificativo_ della forma `X-Y`, dove `X` è il programma in cui è avvenuto l'errore (es. [`GHC`](Informatica/Lambda-calcolo/Haskell/_index.md#^definizione-glasgow-haskell-compiler-ghc)) e `Y` indica il numero dell'errore.
+> Ogni errore in [Haskell](Haskell.md#^definizione-haskell) ha un _codice identificativo_ della forma `X-Y`, dove `X` è il programma in cui è avvenuto l'errore (es. [`GHC`](Haskell.md#^definizione-glasgow-haskell-compiler-ghc)) e `Y` indica il numero dell'errore.
 > 
 > Per esempio, l'[errore di prima](Sintassi%20di%20base%20di%20Haskell.md#^attenzione-errori-in-haskell) è rappresentato dal codice `GHC-39999`. Puoi approfondire il significato di ogni codice nell'[Haskell Error Index](https://errors.haskell.org/).
 
 > [!definizione]+ Definizione: funzione in Haskell
 > 
-> In [Haskell](Informatica/Lambda-calcolo/Haskell/_index.md#^definizione-haskell) una **funzione**%% link %% è una trasformazione che prende un valore e produce un valore. È composta da due parti: la **firma di tipo**, che dichiara il nome della funzione e il [tipo](Tipizzazione%20in%20Haskell.md#^definizione-tipo-in-haskell) dei suoi argomenti%% link %% e del suo risultato%% link %%, e il **corpo**, che definisce come il risultato viene calcolato a partire dall'argomento.
+> In [Haskell](Haskell.md#^definizione-haskell) una **funzione**%% link %% è una trasformazione che prende un valore e produce un valore. È composta da due parti: la **firma di tipo**, che dichiara il nome della funzione e il [tipo](Tipizzazione%20in%20Haskell.md#^definizione-tipo-in-haskell) dei suoi argomenti%% link %% e del suo risultato%% link %%, e il **corpo**, che definisce come il risultato viene calcolato a partire dall'argomento.
 > 
 > Ad esempio:
 > 
@@ -107,7 +104,7 @@ Ora proviamo a esplorare un po' la sintassi di base di [Haskell](Informatica/Lam
 
 > [!sintassi]+ Sintassi: notazione delle funzioni
 > 
-> In [Haskell](Informatica/Lambda-calcolo/Haskell/_index.md#^definizione-haskell), ogni cosa è una funzione%% link %%, tra cui anche gli operatori aritmetici%% link %%. Per esempio, `*` è una funzione%% Link %% che prende due numeri e li moltiplica. Questo operatore usa la notazione infissa%% link %%, in cui l'operatore è posto in mezzo tra i due parametri%% link %% (es. per fare la moltiplicazione%% link %% tra `5` e `7` scriviamo `5 * 7` con il `*` nel mezzo).
+> In [Haskell](Haskell.md#^definizione-haskell), ogni cosa è una funzione%% link %%, tra cui anche gli operatori aritmetici%% link %%. Per esempio, `*` è una funzione%% Link %% che prende due numeri e li moltiplica. Questo operatore usa la notazione infissa%% link %%, in cui l'operatore è posto in mezzo tra i due parametri%% link %% (es. per fare la moltiplicazione%% link %% tra `5` e `7` scriviamo `5 * 7` con il `*` nel mezzo).
 > 
 > La maggior parte delle funzioni%% link %%, però, usa la notazione prefissa%% link %%, cioè quella in cui l'operatore è posto _prima_ dei parametri che richiede. Per esempio, se vogliamo usare la funzione%% link %% `succ` che restituisce il successore%% link %% di un numero intero%% link %% per trovare il successore di `6`, dobbiamo scrivere `succ 6`:
 > 
@@ -125,9 +122,9 @@ Ora proviamo a esplorare un po' la sintassi di base di [Haskell](Informatica/Lam
 > 101  
 > ```
 > 
-> In [Haskell](Informatica/Lambda-calcolo/Haskell/_index.md#^definizione-haskell) si usa la notazione prefissa%% link %% per rendere la notazione il più simile possibile a quanto avviene nel [$\lambda$-calcolo](Informatica/Lambda-calcolo/_index.md#^definizione-lambda-calcolo), nelle cui [applicazioni](Informatica/Lambda-calcolo/_index.md#^definizione-applicazione) viene posta prima la funzione%% Link %% e poi gli argomenti da applicare a quella funzione%% Link %%.
+> In [Haskell](Haskell.md#^definizione-haskell) si usa la notazione prefissa%% link %% per rendere la notazione il più simile possibile a quanto avviene nel [$\lambda$-calcolo](Lambda-calcolo.md#^definizione-lambda-calcolo), nelle cui [applicazioni](Lambda-calcolo.md#^definizione-applicazione) viene posta prima la funzione%% Link %% e poi gli argomenti da applicare a quella funzione%% Link %%.
 > 
-> L'[applicazione](Informatica/Lambda-calcolo/_index.md#^definizione-applicazione) di funzioni%% link %% ha la più alta precedenza tra tutti gli operatori. Per esempio, non c'è differenza tra lo scrivere
+> L'[applicazione](Lambda-calcolo.md#^definizione-applicazione) di funzioni%% link %% ha la più alta precedenza tra tutti gli operatori. Per esempio, non c'è differenza tra lo scrivere
 > 
 > ```haskell
 > ghci> succ 9 + max 5 4 + 1  
@@ -217,11 +214,11 @@ There are two noteworthy things here. The first is that in the function name we 
 
 # 2 - Liste in Haskell
 
-Una delle strutture dati%% link %% più usate sono le liste%% link %% e in [Haskell](Informatica/Lambda-calcolo/Haskell/_index.md#^definizione-haskell) si possono implementare in diversi modi.
+Una delle strutture dati%% link %% più usate sono le liste%% link %% e in [Haskell](Haskell.md#^definizione-haskell) si possono implementare in diversi modi.
 
 > [!definizione]+ Definizione: lista in Haskell
 > 
-> In [Haskell](Informatica/Lambda-calcolo/Haskell/_index.md#^definizione-haskell), una **lista** è una struttura dati%% link %% omogenea%% link %% (cioè formata dallo stesso tipo di dati%% link %%). Una lista è rappresentata da due parentesi quadre `[]` che racchiudono gli elementi della lista separati da virgole, per esempio:
+> In [Haskell](Haskell.md#^definizione-haskell), una **lista** è una struttura dati%% link %% omogenea%% link %% (cioè formata dallo stesso tipo di dati%% link %%). Una lista è rappresentata da due parentesi quadre `[]` che racchiudono gli elementi della lista separati da virgole, per esempio:
 > 
 > ```haskell
 > ghci> lostNumbers = [4,8,15,16,23,42]  
@@ -234,7 +231,7 @@ Una delle strutture dati%% link %% più usate sono le liste%% link %% e in [Hask
 
 > [!definizione]+ Definizione: lista annidata in Haskell
 > 
-> In [Haskell](Informatica/Lambda-calcolo/Haskell/_index.md#^definizione-haskell) è possibile creare anche una **lista annidata**, cioè una [lista](Sintassi%20di%20base%20di%20Haskell.md#^definizione-lista-in-haskell) che contiene altre liste:
+> In [Haskell](Haskell.md#^definizione-haskell) è possibile creare anche una **lista annidata**, cioè una [lista](Sintassi%20di%20base%20di%20Haskell.md#^definizione-lista-in-haskell) che contiene altre liste:
 > 
 > ```haskell
 > ghci> b = [[1,2,3,4],[5,3,3,3],[1,2,2,3,4],[1,2,3]]  
@@ -259,11 +256,11 @@ Attenzione
 **Note:** `[]`, `[[]]` and`[[],[],[]]` are all different things. The first one is an empty list, the second one is a list that contains one empty list, the third one is a list that contains three empty lists.
 %%
 
-Esattamente come per il C%% link %%, anche [Haskell](Informatica/Lambda-calcolo/Haskell/_index.md#^definizione-haskell) considera le [stringhe](Sintassi%20di%20base%20di%20Haskell.md#^definizione-stringa-in-haskell) come [liste](Sintassi%20di%20base%20di%20Haskell.md#^definizione-lista-in-haskell) di caratteri%% link %%.
+Esattamente come per il C%% link %%, anche [Haskell](Haskell.md#^definizione-haskell) considera le [stringhe](Sintassi%20di%20base%20di%20Haskell.md#^definizione-stringa-in-haskell) come [liste](Sintassi%20di%20base%20di%20Haskell.md#^definizione-lista-in-haskell) di caratteri%% link %%.
 
 > [!definizione]+ Definizione: stringa in Haskell
 > 
-> In [Haskell](Informatica/Lambda-calcolo/Haskell/_index.md#^definizione-haskell) una **stringa** è una [lista](Sintassi%20di%20base%20di%20Haskell.md#^definizione-lista-in-haskell) di caratteri%% link %%. Ogni stringa può essere rappresentata con la solita notazione con le parentesi quadre `[]` che racchiudono i caratteri della stringa separati da virgole, oppure circondando la stringa con delle virgolette `""`:
+> In [Haskell](Haskell.md#^definizione-haskell) una **stringa** è una [lista](Sintassi%20di%20base%20di%20Haskell.md#^definizione-lista-in-haskell) di caratteri%% link %%. Ogni stringa può essere rappresentata con la solita notazione con le parentesi quadre `[]` che racchiudono i caratteri della stringa separati da virgole, oppure circondando la stringa con delle virgolette `""`:
 > 
 > ```haskell
 > ghci> "hello" == ['h', 'e', 'l', 'l', 'o']
@@ -275,7 +272,7 @@ Esattamente come per il C%% link %%, anche [Haskell](Informatica/Lambda-calcolo/
 
 > [!definizione]+ Definizione: operatore di concatenazione di liste
 > 
-> In [Haskell](Informatica/Lambda-calcolo/Haskell/_index.md#^definizione-haskell) l'**operatore di concatenazione** (o, in inglese, **_concat operator_**) **`++`** è un operatore%% link %% che prende come argomenti%% link %% due [liste](Sintassi%20di%20base%20di%20Haskell.md#^definizione-lista-in-haskell) e le concatena, cioè unisce le due [liste](Sintassi%20di%20base%20di%20Haskell.md#^definizione-lista-in-haskell) giustapponendo agli elementi della prima quella della seconda:
+> In [Haskell](Haskell.md#^definizione-haskell) l'**operatore di concatenazione** (o, in inglese, **_concat operator_**) **`++`** è un operatore%% link %% che prende come argomenti%% link %% due [liste](Sintassi%20di%20base%20di%20Haskell.md#^definizione-lista-in-haskell) e le concatena, cioè unisce le due [liste](Sintassi%20di%20base%20di%20Haskell.md#^definizione-lista-in-haskell) giustapponendo agli elementi della prima quella della seconda:
 > 
 > ```haskell
 > ghci> [1,2,3,4] ++ [5,6,7] == [1,2,3,4,5,6,7]
@@ -292,13 +289,13 @@ Esattamente come per il C%% link %%, anche [Haskell](Informatica/Lambda-calcolo/
 
 > [!attenzione]+ Attenzione: concatenazione di liste troppo grandi
 > 
-> Quando [concateniamo](Sintassi%20di%20base%20di%20Haskell.md#^definizione-operatore-di-concatenazione-di-liste) due [liste](Sintassi%20di%20base%20di%20Haskell.md#^definizione-lista-in-haskell), anche se si concatena una [lista](Sintassi%20di%20base%20di%20Haskell.md#^definizione-lista-in-haskell) _singoletto_%% link %% (cioè con un singolo elemento) a una lista, per esempio `[1,2,3] ++ [4]`, internamente [Haskell](Informatica/Lambda-calcolo/Haskell/_index.md#^definizione-haskell) deve attraversare l'intera [lista](Sintassi%20di%20base%20di%20Haskell.md#^definizione-lista-in-haskell) a sinistra del `++` per trovarne l'ultimo elemento e concatenarle la seconda lista.
+> Quando [concateniamo](Sintassi%20di%20base%20di%20Haskell.md#^definizione-operatore-di-concatenazione-di-liste) due [liste](Sintassi%20di%20base%20di%20Haskell.md#^definizione-lista-in-haskell), anche se si concatena una [lista](Sintassi%20di%20base%20di%20Haskell.md#^definizione-lista-in-haskell) _singoletto_%% link %% (cioè con un singolo elemento) a una lista, per esempio `[1,2,3] ++ [4]`, internamente [Haskell](Haskell.md#^definizione-haskell) deve attraversare l'intera [lista](Sintassi%20di%20base%20di%20Haskell.md#^definizione-lista-in-haskell) a sinistra del `++` per trovarne l'ultimo elemento e concatenarle la seconda lista.
 > 
-> Ciò non è un problema con [liste](Sintassi%20di%20base%20di%20Haskell.md#^definizione-lista-in-haskell) anche con qualche centinaio di elementi, però se si usa l'[operatore di concatenazione `++`](Sintassi%20di%20base%20di%20Haskell.md#^definizione-operatore-di-concatenazione-di-liste) su [liste](Sintassi%20di%20base%20di%20Haskell.md#^definizione-lista-in-haskell) troppo grandi (es. da centinaia di milioni di elementi) [Haskell](Informatica/Lambda-calcolo/Haskell/_index.md#^definizione-haskell) ci metterà un pochino a scorrerla tutta.
+> Ciò non è un problema con [liste](Sintassi%20di%20base%20di%20Haskell.md#^definizione-lista-in-haskell) anche con qualche centinaio di elementi, però se si usa l'[operatore di concatenazione `++`](Sintassi%20di%20base%20di%20Haskell.md#^definizione-operatore-di-concatenazione-di-liste) su [liste](Sintassi%20di%20base%20di%20Haskell.md#^definizione-lista-in-haskell) troppo grandi (es. da centinaia di milioni di elementi) [Haskell](Haskell.md#^definizione-haskell) ci metterà un pochino a scorrerla tutta.
 
 > [!definizione]+ Definizione: operatore di anteposizione di un elemento a una lista
 > 
-> In [Haskell](Informatica/Lambda-calcolo/Haskell/_index.md#^definizione-haskell) l'**operatore di anteposizione** (o, in inglese, **_cons operator_**) `:` è un operatore%% link %% che prende come argomenti%% Link %% un elemento e una [lista](Sintassi%20di%20base%20di%20Haskell.md#^definizione-lista-in-haskell) e antepone l'elemento alla [lista](Sintassi%20di%20base%20di%20Haskell.md#^definizione-lista-in-haskell), cioè lo mette all'inizio della [lista](Sintassi%20di%20base%20di%20Haskell.md#^definizione-lista-in-haskell):
+> In [Haskell](Haskell.md#^definizione-haskell) l'**operatore di anteposizione** (o, in inglese, **_cons operator_**) `:` è un operatore%% link %% che prende come argomenti%% Link %% un elemento e una [lista](Sintassi%20di%20base%20di%20Haskell.md#^definizione-lista-in-haskell) e antepone l'elemento alla [lista](Sintassi%20di%20base%20di%20Haskell.md#^definizione-lista-in-haskell), cioè lo mette all'inizio della [lista](Sintassi%20di%20base%20di%20Haskell.md#^definizione-lista-in-haskell):
 > 
 > ```haskell
 > ghci> 1 : [2, 3, 4] == [1, 2, 3, 4]
@@ -343,7 +340,7 @@ formattare tutte le definizioni nel formato "In Haskell x è ..."
 
 > [!definizione]+ Definizione: operatore di accesso agli elementi di una lista
 > 
-> In [Haskell](Informatica/Lambda-calcolo/Haskell/_index.md#^definizione-haskell) è possibile accedere a un elemento di una [lista](Sintassi%20di%20base%20di%20Haskell.md#^definizione-lista-in-haskell) in base alla sua posizione (indice) attraverso l'operatore `!!`. Gli indici iniziano da `0`:
+> In [Haskell](Haskell.md#^definizione-haskell) è possibile accedere a un elemento di una [lista](Sintassi%20di%20base%20di%20Haskell.md#^definizione-lista-in-haskell) in base alla sua posizione (indice) attraverso l'operatore `!!`. Gli indici iniziano da `0`:
 > 
 > ```haskell
 > ghci> "Steve Buscemi" !! 6  
@@ -356,7 +353,7 @@ formattare tutte le definizioni nel formato "In Haskell x è ..."
 
 > [!definizione]+ Definizione: operatori di confronto di liste
 > 
-> In [Haskell](Informatica/Lambda-calcolo/Haskell/_index.md#^definizione-haskell) è possibile confrontare [liste](Sintassi%20di%20base%20di%20Haskell.md#^definizione-lista-in-haskell) usando gli operatori `<`, `<=`, `>` e `>=`, a condizione che gli elementi contenuti siano confrontabili. Le liste vengono confrontate in **ordine lessicografico**: prima si confrontano gli elementi in testa (il primo elemento), se sono uguali si confrontano i secondi elementi, e così via:
+> In [Haskell](Haskell.md#^definizione-haskell) è possibile confrontare [liste](Sintassi%20di%20base%20di%20Haskell.md#^definizione-lista-in-haskell) usando gli operatori `<`, `<=`, `>` e `>=`, a condizione che gli elementi contenuti siano confrontabili. Le liste vengono confrontate in **ordine lessicografico**: prima si confrontano gli elementi in testa (il primo elemento), se sono uguali si confrontano i secondi elementi, e così via:
 > 
 > ```haskell
 > ghci> [3,2,1] > [2,1,0]
@@ -533,11 +530,11 @@ Questo errore **non può essere catturato in fase di compilazione**, quindi è s
 
 ## 2.2 - Range list
 
-In [Haskell](Informatica/Lambda-calcolo/Haskell/_index.md#^definizione-haskell), quando vogliamo creare una [lista](Sintassi%20di%20base%20di%20Haskell.md#^definizione-lista-in-haskell) di numeri che seguono una sequenza aritmetica%% link %%, non è necessario scrivere manualmente ogni elemento. Le [range list](Sintassi%20di%20base%20di%20Haskell.md#^sintassi-range-list) sono una sintassi conveniente per generare [liste](Sintassi%20di%20base%20di%20Haskell.md#^definizione-lista-in-haskell) di elementi enumerabili, come numeri e caratteri. Un elemento è enumerabile%% link %% se fa parte di una sequenza ordinata (i numeri naturali, le lettere dell'alfabeto, ecc.), mentre nomi arbitrari non lo sono.
+In [Haskell](Haskell.md#^definizione-haskell), quando vogliamo creare una [lista](Sintassi%20di%20base%20di%20Haskell.md#^definizione-lista-in-haskell) di numeri che seguono una sequenza aritmetica%% link %%, non è necessario scrivere manualmente ogni elemento. Le [range list](Sintassi%20di%20base%20di%20Haskell.md#^sintassi-range-list) sono una sintassi conveniente per generare [liste](Sintassi%20di%20base%20di%20Haskell.md#^definizione-lista-in-haskell) di elementi enumerabili, come numeri e caratteri. Un elemento è enumerabile%% link %% se fa parte di una sequenza ordinata (i numeri naturali, le lettere dell'alfabeto, ecc.), mentre nomi arbitrari non lo sono.
 
 > [!definizione]+ Definizione: range list
 > 
-> In [Haskell](Informatica/Lambda-calcolo/Haskell/_index.md#^definizione-haskell) una **range list** è una [lista](Sintassi%20di%20base%20di%20Haskell.md#^definizione-lista-in-haskell) definita attraverso un intervallo, cioè usando la sintassi `[inizio..fine]` per creare una lista di elementi contenente tutti i valori compresi tra il valore `inizio` e il valore `fine`, compresi questi ultimi:
+> In [Haskell](Haskell.md#^definizione-haskell) una **range list** è una [lista](Sintassi%20di%20base%20di%20Haskell.md#^definizione-lista-in-haskell) definita attraverso un intervallo, cioè usando la sintassi `[inizio..fine]` per creare una lista di elementi contenente tutti i valori compresi tra il valore `inizio` e il valore `fine`, compresi questi ultimi:
 > 
 > ```haskell
 > ghci> [1..20]
@@ -564,7 +561,7 @@ In [Haskell](Informatica/Lambda-calcolo/Haskell/_index.md#^definizione-haskell),
 > [20,19,18,17,16,15,14,13,12,11,10,9,8,7,6,5,4,3,2,1]
 > ```
 > 
-> Omettendo il limite superiore, puoi creare [liste](Sintassi%20di%20base%20di%20Haskell.md#^definizione-lista-in-haskell) infinite. [Haskell](Informatica/Lambda-calcolo/Haskell/_index.md#^definizione-haskell) le valuta in modo [lazy](Informatica/Lambda-calcolo/_index.md#^definizione-ordine-normale), quindi calcola solo gli elementi di cui hai bisogno:
+> Omettendo il limite superiore, puoi creare [liste](Sintassi%20di%20base%20di%20Haskell.md#^definizione-lista-in-haskell) infinite. [Haskell](Haskell.md#^definizione-haskell) le valuta in modo [lazy](Lambda-calcolo.md#^definizione-ordine-normale), quindi calcola solo gli elementi di cui hai bisogno:
 > 
 > ```haskell
 > ghci> take 24 [13,26..]
@@ -623,7 +620,7 @@ Un modo molto più comodo per definire una [lista](Sintassi%20di%20base%20di%20H
 
 > [!definizione]+ Definizione: list comprehension
 > 
-> In [Haskell](Informatica/Lambda-calcolo/Haskell/_index.md#^definizione-haskell) una **list comprehension** è una [lista](Sintassi%20di%20base%20di%20Haskell.md#^definizione-lista-in-haskell) definita attraverso una funzione%% link %% [applicata](Informatica/Lambda-calcolo/_index.md#^definizione-applicazione) a ogni elemento di un'altra [lista](Sintassi%20di%20base%20di%20Haskell.md#^definizione-lista-in-haskell) passata in input. Ha la forma: `[funzione_output | variabile <- lista_input]`
+> In [Haskell](Haskell.md#^definizione-haskell) una **list comprehension** è una [lista](Sintassi%20di%20base%20di%20Haskell.md#^definizione-lista-in-haskell) definita attraverso una funzione%% link %% [applicata](Lambda-calcolo.md#^definizione-applicazione) a ogni elemento di un'altra [lista](Sintassi%20di%20base%20di%20Haskell.md#^definizione-lista-in-haskell) passata in input. Ha la forma: `[funzione_output | variabile <- lista_input]`
 > 
 > ```haskell
 > ghci> [x*2 | x <- [1..10]]
@@ -713,7 +710,7 @@ In questo esempio, `_` rappresenta ogni elemento della lista, che viene sostitui
 
 > [!esempio]- Esempio: list comprehension su stringhe
 > 
-> Poiché le [stringhe](Sintassi%20di%20base%20di%20Haskell.md#^definizione-stringa-in-haskell) sono [liste](Sintassi%20di%20base%20di%20Haskell.md#^definizione-lista-in-haskell) di caratteri in [Haskell](Informatica/Lambda-calcolo/Haskell/_index.md#^definizione-haskell), si può usare una [list comprehension](Sintassi%20di%20base%20di%20Haskell.md#^sintassi-list-comprehension) per filtrare e processare stringhe:
+> Poiché le [stringhe](Sintassi%20di%20base%20di%20Haskell.md#^definizione-stringa-in-haskell) sono [liste](Sintassi%20di%20base%20di%20Haskell.md#^definizione-lista-in-haskell) di caratteri in [Haskell](Haskell.md#^definizione-haskell), si può usare una [list comprehension](Sintassi%20di%20base%20di%20Haskell.md#^sintassi-list-comprehension) per filtrare e processare stringhe:
 > 
 > ```haskell
 > removeNonUppercase st = [ c | c <- st, c `elem` ['A'..'Z']]
@@ -745,7 +742,7 @@ Le [tuple](Sintassi%20di%20base%20di%20Haskell.md#^definizione-tupla-in-haskell)
 
 > [!definizione]+ Definizione: tupla in Haskell
 > 
-> In [Haskell](Informatica/Lambda-calcolo/Haskell/_index.md#^definizione-haskell), una **tupla** è una struttura dati%% link %% eterogenea%% link %% che combina un numero fisso e noto di valori, chiamati **componenti**. È denotata con parentesi tonde `()` contenente i suoi componenti separati da virgole:
+> In [Haskell](Haskell.md#^definizione-haskell), una **tupla** è una struttura dati%% link %% eterogenea%% link %% che combina un numero fisso e noto di valori, chiamati **componenti**. È denotata con parentesi tonde `()` contenente i suoi componenti separati da virgole:
 > 
 > ```haskell
 > ghci> (1, 2)
@@ -791,7 +788,7 @@ Le [tuple](Sintassi%20di%20base%20di%20Haskell.md#^definizione-tupla-in-haskell)
 
 > [!attenzione]+ Attenzione: non esiste la tupla _singoletto_
 > 
-> In [Haskell](Informatica/Lambda-calcolo/Haskell/_index.md#^definizione-haskell) non esiste il concetto di [tupla](Sintassi%20di%20base%20di%20Haskell.md#^definizione-tupla-in-haskell) _singoletto_, cioè con un solo elemento: una [tupla](Sintassi%20di%20base%20di%20Haskell.md#^definizione-tupla-in-haskell) di un elemento sarebbe semplicemente il valore stesso, quindi non avrebbe utilità pratica.
+> In [Haskell](Haskell.md#^definizione-haskell) non esiste il concetto di [tupla](Sintassi%20di%20base%20di%20Haskell.md#^definizione-tupla-in-haskell) _singoletto_, cioè con un solo elemento: una [tupla](Sintassi%20di%20base%20di%20Haskell.md#^definizione-tupla-in-haskell) di un elemento sarebbe semplicemente il valore stesso, quindi non avrebbe utilità pratica.
 
 ## 3.1 - Funzioni su tuple
 
@@ -799,7 +796,7 @@ Ora vediamo un po' di funzioni%% link %% che agiscono sulle [tuple](Sintassi%20d
 
 > [!definizione]+ Definizione: funzione `fst`
 > 
-> **`fst`** è una funzione%% link %% di [Haskell](Informatica/Lambda-calcolo/Haskell/_index.md#^definizione-haskell) che prende una [coppia](Sintassi%20di%20base%20di%20Haskell.md#^definizione-tupla-in-haskell) e restituisce il suo primo [componente](Sintassi%20di%20base%20di%20Haskell.md#^definizione-tupla-in-haskell):
+> **`fst`** è una funzione%% link %% di [Haskell](Haskell.md#^definizione-haskell) che prende una [coppia](Sintassi%20di%20base%20di%20Haskell.md#^definizione-tupla-in-haskell) e restituisce il suo primo [componente](Sintassi%20di%20base%20di%20Haskell.md#^definizione-tupla-in-haskell):
 > 
 > ```haskell
 > ghci> fst (9,11)
@@ -813,7 +810,7 @@ Ora vediamo un po' di funzioni%% link %% che agiscono sulle [tuple](Sintassi%20d
 
 > [!definizione]+ Definizione: funzione `snd`
 > 
-> **`snd`** è una funzione%% link %% di [Haskell](Informatica/Lambda-calcolo/Haskell/_index.md#^definizione-haskell) che prende una [coppia](Sintassi%20di%20base%20di%20Haskell.md#^definizione-tupla-in-haskell) e restituisce il suo secondo [componente](Sintassi%20di%20base%20di%20Haskell.md#^definizione-tupla-in-haskell):
+> **`snd`** è una funzione%% link %% di [Haskell](Haskell.md#^definizione-haskell) che prende una [coppia](Sintassi%20di%20base%20di%20Haskell.md#^definizione-tupla-in-haskell) e restituisce il suo secondo [componente](Sintassi%20di%20base%20di%20Haskell.md#^definizione-tupla-in-haskell):
 > 
 > ```haskell
 > ghci> snd (8,11)
@@ -827,7 +824,7 @@ Ora vediamo un po' di funzioni%% link %% che agiscono sulle [tuple](Sintassi%20d
 
 > [!definizione]+ Definizione: funzione `zip`
 > 
-> **`zip`** è una funzione%% link %% di [Haskell](Informatica/Lambda-calcolo/Haskell/_index.md#^definizione-haskell) che prende due [liste](Sintassi%20di%20base%20di%20Haskell.md#^definizione-lista-in-haskell) e le "cuce" insieme (come una cerniera lampo, cioè in inglese _zip_), creando una [lista](Sintassi%20di%20base%20di%20Haskell.md#^definizione-lista-in-haskell) di [coppie](Sintassi%20di%20base%20di%20Haskell.md#^definizione-tupla-in-haskell) con gli elementi corrispondenti abbinati a due a due:
+> **`zip`** è una funzione%% link %% di [Haskell](Haskell.md#^definizione-haskell) che prende due [liste](Sintassi%20di%20base%20di%20Haskell.md#^definizione-lista-in-haskell) e le "cuce" insieme (come una cerniera lampo, cioè in inglese _zip_), creando una [lista](Sintassi%20di%20base%20di%20Haskell.md#^definizione-lista-in-haskell) di [coppie](Sintassi%20di%20base%20di%20Haskell.md#^definizione-tupla-in-haskell) con gli elementi corrispondenti abbinati a due a due:
 > 
 > ```haskell
 > ghci> zip [1,2,3,4,5] [5,5,5,5,5]
@@ -846,7 +843,7 @@ Ora vediamo un po' di funzioni%% link %% che agiscono sulle [tuple](Sintassi%20d
 
 > [!osservazione]+ Osservazione: zip tra una lista finita e una infinita
 > 
-> Poiché [Haskell](Informatica/Lambda-calcolo/Haskell/_index.md#^definizione-haskell) è [lazy](Informatica/Lambda-calcolo/_index.md#^definizione-ordine-normale), è possibile fare una [`zip`](Sintassi%20di%20base%20di%20Haskell.md#^definizione-funzione-zip) tra una [lista](Sintassi%20di%20base%20di%20Haskell.md#^definizione-lista-in-haskell) finita%% link %% e una infinita%% link %%, perché quest'ultima verrà valutata solo finché serve (cioè per un numero di [componenti](Sintassi%20di%20base%20di%20Haskell.md#^definizione-tupla-in-haskell) pari a quello della lista finita):
+> Poiché [Haskell](Haskell.md#^definizione-haskell) è [lazy](Lambda-calcolo.md#^definizione-ordine-normale), è possibile fare una [`zip`](Sintassi%20di%20base%20di%20Haskell.md#^definizione-funzione-zip) tra una [lista](Sintassi%20di%20base%20di%20Haskell.md#^definizione-lista-in-haskell) finita%% link %% e una infinita%% link %%, perché quest'ultima verrà valutata solo finché serve (cioè per un numero di [componenti](Sintassi%20di%20base%20di%20Haskell.md#^definizione-tupla-in-haskell) pari a quello della lista finita):
 > 
 > ```haskell
 > ghci> zip [1..] ["apple", "orange", "cherry", "mango"]

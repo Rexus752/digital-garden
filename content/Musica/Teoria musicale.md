@@ -1,6 +1,3 @@
----
-title: Teoria musicale
----
 
 > [!premessa]+ Premessa
 > 

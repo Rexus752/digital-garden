@@ -1,5 +1,4 @@
 ---
-title: Tablature per basso
 alias: sheet-music
 ---
 

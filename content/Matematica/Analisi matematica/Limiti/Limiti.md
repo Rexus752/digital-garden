@@ -1,6 +1,3 @@
----
-title: Limiti
----
 
 > [!premessa]+ Premessa
 > 
@@ -64,7 +61,7 @@ Questa è la definizione di limite finito al finito.
 
 [!definizione] Definizione: limite finito al finito
 
-Data una [funzione](content/Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-funzione) $f \colon I_r(c) \setminus \{ c \} \to \mathbb{R}$ per qualche $r > 0$, si dice che $f$ ammette limite finito $l$ per $x$ che tende a $c$ e si scrive
+Data una [funzione](Funzioni.md#^definizione-funzione) $f \colon I_r(c) \setminus \{ c \} \to \mathbb{R}$ per qualche $r > 0$, si dice che $f$ ammette limite finito $l$ per $x$ che tende a $c$ e si scrive
 
 $$
 \lim_{x \to c} f(x) = l
@@ -90,9 +87,9 @@ Osservazioni:
 	hanno tutte limite uguale a $l$!
 %%
 
-Introduciamo quindi una delle nozioni più importanti dell'analisi matematica, ossia quella di [_limite_](Matematica/Analisi%20matematica/Limiti/_index.md#^definizione-limite). È alla base di altre nozioni fondamentali, quali ad esempio quella di _derivata_%% link %% e di _integrale_%% link %%. Prima di vedere la definizione, introduciamo questo concetto attraverso alcuni esempi che ci permettono di capire il suo significato.
+Introduciamo quindi una delle nozioni più importanti dell'analisi matematica, ossia quella di [_limite_](Limiti.md#^definizione-limite). È alla base di altre nozioni fondamentali, quali ad esempio quella di _derivata_%% link %% e di _integrale_%% link %%. Prima di vedere la definizione, introduciamo questo concetto attraverso alcuni esempi che ci permettono di capire il suo significato.
 
-Immaginiamo di avere una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-funzione)
+Immaginiamo di avere una [funzione](Funzioni.md#^definizione-funzione)
 $$
 \begin{align*}
 f \colon \mathbb{R} & \to \mathbb{R} \\
@@ -124,7 +121,7 @@ $$
 
 che si legge _limite per $x$ che tende a più infinito di $f(x)$ uguale a più infinito_.
 
-Consideriamo ora la [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-funzione)
+Consideriamo ora la [funzione](Funzioni.md#^definizione-funzione)
 
 $$
 \begin{align*}
@@ -139,11 +136,11 @@ Siamo interessati a conoscere qual è il comportamento di $g$ quando la variabil
 
 Se, tuttavia, $x$ si avvicina a $x_0 = 0$ in modo casuale, cambiando anche segno, e "saltando" da un lato all'altro rispetto allo $0$, non possiamo dire con certezza se sta diventando sempre più positivo o sempre più negativo, quindi potremmo concludere che per $x \to 0$ si ha che $g(x)$ non ha un comportamento ben determinato e il _limite_ di $g(x)$ per $x \to 0$ non esiste. Ecco che quindi, in questo caso, dobbiamo necessariamente specificare da quale lato vogliamo avvicinarci allo $0$, se da destra o da sinistra.
 
-Da questi esempi si capisce che la nozione di [_limite_](Matematica/Analisi%20matematica/Limiti/_index.md#^definizione-limite) ci dice qual è il _comportamento_ (o _andamento_) di una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-funzione) e dei valori che essa può assumere a seconda di come la sua variabile indipendente%% link %% _tende_ a un determinato "punto"%% link %% (e qui la parola _punto_ viene messa tra virgolette perché la variabile%% link %% può anche tendere verso $+\infty$ o $-\infty$ che **non** sono punti%% link %% di $\mathbb{R}$).
+Da questi esempi si capisce che la nozione di [_limite_](Limiti.md#^definizione-limite) ci dice qual è il _comportamento_ (o _andamento_) di una [funzione](Funzioni.md#^definizione-funzione) e dei valori che essa può assumere a seconda di come la sua variabile indipendente%% link %% _tende_ a un determinato "punto"%% link %% (e qui la parola _punto_ viene messa tra virgolette perché la variabile%% link %% può anche tendere verso $+\infty$ o $-\infty$ che **non** sono punti%% link %% di $\mathbb{R}$).
 
-> [!definizione]+ Definizione: limite di funzione
+> [!definizione]+ Definizione: limite
 > 
-> Data una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$, un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R} \cup \{ \pm \infty \}$ per $\text{dom}(f)$ e un valore%% link %% $l \in \mathbb{R} \cup \{ \pm \infty \}$, diciamo che **$f$ ha limite $l$ per $x$ che tende a $x_0$** se, per ogni [intorno](Topologia%20dei%20reali.md#^definizione-intorno-di-un-punto) $I(l)$ di $l$, esiste un [intorno](Topologia%20dei%20reali.md#^definizione-intorno-di-un-punto) $I(x_0)$ di $x_0$ tale che, per ogni $x \in \text{dom}(f)$ con $x \in I(x_0)$ e $x \ne x_0$, si ha che $f(x) \in I(l)$:
+> Data una [funzione](Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$, un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R} \cup \{ \pm \infty \}$ per $\text{dom}(f)$ e un valore%% link %% $l \in \mathbb{R} \cup \{ \pm \infty \}$, diciamo che **$f$ ha limite $l$ per $x$ che tende a $x_0$** se, per ogni [intorno](Topologia%20dei%20reali.md#^definizione-intorno-di-un-punto) $I(l)$ di $l$, esiste un [intorno](Topologia%20dei%20reali.md#^definizione-intorno-di-un-punto) $I(x_0)$ di $x_0$ tale che, per ogni $x \in \text{dom}(f)$ con $x \in I(x_0)$ e $x \ne x_0$, si ha che $f(x) \in I(l)$:
 > 
 > $$
 > \forall I(l), \exists I(x_0) . \big( x \in \text{dom}(f) \cap I(x_0) \land x = x_0 \implies f(x) \in I(l) \big) 
@@ -156,15 +153,15 @@ Da questi esempi si capisce che la nozione di [_limite_](Matematica/Analisi%20ma
 > $$
 > 
 > che si legge "_limite per $x$ che tende a $x_0$ di $f(x)$ uguale a $l$_" o "_$f(x)$ tende a $l$ per $x$ che tende a $x_0$_".
-^definizione-limite-di-funzione
+^definizione-limite
 
 > [!osservazione]+ Osservazione: non è necessario che $\color{#7F7F7F} x_0 \in \text{dom}(f)$
 > 
-> Nella [definizione di _limite_](Matematica/Analisi%20matematica/Limiti/_index.md#^definizione-limite), il punto%% link %% $x_0$ è un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) per $\text{dom}(f)$, quindi può anche **non** appartenere al dominio%% link %%: ecco perché si richiede che $x \ne x_0$. Un altro motivo per cui ciò accade è che, anche se $x_0 \in \text{dom}(f)$, il [limite](Matematica/Analisi%20matematica/Limiti/_index.md#^definizione-limite), sia che esista sia che non esista, non dipende dal valore%% link %% di $f$ in $x_0$, ma solo dai valori di $f$ nei punti%% link %% in un [intorno](Topologia%20dei%20reali.md#^definizione-intorno-di-un-punto) di $x_0$.
+> Nella [definizione di _limite_](Limiti.md#^definizione-limite), il punto%% link %% $x_0$ è un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) per $\text{dom}(f)$, quindi può anche **non** appartenere al dominio%% link %%: ecco perché si richiede che $x \ne x_0$. Un altro motivo per cui ciò accade è che, anche se $x_0 \in \text{dom}(f)$, il [limite](Limiti.md#^definizione-limite), sia che esista sia che non esista, non dipende dal valore%% link %% di $f$ in $x_0$, ma solo dai valori di $f$ nei punti%% link %% in un [intorno](Topologia%20dei%20reali.md#^definizione-intorno-di-un-punto) di $x_0$.
 
 # 1 - I casi specifici dei limiti
 
-La [definizione di _limite_](Matematica/Analisi%20matematica/Limiti/_index.md#^definizione-limite) che abbiamo introdotto contempla tutti i casi possibili, in cui $x$ può essere reale (cioè $x \in \mathbb{R}$) o infinito%% Link %% (cioè $x = \pm \infty$) ed $l$ può anch'esso essere reale (cioè $l \in \mathbb{R}$) o infinito%% link %% (cioè $l = \pm \infty$). Analizziamo quindi tutte le possibili combinazioni.
+La [definizione di _limite_](Limiti.md#^definizione-limite) che abbiamo introdotto contempla tutti i casi possibili, in cui $x$ può essere reale (cioè $x \in \mathbb{R}$) o infinito%% Link %% (cioè $x = \pm \infty$) ed $l$ può anch'esso essere reale (cioè $l \in \mathbb{R}$) o infinito%% link %% (cioè $l = \pm \infty$). Analizziamo quindi tutte le possibili combinazioni.
 
 %% fare tabella con tutte le combinazioni possibili con link a tutte le osservazioni %%
 
@@ -197,13 +194,13 @@ La [definizione di _limite_](Matematica/Analisi%20matematica/Limiti/_index.md#^d
 
 > [!esempio]- Esempio di un limite con $\color{#7F7FFF} x_0 \in \mathbb{R} \land l \in \mathbb{R}$
 > 
-> Per esempio, per la [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-funzione)
+> Per esempio, per la [funzione](Funzioni.md#^definizione-funzione)
 > 
 > $$
 > f(x) = \dfrac{x^2 - 1}{x - 1}
 > $$
 > 
-> diamo per scontato di sapere che vale il [limite](Matematica/Analisi%20matematica/Limiti/_index.md#^definizione-limite)
+> diamo per scontato di sapere che vale il [limite](Limiti.md#^definizione-limite)
 > 
 > $$
 > \lim_{x \to 1} f(x) = 2
@@ -247,9 +244,9 @@ La [definizione di _limite_](Matematica/Analisi%20matematica/Limiti/_index.md#^d
 
 > [!osservazione]+ Osservazione: basta un $\color{#7F7F7F} \delta$ qualsiasi nei limiti con $\color{#7F7F7F} x_0 \in \mathbb{R} \land l \in \mathbb{R}$
 > 
-> In un [limite con $x_0 \in \mathbb{R} \land l \in \mathbb{R}$](Matematica/Analisi%20matematica/Limiti/_index.md#^osservazione-limite-con-x0-finito-l-finito) non è importante trovare il miglior $\delta$, cioè la distanza minore possibile tra $f(x)$ ed $l$, ma ne basta uno qualunque che funzioni.
+> In un [limite con $x_0 \in \mathbb{R} \land l \in \mathbb{R}$](Limiti.md#^osservazione-limite-con-x0-finito-l-finito) non è importante trovare il miglior $\delta$, cioè la distanza minore possibile tra $f(x)$ ed $l$, ma ne basta uno qualunque che funzioni.
 > 
-> Per esempio, consideriamo la [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-funzione) $f \colon \mathbb{R} \to \mathbb{R}$ definita da
+> Per esempio, consideriamo la [funzione](Funzioni.md#^definizione-funzione) $f \colon \mathbb{R} \to \mathbb{R}$ definita da
 > 
 > $$
 > f(x) = \begin{cases}
@@ -258,13 +255,13 @@ La [definizione di _limite_](Matematica/Analisi%20matematica/Limiti/_index.md#^d
 > \end{cases}
 > $$
 > 
-> Vogliamo dimostrare che vale il [limite](Matematica/Analisi%20matematica/Limiti/_index.md#^definizione-limite)
+> Vogliamo dimostrare che vale il [limite](Limiti.md#^definizione-limite)
 > 
 > $$
 > \lim_{x \to 1} f(x) = 5
 > $$
 > 
-> Secondo la [definizione del caso $x_0 \in \mathbb{R} \land l \in \mathbb{R}$](Matematica/Analisi%20matematica/Limiti/_index.md#^osservazione-limite-con-x0-finito-l-finito), abbiamo che
+> Secondo la [definizione del caso $x_0 \in \mathbb{R} \land l \in \mathbb{R}$](Limiti.md#^osservazione-limite-con-x0-finito-l-finito), abbiamo che
 > 
 > $$
 > \forall \varepsilon > 0, \exists \delta > 0, \forall x \in \mathbb{R} . \big( 0 < |x - 1| < \delta \implies |f(x) - 5| < \varepsilon \big)
@@ -286,9 +283,9 @@ La [definizione di _limite_](Matematica/Analisi%20matematica/Limiti/_index.md#^d
 > \end{array}
 > $$
 > 
-> Dato che, per definizione, abbiamo anche $|x-1| < \delta$, prendiamo arbitrariamente $\displaystyle\delta = \dfrac{\varepsilon}{3}$, che non è necessariamente il $\delta$ più piccolo che possiamo prendere in questo [limite](Matematica/Analisi%20matematica/Limiti/_index.md#^definizione-limite).
+> Dato che, per definizione, abbiamo anche $|x-1| < \delta$, prendiamo arbitrariamente $\displaystyle\delta = \dfrac{\varepsilon}{3}$, che non è necessariamente il $\delta$ più piccolo che possiamo prendere in questo [limite](Limiti.md#^definizione-limite).
 > 
-> Ciò ci porta al fatto che, per ogni $x$ tale che $0 < |x-1| < \delta$, soddisfiamo automaticamente l'obiettivo $|f(x) - 5| < \varepsilon$, verificando così il [limite](Matematica/Analisi%20matematica/Limiti/_index.md#^definizione-limite). 
+> Ciò ci porta al fatto che, per ogni $x$ tale che $0 < |x-1| < \delta$, soddisfiamo automaticamente l'obiettivo $|f(x) - 5| < \varepsilon$, verificando così il [limite](Limiti.md#^definizione-limite). 
 > 
 > Perché $\displaystyle\delta = \dfrac{\varepsilon}{3}$ è "arbitrario"? Perché avremmo potuto prendere $\displaystyle\delta = \dfrac{\varepsilon}{4}$ o $\displaystyle\delta = \dfrac{\varepsilon}{10}$ o qualunque altro valore più piccolo di $\dfrac{\varepsilon}{3}$, ma tanto funzionerebbero tutti: $\dfrac{\varepsilon}{3}$ è semplicemente il più comodo che emerge dal calcolo.
 > 
@@ -325,13 +322,13 @@ La [definizione di _limite_](Matematica/Analisi%20matematica/Limiti/_index.md#^d
 
 > [!esempio]- Esempio di un limite con $\color{#7F7FFF} x_0 \in \mathbb{R} \land l = +\infty$
 > 
-> Per esempio, per la [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-funzione)
+> Per esempio, per la [funzione](Funzioni.md#^definizione-funzione)
 > 
 > $$
 > f(x) = \dfrac{1}{(x-1)^2}
 > $$
 > 
-> diamo per scontato di sapere che vale il [limite](Matematica/Analisi%20matematica/Limiti/_index.md#^definizione-limite)
+> diamo per scontato di sapere che vale il [limite](Limiti.md#^definizione-limite)
 > 
 > $$
 > \lim_{x \to 1} f(x) = + \infty
@@ -363,21 +360,21 @@ La [definizione di _limite_](Matematica/Analisi%20matematica/Limiti/_index.md#^d
 
 > [!osservazione]+ Osservazione: basta un $\color{#7F7F7F} \delta$ qualsiasi nei limiti con $\color{#7F7F7F} x_0 \in \mathbb{R} \land l = + \infty$
 > 
-> In un [limite con $x_0 \in \mathbb{R} \land l = + \infty$](Matematica/Analisi%20matematica/Limiti/_index.md#^osservazione-limite-con-x0-finito-l-piu-infinito) non è importante trovare il miglior $\delta$, cioè la distanza minore possibile tra $f(x)$ ed $l$, ma ne basta uno qualunque che funzioni.
+> In un [limite con $x_0 \in \mathbb{R} \land l = + \infty$](Limiti.md#^osservazione-limite-con-x0-finito-l-piu-infinito) non è importante trovare il miglior $\delta$, cioè la distanza minore possibile tra $f(x)$ ed $l$, ma ne basta uno qualunque che funzioni.
 > 
-> Per esempio, consideriamo la [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-funzione) $f \colon \mathbb{R} \to \mathbb{R}$ definita da
+> Per esempio, consideriamo la [funzione](Funzioni.md#^definizione-funzione) $f \colon \mathbb{R} \to \mathbb{R}$ definita da
 > 
 > $$
 > f(x) = \dfrac{1}{x^2}
 > $$
 > 
-> Vogliamo dimostrare che vale il [limite](Matematica/Analisi%20matematica/Limiti/_index.md#^definizione-limite)
+> Vogliamo dimostrare che vale il [limite](Limiti.md#^definizione-limite)
 > 
 > $$
 > \lim_{x \to 0} f(x) = + \infty
 > $$
 > 
-> Secondo la [definizione del caso $x_0 \in \mathbb{R} \land l = +\infty$](Matematica/Analisi%20matematica/Limiti/_index.md#^osservazione-limite-con-x0-finito-l-piu-infinito), abbiamo che
+> Secondo la [definizione del caso $x_0 \in \mathbb{R} \land l = +\infty$](Limiti.md#^osservazione-limite-con-x0-finito-l-piu-infinito), abbiamo che
 > 
 > $$
 > \forall a \in \mathbb{R}, \exists \delta > 0, \forall x \in \mathbb{R} . \left(  0 < |x| < \delta \implies \dfrac{1}{x^2} > a \right)
@@ -397,9 +394,9 @@ La [definizione di _limite_](Matematica/Analisi%20matematica/Limiti/_index.md#^d
 > \end{array}
 > $$
 > 
-> Dato che, per definizione, abbiamo anche $|x| < \delta$, prendiamo arbitrariamente $\displaystyle\delta = \dfrac{1}{\sqrt a}$, che non è necessariamente il $\delta$ più piccolo che possiamo prendere in questo [limite](Matematica/Analisi%20matematica/Limiti/_index.md#^definizione-limite).
+> Dato che, per definizione, abbiamo anche $|x| < \delta$, prendiamo arbitrariamente $\displaystyle\delta = \dfrac{1}{\sqrt a}$, che non è necessariamente il $\delta$ più piccolo che possiamo prendere in questo [limite](Limiti.md#^definizione-limite).
 > 
-> Ciò ci porta al fatto che, per ogni $x$ tale che $0 < |x| < \delta$, soddisfiamo automaticamente l'obiettivo $\dfrac{1}{x^2} > a$, verificando così il [limite](Matematica/Analisi%20matematica/Limiti/_index.md#^definizione-limite). 
+> Ciò ci porta al fatto che, per ogni $x$ tale che $0 < |x| < \delta$, soddisfiamo automaticamente l'obiettivo $\dfrac{1}{x^2} > a$, verificando così il [limite](Limiti.md#^definizione-limite). 
 
 %%
 Osservazione:
@@ -466,21 +463,21 @@ perché nelle parentesi tonde viene già richiesto che $x \ne 0$
 
 > [!osservazione]+ Osservazione: basta un $\color{#7F7F7F} a$ qualsiasi nei limiti con $\color{#7F7F7F} x_0 = + \infty \land l \in \mathbb{R}$
 > 
-> In un [limite con $x_0 = + \infty \land l \in \mathbb{R}$](Matematica/Analisi%20matematica/Limiti/_index.md#^osservazione-limite-con-x0-piu-infinito-l-finito) non è importante trovare il miglior $a$, cioè la soglia migliore per cui $x$ deve essere maggiore, ma ne basta uno qualunque che funzioni.
+> In un [limite con $x_0 = + \infty \land l \in \mathbb{R}$](Limiti.md#^osservazione-limite-con-x0-piu-infinito-l-finito) non è importante trovare il miglior $a$, cioè la soglia migliore per cui $x$ deve essere maggiore, ma ne basta uno qualunque che funzioni.
 > 
-> Per esempio, consideriamo la [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-funzione) $f \colon \mathbb{R} \to \mathbb{R}$ definita da
+> Per esempio, consideriamo la [funzione](Funzioni.md#^definizione-funzione) $f \colon \mathbb{R} \to \mathbb{R}$ definita da
 > 
 > $$
 > f(x) = \dfrac{1}{x}
 > $$
 > 
-> Vogliamo dimostrare che vale il [limite](Matematica/Analisi%20matematica/Limiti/_index.md#^definizione-limite)
+> Vogliamo dimostrare che vale il [limite](Limiti.md#^definizione-limite)
 > 
 > $$
 > \lim_{x \to +\infty} f(x) = 0
 > $$
 > 
-> Secondo la [definizione del caso $x_0 = + \infty \land l \in \mathbb{R}$](Matematica/Analisi%20matematica/Limiti/_index.md#^osservazione-limite-con-x0-piu-infinito-l-finito), abbiamo che
+> Secondo la [definizione del caso $x_0 = + \infty \land l \in \mathbb{R}$](Limiti.md#^osservazione-limite-con-x0-piu-infinito-l-finito), abbiamo che
 > 
 > $$
 > \forall \varepsilon > 0, \exists a \in \mathbb{R}, \forall x \in \mathbb{R} \setminus \{ 0 \} . \left( x > a \implies \left| \dfrac{1}{x} \right| < \varepsilon \right)
@@ -500,9 +497,9 @@ perché nelle parentesi tonde viene già richiesto che $x \ne 0$
 > \end{array}
 > $$
 > 
-> Dato che, per definizione, abbiamo anche $x > a$, prendiamo arbitrariamente $a = \dfrac{1}{\varepsilon}$, che non è necessariamente l'$a$ più piccolo che possiamo prendere in questo [limite](Matematica/Analisi%20matematica/Limiti/_index.md#^definizione-limite).
+> Dato che, per definizione, abbiamo anche $x > a$, prendiamo arbitrariamente $a = \dfrac{1}{\varepsilon}$, che non è necessariamente l'$a$ più piccolo che possiamo prendere in questo [limite](Limiti.md#^definizione-limite).
 > 
-> Ciò ci porta al fatto che, per ogni $x\in \mathbb{R} \setminus \{ 0 \}$ tale che $x > a$, soddisfiamo automaticamente l'obiettivo $\displaystyle\left| \dfrac{1}{x} \right| < \varepsilon$, verificando così il [limite](Matematica/Analisi%20matematica/Limiti/_index.md#^definizione-limite).
+> Ciò ci porta al fatto che, per ogni $x\in \mathbb{R} \setminus \{ 0 \}$ tale che $x > a$, soddisfiamo automaticamente l'obiettivo $\displaystyle\left| \dfrac{1}{x} \right| < \varepsilon$, verificando così il [limite](Limiti.md#^definizione-limite).
 
 ## 1.5 - $x_0 = - \infty \land l \in \mathbb{R}$
 
@@ -565,21 +562,21 @@ perché nelle parentesi tonde viene già richiesto che $x \ne 0$
 
 > [!osservazione]+ Osservazione: basta un $\color{#7F7F7F} b$ qualsiasi nei limiti con $\color{#7F7F7F} x_0 = + \infty \land l = + \infty$
 > 
-> In un [limite con $x_0 = + \infty \land l = + \infty$](Matematica/Analisi%20matematica/Limiti/_index.md#^osservazione-limite-con-x0-piu-infinito-l-piu-infinito) non è importante trovare il miglior $b$, cioè la soglia migliore per cui $x$ deve essere maggiore, ma ne basta uno qualunque che funzioni.
+> In un [limite con $x_0 = + \infty \land l = + \infty$](Limiti.md#^osservazione-limite-con-x0-piu-infinito-l-piu-infinito) non è importante trovare il miglior $b$, cioè la soglia migliore per cui $x$ deve essere maggiore, ma ne basta uno qualunque che funzioni.
 > 
-> Per esempio, consideriamo la [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-funzione) $f \colon \mathbb{R} \to \mathbb{R}$ definita da
+> Per esempio, consideriamo la [funzione](Funzioni.md#^definizione-funzione) $f \colon \mathbb{R} \to \mathbb{R}$ definita da
 > 
 > $$
 > f(x) = e^x
 > $$
 > 
-> Vogliamo dimostrare che vale il [limite](Matematica/Analisi%20matematica/Limiti/_index.md#^definizione-limite)
+> Vogliamo dimostrare che vale il [limite](Limiti.md#^definizione-limite)
 > 
 > $$
 > \lim_{x \to +\infty} e^x = + \infty
 > $$
 > 
-> Secondo la [definizione del caso $x_0 = + \infty \land l = + \infty$](Matematica/Analisi%20matematica/Limiti/_index.md#^osservazione-limite-con-x0-piu-infinito-l-piu-infinito), abbiamo che
+> Secondo la [definizione del caso $x_0 = + \infty \land l = + \infty$](Limiti.md#^osservazione-limite-con-x0-piu-infinito-l-piu-infinito), abbiamo che
 > 
 > $$
 > \forall a \in \mathbb{R}, \exists b \in \mathbb{R}, \forall x \in \mathbb{R} . \left( x > b \implies e^x > a \right)
@@ -597,9 +594,9 @@ perché nelle parentesi tonde viene già richiesto che $x \ne 0$
 > \end{array}
 > $$
 > 
-> Dato che, per definizione, abbiamo anche $x > b$, prendiamo arbitrariamente $b = \ln a$, che non è necessariamente il $b$ più grande che possiamo prendere in questo [limite](Matematica/Analisi%20matematica/Limiti/_index.md#^definizione-limite).
+> Dato che, per definizione, abbiamo anche $x > b$, prendiamo arbitrariamente $b = \ln a$, che non è necessariamente il $b$ più grande che possiamo prendere in questo [limite](Limiti.md#^definizione-limite).
 > 
-> Ciò ci porta al fatto che, per ogni $x\in \mathbb{R}$ tale che $x > b$, soddisfiamo automaticamente l'obiettivo $e^x > a$, verificando così il [limite](Matematica/Analisi%20matematica/Limiti/_index.md#^definizione-limite).
+> Ciò ci porta al fatto che, per ogni $x\in \mathbb{R}$ tale che $x > b$, soddisfiamo automaticamente l'obiettivo $e^x > a$, verificando così il [limite](Limiti.md#^definizione-limite).
 
 # 2 - Funzioni senza limite
 
@@ -617,7 +614,7 @@ perché nelle parentesi tonde viene già richiesto che $x \ne 0$
 > 
 > %% grafico della funzione %%
 > 
-> il suo [limite](Matematica/Analisi%20matematica/Limiti/_index.md#^definizione-limite)
+> il suo [limite](Limiti.md#^definizione-limite)
 > 
 > $$
 > \lim_{x \to 0} \text{sgn}(x)
@@ -635,7 +632,7 @@ perché nelle parentesi tonde viene già richiesto che $x \ne 0$
 > > 
 > > Poiché $|\text{sgn}(x)| \le l$, possiamo supporre che $l \in \mathbb{R}$, cioè $l \ne \pm \infty$.
 > > 
-> > Per la [definizione di limite con $x_0 \in \mathbb{R} \land l \in \mathbb{R}$](Matematica/Analisi%20matematica/Limiti/_index.md#^osservazione-limite-con-x0-finito-l-finito), abbiamo che
+> > Per la [definizione di limite con $x_0 \in \mathbb{R} \land l \in \mathbb{R}$](Limiti.md#^osservazione-limite-con-x0-finito-l-finito), abbiamo che
 > > 
 > > $$
 > > \forall \varepsilon > 0, \exists \delta > 0, \forall x \in \mathbb{R} . \big( 0 < |x| < \delta \implies |\text{sgn}(x) - l| < \varepsilon \big)
@@ -670,11 +667,11 @@ perché nelle parentesi tonde viene già richiesto che $x \ne 0$
 
 > [!osservazione]+ Osservazione: utilità della definizione del limite
 > 
-> La [definizione di _limite_](Matematica/Analisi%20matematica/Limiti/_index.md#^definizione-limite) non è utile ai fini del calcolo del limite, ma solo per verificare il valore del limite o per confutarne l'esistenza. 
+> La [definizione di _limite_](Limiti.md#^definizione-limite) non è utile ai fini del calcolo del limite, ma solo per verificare il valore del limite o per confutarne l'esistenza. 
 
 > [!esercizio]+ Esercizio
 > 
-> Provare che non esiste il [limite](Matematica/Analisi%20matematica/Limiti/_index.md#^definizione-limite)
+> Provare che non esiste il [limite](Limiti.md#^definizione-limite)
 > 
 > $$
 > \lim_{x \to 0} \dfrac{1}{x}
@@ -684,7 +681,7 @@ perché nelle parentesi tonde viene già richiesto che $x \ne 0$
 
 > [!teorema]+ Teorema di unicità del limite
 > 
-> Data una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$, un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R} \cup \{ \pm \infty \}$ per $\text{dom}(f)$ e due valori%% link %% $l_1,l_2 \in \mathbb{R} \cup \{ \pm\infty \}$ per i quali esiste il [limite](Matematica/Analisi%20matematica/Limiti/_index.md#^definizione-limite) $\displaystyle\lim_{x \to x_0}f(x)$, allora
+> Data una [funzione](Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$, un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R} \cup \{ \pm \infty \}$ per $\text{dom}(f)$ e due valori%% link %% $l_1,l_2 \in \mathbb{R} \cup \{ \pm\infty \}$ per i quali esiste il [limite](Limiti.md#^definizione-limite) $\displaystyle\lim_{x \to x_0}f(x)$, allora
 > 
 > $$
 > l_1 = l_2
@@ -702,12 +699,12 @@ Pagina 135 e 136del Lancelotti
 # 4 - Limiti laterali
 
 %% 
-Ora definiamo due particolari [limiti](Matematica/Analisi%20matematica/Limiti/_index.md#^definizione-limite), detti _limiti laterali_ perché ???, in particolare limite destro e limite sinistro.
+Ora definiamo due particolari [limiti](Limiti.md#^definizione-limite), detti _limiti laterali_ perché ???, in particolare limite destro e limite sinistro.
 %%
 
 > [!definizione]+ Definizione: limite destro
 > 
-> Data una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R}$ per $\text{dom}(f) \cap (x_0, + \infty)$ e un valore%% link %% $l \in \mathbb{R} \cup \{ \pm \infty \}$, diciamo che **$f$ ha limite destro $l$ per $x$ che tende a $x_0$** (o che **$f$ tende a $l$ per $x$ che tende a $x_0$ da destra**) se, per ogni [intorno](Topologia%20dei%20reali.md#^definizione-intorno-di-un-punto) $I(l)$ di $l$, esiste un [intorno destro](Topologia%20dei%20reali.md#^definizione-intorno-di-un-punto) $I^+(x_0)$ di $x_0$ tale che, per ogni $x \in \text{dom}(f)$ con $x \in I^+(x_0)$, si ha che $f(x) \in I(l)$:
+> Data una [funzione](Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R}$ per $\text{dom}(f) \cap (x_0, + \infty)$ e un valore%% link %% $l \in \mathbb{R} \cup \{ \pm \infty \}$, diciamo che **$f$ ha limite destro $l$ per $x$ che tende a $x_0$** (o che **$f$ tende a $l$ per $x$ che tende a $x_0$ da destra**) se, per ogni [intorno](Topologia%20dei%20reali.md#^definizione-intorno-di-un-punto) $I(l)$ di $l$, esiste un [intorno destro](Topologia%20dei%20reali.md#^definizione-intorno-di-un-punto) $I^+(x_0)$ di $x_0$ tale che, per ogni $x \in \text{dom}(f)$ con $x \in I^+(x_0)$, si ha che $f(x) \in I(l)$:
 > 
 > $$
 > \forall I(l) \text{ intorno di } l, \exists I^+(x_0) \text{ intorno destro di } x_0 .\big( x \in \text{dom}(f) \cap I^+(x_0) \implies f(x) \in I(l) \big) 
@@ -724,7 +721,7 @@ Ora definiamo due particolari [limiti](Matematica/Analisi%20matematica/Limiti/_i
 
 > [!definizione]+ Definizione: limite sinistro
 > 
-> Data una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R}$ per $\text{dom}(f) \cap (- \infty, x_0)$ e un valore%% link %% $l \in \mathbb{R} \cup \{ \pm \infty \}$, diciamo che **$f$ ha limite sinistro $l$ per $x$ che tende a $x_0$** (o che **$f$ tende a $l$ per $x$ che tende a $x_0$ da sinistra**) se, per ogni [intorno](Topologia%20dei%20reali.md#^definizione-intorno-di-un-punto) $I(l)$ di $l$, esiste un [intorno sinistro](Topologia%20dei%20reali.md#^definizione-intorno-di-un-punto) $I^-(x_0)$ di $x_0$ tale che, per ogni $x \in \text{dom}(f)$ con $x \in I^-(x_0)$, si ha che $f(x) \in I(l)$:
+> Data una [funzione](Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R}$ per $\text{dom}(f) \cap (- \infty, x_0)$ e un valore%% link %% $l \in \mathbb{R} \cup \{ \pm \infty \}$, diciamo che **$f$ ha limite sinistro $l$ per $x$ che tende a $x_0$** (o che **$f$ tende a $l$ per $x$ che tende a $x_0$ da sinistra**) se, per ogni [intorno](Topologia%20dei%20reali.md#^definizione-intorno-di-un-punto) $I(l)$ di $l$, esiste un [intorno sinistro](Topologia%20dei%20reali.md#^definizione-intorno-di-un-punto) $I^-(x_0)$ di $x_0$ tale che, per ogni $x \in \text{dom}(f)$ con $x \in I^-(x_0)$, si ha che $f(x) \in I(l)$:
 > 
 > $$
 > \forall I(l) \text{ intorno di } l, \exists I^-(x_0) \text{ intorno sinistro di } x_0 .\big( x \in \text{dom}(f) \cap I^-(x_0) \implies f(x) \in I(l) \big) 
@@ -739,15 +736,20 @@ Ora definiamo due particolari [limiti](Matematica/Analisi%20matematica/Limiti/_i
 > che si legge "_limite per $x$ che tende a $x_0^-$ di $f(x)$ uguale $l$_" o "_$f(x)$ tende a $l$ per $x$ che tende a $x_0$ da sinistra_".
 ^definizione-limite-sinistro
 
+> [!definizione] Definizione: limiti laterali
+> 
+> Il [limite destro](Limiti.md#^definizione-limite-destro) e [limite sinistro](Limiti.md#^definizione-limite-sinistro) sono detti **limiti laterali**.
+^definizione-limiti-laterali
+
 %% 
 I limiti laterali non si definiscono per $+\infty$ e $- \infty$.
 %%
 
 > [!osservazione]+ Osservazione: casi specifici dei limiti laterali
 > 
-> Queste definizioni, esattamente per come avviene per i [limiti](Matematica/Analisi%20matematica/Limiti/_index.md#^definizione-limite), possono essere scritte in modo più specifico a seconda che $l \in \mathbb{R}$ o $l = \pm \infty$.
+> Queste definizioni, esattamente per come avviene per i [limiti](Limiti.md#^definizione-limite), possono essere scritte in modo più specifico a seconda che $l \in \mathbb{R}$ o $l = \pm \infty$.
 > 
-> Per esempio, con un [limite destro](Matematica/Analisi%20matematica/Limiti/_index.md#^definizione-limite) di $f(x)$ con $l \in \mathbb{R}$, si ha che
+> Per esempio, con un [limite destro](Limiti.md#^definizione-limite) di $f(x)$ con $l \in \mathbb{R}$, si ha che
 > 
 > $$
 > \begin{array}{}
@@ -757,7 +759,7 @@ I limiti laterali non si definiscono per $+\infty$ e $- \infty$.
 > \end{array}
 > $$
 > 
-> Invece, con un [limite sinistro](Matematica/Analisi%20matematica/Limiti/_index.md#^definizione-limite-sinistro) di $f(x)$ con $l = - \infty$, si ha che
+> Invece, con un [limite sinistro](Limiti.md#^definizione-limite-sinistro) di $f(x)$ con $l = - \infty$, si ha che
 > 
 > $$
 > \begin{array}{}
@@ -773,7 +775,7 @@ esercizio: scrivere definizioni degli altri casi
 
 > [!proposizione]+ Proposizione: limiti laterali coincidenti
 > 
-> Data una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R}$ sia per $\text{dom}(f) \cap (x_0, + \infty)$ che per $\text{dom}(f) \cap (- \infty, x_0)$ e un valore%% link %% $l \in \mathbb{R} \cup \{ \pm \infty \}$, allora
+> Data una [funzione](Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R}$ sia per $\text{dom}(f) \cap (x_0, + \infty)$ che per $\text{dom}(f) \cap (- \infty, x_0)$ e un valore%% link %% $l \in \mathbb{R} \cup \{ \pm \infty \}$, allora
 > 
 > $$
 > \lim_{x \to x_0} f(x) = l \iff \lim_{x \to x_0^+} f(x) = \lim_{x \to x_0^-} f(x) = l
@@ -786,7 +788,7 @@ Dimostrazione: segue immediatamente dalle definizioni (per esercizio)
 
 > [!corollario]+ Corollario del teorema di unicità del limite per i limiti laterali
 > 
-> Il [teorema di unicità del limite](Matematica/Analisi%20matematica/Limiti/_index.md#^teorema-di-unicita-del-limite) vale anche per il [limite destro](Matematica/Analisi%20matematica/Limiti/_index.md#^definizione-limite-destro) e il [limite sinistro](Matematica/Analisi%20matematica/Limiti/_index.md#^definizione-limite-sinistro).
+> Il [teorema di unicità del limite](Limiti.md#^teorema-di-unicita-del-limite) vale anche per il [limite destro](Limiti.md#^definizione-limite-destro) e il [limite sinistro](Limiti.md#^definizione-limite-sinistro).
 
 %% 
 esempio 2.28 pagg. 146-147 Lancelotti
@@ -794,13 +796,13 @@ esempio 2.28 pagg. 146-147 Lancelotti
 
 > [!osservazione]+ Osservazione: equivalenza tra limiti e limiti laterali
 > 
-> Se una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-funzione) $f$ è definita solo per $x > x_0$, allora
+> Se una [funzione](Funzioni.md#^definizione-funzione) $f$ è definita solo per $x > x_0$, allora
 > 
 > $$
 > \lim_{x \to x_0^+} f(x) = \lim_{x \to x_0} f(x)
 > $$
 > 
-> Analogamente, se una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-funzione) $f$ è definita solo per $x < x_0$, allora
+> Analogamente, se una [funzione](Funzioni.md#^definizione-funzione) $f$ è definita solo per $x < x_0$, allora
 > 
 > $$
 > \lim_{x \to x_0^-} f(x) = \lim_{x \to x_0} f(x)
@@ -818,7 +820,7 @@ pagg. 161-164 lancelotti
 
 > [!teorema]+ Teorema del confronto per limiti infiniti
 > 
-> Date due [funzioni](Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-funzione) $f,g \colon A \subseteq \mathbb{R} \to \mathbb{R}$ (con $A \ne \emptyset$) e un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R} \cup \{ \pm \infty \}$ per $A$, se esiste un [intorno](Topologia%20dei%20reali.md#^definizione-intorno-di-un-punto) $I(x_0)$ di $x_0$ tale che, per ogni $x \in (A \cap I(x_0)) \setminus \{ x_0 \}$, si abbia $f(x) \le g(x)$, allora
+> Date due [funzioni](Funzioni.md#^definizione-funzione) $f,g \colon A \subseteq \mathbb{R} \to \mathbb{R}$ (con $A \ne \emptyset$) e un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R} \cup \{ \pm \infty \}$ per $A$, se esiste un [intorno](Topologia%20dei%20reali.md#^definizione-intorno-di-un-punto) $I(x_0)$ di $x_0$ tale che, per ogni $x \in (A \cap I(x_0)) \setminus \{ x_0 \}$, si abbia $f(x) \le g(x)$, allora
 > 
 > $$
 > \begin{array}{}
@@ -835,7 +837,7 @@ Osservazioni 3.24 pag. 170 Lancelotti
 
 > [!teorema]+ Primo teorema del confronto
 > 
-> Date due [funzioni](Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-funzione) $f,g \colon A \subseteq \mathbb{R} \to \mathbb{R}$ (con $A \ne \emptyset$) e un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R} \cup \{ \pm \infty \}$ per $A$, se esistono i [limiti](Matematica/Analisi%20matematica/Limiti/_index.md#^definizione-limite)
+> Date due [funzioni](Funzioni.md#^definizione-funzione) $f,g \colon A \subseteq \mathbb{R} \to \mathbb{R}$ (con $A \ne \emptyset$) e un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R} \cup \{ \pm \infty \}$ per $A$, se esistono i [limiti](Limiti.md#^definizione-limite)
 > 
 > $$
 > \begin{array}{}
@@ -867,7 +869,7 @@ osservazioni pag. 170-171 lancelotti
 
 > [!teorema]+ Secondo teorema del confronto (o teorema dei due carabinieri)
 > 
-> Date tre [funzioni](Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-funzione) $f,g,h \colon A \subseteq \mathbb{R} \to \mathbb{R}$ (con $A \ne \emptyset$) e un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R} \cup \{ \pm \infty \}$ per $A$, se esistono i [limiti](Matematica/Analisi%20matematica/Limiti/_index.md#^definizione-limite)
+> Date tre [funzioni](Funzioni.md#^definizione-funzione) $f,g,h \colon A \subseteq \mathbb{R} \to \mathbb{R}$ (con $A \ne \emptyset$) e un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R} \cup \{ \pm \infty \}$ per $A$, se esistono i [limiti](Limiti.md#^definizione-limite)
 > 
 > $$
 > \lim_{x \to x_0} f(x) = \lim_{x \to x_0} h(x) = l \in \mathbb{R}

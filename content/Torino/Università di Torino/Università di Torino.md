@@ -1,6 +1,3 @@
----
-title: Università di Torino
----
 
 > [!premessa]+ Premessa
 > 
@@ -15,7 +12,7 @@ title: Università di Torino
 > L'**Università degli Studi di Torino** (spesso identificata con la sigla **UniTo**) è una delle due principali università di Torino%% link %%, insieme al Politecnico di Torino%% link %%.
 ^universita-degli-studi-di-torino-unito
 
-All'[UniTo](Torino/Università%20di%20Torino/_index.md#^universita-degli-studi-di-torino-unito) sto attualmente frequentando la facoltà di Informatica (triennale)%% link %%.
+All'[UniTo](Università%20di%20Torino.md#^universita-degli-studi-di-torino-unito) sto attualmente frequentando la facoltà di Informatica (triennale)%% link %%.
 
 ---
 

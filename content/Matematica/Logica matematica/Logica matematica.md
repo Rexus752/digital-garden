@@ -1,6 +1,3 @@
----
-title: Logica matematica
----
 
 > [!premessa]+ Premessa
 > 
@@ -12,7 +9,7 @@ title: Logica matematica
 
 > [!definizione]+ Definizione: logica matematica
 > 
-> La **logica matematica** è la branca della [matematica](Matematica/_index.md#^definizione-matematica) che studia i fondamenti del ragionamento matematico stesso, usando strumenti formali e simbolici.
+> La **logica matematica** è la branca della [matematica](Matematica.md#^definizione-matematica) che studia i fondamenti del ragionamento matematico stesso, usando strumenti formali e simbolici.
 ^definizione-logica-matematica
 
 %% 

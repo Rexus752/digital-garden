@@ -1,6 +1,3 @@
----
-title: Scienza
----
 
 > [!premessa]+ Premessa
 > 

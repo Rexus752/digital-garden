@@ -1,6 +1,3 @@
----
-title: Nix flake
----
 
 > [!premessa]+ Premessa
 > 

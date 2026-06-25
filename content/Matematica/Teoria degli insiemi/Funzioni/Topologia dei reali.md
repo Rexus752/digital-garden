@@ -1,6 +1,3 @@
----
-title: Topologia dei reali
----
 
 > [!premessa]+ Premessa
 > 
@@ -81,7 +78,7 @@ Possiamo scegliere quindi un $r \in (0,2]$ per cui è definitivamente vera quest
 
 > [!osservazione]+ Osservazione: utilità dell'intorno bucato
 > 
-> L'[_intorno bucato_](Topologia%20dei%20reali.md#^definizione-intorno-bucato) ci tornerà utile più in là quando studieremo i [_limiti_](Matematica/Analisi%20matematica/Limiti/_index.md#^definizione-limite) perché ci interesserà analizzare l'[intorno](Topologia%20dei%20reali.md#^definizione-intorno-di-un-punto) di un punto%% link %% $x_0$ escluso $x_0$ stesso, cioè proprio l'[intorno bucato](Topologia%20dei%20reali.md#^definizione-intorno-bucato) di $x_0$.
+> L'[_intorno bucato_](Topologia%20dei%20reali.md#^definizione-intorno-bucato) ci tornerà utile più in là quando studieremo i [_limiti_](Limiti.md#^definizione-limite) perché ci interesserà analizzare l'[intorno](Topologia%20dei%20reali.md#^definizione-intorno-di-un-punto) di un punto%% link %% $x_0$ escluso $x_0$ stesso, cioè proprio l'[intorno bucato](Topologia%20dei%20reali.md#^definizione-intorno-bucato) di $x_0$.
 
 %%
 [!esempio] Esempio: $\dfrac{1}{x^2} > 1$ vera definitivamente per $x \to 0$
@@ -151,14 +148,14 @@ Infatti è valida in $(-\infty, -10) = I_{-10}(-\infty)$ e anche in ogni $I_r(-\
 
 > [!definizione]+ Definizione: punto interno
 > 
-> Dato un [insieme](Matematica/Teoria%20degli%20insiemi/_index.md#^definizione-insieme) $A \subseteq \mathbb{R}$ e un punto $x_0 \in A$, quest'ultimo è un **punto interno ad $A$** se esite un [intorno](Topologia%20dei%20reali.md#^definizione-intorno-di-un-punto) $I$ di $x_0$ tale che $I \subseteq A$.
+> Dato un [insieme](Teoria%20degli%20insiemi.md#^definizione-insieme) $A \subseteq \mathbb{R}$ e un punto $x_0 \in A$, quest'ultimo è un **punto interno ad $A$** se esite un [intorno](Topologia%20dei%20reali.md#^definizione-intorno-di-un-punto) $I$ di $x_0$ tale che $I \subseteq A$.
 ^definizione-punto-interno
 
 %% esempio di punto interno %%
 
 > [!definizione]+ Definizione: parte interna di un insieme
 > 
-> Dato un [insieme](Matematica/Teoria%20degli%20insiemi/_index.md#^definizione-insieme) $A \subseteq \mathbb{R}$, l'insieme dei suoi [punti interni](Topologia%20dei%20reali.md#^definizione-punto-interno-e-parte-interna) viene detto **parte interna di $A$** e si indica con "$\text{int}(A)$".
+> Dato un [insieme](Teoria%20degli%20insiemi.md#^definizione-insieme) $A \subseteq \mathbb{R}$, l'insieme dei suoi [punti interni](Topologia%20dei%20reali.md#^definizione-punto-interno-e-parte-interna) viene detto **parte interna di $A$** e si indica con "$\text{int}(A)$".
 ^definizione-parte-interna-di-un-insieme
 
 > [!proposizione]+ Proposizione: punti interni di $\color{#FF7F7F} [a,b]$ sono $\color{#FF7F7F} (a,b)$
@@ -210,11 +207,11 @@ In tutte e 3 queste proposizioni si procede come nella proposiizone precedente).
 
 > [!definizione]+ Definizione: insieme aperto o chiuso di $\color{#FF7FFF} \mathbb{R}$
 > 
-> Dato un [insieme](Matematica/Teoria%20degli%20insiemi/_index.md#^definizione-insieme) $A \subseteq \mathbb{R}$ abbiamo che:
+> Dato un [insieme](Teoria%20degli%20insiemi.md#^definizione-insieme) $A \subseteq \mathbb{R}$ abbiamo che:
 > - $A$ si dice **aperto** se ogni punto di $A$ è [interno](Topologia%20dei%20reali.md#^definizione-punto-interno-e-parte-interna) ad $A$, cioè se $\text{int}(A) = A$.
-> - $A$ si dice **chiuso** se il [complementare](Matematica/Teoria%20degli%20insiemi/_index.md#^definizione-complemento-di-un-insieme) $\complement_\mathbb{R}(A)$ di $A$ è aperto.
+> - $A$ si dice **chiuso** se il [complementare](Teoria%20degli%20insiemi.md#^definizione-complemento-di-un-insieme) $\complement_\mathbb{R}(A)$ di $A$ è aperto.
 > 
-> Per convenzione, l'[insieme vuoto](Matematica/Teoria%20degli%20insiemi/_index.md#^definizione-insieme-vuoto) $\emptyset$ e l'insieme dei numeri reali%% link %% $\mathbb{R}$ sono contemporaneamente sia aperti che chiusi.
+> Per convenzione, l'[insieme vuoto](Teoria%20degli%20insiemi.md#^definizione-insieme-vuoto) $\emptyset$ e l'insieme dei numeri reali%% link %% $\mathbb{R}$ sono contemporaneamente sia aperti che chiusi.
 ^definizione-insieme-aperto-o-chiuso-di-r
 
 %% 
@@ -235,19 +232,19 @@ Fare dimostrazione
 
 > [!definizione]+ Definizione: punto isolato
 > 
-> Dato un [insieme](Matematica/Teoria%20degli%20insiemi/_index.md#^definizione-insieme) $A \subseteq \mathbb{R}$ e un punto%% link %% $x_0 \in A$, diciamo che $x_0$ è un **punto isolato** di $A$ se esiste un [intorno](Topologia%20dei%20reali.md#^definizione-intorno-di-un-punto) $I$ di $x_0$ tale che $A \cap I = \{ x_0 \}$.
+> Dato un [insieme](Teoria%20degli%20insiemi.md#^definizione-insieme) $A \subseteq \mathbb{R}$ e un punto%% link %% $x_0 \in A$, diciamo che $x_0$ è un **punto isolato** di $A$ se esiste un [intorno](Topologia%20dei%20reali.md#^definizione-intorno-di-un-punto) $I$ di $x_0$ tale che $A \cap I = \{ x_0 \}$.
 > 
 > In altri termini, $x_0$ è isolato in $A$ se l'unico punto di $A$ contenuto in un suo opportuno intorno è $x_0$ stesso.
 ^definizione-punto-isolato
 
 > [!definizione]+ Definizione: insieme discreto
 > 
-> Un [insieme](Matematica/Teoria%20degli%20insiemi/_index.md#^definizione-insieme) $A \subseteq \mathbb{R}$ si dice **discreto** se è costituito solo da [punti isolati](Topologia%20dei%20reali.md#^definizione-punto-isolato).
+> Un [insieme](Teoria%20degli%20insiemi.md#^definizione-insieme) $A \subseteq \mathbb{R}$ si dice **discreto** se è costituito solo da [punti isolati](Topologia%20dei%20reali.md#^definizione-punto-isolato).
 ^definizione-insieme-discreto
 
 > [!esempio]- Esempio di punto isolato
 > 
-> Consideriamo l'[insieme](Matematica/Teoria%20degli%20insiemi/_index.md#^definizione-insieme)
+> Consideriamo l'[insieme](Teoria%20degli%20insiemi.md#^definizione-insieme)
 > 
 > $$
 > A = \{ x \in \mathbb{R} \mid x^4 - x^2 \ge 0 \}
@@ -278,7 +275,7 @@ da dimostrare
 
 > [!definizione]+ Definizione: punto di accumulazione
 > 
-> Dato un [insieme](Matematica/Teoria%20degli%20insiemi/_index.md#^definizione-insieme) $A \subseteq \mathbb{R}$ e un punto%% link %% $x_0 \in \mathbb{R} \cup \{ \pm \infty \}$, abbiamo che $x_0$ è un **punto di accumulazione per $A$** se ogni [intorno](Topologia%20dei%20reali.md#^definizione-intorno-di-un-punto) di $x_0$ contiene punti%% link %% di $A$ diversi da $x_0$.
+> Dato un [insieme](Teoria%20degli%20insiemi.md#^definizione-insieme) $A \subseteq \mathbb{R}$ e un punto%% link %% $x_0 \in \mathbb{R} \cup \{ \pm \infty \}$, abbiamo che $x_0$ è un **punto di accumulazione per $A$** se ogni [intorno](Topologia%20dei%20reali.md#^definizione-intorno-di-un-punto) di $x_0$ contiene punti%% link %% di $A$ diversi da $x_0$.
 ^definizione-punto-di-accumulazione
 
 %% 
@@ -357,7 +354,7 @@ come nel caso precedente.
 
 > [!esempio]- Esempio
 > 
-> Consideriamo l'[insieme](Matematica/Teoria%20degli%20insiemi/_index.md#^definizione-insieme)
+> Consideriamo l'[insieme](Teoria%20degli%20insiemi.md#^definizione-insieme)
 > 
 > $$
 > A = \left\{
@@ -380,7 +377,7 @@ come nel caso precedente.
 > I_r = \left( \dfrac{1}{n} - r, \dfrac{1}{n} + r \right) \subseteq \left( \dfrac{1}{n+1}. \dfrac{1}{n-1} \right) 
 > $$
 > 
-> L'[insieme](Matematica/Teoria%20degli%20insiemi/_index.md#^definizione-insieme) $I_r$ è un [intorno](Topologia%20dei%20reali.md#^definizione-intorno-di-un-punto) di $\dfrac{1}{n}$ e si ha che $A \cap I_r = \left\{  \dfrac{1}{n}  \right\}$. Quindi $\dfrac{1}{n}$ è un [punto isolato](Topologia%20dei%20reali.md#^definizione-punto-isolato) in $A$.
+> L'[insieme](Teoria%20degli%20insiemi.md#^definizione-insieme) $I_r$ è un [intorno](Topologia%20dei%20reali.md#^definizione-intorno-di-un-punto) di $\dfrac{1}{n}$ e si ha che $A \cap I_r = \left\{  \dfrac{1}{n}  \right\}$. Quindi $\dfrac{1}{n}$ è un [punto isolato](Topologia%20dei%20reali.md#^definizione-punto-isolato) in $A$.
 > 
 > Evidentemente i punti isolati non sono di accumulazione.%% quindi un punto isolato non può essere di accumulazione e viceversa? da trasformare in proposizione? %%
 > 
@@ -400,7 +397,7 @@ come nel caso precedente.
 
 > [!proposizione]+ Proposizione
 > 
-> Dato un [insieme](Matematica/Teoria%20degli%20insiemi/_index.md#^definizione-insieme) $A \subseteq \mathbb{R}$ e un punto%% link %% $x_0 \in A$, allora abbiamo che se $x_0$ è un [punto interno](Topologia%20dei%20reali.md#^definizione-punto-interno) ad $A$, allora $x_0$ è un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) di $A$ ma non viceversa:
+> Dato un [insieme](Teoria%20degli%20insiemi.md#^definizione-insieme) $A \subseteq \mathbb{R}$ e un punto%% link %% $x_0 \in A$, allora abbiamo che se $x_0$ è un [punto interno](Topologia%20dei%20reali.md#^definizione-punto-interno) ad $A$, allora $x_0$ è un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) di $A$ ma non viceversa:
 > 
 > $$
 > x_0 \text{ punto interno ad } A \implies x_0 \text{ punto di accumulazione di } A
@@ -410,7 +407,7 @@ come nel caso precedente.
 
 > [!proposizione]+ Proposizione
 > 
-> Dato un [insieme](Matematica/Teoria%20degli%20insiemi/_index.md#^definizione-insieme) $A \subseteq \mathbb{R}$ e un punto%% link %% $x_0 \in A$, allora abbiamo che $x_0$ è un [punto isolato](Topologia%20dei%20reali.md#^definizione-punto-isolato) di $A$ se e solo se non è un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) di $A$:
+> Dato un [insieme](Teoria%20degli%20insiemi.md#^definizione-insieme) $A \subseteq \mathbb{R}$ e un punto%% link %% $x_0 \in A$, allora abbiamo che $x_0$ è un [punto isolato](Topologia%20dei%20reali.md#^definizione-punto-isolato) di $A$ se e solo se non è un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) di $A$:
 > 
 > $$
 > x_0 \text{ punto isolato di } A \iff x_0 \text{ non punto di accumulazione di } A
@@ -420,7 +417,7 @@ come nel caso precedente.
 
 > [!proposizione]+ Proposizione
 > 
-> Dato un [insieme](Matematica/Teoria%20degli%20insiemi/_index.md#^definizione-insieme) $A \subseteq \mathbb{R}$ e un punto%% link %% $x_0 \in A$, se $x_0$ è un [punto isolato](Topologia%20dei%20reali.md#^definizione-punto-isolato) di $A$ allora non è un [punto interno](Topologia%20dei%20reali.md#^definizione-punto-interno) ad $A$:
+> Dato un [insieme](Teoria%20degli%20insiemi.md#^definizione-insieme) $A \subseteq \mathbb{R}$ e un punto%% link %% $x_0 \in A$, se $x_0$ è un [punto isolato](Topologia%20dei%20reali.md#^definizione-punto-isolato) di $A$ allora non è un [punto interno](Topologia%20dei%20reali.md#^definizione-punto-interno) ad $A$:
 > 
 > $$
 > x_0 \text{ punto isolato di } A \implies x_0 \text{ non punto interno ad } A
@@ -432,12 +429,12 @@ come nel caso precedente.
 
 > [!definizione]+ Definizione: punto di frontiera
 > 
-> Dato un [insieme](Matematica/Teoria%20degli%20insiemi/_index.md#^definizione-insieme) $A \subseteq \mathbb{R}$ e un punto%% link %% $x_0 \in \mathbb{R}$, diciamo che $x_0$ è un **punto di frontiera per $A$** se per ogni [intorno](Topologia%20dei%20reali.md#^definizione-intorno-di-un-punto) $I$ di $x_0$ si ha che $A \cap I \ne \emptyset$ e $\complement_\mathbb{R}(A) \cap I \ne \emptyset$.
+> Dato un [insieme](Teoria%20degli%20insiemi.md#^definizione-insieme) $A \subseteq \mathbb{R}$ e un punto%% link %% $x_0 \in \mathbb{R}$, diciamo che $x_0$ è un **punto di frontiera per $A$** se per ogni [intorno](Topologia%20dei%20reali.md#^definizione-intorno-di-un-punto) $I$ di $x_0$ si ha che $A \cap I \ne \emptyset$ e $\complement_\mathbb{R}(A) \cap I \ne \emptyset$.
 ^definizione-punto-di-frontiera
 
 > [!definizione]+ Definizione: frontiera di un insieme
 > 
-> Dato un [insieme](Matematica/Teoria%20degli%20insiemi/_index.md#^definizione-insieme) $A \subseteq \mathbb{R}$, la **frontiera (o bordo) di $A$** è l'[insieme](Matematica/Teoria%20degli%20insiemi/_index.md#^definizione-insieme) dei [punti di frontiera](Topologia%20dei%20reali.md#^definizione-punto-di-frontiera) di $A$ e si denota con "$\text{Fr}(A)$" o "$\partial A$".
+> Dato un [insieme](Teoria%20degli%20insiemi.md#^definizione-insieme) $A \subseteq \mathbb{R}$, la **frontiera (o bordo) di $A$** è l'[insieme](Teoria%20degli%20insiemi.md#^definizione-insieme) dei [punti di frontiera](Topologia%20dei%20reali.md#^definizione-punto-di-frontiera) di $A$ e si denota con "$\text{Fr}(A)$" o "$\partial A$".
 ^definizione-frontiera-di-un-insieme
 
 I punti di frontiera sono quei punti che "separano" l'insieme dal suo complementare. Eviden-
@@ -460,7 +457,7 @@ nel caso precedente. Analoga conclusione se a  \in A.
 
 > [!proposizione]+ Proposizione
 > 
-> Dato un [insieme](Matematica/Teoria%20degli%20insiemi/_index.md#^definizione-insieme) $A \subseteq \mathbb{R}$ e un punto%% link %% $x_0 \in \mathbb{R}$, allora si ha che se $x_0$ è anche in $A$ ed è un [punto isolato](Topologia%20dei%20reali.md#^definizione-punto-isolato) di $A$, allora è anche un [punto di frontiera](Topologia%20dei%20reali.md#^definizione-punto-di-frontiera) di $A$:
+> Dato un [insieme](Teoria%20degli%20insiemi.md#^definizione-insieme) $A \subseteq \mathbb{R}$ e un punto%% link %% $x_0 \in \mathbb{R}$, allora si ha che se $x_0$ è anche in $A$ ed è un [punto isolato](Topologia%20dei%20reali.md#^definizione-punto-isolato) di $A$, allora è anche un [punto di frontiera](Topologia%20dei%20reali.md#^definizione-punto-di-frontiera) di $A$:
 > 
 > $$
 > x_0 \in A \land x_0 \text{ punto isolato di } A \implies x_0 \text{ punto di frontiera di } A
@@ -470,7 +467,7 @@ nel caso precedente. Analoga conclusione se a  \in A.
 
 > [!proposizione]+ Proposizione
 > 
-> Dato un [insieme](Matematica/Teoria%20degli%20insiemi/_index.md#^definizione-insieme) $A \subseteq \mathbb{R}$ e un punto%% link %% $x_0 \in \mathbb{R}$, allora si ha che se $x_0$ **non** è in $A$ ed è un [punto di frontiera](Topologia%20dei%20reali.md#^definizione-punto-di-frontiera) di $A$, allora è un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) di $A$:
+> Dato un [insieme](Teoria%20degli%20insiemi.md#^definizione-insieme) $A \subseteq \mathbb{R}$ e un punto%% link %% $x_0 \in \mathbb{R}$, allora si ha che se $x_0$ **non** è in $A$ ed è un [punto di frontiera](Topologia%20dei%20reali.md#^definizione-punto-di-frontiera) di $A$, allora è un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) di $A$:
 > 
 > $$
 > x_0 \not\in A \land x_0 \text{ punto di frontiera di } A \implies x_0 \text{ punto di accumulazione di } A
@@ -480,7 +477,7 @@ nel caso precedente. Analoga conclusione se a  \in A.
 
 > [!proposizione]+ Proposizione
 > 
-> Dato un [insieme](Matematica/Teoria%20degli%20insiemi/_index.md#^definizione-insieme) $A \subseteq \mathbb{R}$, $A$ è un [sottoinsieme](Matematica/Teoria%20degli%20insiemi/_index.md#^definizione-sottoinsieme) dell'unione%% Link %% tra la [parte interna](Topologia%20dei%20reali.md#^definizione-parte-interna-di-un-insieme) e la [frontiera](Topologia%20dei%20reali.md#^definizione-frontiera-di-un-insieme) di $A$:
+> Dato un [insieme](Teoria%20degli%20insiemi.md#^definizione-insieme) $A \subseteq \mathbb{R}$, $A$ è un [sottoinsieme](Teoria%20degli%20insiemi.md#^definizione-sottoinsieme) dell'unione%% Link %% tra la [parte interna](Topologia%20dei%20reali.md#^definizione-parte-interna-di-un-insieme) e la [frontiera](Topologia%20dei%20reali.md#^definizione-frontiera-di-un-insieme) di $A$:
 > 
 > $$
 > A \subseteq \text{int}(A) \cup \partial A
@@ -496,7 +493,7 @@ nel caso precedente. Analoga conclusione se a  \in A.
 
 > [!proposizione]+ Proposizione
 > 
-> Dato un [insieme](Matematica/Teoria%20degli%20insiemi/_index.md#^definizione-insieme) $A \subseteq \mathbb{R}$, $A$ è [chiuso](Topologia%20dei%20reali.md#^definizione-insieme-aperto-o-chiuso-di-r) se e solo se $\partial A \subseteq A$:
+> Dato un [insieme](Teoria%20degli%20insiemi.md#^definizione-insieme) $A \subseteq \mathbb{R}$, $A$ è [chiuso](Topologia%20dei%20reali.md#^definizione-insieme-aperto-o-chiuso-di-r) se e solo se $\partial A \subseteq A$:
 > 
 > $$
 > A \text{ chiuso} \iff \partial A \subseteq A

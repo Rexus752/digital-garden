@@ -1,6 +1,3 @@
----
-title: Integrali
----
 
 > [!premessa] Premessa
 > 
@@ -95,7 +92,7 @@ $$
 
 Ora possiamo parlare di _integrale definito di una funzione su un intervallo_:
 
-Dati una [funzione](content/Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-funzione) $f \colon [a,b] \to \mathbb{R}$, un valore $N \in \mathbb{N}^{\ge 1}$ intero e $x_0 = a$, $x_N = b$ e $x_1, \ldots, x_{n-1}$ i punti di $(a,b)$ che suddividono $[a,b]$ in $N$ intervalli di ampiezza $\dfrac{b-a}{N}$ e un punto medio $z_i \in [x_{i-1}, x_i)$ per ogni intervallo se il [limite](content/Matematica/Analisi%20matematica/Limiti/_index.md#^definizione-limite) $\displaystyle\lim_{N \to + \infty} \dfrac{b-a}{N} \sum_{i=1}^N F(z_i)$ esiste finito e non dipende dalla scelta degli $z_i$ allora il valore che si ottiene è detto **integrale definito di $F$ su $[a,b]$** e si indica con
+Dati una [funzione](Funzioni.md#^definizione-funzione) $f \colon [a,b] \to \mathbb{R}$, un valore $N \in \mathbb{N}^{\ge 1}$ intero e $x_0 = a$, $x_N = b$ e $x_1, \ldots, x_{n-1}$ i punti di $(a,b)$ che suddividono $[a,b]$ in $N$ intervalli di ampiezza $\dfrac{b-a}{N}$ e un punto medio $z_i \in [x_{i-1}, x_i)$ per ogni intervallo se il [limite](Limiti.md#^definizione-limite) $\displaystyle\lim_{N \to + \infty} \dfrac{b-a}{N} \sum_{i=1}^N F(z_i)$ esiste finito e non dipende dalla scelta degli $z_i$ allora il valore che si ottiene è detto **integrale definito di $F$ su $[a,b]$** e si indica con
 
 $$
 \int_a^b f(x)dx
@@ -232,7 +229,7 @@ $G(x)$ è una funzione integrale.
 Arriviamo quindi al seguente risultato:
 
 Teorema fondamentale del calcolo integrale:
-Data una [funzione](content/Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-funzione) $f \colon [a,b] \to \mathbb{R}$ tale che $G(x) = \int_a^b f(t)dt$, allora $G$ è derivabile e $G'(x)=f(x)$ per ogni $x \in [a,b]$.
+Data una [funzione](Funzioni.md#^definizione-funzione) $f \colon [a,b] \to \mathbb{R}$ tale che $G(x) = \int_a^b f(t)dt$, allora $G$ è derivabile e $G'(x)=f(x)$ per ogni $x \in [a,b]$.
 
 ---
 
@@ -252,7 +249,7 @@ Se avessimo usato $N=3$ avremmo ottenuto $s(1.5) \approx 2.95$
 
 ---
 
-Data una [funzione](content/Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-funzione) $f \colon [a,b] \to \mathbb{R}$, cos'è la sua media?
+Data una [funzione](Funzioni.md#^definizione-funzione) $f \colon [a,b] \to \mathbb{R}$, cos'è la sua media?
 Sappiamo cos'è la media aritmetica, quindi se prendiamo $N$ valori assunti dalla $f$ su $[a,b]$ e facciamo la media di questi valori, otteniamo
 
 $$

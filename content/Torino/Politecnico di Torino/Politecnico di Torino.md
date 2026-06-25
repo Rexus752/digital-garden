@@ -1,6 +1,3 @@
----
-title: Politecnico di Torino
----
 
 > [!premessa]+ Premessa
 > 

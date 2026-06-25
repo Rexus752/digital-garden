@@ -1,6 +1,3 @@
----
-title: Mia configurazione di NixOS
----
 
 > [!premessa]+ Premessa
 > 

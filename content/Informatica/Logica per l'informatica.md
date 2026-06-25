@@ -1,6 +1,3 @@
----
-title: Logica per l'informatica
----
 
 > [!premessa]+ Premessa
 > 

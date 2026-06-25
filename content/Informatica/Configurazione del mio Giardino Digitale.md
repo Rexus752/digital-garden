@@ -1,12 +1,11 @@
----
-title: Configurazione del mio Giardino Digitale
----
 
 > [!premessa]+ Premessa
 > 
 > Ciao! Se è la prima volta che capiti su questo sito, ti consiglio di consultare la [pagina principale](index.md) di questo cosiddetto _Giardino Digitale_ per scoprire meglio cos'è e come navigarlo.
 > 
 > Lo stato di questa nota è al momento: 🟢 <font color="#7FFF7F">_Completa_</font>.
+
+---
 
 Stai creando un tuo Giardino Digitale in cui vuoi inserire una funzionalità presente nel mio? Sei nel posto giusto!
 
@@ -184,7 +183,7 @@ Nel file `quartz.config.yaml` ho modificato il layout delle note, cioè la strut
         Repository: https://forgejo.it/Rexus752/digital-garden.git
         Il mio Linktree: https://linktr.ee/rexus752
 	```
-- Per fare in modo che anche nelle _folder page_ (cioè nelle pagine-cartelle come [Matematica](Matematica/_index.md)) escano tutti i componenti come l'indice, ho modificato le impostazioni del `layout` che si possono trovare in fondo al `quartz.config.yaml`:
+- Per fare in modo che anche nelle _folder page_ (cioè nelle pagine-cartelle come [Matematica](Matematica.md)) escano tutti i componenti come l'indice, ho modificato le impostazioni del `layout` che si possono trovare in fondo al `quartz.config.yaml`:
 	```yaml title="quartz.config.yaml" showLineNumbers{273} {13}
 	layout:
 	  groups:

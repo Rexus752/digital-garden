@@ -1,6 +1,3 @@
----
-title: Paradigmi di programmazione
----
 
 > [!premessa] Premessa
 > 

@@ -1,6 +1,3 @@
----
-title: Dichiaratività e imperatività nei SO
----
 
 > [!premessa] Premessa
 > 

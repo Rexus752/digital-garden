@@ -1,6 +1,3 @@
----
-title: Torino
----
 
 > [!premessa]+ Premessa
 > 
