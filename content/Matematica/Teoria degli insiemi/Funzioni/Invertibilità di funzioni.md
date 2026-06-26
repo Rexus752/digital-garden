@@ -1,5 +1,5 @@
 
-> [!premessa] Premessa
+> [!premessa]+ Premessa
 > 
 > Ciao! Se è la prima volta che capiti su questo sito, ti consiglio di consultare la [pagina principale](index.md) di questo cosiddetto _Giardino Digitale_ per scoprire meglio cos'è e come navigarlo.
 > 
@@ -60,6 +60,18 @@ esempi:
 - 1.1.17 pagina 18 Dambrosio
 %%
 
+# 1 - Monotonia e invertibilità di funzioni
+
+> [!proposizione]+ Proposizione sulla monotonia e invertibilità di funzioni
+> 
+> Data una [funzione](Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e un intervallo%% link %% $I \subseteq \text{dom}(f)$:
+> - Se $f$ è [strettamente crescente](Proprietà%20delle%20funzioni.md#^definizione-funzione-strettamente-decrescente-o-monotona-su-un-intervallo) su $I$, allora $f$ è [invertibile](Invertibilità%20di%20funzioni.md#^definizione-funzione-inversa) su $I$ e la sua [inversa](Invertibilità%20di%20funzioni.md#^definizione-funzione-inversa) $f^{-1}$ è [strettamente crescente](Proprietà%20delle%20funzioni.md#^definizione-funzione-strettamente-decrescente-o-monotona-su-un-intervallo) su $f(I)$.
+> - Se $f$ è [strettamente decrescente](Proprietà%20delle%20funzioni.md#^definizione-funzione-strettamente-decrescente-o-monotona-su-un-intervallo) su $I$, allora $f$ è [invertibile](Invertibilità%20di%20funzioni.md#^definizione-funzione-inversa) su $I$ e la sua [inversa](Invertibilità%20di%20funzioni.md#^definizione-funzione-inversa) $f^{-1}$ è [strettamente decrescente](Proprietà%20delle%20funzioni.md#^definizione-funzione-strettamente-decrescente-o-monotona-su-un-intervallo) su $f(I)$.
+
+%% 
+dimostrazione (non presente nel libro)
+%%
+
 ---
 
 > [!fonti]+ Fonti
@@ -77,6 +89,7 @@ esempi:
 > 		- Capitolo 1 - _Funzioni e modelli_:
 > 			- 1 - _Funzioni e grafici_:
 > 				- 1.2 - _Funzione composta e funzione inversa_.
+> 				- 1.3 - _Proprietà globali di una funzione su un intervallo_.
 > - 📚 Sergio Lancelotti, _Lezioni di Analisi Matematica I_, Celid, 2020 (ISBN: `978-8867891979`):
 > 	- Capitolo 2 - _Funzioni_:
 > 		- 1 - _Nozioni preliminari_.

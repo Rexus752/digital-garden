@@ -38,9 +38,9 @@ Vedere meglio pagine 64-68 di LAncelotti
 > $$
 ^definizione-funzione
 
-> [!definizione] Definizione: dominio e codominio della funzione
+> [!definizione]+ Definizione: dominio e codominio della funzione
 > 
-> In una [funzione](Funzioni.md#^definizione-funzione) $f \colon A \to B$, l'[insieme](content/Matematica/Teoria%20degli%20insiemi/_index.md#^definizione-insieme) $A$ è detto **dominio della funzione** (o, più semplicemente, **dominio**) e viene indicato con "$\text{dom}(f)$":
+> In una [funzione](Funzioni.md#^definizione-funzione) $f \colon A \to B$, l'[insieme](Teoria%20degli%20insiemi.md#^definizione-insieme) $A$ è detto **dominio della funzione** (o, più semplicemente, **dominio**) e viene indicato con "$\text{dom}(f)$":
 > 
 > $$
 > \text{dom}(f) = A
@@ -53,7 +53,7 @@ Vedere meglio pagine 64-68 di LAncelotti
 > $$
 ^definizione-dominio-e-codominio-della-funzione
 
-> [!esempio] Esempio di funzione
+> [!esempio]- Esempio di funzione
 > 
 > Un esempio di [funzione](Funzioni.md#^definizione-funzione) è $f \colon \mathbb{R} \to \mathbb{R}$ che associa a ogni numero reale%% link %% $x \in \mathbb{R}$ il suo quadrato $x^2 \in \mathbb{R}$. Essa è una funzione perché per ogni numero il suo quadrato è unico e non può averne altri.
 ^esempio-di-funzione
@@ -72,7 +72,7 @@ Vedere meglio pagine 64-68 di LAncelotti
 > \forall x > 0\ \big(f(x)=x^{2}\big) 
 > $$
 
-> [!notazione] Notazioni alternative per una funzione
+> [!notazione]+ Notazioni alternative per una funzione
 > 
 > Una [funzione](Funzioni.md#^definizione-funzione) $f \colon A \to B$ si può anche indicare in altri modi:
 > - Possiamo usare la notazione "completa"
@@ -96,7 +96,7 @@ Vedere meglio pagine 64-68 di LAncelotti
 > 	A \overset{f}\to B
 > 	$$
 > 
-> - Possiamo indicare direttamente la trasformazione che applichiamo sull'oggetto (come già scritto nella [definizione di _funzione_](Funzioni.md#^definizione-funzione)). Per esempio, nell'[esempio di prima](Funzioni.md#^esempio-di-funzione), la [funzione](content/Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-funzione) $f \colon \mathbb{R} \to \mathbb{R}$ che prende un $x \in \mathbb{R}$ e ne restituisce il suo quadrato $x^2 \in \mathbb{R}$ si può indicare come
+> - Possiamo indicare direttamente la trasformazione che applichiamo sull'oggetto (come già scritto nella [definizione di _funzione_](Funzioni.md#^definizione-funzione)). Per esempio, nell'[esempio di prima](Funzioni.md#^esempio-di-funzione), la [funzione](Funzioni.md#^definizione-funzione) $f \colon \mathbb{R} \to \mathbb{R}$ che prende un $x \in \mathbb{R}$ e ne restituisce il suo quadrato $x^2 \in \mathbb{R}$ si può indicare come
 > 
 > 	$$
 > 	\begin{align*}
@@ -111,7 +111,7 @@ Vedere meglio pagine 64-68 di LAncelotti
 > 	f(x) = x^2
 > 	$$
 
-> [!notazione] Notazione: dominio e codominio sottintesi
+> [!notazione]+ Notazione: dominio e codominio sottintesi
 > 
 > Quando una [funzione](Funzioni.md#^definizione-funzione) è indicata solo attraverso la sua "trasformazione" (per esempio $f(x) = x^2$), si dà per scontato che la [funzione](Funzioni.md#^definizione-funzione) abbia come [codominio](Funzioni.md#^definizione-dominio-e-codominio-della-funzione) l'insieme dei numeri reali%% link %% $\mathbb{R}$, mentre come [dominio](Funzioni.md#^definizione-dominio-e-codominio-della-funzione) non $\mathbb{R}$ ma un [sottoinsieme](Teoria%20degli%20insiemi.md#^definizione-insieme) di $\mathbb{R}$ che corrisponde a tutti e soli i punti%% link %% su cui la [funzione](Funzioni.md#^definizione-funzione) è definita che viene solitamente indicato direttamente con "$\text{dom}(f)$"):
 > 
@@ -327,7 +327,6 @@ come si disegna la funzione sul piano cartesiano?
 
 <!--
 
-
 > [!esempio]- Esempio: piano cartesiano di ${\color{#7F7FFF} f(x)=3x-1 }$
 > 
 > Il [grafico](Funzioni.md#^definizione-grafico-di-una-funzione) della [funzione](Funzioni.md#^definizione-funzione) $f(x)=3x-1$ è l'insieme $\Gamma_{f} = \{ (x,y) \in \mathbb{R}^{2} \mid y=3x-1 \}$ ed è rappresentato dalla seguente retta nel piano cartesiano:
@@ -398,6 +397,16 @@ quindi il loro grafico deve coincidere
 > - $f(0)=g(0)=-1$;
 > - $f(1)=g(1)=2$;
 > - $f(2)=g(2)=11$.
+
+%% 
+Attenzione:
+
+$$
+\dfrac{x^2-1}{x-1} \ne x+1
+$$
+
+perché la prima non è definita per $x = 1$
+%%
 
 # 3 - Funzioni particolari
 
@@ -526,6 +535,25 @@ rng(f|C) = f [C].
 %% 
 ![](Pasted%20image%2020250112010435.png)
 %%
+
+# 4 - Operazioni tra funzioni
+
+## 4.1 - Somma di funzioni
+
+> [!definizione]+ Definizione: somma di funzioni
+> 
+> Date due [funzioni](Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e $g \colon \text{dom}(g) \to \mathbb{R}$, si definisce la **somma** $f + g$ come la [funzione](Funzioni.md#^definizione-funzione):
+> 
+> $$
+> (f + g) \colon \text{dom}(f) \cap \text{dom}(g) \to \mathbb{R}
+> $$
+> 
+> tale che per ogni $x \in \text{dom}(f) \cap \text{dom}(g)$:
+> 
+> $$
+> (f+g)(x) = f(x) + g(x)
+> $$
+^definizione-somma-di-funzioni
 
 ---
 

@@ -1,5 +1,5 @@
 
-> [!premessa] Premessa
+> [!premessa]+ Premessa
 > 
 > Ciao! Se è la prima volta che capiti su questo sito, ti consiglio di consultare la [pagina principale](index.md) di questo cosiddetto _Giardino Digitale_ per scoprire meglio cos'è e come navigarlo.
 > 
@@ -118,6 +118,38 @@ Osservazione 1.1.12 di pagina 14 di Dambrosio, mettere il grafico a centro pagin
 > 
 > Osserviamo quindi il motivo per cui, nella [definizione di _funzione composta_](Composizione%20di%20funzioni.md#^definizione-composizione-di-due-funzioni), viene richiesto che il [codominio](Funzioni.md#^definizione-funzione) di $f$ debba coincidere con il dominio di $g$.
 
+# 1 - Monotonia e composizione di funzioni
+
+Ora vediamo una proposizione%% link %% che lega la [monotonia](Proprietà%20delle%20funzioni.md#^definizione-funzione-strettamente-decrescente-o-monotona-su-un-intervallo) alla [composizione di funzioni](Composizione%20di%20funzioni.md#^definizione-composizione-di-due-funzioni).
+
+> [!proposizione]+ Regola dei segni per la monotonia della funzione composta
+> 
+> Date due [funzioni](Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e $g \colon \text{dom}(g) \to \mathbb{R}$ (con $\text{rng}(f) \subseteq \text{dom}(g)$) e due intervalli%% Link %% $I \subseteq \text{dom}(f)$ e $g \subseteq \text{dom}(g)$:
+> - Se $f$ è [(strettamente) crescente](Proprietà%20delle%20funzioni.md#^definizione-funzione-strettamente-decrescente-o-monotona-su-un-intervallo) su $I$ e $g$ è [(strettamente) crescente](Proprietà%20delle%20funzioni.md#^definizione-funzione-strettamente-decrescente-o-monotona-su-un-intervallo) su $J$, allora la loro [composizione](Composizione%20di%20funzioni.md#^definizione-composizione-di-due-funzioni) $g \circ f$ è [(strettamente) crescente](Proprietà%20delle%20funzioni.md#^definizione-funzione-strettamente-decrescente-o-monotona-su-un-intervallo) su $I$.
+> - Se $f$ è [(strettamente) decrescente](Proprietà%20delle%20funzioni.md#^definizione-funzione-strettamente-decrescente-o-monotona-su-un-intervallo) su $I$ e $g$ è [(strettamente) crescente](Proprietà%20delle%20funzioni.md#^definizione-funzione-strettamente-decrescente-o-monotona-su-un-intervallo) su $J$, allora la loro [composizione](Composizione%20di%20funzioni.md#^definizione-composizione-di-due-funzioni) $g \circ f$ è [(strettamente) decrescente](Proprietà%20delle%20funzioni.md#^definizione-funzione-strettamente-decrescente-o-monotona-su-un-intervallo) su $I$.
+> - Se $f$ è [(strettamente) crescente](Proprietà%20delle%20funzioni.md#^definizione-funzione-strettamente-decrescente-o-monotona-su-un-intervallo) su $I$ e $g$ è [(strettamente) decrescente](Proprietà%20delle%20funzioni.md#^definizione-funzione-strettamente-decrescente-o-monotona-su-un-intervallo) su $J$, allora la loro [composizione](Composizione%20di%20funzioni.md#^definizione-composizione-di-due-funzioni) $g \circ f$ è [(strettamente) decrescente](Proprietà%20delle%20funzioni.md#^definizione-funzione-strettamente-decrescente-o-monotona-su-un-intervallo) su $I$.
+> - Se $f$ è [(strettamente) decrescente](Proprietà%20delle%20funzioni.md#^definizione-funzione-strettamente-decrescente-o-monotona-su-un-intervallo) su $I$ e $g$ è [(strettamente) decrescente](Proprietà%20delle%20funzioni.md#^definizione-funzione-strettamente-decrescente-o-monotona-su-un-intervallo) su $J$, allora la loro [composizione](Composizione%20di%20funzioni.md#^definizione-composizione-di-due-funzioni) $g \circ f$ è [(strettamente) decrescente](Proprietà%20delle%20funzioni.md#^definizione-funzione-strettamente-decrescente-o-monotona-su-un-intervallo) su $I$.
+> 
+> |                                                                                                             | **$f$ è [(strettamente) crescente](Proprietà%20delle%20funzioni.md#^definizione-funzione-strettamente-decrescente-o-monotona-su-un-intervallo) su $I$**       | **$f$ è [(strettamente) decrescente](Proprietà%20delle%20funzioni.md#^definizione-funzione-strettamente-decrescente-o-monotona-su-un-intervallo) su $I$**     |
+> | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
+> | **$g$ è [(strettamente) crescente](Proprietà%20delle%20funzioni.md#^definizione-funzione-strettamente-decrescente-o-monotona-su-un-intervallo) su $J$** | $g \circ f$ è [(strettamente) crescente](Proprietà%20delle%20funzioni.md#^definizione-funzione-strettamente-decrescente-o-monotona-su-un-intervallo) su $I$   | $g \circ f$ è [(strettamente) decrescente](Proprietà%20delle%20funzioni.md#^definizione-funzione-strettamente-decrescente-o-monotona-su-un-intervallo) su $I$ |
+> | **$g$ è [(strettamente) decrescente](Proprietà%20delle%20funzioni.md#^definizione-funzione-strettamente-decrescente-o-monotona-su-un-intervallo) su $J$ | $g \circ f$ è [(strettamente) decrescente](Proprietà%20delle%20funzioni.md#^definizione-funzione-strettamente-decrescente-o-monotona-su-un-intervallo) su $I$ | $g \circ f$ è [(strettamente) crescente](Proprietà%20delle%20funzioni.md#^definizione-funzione-strettamente-decrescente-o-monotona-su-un-intervallo) su $I$   |
+^regola-dei-segni-per-la-monotonia-della-funzione-composta
+
+> [!trucco]+ Trucco per ricordare la regola dei segni per la monotonia della funzione composta
+> 
+> La [regola dei segni per la monotonia della funzione composta](Composizione%20di%20funzioni.md#^regola-dei-segni-per-la-monotonia-della-funzione-composta) si chiama così proprio perché ricorda la regola dei segni per il prodotto di due numeri reali%% link %%:
+> - Se le due [funzioni](Funzioni.md#^definizione-funzione) sono "concordi", cioè entrambe o [(strettamente) crescenti](Proprietà%20delle%20funzioni.md#^definizione-funzione-strettamente-decrescente-o-monotona-su-un-intervallo) o [(strettamente) decrescenti](Proprietà%20delle%20funzioni.md#^definizione-funzione-strettamente-decrescente-o-monotona-su-un-intervallo), allora la loro [composizione](Composizione%20di%20funzioni.md#^definizione-composizione-di-due-funzioni) è [(strettamente) crescente](Proprietà%20delle%20funzioni.md#^definizione-funzione-strettamente-decrescente-o-monotona-su-un-intervallo).
+> - Se le due [funzioni](Funzioni.md#^definizione-funzione) sono "discordi", cioè una è [(strettamente) crescente](Proprietà%20delle%20funzioni.md#^definizione-funzione-strettamente-decrescente-o-monotona-su-un-intervallo) e l'altra è [(strettamente) decrescente](Proprietà%20delle%20funzioni.md#^definizione-funzione-strettamente-decrescente-o-monotona-su-un-intervallo), allora la loro [composizione](Composizione%20di%20funzioni.md#^definizione-composizione-di-due-funzioni) è [(strettamente) decrescente](Proprietà%20delle%20funzioni.md#^definizione-funzione-strettamente-decrescente-o-monotona-su-un-intervallo).
+
+%% 
+figure 1.24 e 1.25 pag. 23 Dambrosio
+%%
+
+%% 
+Dimostrazione pag. 23 Dambrosio
+%%
+
 ---
 
 > [!fonti]+ Fonti
@@ -135,6 +167,7 @@ Osservazione 1.1.12 di pagina 14 di Dambrosio, mettere il grafico a centro pagin
 > 		- Capitolo 1 - _Funzioni e modelli_:
 > 			- 1 - _Funzioni e grafici_:
 > 				- 1.2 - _Funzione composta e funzione inversa_.
+> 				- 1.3 - _Proprietà globali di una funzione su un intervallo_.
 > - 📚 Sergio Lancelotti, _Lezioni di Analisi Matematica I_, Celid, 2020 (ISBN: `978-8867891979`):
 > 	- Capitolo 2 - _Funzioni_:
 > 		- 1 - _Nozioni preliminari_.

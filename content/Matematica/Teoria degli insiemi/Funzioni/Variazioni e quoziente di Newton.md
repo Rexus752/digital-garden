@@ -1,5 +1,5 @@
 
-> [!premessa] Premessa
+> [!premessa]+ Premessa
 > 
 > Ciao! Se è la prima volta che capiti su questo sito, ti consiglio di consultare la [pagina principale](index.md) di questo cosiddetto _Giardino Digitale_ per scoprire meglio cos'è e come navigarlo.
 > 
@@ -27,14 +27,18 @@
 
 > [!definizione]+ Definizione: quoziente di Newton
 > 
-> Data una [funzione](Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e due punti distinti%% Link %% $x_1, x_2 \in \text{dom}(f)$, diciamo che il **quoziente di Newton** (o **tasso medio di variazione di $f$ nel passaggio da $x_1$ a $x_2$**) è il quoziente%% link %% tra la [variazione di $x$](Funzioni.md#^definizione-variazione-di-x-nel-passaggio-da-x1-a-x2) e la [variazione di $f$](Funzioni.md#^definizione-variazione-di-f-nel-passaggio-da-x1-a-x2):
+> Data una [funzione](Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e due punti distinti%% Link %% $x_1, x_2 \in \text{dom}(f)$, diciamo che il **quoziente di Newton** (o **tasso medio di variazione di $f$ nel passaggio da $x_1$ a $x_2$**) è il quoziente%% link %% tra la [variazione di $x$](Variazioni%20e%20quoziente%20di%20Newton.md#^definizione-variazione-di-x-nel-passaggio-da-x1-a-x2) e la [variazione di $f$](Variazioni%20e%20quoziente%20di%20Newton.md#^definizione-variazione-di-f-nel-passaggio-da-x1-a-x2):
 > 
 > $$
 > \dfrac{\Delta f}{\Delta x} = \dfrac{f(x_2) - f(x_1)}{x_2 - x_1}
 > $$
 ^definizione-quoziente-di-newton
 
-> [!esempio]+ Esempio: variazioni e quoziente di Newton
+%% 
+spiegare nella definizione perché si chiama Quoziente di Newton
+%%
+
+> [!esempio]- Esempio: variazioni e quoziente di Newton
 >
 > Consideriamo la [funzione](Funzioni.md#^definizione-funzione) $f(x) = x^2$ e i punti%% Link %% $x_1 = 2$ e $x_2 = 5$.
 > 
@@ -72,7 +76,7 @@
 
 ---
 
-> [!fonti] Fonti
+> [!fonti]+ Fonti
 > 
 > - 📚 Walter Dambrosio, _Analisi matematica - Fare e comprendere_, Zanichelli, 2018 (ISBN: `9788808220745`):
 > 	- Parte I - _I concetti dell'analisi matematica_:

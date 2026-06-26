@@ -1,5 +1,5 @@
 
-> [!premessa] Premessa
+> [!premessa]+ Premessa
 > 
 > Ciao! Se è la prima volta che capiti su questo sito, ti consiglio di consultare la [pagina principale](index.md) di questo cosiddetto _Giardino Digitale_ per scoprire meglio cos'è e come navigarlo.
 > 
@@ -18,9 +18,9 @@ https://it.wikipedia.org/wiki/Template:Paradigmi_di_programmazione
 
 Quasi tutti i linguaggi oggi sono multi-paradigma, pochi di essi sono esclusivi a uno solo di questi paradigmi (es. C++, principalmente a oggetti ma è derivato dal C che comunque è imperativo, oppure OCaml che nasce funzionale ma diventato poi anche a oggetti e imperativo)
 
-# Storia
+# 1 - Storia
 
-## Anni '50
+## 1.1 - Anni '50
 
 Dopo la costruzione dei primi calcolatori elettronici, linguaggi di programmazione poco sofisticati perché si programmava direttamente in linguaggio macchina, con sforzi significativi, c'era un generale pessimismo che prima o poi si sarebbe riuscito a scrivere programmi più complessi
 
@@ -30,7 +30,7 @@ col FORTRAN si introducono le procedure (ma ricorsione non ammessa) e i cicli, I
 
 COBOL: linguaggio per gestione aziendale, precursore dei linguaggi attuali di query dei database, introdotto il concetto di _record_
 
-## Anni '60
+## 1.2 - Anni '60
 
 Applicate le prime nozioni di teoria dei linguaggi, linguaggi scritti con grammatiche con semantica formale, in particolare ALGOL la cui grammatica è scritto in BNF, primo linguaggio indipendente dall'architettura e introduce i blocchi con variabili locali e ricorsione
 
@@ -38,7 +38,7 @@ BASIC: idea della programmazione facile da utilizzare per chiunque, al punto che
 
 In questi anni sviluppato Simula 67 come linguaggio Object Oriented, introduce i concetti di classi, oggetti ed ereditarietà
 
-## Anni '70
+## 1.3 - Anni '70
 
 Pascal: linguaggio che incoraggia la programmazione strutturata (per evitare l'uso di `goto`), introduce l'uso dei tipi per evitare certi errori di programmazione, ideale per imparare a programmare
 
@@ -46,7 +46,7 @@ Dopo i primi successi di Simula 67, continua l'evoluzione degli OOP con Smalltal
 
 Negli stessi anni nasce il C che nasce come linguaggio di medio/basso livello per facilitare l'accesso all'hardware e implementazione di sistemi operativi, ottenendo risultati storici: UNIX e successivamente LINUX
 
-## Anni '80
+## 1.4 - Anni '80
 
 Comincia a svilupparsi la programmazione concorrente e distribuita (programmi distribuiti su più unità di calcolo che possono procedere più o meno indipendentemente) con lo sviluppo di Ada, evoluzione del Pascal sviluppato dal ministero della difesa USA per la concorrenza e l'introduzione dei tipi astratti (comincia a crearsi l'idea che un tipo di dato deve possedere una parte "pubblica" visibile a tutti i suoi utilizzatori e una parte "privata" che deve essere esclusiva a chi lo implementa), concetto trasportato poi nell'OOP
 
@@ -56,7 +56,7 @@ Primi PC hanno prestazioni più performative, si diffondono i primi linguaggi di
 - PostScript: linguaggio simile alla JVM, usato per descrivere documenti, creato da Adobe, si è evoluto in quello che oggi è il PDF
 - Perl: per sistemisti (per manipolare file di testo, configurazione SO, find/replace di stringhe con l'uso di regex), questi programmi tipicamente diventano write-only (cioè facili da scrivere ma poi diventa difficile da leggere e quindi modificarli)
 
-## Anni '90
+## 1.5 - Anni '90
 
 Python: linguaggio di scripting "della domenica", creato da Van Rossum perché lui stesso ha detto che si annoiava nelle vacanze di natale, versione a oggetti di Perl
 
@@ -66,7 +66,7 @@ PHP: linguaggio di scripting per produzione di pagine Web da database
 
 JavaScript: produzione di pagine Web interattive, nato per sopperire alle carenze dell'HTML
 
-## Anni '00
+## 1.6 - Anni '00
 
 Ulteriore sviluppo dell'OOP
 
@@ -78,7 +78,7 @@ Go: uno dei linguaggi di successo più recenti, sviluppato da Google, programmaz
 
 ---
 
-> [!fonti] Fonti
+> [!fonti]+ Fonti
 > 
 > - 🏫 Corso di Laurea in Informatica (`L-31 R`) presso l'Università di Torino:
 >     - Corso di _Linguaggi e Paradigmi di Programmazione_, A.A. 2020-21 ([pagina Moodle](https://informatica.i-learn.unito.it/enrol/index.php?id=1987)):

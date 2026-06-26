@@ -22,7 +22,7 @@ Dico spesso che, in un'altra vita, se non avessi sviluppato la passione per l'in
 
 In questa pagina potresti trovare roba sparsa di [matematica](Matematica.md#^definizione-matematica) che non ho ancora asistemato in altre pagine.
 
-# Distanza tra due punti sulla retta reale
+# 1 - Distanza tra due punti sulla retta reale
 
 La distanza di un punto $x$ dall'origine $0$ è la lunghezza ($\ge 0$) di questo segmento:
 
@@ -48,7 +48,7 @@ $$
 
 Fissato $y$, la distanza di $x$ da $y$ la possiamo rappresentare come la "traslazione" di $|x|$.
 
-[!esempio] Esempio
+[!esempio]- Esempio
 
 Quali sono i punti dela retta che distano al più (al massimo) 2 dall'origine?
 

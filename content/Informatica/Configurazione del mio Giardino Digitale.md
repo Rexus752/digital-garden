@@ -650,7 +650,7 @@ e l'ho aggiunto a `quartz/styles/custom.scss`:
 @use "./custom/fix-collapsed-callouts.scss";
 ```
 
-## Stile delle tabelle personalizzate
+## 2.11 - Stile delle tabelle personalizzate
 
 Le tabelle, nel tema di default di Quartz, sono orribili: non hanno le linee che separano le colonne, sono fin troppo piene di spazi vuoti e le righe si distinguono difficilmente.
 
@@ -691,8 +691,7 @@ e l'ho aggiunto a `quartz/styles/custom.scss`:
 @use "./custom/table-style.scss";
 ```
 
-
-## 2.11 - Icone nei titoli delle note
+## 2.12 - Icone nei titoli delle note
 
 > [!attenzione]+ Attenzione: non aggiornato alla versione `v5` di Quartz
 > 

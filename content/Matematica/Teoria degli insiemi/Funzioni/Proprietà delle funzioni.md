@@ -1,5 +1,5 @@
 
-> [!premessa] Premessa
+> [!premessa]+ Premessa
 > 
 > Ciao! Se è la prima volta che capiti su questo sito, ti consiglio di consultare la [pagina principale](index.md) di questo cosiddetto _Giardino Digitale_ per scoprire meglio cos'è e come navigarlo.
 > 
@@ -9,7 +9,7 @@
 
 Osserviamo alcune proprietà che potrebbero rispettare le [funzioni](Funzioni.md#^definizione-funzione).
 
-# 4.1 - Funzioni limitate
+# 1 - Funzioni limitate
 
 > [!definizione]+ Definizione: funzioni limitate
 > 
@@ -32,9 +32,9 @@ Osserviamo alcune proprietà che potrebbero rispettare le [funzioni](Funzioni.md
 Esempio di funzioni limitate dal punto di vista grafico (definizione 1.1.3 a pagina 8 del libro di Dambrosio)
 %%
 
-# Punti di massimo e minimo
+# 2 - Punti di massimo e minimo
 
-> [!definizione] Definizione: punto di massimo relativo e assoluto
+> [!definizione]+ Definizione: punto di massimo relativo e assoluto
 > 
 > Data una [funzione](Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$, un punto%% link %% $x_0 \in \text{dom}(f)$ si dice **punto di massimo relativo (o locale) di $f$ su $\text{dom}(f)$** se esiste un valore%% link %% $r > 0$ tale che
 > 
@@ -47,7 +47,7 @@ Esempio di funzioni limitate dal punto di vista grafico (definizione 1.1.3 a pag
 > Se $f(x) \le f(x_0)$ per ogni $x \in D$, allora $x_0$ si dice **punto di massimo assoluto (o globale) di $f$ su $\text{dom}(f)$** e il valore%% link %% $f(x_0)$ si dice **massimo assoluto (o globale) di $f$ su $\text{dom}(f)$**.
 ^definizione-punto-di-massimo-relativo-e-assoluto
 
-> [!definizione] Definizione: punto di minimo relativo e assoluto
+> [!definizione]+ Definizione: punto di minimo relativo e assoluto
 > 
 > Data una [funzione](Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$, un punto%% link %% $x_0 \in \text{dom}(f)$ si dice **punto di minimo relativo (o locale) di $f$ su $\text{dom}(f)$** se esiste un valore%% link %% $r > 0$ tale che
 > 
@@ -64,7 +64,7 @@ Esempio di funzioni limitate dal punto di vista grafico (definizione 1.1.3 a pag
 esempio figura 1.11 pag. 10 dambrosio
 %%
 
-# 4.2 - Parità e disparità
+# 3 - Parità e disparità
 
 > [!definizione]+ Definizione: funzioni pari e dispari
 > 
@@ -81,23 +81,23 @@ esempio figura 1.11 pag. 10 dambrosio
 
 > [!osservazione]+ Osservazione: simmetria dei grafici di funzioni pari e dispari
 > 
-> In termini di [grafico](Funzioni.md#^definizione-grafico-di-una-funzione) $\Gamma_f$ di $f$ è semplice osservare che, per una [funzione pari](Funzioni.md#^definizione-funzioni-pari-e-dispari), vale
+> In termini di [grafico](Funzioni.md#^definizione-grafico-di-una-funzione) $\Gamma_f$ di $f$ è semplice osservare che, per una [funzione pari](Proprietà%20delle%20funzioni.md#^definizione-funzioni-pari-e-dispari), vale
 > 
 > $$
 > (x,y) \in \Gamma_f \iff (-x,y) \in \Gamma_f
 > $$
 > 
-> mentre, per una [funzione dispari](Funzioni.md#^definizione-funzioni-pari-e-dispari), vale
+> mentre, per una [funzione dispari](Proprietà%20delle%20funzioni.md#^definizione-funzioni-pari-e-dispari), vale
 > 
 > $$
 > (x,y) \in \Gamma_f \iff (-x,-y) \in \Gamma_f
 > $$
 > 
-> Questo significa che il grafico%% link grafico grafico %% di una [funzione pari](Funzioni.md#^definizione-funzioni-pari-e-dispari) è simmetrico rispetto all'asse delle ordinate%% link %%, mentre il grafico%% link grafico grafico %% di una [funzione dispari](Funzioni.md#^definizione-funzioni-pari-e-dispari) è simmetrico rispetto all'origine.
+> Questo significa che il grafico%% link grafico grafico %% di una [funzione pari](Proprietà%20delle%20funzioni.md#^definizione-funzioni-pari-e-dispari) è simmetrico rispetto all'asse delle ordinate%% link %%, mentre il grafico%% link grafico grafico %% di una [funzione dispari](Proprietà%20delle%20funzioni.md#^definizione-funzioni-pari-e-dispari) è simmetrico rispetto all'origine.
 
 %% esempio definizione 1.1.5 pagina 11 Dambrosio %%
 
-# 4.3 - Periodicità
+# 4 - Periodicità
 
 > [!definizione]+ Definizione: funzione periodica
 > 
@@ -115,7 +115,7 @@ esempio figura 1.11 pag. 10 dambrosio
 
 > [!osservazione]+ Osservazione: grafico di una funzione periodica
 > 
-> È semplice osservare che il grafico%% link grafico grafico %% di una [funzione periodica](Funzioni.md#^definizione-funzione-periodica) $f$ di periodo $T$ è invariante per traslazioni orizzontali di ampiezza $T$: questo significa che è sufficiente tracciare il grafico di $f$ su un intervallo di lunghezza $T$ e ripeterlo infinite volte a destra e a sinistra dell'intervallo considerato.
+> È semplice osservare che il grafico%% link grafico grafico %% di una [funzione periodica](Proprietà%20delle%20funzioni.md#^definizione-funzione-periodica) $f$ di periodo $T$ è invariante per traslazioni orizzontali di ampiezza $T$: questo significa che è sufficiente tracciare il grafico di $f$ su un intervallo di lunghezza $T$ e ripeterlo infinite volte a destra e a sinistra dell'intervallo considerato.
 
 %% 
 esempio figura 1.14 pag. 12 dambrosio
@@ -197,7 +197,7 @@ f : A \to B è tale che ogni punto di B è raggiunto almeno da una freccia.
 
 > [!definizione]+ Definizione: biettività
 > 
-> Una [funzione](Funzioni.md#^definizione-funzione) $f \colon A\to B$ si dice che è _**biettiva**_ o che è una _**biezione**_ se è contemporaneamente sia [iniettiva](Proprietà%20delle%20funzioni.md#^definizione-iniettivita) che [suriettiva](Funzioni.md#^definizione-suriettivita), ovvero se per ogni elemento del codominio $y\in B$ esiste ed è unico un elemento del dominio $x \in A$ tale che $f(x)=y$:
+> Una [funzione](Funzioni.md#^definizione-funzione) $f \colon A\to B$ si dice che è _**biettiva**_ o che è una _**biezione**_ se è contemporaneamente sia [iniettiva](Proprietà%20delle%20funzioni.md#^definizione-iniettivita) che [suriettiva](Proprietà%20delle%20funzioni.md#^definizione-suriettivita), ovvero se per ogni elemento del codominio $y\in B$ esiste ed è unico un elemento del dominio $x \in A$ tale che $f(x)=y$:
 > $$
 > \forall y \in B, \exists! \, x \in A (f(x) = y)
 > $$
@@ -257,7 +257,7 @@ suriezione se e solo se f -1(b) \ne \emptyset per ogni b \in B
 > > $\blacksquare$
 ^proposizione-iniettivita-suriettivita-e-biettivita-dipendono-dalla-cardinalita
 
-# 8.1 - Funzioni identicamente nulle
+# 6 - Funzioni identicamente nulle
 
 > [!definizione]+ Definizione: funzione identicamente nulla
 > 
@@ -272,9 +272,9 @@ suriezione se e solo se f -1(b) \ne \emptyset per ogni b \in B
 > $$
 ^definizione-funzione-identicamente-nulla
 
-# Monotonia
+# 7 - Monotonia
 
-> [!definizione] Definizione: funzione monotona
+> [!definizione]+ Definizione: funzione (strettamente) (de)crescente o monotona su un intervallo
 > 
 > Data una [funzione](Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e un intervallo%% link %% $I \subseteq \text{dom}(f)$:
 > - si dice **crescente su $I$** se
@@ -311,12 +311,12 @@ suriezione se e solo se f -1(b) \ne \emptyset per ogni b \in B
 > 	$$
 > - si dice **monotona su $I$** se è crescente su $I$ o decrescente su $I$ e
 > - si dice **strettamente monotona su $I$** se è strettamente crescente su $I$ oppure strettamente decrescente su $I$.
-^definizione-funzione-monotona
+^definizione-funzione-strettamente-decrescente-o-monotona-su-un-intervallo
 
 %% 
 Osservazione
 
-Il concetto di [monotonia](Proprietà%20delle%20funzioni.md#^definizione-funzione-monotona) è legato a quello dell'ordinamento sulla retta reale: le funzioni crescenti mantengono l'ordinamento nel passaggio da $x$ a $f(x)$, mentre le funzioni decrescenti lo invertono:
+Il concetto di [monotonia](Proprietà%20delle%20funzioni.md#^definizione-funzione-strettamente-decrescente-o-monotona-su-un-intervallo) è legato a quello dell'ordinamento sulla retta reale: le funzioni crescenti mantengono l'ordinamento nel passaggio da $x$ a $f(x)$, mentre le funzioni decrescenti lo invertono:
 
 figure 1.19, 1.20 pag. 20 Dmbrosio
 %%
@@ -328,6 +328,62 @@ pag. 21 Dambrosio
 
 %% 
 Osservazione 1.1.18 pag. 21 Dambrosio
+%%
+
+> [!proposizione]+ Proposizione sulla somma di funzioni monotone
+> 
+> Date due [funzioni](Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e $g \colon \text{dom}(g) \to \mathbb{R}$ e un intervallo%% link %% $I \subseteq \text{dom}(f) \cap \text{dom}(g)$:
+> - Se $f_1$ ed $f_2$ sono [(strettamente) crescenti](Proprietà%20delle%20funzioni.md#^definizione-funzione-strettamente-decrescente-o-monotona-su-un-intervallo) su $I$ allora la loro [somma](Funzioni.md#^definizione-somma-di-funzioni) $f_1 + f_2$ è [(strettamente) crescente](Proprietà%20delle%20funzioni.md#^definizione-funzione-strettamente-decrescente-o-monotona-su-un-intervallo) su $I$.
+> - Se $f_1$ ed $f_2$ sono [(strettamente) decrescenti](Proprietà%20delle%20funzioni.md#^definizione-funzione-strettamente-decrescente-o-monotona-su-un-intervallo) su $I$ allora la loro [somma](Funzioni.md#^definizione-somma-di-funzioni) $f_1 + f_2$ è [(strettamente) decrescente](Proprietà%20delle%20funzioni.md#^definizione-funzione-strettamente-decrescente-o-monotona-su-un-intervallo) su $I$.
+
+%% 
+dimostrazione per esercizio
+%%
+
+# 8 - Concavità e convessità di funzioni
+
+Il concetto di _convessità e concavità_ di una [funzione](Funzioni.md#^definizione-funzione) è legato a quello dell'andamento del suo grafico%% Link %%: in modo simile a quanto avviene per gli angoli%% link alla concavità/covnessità di angoli %%, possiamo definire una [funzione](Funzioni.md#^definizione-funzione) come _concava_ quando il suo grafico%% Link %% ha la "pancia" verso l'alto (cioè graficamente si può rappresentare come "$\frown$"), mentre è _convessa_ quando il suo grafico%% link %% ha la "pancia" verso il basso (cioè "$\frown$").
+
+Purtroppo però ci tocca definire questo concetto in termini rigorosamente matematici.
+
+Data una [funzione](Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e un intervallo%% link %% $I \subseteq \text{dom}(f)$, per ogni coppia di punti%% link %% $x_1, x_2 \in I$ con $x_1 < x_2$ indichiamo con $r_{1,2}$ la retta passante%% link %% per i punti%% link %% $(x_1, f(x_1))$ ed $(x_2, f(x_2))$: sappiamo%% link %% che essa ha equazione
+
+$$
+\begin{align*}
+y &= f(x_1) + \dfrac{f(x_2) - f(x_1)}{x_2 - x_1} (x - x_1) \\
+&= f(x_1) + \dfrac{\Delta f}{\Delta x}(x - x_1)
+\end{align*}
+$$
+
+(dove $\dfrac{\Delta f}{\Delta x}$ è ovviamente il [quoziente di Newton](Variazioni%20e%20quoziente%20di%20Newton.md#^definizione-quoziente-di-newton)).
+
+Ebbene, possiamo dire ora che la [funzione](Funzioni.md#^definizione-funzione) $f$ è _concava_ su $I$ se per ogni ogni coppia di punti%% link %% $x_1, x_2 \in I$ con $x_1 < x_2$ il grafico%% link %% di $f$ è "sopra" quello della retta%% link %% $r_{1,2}$ su tutto l'intervallo%% link %% $[x_1, x_2]$; analogamente, è _convessa_ su $I$ se per ogni ogni coppia di punti%% link %% $x_1, x_2 \in I$ con $x_1 < x_2$ il grafico%% link %% di $f$ è "sotto" quello della retta%% link %% $r_{1,2}$ su tutto l'intervallo%% link %% $[x_1, x_2]$.
+
+%% 
+Mettere figure 1.26, 1.27 pag. 24 Dambrosio
+%%
+
+La prossima definizione esprime matematicamente quanto abbiamo appena detto.
+
+> [!definizione]+ Definizione: funzione concava o convessa su un intervallo
+> 
+> Data una [funzione](Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e un intervallo%% link %% $I \subseteq \text{dom}(f)$:
+> - $f$ si dice **concava su $I$** se
+> 	$$
+> 	\forall x_1, x_2 \in I, \forall x \in [x_1, x_2] . \left( x_1 < x_2 \implies f(x_1) \ge f(x_2) + \dfrac{\Delta f}{\Delta x}(x - x_1) \right) 
+> 	$$
+> - $f$ si dice **convessa su $I$** se
+> 	$$
+> 	\forall x_1, x_2 \in I, \forall x \in [x_1, x_2] . \left( x_1 < x_2 \implies f(x_1) \le f(x_2) + \dfrac{\Delta f}{\Delta x}(x - x_1) \right) 
+> 	$$
+^definizione-funzione-concava-o-convessa-su-un-intervallo
+
+> [!osservazione]+ Osservazione: funzione né concava né convessa
+> 
+> Una [funzione](Funzioni.md#^definizione-funzione) potrebbe non essere né [concava](Proprietà%20delle%20funzioni.md#^definizione-funzione-concava-o-convessa-su-un-intervallo) né [convessa](Proprietà%20delle%20funzioni.md#^definizione-funzione-concava-o-convessa-su-un-intervallo) su un intervallo%% link %%: per esempio, la [funzione](Funzioni.md#^definizione-funzione) $f(x) = \sin x$ non è né [concava](Proprietà%20delle%20funzioni.md#^definizione-funzione-concava-o-convessa-su-un-intervallo) né [convessa](Proprietà%20delle%20funzioni.md#^definizione-funzione-concava-o-convessa-su-un-intervallo) sull'intervallo%% link %% $[-3,3]$, però è [concava](Proprietà%20delle%20funzioni.md#^definizione-funzione-concava-o-convessa-su-un-intervallo) in $[0, \pi]$ e [convessa](Proprietà%20delle%20funzioni.md#^definizione-funzione-concava-o-convessa-su-un-intervallo) in $[-\pi, 0]$.
+
+%% 
+grafico della funzione nell'osservazione
 %%
 
 ---
@@ -347,3 +403,5 @@ Osservazione 1.1.18 pag. 21 Dambrosio
 > 		- Capitolo 1 - _Funzioni e modelli_:
 > 			- 1 - _Funzioni e grafici_:
 > 				- 1.1 - _Funzioni e loro rappresentazioni_.
+> 				- 1.2 - _Funzione composta e funzione inversa_.
+> 				- 1.3 - _Proprietà globali di una funzione su un intervallo_.

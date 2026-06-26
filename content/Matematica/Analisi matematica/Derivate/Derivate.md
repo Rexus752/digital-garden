@@ -108,7 +108,7 @@ In questo caso ingrandendo il grafico di $f$ vicino a $P(x_0, f(x_0))$ vediamo u
 > Data una [funzione](Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e un punto%% link %% $x_0 \in \text{dom}(f)$, diciamo che la **retta tangente a $f$ in $x_0$** è la retta passante%% link %% per il punto%% link %% $P(x_0, f(x_0))$ e con [pendenza](Derivate.md#^definizione-pendenza-di-una-funzione-in-un-punto) $p_f(x_0)$.
 ^definizione-retta-tangente-a-una-funzione-in-un-punto
 
-## Derivabilità di una funzione in un punto
+## 1.1 - Derivabilità di una funzione in un punto
 
 > [!definizione]+ Definizione: derivabilità e derivata (prima) di una funzione in un punto
 > 
@@ -261,9 +261,9 @@ ecc.
 
 <!--
 
-## Interpretazione cinematica della derivata
+## 1.2 - Interpretazione cinematica della derivata
 
-Proviamo ora a dare un'interpretazione cinematica della [derivata di una funzione in un punto](content/Matematica/Analisi%20matematica/Derivate/_index.md#^definizione-derivabilita-e-derivata-prima-di-una-funzione-in-un-punto)%% spiegare cos'è la cinematica %%.
+Proviamo ora a dare un'interpretazione cinematica della [derivata di una funzione in un punto](Matematica/Analisi%20matematica/Derivate/_index.md#^definizione-derivabilita-e-derivata-prima-di-una-funzione-in-un-punto)%% spiegare cos'è la cinematica %%.
 
 Consideriamo un oggetto puntiforme che si muove di moto rettilineo. La sua posizione sulla retta del moto è misurata rispetto a un punto fissato, detto _origine_. A destra dell'origine la posizione sarà positiva, a sinistra negativa.
 
@@ -282,7 +282,7 @@ Derivata in un punto = velocità istantanea
 
 <!--
 
-## Interpretazione demografica della derivata
+## 1.3 - Interpretazione demografica della derivata
 
 Ora intrepretiamo la derivata dal punto di vista demografico come tasso di crescita di una popolazione.
 
@@ -300,7 +300,6 @@ stimare tasso di crescita in (20,1) = -1/6 milioni all'ano
 
 tabella riassuntiva delle varie interpretazioni con quoziente di Newton e derivata
 -->
-
 
 # 2 - Differenziale
 

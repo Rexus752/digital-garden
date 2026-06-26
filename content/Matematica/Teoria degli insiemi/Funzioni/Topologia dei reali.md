@@ -15,7 +15,7 @@
 > 
 > $$
 > \begin{align*}
-> I_r(x_0) &= (c - r, c + r) \\
+> I_r(c) &= (c - r, c + r) \\
 > &= \{ x \in \mathbb{R} \mid d(x,c) < r \} \\
 > &= \{ x \in \mathbb{R} \mid |x - c| < r \}
 > \end{align*}
@@ -36,7 +36,7 @@ intorno senza specificare il raggio
 mettere rappresentazione grafica a pagina 115 di Lancelotti
 %%
 
-> [!esempio] Esempio di intorno $I_3(1)$
+> [!esempio]- Esempio di intorno $\color{#7F7FFF} I_3(1)$
 > 
 > L'[intorno](Topologia%20dei%20reali.md#^definizione-intorno-di-un-punto) $I_1(3)$ corrisponde all'intervallo aperto%% link %% dei punti%% link %% di $\mathbb{R}$ aventi distanza%% link %% da $1$ strettamente minore di $3$:
 > 
@@ -45,7 +45,7 @@ mettere rappresentazione grafica a pagina 115 di Lancelotti
 > $$
 
 %%
-[!definizione] Definizione: proprietà vera definitivamente per $x \to c$
+[!definizione]+ Definizione: proprietà vera definitivamente per $x \to c$
 
 Si dice che una proprietà è **vera definitivamente per $x$ che tende a $c$** se esiste un $r > 0$ tale per cui tale proprietà è vera per ogni $x \in I_r(c)$, tranne al più per $x=c$.
 %%
@@ -53,7 +53,7 @@ Si dice che una proprietà è **vera definitivamente per $x$ che tende a $c$** s
 %% cosa significa "definitivamente" in questo caso? %%
 
 %%
-[!esempio] Esempio: $x^2 < 4$ vera definitivamente per $x \to 0$
+[!esempio]- Esempio: $x^2 < 4$ vera definitivamente per $x \to 0$
 
 Dimostriamo che $x^2 < 4$ è vera definitivamente per $x \to 0$: vogliamo mostrare che esiste un $r > 0$ tale che $x^2 < 4$ per ogni $x \in I_r(0)$.
 
@@ -78,10 +78,10 @@ Possiamo scegliere quindi un $r \in (0,2]$ per cui è definitivamente vera quest
 
 > [!osservazione]+ Osservazione: utilità dell'intorno bucato
 > 
-> L'[_intorno bucato_](Topologia%20dei%20reali.md#^definizione-intorno-bucato) ci tornerà utile più in là quando studieremo i [_limiti_](Limiti.md#^definizione-limite) perché ci interesserà analizzare l'[intorno](Topologia%20dei%20reali.md#^definizione-intorno-di-un-punto) di un punto%% link %% $x_0$ escluso $x_0$ stesso, cioè proprio l'[intorno bucato](Topologia%20dei%20reali.md#^definizione-intorno-bucato) di $x_0$.
+> L'[_intorno bucato_](Topologia%20dei%20reali.md#^definizione-intorno-bucato-di-un-punto) ci tornerà utile più in là quando studieremo i [_limiti_](Limiti.md#^definizione-limite) perché ci interesserà analizzare l'[intorno](Topologia%20dei%20reali.md#^definizione-intorno-di-un-punto) di un punto%% link %% $x_0$ escluso $x_0$ stesso, cioè proprio l'[intorno bucato](Topologia%20dei%20reali.md#^definizione-intorno-bucato-di-un-punto) di $x_0$.
 
 %%
-[!esempio] Esempio: $\dfrac{1}{x^2} > 1$ vera definitivamente per $x \to 0$
+[!esempio]- Esempio: $\dfrac{1}{x^2} > 1$ vera definitivamente per $x \to 0$
 
 Dimostriamo che $\dfrac{1}{x^2} > 1$ è vera definitivamente per $x \to 0$: vogliamo mostrare che esiste un $r > 0$ tale che $\dfrac{1}{x^2} > 1$ per ogni $x \in I_r(0)$.
 
@@ -129,19 +129,19 @@ Allora l'intersezione di un numero finito di intorni di x0 è un intorno di x0.
 %%
 
 %%
-[!definizione] Definizione: proprietà vera definitivamente per $x \to + \infty$ (risp. per $x \to - \infty$)
+[!definizione]+ Definizione: proprietà vera definitivamente per $x \to + \infty$ (risp. per $x \to - \infty$)
 
 Si dice che una proprietà è **vera definitivamente per $x$ che tende a $+\infty$** (risp. **per $x$ che tende a $- \infty$**) se esiste un $r > 0$ tale per cui tale proprietà è vera per ogni $x \in I_r(+\infty)$ (risp. per ogni $x \in I_r(-\infty)$).
 %%
 
 %% 
-[!esempio] Esempio: $x^3 > 8$ è vera definitivamente per $x \to + \infty$
+[!esempio]- Esempio: $x^3 > 8$ è vera definitivamente per $x \to + \infty$
 
 Infatti è valida in $(2, + \infty) = I_2(+ \infty)$ e anche in ogni $I_r(+ \infty)$ con $r > 2$.
 %%
 
 %% 
-[!esempio] Esempio: $10^x < 10^{-10}$ è vera definitivamente per $x \to - \infty$
+[!esempio]- Esempio: $10^x < 10^{-10}$ è vera definitivamente per $x \to - \infty$
 
 Infatti è valida in $(-\infty, -10) = I_{-10}(-\infty)$ e anche in ogni $I_r(-\infty)$ con $r < -10$
 %%
@@ -155,12 +155,12 @@ Infatti è valida in $(-\infty, -10) = I_{-10}(-\infty)$ e anche in ogni $I_r(-\
 
 > [!definizione]+ Definizione: parte interna di un insieme
 > 
-> Dato un [insieme](Teoria%20degli%20insiemi.md#^definizione-insieme) $A \subseteq \mathbb{R}$, l'insieme dei suoi [punti interni](Topologia%20dei%20reali.md#^definizione-punto-interno-e-parte-interna) viene detto **parte interna di $A$** e si indica con "$\text{int}(A)$".
+> Dato un [insieme](Teoria%20degli%20insiemi.md#^definizione-insieme) $A \subseteq \mathbb{R}$, l'insieme dei suoi [punti interni](Topologia%20dei%20reali.md#^definizione-punto-interno) viene detto **parte interna di $A$** e si indica con "$\text{int}(A)$".
 ^definizione-parte-interna-di-un-insieme
 
 > [!proposizione]+ Proposizione: punti interni di $\color{#FF7F7F} [a,b]$ sono $\color{#FF7F7F} (a,b)$
 > 
-> Dato un intervallo chiuso%% link %% $A = [a,b]$, i [punti interni](Topologia%20dei%20reali.md#^definizione-punto-interno-e-parte-interna) di $A$ sono tutti e soli i punti dell'intervallo aperto%% Link %% $(a,b)$.
+> Dato un intervallo chiuso%% link %% $A = [a,b]$, i [punti interni](Topologia%20dei%20reali.md#^definizione-punto-interno) di $A$ sono tutti e soli i punti dell'intervallo aperto%% Link %% $(a,b)$.
 > 
 > > [!dimostrazione]- Dimostrazione
 > > 
@@ -189,7 +189,7 @@ Infatti è valida in $(-\infty, -10) = I_{-10}(-\infty)$ e anche in ogni $I_r(-\
 > > mettere grafico di pagina 117
 > > %%
 > > 
-> > Evidentemente né $a$ né $b$ sono [punti interni](Topologia%20dei%20reali.md#^definizione-punto-interno-e-parte-interna) ad $A$. Infatti, ogni [intorno](Topologia%20dei%20reali.md#^definizione-intorno-di-un-punto) $I_\delta = (a - \delta, a + \delta)$ di $a$, con $\delta > 0$, contiene punti di $\mathbb{R}$ non appartenenti ad $A$ (ossia i punti $a - \delta < x < a$). Analogamente, ogni intorno $I_\varepsilon = (b - \varepsilon, b + \varepsilon)$ di $b$, con $\varepsilon > 0$, contiene punti di $\mathbb{R}$ non appartenenti ad $A$ (ossia i punti $b < x < b + \varepsilon$).
+> > Evidentemente né $a$ né $b$ sono [punti interni](Topologia%20dei%20reali.md#^definizione-punto-interno) ad $A$. Infatti, ogni [intorno](Topologia%20dei%20reali.md#^definizione-intorno-di-un-punto) $I_\delta = (a - \delta, a + \delta)$ di $a$, con $\delta > 0$, contiene punti di $\mathbb{R}$ non appartenenti ad $A$ (ossia i punti $a - \delta < x < a$). Analogamente, ogni intorno $I_\varepsilon = (b - \varepsilon, b + \varepsilon)$ di $b$, con $\varepsilon > 0$, contiene punti di $\mathbb{R}$ non appartenenti ad $A$ (ossia i punti $b < x < b + \varepsilon$).
 > > 
 > > %% 
 > > mettere grafico di pagina 117
@@ -208,7 +208,7 @@ In tutte e 3 queste proposizioni si procede come nella proposiizone precedente).
 > [!definizione]+ Definizione: insieme aperto o chiuso di $\color{#FF7FFF} \mathbb{R}$
 > 
 > Dato un [insieme](Teoria%20degli%20insiemi.md#^definizione-insieme) $A \subseteq \mathbb{R}$ abbiamo che:
-> - $A$ si dice **aperto** se ogni punto di $A$ è [interno](Topologia%20dei%20reali.md#^definizione-punto-interno-e-parte-interna) ad $A$, cioè se $\text{int}(A) = A$.
+> - $A$ si dice **aperto** se ogni punto di $A$ è [interno](Topologia%20dei%20reali.md#^definizione-punto-interno) ad $A$, cioè se $\text{int}(A) = A$.
 > - $A$ si dice **chiuso** se il [complementare](Teoria%20degli%20insiemi.md#^definizione-complemento-di-un-insieme) $\complement_\mathbb{R}(A)$ di $A$ è aperto.
 > 
 > Per convenzione, l'[insieme vuoto](Teoria%20degli%20insiemi.md#^definizione-insieme-vuoto) $\emptyset$ e l'insieme dei numeri reali%% link %% $\mathbb{R}$ sono contemporaneamente sia aperti che chiusi.
@@ -286,7 +286,7 @@ non appartenere all'insieme), quindi vicino a questo punto si accumulano punti d
 
 > [!esempio]- Esempio di punto di accumulazione
 > 
-> Dato un intervallo%% link %% $A = [a,b)$, i [punti di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) di $A$ sono tutti e soli i punti%% link %% di $[a,b]$. Infatti, consideriamo inizialmente i [punti interni](Topologia%20dei%20reali.md#^definizione-punto-interno-e-parte-interna) ad $A$, cioè i punti%% Link %% $x_0 \in (a,b)$. Poiché $x_0$ è [interno](Topologia%20dei%20reali.md#^definizione-punto-interno) ad $A$, allora esiste un [intorno](Topologia%20dei%20reali.md#^definizione-intorno-di-un-punto) $I_r = (x_0 - r, x_0 + r)$ tale che $I_r \subseteq A$.
+> Dato un intervallo%% link %% $A = [a,b)$, i [punti di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) di $A$ sono tutti e soli i punti%% link %% di $[a,b]$. Infatti, consideriamo inizialmente i [punti interni](Topologia%20dei%20reali.md#^definizione-punto-interno) ad $A$, cioè i punti%% Link %% $x_0 \in (a,b)$. Poiché $x_0$ è [interno](Topologia%20dei%20reali.md#^definizione-punto-interno) ad $A$, allora esiste un [intorno](Topologia%20dei%20reali.md#^definizione-intorno-di-un-punto) $I_r = (x_0 - r, x_0 + r)$ tale che $I_r \subseteq A$.
 > 
 > Consideriamo quindi un qualunque intorno $I_\delta = (x_0 - \delta, x_0 + \delta)$ i $x_0$:
 > - Se $\delta \le r$, allora $I_\delta \subseteq I_r \subseteq A$. Poiché $I_\delta$ contiene punti%% link %% diversi da $x_0$, allora è verificato che contiene punti di $A$ diversi da $x_0$.
