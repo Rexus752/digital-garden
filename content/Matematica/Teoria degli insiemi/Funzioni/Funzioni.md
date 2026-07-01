@@ -555,6 +555,23 @@ rng(f|C) = f [C].
 > $$
 ^definizione-somma-di-funzioni
 
+## 4.2 - Prodotto di funzioni
+
+> [!definizione]+ Definizione: prodotto di funzioni
+> 
+> Date due [funzioni](Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e $g \colon \text{dom}(g) \to \mathbb{R}$, si definisce il **prodotto** $f \cdot g$ (a volte indicato anche come $fg$) come la [funzione](Funzioni.md#^definizione-funzione):
+> 
+> $$
+> (f \cdot g) \colon \text{dom}(f) \cap \text{dom}(g) \to \mathbb{R}
+> $$
+> 
+> tale che per ogni $x \in \text{dom}(f) \cap \text{dom}(g)$:
+> 
+> $$
+> (f \cdot g)(x) = f(x) \cdot g(x)
+> $$
+^definizione-prodotto-di-funzioni
+
 ---
 
 > [!fonti]+ Fonti

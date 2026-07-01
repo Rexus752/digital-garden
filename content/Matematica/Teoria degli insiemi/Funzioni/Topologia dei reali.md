@@ -23,9 +23,9 @@
 > 
 > ossia l'insieme di tutti e soli i punti%% link %% di $\mathbb{R}$ aventi distanza%% link %% da $c$ minore di $r$.
 > 
-> Si chiama **intorno destro di $c$ di raggio $r$** l'intervallo aperto%% link %% $(c, c + r)$.
+> Si chiama **intorno destro di $c$ di raggio $r$** l'intervallo aperto%% link %% $(c, c + r)$ e si indica con $I_r^+(c)$.
 > 
-> Si chiama **intorno sinistro di $c$ di raggio $r$** l'intervallo aperto%% link %% $(c - r, c)$.
+> Si chiama **intorno sinistro di $c$ di raggio $r$** l'intervallo aperto%% link %% $(c - r, c)$ e si indica con $I_r^-(c)$.
 ^definizione-intorno-di-un-punto
 
 %% 
@@ -44,11 +44,10 @@ mettere rappresentazione grafica a pagina 115 di Lancelotti
 > I_3(1) = (1 - 3, 1 + 3) = (-2, 4)
 > $$
 
-%%
-[!definizione]+ Definizione: proprietà vera definitivamente per $x \to c$
-
-Si dice che una proprietà è **vera definitivamente per $x$ che tende a $c$** se esiste un $r > 0$ tale per cui tale proprietà è vera per ogni $x \in I_r(c)$, tranne al più per $x=c$.
-%%
+> [!definizione]+ Definizione: proprietà vera definitivamente per $\color{#FF7FFF} x \to c$
+> 
+> Si dice che una proprietà è **vera definitivamente per $x$ che tende a $c$** (o che **vale definitivamente per $x$ che tende a $c$**) se esiste un $r > 0$ tale per cui tale proprietà è vera per ogni $x \in I_r(c)$, tranne al più per $x=c$.
+^definizione-proprieta-vera-definitivamente-per-x-che-tende-a-c
 
 %% cosa significa "definitivamente" in questo caso? %%
 

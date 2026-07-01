@@ -314,6 +314,10 @@ suriezione se e solo se f -1(b) \ne \emptyset per ogni b \in B
 ^definizione-funzione-strettamente-decrescente-o-monotona-su-un-intervallo
 
 %% 
+fare esempi grafici su ogni caso
+%%
+
+%% 
 Osservazione
 
 Il concetto di [monotonia](Proprietà%20delle%20funzioni.md#^definizione-funzione-strettamente-decrescente-o-monotona-su-un-intervallo) è legato a quello dell'ordinamento sulla retta reale: le funzioni crescenti mantengono l'ordinamento nel passaggio da $x$ a $f(x)$, mentre le funzioni decrescenti lo invertono:
@@ -342,7 +346,7 @@ dimostrazione per esercizio
 
 # 8 - Concavità e convessità di funzioni
 
-Il concetto di _convessità e concavità_ di una [funzione](Funzioni.md#^definizione-funzione) è legato a quello dell'andamento del suo grafico%% Link %%: in modo simile a quanto avviene per gli angoli%% link alla concavità/covnessità di angoli %%, possiamo definire una [funzione](Funzioni.md#^definizione-funzione) come _concava_ quando il suo grafico%% Link %% ha la "pancia" verso l'alto (cioè graficamente si può rappresentare come "$\frown$"), mentre è _convessa_ quando il suo grafico%% link %% ha la "pancia" verso il basso (cioè "$\frown$").
+Il concetto di _convessità e concavità_ di una [funzione](Funzioni.md#^definizione-funzione) è legato a quello dell'andamento del suo grafico%% Link %%: in modo simile a quanto avviene per gli angoli%% link alla concavità/covnessità di angoli %%, possiamo definire una [funzione](Funzioni.md#^definizione-funzione) come _concava_ quando il suo grafico%% Link %% ha la "pancia" verso l'alto (cioè graficamente si può rappresentare come "$\frown$"), mentre è _convessa_ quando il suo grafico%% link %% ha la "pancia" verso il basso (cioè "$\smile$").
 
 Purtroppo però ci tocca definire questo concetto in termini rigorosamente matematici.
 
@@ -398,6 +402,9 @@ grafico della funzione nell'osservazione
 > 	- Corso di _Logica Matematica_, A.A. 2022-23 ([pagina Moodle](https://informatica.i-learn.unito.it/course/view.php?id=2480)):
 > 		- Proff. Andretta Alessandro, Motto Ros Luca e Viale Matteo, slide:
 > 			- [_2.3 - Funzioni_](https://informatica.i-learn.unito.it/pluginfile.php/336712/mod_folder/content/0/Capitolo%202%20-%20Elementi%20di%20teoria%20degli%20insiemi/2.3%20-%20Funzioni_moodle.pdf).
+> 	- Corso di _Analisi Matematica - canale C_, A.A. 2020-21 ([pagina Moodle](https://informatica.i-learn.unito.it/course/view.php?id=2075)):
+> 		- Prof. Barutello Vivina Laura, videolezioni:
+> 			- [_L8b_](https://informatica.i-learn.unito.it/local/streamingfilemanager/file.php/informatica.i-learn.unito.it/2075/L8b.mp4).%% per quanto riguarda la monotonia e le funzioni limitate %%
 > - 📚 Walter Dambrosio, _Analisi matematica - Fare e comprendere_, Zanichelli, 2018 (ISBN: `9788808220745`):
 > 	- Parte I - _I concetti dell'analisi matematica_:
 > 		- Capitolo 1 - _Funzioni e modelli_:

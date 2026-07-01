@@ -95,6 +95,15 @@ Esistono vari "tipi" di _limite_ e questo è detto _limite finito al finito_ per
 > $$
 ^definizione-limite-finito-al-finito
 
+%% 
+fare interpretazione grafica di questo caso specifico del limite
+%%
+
+%% 
+siamo sicuri che $\forall x \in \mathbb{R}$ e non $\forall x \in \mathbb{R} \cup \{ \pm \infty \}$?
+nel caso andrebbe modificato anche negli altri 3 casi e nella definizione generale
+%%
+
 > [!osservazione]+ Osservazione: definizione alternativa di _limite finito al finito_
 > 
 > Nella [definizione di _limite finito al finito_](Limiti.md#^definizione-limite-finito-al-finito) gli [intorni](Topologia%20dei%20reali.md#^definizione-intorno-di-un-punto) possono essere sostituiti dalla distanza%% link %% sfruttando la [definizione stessa di _intorno_](Topologia%20dei%20reali.md#^definizione-intorno-di-un-punto):
@@ -121,6 +130,8 @@ Esistono vari "tipi" di _limite_ e questo è detto _limite finito al finito_ per
 	- Una funzione per cui $f(x) = l$
 	- Una funzione per cui $f(x) \ne l$
 	hanno tutte limite uguale a $l$!
+
+Questa osservazione varrà anche per gli altri tipi di limite, ossia il limite infinito all'infinito, finito all'infinito e infinito al finito.
 %%
 
 > [!esempio]- Esempio di limite finito al finito
@@ -175,7 +186,7 @@ Esistono vari "tipi" di _limite_ e questo è detto _limite finito al finito_ per
 
 > [!osservazione]+ Osservazione: basta un $\color{#7F7F7F} \delta$ qualsiasi nel limite finito al finito
 > 
-> In un [limite finito al finito](Limiti.md#^osservazione-limite-finito-al-finito) non è importante trovare il miglior $\delta$, cioè la distanza minore possibile tra $f(x)$ ed $l$, ma ne basta uno qualunque che funzioni.
+> In un [limite finito al finito](Limiti.md#^definizione-limite-finito-al-finito) non è importante trovare il miglior $\delta$, cioè la distanza minore possibile tra $f(x)$ ed $l$, ma ne basta uno qualunque che funzioni.
 > 
 > Per esempio, consideriamo la [funzione](Funzioni.md#^definizione-funzione) $f \colon \mathbb{R} \to \mathbb{R}$ definita da
 > 
@@ -223,6 +234,10 @@ Esistono vari "tipi" di _limite_ e questo è detto _limite finito al finito_ per
 > Notiamo anche il fatto che $f(1) = 4 \ne 5$, ma è irrilevante: la condizione $0 < |x - 1|$ esclude esattamente $x = 1$, quindi il valore in quel punto%% link %% non conta.
 
 %% continua dall'ultima frase a pagina 128 a pagina 129 di Lancelotti %%
+
+%% 
+Questa osservazione vale anche per gli altri tipi di limite, ossia il limite infinito all'infinito, finito all'infinito e infinito al finito, anche se la rivedremo ogni volta adattandola al caso specifico
+%%
 
 ## 1.2 - Limite infinito all'infinito
 
@@ -327,6 +342,14 @@ Questo tipo di limite è detto _limite infinito all'infinito_ perché se $x$ ten
 > 	\end{array}
 > 	$$
 ^definizione-limite-infinito-all-infinito
+
+%% 
+siamo sicuri che $f \colon (a, + \infty) \to \mathbb{R}$ vada bene anche per $x \to - \infty$?
+%%
+
+%% 
+fare interpretazione grafica di questo caso specifico del limite
+%%
 
 > [!esempio]- Esempio di limite infinito all'infinito
 > 
@@ -531,6 +554,10 @@ Questo tipo di limite è detto _limite finito all'infinito_ perché se $x$ tende
 > 	$$
 > ^definizione-limite-finito-all-infinito
 
+%% 
+fare interpretazione grafica di questo caso specifico del limite
+%%
+
 > [!esempio]- Esempio di limite finito all'infinito
 > 
 > Prendendo la [funzione](Funzioni.md#^definizione-funzione)
@@ -684,6 +711,10 @@ Questo tipo di limite è detto _limite infinito al finito_ perché se $x$ tende 
 > 	$$
 > ^definizione-limite-infinito-al-finito
 
+%% 
+fare interpretazione grafica di questo caso specifico del limite
+%%
+
 > [!esempio]- Esempio di limite infinito al finito
 > 
 > Prendendo la [funzione](Funzioni.md#^definizione-funzione)
@@ -766,24 +797,47 @@ Ora proviamo a riunire questi quattro casi "specifici" in una definizione più g
 
 > [!definizione]+ Definizione: limite
 > 
-> Data una [funzione](Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$, un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R} \cup \{ \pm \infty \}$ per $\text{dom}(f)$ e un valore%% link %% $l \in \mathbb{R} \cup \{ \pm \infty \}$, diciamo che **$f$ ha limite $l$ per $x$ che tende a $x_0$** se, per ogni [intorno](Topologia%20dei%20reali.md#^definizione-intorno-di-un-punto) $I(l)$ di $l$, esiste un [intorno](Topologia%20dei%20reali.md#^definizione-intorno-di-un-punto) $I(x_0)$ di $x_0$ tale che, per ogni $x \in \text{dom}(f)$ con $x \in I(x_0)$ e $x \ne x_0$, si ha che $f(x) \in I(l)$:
+> Data una [funzione](Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$, un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $c \in \mathbb{R} \cup \{ \pm \infty \}$ per $\text{dom}(f)$ e un valore%% link %% $l \in \mathbb{R} \cup \{ \pm \infty \}$, diciamo che **$f$ ha limite $l$ per $x$ che tende a $c$** e si scrive
 > 
 > $$
-> \forall I(l), \exists I(x_0) . \big( x \in \text{dom}(f) \cap I(x_0) \land x = x_0 \implies f(x) \in I(l) \big) 
+> \lim_{x \to c} f(x) = l
 > $$
 > 
-> In tal caso, scriviamo
+> se
 > 
 > $$
-> \lim_{x \to x_0} f(x) = l
+> \forall I_\varepsilon(l), \exists I_\delta(c), \forall x \in \mathbb{R} . \big( x \in I_\delta(c) \cap \text{dom}(f) \setminus \{ c \} \implies f(x) \in I_\varepsilon(l) \big) 
 > $$
-> 
-> che si legge "_limite per $x$ che tende a $x_0$ di $f(x)$ uguale a $l$_" o "_$f(x)$ tende a $l$ per $x$ che tende a $x_0$_".
 ^definizione-limite
 
-> [!osservazione]+ Osservazione: non è necessario che $\color{#7F7F7F} x_0 \in \text{dom}(f)$
+%% 
+è necessario che $x \in \text{dom}(f)$ e non solo nell'intorno al più senza $c$ stesso?
+%%
+
+%%
+I casi specifici si ottengono come istanze particolari:
+
+| $c$ | $l$ | intorno di $c$ | intorno di $l$ |
+|---|---|---|---|
+| $c \in \mathbb{R}$ | $l \in \mathbb{R}$ | $I_\delta(c)$ | $I_\varepsilon(l)$ |
+| $c \in \mathbb{R}$ | $+\infty$ | $I_\delta(c)$ | $(M, +\infty)$ |
+| $+\infty$ | $l \in \mathbb{R}$ | $(K, +\infty)$ | $I_\varepsilon(l)$ |
+| $+\infty$ | $+\infty$ | $(K, +\infty)$ | $(M, +\infty)$ |
+
+e così via per $-\infty$, i limiti per eccesso/difetto, e i limiti da sinistra/destra.
+%%
+
+%% 
+mettere vari tipi di limite nella definizione di limite
+%%
+
+> [!osservazione]+ Osservazione: non è necessario che $\color{#7F7F7F} c \in \text{dom}(f)$
 > 
-> Nella [definizione di _limite_](Limiti.md#^definizione-limite), il punto%% link %% $x_0$ è un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) per $\text{dom}(f)$, quindi può anche **non** appartenere al dominio%% link %%: ecco perché si richiede che $x \ne x_0$. Un altro motivo per cui ciò accade è che, anche se $x_0 \in \text{dom}(f)$, il [limite](Limiti.md#^definizione-limite), sia che esista sia che non esista, non dipende dal valore%% link %% di $f$ in $x_0$, ma solo dai valori di $f$ nei punti%% link %% in un [intorno](Topologia%20dei%20reali.md#^definizione-intorno-di-un-punto) di $x_0$.
+> Nella [definizione di _limite_](Limiti.md#^definizione-limite), il punto%% link %% $c$ è un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) per $\text{dom}(f)$, quindi può anche **non** appartenere al dominio%% link %%: ecco perché si richiede che $x \ne c$. Un altro motivo per cui ciò accade è che, anche se $c \in \text{dom}(f)$, il [limite](Limiti.md#^definizione-limite), sia che esista sia che non esista, non dipende dal valore%% link %% di $f$ in $c$, ma solo dai valori di $f$ nei punti%% link %% in un [intorno](Topologia%20dei%20reali.md#^definizione-intorno-di-un-punto) di $c$.
+
+%% 
+questa osservazione riprende quanto detto prima sul comportamento della funzione nel punto specifico
+%%
 
 # 2 - Funzioni senza limite
 
@@ -808,49 +862,49 @@ Ora proviamo a riunire questi quattro casi "specifici" in una definizione più g
 > $$
 > 
 > non esiste.
+
+> [!dimostrazione]- Dimostrazione
 > 
-> > [!dimostrazione]- Dimostrazione
-> > 
-> > Infatti, per assurdo supponiamo che questo limite esista e sia
-> > 
-> > $$
-> > \lim_{x \to 0} \text{sgn}(x) = l
-> > $$
-> > 
-> > Poiché $|\text{sgn}(x)| \le l$, possiamo supporre che $l \in \mathbb{R}$, cioè $l \ne \pm \infty$.
-> > 
-> > Per la [definizione di limite con $x_0 \in \mathbb{R} \land l \in \mathbb{R}$](Limiti.md#^osservazione-limite-con-x0-finito-l-finito), abbiamo che
-> > 
-> > $$
-> > \forall \varepsilon > 0, \exists \delta > 0, \forall x \in \mathbb{R} . \big( 0 < |x| < \delta \implies |\text{sgn}(x) - l| < \varepsilon \big)
-> > $$
-> > 
-> > Abbiamo allora tre casi possibili:
-> > - Se $l>0$, allora preso un $\displaystyle\varepsilon = \dfrac{l}{2}$ esiste un $\delta > 0$ tale che, per ogni $x \in \mathbb{R}$ con $0 < |x| < \delta$, si ha che
-> > 	$$
-> > 	\begin{array}{}
-> > 	|\text{sgn}(x)-l| < \dfrac{l}{2} \\
-> > 	\Updownarrow \\
-> > 	-\dfrac{l}{2} < \text{sgn}(x) - l < \dfrac{l}{2} \\
-> > 	\Updownarrow \\
-> > 	\dfrac{l}{2} < \text{sgn}(x) < \dfrac{3}{2}l\\
-> > 	\end{array}
-> > 	$$
-> > 	e in particolare, per ogni $x \in \mathbb{R}$ tale che $0 < |x| < \delta$, si ha che $\text{sgn}(x) > \dfrac{l}{2} > 0$: otteniamo però un assurdo perché, se $x < 0$, allora $\text{sgn}(x)= -1 < 0$.
-> > - Se $l < 0$, allora preso un $\displaystyle\varepsilon = - \dfrac{l}{2}$ esiste un $\delta > 0$ tale che, per ogni $x \in \mathbb{R}$ con $0 < |x| < \delta$, si ha che
-> > 	$$
-> > 	\begin{array}{}
-> > 	|\text{sgn}(x)-l| < -\dfrac{l}{2} \\
-> > 	\Updownarrow \\
-> > 	\dfrac{l}{2} < \text{sgn}(x) - l < -\dfrac{l}{2} \\
-> > 	\Updownarrow \\
-> > 	\dfrac{3}{2}l < \text{sgn}(x) < \dfrac{l}{2} \\
-> > 	\end{array}
-> > 	$$
-> > 	e in particolare, per ogni $x \in \mathbb{R}$ tale che $0 < |x| < \delta$, si ha che $\text{sgn}(x) < \dfrac{l}{2} < 0$: otteniamo però un assurdo perché, se $x > 0$, allora $\text{sgn}(x)= 1 > 0$.
-> > - Se $l = 0$, allora preso un $\displaystyle\varepsilon = \dfrac{l}{2}$ esiste un $\delta > 0$ tale che, per ogni $x \in \mathbb{R}$ con $0 < |x| < \delta$, si ha che $|\text{sgn}(x)| < \dfrac{l}{2}$: otteniamo però un assurdo perché, se $x > 0$, allora $|\text{sgn}(x)| =1 >\dfrac{l}{2}$.
-> > 
-> > $\blacksquare$
+> Infatti, per assurdo supponiamo che questo limite esista e sia
+> 
+> $$
+> \lim_{x \to 0} \text{sgn}(x) = l
+> $$
+> 
+> Poiché $|\text{sgn}(x)| \le l$, possiamo supporre che $l \in \mathbb{R}$, cioè $l \ne \pm \infty$.
+> 
+> Per la [definizione di _limite finito al finito_](Limiti.md#^definizione-limite-finito-al-finito), abbiamo che
+> 
+> $$
+> \forall \varepsilon > 0, \exists \delta > 0, \forall x \in \mathbb{R} . \big( 0 < |x| < \delta \implies |\text{sgn}(x) - l| < \varepsilon \big)
+> $$
+> 
+> Abbiamo allora tre casi possibili:
+> - Se $l>0$, allora preso un $\displaystyle\varepsilon = \dfrac{l}{2}$ esiste un $\delta > 0$ tale che, per ogni $x \in \mathbb{R}$ con $0 < |x| < \delta$, si ha che
+> 	$$
+> 	\begin{array}{}
+> 	|\text{sgn}(x)-l| < \dfrac{l}{2} \\
+> 	\Updownarrow \\
+> 	-\dfrac{l}{2} < \text{sgn}(x) - l < \dfrac{l}{2} \\
+> 	\Updownarrow \\
+> 	\dfrac{l}{2} < \text{sgn}(x) < \dfrac{3}{2}l\\
+> 	\end{array}
+> 	$$
+> 	e in particolare, per ogni $x \in \mathbb{R}$ tale che $0 < |x| < \delta$, si ha che $\text{sgn}(x) > \dfrac{l}{2} > 0$: otteniamo però un assurdo perché, se $x < 0$, allora $\text{sgn}(x)= -1 < 0$.
+> - Se $l < 0$, allora preso un $\displaystyle\varepsilon = - \dfrac{l}{2}$ esiste un $\delta > 0$ tale che, per ogni $x \in \mathbb{R}$ con $0 < |x| < \delta$, si ha che
+> 	$$
+> 	\begin{array}{}
+> 	|\text{sgn}(x)-l| < -\dfrac{l}{2} \\
+> 	\Updownarrow \\
+> 	\dfrac{l}{2} < \text{sgn}(x) - l < -\dfrac{l}{2} \\
+> 	\Updownarrow \\
+> 	\dfrac{3}{2}l < \text{sgn}(x) < \dfrac{l}{2} \\
+> 	\end{array}
+> 	$$
+> 	e in particolare, per ogni $x \in \mathbb{R}$ tale che $0 < |x| < \delta$, si ha che $\text{sgn}(x) < \dfrac{l}{2} < 0$: otteniamo però un assurdo perché, se $x > 0$, allora $\text{sgn}(x)= 1 > 0$.
+> - Se $l = 0$, allora preso un $\displaystyle\varepsilon = \dfrac{l}{2}$ esiste un $\delta > 0$ tale che, per ogni $x \in \mathbb{R}$ con $0 < |x| < \delta$, si ha che $|\text{sgn}(x)| < \dfrac{l}{2}$: otteniamo però un assurdo perché, se $x > 0$, allora $|\text{sgn}(x)| =1 >\dfrac{l}{2}$.
+> 
+> $\blacksquare$
 
 > [!osservazione]+ Osservazione: utilità della definizione del limite
 > 
@@ -863,6 +917,10 @@ Ora proviamo a riunire questi quattro casi "specifici" in una definizione più g
 > $$
 > \lim_{x \to 0} \dfrac{1}{x}
 > $$
+
+%% 
+mettere soluzione
+%%
 
 # 3 - Unicità del limite
 
@@ -887,6 +945,28 @@ Pagina 135 e 136del Lancelotti
 
 %% 
 Ora definiamo due particolari [limiti](Limiti.md#^definizione-limite), detti _limiti laterali_ perché ???, in particolare limite destro e limite sinistro.
+%%
+
+%%
+Modificare le definizioni di limite destro e sinistro
+
+limite destro:
+$$
+\forall \varepsilon > 0, \exists \delta > 0, \forall x \in \mathbb{R} . \big( x \in I_\delta^+(c) \setminus \{ c \} \implies f(x) \in I_\varepsilon^+(l) \big) 
+$$
+o definizione alternativa:
+$$
+\forall \varepsilon > 0, \exists \delta > 0, \forall x \in \mathbb{R} . \big( 0 < x - c < \delta \implies |f(x) - l| < \varepsilon \big)
+$$
+
+limite sinistro:
+$$
+\forall \varepsilon > 0, \exists \delta > 0, \forall x \in \mathbb{R} . \big( x \in I_\delta^-(c) \setminus \{ c \} \implies f(x) \in I_\varepsilon^-(l) \big) 
+$$
+o definizione alternativa:
+$$
+\forall \varepsilon > 0, \exists \delta > 0, \forall x \in \mathbb{R} . \big( - \delta < x - c < 0 \implies |f(x) - l| < \varepsilon \big)
+$$
 %%
 
 > [!definizione]+ Definizione: limite destro
@@ -973,6 +1053,11 @@ esercizio: scrivere definizioni degli altri casi
 Dimostrazione: segue immediatamente dalle definizioni (per esercizio)
 %%
 
+%% 
+Corollario:
+il limite non esiste se il limite destro =/= limite sinistro o se almeno uno dei due non esiste.
+%%
+
 > [!corollario]+ Corollario del teorema di unicità del limite per i limiti laterali
 > 
 > Il [teorema di unicità del limite](Limiti.md#^teorema-di-unicita-del-limite) vale anche per il [limite destro](Limiti.md#^definizione-limite-destro) e il [limite sinistro](Limiti.md#^definizione-limite-sinistro).
@@ -995,15 +1080,427 @@ esempio 2.28 pagg. 146-147 Lancelotti
 > \lim_{x \to x_0^-} f(x) = \lim_{x \to x_0} f(x)
 > $$
 
-%% spiegare perché vale questa osservazione %%
+%% spiegare perché vale questa osservazione (ed eventualmente trasformarla in proposizione) %%
 
-# 5 - Algebra dei limiti
+# 5 - Limiti per eccesso e per difetto
+
+> [!definizione]+ Definizione: limite per eccesso
+>
+> Data una [funzione](Funzioni.md#^definizione-funzione) $f \colon I_r(c) \setminus \{ c \} \to \mathbb{R}$ per qualche $r > 0$ e $c \in \mathbb{R}$, si dice che **$f$ ammette limite finito $l$ per eccesso per $x$ che tende a $c$** e si scrive
+>
+> $$
+> \lim_{x \to c} f(x) = l^+
+> $$
+>
+> se
+>
+> $$
+> \forall \varepsilon > 0, \exists \delta > 0, \forall x \in \mathbb{R} . \left( x \in I_\delta(c) \setminus \{ c \} \implies f(x) \in I_\varepsilon^+(l) \right)
+> $$
+^definizione-limite-per-eccesso
+
+> [!definizione]+ Definizione: limite per difetto
+>
+> Data una [funzione](Funzioni.md#^definizione-funzione) $f \colon I_r(c) \setminus \{ c \} \to \mathbb{R}$ per qualche $r > 0$ e $c \in \mathbb{R}$, si dice che **$f$ ammette limite finito $l$ per difetto per $x$ che tende a $c$** e si scrive
+>
+> $$
+> \lim_{x \to c} f(x) = l^-
+> $$
+>
+> se
+>
+> $$
+> \forall \varepsilon > 0, \exists \delta > 0, \forall x \in \mathbb{R} . \left( x \in I_\delta(c) \setminus \{ c \} \implies f(x) \in I_\varepsilon^-(l) \right)
+> $$
+^definizione-limite-per-difetto
+
+%%
+Interpretazione del limite per eccesso e per difetto
+
+In altre parole, il limite per eccesso richiede che $f(x)$ si avvicini a $l$ **restando sempre strettamente maggiore** di $l$, mentre il limite per difetto richiede che $f(x)$ si avvicini a $l$ **restando sempre strettamente minore** di $l$.
+%%
+
+%% 
+osservazione: limite per eccesso e per difetto sono casi specifici dei limiti laterali (?)
+%%
+
+> [!esempio]- Esempio di limite per eccesso
+> 
+> Un esempio di [limite per eccesso](Limiti.md#^definizione-limite-per-eccesso) è il [limite](Limiti.md#^definizione-limite)
+> 
+> $$
+> \lim_{x \to + \infty} \dfrac{1}{x^2} = 0^+
+> $$
+> 
+> perché, $x^2 > 0$ per ogni $x \ne 0$, si ha sempre $f(x) = \dfrac{1}{x^2} > 0$, dunque $f(x)$ si avvicina a $0$ restando sempre al di sopra di $0$.
+
+> [!esempio]- Esempio di limite per difetto
+> 
+> Un esempio di [limite per difetto](Limiti.md#^definizione-limite-per-difetto) è il [limite](Limiti.md#^definizione-limite)
+> 
+> $$
+> \lim_{x \to 0} (1 - x^2) = 1^-
+> $$
+> 
+> perché, essendo $x^2 > 0$ per ogni $x \ne 0$, si ha sempre $f(x) = 1 - x^2 < 1$, dunque $f(x)$ si avvicina a $1$ restando sempre al di sotto di $1$.
+
+%% 
+Esempio:
+
+$$
+\lim_{x \to + \infty} (\sin x)
+$$
+a cosa corrisponde?
+
+Sappiamo che il $\sin x$ oscilla sempre tra $-1$ e $1$, quindi non ha segno costante quando $x \to + \infty$.
+
+Ma il suo limite a cosa equivale? Non equivale sicuramente a $0$ perché anche all'infinito continua a oscillare sempre tra $-1$ e $1$, quindi non tende mai a un valore specifico come lo $0$.
+
+Possiamo però provare a "smorzare" le oscillazioni man mano che la funzione tende a $+ \infty$, per esempio dividendo $\sin x$ per $x$. Avendo $x$ valori sempre maggiori man mano che tende verso $+ \infty$, "smorzerà" sempre di più le oscillazioni fino ad annullarle: ecco perché $\lim_{x \to 0} \dfrac{\sin x}{x} = 0$.
+
+Verifichiamo usando la definizione di limite:
+
+$$
+\forall \varepsilon > 0, \exists M > 0, \forall x \in \mathbb{R} . \left( x > 0 \implies \left| \dfrac{\sin x}{x} \right| < \varepsilon \right)
+$$
+
+ma
+
+$$
+\left| \dfrac{\sin x}{x} \right| \underbrace{=}_{\text{perché } x>0} \dfrac{|\sin x|}{x} \le \dfrac{1}{x} < \varepsilon \iff x > \dfrac{1}{\varepsilon}
+$$
+
+Conclusione:
+
+$$
+\forall \varepsilon > 0 . \left( x > \underbrace{\dfrac{1}{\varepsilon}}_{=M} \implies \left| \dfrac{\sin x}{x} \right| < \varepsilon \right) 
+$$
+%%
+
+# 6 - Algebra dei limiti
+
+> [!teorema]+ Teorema della somma di limiti finiti
+> 
+> Dato un [sottoinsieme](Teoria%20degli%20insiemi.md#^definizione-insieme) $A \subseteq \mathbb{R}$ non [vuoto](Teoria%20degli%20insiemi.md#^definizione-insieme-vuoto), due [funzioni](Funzioni.md#^definizione-funzione) $f \colon A \to \mathbb{R}$ e $g \colon A \to \mathbb{R}$ e un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R} \cup \{ \pm \infty \}$ per $A$, se esistono i [limiti](Limiti.md#^definizione-limite) $\displaystyle\lim_{x \to x_0} f(x) = l \in \mathbb{R}$ e $\displaystyle\lim_{x \to x_0} g(x) = m \in \mathbb{R}$, allora il [limite](Limiti.md#^definizione-limite) della loro [somma](Funzioni.md#^definizione-somma-di-funzioni) $f + g$ è uguale alla somma%% Link %% dei loro [limiti](Limiti.md#^definizione-limite):
+> 
+> $$
+> \lim_{x \to x_0} \big( f(x) + g(x) \big) = \lim_{x \to x_0} f(x) + \lim_{x \to x_0} g(x) = l + m
+> $$
+^teorema-della-somma-di-limiti-finiti
+
+<!--
+
+[!dimostrazione]- Dimostrazione del teorema della somma di limiti finiti
+
+Dimostriamo che vale il [teorema della somma di limiti finiti](Limiti.md#^teorema-della-somma-di-limiti-finiti). Consideriamo per il momento il caso in cui $x_0 \in \mathbb{R}$ e, usando la [definizione alternativa di _limite finito al finito_](Limiti.md#^osservazione-definizione-alternativa-di-limite-finito-al-finito), abbiamo che la tesi si può riscrivere in questa forma:
+
+$$
+\begin{array}{}
+\forall \varepsilon > 0, \exists \delta > 0, \forall x \in \mathbb{R} . \left( 0 < |x - c| < \delta \implies |\big( f(x) + g(x) \big)  - (l + m)| < \varepsilon \right) \\
+\Updownarrow \\
+\forall \varepsilon > 0, \exists \delta > 0, \forall x \in \mathbb{R} . \left( 0 < |x - c| < \delta \implies | f(x) + g(x) - l - m| < \varepsilon \right) \\
+\end{array}
+$$
+
+Per la disuguaglianza triangolare%% link %%, abbiamo in particolare che
+
+$$
+|f(x) + g(x) - l - m| \le |f(x) - l| + |g(x) - m|
+$$
+
+Per ipotesi, i due [limiti](Limiti.md#^definizione-limite) di $f(x)$ e $g(x)$ esistono rispettivamente un $\delta_f > 0$ e un $\delta_g > 0$ tali che
+
+$$
+\begin{array}{}
+x \in (I_{\delta_f}(x_0) \cap I_{\delta_g} (x_0)) \setminus \{ x_0 \} \\
+\Downarrow \\
+|f(x) - l| < \dfrac{\varepsilon}{2} \quad \land \quad |g(x) - m| < \dfrac{\varepsilon}{2}
+\end{array}
+$$
+
+%% perché $\dfrac{\varepsilon}{2}$? %%
+
+Quindi, per dimostrare il [limite](Limiti.md#^definizione-limite) iniziale, scegliamo come $\delta$ quello minore tra $\delta_f$ e $\delta_g$.
+
+%% fare anche caso del limite finito all'infinito %%
+
+-->
+
+%% 
+dimostrazioni analoghe a quelle dell'algebra delle funzioni continue
+%%
+
+> [!teorema]+ Teorema del prodotto di limiti finiti
+> 
+> Dato un [sottoinsieme](Teoria%20degli%20insiemi.md#^definizione-insieme) $A \subseteq \mathbb{R}$ non [vuoto](Teoria%20degli%20insiemi.md#^definizione-insieme-vuoto), due [funzioni](Funzioni.md#^definizione-funzione) $f \colon A \to \mathbb{R}$ e $g \colon A \to \mathbb{R}$ e un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R} \cup \{ \pm \infty \}$ per $A$, se esistono i [limiti](Limiti.md#^definizione-limite) $\displaystyle\lim_{x \to x_0} f(x) = l \in \mathbb{R}$ e $\displaystyle\lim_{x \to x_0} g(x) = m \in \mathbb{R}$, allora il [limite](Limiti.md#^definizione-limite) del loro [prodotto](Funzioni.md#^definizione-prodotto-di-funzioni) è uguale al prodotto%% Link %% dei loro [limiti](Limiti.md#^definizione-limite):
+> 
+> $$
+> \lim_{x \to x_0} \big( f(x) \cdot g(x) \big) = \lim_{x \to x_0} f(x) \cdot \lim_{x \to x_0} g(x) = l \cdot m
+> $$
+
+%% 
+dimostrazioni analoghe a quelle dell'algebra delle funzioni continue
+%%
+
+> [!teorema]+ Teorema del quoziente di limiti finiti
+> 
+> Dato un [sottoinsieme](Teoria%20degli%20insiemi.md#^definizione-insieme) $A \subseteq \mathbb{R}$ non [vuoto](Teoria%20degli%20insiemi.md#^definizione-insieme-vuoto), due [funzioni](Funzioni.md#^definizione-funzione) $f \colon A \to \mathbb{R}$ e $g \colon A \to \mathbb{R}$ e un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R} \cup \{ \pm \infty \}$ per $A$, se esistono i [limiti](Limiti.md#^definizione-limite) $\displaystyle\lim_{x \to x_0} f(x) = l \in \mathbb{R}$ e $\displaystyle\lim_{x \to x_0} g(x) = m \in \mathbb{R}$ con $m \ne 0$, allora il [limite](Limiti.md#^definizione-limite) del loro quoziente%% link al quoziente di funzioni %% è uguale al quoziente%% Link %% dei loro [limiti](Limiti.md#^definizione-limite):
+> 
+> $$
+> \lim_{x \to x_0} \dfrac{f(x)}{g(x)} = \dfrac{\displaystyle\lim_{x \to x_0} f(x)}{\displaystyle\lim_{x \to x_0} g(x)} = \dfrac{l}{m}
+> $$
+
+%% 
+dimostrazioni analoghe a quelle dell'algebra delle funzioni continue
+%%
+
+> [!teorema]+ Teorema del reciproco di un limite
+> 
+> Data una [funzione](Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R} \cup \{ \pm \infty \}$, se esiste il [limite](Limiti.md#^definizione-limite) $\displaystyle\lim_{x \to x_0} f(x) = l \in \mathbb{R} \cup \{ \pm \infty \}$ ed è diverso da $0$, allora il [limite](Limiti.md#^definizione-limite) del suo reciproco%% link %% $\dfrac{1}{f(x)}$ è uguale al reciproco%% link %% del [limite](Limiti.md#^definizione-limite):
+> 
+> $$
+> \lim_{x \to x_0} \dfrac{1}{f(x)} = \dfrac{1}{\displaystyle\lim_{x \to x_0} f(x)} = \dfrac{1}{l}
+> $$
+
+%% 
+dimostrazione: caso specifico del teorema del limite del quoziente con f(x)=1 e g(x)=f(x)
+%%
 
 %% 
 pagg. 161-164 lancelotti
 %%
 
-# 6 - Teoremi del confronto
+## 6.1 - Algebra dei limiti infiniti
+
+Ora vediamo alcune operazioni in cui almeno uno dei due [limiti](Limiti.md#^definizione-limite) è infinito (cioè è o un [limite infinito all'infinito](Limiti.md#^definizione-limite-infinito-all-infinito) o un [limite infinito al finito](Limiti.md#^definizione-limite-infinito-al-finito)).
+
+> [!teorema]+ Teorema della somma di limite finito con limite infinito
+>
+> Dato un [sottoinsieme](Teoria%20degli%20insiemi.md#^definizione-insieme) $A \subseteq \mathbb{R}$ non [vuoto](Teoria%20degli%20insiemi.md#^definizione-insieme-vuoto), due [funzioni](Funzioni.md#^definizione-funzione) $f, g \colon A \to \mathbb{R}$ e un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R} \cup \{ \pm\infty \}$ per $A$, se
+>
+> $$
+> \lim_{x \to x_0} f(x) = l \in \mathbb{R} \quad \land \quad \lim_{x \to x_0} g(x) = \pm\infty
+> $$
+>
+> allora
+>
+> $$
+> \lim_{x \to x_0} \big( f(x) + g(x) \big) = \pm\infty
+> $$
+
+> [!teorema]+ Teorema della somma di limiti infiniti concordi
+>
+> Dato un [sottoinsieme](Teoria%20degli%20insiemi.md#^definizione-insieme) $A \subseteq \mathbb{R}$ non [vuoto](Teoria%20degli%20insiemi.md#^definizione-insieme-vuoto), due [funzioni](Funzioni.md#^definizione-funzione) $f, g \colon A \to \mathbb{R}$ e un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R} \cup \{ \pm\infty \}$ per $A$, se
+>
+> $$
+> \lim_{x \to x_0} f(x) = \lim_{x \to x_0} g(x) = \pm\infty
+> $$
+>
+> allora
+>
+> $$
+> \lim_{x \to x_0} \big( f(x) + g(x) \big) = \pm\infty
+> $$
+
+> [!teorema]+ Teorema del prodotto di limiti infiniti concordi
+>
+> Dato un [sottoinsieme](Teoria%20degli%20insiemi.md#^definizione-insieme) $A \subseteq \mathbb{R}$ non [vuoto](Teoria%20degli%20insiemi.md#^definizione-insieme-vuoto), due [funzioni](Funzioni.md#^definizione-funzione) $f, g \colon A \to \mathbb{R}$ e un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R} \cup \{ \pm\infty \}$ per $A$, se
+>
+> $$
+> \lim_{x \to x_0} f(x) = \lim_{x \to x_0} g(x) = \pm\infty
+> $$
+>
+> allora
+>
+> $$
+> \lim_{x \to x_0} \big( f(x) \cdot g(x) \big) = +\infty
+> $$
+
+%% 
+Attenzione: $(- \infty) \cdot (- \infty) = + \infty$
+%%
+
+> [!teorema]+ Teorema del quoziente di limite finito con limite infinito
+>
+> Dato un [sottoinsieme](Teoria%20degli%20insiemi.md#^definizione-insieme) $A \subseteq \mathbb{R}$ non [vuoto](Teoria%20degli%20insiemi.md#^definizione-insieme-vuoto), due [funzioni](Funzioni.md#^definizione-funzione) $f, g \colon A \to \mathbb{R}$ e un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R} \cup \{ \pm\infty \}$ per $A$, se
+>
+> $$
+> \lim_{x \to x_0} f(x) = l \in \mathbb{R} \setminus \{ 0 \} \quad \land \quad \lim_{x \to x_0} g(x) = \pm\infty
+> $$
+>
+> allora
+>
+> $$
+> \lim_{x \to x_0} \dfrac{f(x)}{g(x)} = 0
+> $$
+
+%% 
+Corollario:
+- $0^+$ quando limite di $g(x) = + \infty$
+- $0^-$ quando limite di $g(x) = - \infty$
+%%
+
+> [!teorema]+ Teorema del quoziente di limite finito con limite nullo
+>
+> Dato un [sottoinsieme](Teoria%20degli%20insiemi.md#^definizione-insieme) $A \subseteq \mathbb{R}$ non [vuoto](Teoria%20degli%20insiemi.md#^definizione-insieme-vuoto), due [funzioni](Funzioni.md#^definizione-funzione) $f, g \colon A \to \mathbb{R}$ e un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R} \cup \{ \pm\infty \}$ per $A$, se
+>
+> $$
+> \lim_{x \to x_0} f(x) = l \in \mathbb{R} \setminus \{ 0 \} \quad \land \quad \lim_{x \to x_0} g(x) = 0^+
+> $$
+>
+> allora
+>
+> $$
+> \lim_{x \to x_0} \dfrac{f(x)}{g(x)} = +\infty
+> $$
+
+%% 
+e se lim g(x) = 0^- allora limite del quoziente è $- \infty$?
+%%
+
+%% 
+Gli altri casi di operazioni tra limiti infiniti non li vediamo perché, come osserveremo più avanti, sono forme indeterminate.
+%%
+
+# 7 - Teoremi del confronto
+
+%% 
+spiegare cosa sono i teoremi del confronto
+%%
+
+> [!teorema]+ Teorema dei due carabinieri
+> 
+> Date tre [funzioni](Funzioni.md#^definizione-funzione) $f,g,h \colon A \subseteq \mathbb{R} \to \mathbb{R}$ (con $A \ne \emptyset$) e un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R} \cup \{ \pm \infty \}$ per $A$, se esistono i [limiti](Limiti.md#^definizione-limite)
+> 
+> $$
+> \lim_{x \to x_0} f(x) = \lim_{x \to x_0} h(x) = l \in \mathbb{R}
+> $$
+> 
+> ed esiste un [intorno](Topologia%20dei%20reali.md#^definizione-intorno-di-un-punto) $I(x_0)$ di $x_0$ tale che
+> 
+> $$
+> \forall x \in (A \cap I(x_0)) \setminus \{ x_0 \} . \big (f(x) \le g(x) \le h(x))
+> $$
+> 
+> allora
+> 
+> $$
+> \lim_{x \to x_0} g(x) = l
+> $$
+^teorema-dei-due-carabinieri
+
+%% 
+spiegazione (con grafico) del teorema dei due carabinieri
+e spiegare perché si chiama "teorema dei due carabinieri"
+%%
+
+> [!dimostrazione]- Dimostrazione del teorema dei due carabinieri
+> 
+> Dimostriamo il [teorema dei due carabinieri](Limiti.md#^teorema-dei-due-carabinieri). Vogliamo dimostrare che
+> 
+> $$
+> \lim_{x \to x_0} g(x) = l
+> $$
+> 
+> ossia che, per [definizione di _limite_](Limiti.md#^definizione-limite),
+> 
+> $$
+> \forall I_\varepsilon(l), \exists I_\delta(x_0), \forall x \in \mathbb{R} . \big( x \in I_\delta(x_0) \setminus \{ x_0 \} \implies g(x) \in I_\varepsilon(l) \big) 
+> $$
+> 
+> Per ipotesi sappiamo che
+> 
+> $$
+> \lim_{x \to x_0} f(x) = \lim_{x \to x_0} h(x) = l \in \mathbb{R}
+> $$
+> 
+> ossia che, per [definizione di _limite_](Limiti.md#^definizione-limite),
+> 
+> $$
+> \forall I_\varepsilon(l), \begin{cases}
+> \exists \hat I_{\hat\delta}(x_0), \forall x \in \mathbb{R} . (x \in \hat I_{\hat\delta}(x_0) \implies f(x) \in I_\varepsilon(l)) \\
+> \exists \dot I_{\dot\delta}(x_0), \forall x \in \mathbb{R} . (x \in \dot I_{\dot\delta}(x_0) \implies h(x) \in I_\varepsilon(l)) \\
+> \end{cases}
+> $$
+> 
+> Scegliamo come [intorno](Topologia%20dei%20reali.md#^definizione-intorno-di-un-punto) $I_\delta(x_0)$ proprio l'[intersezione](Teoria%20degli%20insiemi.md#^definizione-intersezione-di-due-insiemi) tra $\hat I_{\hat\delta}(x_0)$ e $\dot I_{\dot\delta}(x_0)$:
+> 
+> $$
+> I_\delta(x_0) = \hat I_{\hat\delta}(x_0) \cap \dot I_{\dot\delta}(x_0)
+> $$
+> 
+> e osserviamo che, dato che ogni $x \in I_\delta(x_0)$ sarà automaticamente contenuta sia in $\hat I_{\hat\delta}(x_0)$ che in $\dot I_{\dot\delta}(x_0)$,
+> 
+> $$
+> \forall I_\varepsilon(l), \exists I_\delta(x_0), \forall x \in \mathbb{R} . \left( x \in I_\delta(x_0) \setminus \{ x_0 \} \implies \begin{array}{}
+> f(x) \in I_\varepsilon(l) \\
+> \land \\
+> h(x) \in I_\varepsilon(l)
+> \end{array} \right)
+> $$
+> 
+> che, per [definizione di _intorno_](Topologia%20dei%20reali.md#^definizione-intorno-di-un-punto), diventa
+> 
+> $$
+> \forall I_\varepsilon(l), \exists I_\delta(x_0), \forall x \in \mathbb{R} . \left( x \in I_\delta(x_0) \setminus \{ x_0 \} \implies \begin{array}{}
+> | f(x) - l | < \varepsilon \\
+> \land \\
+> | h(x) - l | < \varepsilon
+> \end{array} \right) 
+> $$
+> 
+> Sviluppiamo le disuguaglianze%% link %% con i valori assoluti%% link %%:
+> 
+> $$
+> \forall I_\varepsilon(l), \exists I_\delta(x_0), \forall x \in \mathbb{R} . \left( x \in I_\delta(x_0) \setminus \{ x_0 \} \implies \begin{array}{}
+> l - \varepsilon\ {\color{#FF7F7F} < }\ f(x) < l + \varepsilon \\
+> \land \\
+> l - \varepsilon < h(x)\ {\color{#7FFF7F} < }\ l + \varepsilon
+> \end{array} \right) 
+> $$
+> 
+> Dato che, per ipotesi, abbiamo che $f(x) \le g(x) \le h(x)$, allora
+> 
+> $$
+> \forall I_\varepsilon(l), \exists I_\delta(x_0), \forall x \in \mathbb{R} . \left( x \in I_\delta(x_0) \setminus \{ x_0 \} \implies
+> l - \varepsilon\ {\color{#FF7F7F} < }\ f(x) \le g(x) \le h(x)\ {\color{#7FFF7F} < }\ l + \varepsilon
+> \right) 
+> $$
+> 
+> Per cui possiamo concludere che
+> 
+> $$
+> \forall I_\varepsilon(l), \exists I_\delta(x_0), \forall x \in \mathbb{R} . \left( x \in I_\delta(x_0) \setminus \{ x_0 \} \implies
+> l - \varepsilon\ {\color{#FF7F7F} < }\ g(x) \ {\color{#7FFF7F} < }\ l + \varepsilon
+> \right) 
+> $$
+> 
+> E da qui risalire alla [definizione di _limite_](Limiti.md#^definizione-limite):
+> 
+> 
+> $$
+> \begin{array}{}
+> \forall I_\varepsilon(l), \exists I_\delta(x_0), \forall x \in \mathbb{R} . \left( x \in I_\delta(x_0) \setminus \{ x_0 \} \implies
+> | g(x) - l | < \varepsilon
+> \right) \\
+> \Updownarrow \\
+> \forall I_\varepsilon(l), \exists I_\delta(x_0), \forall x \in \mathbb{R} . \left( x \in I_\delta(x_0) \setminus \{ x_0 \} \implies
+> g(x) \in I_\varepsilon(l)
+> \right) \\
+> \Updownarrow \\
+> \displaystyle\lim_{x \to x_0} g(x) = l
+> \end{array}
+> $$
+> 
+> $\blacksquare$
+
+%% 
+dimostrazione pag. 171 lancelotti
+%%
+
+%% 
+Osservazioni 3.28 e 3.29 pag. 172 lancelotti
+%%
 
 > [!teorema]+ Teorema del confronto per limiti infiniti
 > 
@@ -1015,8 +1512,80 @@ pagg. 161-164 lancelotti
 > \displaystyle\lim_{x \to x_0} g(x) = - \infty \implies \lim_{x \to x_0} f(x) = - \infty
 > \end{array}
 > $$
+^teorema-del-confronto-per-limiti-infiniti
 
-%% dimostrazione pag. 169 %%
+%% 
+spiegazione (con grafico) del teorema del confronto per limiti infiniti
+%%
+
+> [!dimostrazione]- Dimostrazione del teorema del confronto per limiti infiniti
+> 
+> Dimostriamo il [teorema del confronto per limiti infiniti](Limiti.md#^teorema-del-confronto-per-limiti-infiniti).
+> 
+> Dimostriamo prima il primo caso:
+> 
+> $$
+> \displaystyle\lim_{x \to x_0} f(x) = + \infty \implies \lim_{x \to x_0} g(x) = + \infty
+> $$
+> 
+> Per [definizione di _limite infinito al finito_](Limiti.md#^definizione-limite-infinito-al-finito),
+> 
+> $$
+> \begin{array}{}
+> \displaystyle\lim_{x \to x_0} f(x) = + \infty \\
+> \Updownarrow \\
+> \forall M > 0, \exists \delta > 0, \forall x \in \mathbb{R} .\ \left( x \in I_\delta(x_0) \setminus \{x_0\} \implies f(x) > M \right)
+> \end{array}
+> $$
+> 
+> Dato che per ipotesi abbiamo $f(x) \le g(x)$, allora anche $g(x)$ sarà sicuramente più grande di $M$:
+> 
+> $$
+> \begin{cases}
+> f(x) > M \\
+> f(x) \le g(x)
+> \end{cases}
+> \implies
+> \begin{cases}
+> f(x) > M \\
+> g(x) > f(x)
+> \end{cases}
+> \implies
+> g(x) > f(x) > M
+> \implies
+> g(x) > M
+> $$
+> 
+> Ciò quindi conferma che il [limite](Limiti.md#^definizione-limite) $\displaystyle\lim_{x \to x_0} g(x) = + \infty$ vale:
+> 
+> $$
+> \begin{array}{}
+> \forall M > 0, \exists \delta > 0, \forall x \in \mathbb{R} .\ \left( x \in I_\delta(x_0) \setminus \{x_0\} \implies g(x) > M \right) \\
+> \Updownarrow \\
+> \displaystyle\lim_{x \to x_0} g(x) = + \infty
+> \end{array}
+> $$
+> 
+> dimostrando così la tesi.
+> 
+> Stesso discorso per il secondo caso.
+> 
+> $\blacksquare$
+^dimostrazione-del-teorema-del-confronto-per-limiti-infiniti
+
+> [!esercizio]+ Esercizio ($\blacklozenge \lozenge \lozenge$): completa la dimostrazione
+> 
+> Completa la [dimostrazione del teorema del confronto per limiti infiniti](Limiti.md#^dimostrazione-del-teorema-del-confronto-per-limiti-infiniti) dimostrando il secondo caso:
+> 
+> $$
+> \displaystyle\lim_{x \to x_0} g(x) = - \infty \implies \lim_{x \to x_0} f(x) = - \infty
+> $$
+
+%% 
+mettere soluzione dell'esercizio
+%%
+
+%% dimostrazione pag. 169 Lancelotti %%
 
 %% 
 Osservazioni 3.24 pag. 170 Lancelotti
@@ -1054,55 +1623,30 @@ dimostrazione pag. 170 lancelotti
 osservazioni pag. 170-171 lancelotti
 %%
 
-> [!teorema]+ Secondo teorema del confronto (o teorema dei due carabinieri)
-> 
-> Date tre [funzioni](Funzioni.md#^definizione-funzione) $f,g,h \colon A \subseteq \mathbb{R} \to \mathbb{R}$ (con $A \ne \emptyset$) e un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R} \cup \{ \pm \infty \}$ per $A$, se esistono i [limiti](Limiti.md#^definizione-limite)
-> 
-> $$
-> \lim_{x \to x_0} f(x) = \lim_{x \to x_0} h(x) = l \in \mathbb{R}
-> $$
-> 
-> ed esiste un [intorno](Topologia%20dei%20reali.md#^definizione-intorno-di-un-punto) $I(x_0)$ di $x_0$ tale che
-> 
-> $$
-> \forall x \in (A \cap I(x_0)) \setminus \{ x_0 \} . \big (f(x) \le g(x) \le h(x))
-> $$
-^secondo-teorema-del-confronto-o-teorema-dei-due-carabinieri
+# 8 - Limiti di funzioni monotone
 
-%% 
-dimostrazione pag. 171 lancelotti
-%%
-
-%% 
-Perché si chiama "teorema dei due carabinieri"
-%%
-
-%% 
-Osservazioni 3.28 e 3.29 pag. 172 lancelotti
-%%
-
-# 7 - Limiti delle funzioni monotone
-
-> [!teorema]+ Teorema dei limiti laterali delle funzioni monotone
+> [!teorema]+ Teorema dei limiti laterali di funzioni monotone
 > 
-> Data una funzione monotona%% link %% $f \colon \text{dom}(f) \to \mathbb{R}$ e un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R}$ per $\text{dom}(f) \cap (x_0, + \infty)$, allora si ha che
+> Data una [funzione](Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ [monotona](Proprietà%20delle%20funzioni.md#^definizione-funzione-strettamente-decrescente-o-monotona-su-un-intervallo) su $\text{dom}(f)$ e un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R}$ per $\text{dom}(f) \cap (x_0, + \infty)$, allora si ha che:
+> - Se $f$ è [(strettamente) crescente](Proprietà%20delle%20funzioni.md#^definizione-funzione-strettamente-decrescente-o-monotona-su-un-intervallo), allora:
+> 	$$
+> 	\lim_{x \to x_0^+} f(x) = \inf\{ f(x) \mid x \in \text{dom}(f) \land x > x_0 \}
+> 	$$
+> - Se $f$ è [(strettamente) decrescente](Proprietà%20delle%20funzioni.md#^definizione-funzione-strettamente-decrescente-o-monotona-su-un-intervallo), allora:
+> 	$$
+> 	\lim_{x \to x_0^+} f(x) = \sup\{ f(x) \mid x \in \text{dom}(f) \land x > x_0 \}
+> 	$$
 > 
-> $$
-> \lim_{x \to x_0^+} f(x) = \begin{cases}
-> \inf\{ f(x) \mid x \in \text{dom}(f) \land x > x_0 \} & \text{se } f \text{ è crescente} \\
-> \sup\{ f(x) \mid x \in \text{dom}(f) \land x > x_0 \} & \text{se } f \text{ è decrescente}
-> \end{cases}
-> $$
-> 
-> Se $x_0$ è un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) per $\text{dom}(f) \cap (-\infty, x_0)$, allora si ha che
-> 
-> $$
-> \lim_{x \to x_0^-} f(x) = \begin{cases}
-> \sup\{ f(x) \mid x \in \text{dom}(f) \land x < x_0 \} & \text{se } f \text{ è crescente} \\
-> \inf\{ f(x) \mid x \in \text{dom}(f) \land x < x_0 \} & \text{se } f \text{ è decrescente}
-> \end{cases}
-> $$
-^teorema-dei-limiti-laterali-delle-funzioni-monotone
+> Se $x_0$ è un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) per $\text{dom}(f) \cap (-\infty, x_0)$, allora si ha che:
+> - Se $f$ è [(strettamente) crescente](Proprietà%20delle%20funzioni.md#^definizione-funzione-strettamente-decrescente-o-monotona-su-un-intervallo), allora:
+> 	$$
+> 	\lim_{x \to x_0^+} f(x) = \sup\{ f(x) \mid x \in \text{dom}(f) \land x < x_0 \}
+> 	$$
+> - Se $f$ è [(strettamente) decrescente](Proprietà%20delle%20funzioni.md#^definizione-funzione-strettamente-decrescente-o-monotona-su-un-intervallo), allora:
+> 	$$
+> 	\lim_{x \to x_0^+} f(x) = \inf\{ f(x) \mid x \in \text{dom}(f) \land x < x_0 \}
+> 	$$
+^teorema-dei-limiti-laterali-di-funzioni-monotone
 
 %% grafico pag. 177-178 lancelotti %%
 
@@ -1116,6 +1660,8 @@ Osservazioni 3.28 e 3.29 pag. 172 lancelotti
 > 	- Corso di _Analisi Matematica - canale C_, A.A. 2020-21 ([pagina Moodle](https://informatica.i-learn.unito.it/course/view.php?id=2075)):
 > 		- Prof. Barutello Vivina Laura, videolezioni:
 > 			- [_L6b_](https://informatica.i-learn.unito.it/local/streamingfilemanager/file.php/informatica.i-learn.unito.it/2075/L6b.mp4).
+> 			- [_L7a_](https://informatica.i-learn.unito.it/local/streamingfilemanager/file.php/informatica.i-learn.unito.it/2075/L7a.mp4), [_L7b_](https://informatica.i-learn.unito.it/local/streamingfilemanager/file.php/informatica.i-learn.unito.it/2075/L7b.mp4).
+> 			- [_L8a_](https://informatica.i-learn.unito.it/local/streamingfilemanager/file.php/informatica.i-learn.unito.it/2075/L8a.mp4), [_L8b_](https://informatica.i-learn.unito.it/local/streamingfilemanager/file.php/informatica.i-learn.unito.it/2075/L8b.mp4).
 > - 📚 Sergio Lancelotti, _Lezioni di Analisi Matematica I_, Celid, 2020 (ISBN: `978-8867891979`):
 > 	- Parte I - _I concetti dell'analisi matematica_:
 > 		- Capitolo 1 - _Funzioni e modelli_:

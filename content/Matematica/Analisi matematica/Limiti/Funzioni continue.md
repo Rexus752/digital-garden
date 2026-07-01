@@ -50,7 +50,7 @@ L'interpretazione è simile a quella del $\displaystyle\lim_{x \to x_0} f(x) = l
 
 > [!osservazione]+ Osservazione: funzione continua in tutti e soli i punti del suo dominio
 > 
-> Osserviamo che la [definizione di _continuità_](Funzioni%20continue.md#^definizione-funzione-continua) di $f$ in $x_0$ si applica in tutti e soli i punti del suo dominio%% link %%: rispetto alla [definizione di _limite_ con $x_0 \in \mathbb{R} \land l \in \mathbb{R}$](Limiti.md#^osservazione-limite-con-x0-finito-l-finito), infatti, in questa **non** si impone che $x \ne x_0$. Infatti, per $x = x_0$, è automaticamente verificato che
+> Osserviamo che la [definizione di _continuità_](Funzioni%20continue.md#^definizione-funzione-continua) di $f$ in $x_0$ si applica in tutti e soli i punti del suo dominio%% link %%: rispetto alla [definizione di _limite finito al finito_](Limiti.md#^definizione-limite-finito-al-finito), infatti, in questa **non** si impone che $x \ne x_0$. Infatti, per $x = x_0$, è automaticamente verificato che
 > 
 > $$
 > |f(x) - f(x_0)| < \varepsilon
