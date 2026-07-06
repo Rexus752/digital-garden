@@ -9,9 +9,13 @@
 in realtà è **Calcolo infinitesimale**
 %%
 
+%% 
+usare $x_0$ al posto di $c$
+%%
+
 ---
 
-Introduciamo una delle nozioni più importanti dell'analisi matematica%% link %%, ossia quella di [_limite_](Limiti.md#^definizione-limite). È alla base di altre nozioni fondamentali, quali ad esempio quella di _derivata_%% link %% e di _integrale_%% link %%. Prima di vedere la definizione, introduciamo questo concetto attraverso alcuni esempi che ci permettono di capire il suo significato.
+Introduciamo una delle nozioni più importanti dell'analisi matematica%% link %%, ossia quella di _limite_. È alla base di altre nozioni fondamentali, quali ad esempio quella di _derivata_%% link %% e di _integrale_%% link %%. Prima di vedere la definizione, introduciamo questo concetto attraverso alcuni esempi che ci permettono di capire il suo significato.
 
 # 1 - Introduzione ai limiti
 

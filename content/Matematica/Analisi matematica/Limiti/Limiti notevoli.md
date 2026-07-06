@@ -325,6 +325,14 @@ dimostrazione pag. 186 lanceltti
 dimostrazione pag. 186 lancelotti
 %%
 
+%% 
+In particolare
+
+$$
+\lim_{x \to 0} \left( \dfrac{\ln(1+x)}{x} \right) = 1
+$$
+%%
+
 #### 3.2.1.2 - Limite notevole dell'esponenziale
 
 > [!proposizione]+ Proposizione: limite notevole dell'esponenziale
@@ -504,10 +512,22 @@ dimostrazione pag. 188 lancelotti
 Esercizio 3.54 pagina 188 lancelotti
 %%
 
+%% 
+Altri limite notevole:
+
+$$
+\lim_{x \to 0} \dfrac{e^x - 1}{x} = 1
+$$
+%%
+
 ---
 
 > [!fonti]+ Fonti
 > 
+> - 🏫 Corso di Laurea in Informatica (`L-31 R`) presso l'Università di Torino:
+> 	- Corso di _Analisi Matematica - canale C_, A.A. 2020-21 ([pagina Moodle](https://informatica.i-learn.unito.it/course/view.php?id=2075)):
+> 		- Prof. Barutello Vivina Laura, videolezioni:
+> 			- [_L9b_](https://informatica.i-learn.unito.it/local/streamingfilemanager/file.php/informatica.i-learn.unito.it/2075/L9b.mp4).
 > - 📚 Sergio Lancelotti, _Lezioni di Analisi Matematica I_, Celid, 2020 (ISBN: `978-8867891979`):
 > 	- Capitolo 3 - _Limiti e continuità_:
 > 		- 3 - _Teoremi su limiti e continuità_:

@@ -15,6 +15,10 @@ Proviamo a introdurre il concetto di _derivata_%% link %%, uno dei concetti fond
 
 # 1 - Pendenza di un grafico e introduzione alle derivate
 
+%% 
+faremo spesso interpretazioni cinematiche delle derivate
+%%
+
 <!--
 Prendendo una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/_index.md#^definizione-funzione) $f$ qualsiasi, possiamo definire intuitivamente la _pendenza_ come l'inclinazione del grafico della funzione: per esempio. nel caso delle [funzioni lineari](Funzioni%20elementari.md#^definizione-funzione-lineare), il cui grafico%% link %% è una retta%% link %%, [la pendenza è costante e uguale al coefficiente $m$](Funzioni%20elementari.md#^teorema-della-pendenza-costante-della-funzione-lineare).
 
@@ -108,29 +112,72 @@ In questo caso ingrandendo il grafico di $f$ vicino a $P(x_0, f(x_0))$ vediamo u
 > Data una [funzione](Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e un punto%% link %% $x_0 \in \text{dom}(f)$, diciamo che la **retta tangente a $f$ in $x_0$** è la retta passante%% link %% per il punto%% link %% $P(x_0, f(x_0))$ e con [pendenza](Derivate.md#^definizione-pendenza-di-una-funzione-in-un-punto) $p_f(x_0)$.
 ^definizione-retta-tangente-a-una-funzione-in-un-punto
 
-## 1.1 - Derivabilità di una funzione in un punto
+## 1.1 - Derivata di una funzione
 
-> [!definizione]+ Definizione: derivabilità e derivata (prima) di una funzione in un punto
+> [!definizione]+ Definizione: derivata (prima) di una funzione in un punto
 > 
 > Data una [funzione](Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e un [punto interno](Topologia%20dei%20reali.md#^definizione-punto-interno) $x_0 \in \text{dom}(f)$ a $\text{dom}(f)$, diciamo che **$f$ è derivabile in $x_0$** se esiste finito%% link %% il [limite](Limiti.md#^definizione-limite)
 > 
 > $$
-> \lim_{x \to x_0} \dfrac{f(x) - f(x_0)}{x - x_0}
+> \lim_{h \to 0} \dfrac{f(x_0 + h) - f(x_0)}{h}
 > $$
 > 
-> e in tal caso denotiamo questo [limite](Limiti.md#^definizione-limite) con uno dei seguenti simboli:
-> 
-> $$
-> f'(x_0), \quad Df(x_0), \quad \dfrac{df}{dx}(x_0), \quad \dot f(x_0)
-> $$
-> 
-> e lo chiamiamo **derivata (prima) di $f$ in $x_0$**.
-^definizione-derivabilita-e-derivata-prima-di-una-funzione-in-un-punto
+> In tal caso denotiamo questo [limite](Limiti.md#^definizione-limite) con $f'(x_0)$ e lo chiamiamo **derivata (prima) di $f$ in $x_0$**.
+^definizione-derivata-prima-di-una-funzione-in-un-punto
 
-> [!definizione]+ Definizione: derivabilità di una funzione in un sottoinsieme del dominio
+> [!osservazione]+ Osservazione: derivata ed equivalenza asintotica
 > 
-> Data una [funzione](Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e un [sottoinsieme](Teoria%20degli%20insiemi.md#^definizione-insieme) $A \subseteq \text{dom}(f)$ (con $A \ne \emptyset$), diciamo che **$f$ è derivabile in $A$** se è [derivabile](Derivate.md#^definizione-derivabilita-e-derivata-prima-di-una-funzione-in-un-punto) in ogni punto%% link %% di $A$.
-^definizione-derivabilita-di-una-funzione-in-un-sottoinsieme-del-dominio
+> Se una [funzione](Funzioni.md#^definizione-funzione) $f$ è [derivabile](Derivate.md#^definizione-derivata-prima-di-una-funzione-in-un-punto) in un punto%% Link %% $x_0$ e la [derivata](Derivate.md#^definizione-derivata-prima-di-una-funzione-in-un-punto) $f'(x_0)$ è diversa da $0$, allora il [limite](Limiti.md#^definizione-limite)
+> 
+> $$
+> f'(x_0) = \lim_{h \to 0} \dfrac{f(x_0 + h) - f(x_0)}{h}
+> $$
+> 
+> si può riscrivere come
+> 
+> $$
+> \lim_{h \to 0} \dfrac{f(x_0 + h) - f(x_0)}{f'(x_0) \cdot h} = 1
+> $$
+> 
+> Ciò significa che $f(x_0 + h) - f(x_0)$ e $f'(x_0) \cdot h$ sono [equivalenti](Infiniti%20e%20infinitesimi.md#^definizione-equivalenza-asintotica) per $h$ che tende a $0$:
+> 
+> $$
+> f(x_0 + h) - f(x_0) \sim f'(x_0) \cdot h \text{ per } h \to 0
+> $$
+> 
+> che si può riscrivere come
+> 
+> $$
+> f(x_0 + h) \sim f(x_0) + f'(x_0) \cdot h \text{ per } h \to 0
+> $$
+> 
+> Ponendo $x_0 + h = x$, otteniamo
+> 
+> $$
+> f(x) \sim f(x_0) + f'(x_0)(x - x_0) \text{ per } x \to x_0
+> $$
+> 
+> Ossia, quando $x \to x_0$, abbiamo che $f(x)$ è [asintotica](Infiniti%20e%20infinitesimi.md#^definizione-equivalenza-asintotica) alla rette tangente al grafico%% link %% di $f$ in $(x_0, f(x_0))$.
+
+%% 
+Espandere questa osservazione: equivalenza asintotica == pendenza = 1 in quei punti
+Ad esempio, il limite notevole
+
+$$
+\lim_{x \to 0} \dfrac{\sin x}{x} = 1
+$$
+
+ci dice che la derivata di $\sin x$ in $x_0$ vale $1$ (che è la pendenza di $x$ in $0$).
+%%
+
+> [!definizione]+ Definizione: derivata (prima) di una funzione in un intervallo
+> 
+> Data una [funzione](Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e un intervallo%% link %% $I \subseteq \text{dom}(f)$, diciamo che **$f$ è derivabile in $I$** se è [derivabile](Derivate.md#^definizione-derivata-prima-di-una-funzione-in-un-punto) in ogni punto%% link %% di $I$.
+^definizione-derivata-prima-di-una-funzione-in-un-intervallo
+
+%% 
+Magari mettere qui la deifnizione di derivata (prima) di una funzione specificando che nei punti di frontiera va fatta la derivata laterale come per le funzioni continue?
+%%
 
 %% 
 Il quoeiente è detto rapporto incrementale di f in x0 e rappresenta la variazione relativa di f rispetto a quella della variabile indipendente x nel passare da x0 a x. Il limite di questo rapporto incrememntale, se esiste in R, è la derivata di f in x0. Quindi rappresenta la variazione relativa di f rispetto a quella dela variabile indipendente x nel passare da x0 a x, quando x tende a x0.
@@ -158,6 +205,38 @@ osservazione 1.4 ed esempio 1.5 pagg. 239-241
 > 
 > Data una [funzione](Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e un [punto interno](Topologia%20dei%20reali.md#^definizione-punto-interno) $x_0 \in \text{dom}(f)$ a $\text{dom}(f)$, se $f$ è [derivabile](Derivate.md#^definizione-derivabilita-e-derivata-prima-di-una-funzione-in-un-punto) in $x_0$ allora $f$ è [continua](Funzioni%20continue.md#^definizione-funzione-continua) in $x_0$.
 ^teorema-del-legame-fra-la-continuita-e-la-derivabilita
+
+> [!dimostrazione]- Dimostrazione del teorema del legame fra la continuità e la derivabilità
+> 
+> Dimostriamo il [teorema del legame fra la continuità e la derivabilità](Derivate.md#^teorema-del-legame-fra-la-continuita-e-la-derivabilita).
+> 
+> Vogliamo dimostrare che, per [definizione di _continuità in un punto_](Funzioni%20continue.md#^definizione-funzione-continua-in-un-punto),
+> 
+> $$
+> \lim_{x \to x_0} f(x) = f(x_0)
+> $$
+> 
+> ovvero che%% per definizione di derivabilità %%
+> 
+> $$
+> \lim_{h \to 0} f(x_0 + h) = f(x_0)
+> $$
+> 
+> Possiamo ulteriormente trasformare questa formula:
+> 
+> $$
+> \lim_{h \to 0} f(x_0 + h) - f(x_0) = 0
+> $$
+> 
+> ovvero
+> 
+> $$
+> \lim_{h \to 0} \underbrace{\dfrac{f(x_0 + h) - f(x_0)}{h}}_{= f'(x_0)} \cdot \underbrace{h}_{=0} = 0
+> $$
+> 
+> Dato che il [limite](Limiti.md#^definizione-limite) di $h$ per $h \to 0$ vale $0$, il prodotto%% link %% tra i [limiti](Limiti.md#^definizione-limite) di $f'(x_0)$ e $h$ è $0$, di conseguenza abbiamo verificato che vale $0$ come scritto nella parte destra dell'uguaglianza.
+> 
+> $\blacksquare$
 
 %% 
 dimostrazione pag. 242 lancelotti
@@ -599,13 +678,38 @@ proposizione 1.37 pag. 259 lancelotti
 I teoremi 1.24, 1.28 e 1.34 valgono anche per le derivate laterali
 %%
 
-# 6 - Teoremi fondamentali del calcolo differenziale
+# 6 - Derivate $n$-esime
+
+Finora la [derivata di una funzione](Derivate.md#^definizione-derivabilita-e-derivata-prima-di-una-funzione) l'abbiamo chiamata _prima_. Ma perché _prima_? Perché in realtà una [funzione](Funzioni.md#^definizione-funzione) è [derivabile](Derivate.md#^definizione-derivata-prima-di-una-funzione) più volte: per esempio, data una [funzione](Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ [derivabile](Derivate.md#^definizione-derivata-prima-di-una-funzione-in-un-intervallo) in un intervallo%% link %% $(a,b) \subseteq \text{dom}(f)$ per cui quindi esiste la sua [derivata](Derivate.md#^definizione-derivata-prima-di-una-funzione) $f'$, possiamo nuovamente valutare la [derivabilità](Derivate.md#^definizione-derivata-prima-di-una-funzione) di $f'$, ossia possiamo chiederci se esiste finito%% Link %% il [limite](Limiti.md#^definizione-limite)
+
+$$
+\lim_{h \to 0} \dfrac{f'(x_0 + h) - f'(x_0)}{h}
+$$
+
+In caso di risposta affermativa denotiamo questo valore con $f''(x_0)$ e lo chiamiamo _derivata seconda di $f$ in $x_0$_. E così via.
+
+> [!definizione]+ Definizione: derivata $\color{#FF7FFF} n$-esima di una funzione
+> 
+> Data una [funzione](Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e $n \in \mathbb{N}$, $n \geq 1$, supponiamo che $f$ sia [derivabile](Derivate.md#^definizione-derivabilita-e-derivata-prima-di-una-funzione) $n-1$ volte in un [intorno](Topologia%20dei%20reali.md#^definizione-intorno-di-un-punto) di un punto%% link %% $x_0 \in \text{dom}(f)$, con [derivata](Derivate.md#^definizione-derivata-prima-di-una-funzione) $(n-1)$-esima $f^{(n-1)}$. Se $f^{(n-1)}$ è a sua volta [derivabile](Derivate.md#^definizione-derivata-prima-di-una-funzione-in-un-punto) in $x_0$, diciamo che **$f$ è derivabile $n$ volte in $x_0$** e chiamiamo **derivata $n$-esima di $f$ in $x_0$** la [funzione](Funzioni.md#^definizione-funzione)
+> 
+> $$
+> f^{(n)}(x_0) \overset{\text{def}}{=} \left(f^{(n-1)}\right)'(x_0)
+> $$
+> 
+> Per convenzione si pone $f^{(0)} = f$ e $f^{(1)} = f'$.
+^definizione-derivata-n-esima-di-una-funzione
+
+%% 
+esempi di derivate n-esime
+%%
+
+# 7 - Teoremi fondamentali del calcolo differenziale
 
 %% 
 definizione di "calcolo differenziale"
 %%
 
-## 6.1 - Teorema di Fermat
+## 7.1 - Teorema di Fermat
 
 > [!osservazione]+ Osservazione: comportamento di $\color{#7F7F7F} f$ nei punti di estremo locale
 > 
@@ -674,7 +778,7 @@ osservazione 2.5 pagg. 262-263 lancelotti
 osservazione 2.6 pag. 263 lancelotti
 %%
 
-## 6.2 - Teorema di Lagrange e sue conseguenze
+## 7.2 - Teorema di Lagrange
 
 > [!teorema]+ Teorema di Rolle
 > 
@@ -693,10 +797,43 @@ dimostrazione pagg. 263-264 lancelotti
 
 > [!teorema]+ Teorema di Lagrange (o del valore medio)
 > 
-> Data una [funzione](Funzioni.md#^definizione-funzione) $f \colon [a,b] \to \mathbb{R}$, se $f$ è [continua](Funzioni%20continue.md#^definizione-funzione-continua) in $[a,b]$ e [derivabile](Derivate.md#^definizione-derivabilita-di-una-funzione-in-un-sottoinsieme-del-dominio) in $(a,b)$, allora esiste almeno un punto%% link %% $x_0 \in (a,b)$ tale che $f'(x_0) = \dfrac{f(b) - f(a)}{b - a}$.
+> Data una [funzione](Funzioni.md#^definizione-funzione) $f \colon [a,b] \to \mathbb{R}$, se $f$ è [continua](Funzioni%20continue.md#^definizione-funzione-continua) in $[a,b]$ e [derivabile](Derivate.md#^definizione-derivabilita-di-una-funzione-in-un-sottoinsieme-del-dominio) in $(a,b)$, allora esiste almeno un punto%% link %% $x_0 \in (a,b)$ tale che la [derivata](Derivate.md#^definizione-derivata-prima-di-una-funzione-in-un-intervallo) $f'(x_0)$ di $f$ in $x_0$ è uguale al [quoziente di Newton](Variazioni%20e%20quoziente%20di%20Newton.md#^definizione-quoziente-di-newton) tra $a$ e $b$:
+> 
+> $$
+> f'(x_0) = \dfrac{f(b) - f(a)}{b - a}
+> $$
 ^teorema-di-lagrange-o-del-valore-medio
 
 %% chi è Lagrange? %%
+
+> [!osservazione]+ Osservazione: significato del teorema di Lagrange
+> 
+> Il [teorema di Lagrange](Derivate.md#^teorema-di-lagrange-o-del-valore-medio) stabilisce che esiste almeno un punto%% link %% $x_0$ in $(a,b)$ per cui la [pendenza](Derivate.md#^definizione-pendenza-di-una-funzione-in-un-punto) di $f$ in $x_0$ è uguale alla pendenza%% link alla pendenza di una retta (e non solo in un punto) %% del segmento%% link %% passante per $(a,f(a))$ e $(b, f(b))$.
+
+%% 
+aggiungere grafico a questa osservazione in cui si vede il significato del teorema di Lagrange
+%%
+
+> [!osservazione]+ Osservazione: molteplicità del punto $\color{#7F7F7F} x_0$ nel teorema di Lagrange
+> 
+> Nel [teorema di Lagrange](Derivate.md#^teorema-di-lagrange-o-del-valore-medio) il punto%% link %% $x_0$ non è detto che sia unico: per esempio, quando $f$ è una funzione costante%% link %%, ogni punto%% link %% di $f$ ha la stessa pendenza%% link alla pendenza NON SOLO in un punto %% di tutta $f$.
+^osservazione-molteplicita-del-punto-x0-nel-teorema-di-lagrange
+
+%% 
+mettere grafico in questa osservazione
+%%
+
+> [!osservazione]+ Osservazione: interpretazione cinematica del teorema di Lagrange
+> 
+> Se una [funzione](Funzioni.md#^definizione-funzione) $f$ rappresenta la posizione di un oggetto su una retta%% link %% e la sua [derivata](Derivate.md#^definizione-derivata-prima-di-una-funzione-in-un-punto) $f'(c)$ in un punto%% Link %% $c \in (a,b)$ rappresenta la sua velocità istantanea al tempo $c$, allora la pendenza%% link alla pendenza di una retta (e non solo in un punto) %% del segmento%% link %% passante per $(a,f(a))$ e $(b, f(b))$, cioè
+> 
+> $$
+> \dfrac{f(b)-f(a)}{b - a}
+> $$
+> 
+> rappresenta la velocità media dell'oggetto nell'intervallo%% link %% $[a,b]$.
+> 
+> Ciò implica che il [teorema di Lagrange](Derivate.md#^teorema-di-lagrange-o-del-valore-medio) afferma che esiste almeno un istante in cui la velocità istantanea dell'oggetto è uguale a quella media.
 
 %% 
 dimostrazione pag. 265 lancelotti
@@ -706,14 +843,188 @@ dimostrazione pag. 265 lancelotti
 osservazione 2.11 pag. 266 lncelotti
 %%
 
+### 7.2.1 - Conseguenze del teorema di Lagrange
+
+Ora vediamo una serie di corollari%% Link %% sul [teorema di Lagrange](Derivate.md#^teorema-di-lagrange-o-del-valore-medio).
+
+Il prossimo corollario%% Link %% formalizza quanto abbiamo detto prima riguardo la [molteplicità del punto $x_0$ nel teorema di Lagrange](Derivate.md#^osservazione-molteplicita-del-punto-x0-nel-teorema-di-lagrange), ossia che quando una [funzione](Funzioni.md#^definizione-funzione) è costante%% link %% allora la sua [derivata](Derivate.md#^definizione-derivata-prima-di-una-funzione) è sempre nulla%% link %%.
+
+> [!corollario]+ Corollario di caratterizzazione delle funzioni con derivata nulla
+> 
+> Data una [funzione](Funzioni.md#^definizione-funzione) $f \colon (a,b) \to \mathbb{R}$ [derivabile](Derivate.md#^definizione-derivata-prima-di-una-funzione), per ogni punto%% link %% $x \in (a,b)$ la sua [derivata](Derivate.md#^definizione-derivata-prima-di-una-funzione-in-un-punto) $f'(x)$ è nulla%% link %% se e solo se esiste una costante%% link %% $k \in \mathbb{R}$ tale che la [funzione](Funzioni.md#^definizione-funzione) in ogni punto%% link %% $x \in (a,b)$ vale $k$:
+> 
+> $$
+> \begin{array}{}
+> \forall x \in (a,b). \big( f'(x) = 0 \big) \\
+> \Updownarrow \\
+> \exists k \in \mathbb{R}, \forall x \in (a,b) . \big( f(x) = k \big) 
+> \end{array}
+> $$
+^corollario-di-caratterizzazione-delle-funzioni-con-derivata-nulla
+
+> [!dimostrazione]- Dimostrazione del corollario di caratterizzazione delle funzioni con derivata nulla
+> 
+> Dimostriamo il [corollario di caratterizzazione delle funzioni con derivata nulla](Derivate.md#^corollario-di-caratterizzazione-delle-funzioni-con-derivata-nulla).
+> 
+> Avendo una bi-implicazione%% link %%, si devono dimostrare entrambe le direzioni:
+> - Direzione ($\Uparrow$): se per ogni $x \in (a,b)$ abbiamo che $f(x) = k$ per qualche costante%% link %% $k \in \mathbb{R}$, allora sfruttando la [definizione di _derivata in un punto_](Derivate.md#^definizione-derivata-prima-di-una-funzione-in-un-punto) abbiamo che
+> 	$$
+> 	\lim_{h \to 0} \dfrac{f(x+h) - f(x)}{h} = \lim_{h \to 0} \dfrac{k -k}{h} = 0
+> 	$$
+> 	Di conseguenza, la [derivata](Derivate.md#^definizione-derivata-prima-di-una-funzione-in-un-punto) $f'(x)$ di $f$ in $x$ è nulla%% link %% per ogni $x \in (a,b)$.
+> - Direzione ($\Downarrow$): essendo $f$ [derivabile](Derivate.md#^definizione-derivata-prima-di-una-funzione) su $(a,b)$, allora $f$ è anche [continua](Funzioni%20continue.md#^definizione-funzione-continua) sul suo [dominio](Funzioni.md#^definizione-dominio-e-codominio-della-funzione) $(a,b)$ per il [teorema del legame fra la continuità e la derivabilità](Derivate.md#^teorema-del-legame-fra-la-continuita-e-la-derivabilita).
+> 	Se prendiamo due punti%% link %% $x_1, x_2 \in (a,b)$ tali che $a < x_1 < x_2 < b$ allora $f$ soddisfa le ipotesi del [teorema del Lagrange](Derivate.md#^teorema-di-lagrange-o-del-valore-medio) su $[x_1, x_2] \subsetneq (a,b)$ per ogni scelta di $x_1$ e $x_2$ (cioè semplicemente applichiamo il [teorema del Lagrange](Derivate.md#^teorema-di-lagrange-o-del-valore-medio) su un [sottoinsieme](Teoria%20degli%20insiemi.md#^definizione-insieme) del [dominio](Funzioni.md#^definizione-dominio-e-codominio-della-funzione)), quindi abbiamo
+> 	$$
+> 	\dfrac{f(x_2) - f(x_1)}{x_2 - x_1} = 0 \implies f(x_1) = f(x_2)
+> 	$$
+> 	Dato che il valore%% link %% della [funzione](Funzioni.md#^definizione-funzione) è uguale sia in $x_1$ che in $x_2$ e dato che ciò vale per qualsiasi coppia di punti%% link %% $x_1,x_2$ presi nel [dominio](Funzioni.md#^definizione-dominio-e-codominio-della-funzione), la [funzione](Funzioni.md#^definizione-funzione) avrà lo stesso valore%% link %% in ogni punto%% link %%, ergo sarà necessariamente costante%% link %%.
+> 
+> $\blacksquare$
+
+> [!corollario]+ Corollario di caratterizzazione delle funzioni con derivata seconda nulla
+> 
+> Data una [funzione](Funzioni.md#^definizione-funzione) $f \colon (a,b) \to \mathbb{R}$ [derivabile due volte](Derivate.md#^definizione-derivata-n-esima-di-una-funzione), per ogni punto%% link %% $x \in (a,b)$ la sua [derivata seconda](Derivate.md#^definizione-derivata-n-esima-di-una-funzione) $f'(x)$ è nulla%% link %% se e solo se la [funzione](Funzioni.md#^definizione-funzione) è lineare%% link %%:
+> 
+> $$
+> \begin{array}{}
+> \forall x \in (a,b). \big( f''(x) = 0 \big) \\
+> \Updownarrow \\
+> \exists m,q \in \mathbb{R}, \forall x \in (a,b) . \big( f(x) = mx + q \big) 
+> \end{array}
+> $$
+^corollario-di-caratterizzazione-delle-funzioni-con-derivata-seconda-nulla
+
+> [!dimostrazione]- Dimostrazione del corollario di caratterizzazione delle funzioni con derivata seconda nulla
+> 
+> Dimostriamo il [corollario di caratterizzazione delle funzioni con derivata seconda nulla](Derivate.md#^corollario-di-caratterizzazione-delle-funzioni-con-derivata-seconda-nulla).
+> 
+> Avendo una bi-implicazione%% link %%, si devono dimostrare entrambe le direzioni:
+> - Direzione ($\Uparrow$): se $f$ è una funzione lineare%% link %% (cioè $f(x) = mx + q$), la sua [derivata](Derivate.md#^definizione-derivata-prima-di-una-funzione) $f'$ è
+> 	$$
+> 	f'(x) = m
+> 	$$
+> 	quindi la sua [derivata seconda](Derivate.md#^definizione-derivata-n-esima-di-una-funzione) è
+> 	$$
+> 	f''(x) = 0
+> 	$$
+> - Direzione ($\Downarrow$): se la [derivata seconda](Derivate.md#^definizione-derivata-n-esima-di-una-funzione) è nulla, allora per il [corollario di caratterizzazione delle funzioni con derivata nulla](Derivate.md#^corollario-di-caratterizzazione-delle-funzioni-con-derivata-nulla) esiste un valore%% link %% $m \in \mathbb{R}$ (cioè il corrispettivo del valore%% link %% $k$ nel [corollario](Derivate.md#^corollario-di-caratterizzazione-delle-funzioni-con-derivata-nulla)) per cui la [derivata prima](Derivate.md#^definizione-derivata-prima-di-una-funzione) vale $m$ in ogni punto%% link %% $x \in (a,b)$:
+> 	$$
+> 	\begin{array}{}
+> 	\forall x \in (a,b). \big( f''(x) = 0 \big) \\
+> 	\Updownarrow \\
+> 	\exists m\in \mathbb{R}, \forall x \in (a,b) . \big( f'(x) = m \big) 
+> 	\end{array}
+> 	$$
+> 	Prendiamo $f'(x) = m$ e lo riscriviamo come $f'(x) - m = 0$. Usando il [teorema della derivata della somma](Derivate.md#^teorema-della-derivata-della-somma) abbiamo che
+> 	$$
+> 	f'(x) - m = (f(x) - mx)'
+> 	$$
+> 	E, avendo $(f(x) - mx)' = 0$, possiamo nuovamente applicare il [corollario di caratterizzazione delle funzioni con derivata nulla](Derivate.md#^corollario-di-caratterizzazione-delle-funzioni-con-derivata-nulla) per cui esisterà un valore%% Link %% $q \in \mathbb{R}$ tale che $f(x) - mx = q$ per ogni punto%% link %% $x \in \mathbb{R}$:
+> 	$$
+> 	\begin{array}{}
+> 	\forall x \in (a,b). \Big( \big(f(x) - mx \big)' = 0\Big) \\
+> 	\Updownarrow \\
+> 	\exists q \in \mathbb{R}, \forall x \in (a,b) . \big( f(x) - mx = q \big) 
+> 	\end{array}
+> 	$$
+> 	Prendiamo $f(x) - mx = q$ e lo riscriviamo come $f(x) = mx + q$ che è proprio la formula della funzione lineare%% link %%.
+> 
+> $\blacksquare$
+
+> [!corollario]+ Corollario 1 di caratterizzazione delle primitive di una stessa funzione su un intervallo
+> 
+> Data una [funzione](Funzioni.md#^definizione-funzione) $f \colon [a,b] \to \mathbb{R}$ e una sua primitiva%% link %% $F$, allora per ogni valore%% link %% $c \in \mathbb{R}$ anche $F(x) + c$ è una primitiva%% link %% di $f$.
+^corollario-1-di-caratterizzazione-delle-primitive-di-una-stessa-funzione-su-un-intervallo
+
+> [!dimostrazione]- Dimostrazione del corollario 1 di caratterizzazione delle primitive di una stessa funzione su un intervallo
+> 
+> Il [corollario 1 di caratterizzazione delle primitive di una stessa funzione su un intervallo](Derivate.md#^corollario-1-di-caratterizzazione-delle-primitive-di-una-stessa-funzione-su-un-intervallo) si può dimostrare molto facilmente semplicemente notando che, per qualsiasi valore%% link %% $c \in \mathbb{R}$, la [derivata](Derivate.md#^definizione-derivata-prima-di-una-funzione) corrisponderà sempre a $f$.
+> 
+> In particolare,
+> 
+> $$
+> \big( F(x) + c \big)' = F'(x) + c' 
+> $$
+> 
+> per il [teorema della derivata della somma](Derivate.md#^teorema-della-derivata-della-somma) e, rispettivamente,
+> - $F'(x) = f(x)$ per ipotesi del corollario e 
+> - $c' = 0$ per la derivata di una costante%% link %%.
+> 
+> Ergo,
+> 
+> $$
+> \begin{align*}
+> \big( F(x) + c \big)' &= F'(x) + c' \\
+> &= f(x) + 0 \\
+> &= f(x)
+> \end{align*}
+> $$
+
+> [!corollario]+ Corollario 2 di caratterizzazione delle primitive di una stessa funzione su un intervallo
+> 
+> Data una [funzione](Funzioni.md#^definizione-funzione) $f \colon [a,b] \to \mathbb{R}$, se due [funzioni](Funzioni.md#^definizione-funzione) $F_1$ ed $F_2$ sono primitive%% link %% di $f$, allora differiscono per un valore%% link %% $c \in \mathbb{R}$:
+> 
+> $$
+> \forall x \in [a,b] . \big( F_1(x) - F_2(x) = c \big) 
+> $$
+^corollario-2-di-caratterizzazione-delle-primitive-di-una-stessa-funzione-su-un-intervallo
+
+> [!dimostrazione]- Dimostrazione del corollario 2 di caratterizzazione delle primitive di una stessa funzione su un intervallo
+> 
+> Dimostriamo il [corollario 2 di caratterizzazione delle primitive di una stessa funzione su un intervallo](Derivate.md#^corollario-2-di-caratterizzazione-delle-primitive-di-una-stessa-funzione-su-un-intervallo).
+> 
+> Per ipotesi, abbiamo che $F_1$ ed $F_2$ sono entrambe primitive%% link %% di $f$:
+> 
+> $$
+> F'_1(x) = f(x) \quad \land \quad F'_2(x) = f(x)
+> $$
+> 
+> Allora $F'_1(x) = F'_2(x)$ perché entrambi sono uguali a $f(x)$. Se sono uguali, la loro differenza%% link %% è $0$:
+> 
+> $$
+> \begin{array}{}
+> F'_1(x) = F'_2(x) \\
+> \Updownarrow \\
+> F'_1(x) - F'_2(x) = 0
+> \end{array}
+> $$
+> 
+> e, per il [teorema della derivata della somma](Derivate.md#^teorema-della-derivata-della-somma) (o meglio, in questo caso, della _differenza_):
+> 
+> $$
+> \begin{array}{}
+> F'_1(x) - F'_2(x) = 0 \\
+> \Updownarrow \\
+> \big( F_1(x) - F_2(x) \big)' = 0
+> \end{array}
+> $$
+> 
+> Per il [corollario di caratterizzazione delle funzioni con derivata nulla](Derivate.md#^corollario-di-caratterizzazione-delle-funzioni-con-derivata-nulla), se $\big( F_1(x) - F_2(x) \big)' = 0$ allora la primitiva $F_1(x) - F_2(x)$ assumerà un valore%% link %% $c \in \mathbb{R}$ in ogni punto%% link %% $x \in [a,b]$:
+> 
+> $$
+> \begin{array}{}
+> \forall x \in (a,b). \Big( \big( F_1(x) - F_2(x) \big)' = 0 \Big) \\
+> \Updownarrow \\
+> \exists c \in \mathbb{R}, \forall x \in (a,b) . \big( F_1(x) - F_2(x) = c \big) 
+> \end{array}
+> $$
+> 
+> Questo era esattamente ciò che volevamo dimostrare.
+> 
+> $\blacksquare$
+
 > [!corollario]+ Corollario del teorema di Lagrange
 > 
 > Dato un intervallo%% Link %% $I \subseteq \mathbb{R}$ e una [funzione](Funzioni.md#^definizione-funzione) $f \colon I \to \mathbb{R}$ [derivabile](Derivate.md#^definizione-derivabilita-e-derivata-prima-di-una-funzione) e due punti%% Link %% $x_0, x \in I$, esiste un punto%% link %% $t$ compreso tra $x_0$ e $x$ (non necessariamente in questo ordine) tale che
 > 
 > $$
-> f(x) - f(x_0) = f'(t)(x - x_0)
+> f(x) - f(x_0) = f'(t) \cdot (x - x_0)
 > $$
 ^corollario-del-teorema-di-lagrange
+
+%% 
+Dare un nome migliore a questo corollario
+%%
 
 %% 
 la formula $f(x) - f(x_0) = f'(t)(x - x_0)$ è detta **seconda formula dell'incremento finito** (fare definizione per questa e anche per la prima formula dell'incremento finito)
@@ -729,24 +1040,60 @@ Osservazione 2.13 pag. 266 lancelotti
 
 > [!teorema]+ Teorema del legame fra la monotonia e il segno della derivata
 > 
-> Dato un intervallo%% Link %% $I \subseteq \mathbb{R}$ e una [funzione](Funzioni.md#^definizione-funzione) $f \colon I \to \mathbb{R}$ [derivabile](Derivate.md#^definizione-derivabilita-e-derivata-prima-di-una-funzione), allora:
-> - $f$ è crescente%% link %% (o decrescente%% link %%) su $I$ se e solo se $f'(x) \ge 0$ (o $f'(x) \le 0$) per ogni $x \in I$:
+> Dato un intervallo%% Link %% $(a,b) \subseteq \mathbb{R}$ e una [funzione](Funzioni.md#^definizione-funzione) $f \colon (a,b) \to \mathbb{R}$ [derivabile](Derivate.md#^definizione-derivabilita-e-derivata-prima-di-una-funzione), allora:
+> - $f$ è crescente%% link %% (o decrescente%% link %%) su $(a,b)$ se e solo se $f'(x) \ge 0$ (o $f'(x) \le 0$) per ogni $x \in (a,b)$:
 > 	$$
-> 	\forall x \in I . \left( \begin{array}{}
-> 	f \text{ crescente su } I \iff f'(x) \ge 0 \\
-> 	f \text{ decrescente su } I \iff f'(x) \le 0 \\
+> 	\forall x \in (a,b) . \left( \begin{array}{}
+> 	f \text{ crescente su } (a,b) \iff f'(x) \ge 0 \\
+> 	f \text{ decrescente su } (a,b) \iff f'(x) \le 0 \\
 > 	\end{array} \right) 
 > 	$$
-> - Se $f'(x) > 0$ (o $f'(x) < 0$) per ogni $x \in I$, allora $f$ è strettamente crescente%% link %% (o strettamente decrescente%% link %%) su $I$:
+> - Se $f'(x) > 0$ (o $f'(x) < 0$) per ogni $x \in (a,b)$, allora $f$ è strettamente crescente%% link %% (o strettamente decrescente%% link %%) su $(a,b)$:
 > 	$$
-> 	\forall x \in I . \left( \begin{array}{}
-> 	f'(x) > 0 \implies f \text{ strettamente crescente su } I \\
-> 	f'(x) < 0 \implies f \text{ strettamente decrescente su } I \\
+> 	\forall x \in (a,b) . \left( \begin{array}{}
+> 	f'(x) > 0 \implies f \text{ strettamente crescente su } (a,b) \\
+> 	f'(x) < 0 \implies f \text{ strettamente decrescente su } (a,b) \\
 > 	\end{array} \right) 
 > 	$$
-> 
-> Se $I$ contiene uno o entrambi i suoi estremi%% link %%, la [derivabilità](Derivate.md#^definizione-derivabilita-e-derivata-prima-di-una-funzione-in-un-punto) di $f$ in quei punti%% Link %% va intesa come la [derivabilità laterale](Derivate.md#^definizione-derivate-laterali-di-una-funzione).
 ^teorema-del-legame-fra-la-monotonia-e-il-segno-della-derivata
+
+> [!dimostrazione]- Dimostrazione del teorema del legame fra la monotonia e il segno della derivata
+> 
+> Dimostriamo il [teorema del legame fra la monotonia e il segno della derivata](Derivate.md#^teorema-del-legame-fra-la-monotonia-e-il-segno-della-derivata).
+> 
+> Dimostriamo in primis che $f$ è [crescente](Proprietà%20delle%20funzioni.md#^definizione-funzione-strettamente-decrescente-o-monotona-su-un-intervallo) su $(a,b)$ se e solo se $f'(x) \ge 0$. Essendo una bi-implicazione%% Link %%, dimostriamo entrambe le direzioni:
+> - Direzione ($\implies$): sappiamo che $f$ è [crescente](Proprietà%20delle%20funzioni.md#^definizione-funzione-strettamente-decrescente-o-monotona-su-un-intervallo) su $(a,b)$, ossia che (per [definizione di _funzione crescente_](Proprietà%20delle%20funzioni.md#^definizione-funzione-strettamente-decrescente-o-monotona-su-un-intervallo)),
+> 	$$
+> 	\forall x, z \in (a,b) . \left( x < z \implies f(x) \le f(z) \right) 
+> 	$$
+> 	Per verificare il segno della [derivata](Derivate.md#^definizione-derivata-prima-di-una-funzione), usiamo il [quoziente di Newton](Variazioni%20e%20quoziente%20di%20Newton.md#^definizione-quoziente-di-newton):
+> 	$$
+> 	\dfrac{f(z) - f(x)}{z - x}
+> 	$$
+> 	Questo quoziente sarà sempre positivo perché, essendo $f$ [crescente](Proprietà%20delle%20funzioni.md#^definizione-funzione-strettamente-decrescente-o-monotona-su-un-intervallo) su $(a,b)$, $z$ sarà sempre maggiore di $f$ e quindi denominatore%% Link %% e numeratore%% link %% avranno lo stesso segno, dando così segno positivo al quoziente%% link alla proposizioen che dice che numeratore e denominatore concordi => frazione positiva %%.
+> 	Per il [corollario del teorema della permanenza del segno](Proprietà%20locali%20delle%20funzioni%20continue.md#^corollario-del-teorema-della-permanenza-del-segno), essendo questo [quoziente di Newton](Variazioni%20e%20quoziente%20di%20Newton.md#^definizione-quoziente-di-newton) positivo%% link %%, il [limite](Limiti.md#^definizione-limite)
+> 	$$
+> 	\lim_{z \to x} \dfrac{f(z) - f(x)}{z - x}
+> 	$$
+> 	sarà sempre positivo%% link %%.
+> 	Questo [limite](Limiti.md#^definizione-limite) corrisponde proprio a quello della [derivata](Derivate.md#^definizione-derivata-prima-di-una-funzione) $f'$ che sarà quindi sempre positivo%% link %%.
+> - Direzione ($\impliedby$): sappiamo che la [derivata](Derivate.md#^definizione-derivata-prima-di-una-funzione) $f'(x)$ è sempre positiva%% link %% per qualsiasi $x \in (a,b)$. Vogliamo dimostrare che $f$ è [crescente](Proprietà%20delle%20funzioni.md#^definizione-funzione-strettamente-decrescente-o-monotona-su-un-intervallo), ovvero che
+> 	$$
+> 	\forall x_1, x_2 \in (a,b) . \left( x_1 < x_2 \implies f(x_1) \le f(x_2) \right) 
+> 	$$
+> 	Consideriamo quindi l'intervallo%% link %% $[x_1, x_2] \subseteq (a,b)$, su cui possiamo applicare il [teorema di Lagrange](Derivate.md#^teorema-di-lagrange-o-del-valore-medio) ottenendo così un punto%% link %% $c \in (x_1, x_2)$ tale che la [derivata](Derivate.md#^definizione-derivata-prima-di-una-funzione-in-un-punto) di $f$ in $c$ è uguale al [quoziente di Newton](Variazioni%20e%20quoziente%20di%20Newton.md#^definizione-quoziente-di-newton) tra $x_1$ e $x_2$:
+> 	$$
+> 	\exists c \in (x_1, x_2) . \left( f'(c) = \dfrac{f(x_2) - f(x_1)}{x_2 - x_1} \right) 
+> 	$$
+> 	Avendo $f'(c) \ge 0$ per ipotesi e $x_2 > x_1$ perché abbiamo scelto così questi due punti%% link %%, allora nel [quoziente di Newton](Variazioni%20e%20quoziente%20di%20Newton.md#^definizione-quoziente-di-newton) qua sopra $f(x_2) - f(x_1)$ sarà necessariamente positivo%% link %%, ovvero ciò che volevamo dimostrare.
+> 
+> Dimostrare gli altri casi.
+> 
+> %% 
+> Dimostrare gli altri casi
+> %%
+> 
+> $\blacksquare$
 
 %% 
 dimostrazione pagg. 267-268 lancelotti
@@ -840,7 +1187,142 @@ Abbiamo visto che se $f$ è una funzione costante%% link %% ed è [derivabile](D
 Teorema del legame tra la convessità e la monotonia della derivata, L2a
 %%
 
-## 6.3 - Teoremi di De l'Hôpital
+> [!teorema]+ Teorema del legame tra la concavità e la monotonia della derivata
+> 
+> Data una [funzione](Funzioni.md#^definizione-funzione) $f \colon (a,b) \to \mathbb{R}$ [derivabile](Derivate.md#^definizione-derivata-prima-di-una-funzione), allora:
+> - $f$ è [convessa](Proprietà%20delle%20funzioni.md#^definizione-funzione-concava-o-convessa-su-un-intervallo) su $(a,b)$ se e solo se la sua [derivata](Derivate.md#^definizione-derivata-prima-di-una-funzione) $f'$ è [crescente](Proprietà%20delle%20funzioni.md#^definizione-funzione-strettamente-decrescente-o-monotona-su-un-intervallo) su $(a,b)$ e
+> - $f$ è [concava](Proprietà%20delle%20funzioni.md#^definizione-funzione-concava-o-convessa-su-un-intervallo) su $(a,b)$ se e solo se la sua [derivata](Derivate.md#^definizione-derivata-prima-di-una-funzione) $f'$ è [decrescente](Proprietà%20delle%20funzioni.md#^definizione-funzione-strettamente-decrescente-o-monotona-su-un-intervallo) su $(a,b)$:
+> 
+> $$
+> \forall x \in (a,b) . \left( \begin{array}{}
+> f \text{ è convessa su } (a,b) \iff f' \text{ è crescente su } (a,b) \\
+> f \text{ è concava su } (a,b) \iff f' \text{ è decrescente su } (a,b)
+> \end{array} \right) 
+> $$
+^teorema-del-legame-tra-la-concavita-e-la-monotonia-della-derivata
+
+> [!dimostrazione]- Dimostrazione del teorema del legame tra la concavità e la monotonia della derivata
+> 
+> Dimostriamo la prima affermazione: come nella [definizione di _funzione convessa_](Proprietà%20delle%20funzioni.md#^definizione-funzione-concava-o-convessa-su-un-intervallo), scegliamo due punti%% link %% $x_1, x_2 \in (a,b)$ tali che $x_1 < x_2$ e definiamo una [funzione](Funzioni.md#^definizione-funzione) $c(x)$%% spiegare meglio cos'è questa funzione corda $c$ %% come
+> 
+> $$
+> c(x) \overset{\text{def}}{=} f(x_1) + \dfrac{f(x_2) - f(x_1)}{x_2 - x_1} (x - x_1)
+> $$
+> 
+> e una [funzione](Funzioni.md#^definizione-funzione) $g(x)$ come
+> 
+> $$
+> g(x) \overset{\text{def}}{=} f(x) - c(x)
+> $$
+> 
+> per ogni $x \in [x_1, x_2]$.
+> 
+> La [funzione](Funzioni.md#^definizione-funzione) $g$ è certamente [derivabile](Derivate.md#^definizione-derivata-prima-di-una-funzione) perché è differenza di due [funzioni derivabili](Derivate.md#^definizione-derivata-prima-di-una-funzione) ($f(x)$ per ipotesi e $c(x)$ perché è una funzione lineare%% ???? spiegare meglio perché è una funzione lineare %%).
+> 
+> Calcolando la sua [derivata](Derivate.md#^definizione-derivata-prima-di-una-funzione) otteniamo:
+> 
+> $$
+> \begin{align*}
+> g'(x) &= f'(x) - c'(x) \\
+> &= f'(x) - \dfrac{f(x_2) - f(x_1)}{x_2 - x_1}
+> \end{align*}
+> $$
+> 
+> 
+> Inoltre, calcolando la [funzione](Funzioni.md#^definizione-funzione) agli estremi dell'intervallo%% link agli estremi dell'intervallo %% si ha banalmente $g(x_1) = 0$ e $g(x_2) = 0$.
+> 
+> A questo punto verifichiamo la bi-implicazione%% link %% in entrambe le direzioni:
+> - Direzione ($\implies$): se $f$ è [convessa](Proprietà%20delle%20funzioni.md#^definizione-funzione-concava-o-convessa-su-un-intervallo), allora per [definizione di _funzione convessa_](Proprietà%20delle%20funzioni.md#^definizione-funzione-concava-o-convessa-su-un-intervallo) nell'intervallo%% link %% $[x_1, x_2]$ il grafico si troverà sempre al di sotto o in corrispondenza di $c(x)$:
+> 	
+> 	$$
+> 	\forall x \in [x_1, x_2] . (f(x) \le c(x))
+> 	$$
+> 	
+> 	Dunque si ha $g(x) = f(x) - c(x) \le 0$ per ogni $x \in [x_1, x_2]$. Consideriamo il [quoziente di Newton](Variazioni%20e%20quoziente%20di%20Newton.md#^definizione-quoziente-di-newton) di $g$ tra un punto $x \in (x_1, x_2)$ e $x_1$:
+> 	$$
+> 	\dfrac{g(x) - g(x_1)}{x - x_1}
+> 	$$
+> 	In particolare:
+> 	- $g(x) \le 0$ per quello che ci siamo appena detti,
+> 	- $g(x_1) = 0$ per ipotesi e
+> 	- $x - x_1 > 0$ perché $x_1 < x < x_2$.
+> 	Ciò comporta che questo [quoziente di Newton](Variazioni%20e%20quoziente%20di%20Newton.md#^definizione-quoziente-di-newton) sarà negativo%% link %%. Il [limite](Limiti.md#^definizione-limite) per $x \to x_1^+$, ossia proprio il valore di $g'(x_1)$ (attenzione: qua serve il [limite destro](Limiti.md#^definizione-limite-destro) perché $x_1$ è un estremo dell'intervallo), sarà negativa%% link %% per il [corollario del teorema della permanenza del segno](Proprietà%20locali%20delle%20funzioni%20continue.md#^corollario-del-teorema-della-permanenza-del-segno):
+> 	$$
+> 	g'(x_1) \le 0
+> 	$$
+> 	Possiamo fare lo stesso discorso per il [quoziente di Newton](Variazioni%20e%20quoziente%20di%20Newton.md#^definizione-quoziente-di-newton) di $g$ tra un punto $x \in (x_1, x_2)$ e $x_2$, ottenendo infine che
+> 	$$
+> 	g'(x_2) \ge 0
+> 	$$
+> 	Abbiamo quindi che
+> 	$$
+> 	g'(x_1) \le 0 \le g'(x_2)
+> 	$$
+> 	e, in particolare,
+> 	$$
+> 	g'(x_1) \le g'(x_2)
+> 	$$
+> 	che dimostra che $g'$ è [crescente](Proprietà%20delle%20funzioni.md#^definizione-funzione-strettamente-decrescente-o-monotona-su-un-intervallo) in $(x_1, x_2)$ e in particolare in $(a,b)$ quando $x_1 = a$ e $x_2 = b$.
+> - Direzione ($\impliedby$): supponiamo che $f'$ sia [crescente](Proprietà%20delle%20funzioni.md#^definizione-funzione-strettamente-decrescente-o-monotona-su-un-intervallo). Nei punti in cui la [derivata](Derivate.md#^definizione-derivata-prima-di-una-funzione) $f'$ di $f$ sarà [crescente](Proprietà%20delle%20funzioni.md#^definizione-funzione-strettamente-decrescente-o-monotona-su-un-intervallo), anche la [derivata](Derivate.md#^definizione-derivata-prima-di-una-funzione) $g'$ di $g$ sarà [crescente](Proprietà%20delle%20funzioni.md#^definizione-funzione-strettamente-decrescente-o-monotona-su-un-intervallo) perché $g'$ è data dalla [differenza](Funzioni.md#^definizione-somma-di-funzioni) tra $f'$ (che è [crescente](Proprietà%20delle%20funzioni.md#^definizione-funzione-strettamente-decrescente-o-monotona-su-un-intervallo)) e $c'$ (che sarà una costante).
+> 	Applicando il [teorema di Lagrange](Derivate.md#^teorema-di-lagrange-o-del-valore-medio) a $g$ su $[x_1, x_2]$ e sapendo che $g(x_1) = g(x_2) = 0$ otteniamo che esisterà un punto $c \in [x_1, x_2]$ tale che $g'(c) = 0$.
+> 	Inoltre, sapendo che $g'$ è [crescente](Proprietà%20delle%20funzioni.md#^definizione-funzione-strettamente-decrescente-o-monotona-su-un-intervallo), allora per il [teorema del legame fra la monotonia e il segno della derivata](Derivate.md#^teorema-del-legame-fra-la-monotonia-e-il-segno-della-derivata) abbiamo che:
+> 	- Essendo $g'(x) \le 0$ su $[x_1, c)$, allora $g$ è [decrescente](Proprietà%20delle%20funzioni.md#^definizione-funzione-strettamente-decrescente-o-monotona-su-un-intervallo) su $[x_1, c)$.
+> 	- Essendo $g'(x) \ge 0$ su $(c, x_2]$, allora $g$ è [crescente](Proprietà%20delle%20funzioni.md#^definizione-funzione-strettamente-decrescente-o-monotona-su-un-intervallo) su $(c, x_2]$.
+> 	In particolare, essendo $g(x_1) = 0$ e $g(x_2) = 0$, deduciamo che:
+> 	- $g(x) \le 0$ per ogni $x \in [x_1, c]$ (poiché parte dal valore $0$ in $x_1$ e decresce fino a $g(c)$).
+> 	- $g(x) \le 0$ per ogni $x \in (c, x_2]$ (poiché deve crescere fino a raggiungere il valore $0$ in $x_2$).
+> 	Unendo questi due risultati, otteniamo complessivamente che $g(x) \le 0$ per ogni $x \in [x_1, x_2]$, che equivale a dire:
+> 	$$
+> 	g(x) \le 0 \iff f(x) - c(x) \le 0 \iff f(x) \le c(x)
+> 	$$
+> 	Questo dimostra che il grafico di $f$ si trova sempre al di sotto della corda secante $c(x)$, rispettando quindi la [definizione di _funzione convessa_](Proprietà%20delle%20funzioni.md#^definizione-funzione-concava-o-convessa-su-un-intervallo) su $(a,b)$.
+> 
+> La seconda parte del [teorema](Derivate.md#^teorema-del-legame-tra-la-concavita-e-la-monotonia-della-derivata), quella sulle [funzioni concave](Proprietà%20delle%20funzioni.md#^definizione-funzione-concava-o-convessa-su-un-intervallo), si dimostra analogamente.
+^dimostrazione-teorema-del-legame-tra-la-concavita-e-la-monotonia-della-derivata
+
+%% 
+Esercizio: finisci dimostrazione
+ %%
+
+> [!corollario]+ Corollario del legame tra la concavità e il segno della derivata seconda
+> 
+> Data una [funzione](Funzioni.md#^definizione-funzione) $f \colon (a,b) \to \mathbb{R}$ [derivabile due volte](Derivate.md#^definizione-derivata-n-esima-di-una-funzione), allora
+> - $f$ è [convessa](Proprietà%20delle%20funzioni.md#^definizione-funzione-concava-o-convessa-su-un-intervallo) su $(a,b)$ se e solo se la [derivata seconda](Derivate.md#^definizione-derivata-n-esima-di-una-funzione) di $f$ è positiva%% link %% per ogni $x \in (a,b)$ e
+> - $f$ è [concava](Proprietà%20delle%20funzioni.md#^definizione-funzione-concava-o-convessa-su-un-intervallo) su $(a,b)$ se e solo se la [derivata seconda](Derivate.md#^definizione-derivata-n-esima-di-una-funzione) di $f$ è negativa%% link %% per ogni $x \in (a,b)$:
+> 
+> $$
+> \forall x \in (a,b) . \left( \begin{array}{}
+> f \text{ è convessa su } (a,b) \iff f''(x) \ge 0 \\
+> f \text{ è concava su } (a,b) \iff f''(x) \le 0 \\
+> \end{array} \right) 
+> $$
+^corollario-del-legame-tra-la-concavita-e-il-segno-della-derivata-seconda
+
+> [!dimostrazione]- Dimostrazione del corollario del legame tra la concavità e il segno della derivata seconda
+> 
+> Dimostriamo il [corollario del legame tra la concavità e il segno della derivata seconda](Derivate.md#^corollario-del-legame-tra-la-concavita-e-il-segno-della-derivata-seconda).
+> 
+> Possiamo dimostrare in blocco entrambe le affermazioni, sia quella sulla [concavità](Proprietà%20delle%20funzioni.md#^definizione-funzione-concava-o-convessa-su-un-intervallo) che quella sulla [convessità](Proprietà%20delle%20funzioni.md#^definizione-funzione-concava-o-convessa-su-un-intervallo) applicando prima il [teorema del legame tra la concavità e la monotonia della derivata](Derivate.md#^teorema-del-legame-tra-la-concavita-e-la-monotonia-della-derivata), per cui
+> 
+> $$
+> \forall x \in (a,b) . \left( \begin{array}{}
+> f \text{ è convessa su } (a,b) \iff f' \text{ è crescente su } (a,b) \\
+> f \text{ è concava su } (a,b) \iff f' \text{ è decrescente su } (a,b)
+> \end{array} \right) 
+> $$
+> 
+> e poi il [teorema del legame fra la monotonia e il segno della derivata](Derivate.md#^teorema-del-legame-fra-la-monotonia-e-il-segno-della-derivata):
+> 
+> $$
+> \forall x \in (a,b) . \left( \begin{array}{}
+> f \text{ è convessa su } (a,b) \iff f' \text{ è crescente su } (a,b) \iff f'' \ge 0 \\
+> f \text{ è concava su } (a,b) \iff f' \text{ è decrescente su } (a,b) \iff f'' \le 0
+> \end{array} \right) 
+> $$
+> 
+> $\blacksquare$
+
+## 7.3 - Teoremi di De l'Hôpital
 
 Questi teoremi%% link %% sono uno strumento molto potente per calcolare alcuni [limiti](Limiti.md#^definizione-limite) che sono [forme indeterminate algebriche del tipo $\dfrac{0}{0}$](Forme%20indeterminate.md#^forma-indeterminata-algebrica-del-tipo-0-su-0) o [$\dfrac{\infty}{\infty}$](Forme%20indeterminate.md#^definizione-forma-indeterminata-algebrica-del-tipo-infinito-su-infinito).
 
@@ -978,7 +1460,7 @@ esempio 2-30 pagg- 275-276 lancelotti
 > 
 > Non possiamo quindi applicare il [teorema di De l'Hôpital della forma indeterminata algebrica del tipo $\dfrac{\infty}{\infty}$](Derivate.md#^teorema-di-de-l-hopital-della-forma-indeterminata-algebrica-del-tipo-infinito-su-infinito) perché non arriveremo mai a risolvere il [limite](Limiti.md#^definizione-limite), quindi meglio se tentiamo un altro metodo.
 
-### 6.3.1 - Conseguenze dei teoremi di De l'Hôpital
+### 7.3.1 - Conseguenze dei teoremi di De l'Hôpital
 
 > [!teorema]+ Teorema di derivabilità in un punto mediante il limite della derivata
 > 
@@ -1075,6 +1557,8 @@ Dimostrazione lasciata per esercizio
 > 			- [_L1a_](https://informatica.i-learn.unito.it/local/streamingfilemanager/file.php/informatica.i-learn.unito.it/2075/L1a.mp4), [_L1b_](https://informatica.i-learn.unito.it/local/streamingfilemanager/file.php/informatica.i-learn.unito.it/2075/L1b.mp4).
 > 			- [_L2a_](https://informatica.i-learn.unito.it/local/streamingfilemanager/file.php/informatica.i-learn.unito.it/2075/L2a.mp4), [_L2b_](https://informatica.i-learn.unito.it/local/streamingfilemanager/file.php/informatica.i-learn.unito.it/2075/L2b.mp4).
 > 			- [_L3a_](https://informatica.i-learn.unito.it/local/streamingfilemanager/file.php/informatica.i-learn.unito.it/2075/L3a.mp4).
+> 			- [_L10a_](https://informatica.i-learn.unito.it/local/streamingfilemanager/file.php/informatica.i-learn.unito.it/2075/L10a.mp4), [_L10b_](https://informatica.i-learn.unito.it/local/streamingfilemanager/file.php/informatica.i-learn.unito.it/2075/L10b.mp4).
+> 			- [_L11a_](https://informatica.i-learn.unito.it/local/streamingfilemanager/file.php/informatica.i-learn.unito.it/2075/L11a.mp4), [_L11b_](https://informatica.i-learn.unito.it/local/streamingfilemanager/file.php/informatica.i-learn.unito.it/2075/L11b.mp4).
 > - 📚 Sergio Lancelotti, _Lezioni di Analisi Matematica I_, Celid, 2020 (ISBN: `978-8867891979`):
 > 	- Capitolo 4 - _Calcolo differenziale per funzioni di una variabile_:
 > 		- 1 - _Derivata di una funzione_:

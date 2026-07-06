@@ -5,52 +5,52 @@
 > 
 > Lo stato di questa nota è al momento: 🔴 <font color="#FF7F7F">_Bozza_</font>.
 
+%% 
+vedere se tutti i riferimenti a `^definizione-funzione-continua` riguardano una funzione continua completamente o solo in un punto/intervallo e nel caso modificarli
+%%
+
 ---
+
+> [!definizione]+ Definizione: funzione continua in un punto
+> 
+> Data una [funzione](Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R} \cup \{ \pm \infty \}$ per $\text{dom}(f)$, diciamo che **$f$ è continua in $x_0$** se
+> 
+> $$
+> \lim_{x \to x_0} f(x) = f(x_0)
+> $$
+> 
+> Altrimenti, si dice che **$f$ è discontinua in $x_0$**.
+^definizione-funzione-continua-in-un-punto
+
+> [!definizione]+ Definizione: funzione continua in un intervallo
+> 
+> Data una [funzione](Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e un intervallo%% link %% $I \subseteq \text{dom}(f)$ non [vuoto](Teoria%20degli%20insiemi.md#^definizione-insieme-vuoto) ($I \ne \emptyset$), diciamo che **$f$ è continua in $I$** se è [continua](Funzioni%20continue.md#^definizione-funzione-continua-in-un-punto) in ogni punto%% link %% $x_0 \in I$.
+> 
+> Altrimenti, si dice che **$f$ è discontinua in $I$** se è [discontinua](Funzioni%20continue.md#^definizione-funzione-continua-in-un-punto) in almeno un punto%% link %% $x_0 \in I$.
+^definizione-funzione-continua-in-un-intervallo
 
 > [!definizione]+ Definizione: funzione continua
 > 
-> Data una [funzione](Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e un punto%% link %% $x_0 \in \text{dom}(f)$, diciamo che $f$ è **continua in $x_0$** se, per ogni [intorno](Topologia%20dei%20reali.md#^definizione-intorno-di-un-punto) $I(f(x_0))$ di $f(x_0)$ esiste un [intorno](Topologia%20dei%20reali.md#^definizione-intorno-di-un-punto) $I(x_0)$ di $x_0$ tale che, per ogni punto%% link %% $x \in \text{dom}(f)$ con $x \in I(x_0)$, si ha che $f(x) \in I(f(x_0))$.
-> 
-> Poiché gli [intorni](Topologia%20dei%20reali.md#^definizione-intorno-di-un-punto) di $f(x_0)$ e di $x_0$ sono rispettivamente della forma
-> 
-> $$
-> I(f(x_0)) = I_\varepsilon(f(x_0)) = (f(x_0) - \varepsilon, f(x_0) + \varepsilon)
-> $$
-> 
-> e
-> 
-> $$
-> I(x_0) = I_\delta(x_0) = (x_0 - \delta, x_0 + \delta)
-> $$
-> 
-> la definizione può essere così riformulata:
-> 
-> $$
-> \begin{array}{}
-> f \text{ è continua in } x_0 \\
-> \Updownarrow \\
-> \forall \varepsilon > 0, \exists \delta < 0, \forall x \in \text{dom}(f) . \big( | x - x_0| < \delta \implies |f(x) - f(x_0)| < \varepsilon \big) 
-> \end{array}
-> $$
-> 
-> Inoltre:
-> - $f$ è **discontinua in $x_0$** se $f$ non è continua in $x_0$.
-> - $f$ è **continua** se $f$ è continua in ogni punto%% link %% del dominio%% link %% $\text{dom}(f)$.
-> - $f$ è **discontinua** se $f$ è discontinua in almeno un punto%% link %% del dominio%% link %% $\text{dom}(f)$.
-> - Dato un [sottoinsieme](Teoria%20degli%20insiemi.md#^definizione-sottoinsieme) $A \subseteq \text{dom}(f)$ non [vuoto](Teoria%20degli%20insiemi.md#^definizione-insieme-vuoto), $f$ è **continua in $A$** se $f$ è continua in ogni punto%% Link %% di $A$.
+> Una [funzione](Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ si dice **continua** se è [continua](Funzioni%20continue.md#^definizione-funzione-continua-in-un-intervallo) in $\text{dom}(f)$.
 ^definizione-funzione-continua
 
-%% CHE SIGNIFICA?
-L'interpretazione è simile a quella del $\displaystyle\lim_{x \to x_0} f(x) = l$ nel caso in cui $x_0,l \in \mathbb{R}$. Si osserva che $\delta$ può dipendere oltre che da $\varepsilon$ anche da $x_0$.
+%% 
+In particolare, negli estremi del dominio $a$ e $b$, la funzione è continua se i limiti laterali coincidono col valore della funzione in quel punto:
+- $\lim_{x \to a^+} f(x) = f(a)$
+- $\lim_{x \to b^-} f(x) = f(b)$
+%%
+
+%% 
+Riprendendo l'osservazione (???) che avevamo fatto studiando i limiti (quella sui tre casi: $f$ non definita in $x_0$, $f(x_0) = l$ e $f(x_0) \ne l$), solo la seconda è quella che rispecchia una funzione continua.
 %%
 
 > [!osservazione]+ Osservazione: interpretazione informale di _funzione continua_
 > 
-> In termini poco rigorosi, possiamo dire che una [funzione](Funzioni.md#^definizione-funzione) è [continua](Funzioni%20continue.md#^definizione-funzione-continua) in un punto%% link %% $x_0$ del suo dominio%% link %% se a "piccole" variazioni di $x$ nelle vicinanze di $x_0$ corrispondono "piccole" variazioni di $f(x)$ nelle vicinanze di $f(x_0)$. Questa interpretazione tuttavia non è per nulla rigorosa, in quanto il concetto di "piccolo" non è ben definito. È meglio dire che $f$ è [continua](Funzioni%20continue.md#^definizione-funzione-continua) in $x_0$ se è sempre possibile avere un "controllo" delle variazioni di $f$ dal valore $f(x_0)$ al valore $f(x)$ in tutti i punti%% link %% di $x$ sufficientemente vicini a $x_0$.
+> In termini poco rigorosi, possiamo dire che una [funzione](Funzioni.md#^definizione-funzione) è [continua](Funzioni%20continue.md#^definizione-funzione-continua-in-un-punto) in un punto%% link %% $x_0$ del suo dominio%% link %% se a "piccole" variazioni di $x$ nelle vicinanze di $x_0$ corrispondono "piccole" variazioni di $f(x)$ nelle vicinanze di $f(x_0)$. Questa interpretazione tuttavia non è per nulla rigorosa, in quanto il concetto di "piccolo" non è ben definito. È meglio dire che $f$ è [continua](Funzioni%20continue.md#^definizione-funzione-continua-in-un-punto) in $x_0$ se è sempre possibile avere un "controllo" delle variazioni di $f$ dal valore $f(x_0)$ al valore $f(x)$ in tutti i punti%% link %% di $x$ sufficientemente vicini a $x_0$.
 
 > [!osservazione]+ Osservazione: funzione continua in tutti e soli i punti del suo dominio
 > 
-> Osserviamo che la [definizione di _continuità_](Funzioni%20continue.md#^definizione-funzione-continua) di $f$ in $x_0$ si applica in tutti e soli i punti del suo dominio%% link %%: rispetto alla [definizione di _limite finito al finito_](Limiti.md#^definizione-limite-finito-al-finito), infatti, in questa **non** si impone che $x \ne x_0$. Infatti, per $x = x_0$, è automaticamente verificato che
+> Osserviamo che la [definizione di _continuità_](Funzioni%20continue.md#^definizione-funzione-continua-in-un-punto) di $f$ in $x_0$ si applica in tutti e soli i punti del suo dominio%% link %%: rispetto alla [definizione di _limite finito al finito_](Limiti.md#^definizione-limite-finito-al-finito), infatti, in questa **non** si impone che $x \ne x_0$. Infatti, per $x = x_0$, è automaticamente verificato che
 > 
 > $$
 > |f(x) - f(x_0)| < \varepsilon
@@ -290,10 +290,10 @@ pagg. 143-144 lancelotti
 
 > [!osservazione]+ Osservazione: perché si chiama "discontinuità eliminabile"
 > 
-> La denominazione "discontinuità eliminabile" sta ad indicare che, a patto di modificare la [funzione](Funzioni.md#^definizione-funzione) $f$ in modo opportuno nel punto%% link %% $x_0$, questa discontinuità si può eliminare, semplicemente ponendo il valore di $f(x_0)$ uguale a $l$. Infatti, la [funzione](Funzioni.md#^definizione-funzione) $\hat f \colon \text{dom}(f) \to \mathbb{R}$ definita da
+> La denominazione "discontinuità eliminabile" sta ad indicare che, a patto di modificare la [funzione](Funzioni.md#^definizione-funzione) $f$ in modo opportuno nel punto%% link %% $x_0$, questa discontinuità si può eliminare, semplicemente ponendo il valore di $f(x_0)$ uguale a $l$. Infatti, la [funzione](Funzioni.md#^definizione-funzione) $\tilde f \colon \text{dom}(f) \to \mathbb{R}$ definita da
 > 
 > $$
-> \hat f(x) = \begin{cases}
+> \tilde f(x) = \begin{cases}
 > f(x) & \text{se } x \ne x_0 \\
 > l & \text{se } x = x_0
 > \end{cases}
@@ -303,16 +303,23 @@ pagg. 143-144 lancelotti
 
 > [!definizione]+ Definizione: discontinuità di prima specie (o salto)
 > 
-> Data una [funzione](Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R}$ per $\text{dom}(f)$, diciamo che $f$ ha una **discontinuità di prima specie (o salto) in $x_0$** (oppure che $x_0$ è un **punto di discontinuità di prima specie (o salto) per $f$**) se esistono finiti e diversi fra loro i [limiti](Limiti.md#^definizione-limite) $\displaystyle\lim_{x \to x_0^{\pm}} f(x)$:
+> Data una [funzione](Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R}$ per $\text{dom}(f)$, diciamo che $f$ ha una **discontinuità di prima specie (o salto) in $x_0$** (oppure che $x_0$ è un **punto di discontinuità di prima specie (o salto) per $f$**) se esistono finiti e diversi fra loro i limiti laterali%% link %%:
 > 
 > $$
 > \lim_{x \to x_0^+} f(x) = l \ne l' = \lim_{x \to x_0^-} f(x)
 > $$
 ^definizione-discontinuita-di-prima-specie-o-salto
 
+%% 
+Esempi:
+- Funzione segnale: funzione che assume solo valori 0 e 1
+- Funzione "floor" o a gradini o "parte intera" ("floor" = gradini): $\lfloor x \rfloor =$ più grande intero $\le x$
+- Funzione mantissa: $x - \lfloor x \rfloor$ (ossia estrae la parte decimale)
+%%
+
 > [!definizione]+ Definizione: discontinuità di seconda specie
 > 
-> Data una [funzione](Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R}$ per $\text{dom}(f)$, diciamo che $f$ ha una **discontinuità di seconda specie in $x_0$** (oppure che $x_0$ è un **punto di discontinuità di seconda specie per $f$**) se almeno uno tra il [limite destro](Limiti.md#^definizione-limite-destro) $\displaystyle\lim_{x \to x_0^-} f(x)$ o il [limite sinistro](Limiti.md#^definizione-limite-sinistro) $\displaystyle\lim_{x \to x_0^+} f(x)$ è uguale a $\pm \infty$ o non esiste.
+> Data una [funzione](Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R}$ per $\text{dom}(f)$, diciamo che $f$ ha una **discontinuità di seconda specie in $x_0$** (oppure che $x_0$ è un **punto di discontinuità di seconda specie per $f$**) se almeno un limite laterale%% link %% per $x \to x_0$ è infinito%% link %% o non esiste.
 ^definizione-discontinuita-di-seconda-specie
 
 %% 
@@ -325,10 +332,18 @@ esempio pagg. 150-151 lancelotti
 pagg. 158-160
 %%
 
+Se $f,g \colon I(c) \subseteq \mathbb{R} \to \mathbb{R}$ continua in $I(c)$, allora sia $f + g$ che $f \cdot g$ continue in $I(c)$
+
+Se $f(c) \ne 0$, allora $\dfrac{1}{f}$ continua in $I(c)$.
+
 ---
 
 > [!fonti]+ Fonti
 > 
+> - 🏫 Corso di Laurea in Informatica (`L-31 R`) presso l'Università di Torino:
+> 	- Corso di _Analisi Matematica - canale C_, A.A. 2020-21 ([pagina Moodle](https://informatica.i-learn.unito.it/course/view.php?id=2075)):
+> 		- Prof. Barutello Vivina Laura, videolezioni:
+> 			- [_L9a_](https://informatica.i-learn.unito.it/local/streamingfilemanager/file.php/informatica.i-learn.unito.it/2075/L9a.mp4).
 > - 📚 Sergio Lancelotti, _Lezioni di Analisi Matematica I_, Celid, 2020 (ISBN: `978-8867891979`):
 > 	- Capitolo 3 - _Limiti e continuità_:
 > 		- 2 - _Limiti di funzioni_:

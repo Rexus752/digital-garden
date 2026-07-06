@@ -405,6 +405,7 @@ grafico della funzione nell'osservazione
 > 	- Corso di _Analisi Matematica - canale C_, A.A. 2020-21 ([pagina Moodle](https://informatica.i-learn.unito.it/course/view.php?id=2075)):
 > 		- Prof. Barutello Vivina Laura, videolezioni:
 > 			- [_L8b_](https://informatica.i-learn.unito.it/local/streamingfilemanager/file.php/informatica.i-learn.unito.it/2075/L8b.mp4).%% per quanto riguarda la monotonia e le funzioni limitate %%
+> 			- [_L11a_](https://informatica.i-learn.unito.it/local/streamingfilemanager/file.php/informatica.i-learn.unito.it/2075/L11a.mp4).%% per concavità e convessità %%
 > - 📚 Walter Dambrosio, _Analisi matematica - Fare e comprendere_, Zanichelli, 2018 (ISBN: `9788808220745`):
 > 	- Parte I - _I concetti dell'analisi matematica_:
 > 		- Capitolo 1 - _Funzioni e modelli_:

@@ -116,27 +116,47 @@ dimostrazione pagg. 230-231 lancelotti
 
 > [!teorema]+ Teorema di Weierstrass
 > 
-> Una [funzione continua](Funzioni%20continue.md#^definizione-funzione-continua) $f \colon [a,b] \to \mathbb{R}$ assume minimo%% link %% e massimo%% link %%, cioè esistono due valori%% link %%
+> Data una [funzione](Funzioni.md#^definizione-funzione) $f \colon [a,b] \to \mathbb{R}$ [continua](Funzioni%20continue.md#^definizione-funzione-continua), esistono due punti%% Link %% $x_m, x_M \in [a,b]$ tali che
 > 
 > $$
-> m = \min_{[a,b]} f \land M = \max_{[a,b]} f
+> \forall x \in [a,b] . \big( f(x_m) \le f(x) \le f(x_M) \big) 
 > $$
-> 
-> In particolare, esistono due punti%% Link %% $x_m, x_M \in [a,b]$ tali che
-> 
-> $$
-> \begin{array}{}
-> \displaystyle f(x_m) = m = \min_{[a,b]} f \\
-> \displaystyle f(x_M) = M = \max_{[a,b]} f
-> \end{array}
-> $$
-> 
-> Inoltre, chiaramente, $\text{rng}(f) = [m,M]$.
 ^teorema-di-weierstrass
+
+%% 
+perché si chiama "di Weierstrass"?
+%%
+
+%% 
+da integrare nell'ìenunciato del teorema:
+
+In particolare:
+- $x_m$ e $x_M$ sono rispettivamente punti di minimo e massimo assoluti di $f$ su $[a,b]$
+- $f(x_m)$ e $f(x_M)$ sono minimo e massimo assoluti di $f$ su $[a,b]$
+%%
+
+%% 
+spiegazione grafica: se una funzione è continua su un intervallo, assume tutti i valori contenuti in una fascia orizzontale delimitata dal minimo e massimo assoluto
+%%
 
 %% 
 dimostrazione pag. 231-232 lancelotti
 %%
+
+> [!osservazione]+ Osservazione: molteplicità dei punti di minimo e massimo assoluto
+> 
+> Nel [teorema di Weierstrass](Proprietà%20globali%20delle%20funzioni%20continue.md#^teorema-di-weierstrass) ci viene detto che i punti di minimo assoluto%% Link %% $x_m$ e di massimo assoluto%% link %% $x_M$ esistono, ma non necessariamente devono essere unici: possono esistere molteplici punti di minimo%% link %% e massimo assoluto%% Link %%, come per esempio nella [funzione](Funzioni.md#^definizione-funzione) $\sin x$ in cui i punti di minimo assoluto%% link %% sono ogni $x_m$ tali che $- \dfrac{\pi}{2} + 2k\pi$ (per ogni $k \in \mathbb{N}$) e i punti di massimo assoluto%% link %% sono ogni $x_M$ tali che $\dfrac{\pi}{2} + 2k\pi$ (per ogni $k \in \mathbb{N}$).
+
+%% mettere grafico evidenziando i punti %%
+
+<!--
+
+[!osservazione]+ Osservazione: ipotesi di continuità necessaria su tutto il dominio
+
+Nel [teorema di Weierstrass](Proprietà%20globali%20delle%20funzioni%20continue.md#^teorema-di-weierstrass), l'ipotesi di [continuità](Funzioni%20continue.md#^definizione-funzione-continua) di $f$ è necessaria su tutto il suo [dominio](Funzioni.md#^definizione-dominio-e-codominio-della-funzione) $[a,b]$, estremi%% link %% compresi, perché altrimenti possono crearsi casi simili ai seguenti:
+
+vedere esempi minuto 04:07 lezione L9b
+-->
 
 > [!teorema]+ Teorema di monotonia per funzioni continue iniettive
 > 
@@ -207,6 +227,10 @@ dimostrazione pagg. 234-235 lancelotti
 
 > [!fonti]+ Fonti
 > 
+> - 🏫 Corso di Laurea in Informatica (`L-31 R`) presso l'Università di Torino:
+> 	- Corso di _Analisi Matematica - canale C_, A.A. 2020-21 ([pagina Moodle](https://informatica.i-learn.unito.it/course/view.php?id=2075)):
+> 		- Prof. Barutello Vivina Laura, videolezioni:
+> 			- [_L9b_](https://informatica.i-learn.unito.it/local/streamingfilemanager/file.php/informatica.i-learn.unito.it/2075/L9b.mp4).%% per il teorema di Weierstrass %%
 > - 📚 Sergio Lancelotti, _Lezioni di Analisi Matematica I_, Celid, 2020 (ISBN: `978-8867891979`):
 > 	- Capitolo 3 - _Limiti e continuità_:
 > 		- 6 - _Proprietà globali delle funzioni continue_:

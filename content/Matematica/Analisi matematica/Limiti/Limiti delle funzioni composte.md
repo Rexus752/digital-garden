@@ -15,16 +15,7 @@ resto dell'introduzione a pag. 178-179
 
 > [!teorema]+ Teorema del limite della funzione composta
 > 
-> Date due [funzioni](Funzioni.md#^definizione-funzione)
-> 
-> $$
-> \begin{array}{}
-> f \colon \text{dom}(f) \to \mathbb{R} \\
-> g \colon \text{dom}(g) \to \mathbb{R}
-> \end{array}
-> $$
-> 
-> con $\text{rng}(f) \subseteq \text{dom}(g)$ e un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R} \cup \{ \pm \infty \}$ per $\text{dom}(f)$:
+> Date due [funzioni](Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e $g \colon \text{dom}(g) \to \mathbb{R}$ con $\text{rng}(f) \subseteq \text{dom}(g)$ e un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R} \cup \{ \pm \infty \}$ per $\text{dom}(f)$:
 > 1. se esiste il [limite](Limiti.md#^definizione-limite) $\displaystyle\lim_{x \to x_0} f(x) = y_0 \in \mathbb{R} \cup \{ \pm \infty \}$ e $y_0$ è un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) per $\text{dom}(g)$,
 > 2. se $y_0 \in \mathbb{R}$, supponiamo che $y_0 \in \text{dom}(g)$ e che $g$ sia [continua](Funzioni%20continue.md#^definizione-funzione-continua) in $y_0$ con $g(y_0) = l \in \mathbb{R}$ e
 > 3. se $y_0 = \pm \infty$, supponiamo che esista il [limite](Limiti.md#^definizione-limite) $\displaystyle\lim_{y \to y_0} g(y) = l \in \mathbb{R} \cup \{ \pm \infty \}$,
@@ -91,10 +82,34 @@ esempi pagg. 180-181 lancelotti
 
 %% dimostrazione pag. 183 lancelotti %%
 
+> [!proposizione]+ Proposizione: continuità della funzione composta
+> 
+>  Date due [funzioni](Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e $g \colon \text{dom}(g) \to \mathbb{R}$ con $\text{rng}(f) \subseteq \text{dom}(g)$ e un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R} \cup \{ \pm \infty \}$ per $\text{dom}(f)$, se $f$ è [continua](Funzioni%20continue.md#^definizione-funzione-continua-in-un-punto) in $x_0$ e $g$ è [continua](Funzioni%20continue.md#^definizione-funzione-continua-in-un-punto) in $f(x_0)$, allora la loro [composizione](Composizione%20di%20funzioni.md#^definizione-composizione-di-due-funzioni) $f \circ g$ è anch'essa [continua](Funzioni%20continue.md#^definizione-funzione-continua-in-un-punto) in $x_0$.
+^proposizione-continuita-della-funzione-composta
+
+%% 
+ed è continua nell'intervallo dato dall'intersezione degli intervalli di continuità delle due funzioni
+%%
+
+> [!esempio]- Esempio di continuità della funzione composta
+> 
+> - $\sin x^2 = \sin x \circ x^2$ è continua su $\mathbb{R}$ perché sia $\sin x$ che $x^2$ sono continue in $\mathbb{R}$
+> - $\sqrt{\cos x} = \sqrt x \circ \cos x$ è continua su $\displaystyle\bigcup_{k \in \mathbb{N}} \left[ - \dfrac{\pi}{2} + 2k\pi, \dfrac{\pi}{2} + 2k\pi \right]$ perché $\sqrt x$ è continua su $[0, + \infty)$ e $\cos x$ su $\displaystyle\bigcup_{k \in \mathbb{N}} \left[ - \dfrac{\pi}{2} + 2k\pi, \dfrac{\pi}{2} + 2k\pi \right]$:
+> 	- $[0, + \infty) \cap \mathbb{R} = [0, + \infty)$
+> - $\sin(e^{x^2} + \sqrt{\cos x})$:
+> 	- $\sqrt{\cos x}$ è continua su $\displaystyle\bigcup_{k \in \mathbb{N}} \left[ - \dfrac{\pi}{2} + 2k\pi, \dfrac{\pi}{2} + 2k\pi \right]$
+> 	- $e^{x^2}$ è continua su $\mathbb{R}$
+> 	- $\sin x$ è continua su $\mathbb{R}$
+> 	- la funzione è continua su $\displaystyle\bigcup_{k \in \mathbb{N}} \left[ - \dfrac{\pi}{2} + 2k\pi, \dfrac{\pi}{2} + 2k\pi \right]$
+
 ---
 
 > [!fonti]+ Fonti
 > 
+> - 🏫 Corso di Laurea in Informatica (`L-31 R`) presso l'Università di Torino:
+> 	- Corso di _Analisi Matematica - canale C_, A.A. 2020-21 ([pagina Moodle](https://informatica.i-learn.unito.it/course/view.php?id=2075)):
+> 		- Prof. Barutello Vivina Laura, videolezioni:
+> 			- [_L9a_](https://informatica.i-learn.unito.it/local/streamingfilemanager/file.php/informatica.i-learn.unito.it/2075/L9a.mp4).
 > - 📚 Sergio Lancelotti, _Lezioni di Analisi Matematica I_, Celid, 2020 (ISBN: `978-8867891979`):
 > 	- Capitolo 3 - _Limiti e continuità_:
 > 		- 2 - _Limiti di funzioni_:

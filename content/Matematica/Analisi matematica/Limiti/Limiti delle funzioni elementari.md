@@ -42,6 +42,20 @@ $$
 \end{cases}
 $$
 
+ed è sempre continua
+
+---
+
+$f(x) = x^\frac{1}{n}$ con $n \in \mathbb{N} \setminus \{ 0 \}$:
+- è continua in $[0, + \infty)$ se $n$ è pari
+- è continua in $\mathbb{R}$ se $n$ è dispari
+
+---
+
+$f(x) = x^\alpha$ con $\alpha \in \mathbb{R}$:
+- continua in $[0, + \infty)$ se $\alpha > 0$
+- continua in $(0, + \infty)$ se $\alpha < 0$
+
 ## 2.2 - $f(x) = \dfrac{1}{x^n}$
 
 %% che è uguale a $x^n$ con $n < 0$? %%
@@ -77,10 +91,23 @@ $$
 continuare pagg. 152-155 Lancelotti
 %%
 
+# 3 - Limiti di funzioni trigonometriche
+
+- sia $\sin x$ che $\cos x$ sono continue su $\mathbb{R}$
+
+# 4 - Altri limiti
+
+- $f(x) = a^x$ con $a > 0$ è continua in $\mathbb{R}$
+- $\log_a x$ con $a > 0, a \ne 1$ è continua in $(0, + \infty)$
+
 ---
 
 > [!fonti]+ Fonti
 > 
+> - 🏫 Corso di Laurea in Informatica (`L-31 R`) presso l'Università di Torino:
+> 	- Corso di _Analisi Matematica - canale C_, A.A. 2020-21 ([pagina Moodle](https://informatica.i-learn.unito.it/course/view.php?id=2075)):
+> 		- Prof. Barutello Vivina Laura, videolezioni:
+> 			- [_L9a_](https://informatica.i-learn.unito.it/local/streamingfilemanager/file.php/informatica.i-learn.unito.it/2075/L9a.mp4).
 > - 📚 Sergio Lancelotti, _Lezioni di Analisi Matematica I_, Celid, 2020 (ISBN: `978-8867891979`):
 > 	- Capitolo 3 - _Limiti e continuità_:
 > 		- 2 - _Limiti di funzioni_:
