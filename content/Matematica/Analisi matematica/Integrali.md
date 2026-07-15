@@ -104,6 +104,12 @@ $$
 
 Un'osservazione: la somma $\displaystyle\dfrac{b-a}{N} \sum_{i=1}^N f(z_i)$ viene detta **somma di Riemann** e si indica con $S_N(f; z_1, \ldots, z_N)$.
 
+In realtà la somma di Riemann è una successione:
+
+$$
+a_n = S_N(f; z_1, \ldots, z_N)
+$$
+
 Se $f \ge 0$, allora la $S_N$ è la somma delle aree dei rettangoli di base $\dfrac{b-a}{N}$ e altezza $F(z_i)$.
 
 ---

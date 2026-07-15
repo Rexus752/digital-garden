@@ -1184,7 +1184,7 @@ Abbiamo visto che se $f$ è una funzione costante%% link %% ed è [derivabile](D
 %% esercizio 2.24 pag. 273 lancelotti %%
 
 %% 
-Teorema del legame tra la convessità e la monotonia della derivata, L2a
+Teorema del legame tra la concavità e la monotonia della derivata, L2a
 %%
 
 > [!teorema]+ Teorema del legame tra la concavità e la monotonia della derivata

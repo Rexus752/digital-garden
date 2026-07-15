@@ -45,16 +45,26 @@ Per esercizio
 
 # 1 - Simboli di Landau
 
+%% 
+Vogliamo provare a capire, dati due infiniti o due infinitesimi, quale dei due cresce (o decresce) più velocemente dell'altro. Per esempio, $f(x) = 2^x$ cresce molto più velocemente di $g(x) = x^2$.
+
+Per farlo, possiamo considerare per esempio il limite all'infinito del rapporto tra le due funzioni $\dfrac{f(x)}{g(x)}$ (con $f$ e $g$ infiniti): se $f(x)$ cresce più di $g(x)$ allora il limite andrà a $+ \infty$, altrimenti se $g(x)$ cresce più di $f(x)$ allora il limite sarà $0$.
+%%
+
 Introduciamo ora delle nozioni che ci permettono di confrontare localmente%% link %% le [funzioni](Funzioni.md#^definizione-funzione), cioè in un [intorno](Topologia%20dei%20reali.md#^definizione-intorno-di-un-punto) di un punto%% Link %%. Poiché la nozione locale più generale che conosciamo è quella del [_limite_](Limiti.md#^definizione-limite), tutte queste nozioni che introdurremo si baseranno su di essa, anzi non saranno altro che un modo diverso di scrivere l'operazione%% link %% di [limite](Limiti.md#^definizione-limite). Faremo ciò attraverso quelli che vengono chiamati [_simboli di Landau_](Infiniti%20e%20infinitesimi.md#^definizione-simboli-di-landau).
 
 > [!definizione]+ Definizione: simboli di Landau
 > 
 > I **simboli di Landau** (o **notazione asintotica**) sono un linguaggio formale%% link %% per confrontare il comportamento di due [funzioni](Funzioni.md#^definizione-funzione) in prossimità di un punto%% Link %% (finito%% Link %% o infinito%% Link %%). Non descrivono il valore%% Link %% di una [funzione](Funzioni.md#^definizione-funzione), ma la sua velocità di crescita relativa rispetto a un'altra.
 > 
-> I **simboli di Landau** sono l'[$o$-piccolo](Infiniti%20e%20infinitesimi.md#^definizione-o-piccolo), l'[equivalenza asintotica $\sim$](Infiniti%20e%20infinitesimi.md#^definizione-equivalenza-asintotica), ... e prendono il nome dal matematico tedesco Edmund Landau che li ha ideati e formalizzati.
+> I **simboli di Landau** sono l'[$o$-piccolo](Infiniti%20e%20infinitesimi.md#^definizione-o-piccolo), l'[$O$-grande](Infiniti%20e%20infinitesimi.md#^definizione-o-grande), il [$\Theta$-grande](Infiniti%20e%20infinitesimi.md#^definizione-theta-grande) e l'[equivalenza asintotica $\sim$](Infiniti%20e%20infinitesimi.md#^definizione-equivalenza-asintotica)%% vedere se esistono altri simboli di Landau %% e prendono il nome dal matematico tedesco Edmund Landau%% link %% che li ha ideati e formalizzati.
 ^definizione-simboli-di-landau
 
 ## 1.1 - $o$-piccolo
+
+%% 
+$f = o(g)$ significa che $f$ cresce più lentamente di $g$
+%%
 
 > [!definizione]+ Definizione: $\color{#FF7FFF} o$-piccolo
 > 
@@ -155,6 +165,14 @@ Introduciamo ora delle nozioni che ci permettono di confrontare localmente%% lin
 > %% perché $x^p$ cresce più velocemente, giusto? %%
 
 %% esempio 4 di o-piccolo a pagina 190 lancelotti %%
+
+%% 
+Osservazione:
+
+$$
+\lim_{x \to + \infty} \dfrac{f(x)}{g(x)} = + \infty \iff g(x) = o(f(x))
+$$
+%%
 
 ### 1.1.1 - Proprietà dell'$o$-piccolo
 
@@ -351,6 +369,26 @@ dimostrazione pagg. 193-194 lancelotti
 > \lim_{x \to x_0} \dfrac{f(x) + o(f(x))}{g(x)} = \lim_{x \to x_0} \dfrac{f(x)}{g(x) + o(g(x))} = \lim_{x \to x_0} \dfrac{f(x)}{g(x)}
 > $$
 
+**Intuizione:** mentre $f = O(g)$ dice che $f$ non cresce "più velocemente" di $g$, $f = \Theta(g)$ dice che $f$ e $g$ hanno **lo stesso ordine di grandezza** vicino a $x_0$ — cioè il rapporto $f(x)/g(x)$ resta "sandwiched" tra due costanti positive, senza mai avvicinarsi troppo a $0$ né esplodere.
+
+Se il limite del rapporto esiste, questa condizione si traduce semplicemente in
+
+$$
+\lim_{x \to x_0} \frac{f(x)}{g(x)} = L \quad \text{con } L \in \mathbb{R}, \; L \ne 0
+$$
+ 
+ 
+
+**Esempio:** $f(x) = 3x^2 + x$ e $g(x) = x^2$ per $x \to \infty$: si ha $f = \Theta(g)$, perché $f(x)/g(x) \to 3 \ne 0$.
+
+**Relazione con gli altri simboli:**
+
+$$
+f = \Theta(g) \iff \big(f = O(g) \; \wedge \; g = O(f)\big)
+$$
+
+Nota che $\Theta$-grande è una relazione **simmetrica** (se $f = \Theta(g)$ allora anche $g = \Theta(f)$), a differenza di $o$-piccolo e $O$-grande.
+
 %% 
 osservazioni c, d pagina 194 lancelotti
 %%
@@ -375,7 +413,183 @@ osservazioni c, d pagina 194 lancelotti
 > \lim_{x \to 0} \dfrac{x^2 + \sin x}{x^2 - \sin x} = \lim_{x \to 0} \dfrac{o(\sin x) + \sin x}{o(\sin x) - \sin x} \overset{\text{PETT}}{=} \lim_{x \to 0} \dfrac{\overbrace{\sin x}^{=1}}{\underbrace{- \sin x}_{=-1}} = -1
 > $$
 
-## 1.2 - Equivalenza asintotica
+## 1.2 - $O$-grande
+
+%% 
+$f = O(g)$ significa che $f$ cresce "non più velocemente" di $g$ (che è diverso da più lentamente)
+
+$o$-piccolo implica $O$-grande ma non viceversa: es. $n^2 = O(n^2 + 1)$ poiché
+
+$$
+0 \le \dfrac{n^2}{n^2 + 1} \le 1
+$$
+
+ma non è $o(n^2 + 1)$ poiché
+
+$$
+\lim_{n \to + \infty} \dfrac{n^2}{n^2 + 1} = 1 \ne 0
+$$
+%%
+
+%% 
+La definizione di $O$-grande non viene data in termini di limiti perché potrebbe esserci O-grande anche quando il limite non esiste ma, se esiste il limite $\lim_{n \to + \infty} \left| \dfrac{f(x)}{g(x)} \right|$, allora
+
+$$
+f = O(g) \iff \lim_{n \to + \infty} \dfrac{f(x)}{g(x)} \in [0, + \infty)
+$$
+%%
+
+> [!definizione]+ Definizione: $\color{#FF7FFF} O$-grande
+> 
+> Date due [funzioni](Funzioni.md#^definizione-funzione) $f,g \colon A \subseteq \mathbb{R} \to \mathbb{R}$ (con $A \ne \emptyset$) e un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R} \cup \{ \pm \infty \}$ per $A$, diciamo che **$f$ è $O$-grande di $g$ per $x$ che tende a $x_0$** se esistono un [intorno](Topologia%20dei%20reali.md#^definizione-intorno-di-un-punto) $U$ di $x_0$ e una costante%% link %% $M > 0$ tali che
+> 
+> $$
+> \forall x \in A \cap U . \big( |f(x)| \le M \cdot |g (x)| \big) 
+> $$
+> 
+> e in tal caso scriviamo "$f = O(g)$ per $x \to x_0$" (oppure "$f(x) = O(g(x))$ per $x \to x_0$").
+> 
+> L'**$O$-grande** è uno dei [simboli di Landau](Infiniti%20e%20infinitesimi.md#^definizione-simboli-di-landau).
+^definizione-o-grande
+
+%%
+\## Cos'è il $\limsup$
+
+Il **limite superiore** (limsup) è una generalizzazione del limite che esiste *sempre* (eventualmente $+\infty$), anche quando il limite ordinario non esiste.
+
+Data una funzione $h(x)$, per definirne il $\limsup$ per $x \to x_0$ si procede così: per ogni intorno $U$ di $x_0$ si considera
+
+$$
+\sup_{x \in A \cap U \setminus \{x_0\}} h(x)
+$$
+
+cioè il "picco" più alto raggiunto da $h$ in quell'intorno. Poi si fa il limite di questi sup al restringersi dell'intorno:
+
+$$
+\limsup_{x \to x_0} h(x) = \lim_{U \to x_0} \left( \sup_{x \in A \cap U \setminus \{x_0\}} h(x) \right)
+$$
+
+Intuitivamente: è il **valore più grande a cui la funzione si avvicina infinite volte** (o si mantiene sotto) man mano che $x \to x_0$, ignorando eventuali oscillazioni verso il basso.
+
+**Perché serve qui?** Perché $|f(x)/g(x)|$ potrebbe oscillare senza convergere (pensa a $f(x) = 2 + \sin(x)$, $g(x)=1$): il limite del rapporto non esiste, ma resta comunque *limitato*. Il $\limsup$ cattura esattamente questa idea di "limitatezza", anche in assenza di un limite vero e proprio. Ecco perché nella definizione di $O$-grande si usa il $\limsup$ (o, equivalentemente, la richiesta diretta $|f(x)| \le M|g(x)|$ vicino a $x_0$) invece del limite.
+%%
+
+%%
+[!osservazione]+ Osservazione: affinità e divergenze tra $o$-piccolo e $O$-grande
+
+A differenza dell'[$o$-piccolo](Infiniti%20e%20infinitesimi.md#^definizione-o-piccolo), l'[$O$-grande](Infiniti%20e%20infinitesimi.md#^definizione-o-grande) non richiede che il [limite](Limiti.md#^definizione-limite) del rapporto esista o sia $0$, ma solo che $\left| \dfrac{f}{g} \right|$ resti [limitato](Proprietà%20delle%20funzioni.md#^definizione-funzioni-limitate) vicino a $x_0$.
+
+\## Perché $o(g) \implies O(g)$
+
+Supponiamo $f = o(g)$ per $x \to x_0$, cioè
+
+$$
+\lim_{x \to x_0} \frac{f(x)}{g(x)} = 0
+$$
+
+Per definizione di limite (con $\varepsilon = 1$, per esempio), questo significa che esiste un intorno $U$ di $x_0$ tale che
+
+$$
+\left| \frac{f(x)}{g(x)} \right| < 1 \qquad \forall x \in A \cap U, \; x \ne x_0
+$$
+
+cioè $|f(x)| \le 1 \cdot |g(x)|$ in quell'intorno. Ma questa è **esattamente** la definizione di $f = O(g)$, con $M = 1$.
+
+In altre parole: se il rapporto $f/g$ tende proprio a $0$, allora *a maggior ragione* resta limitato (visto che un rapporto che converge è automaticamente limitato vicino al punto). Quindi:
+
+$$
+f = o(g) \implies f = O(g)
+$$
+
+Il viceversa è falso: $f = O(g)$ dice solo che $f/g$ **non esplode**, ma potrebbe benissimo tendere a un valore diverso da $0$ (o non avere limite affatto, pur restando limitato). Per esempio $f(x) = 3x$ e $g(x) = x$ per $x \to \infty$: si ha $f = O(g)$ (con $M=3$) ma $f \ne o(g)$, perché $f(x)/g(x) \to 3 \ne 0$.
+%%
+
+%% 
+Equivalentemente, se $g(x) \ne 0$ in un [intorno](Topologia%20dei%20reali.md#^definizione-intorno-di-un-punto) di $x_0$, questo equivale a richiedere che
+
+$$
+\limsup_{x \to x_0} \left| \dfrac{f(x)}{g(x)} \right| < +\infty
+$$
+%%
+
+> [!esempio]- Esempi di $\color{#7F7FFF} O$-grande
+> 
+> - $x^2 = O(x^3)$ per $x > + \infty$
+
+> [!esempio]- Esempio di applicazione di $\color{#7F7FFF} O$-grande alla complessità degli algoritmi
+> 
+> Stimiamo la complessità dell'algoritmo nel caso peggiore (perché è quello più importante in termini di prestazioni)
+> 
+> Algoritmo di ricerca di un numero dato (es. $m = 42$) in un array ordinato di lunghezza $m$, calcoliamo la complessità $f(n)$:
+> - Metodo 1: ricerca esaustiva (o lineare o sequenziale): scorro il vettore in modo sequenziale confrontando ogni elemento con $42$ finché non lo trovo
+> 	- Caso peggiore: $42$ non c'è nell'array ed è pù grande di tutti i valori di input. Quindi es. con un array di $9$ elementi abbiamo $9$ confronti: nel caso peggiore, $f(n) = n$, quindi la complessità dell'algoritmo è dunque $O(n)$
+> - Metodo 2, ricerca binaria (o dicotomica): faccio al massimo $\log_2(n)$ ricerche, quindi $O(\log_2 n)$
+
+## 1.3 - $\Theta$-grande
+
+%% 
+$f = \Theta(g)$ significa che $f$ cresce "non più velocemente" e "non più lentamente" di $g$ (cioè $f$ e $g$ hanno lo stesso tipo di crescita)
+
+$$
+f = \Theta(g) \implies \begin{cases}
+f = O(g) \\
+f \ne o(g)
+\end{cases}
+$$
+
+ma non vale il contrario, infatti
+
+$n^2 = O(n^3)$ ma $n^2 \ne \Theta(n^3)$, infatti $n^2 = o(n^3)$
+
+In particolare, se esiste il limite $\lim_{n \to + \infty} \left| \dfrac{f(x)}{g(x)} \right|$, allora
+
+$$
+f = \Theta(g) \iff \lim_{n \to + \infty} \dfrac{f(x)}{g(x)} \in (0, + \infty)
+$$
+%%
+
+> [!definizione]+ Definizione: $\color{#FF7FFF} \Theta$-grande
+> 
+> Date due [funzioni](Funzioni.md#^definizione-funzione) $f,g \colon A \subseteq \mathbb{R} \to \mathbb{R}$ (con $A \ne \emptyset$) e un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R} \cup \{ \pm \infty \}$ per $A$, diciamo che **$f$ è $\Theta$-grande di $g$ per $x$ che tende a $x_0$** se esistono un [intorno](Topologia%20dei%20reali.md#^definizione-intorno-di-un-punto) $U$ di $x_0$ e due costanti%% link %% $m, M > 0$ tali che
+> 
+> $$
+> m \cdot |g(x)| \le |f(x)| \le M \cdot |g(x)| \qquad \forall x \in A \cap U
+> $$
+> 
+> e in tal caso scriviamo "$f = \Theta(g)$ per $x \to x_0$" (oppure "$f(x) = \Theta(g(x))$ per $x \to x_0$").
+> 
+> Il **$\Theta$-grande** è uno dei [simboli di Landau](Infiniti%20e%20infinitesimi.md#^definizione-simboli-di-landau).
+^definizione-theta-grande
+
+%% 
+Osservazione: Equivalentemente, questo equivale a richiedere che valgano **contemporaneamente** $f = O(g)$ e $g = O(f)$ per $x \to x_0$.
+%%
+
+%%
+**Intuizione:** mentre $f = O(g)$ dice che $f$ non cresce "più velocemente" di $g$, $f = \Theta(g)$ dice che $f$ e $g$ hanno **lo stesso ordine di grandezza** vicino a $x_0$ — cioè il rapporto $f(x)/g(x)$ resta "sandwiched" tra due costanti positive, senza mai avvicinarsi troppo a $0$ né esplodere.
+
+Se il limite del rapporto esiste, questa condizione si traduce semplicemente in
+
+$$
+\lim_{x \to x_0} \frac{f(x)}{g(x)} = L \quad \text{con } L \in \mathbb{R}, \; L \ne 0
+$$
+
+**Esempio:** $f(x) = 3x^2 + x$ e $g(x) = x^2$ per $x \to \infty$: si ha $f = \Theta(g)$, perché $f(x)/g(x) \to 3 \ne 0$.
+
+**Relazione con gli altri simboli:**
+
+$$
+f = \Theta(g) \iff \big(f = O(g) \; \wedge \; g = O(f)\big)
+$$
+
+Nota che $\Theta$-grande è una relazione **simmetrica** (se $f = \Theta(g)$ allora anche $g = \Theta(f)$), a differenza di $o$-piccolo e $O$-grande.
+%%
+
+## 1.4 - Equivalenza asintotica
+
+%% 
+Caso specifico del $\Theta$-grande
+%%
 
 > [!definizione]+ Definizione: equivalenza asintotica
 > 
@@ -492,7 +706,37 @@ osservazioni c, d pagina 194 lancelotti
 per questi ultimi due esempi possiamo dire che il PETT si può applicare sui polinomi
 %%
 
-### 1.2.1 - Proprietà dell'equivalenza asintotica
+%%
+[!esempio]- Esempio: $\dfrac{x^2 + 3x}{5x^3 + 1} \sim \dfrac{1}{5x}$ per $x \to + \infty$
+
+perché a $+ \infty$ i termini che contano sono quelli di massimo grado, quindi
+
+$$
+\dfrac{x^2 + 3x}{5x^3 + 1} \sim \dfrac{x^2}{5x^3} \sim \dfrac{1}{5x}
+$$
+%%
+
+%% 
+[!esempio]- Esempio: $\dfrac{x^3 + \sin x}{x^2 + 1} \sim x$ per $x \to + \infty$
+
+Attenzione: $\sin x$ è limitato tra -1 e 1 quindi sicuramente non conta, infatti
+
+$$
+\dfrac{x^3 + \sin x}{x^2 + 1} \sim \dfrac{x^3}{x^2} \sim x
+$$
+%%
+
+%% 
+[!esempio]- Esempio: $\dfrac{x^3 + \cos x}{x^2 + 1} \sim x$ per $x \to + \infty$
+
+$\cos x$ sicuramente cresce meno di $x^3$, quindi
+
+$$
+\dfrac{x^3 + \cos x}{x^2 + 1} \sim \dfrac{x^3}{x^2} \sim x
+$$
+%%
+
+### 1.4.1 - Proprietà dell'equivalenza asintotica
 
 > [!proprieta]+ Proprietà: riflessività dell'equivalenza asintotica
 > 
@@ -619,6 +863,40 @@ algebra degli o-piccolo pagg. 200-201 lancelotti
 
 %% 
 osservazione 4.18 ed esempio 4.19 pagg. 201-202
+%%
+
+%% 
+Osservazione: o-piccolo e polinomi
+
+In generale, se
+
+$$
+P(n) = a_0n^k + a_1n^{k-1} + \ldots + a_{k-1} n + a_n
+$$
+
+con $k \ge 1, a_0, \ldots, a_k \in \mathbb{R}$ e $a_0 \ne 0$, si ha che
+
+$$
+P(n) \sim a_0 n^k
+$$
+
+infatti
+
+$$
+\lim \dfrac{P(n)}{a_0n^k} = \lim \dfrac{a_0n^k \left( 1 + \dfrac{a_1}{a_0} \cdot \overbrace{\dfrac{1}{n}}^{=0} + \ldots + \dfrac{a_{k-1}}{a_0} \cdot \overbrace{\dfrac{1}{n^{k-1}}}^{=0} + \dfrac{a_k}{a_0} \cdot \overbrace{\dfrac{1}{n^k}}^{=0} \right)}{a_0n^k} = 1
+$$
+
+Similmente, se $P(n)$ è come sopra e
+
+$$
+a(n) = b_0n^j + b_1n^{j-1} + \ldots + b_j
+$$
+
+se $b_0 \ne 0$ allora
+
+$$
+\dfrac{P(n)}{Q(n)} \sim \dfrac{a_0}{b_0} \cdot \dfrac{n^k}{n^j} = \dfrac{a_0}{b_0} \cdot n^{k-j}
+$$
 %%
 
 # 2 - Confronto fra infiniti e infinitesimi
@@ -987,6 +1265,8 @@ Fare le tre formule equivalenti come nella [definizione dell'ordine $\alpha$](In
 > 	- Corso di _Analisi Matematica - canale C_, A.A. 2020-21 ([pagina Moodle](https://informatica.i-learn.unito.it/course/view.php?id=2075)):
 > 		- Prof. Barutello Vivina Laura, videolezioni:
 > 			- [_L9b_](https://informatica.i-learn.unito.it/local/streamingfilemanager/file.php/informatica.i-learn.unito.it/2075/L9b.mp4).%% per le funzioni asintotiche %%
+> 		- Prof. Boscaggin Alberto, videolezioni:
+> 			- [_L14a_](https://informatica.i-learn.unito.it/local/streamingfilemanager/file.php/informatica.i-learn.unito.it/2075/L14a.mp4), [_L14b_](https://informatica.i-learn.unito.it/local/streamingfilemanager/file.php/informatica.i-learn.unito.it/2075/L14b.mp4), [_L14c_](https://informatica.i-learn.unito.it/local/streamingfilemanager/file.php/informatica.i-learn.unito.it/2075/L14c.mp4).
 > - 📚 Sergio Lancelotti, _Lezioni di Analisi Matematica I_, Celid, 2020 (ISBN: `978-8867891979`):
 > 	- Capitolo 3 - _Limiti e continuità_:
 > 		- 4 - _Confronto locale fra funzioni_:

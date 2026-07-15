@@ -1,6 +1,3 @@
----
-title: New note
----
 
 > [!premessa] Premessa
 > 

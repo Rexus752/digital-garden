@@ -5,6 +5,10 @@
 > 
 > Lo stato di questa nota è al momento: 🔴 <font color="#FF7F7F">_Bozza_</font>.
 
+%% 
+capire se integrare questa nota in [Derivate](Derivate.md)
+%%
+
 ---
 
 Esempio: $f(x) = x^2$ => $f'(x) = 2x$
