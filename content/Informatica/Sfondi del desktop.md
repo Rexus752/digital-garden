@@ -14,15 +14,6 @@ In questa nota troverai la lista di sfondi che uso per i desktop dei miei comput
 
 Tutti gli sfondi sono adattati a una risoluzione di 1600x900 pixel, in formato PNG, e sono divisi in sezioni tematiche. Per scaricare il file originale, clicca sull'icona 🗄. Se invece vuoi scaricare tutti gli sfondi in un colpo, ti rimando al [mio repository su Forgejo](https://forgejo.it/Rexus752/desktop-wallpapers) contenente tutti i file.
 
-# 1 - Aesthetic
-
-Gli sfondi presenti in questa sezione appartengono a un particolare genere di "estetica" sviluppatosi tramite l'Internet, ossia una delle cosiddette [_Internet Aesthetics_](https://aesthetics.fandom.com/wiki/Category:Internet_Aesthetics).
-
-## 1.1 - City Pop
-
-| ![200](Alena%20Aenami%20-%20From%20This%20Moment.png)<br>[🗄](Alena%20Aenami%20-%20From%20This%20Moment.png) [Alena Aenami](https://www.artstation.com/aenamiart) - [_From This Moment_](https://www.artstation.com/artwork/6Az0r) | ![200](Alena%20Aenami%20-%20Lost%20In%20Between.png)<br>[🗄](Alena%20Aenami%20-%20Lost%20In%20Between.png) [Alena Aenami](https://www.artstation.com/aenamiart) - [_Lost In Between_](https://www.artstation.com/artwork/J91ZxD) |
-| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-
 # 2 - Music
 
 Gli sfondi presenti in questa sezione sono tutti a tema musicale.
@@ -39,8 +30,8 @@ Gli sfondi presenti in questa sezione sono tutti a tema musicale.
 
 ## 2.3 - Caparezza
 
-| ![200](public/_attachments/exuvia.png)<br>[🗄️](public/_attachments/exuvia.png) _Exuvia_ | ![200](Domenico%20Dambrosio%20-%20La%20Scelta.png)<br>[🗄️](Domenico%20Dambrosio%20-%20La%20Scelta.png) [Domenico Dambrosio](https://www.instagram.com/dumbrosio_dd/) - [_La Scelta_](https://www.instagram.com/p/COh-FSkDAs-/) |
-| ----------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| ![200](Exuvia.png)<br>[🗄️](public/_attachments/exuvia.png) _Exuvia_ | ![200](Domenico%20Dambrosio%20-%20La%20Scelta.png)<br>[🗄️](Domenico%20Dambrosio%20-%20La%20Scelta.png) [Domenico Dambrosio](https://www.instagram.com/dumbrosio_dd/) - [_La Scelta_](https://www.instagram.com/p/COh-FSkDAs-/) |
+| -------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 
 ## 2.4 - Fedeli Alla Linea
 
@@ -49,9 +40,9 @@ Gli sfondi presenti in questa sezione sono tutti a tema musicale.
 
 ## 2.5 - Daft Punk
 
-| ![200](public/_attachments/homework.png)<br>[🗄️](public/_attachments/homework.png) _Homework_<br>                                               | ![200](public/_attachments/discovery.png)<br>[🗄️](public/_attachments/discovery.png) _Discovery_ | ![200](Human%20After%20All.png)<br>[🗄️](Human%20After%20All.png) _Human After All_ | ![200](Get%20Lucky.png)<br>[🗄️](Get%20Lucky.png) _Get Lucky_ |
-| ------------------------------------------------------------------------------------------------------- | -------------------------------------------------------- | ---------------------------------------------------------------------------------- | ------------------------------------------------------------ |
-| ![200](Random%20Access%20Memories.png)<br>[🗄️](Random%20Access%20Memories.png) _Random Access Memories_ |                                                          |                                                                                    |                                                              |
+| ![200](Homework.png)<br>[🗄️](public/_attachments/homework.png) _Homework_<br>                           | ![200](Discovery.png)<br>[🗄️](public/_attachments/discovery.png) _Discovery_ | ![200](Human%20After%20All.png)<br>[🗄️](Human%20After%20All.png) _Human After All_ | ![200](Get%20Lucky.png)<br>[🗄️](Get%20Lucky.png) _Get Lucky_ |
+| -------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ------------------------------------------------------------- |
+| ![200](Random%20Access%20Memories.png)<br>[🗄️](Random%20Access%20Memories.png) _Random Access Memories_ |                                                                               |                                                                                     |                                                               |
 
 ## 2.6 - Glass Beams
 
@@ -72,3 +63,13 @@ Gli sfondi presenti in questa sezione sono tutti a tema musicale.
 
 | ![200](Delia%20Delion%20-%20Under%20The%20Skin%20Vibration.png)<br>[🗄️](Delia%20Delion%20-%20Under%20The%20Skin%20Vibration.png) [Delia Delion](https://www.facebook.com/profile.php?id=100011391857267) - [_Under The Skin Vibration_](https://www.facebook.com/photo.php?fbid=2530454284010942&set=pb.100011391857267.-2207520000&type=3) |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+
+# World
+
+Gli sfondi presenti in questa sezione sono foto (scattate da me) di posti realmente esistenti.
+
+## Matera
+
+
+| ![200](Sassi%20di%20Matera%20al%20tramonto.png)<br>[🗄️](Sassi%20di%20Matera%20al%20tramonto.png) _Sassi di Matera al tramonto_ |
+| ------------------------------------------------------------------------------------------------------------------------------- |
