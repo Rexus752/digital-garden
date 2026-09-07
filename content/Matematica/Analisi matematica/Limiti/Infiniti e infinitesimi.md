@@ -9,7 +9,7 @@
 
 > [!definizione]+ Definizione: infinito e infinitesimo
 > 
-> Data una [funzione](Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R} \cup \{ \pm \infty \}$ per $\text{dom}(f)$, diciamo che:
+> Data una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R} \cup \{ \pm \infty \}$ per $\text{dom}(f)$, diciamo che:
 > - **$f$ è un infinitesimo in $x_0$** (o **per $x$ che tende a $x_0$**) se
 > 	$$
 > 	\lim_{x \to x_0} f(x) = 0
@@ -23,14 +23,14 @@
 > [!esempio]- Esempi di infiniti e infinitesimi
 > 
 > Ecco alcuni esempi di [infiniti](Infiniti%20e%20infinitesimi.md#^definizione-infinito-e-infinitesimo) e [infinitesimi](Infiniti%20e%20infinitesimi.md#^definizione-infinito-e-infinitesimo):
-> - La [funzione](Funzioni.md#^definizione-funzione) $f(x) = x^n$ con $n \in \mathbb{N}^{ \ge 1}$ è un [infinitesimo](Infiniti%20e%20infinitesimi.md#^definizione-infinito-e-infinitesimo) per $x \to 0$ e un [infinitesimo](Infiniti%20e%20infinitesimi.md#^definizione-infinito-e-infinitesimo) per $x \to \pm \infty$.
-> - La [funzione](Funzioni.md#^definizione-funzione) $f(x) = \dfrac{1}{x^n}$ con $n \in \mathbb{N}^{\ge 1}$ è un [infinito](Infiniti%20e%20infinitesimi.md#^definizione-infinito-e-infinitesimo) per $x \to 0$ e un [infinitesimo](Infiniti%20e%20infinitesimi.md#^definizione-infinito-e-infinitesimo) per $x \to \pm \infty$.
-> - La [funzione](Funzioni.md#^definizione-funzione) $f(x) = e^x$ è un [infinitesimo](Infiniti%20e%20infinitesimi.md#^definizione-infinito-e-infinitesimo) per $x \to - \infty$ e un [infinito](Infiniti%20e%20infinitesimi.md#^definizione-infinito-e-infinitesimo) per $x \to + \infty$.
-> - La [funzione](Funzioni.md#^definizione-funzione) $f(x) = \ln x$ è un [infinito](Infiniti%20e%20infinitesimi.md#^definizione-infinito-e-infinitesimo) per $x \to 0^+$ e per $x \to + \infty$ e un [infinitesimo](Infiniti%20e%20infinitesimi.md#^definizione-infinito-e-infinitesimo) per $x \to 1$.
+> - La [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f(x) = x^n$ con $n \in \mathbb{N}^{ \ge 1}$ è un [infinitesimo](Infiniti%20e%20infinitesimi.md#^definizione-infinito-e-infinitesimo) per $x \to 0$ e un [infinitesimo](Infiniti%20e%20infinitesimi.md#^definizione-infinito-e-infinitesimo) per $x \to \pm \infty$.
+> - La [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f(x) = \dfrac{1}{x^n}$ con $n \in \mathbb{N}^{\ge 1}$ è un [infinito](Infiniti%20e%20infinitesimi.md#^definizione-infinito-e-infinitesimo) per $x \to 0$ e un [infinitesimo](Infiniti%20e%20infinitesimi.md#^definizione-infinito-e-infinitesimo) per $x \to \pm \infty$.
+> - La [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f(x) = e^x$ è un [infinitesimo](Infiniti%20e%20infinitesimi.md#^definizione-infinito-e-infinitesimo) per $x \to - \infty$ e un [infinito](Infiniti%20e%20infinitesimi.md#^definizione-infinito-e-infinitesimo) per $x \to + \infty$.
+> - La [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f(x) = \ln x$ è un [infinito](Infiniti%20e%20infinitesimi.md#^definizione-infinito-e-infinitesimo) per $x \to 0^+$ e per $x \to + \infty$ e un [infinitesimo](Infiniti%20e%20infinitesimi.md#^definizione-infinito-e-infinitesimo) per $x \to 1$.
 
 > [!proposizione]+ Proposizione: rapporto tra infiniti e infinitesimi
 > 
-> Data una [funzione](Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R} \cup \{ \pm \infty \}$ per $\text{dom}(f)$, se in ogni [intorno](Topologia%20dei%20reali.md#^definizione-intorno-di-un-punto) $I(x_0)$ di $x_0$ esiste un $x \in \text{dom}(f) \setminus \{ x_0 \}$ tale che $f(x) \ne 0$, allora $f$ è un [infinitesimo](Infiniti%20e%20infinitesimi.md#^definizione-infinito-e-infinitesimo) in $x_0$ se e solo se $\dfrac{1}{f}$ è un [infinito](Infiniti%20e%20infinitesimi.md#^definizione-infinito-e-infinitesimo) in $x_0$:
+> Data una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R} \cup \{ \pm \infty \}$ per $\text{dom}(f)$, se in ogni [intorno](Topologia%20dei%20reali.md#^definizione-intorno-di-un-punto) $I(x_0)$ di $x_0$ esiste un $x \in \text{dom}(f) \setminus \{ x_0 \}$ tale che $f(x) \ne 0$, allora $f$ è un [infinitesimo](Infiniti%20e%20infinitesimi.md#^definizione-infinito-e-infinitesimo) in $x_0$ se e solo se $\dfrac{1}{f}$ è un [infinito](Infiniti%20e%20infinitesimi.md#^definizione-infinito-e-infinitesimo) in $x_0$:
 > 
 > $$
 > f \text{ infinitesimo in } x_0 \iff \dfrac{1}{f} \text{ infinito in } x_0
@@ -51,11 +51,11 @@ Vogliamo provare a capire, dati due infiniti o due infinitesimi, quale dei due c
 Per farlo, possiamo considerare per esempio il limite all'infinito del rapporto tra le due funzioni $\dfrac{f(x)}{g(x)}$ (con $f$ e $g$ infiniti): se $f(x)$ cresce più di $g(x)$ allora il limite andrà a $+ \infty$, altrimenti se $g(x)$ cresce più di $f(x)$ allora il limite sarà $0$.
 %%
 
-Introduciamo ora delle nozioni che ci permettono di confrontare localmente%% link %% le [funzioni](Funzioni.md#^definizione-funzione), cioè in un [intorno](Topologia%20dei%20reali.md#^definizione-intorno-di-un-punto) di un punto%% Link %%. Poiché la nozione locale più generale che conosciamo è quella del [_limite_](Limiti.md#^definizione-limite), tutte queste nozioni che introdurremo si baseranno su di essa, anzi non saranno altro che un modo diverso di scrivere l'operazione%% link %% di [limite](Limiti.md#^definizione-limite). Faremo ciò attraverso quelli che vengono chiamati [_simboli di Landau_](Infiniti%20e%20infinitesimi.md#^definizione-simboli-di-landau).
+Introduciamo ora delle nozioni che ci permettono di confrontare localmente%% link %% le [funzioni](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione), cioè in un [intorno](Topologia%20dei%20reali.md#^definizione-intorno-di-un-punto) di un punto%% Link %%. Poiché la nozione locale più generale che conosciamo è quella del [_limite_](Limiti.md#^definizione-limite), tutte queste nozioni che introdurremo si baseranno su di essa, anzi non saranno altro che un modo diverso di scrivere l'operazione%% link %% di [limite](Limiti.md#^definizione-limite). Faremo ciò attraverso quelli che vengono chiamati [_simboli di Landau_](Infiniti%20e%20infinitesimi.md#^definizione-simboli-di-landau).
 
 > [!definizione]+ Definizione: simboli di Landau
 > 
-> I **simboli di Landau** (o **notazione asintotica**) sono un linguaggio formale%% link %% per confrontare il comportamento di due [funzioni](Funzioni.md#^definizione-funzione) in prossimità di un punto%% Link %% (finito%% Link %% o infinito%% Link %%). Non descrivono il valore%% Link %% di una [funzione](Funzioni.md#^definizione-funzione), ma la sua velocità di crescita relativa rispetto a un'altra.
+> I **simboli di Landau** (o **notazione asintotica**) sono un linguaggio formale%% link %% per confrontare il comportamento di due [funzioni](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) in prossimità di un punto%% Link %% (finito%% Link %% o infinito%% Link %%). Non descrivono il valore%% Link %% di una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione), ma la sua velocità di crescita relativa rispetto a un'altra.
 > 
 > I **simboli di Landau** sono l'[$o$-piccolo](Infiniti%20e%20infinitesimi.md#^definizione-o-piccolo), l'[$O$-grande](Infiniti%20e%20infinitesimi.md#^definizione-o-grande), il [$\Theta$-grande](Infiniti%20e%20infinitesimi.md#^definizione-theta-grande) e l'[equivalenza asintotica $\sim$](Infiniti%20e%20infinitesimi.md#^definizione-equivalenza-asintotica)%% vedere se esistono altri simboli di Landau %% e prendono il nome dal matematico tedesco Edmund Landau%% link %% che li ha ideati e formalizzati.
 ^definizione-simboli-di-landau
@@ -68,7 +68,7 @@ $f = o(g)$ significa che $f$ cresce più lentamente di $g$
 
 > [!definizione]+ Definizione: $\color{#FF7FFF} o$-piccolo
 > 
-> Date due [funzioni](Funzioni.md#^definizione-funzione) $f,g \colon A \subseteq \mathbb{R} \to \mathbb{R}$ (con $A \ne \emptyset$) e un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R} \cup \{ \pm \infty \}$ per $A$, diciamo che **$f$ è $o$-piccolo di $g$ per $x$ che tende a $x_0$** se
+> Date due [funzioni](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f,g \colon A \subseteq \mathbb{R} \to \mathbb{R}$ (con $A \ne \emptyset$) e un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R} \cup \{ \pm \infty \}$ per $A$, diciamo che **$f$ è $o$-piccolo di $g$ per $x$ che tende a $x_0$** se
 > 
 > $$
 > \lim_{x \to x_0} \dfrac{f(x)}{g(x)} = 0
@@ -81,7 +81,7 @@ $f = o(g)$ significa che $f$ cresce più lentamente di $g$
 
 > [!osservazione]+ Osservazione: nell'$o$-piccolo $\color{#7F7F7F} g$ non identicamente nulla
 > 
-> Affinché l'[$o$-piccolo](Infiniti%20e%20infinitesimi.md#^definizione-o-piccolo) sia ben definito (e cioè, affinché possa esistere il [limite](Limiti.md#^definizione-limite)), è necessario che la [funzione](Funzioni.md#^definizione-funzione) $g$ non sia [identicamente nulla](Matematica/Teoria%20degli%20insiemi/Funzioni/Proprietà%20delle%20funzioni.md#^definizione-funzione-identicamente-nulla) in alcun [intorno bucato](Topologia%20dei%20reali.md#^definizione-intorno-bucato-di-un-punto) $I(x_0)$ di $x_0$ [intersecato](Teoria%20degli%20insiemi.md#^definizione-intersezione-di-due-insiemi) con $A$:
+> Affinché l'[$o$-piccolo](Infiniti%20e%20infinitesimi.md#^definizione-o-piccolo) sia ben definito (e cioè, affinché possa esistere il [limite](Limiti.md#^definizione-limite)), è necessario che la [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $g$ non sia [identicamente nulla](Matematica/Teoria%20degli%20insiemi/Funzioni/Proprietà%20delle%20funzioni.md#^definizione-funzione-identicamente-nulla) in alcun [intorno bucato](Topologia%20dei%20reali.md#^definizione-intorno-bucato-di-un-punto) $I(x_0)$ di $x_0$ [intersecato](Teoria%20degli%20insiemi.md#^definizione-intersezione-di-due-insiemi) con $A$:
 > 
 > $$
 > \begin{array}{}
@@ -187,7 +187,7 @@ $$
 
 > [!attenzione]+ Attenzione: abuso di notazione nei simboli di Landau
 > 
-> Nella notazione di [$o$-piccolo](Infiniti%20e%20infinitesimi.md#^definizione-o-piccolo) $f = o(g)$, il simbolo $=$ **NON** è un'uguaglianza%% link %% di fatto tra [funzioni](Funzioni.md#^definizione-funzione), ma sta solo ad indicare una proprietà qualitativa di $f$ rispetto a $g$.
+> Nella notazione di [$o$-piccolo](Infiniti%20e%20infinitesimi.md#^definizione-o-piccolo) $f = o(g)$, il simbolo $=$ **NON** è un'uguaglianza%% link %% di fatto tra [funzioni](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione), ma sta solo ad indicare una proprietà qualitativa di $f$ rispetto a $g$.
 > 
 > Non è quindi applicabile la proprietà transitiva dell'uguaglianza%% link %%, cioè
 > 
@@ -200,7 +200,7 @@ $$
 
 > [!proposizione]+ Proposizione: $\color{#FF7F7F} o$-piccolo di se stesso
 > 
-> Data una [funzione](Funzioni.md#^definizione-funzione) $f$, l'[$o$-piccolo](Infiniti%20e%20infinitesimi.md#^definizione-o-piccolo) di $f$ è [$o$-piccolo](Infiniti%20e%20infinitesimi.md#^definizione-o-piccolo) di $f$ per $x \to x_0$ (che può sembrare uno scioglilingua, ma non lo è), cioè vale
+> Data una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f$, l'[$o$-piccolo](Infiniti%20e%20infinitesimi.md#^definizione-o-piccolo) di $f$ è [$o$-piccolo](Infiniti%20e%20infinitesimi.md#^definizione-o-piccolo) di $f$ per $x \to x_0$ (che può sembrare uno scioglilingua, ma non lo è), cioè vale
 > 
 > $$
 > \lim_{x \to x_0} \dfrac{o(f(x))}{f(x)} = 0
@@ -226,14 +226,14 @@ $$
 > > 
 > > (Nella [proposizione](Infiniti%20e%20infinitesimi.md#^proposizione-o-piccolo-di-se-stesso) viene usato $f$ al posto di $g$, ma è la stessa cosa.)
 > > 
-> > Notiamo che l'uguaglianza $f(x) = o(g(x))$ è da intendersi come un semplice collegamento "qualitativo" tra $f$ e $g$, cioè indica che $f$ è una qualsiasi [funzione](Funzioni.md#^definizione-funzione) che è [$o$-piccolo](Infiniti%20e%20infinitesimi.md#^definizione-o-piccolo) di $g$ per $x \to x_0$, quindi perfettamente in accordo con [quanto detto prima sull'abuso di notazione](Infiniti%20e%20infinitesimi.md#^attenzione-abuso-di-notazione-nei-simboli-di-landau).
+> > Notiamo che l'uguaglianza $f(x) = o(g(x))$ è da intendersi come un semplice collegamento "qualitativo" tra $f$ e $g$, cioè indica che $f$ è una qualsiasi [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) che è [$o$-piccolo](Infiniti%20e%20infinitesimi.md#^definizione-o-piccolo) di $g$ per $x \to x_0$, quindi perfettamente in accordo con [quanto detto prima sull'abuso di notazione](Infiniti%20e%20infinitesimi.md#^attenzione-abuso-di-notazione-nei-simboli-di-landau).
 > > 
 > > $\blacksquare$
 ^proposizione-o-piccolo-di-se-stesso
 
 > [!proposizione]+ Proposizione: $\color{#FF7F7F} o$-piccolo, infiniti e infinitesimi
 > 
-> Data una [funzione](Funzioni.md#^definizione-funzione) $f$ che è [$o$-piccolo](Infiniti%20e%20infinitesimi.md#^definizione-o-piccolo) di $1$ per $x \to x_0$, si ha che $f$ è un [infinitesimo](Infiniti%20e%20infinitesimi.md#^definizione-infinito-e-infinitesimo) in $x_0$ e, al contrario, se $1$ è [$o$-piccolo](Infiniti%20e%20infinitesimi.md#^definizione-o-piccolo) di $f$ per $x \to x_0$, allora $f$ è un [infinito](Infiniti%20e%20infinitesimi.md#^definizione-infinito-e-infinitesimo) in $x_0$:
+> Data una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f$ che è [$o$-piccolo](Infiniti%20e%20infinitesimi.md#^definizione-o-piccolo) di $1$ per $x \to x_0$, si ha che $f$ è un [infinitesimo](Infiniti%20e%20infinitesimi.md#^definizione-infinito-e-infinitesimo) in $x_0$ e, al contrario, se $1$ è [$o$-piccolo](Infiniti%20e%20infinitesimi.md#^definizione-o-piccolo) di $f$ per $x \to x_0$, allora $f$ è un [infinito](Infiniti%20e%20infinitesimi.md#^definizione-infinito-e-infinitesimo) in $x_0$:
 > 
 > $$
 > \begin{align*}
@@ -281,7 +281,7 @@ Osservazione "e", "f" di pagina 191 lancelotti
 
 > [!definizione]+ Definizione: trascurabilità di una funzione
 > 
-> Date due [funzioni](Funzioni.md#^definizione-funzione) $f,g \colon A \subseteq \mathbb{R} \to \mathbb{R}$ (con $A \ne \emptyset$) e un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R} \cup \{ \pm \infty \}$ per $A$, se $f$ è [$o$-piccolo](Infiniti%20e%20infinitesimi.md#^definizione-o-piccolo) di $g$ per $x \to x_0$, allora diciamo che **$f$ è trascurabile rispetto a $g$ per $x \to x_0$**.
+> Date due [funzioni](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f,g \colon A \subseteq \mathbb{R} \to \mathbb{R}$ (con $A \ne \emptyset$) e un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R} \cup \{ \pm \infty \}$ per $A$, se $f$ è [$o$-piccolo](Infiniti%20e%20infinitesimi.md#^definizione-o-piccolo) di $g$ per $x \to x_0$, allora diciamo che **$f$ è trascurabile rispetto a $g$ per $x \to x_0$**.
 ^definizione-trascurabilita-di-una-funzione
 
 > [!osservazione]+ Osservazione: significato di _trascurabilità_
@@ -338,7 +338,7 @@ usare $f_1$ ed $f_2$ al posto di $f$ e $f'$ per non confondersi con le derivate
 
 > [!teorema]+ Principio di eliminazione dei termini trascurabili (PETT)
 > 
-> Date quattro [funzioni](Funzioni.md#^definizione-funzione) $f,g,f',g' \colon A \subseteq \mathbb{R} \to \mathbb{R}$ (con $A \ne \emptyset$) e un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R} \cup \{ \pm \infty \}$ per $A$, abbiamo che se $f'$ è [$o$-piccolo](Infiniti%20e%20infinitesimi.md#^definizione-o-piccolo) di $f$ per $x \to x_0$ e $g'$ è [$o$-piccolo](Infiniti%20e%20infinitesimi.md#^definizione-o-piccolo) di $g$ per $x \to x_0$, allora $f'$ e $g'$ sono [trascurabili](Infiniti%20e%20infinitesimi.md#^definizione-trascurabilita-di-una-funzione) nella rispettiva somma con $f$ e $g$:
+> Date quattro [funzioni](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f,g,f',g' \colon A \subseteq \mathbb{R} \to \mathbb{R}$ (con $A \ne \emptyset$) e un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R} \cup \{ \pm \infty \}$ per $A$, abbiamo che se $f'$ è [$o$-piccolo](Infiniti%20e%20infinitesimi.md#^definizione-o-piccolo) di $f$ per $x \to x_0$ e $g'$ è [$o$-piccolo](Infiniti%20e%20infinitesimi.md#^definizione-o-piccolo) di $g$ per $x \to x_0$, allora $f'$ e $g'$ sono [trascurabili](Infiniti%20e%20infinitesimi.md#^definizione-trascurabilita-di-una-funzione) nella rispettiva somma con $f$ e $g$:
 > 
 > $$
 > \begin{array}{}
@@ -441,7 +441,7 @@ $$
 
 > [!definizione]+ Definizione: $\color{#FF7FFF} O$-grande
 > 
-> Date due [funzioni](Funzioni.md#^definizione-funzione) $f,g \colon A \subseteq \mathbb{R} \to \mathbb{R}$ (con $A \ne \emptyset$) e un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R} \cup \{ \pm \infty \}$ per $A$, diciamo che **$f$ è $O$-grande di $g$ per $x$ che tende a $x_0$** se esistono un [intorno](Topologia%20dei%20reali.md#^definizione-intorno-di-un-punto) $U$ di $x_0$ e una costante%% link %% $M > 0$ tali che
+> Date due [funzioni](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f,g \colon A \subseteq \mathbb{R} \to \mathbb{R}$ (con $A \ne \emptyset$) e un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R} \cup \{ \pm \infty \}$ per $A$, diciamo che **$f$ è $O$-grande di $g$ per $x$ che tende a $x_0$** se esistono un [intorno](Topologia%20dei%20reali.md#^definizione-intorno-di-un-punto) $U$ di $x_0$ e una costante%% link %% $M > 0$ tali che
 > 
 > $$
 > \forall x \in A \cap U . \big( |f(x)| \le M \cdot |g (x)| \big) 
@@ -550,7 +550,7 @@ $$
 
 > [!definizione]+ Definizione: $\color{#FF7FFF} \Theta$-grande
 > 
-> Date due [funzioni](Funzioni.md#^definizione-funzione) $f,g \colon A \subseteq \mathbb{R} \to \mathbb{R}$ (con $A \ne \emptyset$) e un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R} \cup \{ \pm \infty \}$ per $A$, diciamo che **$f$ è $\Theta$-grande di $g$ per $x$ che tende a $x_0$** se esistono un [intorno](Topologia%20dei%20reali.md#^definizione-intorno-di-un-punto) $U$ di $x_0$ e due costanti%% link %% $m, M > 0$ tali che
+> Date due [funzioni](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f,g \colon A \subseteq \mathbb{R} \to \mathbb{R}$ (con $A \ne \emptyset$) e un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R} \cup \{ \pm \infty \}$ per $A$, diciamo che **$f$ è $\Theta$-grande di $g$ per $x$ che tende a $x_0$** se esistono un [intorno](Topologia%20dei%20reali.md#^definizione-intorno-di-un-punto) $U$ di $x_0$ e due costanti%% link %% $m, M > 0$ tali che
 > 
 > $$
 > m \cdot |g(x)| \le |f(x)| \le M \cdot |g(x)| \qquad \forall x \in A \cap U
@@ -593,7 +593,7 @@ Caso specifico del $\Theta$-grande
 
 > [!definizione]+ Definizione: equivalenza asintotica
 > 
-> Date due [funzioni](Funzioni.md#^definizione-funzione) $f,g \colon A \subseteq \mathbb{R} \to \mathbb{R}$ (con $A \ne \emptyset$) e un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R} \cup \{ \pm \infty \}$ per $A$, diciamo che **$f$ è equivalente a $g$ per $x$ che tende a $x_0$** (o che **$f$ e $g$ sono asintotiche per $x$ che tende a $x_0$**) se
+> Date due [funzioni](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f,g \colon A \subseteq \mathbb{R} \to \mathbb{R}$ (con $A \ne \emptyset$) e un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R} \cup \{ \pm \infty \}$ per $A$, diciamo che **$f$ è equivalente a $g$ per $x$ che tende a $x_0$** (o che **$f$ e $g$ sono asintotiche per $x$ che tende a $x_0$**) se
 > 
 > $$
 > \lim_{x \to x_0} \dfrac{f(x)}{g(x)} = 1
@@ -604,7 +604,7 @@ Caso specifico del $\Theta$-grande
 
 > [!osservazione]+ Osservazione: nell'equivalenza asintotica $\color{#7F7F7F} g$ non identicamente nulla
 > 
-> Esattamente [come avviene per l'$o$-piccolo](Infiniti%20e%20infinitesimi.md#^osservazione-nell-o-piccolo-g-non-identicamente-nulla), anche per l'[equivalenza asintotica](Infiniti%20e%20infinitesimi.md#^definizione-equivalenza-asintotica) serve che la [funzione](Funzioni.md#^definizione-funzione) $g$ non sia [identicamente nulla](Matematica/Teoria%20degli%20insiemi/Funzioni/Proprietà%20delle%20funzioni.md#^definizione-funzione-identicamente-nulla) in ogni [intorno bucato](Topologia%20dei%20reali.md#^definizione-intorno-bucato-di-un-punto) $I(x_0)$ di $x_0$ [intersecato](Teoria%20degli%20insiemi.md#^definizione-intersezione-di-due-insiemi) con $A$ affinché il [limite](Limiti.md#^definizione-limite) dell'[equivalenza asintotica](Infiniti%20e%20infinitesimi.md#^definizione-equivalenza-asintotica) sia ben definito:
+> Esattamente [come avviene per l'$o$-piccolo](Infiniti%20e%20infinitesimi.md#^osservazione-nell-o-piccolo-g-non-identicamente-nulla), anche per l'[equivalenza asintotica](Infiniti%20e%20infinitesimi.md#^definizione-equivalenza-asintotica) serve che la [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $g$ non sia [identicamente nulla](Matematica/Teoria%20degli%20insiemi/Funzioni/Proprietà%20delle%20funzioni.md#^definizione-funzione-identicamente-nulla) in ogni [intorno bucato](Topologia%20dei%20reali.md#^definizione-intorno-bucato-di-un-punto) $I(x_0)$ di $x_0$ [intersecato](Teoria%20degli%20insiemi.md#^definizione-intersezione-di-due-insiemi) con $A$ affinché il [limite](Limiti.md#^definizione-limite) dell'[equivalenza asintotica](Infiniti%20e%20infinitesimi.md#^definizione-equivalenza-asintotica) sia ben definito:
 > 
 > $$
 > \begin{array}{}
@@ -617,7 +617,7 @@ Caso specifico del $\Theta$-grande
 
 > [!proposizione]+ Proposizione: nell'equivalenza asintotica $\color{#FF7F7F} f$ non identicamente nulla
 > 
-> Se una [funzione](Funzioni.md#^definizione-funzione) $f$ è [equivalente](Infiniti%20e%20infinitesimi.md#^definizione-equivalenza-asintotica) a un'altra [funzione](Funzioni.md#^definizione-funzione) $g$ per $x \to x_0$, allora anche $f$ non è [identicamente nulla](Matematica/Teoria%20degli%20insiemi/Funzioni/Proprietà%20delle%20funzioni.md#^definizione-funzione-identicamente-nulla) in ogni [intorno bucato](Topologia%20dei%20reali.md#^definizione-intorno-bucato-di-un-punto) $I(x_0)$ di $x_0$ [intersecato](Teoria%20degli%20insiemi.md#^definizione-intersezione-di-due-insiemi) con $A$:
+> Se una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f$ è [equivalente](Infiniti%20e%20infinitesimi.md#^definizione-equivalenza-asintotica) a un'altra [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $g$ per $x \to x_0$, allora anche $f$ non è [identicamente nulla](Matematica/Teoria%20degli%20insiemi/Funzioni/Proprietà%20delle%20funzioni.md#^definizione-funzione-identicamente-nulla) in ogni [intorno bucato](Topologia%20dei%20reali.md#^definizione-intorno-bucato-di-un-punto) $I(x_0)$ di $x_0$ [intersecato](Teoria%20degli%20insiemi.md#^definizione-intersezione-di-due-insiemi) con $A$:
 > 
 > $$
 > \begin{array}{}
@@ -740,7 +740,7 @@ $$
 
 > [!proprieta]+ Proprietà: riflessività dell'equivalenza asintotica
 > 
-> Una [funzione](Funzioni.md#^definizione-funzione) $f$ è sempre [equivalente](Infiniti%20e%20infinitesimi.md#^definizione-equivalenza-asintotica) a se stessa per $x \to x_0$, cioè l'[equivalenza asintotica](Infiniti%20e%20infinitesimi.md#^definizione-equivalenza-asintotica) gode della proprietà riflessiva%% link %%:
+> Una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f$ è sempre [equivalente](Infiniti%20e%20infinitesimi.md#^definizione-equivalenza-asintotica) a se stessa per $x \to x_0$, cioè l'[equivalenza asintotica](Infiniti%20e%20infinitesimi.md#^definizione-equivalenza-asintotica) gode della proprietà riflessiva%% link %%:
 > 
 > $$
 > f \sim f \text{ per } x \to x_0
@@ -769,7 +769,7 @@ $$
 
 > [!proprieta]+ Proprietà: simmetria dell'equivalenza asintotica
 > 
-> Date due [funzioni](Funzioni.md#^definizione-funzione) $f$ e $g$, si ha che se $f$ è [equivalente](Infiniti%20e%20infinitesimi.md#^definizione-equivalenza-asintotica) a $g$ per $x \to x_0$, allora anche $g$ è [equivalente](Infiniti%20e%20infinitesimi.md#^definizione-equivalenza-asintotica) a $f$ per $x \to x_0$, cioè l'[equivalenza asintotica](Infiniti%20e%20infinitesimi.md#^definizione-equivalenza-asintotica) gode della proprietà simmetrica%% link %%:
+> Date due [funzioni](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f$ e $g$, si ha che se $f$ è [equivalente](Infiniti%20e%20infinitesimi.md#^definizione-equivalenza-asintotica) a $g$ per $x \to x_0$, allora anche $g$ è [equivalente](Infiniti%20e%20infinitesimi.md#^definizione-equivalenza-asintotica) a $f$ per $x \to x_0$, cioè l'[equivalenza asintotica](Infiniti%20e%20infinitesimi.md#^definizione-equivalenza-asintotica) gode della proprietà simmetrica%% link %%:
 > 
 > $$
 > \begin{array}{}
@@ -804,7 +804,7 @@ Proprietà transitiva dell'equivalenza asintotica pag. 196 lancelotti
 
 > [!proposizione]+ Proposizione: limiti di due funzioni equivalenti
 > 
-> Se una [funzione](Funzioni.md#^definizione-funzione) $f$ è [equivalente](Infiniti%20e%20infinitesimi.md#^definizione-equivalenza-asintotica) a un'altra [funzione](Funzioni.md#^definizione-funzione) $g$ per $x \to x_0$ e se esiste il [limite](Limiti.md#^definizione-limite) di $f(x)$ per $x \to x_0$, allora esiste il [limite](Limiti.md#^definizione-limite) di $g(x)$ per $x \to x_0$ ed è uguale a $l$:
+> Se una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f$ è [equivalente](Infiniti%20e%20infinitesimi.md#^definizione-equivalenza-asintotica) a un'altra [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $g$ per $x \to x_0$ e se esiste il [limite](Limiti.md#^definizione-limite) di $f(x)$ per $x \to x_0$, allora esiste il [limite](Limiti.md#^definizione-limite) di $g(x)$ per $x \to x_0$ ed è uguale a $l$:
 > 
 > $$
 > \begin{array}{}
@@ -822,7 +822,7 @@ dimostrazione pag. 197 lancelotti
 
 > [!proposizione]+ Proposizione: relazione tra l'equivalenza asintotica e l'$o$-piccolo
 > 
-> Si ha che una [funzione](Funzioni.md#^definizione-funzione) $f$ è [equivalente](Infiniti%20e%20infinitesimi.md#^definizione-equivalenza-asintotica) a un'altra [funzione](Funzioni.md#^definizione-funzione) $g$ per $x \to x_0$ se e solo se $f$ è [$o$-piccolo](Infiniti%20e%20infinitesimi.md#^definizione-o-piccolo) di $g + o(g)$ per $x \to x_0$:
+> Si ha che una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f$ è [equivalente](Infiniti%20e%20infinitesimi.md#^definizione-equivalenza-asintotica) a un'altra [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $g$ per $x \to x_0$ se e solo se $f$ è [$o$-piccolo](Infiniti%20e%20infinitesimi.md#^definizione-o-piccolo) di $g + o(g)$ per $x \to x_0$:
 > 
 > $$
 > \begin{array}{}
@@ -905,7 +905,7 @@ Introduciamo una terminologia per confrontare fra loro gli [infiniti](Infiniti%2
 
 > [!definizione]+ Definizione: ordine di infinito
 > 
-> Date due [funzioni](Funzioni.md#^definizione-funzione) $f,g \colon A \subseteq \mathbb{R} \to \mathbb{R}$ (con $A \ne \emptyset$) e un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R} \cup \{ \pm \infty \}$ per $A$, con $f$ e $g$ [infiniti](Infiniti%20e%20infinitesimi.md#^definizione-infinito-e-infinitesimo) in $x_0$, se $f$ è [$o$-piccolo](Infiniti%20e%20infinitesimi.md#^definizione-o-piccolo) di $g$ per $x \to x_0$, allora diciamo che
+> Date due [funzioni](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f,g \colon A \subseteq \mathbb{R} \to \mathbb{R}$ (con $A \ne \emptyset$) e un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R} \cup \{ \pm \infty \}$ per $A$, con $f$ e $g$ [infiniti](Infiniti%20e%20infinitesimi.md#^definizione-infinito-e-infinitesimo) in $x_0$, se $f$ è [$o$-piccolo](Infiniti%20e%20infinitesimi.md#^definizione-o-piccolo) di $g$ per $x \to x_0$, allora diciamo che
 > - **$f$ ha un ordine di infinito inferiore a $g$ per $x \to x_0$** (o che **$f$ è un infinito di ordine inferiore a $g$ per $x \to x_0$**)  e
 > - **$g$ ha un ordine di infinito superiore a $f$ per $x \to x_0$** (o che **$g$ è un infinito di ordine superiore a $f$ per $x \to x_0$**):
 > 
@@ -941,7 +941,7 @@ esempi 4.21 pagg. 202-203 lancelotti
 
 > [!definizione]+ Definizione: ordine di infinitesimo
 > 
-> Date due [funzioni](Funzioni.md#^definizione-funzione) $f,g \colon A \subseteq \mathbb{R} \to \mathbb{R}$ (con $A \ne \emptyset$) e un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R} \cup \{ \pm \infty \}$ per $A$, con $f$ e $g$ [infinitesimi](Infiniti%20e%20infinitesimi.md#^definizione-infinito-e-infinitesimo) in $x_0$, se $f$ è [$o$-piccolo](Infiniti%20e%20infinitesimi.md#^definizione-o-piccolo) di $g$ per $x \to x_0$, allora diciamo che
+> Date due [funzioni](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f,g \colon A \subseteq \mathbb{R} \to \mathbb{R}$ (con $A \ne \emptyset$) e un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R} \cup \{ \pm \infty \}$ per $A$, con $f$ e $g$ [infinitesimi](Infiniti%20e%20infinitesimi.md#^definizione-infinito-e-infinitesimo) in $x_0$, se $f$ è [$o$-piccolo](Infiniti%20e%20infinitesimi.md#^definizione-o-piccolo) di $g$ per $x \to x_0$, allora diciamo che
 > - **$f$ ha un ordine di infinitesimo superiore a $g$ per $x \to x_0$** (o che **$f$ è un infinitesimo di ordine superiore a $g$ per $x \to x_0$**)  e
 > - **$g$ ha un ordine di infinitesimo inferiore a $f$ per $x \to x_0$** (o che **$g$ è un infinitesimo di ordine inferiore a $f$ per $x \to x_0$**):
 > 
@@ -989,17 +989,17 @@ esercizi 4.25 pag. 204 lancelotti
 
 ## 2.1 - Infiniti e infinitesimi campione
 
-Sin qui abbiamo introdotto una terminologia per confrontare fra loro gli [infiniti](Infiniti%20e%20infinitesimi.md#^definizione-infinito-e-infinitesimo) e gli [infinitesimi](Infiniti%20e%20infinitesimi.md#^definizione-infinito-e-infinitesimo). Poiché la casistica è vasta, per poterli confrontare in modo rapido è necessario avere a disposizione delle [funzioni](Funzioni.md#^definizione-funzione) che svolgano il ruolo di "sistemi di riferimento" con cui confrontarli. Queste [funzioni](Funzioni.md#^definizione-funzione) sono gli [_infiniti e gli infinitesimi campione_](Infiniti%20e%20infinitesimi.md#^definizione-infiniti-e-infinitesimi-campione).
+Sin qui abbiamo introdotto una terminologia per confrontare fra loro gli [infiniti](Infiniti%20e%20infinitesimi.md#^definizione-infinito-e-infinitesimo) e gli [infinitesimi](Infiniti%20e%20infinitesimi.md#^definizione-infinito-e-infinitesimo). Poiché la casistica è vasta, per poterli confrontare in modo rapido è necessario avere a disposizione delle [funzioni](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) che svolgano il ruolo di "sistemi di riferimento" con cui confrontarli. Queste [funzioni](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) sono gli [_infiniti e gli infinitesimi campione_](Infiniti%20e%20infinitesimi.md#^definizione-infiniti-e-infinitesimi-campione).
 
-Poiché le [funzioni](Funzioni.md#^definizione-funzione) più "semplici" sono quelle razionali%% link %%, questi [_infiniti e gli infinitesimi campione_](Infiniti%20e%20infinitesimi.md#^definizione-infiniti-e-infinitesimi-campione) sono proprio funzioni razionali%% link %%.
+Poiché le [funzioni](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) più "semplici" sono quelle razionali%% link %%, questi [_infiniti e gli infinitesimi campione_](Infiniti%20e%20infinitesimi.md#^definizione-infiniti-e-infinitesimi-campione) sono proprio funzioni razionali%% link %%.
 
 > [!definizione]+ Definizione: infiniti e infinitesimi campione
 > 
 > Dato un punto%% link %% $x_0$:
-> - Se $x_0 \in \mathbb{R}$, allora l'**infinito campione** è la [funzione](Funzioni.md#^definizione-funzione) $u(x) = \dfrac{1}{|x -x _0|}$.
-> - Se $x_0 = \pm \infty$, allora l'**infinito campione** è la [funzione](Funzioni.md#^definizione-funzione) $u(x) = \vert x \vert$.
-> - Se $x_0 \in \mathbb{R}$, allora l'**infinitesimo campione** è la [funzione](Funzioni.md#^definizione-funzione) $u(x) = |x - x_0|$.
-> - Se $x_0 = \pm \infty$, allora l'**infinitesimo campione** è la [funzione](Funzioni.md#^definizione-funzione) $u(x) = \dfrac{1}{\vert x \vert}$.
+> - Se $x_0 \in \mathbb{R}$, allora l'**infinito campione** è la [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $u(x) = \dfrac{1}{|x -x _0|}$.
+> - Se $x_0 = \pm \infty$, allora l'**infinito campione** è la [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $u(x) = \vert x \vert$.
+> - Se $x_0 \in \mathbb{R}$, allora l'**infinitesimo campione** è la [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $u(x) = |x - x_0|$.
+> - Se $x_0 = \pm \infty$, allora l'**infinitesimo campione** è la [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $u(x) = \dfrac{1}{\vert x \vert}$.
 > 
 > |                      | **Infinito campione**           | **Infinitesimo campione** |
 > | -------------------- | ------------------------------- | ------------------------- |
@@ -1079,7 +1079,7 @@ La presenza del valore assoluto%% link %% negli [infiniti e infinitesimi campion
 
 > [!definizione]+ Definizione: infinit(esim)o di ordine $\color{#FF7FFF} \alpha$ rispetto all'infinit(esim)o campione $\color{#FF7FFF} u$
 > 
-> Date due [funzioni](Funzioni.md#^definizione-funzione) $f,g \colon A \subseteq \mathbb{R} \to \mathbb{R}$ (con $A \ne \emptyset$) e un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R} \cup \{ \pm \infty \}$ per $A$ con $f$ [infinito](Infiniti%20e%20infinitesimi.md#^definizione-infinito-e-infinitesimo) (o [infinitesimo](Infiniti%20e%20infinitesimi.md#^definizione-infinito-e-infinitesimo)) in $x_0$, diciamo che **$f$ è un [infinito (o infinitesimo)](Infiniti%20e%20infinitesimi.md#^definizione-infinito-e-infinitesimo) di ordine $\alpha > 0$ rispetto all'[infinito (o infinitesimo) campione](Infiniti%20e%20infinitesimi.md#^definizione-infiniti-e-infinitesimi-campione) $u$ per $x \to x_0$** se
+> Date due [funzioni](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f,g \colon A \subseteq \mathbb{R} \to \mathbb{R}$ (con $A \ne \emptyset$) e un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R} \cup \{ \pm \infty \}$ per $A$ con $f$ [infinito](Infiniti%20e%20infinitesimi.md#^definizione-infinito-e-infinitesimo) (o [infinitesimo](Infiniti%20e%20infinitesimi.md#^definizione-infinito-e-infinitesimo)) in $x_0$, diciamo che **$f$ è un [infinito (o infinitesimo)](Infiniti%20e%20infinitesimi.md#^definizione-infinito-e-infinitesimo) di ordine $\alpha > 0$ rispetto all'[infinito (o infinitesimo) campione](Infiniti%20e%20infinitesimi.md#^definizione-infiniti-e-infinitesimi-campione) $u$ per $x \to x_0$** se
 > 
 > $$
 > \begin{array}{}
@@ -1153,7 +1153,7 @@ esempi pagg. 207-208
 
 > [!definizione]+ Definizione: infinit(esim)o di ordine superiore o inferiore a qualsiasi potenza di $\color{#FF7FFF} u(x)$
 > 
-> Data una [funzione](Funzioni.md#^definizione-funzione) $f \colon A \subseteq \mathbb{R} \to \mathbb{R}$ (con $A \ne \emptyset$) e un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R} \cup \{ \pm \infty \}$ per $A$ con $f$ [infinito](Infiniti%20e%20infinitesimi.md#^definizione-infinito-e-infinitesimo) (o [infinitesimo](Infiniti%20e%20infinitesimi.md#^definizione-infinito-e-infinitesimo)) in $x_0$, diciamo che $f(x)$ è un **[infinito](Infiniti%20e%20infinitesimi.md#^definizione-infinito-e-infinitesimo) di ordine superiore o [infinitesimo](Infiniti%20e%20infinitesimi.md#^definizione-infinito-e-infinitesimo) di ordine inferiore a qualsiasi potenza di un [infinito o infinitesimo campione](Infiniti%20e%20infinitesimi.md#^definizione-infiniti-e-infinitesimi-campione) $u(x)$** per $x \to x_0$ se:
+> Data una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon A \subseteq \mathbb{R} \to \mathbb{R}$ (con $A \ne \emptyset$) e un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R} \cup \{ \pm \infty \}$ per $A$ con $f$ [infinito](Infiniti%20e%20infinitesimi.md#^definizione-infinito-e-infinitesimo) (o [infinitesimo](Infiniti%20e%20infinitesimi.md#^definizione-infinito-e-infinitesimo)) in $x_0$, diciamo che $f(x)$ è un **[infinito](Infiniti%20e%20infinitesimi.md#^definizione-infinito-e-infinitesimo) di ordine superiore o [infinitesimo](Infiniti%20e%20infinitesimi.md#^definizione-infinito-e-infinitesimo) di ordine inferiore a qualsiasi potenza di un [infinito o infinitesimo campione](Infiniti%20e%20infinitesimi.md#^definizione-infiniti-e-infinitesimi-campione) $u(x)$** per $x \to x_0$ se:
 > 
 > $$
 > \forall k \in \mathbb{R}^{> 0} . \big( [u(x)]^k = o(f(x)) \big)
@@ -1181,7 +1181,7 @@ Fare le tre formule equivalenti come nella [definizione dell'ordine $\alpha$](In
 
 > [!esempio]- Esempio: $\color{#7F7FFF} f(x) = a^x$ con $\color{#7F7FFF} a > 1$
 > 
-> La [funzione](Funzioni.md#^definizione-funzione) $f(x) = a^x$ (con $a > 1$) è un [infinito](Infiniti%20e%20infinitesimi.md#^definizione-infinito-e-infinitesimo) per $x \to + \infty$ e il suo [infinito campione](Infiniti%20e%20infinitesimi.md#^definizione-infiniti-e-infinitesimi-campione) è $u(x) = \vert x \vert$. Poiché si ha che
+> La [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f(x) = a^x$ (con $a > 1$) è un [infinito](Infiniti%20e%20infinitesimi.md#^definizione-infinito-e-infinitesimo) per $x \to + \infty$ e il suo [infinito campione](Infiniti%20e%20infinitesimi.md#^definizione-infiniti-e-infinitesimi-campione) è $u(x) = \vert x \vert$. Poiché si ha che
 > 
 > $$
 > \forall k \in \mathbb{R}^{> 0} . \big( \vert x \vert^k = o(a^x) \big)
@@ -1204,7 +1204,7 @@ Soluzione: i ruoli si invertono
 
 > [!esempio]- Esempio: $\color{#7F7FFF} f(x) = \log_a x$ con $\color{#7F7FFF} a \in \mathbb{R}^{> 0} \setminus \{ 1 \}$
 > 
-> La [funzione](Funzioni.md#^definizione-funzione) $f(x) = \log_a x$ (con $a \in \mathbb{R}^{> 0} \setminus \{ 1 \}$) è un [infinito](Infiniti%20e%20infinitesimi.md#^definizione-infinito-e-infinitesimo) per $x \to + \infty$ e il suo [infinito campione](Infiniti%20e%20infinitesimi.md#^definizione-infiniti-e-infinitesimi-campione) è $u(x) = \vert x \vert$. Poiché si ha che
+> La [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f(x) = \log_a x$ (con $a \in \mathbb{R}^{> 0} \setminus \{ 1 \}$) è un [infinito](Infiniti%20e%20infinitesimi.md#^definizione-infinito-e-infinitesimo) per $x \to + \infty$ e il suo [infinito campione](Infiniti%20e%20infinitesimi.md#^definizione-infiniti-e-infinitesimi-campione) è $u(x) = \vert x \vert$. Poiché si ha che
 > 
 > $$
 > \forall k \in \mathbb{R}^{> 0} . \left( \log_a x = o\left(|x|^k\right) \right) 
@@ -1227,14 +1227,14 @@ esempi 4.33 pagg. 208-209
 Ci sono casi però in cui un [infinito](Infiniti%20e%20infinitesimi.md#^definizione-infinito-e-infinitesimo) o un [infinitesimo](Infiniti%20e%20infinitesimi.md#^definizione-infinito-e-infinitesimo) non sono di un [ordine $\alpha$](Infiniti%20e%20infinitesimi.md#^definizione-infinitesimo-di-ordine-alfa-rispetto-all-infinitesimo-campione-u) preciso, ma non sono neanche [superiori o inferiori a qualsiasi potenza](Infiniti%20e%20infinitesimi.md#^definizione-infinitesimo-di-ordine-superiore-o-inferiore-a-qualsiasi-potenza-di-u-x) rispetto all'[infinito o infinitesimo campione](Infiniti%20e%20infinitesimi.md#^definizione-infiniti-e-infinitesimi-campione) $u(x)$, bensì il loro ordine $\alpha$ si trova in un intervallo.
 
 %% 
-![[Ordini alfa.png]]
+![Ordini alfa](_attachments/Ordini%20alfa.png)
 
 Sistemare questa foto mettendo anche sulla prima retta le varie potenze di u
 %%
 
 > [!definizione]+ Definizione: infinit(esim)o di ordine superiore o inferiore all'ordine $\color{#FF7FFF}\alpha$ rispetto all'infinit(esim)o campione $\color{#FF7FFF}u$
 >
-> Data una [funzione](Funzioni.md#^definizione-funzione) $f \colon A \subseteq \mathbb{R} \to \mathbb{R}$ (con $A \ne \emptyset$) e un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R} \cup \{ \pm \infty \}$ per $A$ con $f$ [infinito](Infiniti%20e%20infinitesimi.md#^definizione-infinito-e-infinitesimo) (o [infinitesimo](Infiniti%20e%20infinitesimi.md#^definizione-infinito-e-infinitesimo)) in $x_0$, diciamo che **$f(x)$ è un [infinito](Infiniti%20e%20infinitesimi.md#^definizione-infinito-e-infinitesimo) di ordine superiore o [infinitesimo](Infiniti%20e%20infinitesimi.md#^definizione-infinito-e-infinitesimo) di ordine inferiore all'ordine $\alpha$ rispetto all'[infinito o infinitesimo campione](Infiniti%20e%20infinitesimi.md#^definizione-infiniti-e-infinitesimi-campione) $u(x)$ per $x \to x_0$** se
+> Data una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon A \subseteq \mathbb{R} \to \mathbb{R}$ (con $A \ne \emptyset$) e un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R} \cup \{ \pm \infty \}$ per $A$ con $f$ [infinito](Infiniti%20e%20infinitesimi.md#^definizione-infinito-e-infinitesimo) (o [infinitesimo](Infiniti%20e%20infinitesimi.md#^definizione-infinito-e-infinitesimo)) in $x_0$, diciamo che **$f(x)$ è un [infinito](Infiniti%20e%20infinitesimi.md#^definizione-infinito-e-infinitesimo) di ordine superiore o [infinitesimo](Infiniti%20e%20infinitesimi.md#^definizione-infinito-e-infinitesimo) di ordine inferiore all'ordine $\alpha$ rispetto all'[infinito o infinitesimo campione](Infiniti%20e%20infinitesimi.md#^definizione-infiniti-e-infinitesimi-campione) $u(x)$ per $x \to x_0$** se
 >
 > $$
 > \lim_{x \to x_0} \frac{f(x)}{[u(x)]^\alpha} = \pm\infty

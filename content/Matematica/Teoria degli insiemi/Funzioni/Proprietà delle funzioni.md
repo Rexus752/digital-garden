@@ -7,13 +7,13 @@
 
 ---
 
-Osserviamo alcune proprietà che potrebbero rispettare le [funzioni](Funzioni.md#^definizione-funzione).
+Osserviamo alcune proprietà che potrebbero rispettare le [funzioni](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione).
 
 # 1 - Funzioni limitate
 
 > [!definizione]+ Definizione: funzioni limitate
 > 
-> Data una [funzione](Funzioni.md#^definizione-funzione) $f \colon D \to \mathbb{R}$ con il [dominio](Funzioni.md#^definizione-funzione) $D \subseteq \mathbb{R}$, allora:
+> Data una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon D \to \mathbb{R}$ con il [dominio](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $D \subseteq \mathbb{R}$, allora:
 > - $f$ si dice **superiormente limitata su $D$** se esiste un valore $M \in \mathbb{R}$ tale che:
 > 	$$
 > 	\exists M \in \mathbb{R}, \forall x \in D \big( f(x) \le M \big)
@@ -36,7 +36,7 @@ Esempio di funzioni limitate dal punto di vista grafico (definizione 1.1.3 a pag
 
 > [!definizione]+ Definizione: punto di massimo relativo e assoluto
 > 
-> Data una [funzione](Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$, un punto%% link %% $x_0 \in \text{dom}(f)$ si dice **punto di massimo relativo (o locale) di $f$ su $\text{dom}(f)$** se esiste un valore%% link %% $r > 0$ tale che
+> Data una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$, un punto%% link %% $x_0 \in \text{dom}(f)$ si dice **punto di massimo relativo (o locale) di $f$ su $\text{dom}(f)$** se esiste un valore%% link %% $r > 0$ tale che
 > 
 > $$
 > \forall x \in D \cap (x_0 - r, x_0 + r) . \big( f(x) \le f(x_0) \big) 
@@ -49,7 +49,7 @@ Esempio di funzioni limitate dal punto di vista grafico (definizione 1.1.3 a pag
 
 > [!definizione]+ Definizione: punto di minimo relativo e assoluto
 > 
-> Data una [funzione](Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$, un punto%% link %% $x_0 \in \text{dom}(f)$ si dice **punto di minimo relativo (o locale) di $f$ su $\text{dom}(f)$** se esiste un valore%% link %% $r > 0$ tale che
+> Data una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$, un punto%% link %% $x_0 \in \text{dom}(f)$ si dice **punto di minimo relativo (o locale) di $f$ su $\text{dom}(f)$** se esiste un valore%% link %% $r > 0$ tale che
 > 
 > $$
 > \forall x \in D \cap (x_0 - r, x_0 + r) . \big( f(x) \ge f(x_0) \big) 
@@ -68,7 +68,7 @@ esempio figura 1.11 pag. 10 dambrosio
 
 > [!definizione]+ Definizione: funzioni pari e dispari
 > 
-> Data una [funzione](Funzioni.md#^definizione-funzione) $f \colon D \to \mathbb{R}$ con il [dominio](Funzioni.md#^definizione-funzione) $D \subseteq \mathbb{R}$, allora:
+> Data una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon D \to \mathbb{R}$ con il [dominio](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $D \subseteq \mathbb{R}$, allora:
 > - $f$ si dice **pari** se:
 > 	$$
 > 	\forall x \in D \big( f(-x) = f(x) \big) 
@@ -81,7 +81,7 @@ esempio figura 1.11 pag. 10 dambrosio
 
 > [!osservazione]+ Osservazione: simmetria dei grafici di funzioni pari e dispari
 > 
-> In termini di [grafico](Funzioni.md#^definizione-grafico-di-una-funzione) $\Gamma_f$ di $f$ è semplice osservare che, per una [funzione pari](Proprietà%20delle%20funzioni.md#^definizione-funzioni-pari-e-dispari), vale
+> In termini di [grafico](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-grafico-di-una-funzione) $\Gamma_f$ di $f$ è semplice osservare che, per una [funzione pari](Proprietà%20delle%20funzioni.md#^definizione-funzioni-pari-e-dispari), vale
 > 
 > $$
 > (x,y) \in \Gamma_f \iff (-x,y) \in \Gamma_f
@@ -101,7 +101,7 @@ esempio figura 1.11 pag. 10 dambrosio
 
 > [!definizione]+ Definizione: funzione periodica
 > 
-> Data una [funzione](Funzioni.md#^definizione-funzione) $f \colon D \to \mathbb{R}$ con il [dominio](Funzioni.md#^definizione-funzione) $D \subseteq \mathbb{R}$, $f$ si dice **periodica** se esiste un $T > 0$, detto **periodo di $f$**, tale che:
+> Data una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon D \to \mathbb{R}$ con il [dominio](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $D \subseteq \mathbb{R}$, $f$ si dice **periodica** se esiste un $T > 0$, detto **periodo di $f$**, tale che:
 > 1. l'insieme $D$ soddisfa la proprietà
 > 	$$
 > 	x \in D \iff x + T \in D
@@ -127,7 +127,7 @@ esempio figura 1.14 pag. 12 dambrosio
 
 > [!definizione]+ Definizione: iniettività
 > 
-> Una [funzione](Funzioni.md#^definizione-funzione) $f \colon A \to B$ si dice che è _**iniettiva**_ o che è una _**iniezione**_ se, per ogni scelta di due numeri $a_1, a_2 \in A$ con $a_1 \ne a_2$, si ha $f(a_1) \ne f(a_2)$:
+> Una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon A \to B$ si dice che è _**iniettiva**_ o che è una _**iniezione**_ se, per ogni scelta di due numeri $a_1, a_2 \in A$ con $a_1 \ne a_2$, si ha $f(a_1) \ne f(a_2)$:
 > $$
 > \forall a_1, a_2 \in A (a_1 \ne a_2 \implies f(a_1) \ne f(a_2))
 > $$
@@ -136,7 +136,7 @@ esempio figura 1.14 pag. 12 dambrosio
 > [!esempio]- Esempio: esempio grafico dell'iniettività
 > 
 > Un esempio grafico dell'iniettività è il seguente, in cui ogni elemento dell'insieme $A=\{2,4,6\}$ è associato a un solo elemento dell'insieme $B=\{9,7,5,3\}$:
-> ![[Iniettività.png]]
+> ![Iniettività.png](Iniettività.png)
 
 %%
 La rappresentazione mediante diagrammi di Venn di una funzione iniettiva
@@ -154,12 +154,12 @@ f : A \to B è tale che ogni punto di B è raggiunto al più da una freccia.
 > Data una funzione proiezione $p_1\colon A\times B\to A,(a,b)\mapsto a$, siccome si ha $p_1((a,b))=a$ per ogni $(a,b)\in A\times B$ la funzione è iniettiva solo se $B$ consiste di un unico elemento: se $B$ contiene due elementi distinti $b_1$ e $b_2$ allora $p_1((a,b_1))=p_1((a,b_2))$.
 
 > [!osservazione]+ Osservazione: rendere una funzione iniettiva restringendo il dominio
-> Una funzione $f\colon A\to B$ non iniettiva può diventare iniettiva [restringendo](Funzioni.md#^definizione-funzione-restrizione) opportunamente il dominio. Per esempio, la funzione $f(x)=x^2$ che non è iniettiva sul dominio $\mathbb{R}$, può diventarlo se viene ristretto il dominio ai numeri reali non-negativi. Infatti, per ogni coppia di due numeri reali non-negativi distinti $x_1$ e $x_2$, si avrà sicuramente $x_1^2 \ne x_2^2$.
+> Una funzione $f\colon A\to B$ non iniettiva può diventare iniettiva [restringendo](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione-restrizione) opportunamente il dominio. Per esempio, la funzione $f(x)=x^2$ che non è iniettiva sul dominio $\mathbb{R}$, può diventarlo se viene ristretto il dominio ai numeri reali non-negativi. Infatti, per ogni coppia di due numeri reali non-negativi distinti $x_1$ e $x_2$, si avrà sicuramente $x_1^2 \ne x_2^2$.
 
 ## 5.2 - Suriettività
 
 > [!definizione]+ Definizione: suriettività
-> Una [funzione](Funzioni.md#^definizione-funzione) $f\colon A\to B$ si dice che è _**suriettiva**_ o che è una _**suriezione**_ se ogni elemento del codominio è immagine di almeno un elemento del dominio:
+> Una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f\colon A\to B$ si dice che è _**suriettiva**_ o che è una _**suriezione**_ se ogni elemento del codominio è immagine di almeno un elemento del dominio:
 > $$
 > \forall y \in B, \exists x \in A (f(x) = y)
 > $$
@@ -167,7 +167,7 @@ f : A \to B è tale che ogni punto di B è raggiunto al più da una freccia.
 
 > [!esempio]- Esempio: esempio grafico della suriettività
 > Un esempio grafico della suriettività è il seguente, in cui ogni elemento dell'insieme $B=\{9,7,5\}$ è associato ad almeno un elemento della funzione $A=\{2,4,6,8\}$:
-> ![[Suriettività.png]]
+> ![Suriettività.png](Suriettività.png)
 
 %%
 La rappresentazione mediante diagrammi di Venn di una funzione suriettiva
@@ -197,7 +197,7 @@ f : A \to B è tale che ogni punto di B è raggiunto almeno da una freccia.
 
 > [!definizione]+ Definizione: biettività
 > 
-> Una [funzione](Funzioni.md#^definizione-funzione) $f \colon A\to B$ si dice che è _**biettiva**_ o che è una _**biezione**_ se è contemporaneamente sia [iniettiva](Proprietà%20delle%20funzioni.md#^definizione-iniettivita) che [suriettiva](Proprietà%20delle%20funzioni.md#^definizione-suriettivita), ovvero se per ogni elemento del codominio $y\in B$ esiste ed è unico un elemento del dominio $x \in A$ tale che $f(x)=y$:
+> Una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon A\to B$ si dice che è _**biettiva**_ o che è una _**biezione**_ se è contemporaneamente sia [iniettiva](Proprietà%20delle%20funzioni.md#^definizione-iniettivita) che [suriettiva](Proprietà%20delle%20funzioni.md#^definizione-suriettivita), ovvero se per ogni elemento del codominio $y\in B$ esiste ed è unico un elemento del dominio $x \in A$ tale che $f(x)=y$:
 > $$
 > \forall y \in B, \exists! \, x \in A (f(x) = y)
 > $$
@@ -205,7 +205,7 @@ f : A \to B è tale che ogni punto di B è raggiunto almeno da una freccia.
 
 > [!esempio]- Esempio: esempio grafico della biettività
 > Un esempio grafico della biettività è il seguente, in cui ogni elemento dell'insieme $B=\{9,7,5,3\}$ è associato a uno e un solo elemento della funzione $A=\{2,4,6,8\}$:
-> ![[Biettività.png]]
+> ![Biettività.png](Biettività.png)
 
 %%
 La rappresentazione mediante diagrammi di Venn di una funzione biettiva
@@ -214,10 +214,10 @@ freccia.
 %%
 
 > [!esempio]- Esempio: biettività della funzione identità
-> Per ogni insieme $A$, la [funzione identità](Funzioni.md#^definizione-funzione-identita) $\text{id}_A:A\to A$ è biettiva, in quanto a ogni elemento del codominio è associato un solo elemento del dominio (ossia se stesso).
+> Per ogni insieme $A$, la [funzione identità](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione-identita) $\text{id}_A:A\to A$ è biettiva, in quanto a ogni elemento del codominio è associato un solo elemento del dominio (ossia se stesso).
 
 > [!esempio]- Esempio: biettività della funzione $\color{#7F7FFF} f\colon\mathbb{R} \to \mathbb{R},x\mapsto x^2$ con restringimento di dominio
-> Data una funzione $f\colon\mathbb{R}\to\mathbb{R},x\mapsto x^2$, essa non è né iniettiva, né suriettiva, ma può diventare biettiva [restringendo](Funzioni.md#^definizione-funzione-restrizione) il suo dominio ai numeri non-negativi $\{ x \in \mathbb{R} \mid x \ge 0 \}$ e pensandola con codominio $\{ x \in \mathbb{R} \mid x \ge 0 \}$ (se il codominio fosse $\mathbb{R}$, allora non potrebbe essere suriettiva, in quanto non ci sono numeri che, elevati alla seconda, danno numeri negativi). In questo modo, per ogni numero reale $x> 0$ esiste un solo $y> 0$ tale che $y=x^2$.
+> Data una funzione $f\colon\mathbb{R}\to\mathbb{R},x\mapsto x^2$, essa non è né iniettiva, né suriettiva, ma può diventare biettiva [restringendo](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione-restrizione) il suo dominio ai numeri non-negativi $\{ x \in \mathbb{R} \mid x \ge 0 \}$ e pensandola con codominio $\{ x \in \mathbb{R} \mid x \ge 0 \}$ (se il codominio fosse $\mathbb{R}$, allora non potrebbe essere suriettiva, in quanto non ci sono numeri che, elevati alla seconda, danno numeri negativi). In questo modo, per ogni numero reale $x> 0$ esiste un solo $y> 0$ tale che $y=x^2$.
 
 > [!esempio]- Esempio: biettività della funzione $\color{#7F7FFF} f\colon A\times B\to B\times A,(a,b)\mapsto(b,a)$
 > La funzione $f\colon A\times B\to B\times A,(a,b)\mapsto(b,a)$ è una biezione. Infatti, ogni coppia $(b,a)\in B\times A$ è immagine solo di una coppia $(a,b)\in A \times B$.
@@ -248,7 +248,7 @@ suriezione se e solo se f -1(b) \ne \emptyset per ogni b \in B
 > 
 > > [!dimostrazione]- Dimostrazione
 > > 
-> > 1. La condizione che esista un elemento $a\in f^{-1}(b)$ (cioè che $|f^{-1}(b)|\ge1$) è equivalente, per la definizione di [controimmagine](Funzioni.md#^definizione-controimmagine), alla condizione che esista un $a \in A$ tale che $f(a)=b$.
+> > 1. La condizione che esista un elemento $a\in f^{-1}(b)$ (cioè che $|f^{-1}(b)|\ge1$) è equivalente, per la definizione di [controimmagine](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-controimmagine), alla condizione che esista un $a \in A$ tale che $f(a)=b$.
 > > 
 > > 2. Si può dimostrare analogamente che $f$ non è iniettiva se e soltanto se esiste un $b\in B$ tale che $|f^{-1}(b)|\ge2$, in quanto in questo caso esistono due elementi distinti $a_1\ne a_2$ nel dominio tali che $f(a_1)=f(a_2)=b$.
 > > 
@@ -261,7 +261,7 @@ suriezione se e solo se f -1(b) \ne \emptyset per ogni b \in B
 
 > [!definizione]+ Definizione: funzione identicamente nulla
 > 
-> Una [funzione](Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ si dice **identicamente nulla** su un [insieme](Teoria%20degli%20insiemi.md#^definizione-insieme) $A \subseteq \text{dom}(f)$ se $f(x) = 0$ per ogni $x \in A$:
+> Una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ si dice **identicamente nulla** su un [insieme](Teoria%20degli%20insiemi.md#^definizione-insieme) $A \subseteq \text{dom}(f)$ se $f(x) = 0$ per ogni $x \in A$:
 > 
 > $$
 > \begin{array}{}
@@ -276,7 +276,7 @@ suriezione se e solo se f -1(b) \ne \emptyset per ogni b \in B
 
 > [!definizione]+ Definizione: funzione (strettamente) (de)crescente o monotona su un intervallo
 > 
-> Data una [funzione](Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e un intervallo%% link %% $I \subseteq \text{dom}(f)$:
+> Data una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e un intervallo%% link %% $I \subseteq \text{dom}(f)$:
 > - si dice **crescente su $I$** se
 > 	$$
 > 	\forall x_1, x_2 \in I . \left( x_1 < x_2 \implies f(x_1) \le f(x_2) \right) 
@@ -336,9 +336,9 @@ Osservazione 1.1.18 pag. 21 Dambrosio
 
 > [!proposizione]+ Proposizione sulla somma di funzioni monotone
 > 
-> Date due [funzioni](Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e $g \colon \text{dom}(g) \to \mathbb{R}$ e un intervallo%% link %% $I \subseteq \text{dom}(f) \cap \text{dom}(g)$:
-> - Se $f_1$ ed $f_2$ sono [(strettamente) crescenti](Proprietà%20delle%20funzioni.md#^definizione-funzione-strettamente-decrescente-o-monotona-su-un-intervallo) su $I$ allora la loro [somma](Funzioni.md#^definizione-somma-di-funzioni) $f_1 + f_2$ è [(strettamente) crescente](Proprietà%20delle%20funzioni.md#^definizione-funzione-strettamente-decrescente-o-monotona-su-un-intervallo) su $I$.
-> - Se $f_1$ ed $f_2$ sono [(strettamente) decrescenti](Proprietà%20delle%20funzioni.md#^definizione-funzione-strettamente-decrescente-o-monotona-su-un-intervallo) su $I$ allora la loro [somma](Funzioni.md#^definizione-somma-di-funzioni) $f_1 + f_2$ è [(strettamente) decrescente](Proprietà%20delle%20funzioni.md#^definizione-funzione-strettamente-decrescente-o-monotona-su-un-intervallo) su $I$.
+> Date due [funzioni](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e $g \colon \text{dom}(g) \to \mathbb{R}$ e un intervallo%% link %% $I \subseteq \text{dom}(f) \cap \text{dom}(g)$:
+> - Se $f_1$ ed $f_2$ sono [(strettamente) crescenti](Proprietà%20delle%20funzioni.md#^definizione-funzione-strettamente-decrescente-o-monotona-su-un-intervallo) su $I$ allora la loro [somma](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-somma-di-funzioni) $f_1 + f_2$ è [(strettamente) crescente](Proprietà%20delle%20funzioni.md#^definizione-funzione-strettamente-decrescente-o-monotona-su-un-intervallo) su $I$.
+> - Se $f_1$ ed $f_2$ sono [(strettamente) decrescenti](Proprietà%20delle%20funzioni.md#^definizione-funzione-strettamente-decrescente-o-monotona-su-un-intervallo) su $I$ allora la loro [somma](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-somma-di-funzioni) $f_1 + f_2$ è [(strettamente) decrescente](Proprietà%20delle%20funzioni.md#^definizione-funzione-strettamente-decrescente-o-monotona-su-un-intervallo) su $I$.
 
 %% 
 dimostrazione per esercizio
@@ -346,11 +346,11 @@ dimostrazione per esercizio
 
 # 8 - Concavità e convessità di funzioni
 
-Il concetto di _convessità e concavità_ di una [funzione](Funzioni.md#^definizione-funzione) è legato a quello dell'andamento del suo grafico%% Link %%: in modo simile a quanto avviene per gli angoli%% link alla concavità/covnessità di angoli %%, possiamo definire una [funzione](Funzioni.md#^definizione-funzione) come _concava_ quando il suo grafico%% Link %% ha la "pancia" verso l'alto (cioè graficamente si può rappresentare come "$\frown$"), mentre è _convessa_ quando il suo grafico%% link %% ha la "pancia" verso il basso (cioè "$\smile$").
+Il concetto di _convessità e concavità_ di una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) è legato a quello dell'andamento del suo grafico%% Link %%: in modo simile a quanto avviene per gli angoli%% link alla concavità/covnessità di angoli %%, possiamo definire una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) come _concava_ quando il suo grafico%% Link %% ha la "pancia" verso l'alto (cioè graficamente si può rappresentare come "$\frown$"), mentre è _convessa_ quando il suo grafico%% link %% ha la "pancia" verso il basso (cioè "$\smile$").
 
 Purtroppo però ci tocca definire questo concetto in termini rigorosamente matematici.
 
-Data una [funzione](Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e un intervallo%% link %% $I \subseteq \text{dom}(f)$, per ogni coppia di punti%% link %% $x_1, x_2 \in I$ con $x_1 < x_2$ indichiamo con $r_{1,2}$ la retta passante%% link %% per i punti%% link %% $(x_1, f(x_1))$ ed $(x_2, f(x_2))$: sappiamo%% link %% che essa ha equazione
+Data una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e un intervallo%% link %% $I \subseteq \text{dom}(f)$, per ogni coppia di punti%% link %% $x_1, x_2 \in I$ con $x_1 < x_2$ indichiamo con $r_{1,2}$ la retta passante%% link %% per i punti%% link %% $(x_1, f(x_1))$ ed $(x_2, f(x_2))$: sappiamo%% link %% che essa ha equazione
 
 $$
 \begin{align*}
@@ -361,7 +361,7 @@ $$
 
 (dove $\dfrac{\Delta f}{\Delta x}$ è ovviamente il [quoziente di Newton](Variazioni%20e%20quoziente%20di%20Newton.md#^definizione-quoziente-di-newton)).
 
-Ebbene, possiamo dire ora che la [funzione](Funzioni.md#^definizione-funzione) $f$ è _concava_ su $I$ se per ogni ogni coppia di punti%% link %% $x_1, x_2 \in I$ con $x_1 < x_2$ il grafico%% link %% di $f$ è "sopra" quello della retta%% link %% $r_{1,2}$ su tutto l'intervallo%% link %% $[x_1, x_2]$; analogamente, è _convessa_ su $I$ se per ogni ogni coppia di punti%% link %% $x_1, x_2 \in I$ con $x_1 < x_2$ il grafico%% link %% di $f$ è "sotto" quello della retta%% link %% $r_{1,2}$ su tutto l'intervallo%% link %% $[x_1, x_2]$.
+Ebbene, possiamo dire ora che la [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f$ è _concava_ su $I$ se per ogni ogni coppia di punti%% link %% $x_1, x_2 \in I$ con $x_1 < x_2$ il grafico%% link %% di $f$ è "sopra" quello della retta%% link %% $r_{1,2}$ su tutto l'intervallo%% link %% $[x_1, x_2]$; analogamente, è _convessa_ su $I$ se per ogni ogni coppia di punti%% link %% $x_1, x_2 \in I$ con $x_1 < x_2$ il grafico%% link %% di $f$ è "sotto" quello della retta%% link %% $r_{1,2}$ su tutto l'intervallo%% link %% $[x_1, x_2]$.
 
 %% 
 Mettere figure 1.26, 1.27 pag. 24 Dambrosio
@@ -371,7 +371,7 @@ La prossima definizione esprime matematicamente quanto abbiamo appena detto.
 
 > [!definizione]+ Definizione: funzione concava o convessa su un intervallo
 > 
-> Data una [funzione](Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e un intervallo%% link %% $I \subseteq \text{dom}(f)$:
+> Data una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e un intervallo%% link %% $I \subseteq \text{dom}(f)$:
 > - $f$ si dice **concava su $I$** se
 > 	$$
 > 	\forall x_1, x_2 \in I, \forall x \in [x_1, x_2] . \left( x_1 < x_2 \implies f(x_1) \ge f(x_2) + \dfrac{\Delta f}{\Delta x}(x - x_1) \right) 
@@ -384,7 +384,7 @@ La prossima definizione esprime matematicamente quanto abbiamo appena detto.
 
 > [!osservazione]+ Osservazione: funzione né concava né convessa
 > 
-> Una [funzione](Funzioni.md#^definizione-funzione) potrebbe non essere né [concava](Proprietà%20delle%20funzioni.md#^definizione-funzione-concava-o-convessa-su-un-intervallo) né [convessa](Proprietà%20delle%20funzioni.md#^definizione-funzione-concava-o-convessa-su-un-intervallo) su un intervallo%% link %%: per esempio, la [funzione](Funzioni.md#^definizione-funzione) $f(x) = \sin x$ non è né [concava](Proprietà%20delle%20funzioni.md#^definizione-funzione-concava-o-convessa-su-un-intervallo) né [convessa](Proprietà%20delle%20funzioni.md#^definizione-funzione-concava-o-convessa-su-un-intervallo) sull'intervallo%% link %% $[-3,3]$, però è [concava](Proprietà%20delle%20funzioni.md#^definizione-funzione-concava-o-convessa-su-un-intervallo) in $[0, \pi]$ e [convessa](Proprietà%20delle%20funzioni.md#^definizione-funzione-concava-o-convessa-su-un-intervallo) in $[-\pi, 0]$.
+> Una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) potrebbe non essere né [concava](Proprietà%20delle%20funzioni.md#^definizione-funzione-concava-o-convessa-su-un-intervallo) né [convessa](Proprietà%20delle%20funzioni.md#^definizione-funzione-concava-o-convessa-su-un-intervallo) su un intervallo%% link %%: per esempio, la [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f(x) = \sin x$ non è né [concava](Proprietà%20delle%20funzioni.md#^definizione-funzione-concava-o-convessa-su-un-intervallo) né [convessa](Proprietà%20delle%20funzioni.md#^definizione-funzione-concava-o-convessa-su-un-intervallo) sull'intervallo%% link %% $[-3,3]$, però è [concava](Proprietà%20delle%20funzioni.md#^definizione-funzione-concava-o-convessa-su-un-intervallo) in $[0, \pi]$ e [convessa](Proprietà%20delle%20funzioni.md#^definizione-funzione-concava-o-convessa-su-un-intervallo) in $[-\pi, 0]$.
 
 %% 
 grafico della funzione nell'osservazione

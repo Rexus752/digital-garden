@@ -9,7 +9,7 @@
 
 > [!teorema]+ Teorema di limitatezza locale
 > 
-> Data una [funzione](Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R} \cup \{ \pm \infty \}$ per $\text{dom}(f)$, se esiste un [limite](Limiti.md#^definizione-limite)
+> Data una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R} \cup \{ \pm \infty \}$ per $\text{dom}(f)$, se esiste un [limite](Limiti.md#^definizione-limite)
 > 
 > $$
 > \lim_{x \to x_0} f(x) = l \in \mathbb{R}
@@ -28,7 +28,7 @@ osservazioni 3.2 pag. 156 lancelotti
 
 > [!teorema]+ Teorema della permanenza del segno
 > 
-> Data una [funzione](Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R} \cup \{ \pm \infty \}$ per $\text{dom}(f)$, se esiste un [limite](Limiti.md#^definizione-limite)
+> Data una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R} \cup \{ \pm \infty \}$ per $\text{dom}(f)$, se esiste un [limite](Limiti.md#^definizione-limite)
 > 
 > $$
 > \lim_{x \to x_0} f(x) = l \in \mathbb{R} \cup \{ \pm \infty \}
@@ -51,7 +51,7 @@ osservazioni 3.2 pag. 156 lancelotti
 > 
 > vale $3$ che è positivo%% link %%. Ciò significa che, nelle vicinanze di $x = 0$, per esempio nell'[intorno](Topologia%20dei%20reali.md#^definizione-intorno-di-un-punto) $(-1,1)$, avremo che $f(x)$ assumerà valori strettamente positivi%% link %%: ciò è vero perché nell'[intorno](Topologia%20dei%20reali.md#^definizione-intorno-di-un-punto) $(-1,1)$ il valore di $f(x)$ varierà tra $(-1 + 3, 1 + 3) = (2, 4)$, ossia assumerà sempre valori strettamente positivi%% link %%.
 > 
-> Però attenzione: non è detto che la [funzione](Funzioni.md#^definizione-funzione) sia positiva%% link %% ovunque, magari per $x$ molto lontano da $x_0$ cambia segno (es. nell'[intorno](Topologia%20dei%20reali.md#^definizione-intorno-di-un-punto) $(-5,5)$ quando $x = -4$ avremo che $f(x) = -1$), cioè il [teorema](Proprietà%20locali%20delle%20funzioni%20continue.md#^teorema-della-permanenza-del-segno) garantisce il segno%% link %% solo vicino al punto%% Link %% $x_0$.
+> Però attenzione: non è detto che la [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) sia positiva%% link %% ovunque, magari per $x$ molto lontano da $x_0$ cambia segno (es. nell'[intorno](Topologia%20dei%20reali.md#^definizione-intorno-di-un-punto) $(-5,5)$ quando $x = -4$ avremo che $f(x) = -1$), cioè il [teorema](Proprietà%20locali%20delle%20funzioni%20continue.md#^teorema-della-permanenza-del-segno) garantisce il segno%% link %% solo vicino al punto%% Link %% $x_0$.
 
 %% 
 dimostrazione pag. 157 lancelotti
@@ -95,7 +95,7 @@ osservazioni 3.4 pag. 157 lancelotti
 
 > [!corollario]+ Corollario del teorema della permanenza del segno
 > 
-> Data una [funzione](Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R} \cup \{ \pm \infty \}$ per $\text{dom}(f)$, se esiste un [limite](Limiti.md#^definizione-limite)
+> Data una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R} \cup \{ \pm \infty \}$ per $\text{dom}(f)$, se esiste un [limite](Limiti.md#^definizione-limite)
 > 
 >  $$
 > \lim_{x \to x_0} f(x) = l \in \mathbb{R}
@@ -108,9 +108,9 @@ osservazioni 3.4 pag. 157 lancelotti
 
 > [!osservazione]+ Osservazione: significato del corollario del teorema della permanenza del segno
 > 
-> Questo [corollario](Proprietà%20locali%20delle%20funzioni%20continue.md#^corollario-del-teorema-della-permanenza-del-segno) è in un certo senso il "contrario" del [teorema della permanenza del segno](Proprietà%20locali%20delle%20funzioni%20continue.md#^teorema-della-permanenza-del-segno), perché qua anziché partire dal segno del [limite](Limiti.md#^definizione-limite) $l$ per dedurre il segno della [funzione](Funzioni.md#^definizione-funzione) $f(x)$ facciamo il contrario.
+> Questo [corollario](Proprietà%20locali%20delle%20funzioni%20continue.md#^corollario-del-teorema-della-permanenza-del-segno) è in un certo senso il "contrario" del [teorema della permanenza del segno](Proprietà%20locali%20delle%20funzioni%20continue.md#^teorema-della-permanenza-del-segno), perché qua anziché partire dal segno del [limite](Limiti.md#^definizione-limite) $l$ per dedurre il segno della [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f(x)$ facciamo il contrario.
 > 
-> In parole povere, se una [funzione](Funzioni.md#^definizione-funzione) è sempre (almeno nei dintorni di $x_0$) positiva%% link %%, allora anche il [limite](Limiti.md#^definizione-limite) sarà positivo%% link %%. Viceversa, se una [funzione](Funzioni.md#^definizione-funzione) è sempre (almeno nei dintorni di $x_0$) negativa%% link %%, allora anche il [limite](Limiti.md#^definizione-limite) sarà negativo%% link %%.
+> In parole povere, se una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) è sempre (almeno nei dintorni di $x_0$) positiva%% link %%, allora anche il [limite](Limiti.md#^definizione-limite) sarà positivo%% link %%. Viceversa, se una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) è sempre (almeno nei dintorni di $x_0$) negativa%% link %%, allora anche il [limite](Limiti.md#^definizione-limite) sarà negativo%% link %%.
 > 
 > Per esempio, il [limite](Limiti.md#^definizione-limite)
 > 

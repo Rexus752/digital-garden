@@ -11,7 +11,7 @@
 
 > [!definizione]+ Definizione: asintoto verticale
 > 
-> Data una [funzione](Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R}$ per $\text{dom}(f) \cap (x_0, + \infty)$, se
+> Data una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R}$ per $\text{dom}(f) \cap (x_0, + \infty)$, se
 > 
 > $$
 > \lim_{x \to x_0^+} f(x) = \pm \infty
@@ -19,7 +19,7 @@
 > 
 > allora la retta%% link %% $x = x_0$ è un **asintoto verticale destro per $f$**.
 > 
-> Data una [funzione](Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R}$ per $\text{dom}(f) \cap (-\infty, x_0)$, se
+> Data una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R}$ per $\text{dom}(f) \cap (-\infty, x_0)$, se
 > 
 > $$
 > \lim_{x \to x_0^-} f(x) = \pm \infty
@@ -42,7 +42,7 @@ esempio pag. 148 lancelotti
 
 > [!osservazione]+ Osservazione: multipli asintoti verticali per una stessa funzione
 > 
-> Una stessa [funzione](Funzioni.md#^definizione-funzione) $f$ può avere anche più di un [asintoto verticale](Asintoti%20verticali%20e%20orizzontali.md#^definizione-asintoto-verticale): per esempio, la [funzione](Funzioni.md#^definizione-funzione) $f(x) = \tan x$ ammette infiniti [asintoti verticali](Asintoti%20verticali%20e%20orizzontali.md#^definizione-asintoto-verticale) di equazione
+> Una stessa [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f$ può avere anche più di un [asintoto verticale](Asintoti%20verticali%20e%20orizzontali.md#^definizione-asintoto-verticale): per esempio, la [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f(x) = \tan x$ ammette infiniti [asintoti verticali](Asintoti%20verticali%20e%20orizzontali.md#^definizione-asintoto-verticale) di equazione
 > 
 > $$
 > \forall k \in \mathbb{Z} \left( x = \dfrac{\pi}{2} + k\pi \right) 
@@ -50,7 +50,7 @@ esempio pag. 148 lancelotti
 
 > [!attenzione]+ Attenzione: si può parlare di asintoti verticali solo con valori reali
 > 
-> Data una [funzione](Funzioni.md#^definizione-funzione) $f$, se
+> Data una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f$, se
 > 
 > $$
 > \lim_{x \to \pm \infty} f(x) = \pm \infty
@@ -62,7 +62,7 @@ esempio pag. 148 lancelotti
 
 > [!definizione]+ Definizione: asintoto orizzontale
 > 
-> Data una [funzione](Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ con $\text{dom}(f)$ illimitato superiormente%% link %%, se
+> Data una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ con $\text{dom}(f)$ illimitato superiormente%% link %%, se
 > 
 > $$
 > \lim_{x \to + \infty} f(x) = l \in \mathbb{R}
@@ -70,7 +70,7 @@ esempio pag. 148 lancelotti
 > 
 > allora la retta%% link %% $y = l$ è un **asintoto orizzontale destro per $f$**.
 > 
-> Data una [funzione](Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ con $\text{dom}(f)$ illimitato superiormente%% link %%, se
+> Data una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ con $\text{dom}(f)$ illimitato superiormente%% link %%, se
 > 
 > $$
 > \lim_{x \to - \infty} f(x) = l \in \mathbb{R}
@@ -95,7 +95,7 @@ esempi pag. 149 lancelotti
 
 > [!osservazione]+ Osservazione: un asintoto orizzontale destro/sinistro per funzione
 > 
-> Una [funzione](Funzioni.md#^definizione-funzione) $f$ può avere al massimo un [asintoto orizzontale destro](Asintoti%20verticali%20e%20orizzontali.md#^definizione-asintoto-orizzontale) e al massimo un [asintoto orizzontale sinistro](Asintoti%20verticali%20e%20orizzontali.md#^definizione-asintoto-orizzontale).
+> Una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f$ può avere al massimo un [asintoto orizzontale destro](Asintoti%20verticali%20e%20orizzontali.md#^definizione-asintoto-orizzontale) e al massimo un [asintoto orizzontale sinistro](Asintoti%20verticali%20e%20orizzontali.md#^definizione-asintoto-orizzontale).
 
 ---
 

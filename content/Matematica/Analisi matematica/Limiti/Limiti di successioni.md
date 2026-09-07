@@ -13,7 +13,7 @@ scegliere se adottare come notazione $(a_n)$ o $\{ a_n \}$
 
 > [!definizione]+ Definizione: successione
 > 
-> Una **successione** è una [funzione](Funzioni.md#^definizione-funzione) $a \colon \mathbb{N} \to \mathbb{R}$, denotata con "$(a_n)_{n \in \mathbb{N}}$" o "$\{ a_n \}_{n \in \mathbb{N}}$" (o, quando non c'è ambiguità di notazione, anche $(a_n)$ o $\{ a_n \}$), che associa a ogni numero naturale%% link %% $n \in \mathbb{N}$, detto **indice della successione**, un valore $a(n) \in \mathbb{R}$ denotato con "$a_n$" e detto **termine della successione**.
+> Una **successione** è una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $a \colon \mathbb{N} \to \mathbb{R}$, denotata con "$(a_n)_{n \in \mathbb{N}}$" o "$\{ a_n \}_{n \in \mathbb{N}}$" (o, quando non c'è ambiguità di notazione, anche $(a_n)$ o $\{ a_n \}$), che associa a ogni numero naturale%% link %% $n \in \mathbb{N}$, detto **indice della successione**, un valore $a(n) \in \mathbb{R}$ denotato con "$a_n$" e detto **termine della successione**.
 ^definizione-successione
 
 %%
@@ -32,7 +32,7 @@ Esempio di grafico della successione
 
 > [!osservazione]+ Osservazioni: successioni sono funzioni continue
 > 
-> Poiché una [successione](Limiti%20di%20successioni.md#^definizione-successione) è una [funzione](Funzioni.md#^definizione-funzione) definita su $\mathbb{N}$ o su un suo [sottoinsieme](Teoria%20degli%20insiemi.md#^definizione-sottoinsieme) illimitato superiormente%% Link %%, il dominio%% Link %% della [successione](Limiti%20di%20successioni.md#^definizione-successione) è un [insieme](Teoria%20degli%20insiemi.md#^definizione-insieme) discreto%% link %%, cioè costituito solo da [punti isolati](Topologia%20dei%20reali.md#^definizione-punto-isolato)%% perché? %%, pertanto la [successione](Limiti%20di%20successioni.md#^definizione-successione) è una [funzione continua](Funzioni%20continue.md#^definizione-funzione-continua)%% perché? %%.
+> Poiché una [successione](Limiti%20di%20successioni.md#^definizione-successione) è una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) definita su $\mathbb{N}$ o su un suo [sottoinsieme](Teoria%20degli%20insiemi.md#^definizione-sottoinsieme) illimitato superiormente%% Link %%, il dominio%% Link %% della [successione](Limiti%20di%20successioni.md#^definizione-successione) è un [insieme](Teoria%20degli%20insiemi.md#^definizione-insieme) discreto%% link %%, cioè costituito solo da [punti isolati](Topologia%20dei%20reali.md#^definizione-punto-isolato)%% perché? %%, pertanto la [successione](Limiti%20di%20successioni.md#^definizione-successione) è una [funzione continua](Funzioni%20continue.md#^definizione-funzione-continua)%% perché? %%.
 
 > [!osservazione]+ Osservazione: possibili applicazioni delle successioni
 > 
@@ -72,7 +72,7 @@ anche se il termine $c_2$ non esiste e quindi il suo dominio non è più $\mathb
 > [!notazione]+ Notazione: successione definita con una relazione ricorsiva
 > 
 > Una [successione](Limiti%20di%20successioni.md#^definizione-successione) si può definire attraverso una **relazione ricorsiva** in cui si esprime ricorsivamente%% link %%%% quando aggiungerò la ricorsione sul Giardino, mettere riferimento alla pagina Facebook dei fan delle strutture ricorsive %% il valore del [termine](Limiti%20di%20successioni.md#^definizione-successione) $n$-esimo, in particolare:
-> - si esprime il valore del [termine](Limiti%20di%20successioni.md#^definizione-successione) $n$-esimo rispetto a $k \ge 1$ [termini](Limiti%20di%20successioni.md#^definizione-successione) che lo precedono, i quali sono parametri di una [funzione](Funzioni.md#^definizione-funzione) $g(x_{n-1}, x_{n-2}, \ldots, x_{n-k})$ detta **relazione ricorsiva** e
+> - si esprime il valore del [termine](Limiti%20di%20successioni.md#^definizione-successione) $n$-esimo rispetto a $k \ge 1$ [termini](Limiti%20di%20successioni.md#^definizione-successione) che lo precedono, i quali sono parametri di una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $g(x_{n-1}, x_{n-2}, \ldots, x_{n-k})$ detta **relazione ricorsiva** e
 > - si esprime il valore iniziale dei primi $k$ [termini](Limiti%20di%20successioni.md#^definizione-successione) della [successione](Limiti%20di%20successioni.md#^definizione-successione) $a_0, \ldots, a_{k-1}$:
 > 
 > $$
@@ -132,7 +132,7 @@ chi è Fibonacci?
 > 
 > Possiamo quindi fare un parallelismo con i tipi di accesso alla memoria%% link ai tipi di accesso alla memoria %% in informatica%% link, oppure mettere qualcosa di più specifico di "informatica" %%, in cui la [notazione con la formula esplicita](Limiti%20di%20successioni.md#^notazione-successione-definita-con-una-formula-esplicita) ci permette di fare un _accesso casuale_%% link (oppure _accesso diretto_?) %% all'$n$-esimo [termine](Limiti%20di%20successioni.md#^definizione-successione), mentre la [notazione con la relazione ricorsiva](Limiti%20di%20successioni.md#^notazione-successione-definita-con-una-relazione-ricorsiva) ci permette di fare un _accesso sequenziale_.
 
-Dal momento che le [successioni](Limiti%20di%20successioni.md#^definizione-successione) sono in realtà [funzioni](Funzioni.md#^definizione-funzione), anche a loro si applicano concetti come quello di [monotonia](Proprietà%20delle%20funzioni.md#^definizione-funzione-strettamente-decrescente-o-monotona-su-un-intervallo) e [limitatezza](Proprietà%20delle%20funzioni.md#^definizione-funzioni-limitate).
+Dal momento che le [successioni](Limiti%20di%20successioni.md#^definizione-successione) sono in realtà [funzioni](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione), anche a loro si applicano concetti come quello di [monotonia](Proprietà%20delle%20funzioni.md#^definizione-funzione-strettamente-decrescente-o-monotona-su-un-intervallo) e [limitatezza](Proprietà%20delle%20funzioni.md#^definizione-funzioni-limitate).
 
 > [!definizione]+ Definizione: successione monotona
 > 
@@ -176,7 +176,7 @@ Dal momento che le [successioni](Limiti%20di%20successioni.md#^definizione-succe
 
 # 1 - Limiti di successioni
 
-Una [successione](Limiti%20di%20successioni.md#^definizione-successione), essendo illimitata superiormente%% link %%, si ha che $+\infty$ è un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) per il suo [dominio](Funzioni.md#^definizione-dominio-e-codominio-della-funzione)%% perché? %%. È quindi l'unico [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione)%% perché? %%. Ne segue che per le [successioni](Limiti%20di%20successioni.md#^definizione-successione) l'unico [limite](Limiti.md#^definizione-limite) che ha senso calcolare è quello per la variabile $n$ che tende a $+ \infty$.
+Una [successione](Limiti%20di%20successioni.md#^definizione-successione), essendo illimitata superiormente%% link %%, si ha che $+\infty$ è un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) per il suo [dominio](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-dominio-e-codominio-della-funzione)%% perché? %%. È quindi l'unico [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione)%% perché? %%. Ne segue che per le [successioni](Limiti%20di%20successioni.md#^definizione-successione) l'unico [limite](Limiti.md#^definizione-limite) che ha senso calcolare è quello per la variabile $n$ che tende a $+ \infty$.
 
 Richiamiamo la [definizione di _limite_](Limiti.md#^definizione-limite), adattandola alle [successioni](Limiti%20di%20successioni.md#^definizione-successione), per $n \to + \infty$.
 
@@ -293,7 +293,7 @@ modificare anche qua le definizioni formali nel caso
 
 > [!osservazione]+ Osservazione: validità dei teoremi dei limiti nei limiti di successioni
 > 
-> Poiché i [limiti di successioni](Limiti%20di%20successioni.md#^definizione-limite-di-successione) non sono altro che [limiti](Limiti.md#^definizione-limite) di [funzioni](Funzioni.md#^definizione-funzione) per $n \to + \infty$, per essi valgono tutti i teoremi%% link %% e le considerazioni fatte per questi ultimi, in particolare:
+> Poiché i [limiti di successioni](Limiti%20di%20successioni.md#^definizione-limite-di-successione) non sono altro che [limiti](Limiti.md#^definizione-limite) di [funzioni](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) per $n \to + \infty$, per essi valgono tutti i teoremi%% link %% e le considerazioni fatte per questi ultimi, in particolare:
 > - il [teorema di unicità del limite](Limiti.md#^teorema-di-unicita-del-limite),
 > - il [teorema di limitatezza locale](Proprietà%20locali%20delle%20funzioni%20continue.md#^teorema-di-limitatezza-locale),
 > - il [teorema della permanenza del segno](Proprietà%20locali%20delle%20funzioni%20continue.md#^teorema-della-permanenza-del-segno) e le sue conseguenze,
@@ -323,7 +323,7 @@ Il prossimo teorema%% link %% lega tra loro le nozioni di [limite di funzione](L
 
 > [!teorema]+ Teorema di caratterizzazione del limite
 > 
-> Data una [funzione](Funzioni.md#^definizione-funzione) $f \colon A \subseteq \mathbb{R} \to \mathbb{R}$ (con $A \ne \emptyset$), un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R} \cup \{ \pm \infty \}$ per $A$ e un valore%% link %% $l \in \mathbb{R} \cup \{ \pm \infty \}$, allora $\displaystyle\lim_{x \to x_0} f(x) = l$ se e solo se, per ogni [successione](Limiti%20di%20successioni.md#^definizione-successione) $(x_n)$ in $A \setminus \{ x_0 \}$ che tende a $x_0$ si ha che $\displaystyle\lim_n f(x_n) = l$:
+> Data una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon A \subseteq \mathbb{R} \to \mathbb{R}$ (con $A \ne \emptyset$), un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R} \cup \{ \pm \infty \}$ per $A$ e un valore%% link %% $l \in \mathbb{R} \cup \{ \pm \infty \}$, allora $\displaystyle\lim_{x \to x_0} f(x) = l$ se e solo se, per ogni [successione](Limiti%20di%20successioni.md#^definizione-successione) $(x_n)$ in $A \setminus \{ x_0 \}$ che tende a $x_0$ si ha che $\displaystyle\lim_n f(x_n) = l$:
 > 
 > $$
 > \begin{array}{}
@@ -394,7 +394,7 @@ Se da una [successione](Limiti%20di%20successioni.md#^definizione-successione) s
 > \end{array}
 > $$
 > 
-> Cioè, quello che stiamo facendo è selezionare tramite la [funzione](Funzioni.md#^definizione-funzione) $\varphi$ gli indici dei [termini](Limiti%20di%20successioni.md#^definizione-successione) di $(a_n)$ che vogliamo associare a $(b_n)$.
+> Cioè, quello che stiamo facendo è selezionare tramite la [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $\varphi$ gli indici dei [termini](Limiti%20di%20successioni.md#^definizione-successione) di $(a_n)$ che vogliamo associare a $(b_n)$.
 > 
 > Una [sottosuccessione](Limiti%20di%20successioni.md#^definizione-sottosuccessione) di una [successione](Limiti%20di%20successioni.md#^definizione-successione) è quindi una [successione](Limiti%20di%20successioni.md#^definizione-successione) i cui [termini](Limiti%20di%20successioni.md#^definizione-successione) sono selezionati tra quelli della [successione](Limiti%20di%20successioni.md#^definizione-successione) di partenza, in modo che se un [elemento](Teoria%20degli%20insiemi.md#^definizione-insieme) è selezionato (per esempio $a_2$), allora i successivi sono selezionati tra quelli che hanno un indice maggiore di quest'ultimo (cioè $a_4$, $a_5$, $a_{13}$, ecc.).
 
@@ -558,7 +558,7 @@ Osservazione: perché viene detto punto fisso o punto di equilibrio
 
 > [!proposizione]+ Proposizione: legame tra la convergenza di una successione e il punto fisso
 > 
-> Data una [funzione](Funzioni.md#^definizione-funzione) $g \colon \mathbb{R} \to \mathbb{R}$ [continua](Funzioni%20continue.md#^definizione-funzione-continua) e una [successione](Limiti%20di%20successioni.md#^definizione-successione) $\{ x_n \}$ [definita con la relazione ricorsiva](Limiti%20di%20successioni.md#^notazione-successione-definita-con-una-relazione-ricorsiva) $g$, se esiste il [limite](Limiti%20di%20successioni.md#^definizione-limite-di-successione)
+> Data una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $g \colon \mathbb{R} \to \mathbb{R}$ [continua](Funzioni%20continue.md#^definizione-funzione-continua) e una [successione](Limiti%20di%20successioni.md#^definizione-successione) $\{ x_n \}$ [definita con la relazione ricorsiva](Limiti%20di%20successioni.md#^notazione-successione-definita-con-una-relazione-ricorsiva) $g$, se esiste il [limite](Limiti%20di%20successioni.md#^definizione-limite-di-successione)
 > 
 > $$
 > \lim_n x_n = x^\star \in \mathbb{R}

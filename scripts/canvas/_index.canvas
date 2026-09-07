@@ -100,7 +100,7 @@
 		{"id":"eb156b4a4b512fcd","type":"file","file":"content/_icons/Lambda-calcolo.svg","x":2139,"y":-399,"width":61,"height":61,"color":"#ff7f7f"},
 		{"id":"4f62dc6f972ff5c0","type":"file","file":"content/_icons/Analisi matematica.svg","x":2120,"y":71,"width":60,"height":60,"color":"#ffff7f"},
 		{"id":"98e7eb8a6a4b285a","type":"text","text":"# [Paradigma dichiarativo](Paradigma%20dichiarativo.md)","x":1570,"y":-620,"width":340,"height":60},
-		{"id":"9ed0991795849d11","type":"text","text":"# [Funzioni](Funzioni.md)","x":1740,"y":-140,"width":160,"height":60,"color":"#7f7fff"},
+		{"id":"9ed0991795849d11","type":"text","text":"# [Funzioni](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md)","x":1740,"y":-140,"width":160,"height":60,"color":"#7f7fff"},
 		{"id":"f30e8930d39f094c","type":"file","file":"content/_icons/Funzioni.svg","x":1680,"y":-140,"width":60,"height":60,"color":"#7f7fff"},
 		{"id":"43edb075db17253f","type":"text","text":"# [Relazioni tra insiemi](Relazioni%20tra%20insiemi.md)","x":1200,"y":-140,"width":303,"height":60,"color":"#ffff7f"},
 		{"id":"ebb1abe00ee77684","type":"text","text":"# [Invertibilità di funzioni](Invertibilità%20di%20funzioni.md)","x":3146,"y":420,"width":325,"height":60},

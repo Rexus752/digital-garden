@@ -7,13 +7,13 @@
 
 ---
 
-In questa nota approfondiamo alcuni costrutti sintattici fighi che [Haskell](Haskell.md#^definizione-haskell) ha per scrivere le proprie [funzioni](Sintassi%20di%20base%20di%20Haskell.md#^definizione-funzione-in-haskell), tra cui il pattern matching%% link %%.
+In questa nota approfondiamo alcuni costrutti sintattici fighi che [Haskell](Informatica/Lambda-calcolo/Haskell/Haskell.md#^definizione-haskell) ha per scrivere le proprie [funzioni](Informatica/Lambda-calcolo/Haskell/Sintassi%20di%20base%20di%20Haskell.md#^definizione-funzione-in-haskell), tra cui il pattern matching%% link %%.
 
 # 1 - Pattern matching
 
 > [!definizione]+ Definizione: pattern matching
 > 
-> In [Haskell](Haskell.md#^definizione-haskell) il **pattern matching** è un costrutto sintattico%% link %% usato nel [corpo di una funzione](Sintassi%20di%20base%20di%20Haskell.md#^definizione-funzione-in-haskell) per selezionare un ramo di esecuzione%% link %% della [funzione](Sintassi%20di%20base%20di%20Haskell.md#^definizione-funzione-in-haskell) a seconda della forma dell'argomento%% link %% (detto **pattern**) che le viene passato:
+> In [Haskell](Informatica/Lambda-calcolo/Haskell/Haskell.md#^definizione-haskell) il **pattern matching** è un costrutto sintattico%% link %% usato nel [corpo di una funzione](Informatica/Lambda-calcolo/Haskell/Sintassi%20di%20base%20di%20Haskell.md#^definizione-funzione-in-haskell) per selezionare un ramo di esecuzione%% link %% della [funzione](Informatica/Lambda-calcolo/Haskell/Sintassi%20di%20base%20di%20Haskell.md#^definizione-funzione-in-haskell) a seconda della forma dell'argomento%% link %% (detto **pattern**) che le viene passato:
 > 
 > ```haskell
 > describe :: Int -> String
@@ -23,7 +23,7 @@ In questa nota approfondiamo alcuni costrutti sintattici fighi che [Haskell](Has
 > describe n = "something else"
 > ```
 > 
-> I **pattern** vengono controllati dall'alto verso il basso e viene scelto il primo ramo di esecuzione%% link %% che corrisponde al valore ricevuto. Possono essere valori costanti%% Link %%, variabili%% link %%, pattern che destrutturano tipi composti%% link %% (come le [liste](Sintassi%20di%20base%20di%20Haskell.md#^definizione-lista-in-haskell) e le [tuple](Sintassi%20di%20base%20di%20Haskell.md#^definizione-tupla-in-haskell)) oppure il **pattern wildcard `_`** che corrisponde a un valore%% link %% qualsiasi:
+> I **pattern** vengono controllati dall'alto verso il basso e viene scelto il primo ramo di esecuzione%% link %% che corrisponde al valore ricevuto. Possono essere valori costanti%% Link %%, variabili%% link %%, pattern che destrutturano tipi composti%% link %% (come le [liste](Informatica/Lambda-calcolo/Haskell/Sintassi%20di%20base%20di%20Haskell.md#^definizione-lista-in-haskell) e le [tuple](Informatica/Lambda-calcolo/Haskell/Sintassi%20di%20base%20di%20Haskell.md#^definizione-tupla-in-haskell)) oppure il **pattern wildcard `_`** che corrisponde a un valore%% link %% qualsiasi:
 > 
 > ```haskell
 > testa :: [a] -> a
@@ -237,7 +237,7 @@ Whereas patterns are a way of making sure a value conforms to some form and deco
 
 > [!definizione]+ Definizione: guardia
 > 
-> In [Haskell](Haskell.md#^definizione-haskell) la **guardia** è un costrutto sintattico%% link %% usato nel [corpo di una funzione](Sintassi%20di%20base%20di%20Haskell.md#^definizione-funzione-in-haskell) per selezionare un ramo di esecuzione%% link %% della [funzione](Sintassi%20di%20base%20di%20Haskell.md#^definizione-funzione-in-haskell) a seconda del valore di espressioni booleane%% link %% in cui vengono valutati i valori degli argomenti%% link %%:
+> In [Haskell](Informatica/Lambda-calcolo/Haskell/Haskell.md#^definizione-haskell) la **guardia** è un costrutto sintattico%% link %% usato nel [corpo di una funzione](Informatica/Lambda-calcolo/Haskell/Sintassi%20di%20base%20di%20Haskell.md#^definizione-funzione-in-haskell) per selezionare un ramo di esecuzione%% link %% della [funzione](Informatica/Lambda-calcolo/Haskell/Sintassi%20di%20base%20di%20Haskell.md#^definizione-funzione-in-haskell) a seconda del valore di espressioni booleane%% link %% in cui vengono valutati i valori degli argomenti%% link %%:
 > 
 > ```haskell
 > classificaVoto :: Int -> String
@@ -384,7 +384,7 @@ The names we define in the `where` block of a function are only visible to that 
 
 > [!definizione]+ Definizione: `where`
 > 
-> In [Haskell](Haskell.md#^definizione-haskell) **`where`** è un costrutto sintattico%% link %% usato nel [corpo di una funzione](Sintassi%20di%20base%20di%20Haskell.md#^definizione-funzione-in-haskell) per definire variabili%% link %% o [funzioni](Sintassi%20di%20base%20di%20Haskell.md#^definizione-funzione-in-haskell) locali visibili in tutto il corpo della funzione in cui sono dichiarate.
+> In [Haskell](Informatica/Lambda-calcolo/Haskell/Haskell.md#^definizione-haskell) **`where`** è un costrutto sintattico%% link %% usato nel [](Informatica/Lambda-calcolo/Haskell/Sintassi%20di%20base%20di%20Haskell.md#^definizione-funzione-in-haskell) per definire variabili%% link %% o [](Informatica/Lambda-calcolo/Haskell/Sintassi%20di%20base%20di%20Haskell.md#^definizione-funzione-in-haskell) locali visibili in tutto il corpo della funzione in cui sono dichiarate.
 ^definizione-where
 
 `where` bindings aren’t shared across function bodies of different patterns. If you want several patterns of one function to access some shared name, you have to define it globally.
@@ -439,7 +439,7 @@ cylinder r h =
 
 > [!definizione]+ Definizione: `let in`
 > 
-> In [Haskell](Haskell.md#^definizione-haskell) **`let in`** è un costrutto sintattico%% link %% usato per definire variabili%% link %% o funzioni%% link %% locali visibili esclusivamente nell'espressione%% link %% che segue la parola chiave `in`.
+> In [Haskell](Informatica/Lambda-calcolo/Haskell/Haskell.md#^definizione-haskell) **`let in`** è un costrutto sintattico%% link %% usato per definire variabili%% link %% o funzioni%% link %% locali visibili esclusivamente nell'espressione%% link %% che segue la parola chiave `in`.
 
 %% 
 esempio nella definizione

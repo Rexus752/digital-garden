@@ -15,16 +15,16 @@ Negli anni Venti e Trenta del Novecento, logici e matematici come Hilbert, Göde
 
 Per rispondere, occorreva chiarire cosa significhi **calcolare in modo puramente meccanico**: come descrivere formalmente una sequenza di operazioni che, dato un valore iniziale, produca un risultato.
 
-Il matematico statunitense Alonzo Church sviluppò allora un formalismo minimale che prendeva come unica base il concetto di [funzione matematica](Funzioni.md#^definizione-funzione), in quanto una [funzione](Funzioni.md#^definizione-funzione) può essere rappresentata come un [processo che, dato un certo input, restituisce un certo output](Funzioni.md#^osservazione-funzione-come-processo-con-input-e-output). La sua intuizione fu di considerare le [funzioni](Funzioni.md#^definizione-funzione) non più soltanto come [relazioni](Relazioni%20tra%20insiemi.md#^definizione-relazione-n-aria) immutabili tra [insiemi](Teoria%20degli%20insiemi.md#^definizione-teoria-degli-insiemi), ma come oggetti matematici manipolabili, su cui fondare una nuova branca della matematica: ecco quindi la nascita del [$\lambda$-calcolo](Lambda-calcolo.md#^definizione-lambda-calcolo).
+Il matematico statunitense Alonzo Church sviluppò allora un formalismo minimale che prendeva come unica base il concetto di [funzione matematica](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione), in quanto una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) può essere rappresentata come un [processo che, dato un certo input, restituisce un certo output](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^osservazione-funzione-come-processo-con-input-e-output). La sua intuizione fu di considerare le [funzioni](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) non più soltanto come [relazioni](Relazioni%20tra%20insiemi.md#^definizione-relazione-n-aria) immutabili tra [insiemi](Teoria%20degli%20insiemi.md#^definizione-teoria-degli-insiemi), ma come oggetti matematici manipolabili, su cui fondare una nuova branca della matematica: ecco quindi la nascita del [$\lambda$-calcolo](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-lambda-calcolo).
 
 > [!definizione]+ Definizione: $\color{#FF7FFF} \lambda$-calcolo
 > 
-> Il **$\lambda$-calcolo** è un sistema formale formulato a partire dagli anni Trenta dal matematico americano Alonzo Church, sviluppato per esprimere formalmente il procedimento di computazione di una [funzione matematica](Funzioni.md#^definizione-funzione) espressa per mezzo di un linguaggio formale i cui [termini](Lambda-calcolo.md#^definizione-termine) possono essere usati per rappresentare calcoli in modo astratto.
+> Il **$\lambda$-calcolo** è un sistema formale formulato a partire dagli anni Trenta dal matematico americano Alonzo Church, sviluppato per esprimere formalmente il procedimento di computazione di una [funzione matematica](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) espressa per mezzo di un linguaggio formale i cui [termini](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-termine) possono essere usati per rappresentare calcoli in modo astratto.
 ^definizione-lambda-calcolo
 
-Il [$\lambda$-calcolo](Lambda-calcolo.md#^definizione-lambda-calcolo) essenzialmente permette di "calcolare" con le [funzioni matematiche](Funzioni.md#^definizione-funzione) così come è possibile calcolare normalmente con i numeri: avendo anticipato così il concetto di _linguaggio di programmazione_%% link %% prima dell'avvento stesso dei computer (che arriveranno solo negli anni Quaranta), il [$\lambda$-calcolo](Lambda-calcolo.md#^definizione-lambda-calcolo) viene considerato uno dei primi linguaggi di programmazione%% link %% della storia ma utilizzabile solo "sulla carta" (perché, appunto, non esistevano ancora i computer lol).
+Il [$\lambda$-calcolo](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-lambda-calcolo) essenzialmente permette di "calcolare" con le [funzioni matematiche](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) così come è possibile calcolare normalmente con i numeri: avendo anticipato così il concetto di _linguaggio di programmazione_%% link %% prima dell'avvento stesso dei computer (che arriveranno solo negli anni Quaranta), il [$\lambda$-calcolo](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-lambda-calcolo) viene considerato uno dei primi linguaggi di programmazione%% link %% della storia ma utilizzabile solo "sulla carta" (perché, appunto, non esistevano ancora i computer lol).
 
-Dal [$\lambda$-calcolo](Lambda-calcolo.md#^definizione-lambda-calcolo), inoltre, nasce uno dei primi paradigmi di programmazione%% link %% della storia: quello _funzionale_%% link %%, che prende il nome proprio dal concetto delle [funzioni matematiche](Funzioni.md#^definizione-funzione) su cui è costruito.
+Dal [$\lambda$-calcolo](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-lambda-calcolo), inoltre, nasce uno dei primi paradigmi di programmazione%% link %% della storia: quello _funzionale_%% link %%, che prende il nome proprio dal concetto delle [funzioni matematiche](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) su cui è costruito.
 
 Per intenderci, guarda questa espressione apparentemente senza senso:
 
@@ -36,19 +36,19 @@ $$
 \end{array}
 $$
 
-Sentiti liber* di crederci o no, ma questa espressione, che chiameremo [_termine_](Lambda-calcolo.md#^definizione-termine), rappresenta il "codice" in [$\lambda$-calcolo](Lambda-calcolo.md#^definizione-lambda-calcolo) per calcolare il fattoriale%% link %% di un numero naturale%% link %% $n$ qualsiasi.
+Sentiti liber* di crederci o no, ma questa espressione, che chiameremo [_termine_](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-termine), rappresenta il "codice" in [$\lambda$-calcolo](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-lambda-calcolo) per calcolare il fattoriale%% link %% di un numero naturale%% link %% $n$ qualsiasi.
 
-Ma come fa a essere questo ammasso di lettere casuali un codice? Se sei curios* di saperlo, benvenut* nel magico mondo del [$\lambda$-calcolo](Lambda-calcolo.md#^definizione-lambda-calcolo).
+Ma come fa a essere questo ammasso di lettere casuali un codice? Se sei curios* di saperlo, benvenut* nel magico mondo del [$\lambda$-calcolo](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-lambda-calcolo).
 
 (_Attent*! Stai per finire in un rabbit-hole da cui potresti non uscirne più. Io ti ho avvertit*..._)
 
 # 1 - Termini del $\lambda$-calcolo
 
-Prima di arrivare a capire cosa sono gli oggetti principali con cui opera il [$\lambda$-calcolo](Lambda-calcolo.md#^definizione-lambda-calcolo), cioè i [termini](Lambda-calcolo.md#^definizione-termine), vediamo come sono nati.
+Prima di arrivare a capire cosa sono gli oggetti principali con cui opera il [$\lambda$-calcolo](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-lambda-calcolo), cioè i [termini](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-termine), vediamo come sono nati.
 
 ## 1.1 - Astrazioni
 
-Durante il processo di definizione del [$\lambda$-calcolo](Lambda-calcolo.md#^definizione-lambda-calcolo), Alonzo Church decise in primis di modificare la notazione classica della definizione di una [funzione](Funzioni.md#^definizione-funzione):
+Durante il processo di definizione del [$\lambda$-calcolo](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-lambda-calcolo), Alonzo Church decise in primis di modificare la notazione classica della definizione di una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione):
 
 $$
 \begin{align*}
@@ -57,19 +57,19 @@ f \colon & A \to B \\
 \end{align*}
 $$
 
-Il signor Church, per rendere la notazione più scorrevole e, soprattutto, il più astratta possibile (in modo da poterci fare operazioni più comodamente), scelse di evitare di indicare per ogni [funzione](Funzioni.md#^definizione-funzione) il suo nome (in questo caso $f$) e gli [insiemi](Teoria%20degli%20insiemi.md#^definizione-insieme) posti in [relazione](Relazioni%20tra%20insiemi.md#^definizione-relazione-n-aria) ($A$ e $B$), valorizzando in particolare proprio la trasformazione che avviene grazie alla [funzione](Funzioni.md#^definizione-funzione) ($a \mapsto b$).
+Il signor Church, per rendere la notazione più scorrevole e, soprattutto, il più astratta possibile (in modo da poterci fare operazioni più comodamente), scelse di evitare di indicare per ogni [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) il suo nome (in questo caso $f$) e gli [insiemi](Teoria%20degli%20insiemi.md#^definizione-insieme) posti in [relazione](Relazioni%20tra%20insiemi.md#^definizione-relazione-n-aria) ($A$ e $B$), valorizzando in particolare proprio la trasformazione che avviene grazie alla [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) ($a \mapsto b$).
 
-La nuova notazione di Church rappresenta le [funzioni](Funzioni.md#^definizione-funzione) introducendole con un $\lambda$ (da qui il nome del [$\lambda$-calcolo](Lambda-calcolo.md#^definizione-lambda-calcolo)) per indicare l'inizio della definizione di una [funzione](Funzioni.md#^definizione-funzione), seguito dalle due variabili separate da un punto:
+La nuova notazione di Church rappresenta le [funzioni](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) introducendole con un $\lambda$ (da qui il nome del [$\lambda$-calcolo](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-lambda-calcolo)) per indicare l'inizio della definizione di una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione), seguito dalle due variabili separate da un punto:
 
 $$
 \lambda a.b
 $$
 
-Questo modo di definire "astrattamente" una [funzione](Funzioni.md#^definizione-funzione) viene detto [_astrazione_](Lambda-calcolo.md#^definizione-astrazione).
+Questo modo di definire "astrattamente" una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) viene detto [_astrazione_](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-astrazione).
 
 > [!definizione]+ Definizione: astrazione
 > 
-> Nel [$\lambda$-calcolo](Lambda-calcolo.md#^definizione-lambda-calcolo), un'**astrazione** (anche detta **$\lambda$-astrazione** o, nell'ambito del [$\lambda$-calcolo](Lambda-calcolo.md#^definizione-lambda-calcolo), chiamata anche semplicemente **funzione**) è una definizione di una [funzione](Funzioni.md#^definizione-funzione) anonima, cioè una funzione che non ha un nome ma è identificata direttamente dalla sua regola di trasformazione.
+> Nel [$\lambda$-calcolo](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-lambda-calcolo), un'**astrazione** (anche detta **$\lambda$-astrazione** o, nell'ambito del [$\lambda$-calcolo](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-lambda-calcolo), chiamata anche semplicemente **funzione**) è una definizione di una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) anonima, cioè una funzione che non ha un nome ma è identificata direttamente dalla sua regola di trasformazione.
 > 
 > Un'**astrazione** ha la forma:
 > 
@@ -79,8 +79,8 @@ Questo modo di definire "astrattamente" una [funzione](Funzioni.md#^definizione
 > 
 > dove:
 > 
-> - $x$ è una variabile%% link %% che rappresenta l'argomento%% link %% della [funzione](Funzioni.md#^definizione-funzione) e
-> - $M$ è un [termine](Lambda-calcolo.md#^definizione-termine) del [$\lambda$-calcolo](Lambda-calcolo.md#^definizione-lambda-calcolo) che rappresenta il corpo%% link %% della [funzione](Funzioni.md#^definizione-funzione).
+> - $x$ è una variabile%% link %% che rappresenta l'argomento%% link %% della [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) e
+> - $M$ è un [termine](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-termine) del [$\lambda$-calcolo](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-lambda-calcolo) che rappresenta il corpo%% link %% della [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione).
 ^definizione-astrazione
 
 > [!osservazione]+ Osservazione: $\color{#7F7F7F} \lambda x.M \equiv M(x)$
@@ -91,7 +91,7 @@ Questo modo di definire "astrattamente" una [funzione](Funzioni.md#^definizione
 > \lambda x.M
 > $$
 > 
-> di un'[astrazione](Lambda-calcolo.md#^definizione-astrazione) equivale alla notazione classica di una [funzione](Funzioni.md) qualsiasi con argomento%% link %% $x$ e corpo%% link %% $M$:
+> di un'[astrazione](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-astrazione) equivale alla notazione classica di una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md) qualsiasi con argomento%% link %% $x$ e corpo%% link %% $M$:
 > 
 > $$
 > M(x)
@@ -105,25 +105,25 @@ Questo modo di definire "astrattamente" una [funzione](Funzioni.md#^definizione
 
 ## 1.2 - Applicazioni
 
-Con l'[astrazione](Lambda-calcolo.md#^definizione-astrazione) abbiamo capito come possiamo definire una [funzione](Funzioni.md#^definizione-funzione) e il suo comportamento, ma concretamente come facciamo a "utilizzarla" dandole in input un certo numero?
+Con l'[astrazione](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-astrazione) abbiamo capito come possiamo definire una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) e il suo comportamento, ma concretamente come facciamo a "utilizzarla" dandole in input un certo numero?
 
-Il mitico Alonzo%% link %% decise di adottare quindi la seguente notazione: presa un'[astrazione](Lambda-calcolo.md#^definizione-astrazione) $\lambda x.M$, questa viene posta tra parentesi tonde e viene seguita dal numero $n$ che vogliamo sostituire all'argomento dell'[astrazione](Lambda-calcolo.md#^definizione-astrazione):
+Il mitico Alonzo%% link %% decise di adottare quindi la seguente notazione: presa un'[astrazione](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-astrazione) $\lambda x.M$, questa viene posta tra parentesi tonde e viene seguita dal numero $n$ che vogliamo sostituire all'argomento dell'[astrazione](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-astrazione):
 
 $$
 (\lambda x.M)\ n
 $$
 
-Per esempio, data un'[astrazione](Lambda-calcolo.md#^definizione-astrazione) $\lambda x.M$ dove $M$ indica la somma di $1$ a $x$ (quindi $x+1$) e $n$ è uguale a $3$, potremmo scrivere (seppur effettuando in questo caso un abuso di notazione, perché nel [$\lambda$-calcolo](Lambda-calcolo.md#^definizione-lambda-calcolo) non è possibile usare direttamente i numeri in questo modo):
+Per esempio, data un'[astrazione](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-astrazione) $\lambda x.M$ dove $M$ indica la somma di $1$ a $x$ (quindi $x+1$) e $n$ è uguale a $3$, potremmo scrivere (seppur effettuando in questo caso un abuso di notazione, perché nel [$\lambda$-calcolo](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-lambda-calcolo) non è possibile usare direttamente i numeri in questo modo):
 
 $$
 (\lambda x.x+1)\ 3
 $$
 
-Ciò ci indica che, alla variabile di input $x$ che rappresenta l'argomento dell'[astrazione](Lambda-calcolo.md#^definizione-astrazione), noi dobbiamo sostituire il numero $3$, in modo da ottenere come risultato $4$: a questa notazione Church diede il nome di [_applicazione_](Lambda-calcolo.md#^definizione-applicazione).
+Ciò ci indica che, alla variabile di input $x$ che rappresenta l'argomento dell'[astrazione](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-astrazione), noi dobbiamo sostituire il numero $3$, in modo da ottenere come risultato $4$: a questa notazione Church diede il nome di [_applicazione_](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-applicazione).
 
 > [!definizione]+ Definizione: applicazione
 > 
-> Nel [$\lambda$-calcolo](Lambda-calcolo.md#^definizione-lambda-calcolo), un'**applicazione** (anche detta **$\lambda$-applicazione**) è l'operazione che consiste nell'utilizzare una [funzione](Lambda-calcolo.md#^definizione-astrazione) su un argomento.
+> Nel [$\lambda$-calcolo](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-lambda-calcolo), un'**applicazione** (anche detta **$\lambda$-applicazione**) è l'operazione che consiste nell'utilizzare una [funzione](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-astrazione) su un argomento.
 > 
 > Un'**applicazione** ha la forma:
 > 
@@ -133,17 +133,17 @@ Ciò ci indica che, alla variabile di input $x$ che rappresenta l'argomento de
 > 
 > dove:
 > 
-> - $M$ è un'espressione del [$\lambda$-calcolo](Lambda-calcolo.md#^definizione-lambda-calcolo) che rappresenta una [funzione](Lambda-calcolo.md#^definizione-astrazione) e
-> - $N$ è un'espressione del [$\lambda$-calcolo](Lambda-calcolo.md#^definizione-lambda-calcolo) che rappresenta l'argomento su cui la [funzione](Lambda-calcolo.md#^definizione-astrazione) viene applicata.
+> - $M$ è un'espressione del [$\lambda$-calcolo](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-lambda-calcolo) che rappresenta una [funzione](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-astrazione) e
+> - $N$ è un'espressione del [$\lambda$-calcolo](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-lambda-calcolo) che rappresenta l'argomento su cui la [funzione](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-astrazione) viene applicata.
 ^definizione-applicazione
 
 ## 1.3 - Termini
 
-Ora che abbiamo definito cosa sono un'[astrazione](Lambda-calcolo.md#^definizione-astrazione) e un'[applicazione](Lambda-calcolo.md#^definizione-applicazione), potremmo dire che questi due sono gli oggetti fondamentali con cui andremo a operare nel [$\lambda$-calcolo](Lambda-calcolo.md#^definizione-lambda-calcolo): i nostri [_termini_](Lambda-calcolo.md#^definizione-termine), quindi, possono assumere una di queste _forme sintattiche_ possibili tra un'[astrazione](Lambda-calcolo.md#^definizione-astrazione), un'[applicazione](Lambda-calcolo.md#^definizione-applicazione) e una semplice variabile.
+Ora che abbiamo definito cosa sono un'[astrazione](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-astrazione) e un'[applicazione](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-applicazione), potremmo dire che questi due sono gli oggetti fondamentali con cui andremo a operare nel [$\lambda$-calcolo](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-lambda-calcolo): i nostri [_termini_](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-termine), quindi, possono assumere una di queste _forme sintattiche_ possibili tra un'[astrazione](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-astrazione), un'[applicazione](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-applicazione) e una semplice variabile.
 
 > [!definizione]+ Definizione: termine nel $\color{#FF7FFF} \lambda$-calcolo
 > 
-> Nel [$\lambda$-calcolo](Lambda-calcolo.md#^definizione-lambda-calcolo), un **termine** $T$ (anche detto **$\lambda$-termine** o **$\lambda$-espressione**) è una stringa ben formata a partire dalla seguente grammatica espressa in BNF%% link %%:
+> Nel [$\lambda$-calcolo](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-lambda-calcolo), un **termine** $T$ (anche detto **$\lambda$-termine** o **$\lambda$-espressione**) è una stringa ben formata a partire dalla seguente grammatica espressa in BNF%% link %%:
 > 
 > $$
 > T ::= x \mid (\lambda x.{\color{#7FFF7F} T }) \mid ({\color{#FF7F7F} T }\ {\color{#7F7FFF} T })
@@ -152,37 +152,37 @@ Ora che abbiamo definito cosa sono un'[astrazione](Lambda-calcolo.md#^definizion
 > dove:
 > 
 > 1. $x$ è una variabile%%link%%,
-> 2. $(\lambda x.{\color{#7FFF7F} T })$ è un'[astrazione](Lambda-calcolo.md#^definizione-astrazione) con argomento $x$ e corpo $\color{#7FFF7F} T$ e
-> 3. $({\color{#FF7F7F} T }\ {\color{#7F7FFF} T })$ è un'[applicazione](Lambda-calcolo.md#^definizione-applicazione) in cui la [funzione](Lambda-calcolo.md#^definizione-astrazione) $\color{#FF7F7F} T$ viene applicata all'argomento $\color{#7F7FFF} T$.
+> 2. $(\lambda x.{\color{#7FFF7F} T })$ è un'[astrazione](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-astrazione) con argomento $x$ e corpo $\color{#7FFF7F} T$ e
+> 3. $({\color{#FF7F7F} T }\ {\color{#7F7FFF} T })$ è un'[applicazione](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-applicazione) in cui la [funzione](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-astrazione) $\color{#FF7F7F} T$ viene applicata all'argomento $\color{#7F7FFF} T$.
 > 
 > Ognuna di queste 3 forme che può assumere un **termine** è detta **forma sintattica**.
 ^definizione-termine
 
 > [!esempio]- Esempi di termini
 > 
-> Ecco qualche esempio di [termini](Lambda-calcolo.md#^definizione-termine) del [$\lambda$-calcolo](Lambda-calcolo.md#^definizione-lambda-calcolo) correttamente espressi:
+> Ecco qualche esempio di [termini](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-termine) del [$\lambda$-calcolo](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-lambda-calcolo) correttamente espressi:
 > 
-> - $x$ è un [termine](Lambda-calcolo.md#^definizione-termine) che rappresenta una semplice variabile $x$.
-> - $(\lambda x.x)$ è un [termine](Lambda-calcolo.md#^definizione-termine) che rappresenta un'[astrazione](Lambda-calcolo.md#^definizione-astrazione) con argomento $x$ e corpo $x$.
-> - ${\color{#FF7F7F} ( } {\color{#7FFF7F} ( } \lambda x.{\color{#7F7FFF} ( } x\ x {\color{#7F7FFF} ) } {\color{#7FFF7F} ) }\ {\color{#FFFF7F} ( }\lambda y.{\color{#7FFFFF} ( }y\ y{\color{#7FFFFF} ) }{\color{#FFFF7F} ) }{\color{#FF7F7F} ) }$ è un [termine](Lambda-calcolo.md#^definizione-termine) che rappresenta un'[applicazione](Lambda-calcolo.md#^definizione-applicazione) della [funzione](Lambda-calcolo.md#^definizione-astrazione) ${\color{#7FFF7F} ( } \lambda x.{\color{#7F7FFF} ( } x\ x {\color{#7F7FFF} ) } {\color{#7FFF7F} ) }$ all'argomento ${\color{#FFFF7F} ( }\lambda y.{\color{#7FFFFF} ( }y\ y{\color{#7FFFFF} ) }{\color{#FFFF7F} ) }$. A loro volta, possiamo analizzare questi "sotto-[termini](Lambda-calcolo.md#^definizione-termine)":
-> 	- ${\color{#7FFF7F} ( } \lambda x.{\color{#7F7FFF} ( } x\ x {\color{#7F7FFF} ) } {\color{#7FFF7F} ) }$ è un [termine](Lambda-calcolo.md#^definizione-termine) che rappresenta un'[astrazione](Lambda-calcolo.md#^definizione-astrazione) con argomento $x$ e corpo ${\color{#7F7FFF} ( } x\ x {\color{#7F7FFF} ) }$. A sua volta:
-> 		- ${\color{#7F7FFF} ( } x\ x {\color{#7F7FFF} ) }$ è un [termine](Lambda-calcolo.md#^definizione-termine) che rappresenta un'[applicazione](Lambda-calcolo.md#^definizione-applicazione) della [funzione](Lambda-calcolo.md#^definizione-astrazione) $x$ all'argomento $x$.
-> 	- ${\color{#FFFF7F} ( }\lambda y.{\color{#7FFFFF} ( }y\ y{\color{#7FFFFF} ) }{\color{#FFFF7F} ) }$ è un [termine](Lambda-calcolo.md#^definizione-termine) che rappresenta un'[astrazione](Lambda-calcolo.md#^definizione-astrazione) con argomento $y$ e corpo ${\color{#7FFFFF} ( }y\ y{\color{#7FFFFF} ) }$. A sua volta:
-> 		- ${\color{#7FFFFF} ( }y\ y{\color{#7FFFFF} ) }$ è un [termine](Lambda-calcolo.md#^definizione-termine) che rappresenta un'[applicazione](Lambda-calcolo.md#^definizione-applicazione) della [funzione](Lambda-calcolo.md#^definizione-astrazione) $y$ all'argomento $y$.
-> - ${\color{#FFFF7F} ( }\lambda f.{\color{#7F7FFF} ( }\lambda x.{\color{#7FFF7F} ( }f\ {\color{#FF7F7F} ( }f\ x{\color{#FF7F7F} ) }{\color{#7FFF7F} ) }{\color{#7F7FFF} ){\color{#FFFF7F} ) } }$ è un [termine](Lambda-calcolo.md#^definizione-termine) che rappresenta un'[astrazione](Lambda-calcolo.md#^definizione-astrazione) con argomento $f$ e corpo ${\color{#7F7FFF} ( }\lambda x.{\color{#7FFF7F} ( }f\ {\color{#FF7F7F} ( }f\ x{\color{#FF7F7F} ) }{\color{#7FFF7F} ) }{\color{#7F7FFF} ) }$. A sua volta:
->     - ${\color{#7F7FFF} ( }\lambda x.{\color{#7FFF7F} ( }f\ {\color{#FF7F7F} ( }f\ x{\color{#FF7F7F} ) }{\color{#7FFF7F} ) }{\color{#7F7FFF} )}$ è un [termine](Lambda-calcolo.md#^definizione-termine) che rappresenta un'[astrazione](Lambda-calcolo.md#^definizione-astrazione) con argomento $x$ e corpo ${\color{#7FFF7F} ( }f\ {\color{#FF7F7F} ( }f\ x{\color{#FF7F7F} ) }{\color{#7FFF7F} ) }$. A sua volta:
->         - ${\color{#7FFF7F} ( }f\ {\color{#FF7F7F} ( }f\ x{\color{#FF7F7F} ) }{\color{#7FFF7F} ) }$ è un [termine](Lambda-calcolo.md#^definizione-termine) che rappresenta un'[astrazione](Lambda-calcolo.md#^definizione-astrazione) con argomento $f$ e corpo ${\color{#FF7F7F} ( }f\ x{\color{#FF7F7F} ) }$. A sua volta:
->             - ${\color{#FF7F7F} ( }f\ x{\color{#FF7F7F} ) }$ è un [termine](Lambda-calcolo.md#^definizione-termine) che rappresenta un'[applicazione](Lambda-calcolo.md#^definizione-applicazione) della [funzione](Lambda-calcolo.md#^definizione-astrazione) $f$ all'argomento $x$.
+> - $x$ è un [termine](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-termine) che rappresenta una semplice variabile $x$.
+> - $(\lambda x.x)$ è un [termine](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-termine) che rappresenta un'[astrazione](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-astrazione) con argomento $x$ e corpo $x$.
+> - ${\color{#FF7F7F} ( } {\color{#7FFF7F} ( } \lambda x.{\color{#7F7FFF} ( } x\ x {\color{#7F7FFF} ) } {\color{#7FFF7F} ) }\ {\color{#FFFF7F} ( }\lambda y.{\color{#7FFFFF} ( }y\ y{\color{#7FFFFF} ) }{\color{#FFFF7F} ) }{\color{#FF7F7F} ) }$ è un [termine](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-termine) che rappresenta un'[applicazione](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-applicazione) della [funzione](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-astrazione) ${\color{#7FFF7F} ( } \lambda x.{\color{#7F7FFF} ( } x\ x {\color{#7F7FFF} ) } {\color{#7FFF7F} ) }$ all'argomento ${\color{#FFFF7F} ( }\lambda y.{\color{#7FFFFF} ( }y\ y{\color{#7FFFFF} ) }{\color{#FFFF7F} ) }$. A loro volta, possiamo analizzare questi "sotto-[termini](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-termine)":
+> 	- ${\color{#7FFF7F} ( } \lambda x.{\color{#7F7FFF} ( } x\ x {\color{#7F7FFF} ) } {\color{#7FFF7F} ) }$ è un [termine](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-termine) che rappresenta un'[astrazione](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-astrazione) con argomento $x$ e corpo ${\color{#7F7FFF} ( } x\ x {\color{#7F7FFF} ) }$. A sua volta:
+> 		- ${\color{#7F7FFF} ( } x\ x {\color{#7F7FFF} ) }$ è un [termine](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-termine) che rappresenta un'[applicazione](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-applicazione) della [funzione](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-astrazione) $x$ all'argomento $x$.
+> 	- ${\color{#FFFF7F} ( }\lambda y.{\color{#7FFFFF} ( }y\ y{\color{#7FFFFF} ) }{\color{#FFFF7F} ) }$ è un [termine](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-termine) che rappresenta un'[astrazione](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-astrazione) con argomento $y$ e corpo ${\color{#7FFFFF} ( }y\ y{\color{#7FFFFF} ) }$. A sua volta:
+> 		- ${\color{#7FFFFF} ( }y\ y{\color{#7FFFFF} ) }$ è un [termine](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-termine) che rappresenta un'[applicazione](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-applicazione) della [funzione](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-astrazione) $y$ all'argomento $y$.
+> - ${\color{#FFFF7F} ( }\lambda f.{\color{#7F7FFF} ( }\lambda x.{\color{#7FFF7F} ( }f\ {\color{#FF7F7F} ( }f\ x{\color{#FF7F7F} ) }{\color{#7FFF7F} ) }{\color{#7F7FFF} ){\color{#FFFF7F} ) } }$ è un [termine](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-termine) che rappresenta un'[astrazione](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-astrazione) con argomento $f$ e corpo ${\color{#7F7FFF} ( }\lambda x.{\color{#7FFF7F} ( }f\ {\color{#FF7F7F} ( }f\ x{\color{#FF7F7F} ) }{\color{#7FFF7F} ) }{\color{#7F7FFF} ) }$. A sua volta:
+>     - ${\color{#7F7FFF} ( }\lambda x.{\color{#7FFF7F} ( }f\ {\color{#FF7F7F} ( }f\ x{\color{#FF7F7F} ) }{\color{#7FFF7F} ) }{\color{#7F7FFF} )}$ è un [termine](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-termine) che rappresenta un'[astrazione](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-astrazione) con argomento $x$ e corpo ${\color{#7FFF7F} ( }f\ {\color{#FF7F7F} ( }f\ x{\color{#FF7F7F} ) }{\color{#7FFF7F} ) }$. A sua volta:
+>         - ${\color{#7FFF7F} ( }f\ {\color{#FF7F7F} ( }f\ x{\color{#FF7F7F} ) }{\color{#7FFF7F} ) }$ è un [termine](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-termine) che rappresenta un'[astrazione](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-astrazione) con argomento $f$ e corpo ${\color{#FF7F7F} ( }f\ x{\color{#FF7F7F} ) }$. A sua volta:
+>             - ${\color{#FF7F7F} ( }f\ x{\color{#FF7F7F} ) }$ è un [termine](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-termine) che rappresenta un'[applicazione](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-applicazione) della [funzione](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-astrazione) $f$ all'argomento $x$.
 
 ## 1.4 - Riscrittura dei termini
 
-È possibile riscrivere i [termini](Lambda-calcolo.md#^definizione-termine) eliminando alcune parentesi per migliorare la leggibilità.
+È possibile riscrivere i [termini](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-termine) eliminando alcune parentesi per migliorare la leggibilità.
 
 > [!notazione]+ Notazione: omissione delle parentesi più esterne di un termine
 > 
-> In un [termine](Lambda-calcolo.md#^definizione-termine) è possibile omettere le parentesi più esterne.
+> In un [termine](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-termine) è possibile omettere le parentesi più esterne.
 > 
-> Per esempio, un [termine](Lambda-calcolo.md#^definizione-termine) $T=(\lambda V.T)$ che rappresenta un'[astrazione](Lambda-calcolo.md#^definizione-astrazione) con argomento%% Link %% $V$ e corpo%% link %% $T$ si può riscrivere come $T=\lambda V.T$:
+> Per esempio, un [termine](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-termine) $T=(\lambda V.T)$ che rappresenta un'[astrazione](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-astrazione) con argomento%% Link %% $V$ e corpo%% link %% $T$ si può riscrivere come $T=\lambda V.T$:
 > 
 > $$
 > \begin{align*}
@@ -191,7 +191,7 @@ Ora che abbiamo definito cosa sono un'[astrazione](Lambda-calcolo.md#^definizion
 > \end{align*}
 > $$
 > 
-> Allo stesso modo, un [termine](Lambda-calcolo.md#^definizione-termine) $T' = (U\ V)$ che rappresenta un'[applicazione](Lambda-calcolo.md#^definizione-applicazione) della [funzione](Lambda-calcolo.md#^definizione-astrazione) $U$ all'argomento%% link %% $V$ si può riscrivere come $T'=U\ V$:
+> Allo stesso modo, un [termine](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-termine) $T' = (U\ V)$ che rappresenta un'[applicazione](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-applicazione) della [funzione](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-astrazione) $U$ all'argomento%% link %% $V$ si può riscrivere come $T'=U\ V$:
 > 
 > $$
 > \begin{align*}
@@ -203,9 +203,9 @@ Ora che abbiamo definito cosa sono un'[astrazione](Lambda-calcolo.md#^definizion
 
 > [!notazione]+ Notazione: omissione delle parentesi in un'astrazione
 > 
-> In un [termine](Lambda-calcolo.md#^definizione-termine) $T=\lambda V.T'$ che rappresenta un'[astrazione](Lambda-calcolo.md#^definizione-astrazione) con argomento $V$ e corpo $T$ si possono eliminare le parentesi più esterne del sotto-[termine](Lambda-calcolo.md#^definizione-termine) $T'$.
+> In un [termine](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-termine) $T=\lambda V.T'$ che rappresenta un'[astrazione](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-astrazione) con argomento $V$ e corpo $T$ si possono eliminare le parentesi più esterne del sotto-[termine](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-termine) $T'$.
 > 
-> Per esempio, un [termine](Lambda-calcolo.md#^definizione-termine) $T=\lambda V.(X\ (\lambda y.Z))$ si può riscrivere come $T=\lambda V.X\ (\lambda y.Z)$:
+> Per esempio, un [termine](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-termine) $T=\lambda V.(X\ (\lambda y.Z))$ si può riscrivere come $T=\lambda V.X\ (\lambda y.Z)$:
 > 
 > $$
 > \begin{align*}
@@ -214,14 +214,14 @@ Ora che abbiamo definito cosa sono un'[astrazione](Lambda-calcolo.md#^definizion
 > \end{align*}
 > $$
 > 
-> Semplicemente, se non sono presenti delle parentesi, tutto quello a destra del punto viene considerato come il corpo dell'[astrazione](Lambda-calcolo.md#^definizione-astrazione) (che in questo caso corrisponderebbe a $X\ (\lambda y.Z)$).
+> Semplicemente, se non sono presenti delle parentesi, tutto quello a destra del punto viene considerato come il corpo dell'[astrazione](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-astrazione) (che in questo caso corrisponderebbe a $X\ (\lambda y.Z)$).
 ^notazione-omissione-delle-parentesi-in-un-astrazione
 
 > [!notazione]+ Notazione: omissione delle parentesi in un'applicazione
 > 
-> In un [termine](Lambda-calcolo.md#^definizione-termine) $T=U\ V$ che rappresenta un'[applicazione](Lambda-calcolo.md#^definizione-applicazione) della [funzione](Lambda-calcolo.md#^definizione-astrazione) $U$ all'argomento $V$ si possono eliminare le parentesi più esterne della [funzione](Lambda-calcolo.md#^definizione-astrazione) $U$.
+> In un [termine](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-termine) $T=U\ V$ che rappresenta un'[applicazione](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-applicazione) della [funzione](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-astrazione) $U$ all'argomento $V$ si possono eliminare le parentesi più esterne della [funzione](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-astrazione) $U$.
 > 
-> Per esempio, un [termine](Lambda-calcolo.md#^definizione-termine) $T = (M_1\ M_2)\ (M_3\ M_4)$ si può riscrivere come $T = M_1\ M_2\ (M_3\ M_4)$:
+> Per esempio, un [termine](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-termine) $T = (M_1\ M_2)\ (M_3\ M_4)$ si può riscrivere come $T = M_1\ M_2\ (M_3\ M_4)$:
 > 
 > $$
 > \begin{align*}
@@ -230,19 +230,19 @@ Ora che abbiamo definito cosa sono un'[astrazione](Lambda-calcolo.md#^definizion
 > \end{align*}
 > $$
 > 
-> **NON** si può riscrivere come $T = M_1\ M_2\ M_3\ M_4$ perché $(M_3\ M_4)$ è l'argomento dell'[applicazione](Lambda-calcolo.md#^definizione-applicazione).
+> **NON** si può riscrivere come $T = M_1\ M_2\ M_3\ M_4$ perché $(M_3\ M_4)$ è l'argomento dell'[applicazione](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-applicazione).
 ^notazione-omissione-delle-parentesi-in-un-applicazione
 
 > [!trucco]+ Trucco: astrazione associativa a destra, applicazione associativa a sinistra
 > 
-> Per ricordare più facilmente come funziona l'[omissione delle parentesi in un'astrazione](Lambda-calcolo.md#^notazione-omissione-delle-parentesi-in-un-astrazione) e [in un'applicazione](Lambda-calcolo.md#^notazione-omissione-delle-parentesi-in-un-applicazione), ti basta ricordare che:
-> - L'[astrazione](Lambda-calcolo.md#^definizione-astrazione) è associativa a destra, cioè tutto quello che c'è a destra del punto è parte del corpo%% link %% dell'[astrazione](Lambda-calcolo.md#^definizione-astrazione):
+> Per ricordare più facilmente come funziona l'[omissione delle parentesi in un'astrazione](Informatica/Lambda-calcolo/Lambda-calcolo.md#^notazione-omissione-delle-parentesi-in-un-astrazione) e [in un'applicazione](Informatica/Lambda-calcolo/Lambda-calcolo.md#^notazione-omissione-delle-parentesi-in-un-applicazione), ti basta ricordare che:
+> - L'[astrazione](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-astrazione) è associativa a destra, cioè tutto quello che c'è a destra del punto è parte del corpo%% link %% dell'[astrazione](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-astrazione):
 > 	$$
 > 	\lambda x.{\color{#7FFF7F} \underbrace{T_1\ T_2 (T_3\ T_4)}_{\text{a destra del punto}} }
 > 	\equiv
 > 	\lambda x.\big( {\color{#7FFF7F} T_1\ T_2 (T_3\ T_4) } \big) 
 > 	$$
-> - L'[applicazione](Lambda-calcolo.md#^definizione-applicazione) è associativa a sinistra, cioè tutto quello che c'è a sinistra dell'ultimo [termine](Lambda-calcolo.md#^definizione-termine) (cioè l'argomento%% Link %%) è la [funzione](Funzioni.md#^definizione-funzione) su cui viene applicato l'argomento%% Link %%:
+> - L'[applicazione](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-applicazione) è associativa a sinistra, cioè tutto quello che c'è a sinistra dell'ultimo [termine](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-termine) (cioè l'argomento%% Link %%) è la [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) su cui viene applicato l'argomento%% Link %%:
 > 	$$
 > 	{\color{#FF7F7F}
 > 	\underbrace{T_1\ T_2\ T_3}_{
@@ -259,7 +259,7 @@ Ora che abbiamo definito cosa sono un'[astrazione](Lambda-calcolo.md#^definizion
 
 > [!esercizio]+ Esercizio 1 sulla rimozione delle parentesi
 > 
-> Rimuovere il più possibile le parentesi, senza cambiare il significato, del seguente [termine](Lambda-calcolo.md#^definizione-termine):
+> Rimuovere il più possibile le parentesi, senza cambiare il significato, del seguente [termine](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-termine):
 > 
 > $$
 > (\lambda x.((x\ x)\ x))
@@ -267,7 +267,7 @@ Ora che abbiamo definito cosa sono un'[astrazione](Lambda-calcolo.md#^definizion
 > 
 > > [!soluzione]- Soluzione
 > > 
-> > È possibile innanzitutto [rimuovere le parentesi più esterne](Lambda-calcolo.md#^notazione-omissione-delle-parentesi-piu-esterne-di-un-termine) del [termine](Lambda-calcolo.md#^definizione-termine):
+> > È possibile innanzitutto [rimuovere le parentesi più esterne](Informatica/Lambda-calcolo/Lambda-calcolo.md#^notazione-omissione-delle-parentesi-piu-esterne-di-un-termine) del [termine](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-termine):
 > > 
 > > $$
 > > {\color{#FF7F7F} ( }\lambda x.((x\ x)\ x){\color{#FF7F7F} ) }
@@ -275,7 +275,7 @@ Ora che abbiamo definito cosa sono un'[astrazione](Lambda-calcolo.md#^definizion
 > > \lambda x.((x\ x)\ x)
 > > $$
 > > 
-> > Avendo un'[astrazione](Lambda-calcolo.md#^definizione-astrazione) con argomento $x$ e corpo $((x\ x)\ x)$, è possibile [rimuovere le parentesi nel corpo](Lambda-calcolo.md#^notazione-omissione-delle-parentesi-in-un-astrazione):
+> > Avendo un'[astrazione](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-astrazione) con argomento $x$ e corpo $((x\ x)\ x)$, è possibile [rimuovere le parentesi nel corpo](Informatica/Lambda-calcolo/Lambda-calcolo.md#^notazione-omissione-delle-parentesi-in-un-astrazione):
 > > 
 > > $$
 > > \lambda x.{\color{#FF7F7F} ( }(x\ x)\ x{\color{#FF7F7F} ) }
@@ -283,7 +283,7 @@ Ora che abbiamo definito cosa sono un'[astrazione](Lambda-calcolo.md#^definizion
 > > \lambda x.(x\ x)\ x
 > > $$
 > > 
-> > Il corpo $(x\ x)$ x è un'[applicazione](Lambda-calcolo.md#^definizione-applicazione) della [funzione](Lambda-calcolo.md#^definizione-astrazione) $(x\ x)$ all'argomento $x$, quindi possiamo [rimuovere le parentesi della funzione](Lambda-calcolo.md#^notazione-omissione-delle-parentesi-in-un-applicazione):
+> > Il corpo $(x\ x)$ x è un'[applicazione](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-applicazione) della [funzione](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-astrazione) $(x\ x)$ all'argomento $x$, quindi possiamo [rimuovere le parentesi della funzione](Informatica/Lambda-calcolo/Lambda-calcolo.md#^notazione-omissione-delle-parentesi-in-un-applicazione):
 > > 
 > > $$
 > > \lambda x.{\color{#FF7F7F} ( }x\ x{\color{#FF7F7F} ) }\ x
@@ -293,7 +293,7 @@ Ora che abbiamo definito cosa sono un'[astrazione](Lambda-calcolo.md#^definizion
 
 > [!esercizio]+ Esercizio 2 sulla rimozione delle parentesi
 > 
-> Rimuovere il più possibile le parentesi, senza cambiare il significato, del seguente [termine](Lambda-calcolo.md#^definizione-termine):
+> Rimuovere il più possibile le parentesi, senza cambiare il significato, del seguente [termine](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-termine):
 > 
 > $$
 > (\lambda x.(\lambda y.(\lambda y.((x\ z)\ (y\ z)))))
@@ -301,7 +301,7 @@ Ora che abbiamo definito cosa sono un'[astrazione](Lambda-calcolo.md#^definizion
 > 
 > > [!soluzione]- Soluzione
 > > 
-> > È possibile [rimuovere le parentesi più esterne del termine](Lambda-calcolo.md#^notazione-omissione-delle-parentesi-piu-esterne-di-un-termine):
+> > È possibile [rimuovere le parentesi più esterne del termine](Informatica/Lambda-calcolo/Lambda-calcolo.md#^notazione-omissione-delle-parentesi-piu-esterne-di-un-termine):
 > > 
 > > $$
 > > {\color{#FF7F7F} ( }\lambda x.(\lambda y.(\lambda y.((x\ z)\ (y\ z)))){\color{#FF7F7F} ) }
@@ -309,7 +309,7 @@ Ora che abbiamo definito cosa sono un'[astrazione](Lambda-calcolo.md#^definizion
 > > \lambda x.(\lambda y.(\lambda y.((x\ z)\ (y\ z))))
 > > $$
 > > 
-> > Avendo un'[astrazione](Lambda-calcolo.md#^definizione-astrazione) con argomento%% link %% $x$ e corpo%% link %% $(\lambda y.(\lambda y.((x\ z)\ (y\ z))))$, è possibile [rimuovere le parentesi più esterne del corpo](Lambda-calcolo.md#^notazione-omissione-delle-parentesi-in-un-astrazione):
+> > Avendo un'[astrazione](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-astrazione) con argomento%% link %% $x$ e corpo%% link %% $(\lambda y.(\lambda y.((x\ z)\ (y\ z))))$, è possibile [rimuovere le parentesi più esterne del corpo](Informatica/Lambda-calcolo/Lambda-calcolo.md#^notazione-omissione-delle-parentesi-in-un-astrazione):
 > > 
 > > $$
 > > \lambda x.{\color{#FF7F7F} ( }\lambda y.(\lambda y.((x\ z)\ (y\ z))){\color{#FF7F7F} ) }
@@ -317,7 +317,7 @@ Ora che abbiamo definito cosa sono un'[astrazione](Lambda-calcolo.md#^definizion
 > > \lambda x.\lambda y.(\lambda y.((x\ z)\ (y\ z)))
 > > $$
 > > 
-> > Avendo un'[astrazione](Lambda-calcolo.md#^definizione-astrazione) con argomento%% link %% $y$ e corpo%% link %% $(\lambda y.((x\ z)\ (y\ z)))$, è possibile [rimuovere le parentesi più esterne del corpo](Lambda-calcolo.md#^notazione-omissione-delle-parentesi-in-un-astrazione):
+> > Avendo un'[astrazione](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-astrazione) con argomento%% link %% $y$ e corpo%% link %% $(\lambda y.((x\ z)\ (y\ z)))$, è possibile [rimuovere le parentesi più esterne del corpo](Informatica/Lambda-calcolo/Lambda-calcolo.md#^notazione-omissione-delle-parentesi-in-un-astrazione):
 > > 
 > > $$
 > > \lambda x.\lambda y.{\color{#FF7F7F} ( }\lambda y.((x\ z)\ (y\ z)){\color{#FF7F7F} ) }
@@ -325,7 +325,7 @@ Ora che abbiamo definito cosa sono un'[astrazione](Lambda-calcolo.md#^definizion
 > > \lambda x.\lambda y.\lambda y.((x\ z)\ (y\ z))
 > > $$
 > > 
-> > Avendo un'[astrazione](Lambda-calcolo.md#^definizione-astrazione) con argomento%% link %% $y$ e corpo%% link %% $((x\ z)\ (y\ z))$, è possibile [rimuovere le parentesi più esterne del corpo](Lambda-calcolo.md#^notazione-omissione-delle-parentesi-in-un-astrazione):
+> > Avendo un'[astrazione](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-astrazione) con argomento%% link %% $y$ e corpo%% link %% $((x\ z)\ (y\ z))$, è possibile [rimuovere le parentesi più esterne del corpo](Informatica/Lambda-calcolo/Lambda-calcolo.md#^notazione-omissione-delle-parentesi-in-un-astrazione):
 > > 
 > > $$
 > > \lambda x.\lambda y.\lambda y.{\color{#FF7F7F} ( }(x\ z)\ (y\ z){\color{#FF7F7F} ) }
@@ -333,7 +333,7 @@ Ora che abbiamo definito cosa sono un'[astrazione](Lambda-calcolo.md#^definizion
 > > \lambda x.\lambda y.\lambda y.(x\ z)\ (y\ z)
 > > $$
 > > 
-> > Avendo un'[applicazione](Lambda-calcolo.md#^definizione-applicazione) con funzione%% link %% $(x\ z)$ e argomento $(y\ z)$, è possibile [rimuovere le parentesi più esterne della funzione](Lambda-calcolo.md#^notazione-omissione-delle-parentesi-in-un-applicazione):
+> > Avendo un'[applicazione](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-applicazione) con funzione%% link %% $(x\ z)$ e argomento $(y\ z)$, è possibile [rimuovere le parentesi più esterne della funzione](Informatica/Lambda-calcolo/Lambda-calcolo.md#^notazione-omissione-delle-parentesi-in-un-applicazione):
 > > 
 > > $$
 > > \lambda x.\lambda y.\lambda y.{\color{#FF7F7F} ( }x\ z{\color{#FF7F7F} ) }\ (y\ z)
@@ -365,29 +365,29 @@ $$
 
 ## 1.5 - Variabili libere e legate in un termine
 
-Prima di cominciare a effettuare operazioni con i [termini](Lambda-calcolo.md#^definizione-termine), ci serve definire un ultimo concetto che ci permette di capire quale valore hanno le variabili%% link %% all'interno dei [termini](Lambda-calcolo.md#^definizione-termine) stessi: per esempio, nell'[astrazione](Lambda-calcolo.md#^definizione-astrazione) $\lambda x.M$ e nell'[applicazione](Lambda-calcolo.md#^definizione-applicazione) $x\ M$ la variabile%% link %% $x$ non ha lo stesso "peso", perché nel primo caso è "legata" al [termine](Lambda-calcolo.md#^definizione-termine) $M$ (essendo un argomento di quella funzione), mentre nel secondo caso è "libera" e non ha alcun particolare legame con $M$.
+Prima di cominciare a effettuare operazioni con i [termini](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-termine), ci serve definire un ultimo concetto che ci permette di capire quale valore hanno le variabili%% link %% all'interno dei [termini](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-termine) stessi: per esempio, nell'[astrazione](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-astrazione) $\lambda x.M$ e nell'[applicazione](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-applicazione) $x\ M$ la variabile%% link %% $x$ non ha lo stesso "peso", perché nel primo caso è "legata" al [termine](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-termine) $M$ (essendo un argomento di quella funzione), mentre nel secondo caso è "libera" e non ha alcun particolare legame con $M$.
 
-Fare questa distinzione è importante perché, svolgendo operazioni sui [termini](Lambda-calcolo.md#^definizione-termine), dobbiamo assicurarci che il loro significato non venga modificato andando a toccare quelle variabili "legate".
+Fare questa distinzione è importante perché, svolgendo operazioni sui [termini](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-termine), dobbiamo assicurarci che il loro significato non venga modificato andando a toccare quelle variabili "legate".
 
 Definiamo formalmente quindi questa differenza.
 
 > [!definizione]+ Definizione: variabili libere e legate
 > 
-> L'**insieme delle variabili libere** di un [termine](Lambda-calcolo.md#^definizione-termine) $T$, denotate con $\text{fv}(T)$ (dall'inglese _free variables_), è definito induttivamente sulla struttura di $T$ come segue:
+> L'**insieme delle variabili libere** di un [termine](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-termine) $T$, denotate con $\text{fv}(T)$ (dall'inglese _free variables_), è definito induttivamente sulla struttura di $T$ come segue:
 > 
-> - Quando il [termine](Lambda-calcolo.md#^definizione-termine) $T$ è una variabile%% link %% $x$:
+> - Quando il [termine](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-termine) $T$ è una variabile%% link %% $x$:
 > 
 > 	$$
 > 	\text{fv}(T) = \text{fv}(x) \overset{\text{def}}{=} \{ x \}
 > 	$$
 > 
-> - Quando il [termine](Lambda-calcolo.md#^definizione-termine) $T$ è un'[astrazione](Lambda-calcolo.md#^definizione-astrazione) $\lambda x.M$:
+> - Quando il [termine](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-termine) $T$ è un'[astrazione](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-astrazione) $\lambda x.M$:
 > 
 > 	$$
 > 	\text{fv}(T) = \text{fv}(\lambda x.M) \overset{\text{def}}{=} \text{fv}(M) \setminus \{ x \}
 > 	$$
 > 
-> - Quando il [termine](Lambda-calcolo.md#^definizione-termine) $T$ è un'[applicazione](Lambda-calcolo.md#^definizione-applicazione) $M\ N$:
+> - Quando il [termine](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-termine) $T$ è un'[applicazione](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-applicazione) $M\ N$:
 > 
 > 	$$
 > 	\text{fv}(T) = \text{fv}(M\ N) \overset{\text{def}}{=} \text{fv}(M) \cup \text{fv}(N)
@@ -398,15 +398,15 @@ Definiamo formalmente quindi questa differenza.
 
 > [!esempio]- Esempi di variabili libere e legate
 > 
-> Ecco qualche esempio di [variabili libere e legate](Lambda-calcolo.md#^definizione-variabili-libere-e-legate) in diversi [termini](Lambda-calcolo.md#^definizione-termine):
+> Ecco qualche esempio di [variabili libere e legate](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-variabili-libere-e-legate) in diversi [termini](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-termine):
 > 
-> - $x$: la variabile%% link %% $x$ è [libera](Lambda-calcolo.md#^definizione-variabili-libere-e-legate) perché non è vincolata da alcuna [astrazione](Lambda-calcolo.md#^definizione-astrazione):
+> - $x$: la variabile%% link %% $x$ è [libera](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-variabili-libere-e-legate) perché non è vincolata da alcuna [astrazione](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-astrazione):
 > 
 > 	$$
 > 	\text{fv}(x) = \{ x \}
 > 	$$
 > 
-> - $\lambda x.x$: la variabile%% link %% $x$ è [legata](Lambda-calcolo.md#^definizione-variabili-libere-e-legate) perché è vincolata dall'[astrazione](Lambda-calcolo.md#^definizione-astrazione) (essendo un suo argomento):
+> - $\lambda x.x$: la variabile%% link %% $x$ è [legata](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-variabili-libere-e-legate) perché è vincolata dall'[astrazione](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-astrazione) (essendo un suo argomento):
 > 
 > 	$$
 > 	\begin{align*}
@@ -416,7 +416,7 @@ Definiamo formalmente quindi questa differenza.
 > 	\end{align*}
 > 	$$
 > 
-> - $\lambda x.y$: la variabile%% link %% $x$ è [legata](Lambda-calcolo.md#^definizione-variabili-libere-e-legate) perché è vincolata dall'[astrazione](Lambda-calcolo.md#^definizione-astrazione) (essendo un suo argomento), ma la variabile%% link %% $y$ no:
+> - $\lambda x.y$: la variabile%% link %% $x$ è [legata](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-variabili-libere-e-legate) perché è vincolata dall'[astrazione](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-astrazione) (essendo un suo argomento), ma la variabile%% link %% $y$ no:
 > 
 > 	$$
 > 	\begin{align*}
@@ -426,7 +426,7 @@ Definiamo formalmente quindi questa differenza.
 > 	\end{align*}
 > 	$$
 > 
-> - $\lambda x.\lambda y.y\ z\ x$: le variabili%% link %% $x$ e $y$ sono [legate](Lambda-calcolo.md#^definizione-variabili-libere-e-legate) perché vincolate dalle rispettive [astrazioni](Lambda-calcolo.md#^definizione-astrazione) (essendo loro argomenti%% link %%), ma la variabile%% link %% $z$ no:
+> - $\lambda x.\lambda y.y\ z\ x$: le variabili%% link %% $x$ e $y$ sono [legate](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-variabili-libere-e-legate) perché vincolate dalle rispettive [astrazioni](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-astrazione) (essendo loro argomenti%% link %%), ma la variabile%% link %% $z$ no:
 > 
 > $$
 > \begin{align*}
@@ -442,15 +442,15 @@ Definiamo formalmente quindi questa differenza.
 
 > [!osservazione]+ Osservazione: una variabile che compare sia libera che legata
 > 
-> Consideriamo il [termine](Lambda-calcolo.md#^definizione-termine)
+> Consideriamo il [termine](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-termine)
 > 
 > $$
 > (\lambda x.x\ y)\ x
 > $$
 > 
-> Dato che $x$ compare sia come argomento%% link %% dell'[astrazione](Lambda-calcolo.md#^definizione-astrazione) (e quindi [legata](Lambda-calcolo.md#^definizione-variabili-libere-e-legate)), sia come argomento%% link %% dell'[applicazione](Lambda-calcolo.md#^definizione-applicazione) esterna (e quindi [libera](Lambda-calcolo.md#^definizione-variabili-libere-e-legate)), deve essere considerata libera o legata?
+> Dato che $x$ compare sia come argomento%% link %% dell'[astrazione](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-astrazione) (e quindi [legata](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-variabili-libere-e-legate)), sia come argomento%% link %% dell'[applicazione](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-applicazione) esterna (e quindi [libera](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-variabili-libere-e-legate)), deve essere considerata libera o legata?
 > 
-> La risposta è che in realtà queste due $x$ non vanno considerate come la stessa $x$ ma separatamente, proprio perché vengono usate per due scopi diversi: per evitare confusioni quindi sarebbe opportuno _rinominare_ una delle due $x$ (per esempio in $z$) ed effettuando quindi un'operazione che prende il nome di [$\alpha$-conversione](Lambda-calcolo.md#^definizione-alfa-conversione) (che vedremo più tardi).
+> La risposta è che in realtà queste due $x$ non vanno considerate come la stessa $x$ ma separatamente, proprio perché vengono usate per due scopi diversi: per evitare confusioni quindi sarebbe opportuno _rinominare_ una delle due $x$ (per esempio in $z$) ed effettuando quindi un'operazione che prende il nome di [$\alpha$-conversione](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-alfa-conversione) (che vedremo più tardi).
 
 %% 
 trucco per ricordarsi come trovare le variabili libere: togliere tutte le variabili legate da un'astrazione
@@ -458,18 +458,18 @@ trucco per ricordarsi come trovare le variabili libere: togliere tutte le variab
 
 > [!osservazione]+ Osservazione: variabili libere e legate come visibilità nei linguaggi di programmazione
 > 
-> La distinzione tra [variabili libere e legate](Lambda-calcolo.md#^definizione-variabili-libere-e-legate) è utile a farci capire, trasportando questo concetto sui linguaggi di programmazione%% link %%, a capire qual è la visibilità%% link %% delle variabili%% link %% che usiamo:
+> La distinzione tra [variabili libere e legate](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-variabili-libere-e-legate) è utile a farci capire, trasportando questo concetto sui linguaggi di programmazione%% link %%, a capire qual è la visibilità%% link %% delle variabili%% link %% che usiamo:
 > 
-> - Le [variabili legate](Lambda-calcolo.md#^definizione-variabili-libere-e-legate) possono essere pensate come variabili "locali"%% link %% della funzione%% link %%, utilizzabili unicamente all'interno di quella funzione e senza bisogno di altre informazioni dall'esterno per capire a cosa servono.
-> - Le [variabili libere](Lambda-calcolo.md#^definizione-variabili-libere-e-legate) possono essere pensate come variabili "globali"%% link %% della funzione%% link %%, usate al suo interno ma in realtà dichiarate all'esterno della funzione e, quindi, il loro valore dipende dal contesto in cui si trova la funzione%% link %%.
+> - Le [variabili legate](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-variabili-libere-e-legate) possono essere pensate come variabili "locali"%% link %% della funzione%% link %%, utilizzabili unicamente all'interno di quella funzione e senza bisogno di altre informazioni dall'esterno per capire a cosa servono.
+> - Le [variabili libere](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-variabili-libere-e-legate) possono essere pensate come variabili "globali"%% link %% della funzione%% link %%, usate al suo interno ma in realtà dichiarate all'esterno della funzione e, quindi, il loro valore dipende dal contesto in cui si trova la funzione%% link %%.
 
 ### 1.5.1 - Combinatori
 
-Un concetto strettamente collegato a quello di [variabili libere](Lambda-calcolo.md#^definizione-variabili-libere-e-legate) e che ci tornerà utile più tardi è quello dei [_combinatori_](Lambda-calcolo.md#^definizione-combinatore).
+Un concetto strettamente collegato a quello di [variabili libere](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-variabili-libere-e-legate) e che ci tornerà utile più tardi è quello dei [_combinatori_](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-combinatore).
 
 > [!definizione]+ Definizione: combinatore
 > 
-> Un **combinatore** (o **termine chiuso**) è un [termine](Lambda-calcolo.md#^definizione-termine) $T$ senza [variabili libere](Lambda-calcolo.md#^definizione-variabili-libere-e-legate):
+> Un **combinatore** (o **termine chiuso**) è un [termine](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-termine) $T$ senza [variabili libere](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-variabili-libere-e-legate):
 > 
 > $$
 > \text{fv}(T) = \emptyset
@@ -484,13 +484,13 @@ esempi di combinatori
 
 ## 2.1 - Sostituzione
 
-Come abbiamo visto, un'[applicazione](Lambda-calcolo.md#^definizione-applicazione) $M\ N$ rappresenta essenzialmente la sostituzione delle variabili contenute in $M$ con i valori di $N$. Ma ciò non è un'operazione banale: le uniche variabili sostituibili sono quelle [libere](Lambda-calcolo.md#^definizione-variabili-libere-e-legate) e questa è una cosa di cui bisogna tener conto per evitare che diventino [legate](Lambda-calcolo.md#^definizione-variabili-libere-e-legate). Definiamo quindi correttamente come deve funzionare una [_sostituzione_](Lambda-calcolo.md#^definizione-sostituzione) in un [termine](Lambda-calcolo.md#^definizione-termine).
+Come abbiamo visto, un'[applicazione](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-applicazione) $M\ N$ rappresenta essenzialmente la sostituzione delle variabili contenute in $M$ con i valori di $N$. Ma ciò non è un'operazione banale: le uniche variabili sostituibili sono quelle [libere](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-variabili-libere-e-legate) e questa è una cosa di cui bisogna tener conto per evitare che diventino [legate](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-variabili-libere-e-legate). Definiamo quindi correttamente come deve funzionare una [_sostituzione_](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-sostituzione) in un [termine](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-termine).
 
 > [!definizione]+ Definizione: sostituzione
 > 
-> Nel [$\lambda$-calcolo](Lambda-calcolo.md#^definizione-lambda-calcolo), una **sostituzione** è un'operazione binaria tra due [termini](Lambda-calcolo.md#^definizione-termine) $T$ ed $N$ in cui una [variabile libera](Lambda-calcolo.md#^definizione-variabili-libere-e-legate) $y$ di $T$ viene sostituita con $N$. Viene denotata come $T[N/y]$ ed è definita induttivamente sulla struttura di $T$ come segue:
+> Nel [$\lambda$-calcolo](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-lambda-calcolo), una **sostituzione** è un'operazione binaria tra due [termini](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-termine) $T$ ed $N$ in cui una [variabile libera](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-variabili-libere-e-legate) $y$ di $T$ viene sostituita con $N$. Viene denotata come $T[N/y]$ ed è definita induttivamente sulla struttura di $T$ come segue:
 > 
-> - Quando il [termine](Lambda-calcolo.md#^definizione-termine) $T$ è una variabile $x$:
+> - Quando il [termine](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-termine) $T$ è una variabile $x$:
 > 
 > 	$$
 > 	T[N / y] = x [N / y] \overset{\text{def}}{=} \begin{cases}
@@ -499,7 +499,7 @@ Come abbiamo visto, un'[applicazione](Lambda-calcolo.md#^definizione-applicazion
 > 	\end{cases}
 > 	$$
 > 
-> - Quando il [termine](Lambda-calcolo.md#^definizione-termine) $T$ è un'[astrazione](Lambda-calcolo.md#^definizione-astrazione) $\lambda x.M$:
+> - Quando il [termine](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-termine) $T$ è un'[astrazione](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-astrazione) $\lambda x.M$:
 > 
 > 	$$
 > 	T[N / y] = (\lambda x.M)[N / y] \overset{\text{def}}{=} \begin{cases}
@@ -511,7 +511,7 @@ Come abbiamo visto, un'[applicazione](Lambda-calcolo.md#^definizione-applicazion
 > 
 > 	con $z \in \text{Var} \setminus (\text{fv}(M) \cup \text{fv}(N))$
 > 
-> - Quando il [termine](Lambda-calcolo.md#^definizione-termine) $T$ è un'[applicazione](Lambda-calcolo.md#^definizione-applicazione) $M_1\ M_2$:
+> - Quando il [termine](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-termine) $T$ è un'[applicazione](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-applicazione) $M_1\ M_2$:
 > 	$$
 > 	T[N / y] = (M_1\ M_2)[N / y] \overset{\text{def}}{=} M_1[N / y]\ M_2[N / y]
 > 	$$
@@ -538,9 +538,9 @@ trucco per ricordarsi come fare la sostituzione
 
 ## 2.2 - $\alpha$-conversione
 
-Abbiamo detto che le [funzioni matematiche](Funzioni.md#^definizione-funzione) sono quindi un modo per rappresentare in maniera generica una [relazione](Relazioni%20tra%20insiemi.md#^definizione-relazione-n-aria) tra due [insiemi](Teoria%20degli%20insiemi.md#^definizione-insieme).
+Abbiamo detto che le [funzioni matematiche](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) sono quindi un modo per rappresentare in maniera generica una [relazione](Relazioni%20tra%20insiemi.md#^definizione-relazione-n-aria) tra due [insiemi](Teoria%20degli%20insiemi.md#^definizione-insieme).
 
-Per esempio, la [relazione](Relazioni%20tra%20insiemi.md#^definizione-relazione-n-aria) che associa a ogni numero naturale $x$ il suo quadrato $x^2$ (anch'esso nell'insieme dei numeri naturali $\mathbb{N}$) possiamo rappresentarla con la [funzione](Funzioni.md#^definizione-funzione)
+Per esempio, la [relazione](Relazioni%20tra%20insiemi.md#^definizione-relazione-n-aria) che associa a ogni numero naturale $x$ il suo quadrato $x^2$ (anch'esso nell'insieme dei numeri naturali $\mathbb{N}$) possiamo rappresentarla con la [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione)
 
 $$
 \begin{align*}
@@ -549,7 +549,7 @@ f \colon & \mathbb{N} \to \mathbb{N} \\
 \end{align*}
 $$
 
-Ma al posto di $x$ potremmo usare un'altra variabile per descrivere la [funzione](Funzioni.md#^definizione-funzione) mantenendo invariato il suo significato, per esempio $y$:
+Ma al posto di $x$ potremmo usare un'altra variabile per descrivere la [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) mantenendo invariato il suo significato, per esempio $y$:
 
 $$
 \begin{align*}
@@ -567,17 +567,17 @@ f \colon & \mathbb{N} \to \mathbb{N} \\
 \end{align*}
 $$
 
-Queste tre rappresentazioni sono perfettamente equivalenti e, nell'ambito del [$\lambda$-calcolo](Lambda-calcolo.md#^definizione-lambda-calcolo), Alonzo Church decise di chiamare il processo di rinominare le variabili di una [funzione](Funzioni.md#^definizione-funzione) con il nome di [_$\alpha$-conversione_](Lambda-calcolo.md#^definizione-alfa-conversione).
+Queste tre rappresentazioni sono perfettamente equivalenti e, nell'ambito del [$\lambda$-calcolo](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-lambda-calcolo), Alonzo Church decise di chiamare il processo di rinominare le variabili di una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) con il nome di [_$\alpha$-conversione_](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-alfa-conversione).
 
 > [!definizione]+ Definizione: $\alpha$-conversione
 > 
-> L'**$\alpha$-conversione**, denotata con $\equiv_\alpha$, è una [relazione binaria](Relazioni%20tra%20insiemi.md#^definizione-relazione-n-aria) tra due [astrazioni](Lambda-calcolo.md#^definizione-astrazione) $\lambda x.M$ e $\lambda y.M$ che permette di rinominare la [variabile legata](Lambda-calcolo.md#^definizione-variabili-libere-e-legate) $x$ in un'altra [variabile legata](Lambda-calcolo.md#^definizione-variabili-libere-e-legate) $y$ senza alterare il significato del [termine](Lambda-calcolo.md#^definizione-termine):
+> L'**$\alpha$-conversione**, denotata con $\equiv_\alpha$, è una [relazione binaria](Relazioni%20tra%20insiemi.md#^definizione-relazione-n-aria) tra due [astrazioni](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-astrazione) $\lambda x.M$ e $\lambda y.M$ che permette di rinominare la [variabile legata](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-variabili-libere-e-legate) $x$ in un'altra [variabile legata](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-variabili-libere-e-legate) $y$ senza alterare il significato del [termine](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-termine):
 > 
 > $$
 > y \notin \text{fv(M)} \iff \lambda x.M \equiv_\alpha \lambda y.M [y / x]
 > $$
 > 
-> Le due [astrazioni](Lambda-calcolo.md#^definizione-astrazione) $\lambda x.M$ e $\lambda y.M$ si dicono **_$\alpha$-equivalenti_**.
+> Le due [astrazioni](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-astrazione) $\lambda x.M$ e $\lambda y.M$ si dicono **_$\alpha$-equivalenti_**.
 ^definizione-alfa-conversione
 
 %% 
@@ -596,15 +596,15 @@ $$
 
 ## 2.3 - $\beta$-riduzione
 
-In matematica abbiamo che, data per esempio una [funzione](Funzioni.md#^definizione-funzione) $f(x) = x^2 + 2x + 1$, allora $f(5) = 5^2 + 2 \cdot 5 + 1 = 36$.
+In matematica abbiamo che, data per esempio una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f(x) = x^2 + 2x + 1$, allora $f(5) = 5^2 + 2 \cdot 5 + 1 = 36$.
 
-Nell'ambito del [$\lambda$-calcolo](Lambda-calcolo.md#^definizione-lambda-calcolo), [applicare](Lambda-calcolo.md#^definizione-applicazione) un'[astrazione](Lambda-calcolo.md#^definizione-astrazione) $\lambda x.M$ a un argomento $N$ significa valutare il corpo della [funzione](Lambda-calcolo.md#^definizione-astrazione) $M$ in cui ogni occorrenza della [variabile libera](Lambda-calcolo.md#^definizione-variabili-libere-e-legate) $x$ è stata [sostituita](Lambda-calcolo.md#^definizione-sostituzione) da $N$. Per intenderci, nell'esempio di prima abbiamo valutato $f(x)$ [applicandola](Lambda-calcolo.md#^definizione-applicazione) all'argomento%% link %% $5$.
+Nell'ambito del [$\lambda$-calcolo](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-lambda-calcolo), [applicare](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-applicazione) un'[astrazione](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-astrazione) $\lambda x.M$ a un argomento $N$ significa valutare il corpo della [funzione](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-astrazione) $M$ in cui ogni occorrenza della [variabile libera](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-variabili-libere-e-legate) $x$ è stata [sostituita](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-sostituzione) da $N$. Per intenderci, nell'esempio di prima abbiamo valutato $f(x)$ [applicandola](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-applicazione) all'argomento%% link %% $5$.
 
-Questa idea è alla base della [_$\beta$-riduzione_](Lambda-calcolo.md#^definizione-beta-riduzione).
+Questa idea è alla base della [_$\beta$-riduzione_](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-beta-riduzione).
 
 > [!definizione]+ Definizione: $\beta$-riduzione
 > 
-> La **$\beta$-riduzione**, denotata con $\to_\beta$, è l'operazione che permette di [sostituire](Lambda-calcolo.md#^definizione-sostituzione) in un'[applicazione](Lambda-calcolo.md#^definizione-applicazione) $(\lambda x.M)\ N$ l'argomento $x$ dell'[astrazione](Lambda-calcolo.md#^definizione-astrazione) con l'argomento $N$:
+> La **$\beta$-riduzione**, denotata con $\to_\beta$, è l'operazione che permette di [sostituire](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-sostituzione) in un'[applicazione](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-applicazione) $(\lambda x.M)\ N$ l'argomento $x$ dell'[astrazione](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-astrazione) con l'argomento $N$:
 > 
 > $$
 > (\lambda x.M)\ N \to_\beta M[N / x]
@@ -624,7 +624,7 @@ Questa idea è alla base della [_$\beta$-riduzione_](Lambda-calcolo.md#^definiz
 
 > [!esempio]- Esempi di $\beta$-riduzione
 > 
-> Ecco qualche esempio di [$\beta$-riduzione](Lambda-calcolo.md#^definizione-beta-riduzione) correttamente svolta:
+> Ecco qualche esempio di [$\beta$-riduzione](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-beta-riduzione) correttamente svolta:
 > 
 > $$
 > \begin{align*}
@@ -667,7 +667,7 @@ $$
 
 ## 2.4 - $\eta$-riduzione
 
-Prendiamo un esempio di [$\beta$-riduzione](Lambda-calcolo.md#^definizione-beta-riduzione):
+Prendiamo un esempio di [$\beta$-riduzione](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-beta-riduzione):
 
 $$
 \begin{align*}
@@ -675,9 +675,9 @@ $$
 \end{align*}
 $$
 
-Dal momento che l'[applicazione](Lambda-calcolo.md#^definizione-applicazione) della [funzione](Lambda-calcolo.md#^definizione-astrazione) $(\lambda x.M\ x)$ all'argomento $N$ e l'[applicazione](Lambda-calcolo.md#^definizione-applicazione) della [funzione](Lambda-calcolo.md#^definizione-astrazione) $M$ all'argomento $N$ generano in entrambi i casi $M\ N$, per il principio di estensionalità delle funzioni%% link %% potremmo dire che $(\lambda x.M\ x)$ e $M$ sono due [funzioni](Funzioni.md#^definizione-funzione) equivalenti, quindi l'una deve essere trasformabile nell'altra attraverso una [$\beta$-riduzione](Lambda-calcolo.md#^definizione-beta-riduzione).
+Dal momento che l'[applicazione](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-applicazione) della [funzione](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-astrazione) $(\lambda x.M\ x)$ all'argomento $N$ e l'[applicazione](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-applicazione) della [funzione](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-astrazione) $M$ all'argomento $N$ generano in entrambi i casi $M\ N$, per il principio di estensionalità delle funzioni%% link %% potremmo dire che $(\lambda x.M\ x)$ e $M$ sono due [funzioni](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) equivalenti, quindi l'una deve essere trasformabile nell'altra attraverso una [$\beta$-riduzione](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-beta-riduzione).
 
-Tuttavia, però, non in tutti i casi può valere la [$\beta$-riduzione](Lambda-calcolo.md#^definizione-beta-riduzione) che da $(\lambda x.M\ x)$ ci porta a $M$ o viceversa (attenzione: per poter applicare la [$\beta$-riduzione](Lambda-calcolo.md#^definizione-beta-riduzione) e ottenere $M$ ci serve avere $(\lambda x.M)\ x$ che non è equivalente a $(\lambda x.M\ x)$!):
+Tuttavia, però, non in tutti i casi può valere la [$\beta$-riduzione](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-beta-riduzione) che da $(\lambda x.M\ x)$ ci porta a $M$ o viceversa (attenzione: per poter applicare la [$\beta$-riduzione](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-beta-riduzione) e ottenere $M$ ci serve avere $(\lambda x.M)\ x$ che non è equivalente a $(\lambda x.M\ x)$!):
 
 $$
 \begin{align*}
@@ -686,11 +686,11 @@ M \not\to_\beta (\lambda x.M\ x)
 \end{align*}
 $$
 
-Ciò ci fa pensare che, per continuare a far valere correttamente il principio di estensionalità delle funzioni%% link %%, la [$\beta$-riduzione](Lambda-calcolo.md#^definizione-beta-riduzione) da sola non ci basta (come, per esempio, in questi casi appena visti): abbiamo bisogno di introdurre quindi una nuova operazione, la [_$\eta$-riduzione_](Lambda-calcolo.md#^definizione-eta-riduzione).
+Ciò ci fa pensare che, per continuare a far valere correttamente il principio di estensionalità delle funzioni%% link %%, la [$\beta$-riduzione](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-beta-riduzione) da sola non ci basta (come, per esempio, in questi casi appena visti): abbiamo bisogno di introdurre quindi una nuova operazione, la [_$\eta$-riduzione_](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-eta-riduzione).
 
 > [!definizione]+ Definizione: $\eta$-riduzione
 > 
-> L'**$\eta$-riduzione**, denotata con $\to_\eta$, è l'operazione che permette di ridurre un'[astrazione](Lambda-calcolo.md#^definizione-astrazione) $\lambda x.M\ x$ nel [termine](Lambda-calcolo.md#^definizione-termine) $M$:
+> L'**$\eta$-riduzione**, denotata con $\to_\eta$, è l'operazione che permette di ridurre un'[astrazione](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-astrazione) $\lambda x.M\ x$ nel [termine](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-termine) $M$:
 > 
 > $$
 > \lambda x.M\ x \to_\eta M
@@ -710,20 +710,20 @@ Ciò ci fa pensare che, per continuare a far valere correttamente il principio d
 
 ## 2.5 - Riduzione singola e multipla
 
-Durante lo svolgimento di [$\beta$-riduzioni](Lambda-calcolo.md#^definizione-beta-riduzione) ed [$\eta$-riduzioni](Lambda-calcolo.md#^definizione-eta-riduzione) è comodo alcune volte "generalizzare" il concetto di _riduzione_ senza specificare quale delle due si sta applicando: per questo motivo, chiamiamo _[riduzione singola](Lambda-calcolo.md#^definizione-riduzione-singola)_, denotata con $\to$, l'uso generale di una delle due riduzioni tra la [$\beta$-riduzione](Lambda-calcolo.md#^definizione-beta-riduzione) e l'[$\eta$-riduzione](Lambda-calcolo.md#^definizione-eta-riduzione).
+Durante lo svolgimento di [$\beta$-riduzioni](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-beta-riduzione) ed [$\eta$-riduzioni](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-eta-riduzione) è comodo alcune volte "generalizzare" il concetto di _riduzione_ senza specificare quale delle due si sta applicando: per questo motivo, chiamiamo _[riduzione singola](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-riduzione-singola)_, denotata con $\to$, l'uso generale di una delle due riduzioni tra la [$\beta$-riduzione](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-beta-riduzione) e l'[$\eta$-riduzione](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-eta-riduzione).
 
 > [!definizione]+ Definizione: riduzione singola
 > 
-> Una **riduzione singola** (o, più semplicemente, **riduzione**), denotata con $\to$, è un singolo passo di [$\beta$-riduzione](Lambda-calcolo.md#^definizione-beta-riduzione) o di [$\eta$-riduzione](Lambda-calcolo.md#^definizione-eta-riduzione).
+> Una **riduzione singola** (o, più semplicemente, **riduzione**), denotata con $\to$, è un singolo passo di [$\beta$-riduzione](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-beta-riduzione) o di [$\eta$-riduzione](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-eta-riduzione).
 > 
 > $M$ si dice **riducibile** in $N$.
 ^definizione-riduzione-singola
 
-Avendo definito formalmente la [riduzione singola](Lambda-calcolo.md#^definizione-riduzione-singola), possiamo ora generalizzare ulteriormente più passi di riduzione in una sola operazione, senza avere la necessità di esplicitarli tutti: definiamo quindi la [_riduzione multipla_](Lambda-calcolo.md#^definizione-riduzione-multipla).
+Avendo definito formalmente la [riduzione singola](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-riduzione-singola), possiamo ora generalizzare ulteriormente più passi di riduzione in una sola operazione, senza avere la necessità di esplicitarli tutti: definiamo quindi la [_riduzione multipla_](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-riduzione-multipla).
 
 > [!definizione]+ Definizione: riduzione multipla
 > 
-> Una **riduzione multipla**, denotata con $\Rightarrow$ (o, in alcuni casi, con $\to^\star$), è una chiusura riflessiva e transitiva della relazione di [riduzione singola](Lambda-calcolo.md#^definizione-riduzione-singola), ossia la più piccola relazione tale che:
+> Una **riduzione multipla**, denotata con $\Rightarrow$ (o, in alcuni casi, con $\to^\star$), è una chiusura riflessiva e transitiva della relazione di [riduzione singola](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-riduzione-singola), ossia la più piccola relazione tale che:
 > 
 > - Riflessività (zero passi sono ammessi): $M \implies M$.
 > - Un passo è ammesso: $(M \to N) \implies (M \Rightarrow N)$.
@@ -734,13 +734,13 @@ Avendo definito formalmente la [riduzione singola](Lambda-calcolo.md#^definizio
 
 ## 2.6 - Conversione
 
-La [riduzione multipla](Lambda-calcolo.md#^definizione-riduzione-multipla) è una [relazione](Relazioni%20tra%20insiemi.md#^definizione-relazione-n-aria) tra due [termini](Lambda-calcolo.md#^definizione-termine) che può essere interpretata come una sorta di "equivalenza" tra di essi: se abbiamo che $M \Rightarrow N$, allora possiamo dedurre che in qualche modo dal [termine](Lambda-calcolo.md#^definizione-termine) $M$ si può arrivare al [termine](Lambda-calcolo.md#^definizione-termine) $N$, seppur con più di qualche passaggio di [riduzione singola](Lambda-calcolo.md#^definizione-riduzione-singola). Viceversa, facendo lo stesso discorso per le _espansioni_, cioè [$\beta$-espansione](Lambda-calcolo.md#^definizione-beta-riduzione) ed [$\eta$-espansione](Lambda-calcolo.md#^definizione-eta-riduzione), si potrebbe dire che da $N$ possiamo risalire a $M$. Insomma, si potrebbe dire che $M$ ed $N$ sono uguali _semanticamente_, cioè rappresentano la stessa [funzione](Lambda-calcolo.md#^definizione-astrazione).
+La [riduzione multipla](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-riduzione-multipla) è una [relazione](Relazioni%20tra%20insiemi.md#^definizione-relazione-n-aria) tra due [termini](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-termine) che può essere interpretata come una sorta di "equivalenza" tra di essi: se abbiamo che $M \Rightarrow N$, allora possiamo dedurre che in qualche modo dal [termine](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-termine) $M$ si può arrivare al [termine](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-termine) $N$, seppur con più di qualche passaggio di [riduzione singola](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-riduzione-singola). Viceversa, facendo lo stesso discorso per le _espansioni_, cioè [$\beta$-espansione](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-beta-riduzione) ed [$\eta$-espansione](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-eta-riduzione), si potrebbe dire che da $N$ possiamo risalire a $M$. Insomma, si potrebbe dire che $M$ ed $N$ sono uguali _semanticamente_, cioè rappresentano la stessa [funzione](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-astrazione).
 
-A questa intercambiabilità tra [termini](Lambda-calcolo.md#^definizione-termine) collegati da una [riduzione multipla](Lambda-calcolo.md#^definizione-riduzione-multipla) diamo il nome di [_conversione_](Lambda-calcolo.md#^definizione-conversione).
+A questa intercambiabilità tra [termini](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-termine) collegati da una [riduzione multipla](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-riduzione-multipla) diamo il nome di [_conversione_](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-conversione).
 
 > [!definizione]+ Definizione: conversione
 > 
-> Sia $\Lambda$ l'[insieme](Teoria%20degli%20insiemi.md#^definizione-insieme) di [termini](Lambda-calcolo.md#^definizione-termine) del [$\lambda$-calcolo](Lambda-calcolo.md#^definizione-lambda-calcolo). La [relazione binaria](Relazioni%20tra%20insiemi.md#^definizione-relazione-n-aria) $\Leftrightarrow\, \subseteq \Lambda \times \Lambda$ è detta **conversione** ed è definita come segue:
+> Sia $\Lambda$ l'[insieme](Teoria%20degli%20insiemi.md#^definizione-insieme) di [termini](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-termine) del [$\lambda$-calcolo](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-lambda-calcolo). La [relazione binaria](Relazioni%20tra%20insiemi.md#^definizione-relazione-n-aria) $\Leftrightarrow\, \subseteq \Lambda \times \Lambda$ è detta **conversione** ed è definita come segue:
 > 
 > $$
 > \forall M,N \in \Lambda (M \Leftrightarrow N \iff (M \Rightarrow N \lor N \Rightarrow M))
@@ -776,7 +776,7 @@ $$
 
 > [!osservazione]+ Osservazione: $\beta$-riduzioni che non terminano
 > 
-> Consideriamo il seguente esempio di [$\beta$-riduzione](Lambda-calcolo.md#^definizione-beta-riduzione):
+> Consideriamo il seguente esempio di [$\beta$-riduzione](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-beta-riduzione):
 > 
 > $$
 > \begin{align*}
@@ -786,9 +786,9 @@ $$
 > \end{align*}
 > $$
 > 
-> Come possiamo notare, ogni passo di [$\beta$-riduzione](Lambda-calcolo.md#^definizione-beta-riduzione) non ci permette di ridurre ulteriormente il [termine](Lambda-calcolo.md#^definizione-termine) ma ci fa ritornare puntualmente allo stato in cui è nella forma $(\lambda x.x\ x)\ (\lambda y.y\ y)$: da ciò possiamo evincere che la [$\beta$-riduzione](Lambda-calcolo.md#^definizione-beta-riduzione) in alcuni casi può anche non terminare mai.
+> Come possiamo notare, ogni passo di [$\beta$-riduzione](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-beta-riduzione) non ci permette di ridurre ulteriormente il [termine](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-termine) ma ci fa ritornare puntualmente allo stato in cui è nella forma $(\lambda x.x\ x)\ (\lambda y.y\ y)$: da ciò possiamo evincere che la [$\beta$-riduzione](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-beta-riduzione) in alcuni casi può anche non terminare mai.
 
-Questo particolare [termine](Lambda-calcolo.md#^definizione-termine) $(\lambda x.x\ x)\ (\lambda y.y\ y)$ è un [combinatore](Lambda-calcolo.md#^definizione-combinatore) (perché ha solo [variabili legate](Lambda-calcolo.md#^definizione-variabili-libere-e-legate)) e scopriremo più tardi che è un [combinatore](Lambda-calcolo.md#^definizione-combinatore) molto famoso, ossia il _combinatore di punto fisso $Y$_%% link %%.
+Questo particolare [termine](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-termine) $(\lambda x.x\ x)\ (\lambda y.y\ y)$ è un [combinatore](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-combinatore) (perché ha solo [variabili legate](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-variabili-libere-e-legate)) e scopriremo più tardi che è un [combinatore](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-combinatore) molto famoso, ossia il _combinatore di punto fisso $Y$_%% link %%.
 
 %% 
 Non tutti i lambda termini hanno forma normale e la beta riduzione non ha sempre lunghezza finita. Questo fenomeno rappresenta il fatto che il calcolo di un programma può procedere indefinitamente e divergere e permette di rappresentare [funzioni parziali](https://it.wikipedia.org/w/index.php?title=Funzioni_parziali&action=edit&redlink=1 "Funzioni parziali (la pagina non esiste)").
@@ -797,17 +797,17 @@ L'esempio classico di divergenza è costruibile a partire dal termine duplicator
 
 %%
 
-Intanto, ai [termini](Lambda-calcolo.md#^definizione-termine) che prima o poi arrivano a un certo punto in cui non possono essere più [ridotti](Lambda-calcolo.md#^definizione-beta-riduzione) diciamo che sono in [_forma normale_](Lambda-calcolo.md#^definizione-forma-normale).
+Intanto, ai [termini](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-termine) che prima o poi arrivano a un certo punto in cui non possono essere più [ridotti](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-beta-riduzione) diciamo che sono in [_forma normale_](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-forma-normale).
 
 > [!definizione]+ Definizione: forma normale
 > 
-> Nel [$\lambda$-calcolo](Lambda-calcolo.md#^definizione-lambda-calcolo), un [termine](Lambda-calcolo.md#^definizione-termine) $M$ si dice che è in **forma normale** e si denota con $M \not\to$ se non può più essere [ridotto](Lambda-calcolo.md#^definizione-riduzione-singola), ovvero se **non** esiste un altro [termine](Lambda-calcolo.md#^definizione-termine) $N$ tale che $M \to N$:
+> Nel [$\lambda$-calcolo](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-lambda-calcolo), un [termine](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-termine) $M$ si dice che è in **forma normale** e si denota con $M \not\to$ se non può più essere [ridotto](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-riduzione-singola), ovvero se **non** esiste un altro [termine](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-termine) $N$ tale che $M \to N$:
 > 
 > $$
 > \forall M \in \Lambda \big( (M \not\to) \iff \not\exists N \in \Lambda (M \to N) \big)
 > $$
 > 
-> dove $\Lambda$ è l'[insieme](Teoria%20degli%20insiemi.md#^definizione-insieme) di [termini](Lambda-calcolo.md#^definizione-termine) del [$\lambda$-calcolo](Lambda-calcolo.md#^definizione-lambda-calcolo).
+> dove $\Lambda$ è l'[insieme](Teoria%20degli%20insiemi.md#^definizione-insieme) di [termini](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-termine) del [$\lambda$-calcolo](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-lambda-calcolo).
 ^definizione-forma-normale
 
 ## 3.1 - Confluenza
@@ -837,8 +837,8 @@ Quindi la confluenza vale finché non ci sono di mezzo modifiche della memoria (
 
 > [!teorema]+ Teorema della confluenza
 > 
-> Sia $\Lambda$ l'[insieme](Teoria%20degli%20insiemi.md#^definizione-insieme) di [termini](Lambda-calcolo.md#^definizione-termine) del [$\lambda$-calcolo](Lambda-calcolo.md#^definizione-lambda-calcolo).
-> Dati tre [termini](Lambda-calcolo.md#^definizione-termine) $M, N_1, N_2 \in \Lambda$, con $M \Rightarrow N_1$ e $M \Rightarrow N_2$, allora esiste un [termine](Lambda-calcolo.md#^definizione-termine) $N \in \Lambda$ tale che $N_1 \Rightarrow N$ e $N_2 \Rightarrow N$.
+> Sia $\Lambda$ l'[insieme](Teoria%20degli%20insiemi.md#^definizione-insieme) di [termini](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-termine) del [$\lambda$-calcolo](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-lambda-calcolo).
+> Dati tre [termini](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-termine) $M, N_1, N_2 \in \Lambda$, con $M \Rightarrow N_1$ e $M \Rightarrow N_2$, allora esiste un [termine](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-termine) $N \in \Lambda$ tale che $N_1 \Rightarrow N$ e $N_2 \Rightarrow N$.
 > 
 > $$
 > \forall M,N_1,N_2 \in \Lambda \big((M \Rightarrow N_1 \land M \Rightarrow N_2) \implies \exists N \in \Lambda (N_1 \Rightarrow N \land N_2 \Rightarrow N)\big)
@@ -851,21 +851,21 @@ Grazie alla forma normale, possiamo aggiungere un importante corollario al teore
 
 > [!corollario]+ Corollario del teorema della confluenza
 > 
-> La [forma normale](Lambda-calcolo.md#^definizione-forma-normale) di un [termine](Lambda-calcolo.md#^definizione-termine) $M$, se esiste, è **unica** (a meno di [$\alpha$-conversioni](Lambda-calcolo.md#^definizione-alfa-conversione)).
+> La [forma normale](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-forma-normale) di un [termine](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-termine) $M$, se esiste, è **unica** (a meno di [$\alpha$-conversioni](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-alfa-conversione)).
 > 
-> In termini matematici, per ogni [termine](Lambda-calcolo.md#^definizione-termine) $M$, se esistono due [termini](Lambda-calcolo.md#^definizione-termine) $N_1$ ed $N_2$ in [forma normale](Lambda-calcolo.md#^definizione-forma-normale) ($N_1\not\to$ e $N_2\not\to$) nei quali $M$ può essere [ridotto](Lambda-calcolo.md#^definizione-riduzione-singola) ($M \Rightarrow N_1$ e $M \Rightarrow N_2$), allora $N_1$ ed $N_2$ sono [$\alpha$-equivalenti](Lambda-calcolo.md#^definizione-alfa-conversione) ($N_1 \equiv_\alpha N_2$):
+> In termini matematici, per ogni [termine](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-termine) $M$, se esistono due [termini](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-termine) $N_1$ ed $N_2$ in [forma normale](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-forma-normale) ($N_1\not\to$ e $N_2\not\to$) nei quali $M$ può essere [ridotto](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-riduzione-singola) ($M \Rightarrow N_1$ e $M \Rightarrow N_2$), allora $N_1$ ed $N_2$ sono [$\alpha$-equivalenti](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-alfa-conversione) ($N_1 \equiv_\alpha N_2$):
 > 
 > $$
 > \forall M \in  \Lambda , \exists N_1,N_2 \in  \Lambda \Big(\big((M \Rightarrow N_1\not\to)\land(M \Rightarrow N_2\not\to)\big) \implies (N_1 \equiv_\alpha N_2)\Big)
 > $$
 > 
-> dove $\Lambda$ è l'[insieme](Teoria%20degli%20insiemi.md#^definizione-insieme) di [termini](Lambda-calcolo.md#^definizione-termine) del [$\lambda$-calcolo](Lambda-calcolo.md#^definizione-lambda-calcolo).
+> dove $\Lambda$ è l'[insieme](Teoria%20degli%20insiemi.md#^definizione-insieme) di [termini](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-termine) del [$\lambda$-calcolo](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-lambda-calcolo).
 
 %% questo corollario è importantissimo: ci assicura che i nostri programmi in lambda-calcolo si comportano in maniera deterministica %%
 
 %% 
 Dimostrazione per assurdo
-![](Pasted%20image%2020251128201000.png)
+![dimostrazione per assurdo](Pasted%20image%2020251128201000.png)
 %%
 
 ## 3.2 - Strategie di riduzione
@@ -876,13 +876,13 @@ introduzione alle strategie di riduzione
 
 >[!definizione]+ Definizione: ordine applicativo
 > 
-> L'**ordine applicativo** è una strategia di [riduzione](Lambda-calcolo.md#^definizione-riduzione-singola) in cui [applicare](Lambda-calcolo.md#^definizione-applicazione) una [funzione](Lambda-calcolo.md#^definizione-astrazione) a un argomento significa prima valutare l'argomento e poi sostituire il valore ottenuto nel corpo della [funzione](Lambda-calcolo.md#^definizione-astrazione). In altre parole, in un [termine](Lambda-calcolo.md#^definizione-termine) del tipo
+> L'**ordine applicativo** è una strategia di [riduzione](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-riduzione-singola) in cui [applicare](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-applicazione) una [funzione](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-astrazione) a un argomento significa prima valutare l'argomento e poi sostituire il valore ottenuto nel corpo della [funzione](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-astrazione). In altre parole, in un [termine](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-termine) del tipo
 > 
 > $$
 > ( \lambda x.x)\ (( \lambda y.y)\ z)
 > $$
 > 
-> viene scelto il [$\beta$-redex](Lambda-calcolo.md#^definizione-beta-riduzione) più a sinistra e più interno, ossia in questo caso $(\lambda y.y)\ z$:
+> viene scelto il [$\beta$-redex](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-beta-riduzione) più a sinistra e più interno, ossia in questo caso $(\lambda y.y)\ z$:
 > 
 > $$
 > ( \lambda x.x)\ (( \lambda y.y)\ z) \to_\beta ( \lambda x.x)\ z
@@ -893,13 +893,13 @@ introduzione alle strategie di riduzione
 
 > [!definizione]+ Definizione: ordine normale
 > 
-> L'**ordine normale** è una strategia di [riduzione](Lambda-calcolo.md#^definizione-riduzione-singola) in cui [applicare](Lambda-calcolo.md#^definizione-applicazione) una [funzione](Lambda-calcolo.md#^definizione-astrazione) a un argomento significa sostituire l'argomento nel corpo della [funzione](Lambda-calcolo.md#^definizione-astrazione). In altre parole, in un [termine](Lambda-calcolo.md#^definizione-termine) del tipo
+> L'**ordine normale** è una strategia di [riduzione](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-riduzione-singola) in cui [applicare](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-applicazione) una [funzione](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-astrazione) a un argomento significa sostituire l'argomento nel corpo della [funzione](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-astrazione). In altre parole, in un [termine](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-termine) del tipo
 > 
 > $$
 > ( \lambda x.x)\ (( \lambda y.y)\ z)
 > $$
 > 
-> viene scelto il [$\beta$-redex](Lambda-calcolo.md#^definizione-beta-riduzione) più a sinistra e più esterno, ossia in questo caso l'intero [termine](Lambda-calcolo.md#^definizione-termine):
+> viene scelto il [$\beta$-redex](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-beta-riduzione) più a sinistra e più esterno, ossia in questo caso l'intero [termine](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-termine):
 > 
 > $$
 > ( \lambda x.x)\ (( \lambda y.y)\ z) \to_\beta ( \lambda y.y)\ z
@@ -910,15 +910,15 @@ introduzione alle strategie di riduzione
 
 > [!osservazione]+ Osservazione: cosa scegliere tra ordine applicativo e ordine applicativo
 > 
-> Le due strategie di riduzione viste, ossia l'[ordine applicativo](Lambda-calcolo.md#^definizione-ordine-applicativo) e l'[ordine normale](Lambda-calcolo.md#^definizione-ordine-normale), **non** sono equivalenti, e spesso conviene usare una al posto dell'altra.
+> Le due strategie di riduzione viste, ossia l'[ordine applicativo](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-ordine-applicativo) e l'[ordine normale](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-ordine-normale), **non** sono equivalenti, e spesso conviene usare una al posto dell'altra.
 > 
-> Prendiamo come esempio il seguente [termine](Lambda-calcolo.md#^definizione-termine):
+> Prendiamo come esempio il seguente [termine](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-termine):
 > 
 > $$
 > ( \lambda x.y)\ (( \lambda z.z)\ ( \lambda z.z))
 > $$
 > 
-> Se eseguito con l'[ordine applicativo](Lambda-calcolo.md#^definizione-ordine-applicativo), otteniamo le seguenti [$\beta$-riduzioni](Lambda-calcolo.md#^definizione-beta-riduzione):
+> Se eseguito con l'[ordine applicativo](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-ordine-applicativo), otteniamo le seguenti [$\beta$-riduzioni](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-beta-riduzione):
 > 
 > $$
 > \begin{align*}
@@ -927,7 +927,7 @@ introduzione alle strategie di riduzione
 > \end{align*}
 > $$
 > 
-> Se invece viene eseguito con l'[ordine normale](Lambda-calcolo.md#^definizione-ordine-normale), otteniamo la seguente [$\beta$-riduzione](Lambda-calcolo.md#^definizione-beta-riduzione):
+> Se invece viene eseguito con l'[ordine normale](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-ordine-normale), otteniamo la seguente [$\beta$-riduzione](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-beta-riduzione):
 > 
 > $$
 > \begin{align*}
@@ -935,15 +935,15 @@ introduzione alle strategie di riduzione
 > \end{align*}
 > $$
 > 
-> Notiamo quindi che in questo caso l'[ordine normale](Lambda-calcolo.md#^definizione-ordine-normale) conviene, perché in questo modo l'argomento $x$ non viene proprio valutato.
+> Notiamo quindi che in questo caso l'[ordine normale](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-ordine-normale) conviene, perché in questo modo l'argomento $x$ non viene proprio valutato.
 > 
-> Al contrario, consideriamo il seguente [termine](Lambda-calcolo.md#^definizione-termine):
+> Al contrario, consideriamo il seguente [termine](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-termine):
 > 
 > $$
 > ( \lambda x.x\ x)\ (( \lambda y.y)\ ( \lambda z.z))
 > $$
 > 
-> Se eseguito con l'[ordine applicativo](Lambda-calcolo.md#^definizione-ordine-applicativo), otteniamo le seguenti [$\beta$-riduzioni](Lambda-calcolo.md#^definizione-beta-riduzione):
+> Se eseguito con l'[ordine applicativo](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-ordine-applicativo), otteniamo le seguenti [$\beta$-riduzioni](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-beta-riduzione):
 > 
 > $$
 > \begin{align*}
@@ -953,7 +953,7 @@ introduzione alle strategie di riduzione
 > \end{align*}
 > $$
 > 
-> Se invece viene eseguito con l'[ordine normale](Lambda-calcolo.md#^definizione-ordine-normale), otteniamo le seguenti [$\beta$-riduzioni](Lambda-calcolo.md#^definizione-beta-riduzione):
+> Se invece viene eseguito con l'[ordine normale](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-ordine-normale), otteniamo le seguenti [$\beta$-riduzioni](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-beta-riduzione):
 > 
 > $$
 > \begin{align*}
@@ -964,18 +964,18 @@ introduzione alle strategie di riduzione
 > \end{align*}
 > $$
 > 
-> Possiamo notare come invece, in questo caso, convenga usare l'[ordine applicativo](Lambda-calcolo.md#^definizione-ordine-applicativo) perché l'argomento $x$ viene usato due volte e in quest'ultimo caso viene valutato entrambe le volte in due step diversi.
+> Possiamo notare come invece, in questo caso, convenga usare l'[ordine applicativo](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-ordine-applicativo) perché l'argomento $x$ viene usato due volte e in quest'ultimo caso viene valutato entrambe le volte in due step diversi.
 
 %% 
 osservazione:
-per ottimizzare l'ordine normale nei casi in cui viene valutata più volte la stessa [$\lambda$-espressione](Lambda-calcolo.md#^definizione-termine), si può costruire un meccanismo di caching: il risultato della valutazione di ogni [$\lambda$-espressione](Lambda-calcolo.md#^definizione-termine) viene memorizzato, così che nel caso in cui si dovesse ripresentare in futuro, si sa già direttamente qual è il risultato
+per ottimizzare l'ordine normale nei casi in cui viene valutata più volte la stessa [$\lambda$-espressione](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-termine), si può costruire un meccanismo di caching: il risultato della valutazione di ogni [$\lambda$-espressione](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-termine) viene memorizzato, così che nel caso in cui si dovesse ripresentare in futuro, si sa già direttamente qual è il risultato
 %%
 
 ## 3.3 - Normalizzazione
 
 > [!teorema]+ Teorema della normalizzazione
 > 
-> Dati due [termini](Lambda-calcolo.md#^definizione-termine) $M,N$, se $M$ è [convertibile](Lambda-calcolo.md#^definizione-conversione) in $N$ (cioè $M \Leftrightarrow N$) ed $N$ è in [forma normale](Lambda-calcolo.md#^definizione-forma-normale) ($N\not\to$), allora esiste una [riduzione multipla](Lambda-calcolo.md#^definizione-riduzione-multipla) composta da [$\beta$-riduzioni](Lambda-calcolo.md#^definizione-beta-riduzione) in [ordine normale](Lambda-calcolo.md#^definizione-ordine-normale) (che indichiamo con $\Rightarrow_{\text{no}}$) che porta da $M$ a $N$:
+> Dati due [termini](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-termine) $M,N$, se $M$ è [convertibile](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-conversione) in $N$ (cioè $M \Leftrightarrow N$) ed $N$ è in [forma normale](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-forma-normale) ($N\not\to$), allora esiste una [riduzione multipla](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-riduzione-multipla) composta da [$\beta$-riduzioni](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-beta-riduzione) in [ordine normale](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-ordine-normale) (che indichiamo con $\Rightarrow_{\text{no}}$) che porta da $M$ a $N$:
 > 
 > $$
 > (M \Leftrightarrow N \land N\not\to) \implies (M \Rightarrow_{\text{no}} N)
@@ -984,13 +984,13 @@ per ottimizzare l'ordine normale nei casi in cui viene valutata più volte la st
 
 > [!osservazione]+ Osservazione: teorema della normalizzazione non vale per l'ordine applicativo
 > 
-> Il [teorema della normalizzazione](Lambda-calcolo.md#^teorema-della-normalizzazione) vale solo se le [$\beta$-riduzioni](Lambda-calcolo.md#^definizione-beta-riduzione) vengono eseguite secondo l'[ordine normale](Lambda-calcolo.md#^definizione-ordine-normale), mentre non vale se si usa l'[ordine applicativo](Lambda-calcolo.md#^definizione-ordine-applicativo). Un esempio di ciò è dato dal seguente [termine](Lambda-calcolo.md#^definizione-termine):
+> Il [teorema della normalizzazione](Informatica/Lambda-calcolo/Lambda-calcolo.md#^teorema-della-normalizzazione) vale solo se le [$\beta$-riduzioni](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-beta-riduzione) vengono eseguite secondo l'[ordine normale](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-ordine-normale), mentre non vale se si usa l'[ordine applicativo](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-ordine-applicativo). Un esempio di ciò è dato dal seguente [termine](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-termine):
 > 
 > $$
 > ( \lambda x.y)\ (( \lambda x.x\ x)\ ( \lambda x.x\ x))
 > $$
 > 
-> Se eseguito con l'[ordine applicativo](Lambda-calcolo.md#^definizione-ordine-applicativo), abbiamo:
+> Se eseguito con l'[ordine applicativo](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-ordine-applicativo), abbiamo:
 > 
 > $$
 > \begin{align*}
@@ -1000,7 +1000,7 @@ per ottimizzare l'ordine normale nei casi in cui viene valutata più volte la st
 > \end{align*}
 > $$
 > 
-> Possiamo notare che il [termine](Lambda-calcolo.md#^definizione-termine), con questa strategia di riduzione, non raggiunge mai la sua [forma normale](Lambda-calcolo.md#^definizione-forma-normale). Al contrario, con l'[ordine normale](Lambda-calcolo.md#^definizione-ordine-normale) abbiamo:
+> Possiamo notare che il [termine](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-termine), con questa strategia di riduzione, non raggiunge mai la sua [forma normale](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-forma-normale). Al contrario, con l'[ordine normale](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-ordine-normale) abbiamo:
 > 
 > $$
 > \begin{align*}
@@ -1009,19 +1009,19 @@ per ottimizzare l'ordine normale nei casi in cui viene valutata più volte la st
 > \end{align*}
 > $$
 > 
-> Con l'[ordine normale](Lambda-calcolo.md#^definizione-ordine-normale) raggiungiamo subito la [forma normale](Lambda-calcolo.md#^definizione-forma-normale).
+> Con l'[ordine normale](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-ordine-normale) raggiungiamo subito la [forma normale](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-forma-normale).
 
 # 4 - Currying
 
-Abbiamo notato che nelle [astrazioni](Lambda-calcolo.md#^definizione-astrazione) possiamo passare come parametri una singola variabile, il che sembra abbastanza limitante se abbiamo bisogno di usare funzioni che necessitano più parametri.
+Abbiamo notato che nelle [astrazioni](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-astrazione) possiamo passare come parametri una singola variabile, il che sembra abbastanza limitante se abbiamo bisogno di usare funzioni che necessitano più parametri.
 
-Possiamo tuttavia usare un piccolo trucchetto sfruttando le funzioni di ordine superiore. Prendendo per esempio due variabili $x$ e $y$ che devono essere passate come parametri alla stessa funzione $x+y$, possiamo creare un'[astrazione](Lambda-calcolo.md#^definizione-astrazione) che ha come parametro $x$ e nel suo corpo prende un'altra [astrazione](Lambda-calcolo.md#^definizione-astrazione) che ha come parametro $y$ e come corpo $x+y$:
+Possiamo tuttavia usare un piccolo trucchetto sfruttando le funzioni di ordine superiore. Prendendo per esempio due variabili $x$ e $y$ che devono essere passate come parametri alla stessa funzione $x+y$, possiamo creare un'[astrazione](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-astrazione) che ha come parametro $x$ e nel suo corpo prende un'altra [astrazione](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-astrazione) che ha come parametro $y$ e come corpo $x+y$:
 
 $$
  \lambda x. \lambda y.x+y
 $$
 
-In questo modo, [applicando](Lambda-calcolo.md#^definizione-applicazione) a quest'[astrazione](Lambda-calcolo.md#^definizione-astrazione) i due valori per i parametri $x$ e $y$ (per esempio, passiamo rispettivamente i valori $2$ e $3$), tramite la [$\beta$-riduzione](Lambda-calcolo.md#^definizione-beta-riduzione) possiamo verificare che otterremo proprio quel che vogliamo:
+In questo modo, [applicando](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-applicazione) a quest'[astrazione](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-astrazione) i due valori per i parametri $x$ e $y$ (per esempio, passiamo rispettivamente i valori $2$ e $3$), tramite la [$\beta$-riduzione](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-beta-riduzione) possiamo verificare che otterremo proprio quel che vogliamo:
 
 $$
 \begin{align*}
@@ -1033,11 +1033,11 @@ $$
 \end{align*}
 $$
 
-Questo metodo di passare molteplici parametri alla stessa [astrazione](Lambda-calcolo.md#^definizione-astrazione) venne chiamato [_currying_](Lambda-calcolo.md#^definizione-currying), in onore del matematico Haskell Curry per il suo apporto al [$\lambda$-calcolo](Lambda-calcolo.md#^definizione-lambda-calcolo).
+Questo metodo di passare molteplici parametri alla stessa [astrazione](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-astrazione) venne chiamato [_currying_](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-currying), in onore del matematico Haskell Curry per il suo apporto al [$\lambda$-calcolo](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-lambda-calcolo).
 
 > [!definizione]+ Definizione: currying
 > 
-> Il **currying** è una tecnica che permette di [applicare](Lambda-calcolo.md#^definizione-applicazione) a un'[astrazione](Lambda-calcolo.md#^definizione-astrazione) con corpo ${\color{#FF7FFF} L }$ più valori ${\color{#FF7F7F} M },{\color{#7FFF7F} N },\ldots,{\color{#7F7FFF} O }$ per ognuno dei suoi argomenti ${\color{#FF7F7F} x },{\color{#7FFF7F} y },\ldots,{\color{#7F7FFF} z }$:
+> Il **currying** è una tecnica che permette di [applicare](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-applicazione) a un'[astrazione](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-astrazione) con corpo ${\color{#FF7FFF} L }$ più valori ${\color{#FF7F7F} M },{\color{#7FFF7F} N },\ldots,{\color{#7F7FFF} O }$ per ognuno dei suoi argomenti ${\color{#FF7F7F} x },{\color{#7FFF7F} y },\ldots,{\color{#7F7FFF} z }$:
 > 
 > $$
 > (\lambda {\color{#FF7F7F} x }.\lambda {\color{#7FFF7F} y }. \ldots .\lambda {\color{#7F7FFF} o }.{\color{#FF7FFF} L })\ {\color{#FF7F7F} M }\ {\color{#7FFF7F} N }\ \ldots\ {\color{#7F7FFF} O } \Leftrightarrow {\color{#FF7FFF} L } [{\color{#FF7F7F} M } / {\color{#FF7F7F} x }][{\color{#7FFF7F} N } / {\color{#7FFF7F} y }]\ldots[{\color{#7F7FFF} O } / {\color{#7F7FFF} z }]

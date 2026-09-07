@@ -28,13 +28,13 @@ Haskell si trova nell'angolo più estremo del quadrante _statico + forte_: il ty
 - dinamica + debole: JavaScript, PHP, Perl
 %%
 
-Come già detto, [Haskell](Haskell.md#^definizione-haskell) ha un sistema di tipi statico%% link %%. Ciò significa che il [tipo](Tipizzazione%20in%20Haskell.md#^definizione-tipo-in-haskell) di ogni espressione è noto a tempo di compilazione%% link %%, il che ci porta ad avere un codice%% Link %% più sicuro. Se scrivi un programma in cui provi a dividere un booleano%% link %% con qualche numero, non ti permette neanche di compilare. Ciò ci va più che bene perché è meglio catturare questo tipo di errori a tempo di compilazione%% link %% anziché far crashare il progrmma. Ogni cosa in [Haskell](Haskell.md#^definizione-haskell) ha un tipo%% so the compiler can reason quite a lot about your program before compiling it. %%.
+Come già detto, [Haskell](Informatica/Lambda-calcolo/Haskell/Haskell.md#^definizione-haskell) ha un sistema di tipi statico%% link %%. Ciò significa che il [tipo](Informatica/Lambda-calcolo/Haskell/Tipizzazione%20in%20Haskell.md#^definizione-tipo-in-haskell) di ogni espressione è noto a tempo di compilazione%% link %%, il che ci porta ad avere un codice%% Link %% più sicuro. Se scrivi un programma in cui provi a dividere un booleano%% link %% con qualche numero, non ti permette neanche di compilare. Ciò ci va più che bene perché è meglio catturare questo tipo di errori a tempo di compilazione%% link %% anziché far crashare il progrmma. Ogni cosa in [Haskell](Informatica/Lambda-calcolo/Haskell/Haskell.md#^definizione-haskell) ha un tipo%% so the compiler can reason quite a lot about your program before compiling it. %%.
 
 > [!definizione]+ Definizione: tipo in Haskell
 > 
-> In [Haskell](Haskell.md#^definizione-haskell), un **tipo** è un'etichetta che descrive quali valori può assumere un'espressione%% link %%. [Haskell](Haskell.md#^definizione-haskell) ha una tipizzazione statica%% Link %%, cioè il **tipo** dell'espressione viene determinato a tempo di compilazione%% link %%, ed è fortemente tipizzato%% link %%, cioè non permette a una espressione di cambiare **tipo** durante l'esecuzione%% o valutazione? %% del programma.
+> In [Haskell](Informatica/Lambda-calcolo/Haskell/Haskell.md#^definizione-haskell), un **tipo** è un'etichetta che descrive quali valori può assumere un'espressione%% link %%. [Haskell](Informatica/Lambda-calcolo/Haskell/Haskell.md#^definizione-haskell) ha una tipizzazione statica%% Link %%, cioè il **tipo** dell'espressione viene determinato a tempo di compilazione%% link %%, ed è fortemente tipizzato%% link %%, cioè non permette a una espressione di cambiare **tipo** durante l'esecuzione%% o valutazione? %% del programma.
 > 
-> [Haskell](Haskell.md#^definizione-haskell) gode inoltre dell'inferenza di tipo%% link %%.
+> [Haskell](Informatica/Lambda-calcolo/Haskell/Haskell.md#^definizione-haskell) gode inoltre dell'inferenza di tipo%% link %%.
 ^definizione-tipo-in-haskell
 
 %%
@@ -87,7 +87,7 @@ attenzione: inferenza =/= debolmente tipizzato: Haskell inferisce il tipo di un'
 
 > [!definizione]+ Definizione: comando `:t` nel GHCi
 > 
-> **`:t`** (abbreviazione di **`:type`**) è un comando di [GHCi](Haskell.md#^definizione-ghci) che mostra la firma di tipo di un'espressione senza valutarla.
+> **`:t`** (abbreviazione di **`:type`**) è un comando di [GHCi](Informatica/Lambda-calcolo/Haskell/Haskell.md#^definizione-ghci) che mostra la firma di tipo di un'espressione senza valutarla.
 ^definizione-comando-t-nel-ghci
 
 Now we’ll use GHCi to examine the types of some expressions. We’ll do that by using the :t command which, followed by any valid expression, tells us its type. Let’s give it a whirl.
@@ -129,12 +129,12 @@ Here’s an overview of some common types.
 
 > [!definizione]+ Definizione: tipo `Int`
 > 
-> **`Int`** è un [tipo](Tipizzazione%20in%20Haskell.md#^definizione-tipo-in-haskell) in [Haskell](Haskell.md#^definizione-haskell) usato per rappresentare i numeri interi%% link %% (in inglese _integer numbers_). È un tipo _bounded_%% link %% e sulle macchine a 32 bit%% link %% l'intervallo di valori corrisponde a $[-2147483648,2147483647]$.
+> **`Int`** è un [tipo](Informatica/Lambda-calcolo/Haskell/Tipizzazione%20in%20Haskell.md#^definizione-tipo-in-haskell) in [Haskell](Informatica/Lambda-calcolo/Haskell/Haskell.md#^definizione-haskell) usato per rappresentare i numeri interi%% link %% (in inglese _integer numbers_). È un tipo _bounded_%% link %% e sulle macchine a 32 bit%% link %% l'intervallo di valori corrisponde a $[-2147483648,2147483647]$.
 ^definizione-tipo-int
 
 > [!definizione]+ Definizione: tipo `Integer`
 > 
-> **`Integer`** è un [tipo](Tipizzazione%20in%20Haskell.md#^definizione-tipo-in-haskell) in [Haskell](Haskell.md#^definizione-haskell) usato per rappresentare i numeri interi%% link %% (in inglese _integer numbers_) ma, a differenza del [tipo `Int`](Tipizzazione%20in%20Haskell.md#^definizione-tipo-int), non è _bounded_%% link %% e, quindi, può essere usato per rappresentare numeri molto più grandi o più piccoli.
+> **`Integer`** è un [tipo](Informatica/Lambda-calcolo/Haskell/Tipizzazione%20in%20Haskell.md#^definizione-tipo-in-haskell) in [Haskell](Informatica/Lambda-calcolo/Haskell/Haskell.md#^definizione-haskell) usato per rappresentare i numeri interi%% link %% (in inglese _integer numbers_) ma, a differenza del [tipo `Int`](Informatica/Lambda-calcolo/Haskell/Tipizzazione%20in%20Haskell.md#^definizione-tipo-int), non è _bounded_%% link %% e, quindi, può essere usato per rappresentare numeri molto più grandi o più piccoli.
 ^definizione-tipo-integer
 
 %% 
@@ -153,7 +153,7 @@ ghci> factorial 50
 
 > [!definizione]+ Definizione: tipo `Float`
 > 
-> **`Float`** è un [tipo](Tipizzazione%20in%20Haskell.md#^definizione-tipo-in-haskell) in [Haskell](Haskell.md#^definizione-haskell) usato per rappresentare i numeri reali a virgola mobile%% Link %% (in inglese _real floating point_) con precisione singola%% link %%.
+> **`Float`** è un [tipo](Informatica/Lambda-calcolo/Haskell/Tipizzazione%20in%20Haskell.md#^definizione-tipo-in-haskell) in [Haskell](Informatica/Lambda-calcolo/Haskell/Haskell.md#^definizione-haskell) usato per rappresentare i numeri reali a virgola mobile%% Link %% (in inglese _real floating point_) con precisione singola%% link %%.
 ^definizione-tipo-float
 
 %% 
@@ -168,7 +168,7 @@ ghci> circumference 4.0
 
 > [!definizione]+ Definizione: tipo `Double`
 > 
-> **`Double`** è un [tipo](Tipizzazione%20in%20Haskell.md#^definizione-tipo-in-haskell) in [Haskell](Haskell.md#^definizione-haskell) usato per rappresentare i numeri reali a virgola mobile%% Link %% (in inglese _real floating point_) con precisione doppia%% link %% (da qui il nome del tipo).
+> **`Double`** è un [tipo](Informatica/Lambda-calcolo/Haskell/Tipizzazione%20in%20Haskell.md#^definizione-tipo-in-haskell) in [Haskell](Informatica/Lambda-calcolo/Haskell/Haskell.md#^definizione-haskell) usato per rappresentare i numeri reali a virgola mobile%% Link %% (in inglese _real floating point_) con precisione doppia%% link %% (da qui il nome del tipo).
 ^definizione-tipo-double
 
 %% 
@@ -183,12 +183,12 @@ ghci> circumference' 4.0
 
 > [!definizione]+ Definizione: tipo `Bool`
 > 
-> **`Bool`** è un [tipo](Tipizzazione%20in%20Haskell.md#^definizione-tipo-in-haskell) in [Haskell](Haskell.md#^definizione-haskell) usato per rappresentare i valori booleani di verità%% link %%. Può assumere solo i valori%% link %% `True` e `False`.
+> **`Bool`** è un [tipo](Informatica/Lambda-calcolo/Haskell/Tipizzazione%20in%20Haskell.md#^definizione-tipo-in-haskell) in [Haskell](Informatica/Lambda-calcolo/Haskell/Haskell.md#^definizione-haskell) usato per rappresentare i valori booleani di verità%% link %%. Può assumere solo i valori%% link %% `True` e `False`.
 ^definizione-tipo-bool
 
 > [!definizione]+ Definizione: tipo `Char`
 > 
-> **`Char`** è un [tipo](Tipizzazione%20in%20Haskell.md#^definizione-tipo-in-haskell) in [Haskell](Haskell.md#^definizione-haskell) usato per rappresentare i caratteri, delimitati da singole virgolette `''`.
+> **`Char`** è un [tipo](Informatica/Lambda-calcolo/Haskell/Tipizzazione%20in%20Haskell.md#^definizione-tipo-in-haskell) in [Haskell](Informatica/Lambda-calcolo/Haskell/Haskell.md#^definizione-haskell) usato per rappresentare i caratteri, delimitati da singole virgolette `''`.
 ^definizione-tipo-char
 
 %% 
@@ -197,7 +197,7 @@ Tuples are types but they are dependent on their length as well as the types of 
 
 # 1 - Variabili di tipi
 
-Secondo te qual è il [tipo](Tipizzazione%20in%20Haskell.md#^definizione-tipo-in-haskell) della [funzione `head`](Sintassi%20di%20base%20di%20Haskell.md#^definizione-funzione-head)? Non è una domanda banale, perché [`head`](Sintassi%20di%20base%20di%20Haskell.md#^definizione-funzione-head) prende una [lista](Sintassi%20di%20base%20di%20Haskell.md#^definizione-lista-in-haskell) di un [tipo](Tipizzazione%20in%20Haskell.md#^definizione-tipo-in-haskell) qualsiasi ne restituisce il primo elemento, quindi quale [tipo](Tipizzazione%20in%20Haskell.md#^definizione-tipo-in-haskell) assume? Controlliamo su [GHCi](Haskell.md#^definizione-ghci):
+Secondo te qual è il [tipo](Informatica/Lambda-calcolo/Haskell/Tipizzazione%20in%20Haskell.md#^definizione-tipo-in-haskell) della [funzione `head`](Informatica/Lambda-calcolo/Haskell/Sintassi%20di%20base%20di%20Haskell.md#^definizione-funzione-head)? Non è una domanda banale, perché [`head`](Informatica/Lambda-calcolo/Haskell/Sintassi%20di%20base%20di%20Haskell.md#^definizione-funzione-head) prende una [lista](Informatica/Lambda-calcolo/Haskell/Sintassi%20di%20base%20di%20Haskell.md#^definizione-lista-in-haskell) di un [tipo](Informatica/Lambda-calcolo/Haskell/Tipizzazione%20in%20Haskell.md#^definizione-tipo-in-haskell) qualsiasi ne restituisce il primo elemento, quindi quale [tipo](Informatica/Lambda-calcolo/Haskell/Tipizzazione%20in%20Haskell.md#^definizione-tipo-in-haskell) assume? Controlliamo su [GHCi](Informatica/Lambda-calcolo/Haskell/Haskell.md#^definizione-ghci):
 
 ```haskell
 ghci> :t head  
@@ -208,12 +208,12 @@ Hmmm! What is this `a`? Is it a type? Remember that we previously stated that ty
 
 > [!definizione]+ Definizione: variabile di tipo
 > 
-> In [Haskell](Haskell.md#^definizione-haskell) una **variabile di tipo** è un segnaposto generico nel [tipo](Tipizzazione%20in%20Haskell.md#^definizione-tipo-in-haskell) di una [funzione](Sintassi%20di%20base%20di%20Haskell.md#^definizione-funzione-in-haskell) o struttura dati%% link %%e generalmente si indica con una singola lettera minuscola (`a`, `b`, `c`, ...).
+> In [Haskell](Informatica/Lambda-calcolo/Haskell/Haskell.md#^definizione-haskell) una **variabile di tipo** è un segnaposto generico nel [tipo](Informatica/Lambda-calcolo/Haskell/Tipizzazione%20in%20Haskell.md#^definizione-tipo-in-haskell) di una [funzione](Informatica/Lambda-calcolo/Haskell/Sintassi%20di%20base%20di%20Haskell.md#^definizione-funzione-in-haskell) o struttura dati%% link %%e generalmente si indica con una singola lettera minuscola (`a`, `b`, `c`, ...).
 ^definizione-variabile-di-tipo
 
 > [!definizione]+ Definizione: funzione polimorfica
 > 
-> In [Haskell](Haskell.md#^definizione-haskell) una **funzione polimorfica** è una [funzione](Sintassi%20di%20base%20di%20Haskell.md#^definizione-funzione-in-haskell) che nel suo [tipo](Tipizzazione%20in%20Haskell.md#^definizione-tipo-in-haskell) contiene [variabili di tipo](Tipizzazione%20in%20Haskell.md#^definizione-variabile-di-tipo).
+> In [Haskell](Informatica/Lambda-calcolo/Haskell/Haskell.md#^definizione-haskell) una **funzione polimorfica** è una [funzione](Informatica/Lambda-calcolo/Haskell/Sintassi%20di%20base%20di%20Haskell.md#^definizione-funzione-in-haskell) che nel suo [tipo](Informatica/Lambda-calcolo/Haskell/Tipizzazione%20in%20Haskell.md#^definizione-tipo-in-haskell) contiene [variabili di tipo](Informatica/Lambda-calcolo/Haskell/Tipizzazione%20in%20Haskell.md#^definizione-variabile-di-tipo).
 ^definizione-funzione-polimorfica
 
 Remember fst? It returns the first component of a pair. Let’s examine its type.
@@ -229,14 +229,14 @@ We see that fst takes a tuple which contains two types and returns an element wh
 
 > [!definizione]+ Definizione: classe di tipo
 > 
-> In [Haskell](Haskell.md#^definizione-haskell) una **classe di tipo** è un insieme di [tipi](Tipizzazione%20in%20Haskell.md#^definizione-tipo-in-haskell) che condividono un insieme di operazioni.
+> In [Haskell](Informatica/Lambda-calcolo/Haskell/Haskell.md#^definizione-haskell) una **classe di tipo** è un insieme di [tipi](Informatica/Lambda-calcolo/Haskell/Tipizzazione%20in%20Haskell.md#^definizione-tipo-in-haskell) che condividono un insieme di operazioni.
 ^definizione-classe-di-tipo
 
 %% 
 A lot of people coming from OOP get confused by typeclasses because they think they are like classes in object-oriented languages. Well, they’re not. You can think of them kind of as Java interfaces, only better.
 %%
 
-Qual è il [tipo](Tipizzazione%20in%20Haskell.md#^definizione-tipo-in-haskell) della funzione `==`%% link %%? Controlliamo su [GHCi](Haskell.md#^definizione-ghci):
+Qual è il [tipo](Informatica/Lambda-calcolo/Haskell/Tipizzazione%20in%20Haskell.md#^definizione-tipo-in-haskell) della funzione `==`%% link %%? Controlliamo su [GHCi](Informatica/Lambda-calcolo/Haskell/Haskell.md#^definizione-ghci):
 
 ```haskell
 ghci> :t (==)  
@@ -251,46 +251,46 @@ Interesting. We see a new thing here, the `=>` symbol. Everything before the `=>
 
 > [!definizione]+ Definizione: vincolo di classe
 > 
-> In [Haskell](Haskell.md#^definizione-haskell) un **vincolo di classe** è un'affermazione che precede il [tipo](Tipizzazione%20in%20Haskell.md#^definizione-tipo-in-haskell) di una [funzione](Sintassi%20di%20base%20di%20Haskell.md#^definizione-funzione-in-haskell) e dichiara quali [classi di tipo](Tipizzazione%20in%20Haskell.md#^definizione-classe-di-tipo) una [variabile di tipo](Tipizzazione%20in%20Haskell.md#^definizione-variabile-di-tipo) deve soddisfare perché la [funzione](Sintassi%20di%20base%20di%20Haskell.md#^definizione-funzione-in-haskell) possa essere usata.
+> In [Haskell](Informatica/Lambda-calcolo/Haskell/Haskell.md#^definizione-haskell) un **vincolo di classe** è un'affermazione che precede il [tipo](Informatica/Lambda-calcolo/Haskell/Tipizzazione%20in%20Haskell.md#^definizione-tipo-in-haskell) di una [funzione](Informatica/Lambda-calcolo/Haskell/Sintassi%20di%20base%20di%20Haskell.md#^definizione-funzione-in-haskell) e dichiara quali [classi di tipo](Informatica/Lambda-calcolo/Haskell/Tipizzazione%20in%20Haskell.md#^definizione-classe-di-tipo) una [variabile di tipo](Informatica/Lambda-calcolo/Haskell/Tipizzazione%20in%20Haskell.md#^definizione-variabile-di-tipo) deve soddisfare perché la [funzione](Informatica/Lambda-calcolo/Haskell/Sintassi%20di%20base%20di%20Haskell.md#^definizione-funzione-in-haskell) possa essere usata.
 > 
-> Nella firma di tipo%% link %% è inserito tra l'operatore `::`%% link %% e il [tipo](Tipizzazione%20in%20Haskell.md#^definizione-tipo-in-haskell) (da cui è separato dall'operatore `=>`):
+> Nella firma di tipo%% link %% è inserito tra l'operatore `::`%% link %% e il [tipo](Informatica/Lambda-calcolo/Haskell/Tipizzazione%20in%20Haskell.md#^definizione-tipo-in-haskell) (da cui è separato dall'operatore `=>`):
 > 
 > ```haskell
 > (==) :: (Eq a) => a -> a -> Bool
 > ```
 > 
-> In questo caso indica che la funzione `==`%% link %% contiene nel suo [tipo](Tipizzazione%20in%20Haskell.md#^definizione-tipo-in-haskell) una [variabile di tipo](Tipizzazione%20in%20Haskell.md#^definizione-variabile-di-tipo) `a` che però deve appartenere alla [classe di tipo](Tipizzazione%20in%20Haskell.md#^definizione-classe-di-tipo) `Eq`.
+> In questo caso indica che la funzione `==`%% link %% contiene nel suo [tipo](Informatica/Lambda-calcolo/Haskell/Tipizzazione%20in%20Haskell.md#^definizione-tipo-in-haskell) una [variabile di tipo](Informatica/Lambda-calcolo/Haskell/Tipizzazione%20in%20Haskell.md#^definizione-variabile-di-tipo) `a` che però deve appartenere alla [classe di tipo](Informatica/Lambda-calcolo/Haskell/Tipizzazione%20in%20Haskell.md#^definizione-classe-di-tipo) `Eq`.
 ^definizione-vincolo-di-classe
 
 %%
 Nel caso di più **vincoli di classe**, si elencano tra parentesi separati da virgole.
 %%
 
-Vediamo alcune [classi di tipo](Tipizzazione%20in%20Haskell.md#^definizione-classe-di-tipo).
+Vediamo alcune [classi di tipo](Informatica/Lambda-calcolo/Haskell/Tipizzazione%20in%20Haskell.md#^definizione-classe-di-tipo).
 
 > [!definizione]+ Definizione: classe di tipo `Eq`
 > 
-> **`Eq`** è una [classe di tipo](Tipizzazione%20in%20Haskell.md#^definizione-classe-di-tipo) su cui è definita l'uguaglianza strutturale%% link %% e appartiene a essa qualsiasi [tipo](Tipizzazione%20in%20Haskell.md#^definizione-tipo-in-haskell) i cui valori%% link %% possono essere confrontati tra loro con le funzioni `==`%% link %% e `/=`%% link %%.
+> **`Eq`** è una [classe di tipo](Informatica/Lambda-calcolo/Haskell/Tipizzazione%20in%20Haskell.md#^definizione-classe-di-tipo) su cui è definita l'uguaglianza strutturale%% link %% e appartiene a essa qualsiasi [tipo](Informatica/Lambda-calcolo/Haskell/Tipizzazione%20in%20Haskell.md#^definizione-tipo-in-haskell) i cui valori%% link %% possono essere confrontati tra loro con le funzioni `==`%% link %% e `/=`%% link %%.
 ^definizione-classe-di-tipo-eq
 
 > [!definizione]+ Definizione: classe di tipo `Ord`
 > 
-> **`Ord`** è una [classe di tipo](Tipizzazione%20in%20Haskell.md#^definizione-classe-di-tipo) a cui appartiene qualsiasi [tipo](Tipizzazione%20in%20Haskell.md#^definizione-tipo-in-haskell) i cui valori possono essere ordinati%% link %% tra loro, per esempio usando gli operatori%% Link %% `>`, `<`, `>=` e `<=`%% link a tutti %%.
+> **`Ord`** è una [classe di tipo](Informatica/Lambda-calcolo/Haskell/Tipizzazione%20in%20Haskell.md#^definizione-classe-di-tipo) a cui appartiene qualsiasi [tipo](Informatica/Lambda-calcolo/Haskell/Tipizzazione%20in%20Haskell.md#^definizione-tipo-in-haskell) i cui valori possono essere ordinati%% link %% tra loro, per esempio usando gli operatori%% Link %% `>`, `<`, `>=` e `<=`%% link a tutti %%.
 ^definizione-classe-di-tipo-ord
 
 > [!definizione]+ Definizione: tipo `Ordering`
 > 
-> **`Ordering`** è un [tipo](Tipizzazione%20in%20Haskell.md#^definizione-tipo-in-haskell) in [Haskell](Haskell.md#^definizione-haskell) usato per rappresentare il confronto tra due valori. Può assumere solo i seguenti tre valori:
+> **`Ordering`** è un [tipo](Informatica/Lambda-calcolo/Haskell/Tipizzazione%20in%20Haskell.md#^definizione-tipo-in-haskell) in [Haskell](Informatica/Lambda-calcolo/Haskell/Haskell.md#^definizione-haskell) usato per rappresentare il confronto tra due valori. Può assumere solo i seguenti tre valori:
 > - `LT`: sta per _less than_ (in italiano _minore di_) e indica che il primo valore è minore del secondo.
 > - `EQ`: sta per _equal to_ (in italiano _uguale a_) e indica che i due valori sono uguali.
 > - `GT`: sta per _greater than_ (in italiano _maggiore di_) e indica che il primo valore è maggiore del secondo.
 > 
-> Viene usato principalmente nella [funzione `compare`](Tipizzazione%20in%20Haskell.md#^definizione-funzione-compare).
+> Viene usato principalmente nella [funzione `compare`](Informatica/Lambda-calcolo/Haskell/Tipizzazione%20in%20Haskell.md#^definizione-funzione-compare).
 ^definizione-tipo-ordering
 
 > [!definizione]+ Definizione: funzione `compare`
 >
-> La **funzione%% link %% `compare`** prende due valori dello stesso [tipo](Tipizzazione%20in%20Haskell.md#^definizione-tipo-in-haskell) appartenente alla [classe di tipo `Ord`](Tipizzazione%20in%20Haskell.md#^definizione-classe-di-tipo-ord) e restituisce un [`Ordering`](Tipizzazione%20in%20Haskell.md#^definizione-tipo-ordering) che descrive la relazione d'ordine tra i due:
+> La **funzione%% link %% `compare`** prende due valori dello stesso [tipo](Informatica/Lambda-calcolo/Haskell/Tipizzazione%20in%20Haskell.md#^definizione-tipo-in-haskell) appartenente alla [classe di tipo `Ord`](Informatica/Lambda-calcolo/Haskell/Tipizzazione%20in%20Haskell.md#^definizione-classe-di-tipo-ord) e restituisce un [valore di `Ordering`](Informatica/Lambda-calcolo/Haskell/Tipizzazione%20in%20Haskell.md#^definizione-tipo-ordering) (ossia `LT`, `EQ` o `GT`) che descrive la relazione d'ordine tra i due:
 >
 > ```haskell
 > ghci> compare 3 5
@@ -390,17 +390,17 @@ The `Eq` typeclass provides an interface for testing for equality. Any type wher
 
 > [!definizione]+ Definizione: classe di tipo `Show`
 >
-> **`Show`** è una [classe di tipo](Tipizzazione%20in%20Haskell.md#^definizione-classe-di-tipo) a cui appartiene qualsiasi [tipo](Tipizzazione%20in%20Haskell.md#^definizione-tipo-in-haskell) i cui valori possono essere convertiti in una [stringa](Sintassi%20di%20base%20di%20Haskell.md#^definizione-stringa-in-haskell), per esempio tramite la funzione%% link %% `show`.
+> **`Show`** è una [classe di tipo](Informatica/Lambda-calcolo/Haskell/Tipizzazione%20in%20Haskell.md#^definizione-classe-di-tipo) a cui appartiene qualsiasi [tipo](Informatica/Lambda-calcolo/Haskell/Tipizzazione%20in%20Haskell.md#^definizione-tipo-in-haskell) i cui valori possono essere convertiti in una [stringa](Informatica/Lambda-calcolo/Haskell/Sintassi%20di%20base%20di%20Haskell.md#^definizione-stringa-in-haskell), per esempio tramite la funzione%% link %% `show`.
 ^definizione-classe-di-tipo-show
 
 > [!definizione]+ Definizione: classe di tipo `Read`
 >
-> **`Read`** è una [classe di tipo](Tipizzazione%20in%20Haskell.md#^definizione-classe-di-tipo) a cui appartiene qualsiasi [tipo](Tipizzazione%20in%20Haskell.md#^definizione-tipo-in-haskell) i cui valori possono essere ottenuti dal parsing%% link %% di una [stringa](Sintassi%20di%20base%20di%20Haskell.md#^definizione-stringa-in-haskell), per esempio tramite la funzione%% link %% `read`. È in un certo senso l'inverso di `Show`.
+> **`Read`** è una [classe di tipo](Informatica/Lambda-calcolo/Haskell/Tipizzazione%20in%20Haskell.md#^definizione-classe-di-tipo) a cui appartiene qualsiasi [tipo](Informatica/Lambda-calcolo/Haskell/Tipizzazione%20in%20Haskell.md#^definizione-tipo-in-haskell) i cui valori possono essere ottenuti dal parsing%% link %% di una [stringa](Informatica/Lambda-calcolo/Haskell/Sintassi%20di%20base%20di%20Haskell.md#^definizione-stringa-in-haskell), per esempio tramite la funzione%% link %% `read`. È in un certo senso l'inverso di `Show`.
 ^definizione-classe-di-tipo-read
 
 > [!definizione]+ Definizione: funzione `show`
 >
-> La **funzione `show`** prende un valore di qualsiasi tipo appartenente alla [classe di tipo `Show`](Tipizzazione%20in%20Haskell.md#^definizione-classe-di-tipo-show) e restituisce la sua rappresentazione come [stringa](Sintassi%20di%20base%20di%20Haskell.md#^definizione-stringa-in-haskell):
+> La **funzione `show`** prende un valore di qualsiasi tipo appartenente alla [classe di tipo `Show`](Informatica/Lambda-calcolo/Haskell/Tipizzazione%20in%20Haskell.md#^definizione-classe-di-tipo-show) e restituisce la sua rappresentazione come [stringa](Informatica/Lambda-calcolo/Haskell/Sintassi%20di%20base%20di%20Haskell.md#^definizione-stringa-in-haskell):
 >
 > ```haskell
 > ghci> show 42
@@ -413,7 +413,7 @@ The `Eq` typeclass provides an interface for testing for equality. Any type wher
 
 > [!definizione]+ Definizione: funzione `read`
 >
-> La **funzione `read`** prende una [stringa](Sintassi%20di%20base%20di%20Haskell.md#^definizione-stringa-in-haskell) e la converte in un valore di qualsiasi tipo appartenente alla [classe di tipo `Read`](Tipizzazione%20in%20Haskell.md#^definizione-classe-di-tipo-read). È l'inverso di `show` e richiede spesso un'annotazione di tipo%% link %% esplicita per disambiguare il tipo restituito:
+> La **funzione `read`** prende una [stringa](Informatica/Lambda-calcolo/Haskell/Sintassi%20di%20base%20di%20Haskell.md#^definizione-stringa-in-haskell) e la converte in un valore di qualsiasi tipo appartenente alla [classe di tipo `Read`](Informatica/Lambda-calcolo/Haskell/Tipizzazione%20in%20Haskell.md#^definizione-classe-di-tipo-read). È l'inverso di `show` e richiede spesso un'annotazione di tipo%% link %% esplicita per disambiguare il tipo restituito:
 >
 > ```haskell
 > ghci> read "42" :: Int
@@ -475,7 +475,7 @@ Most expressions are such that the compiler can infer what their type is by itse
 
 > [!definizione]+ Definizione: classe di tipo `Enum`
 >
-> **`Enum`** è una [classe di tipo](Tipizzazione%20in%20Haskell.md#^definizione-classe-di-tipo) a cui appartiene qualsiasi [tipo](Tipizzazione%20in%20Haskell.md#^definizione-tipo-in-haskell) i cui valori sono enumerabili%% link %%, ovvero hanno un predecessore e un successore ben definiti. Questo permette di usarli nelle range notation%% link %% delle liste, come `[LT .. GT]` o `['a' .. 'z']`.
+> **`Enum`** è una [classe di tipo](Informatica/Lambda-calcolo/Haskell/Tipizzazione%20in%20Haskell.md#^definizione-classe-di-tipo) a cui appartiene qualsiasi [tipo](Informatica/Lambda-calcolo/Haskell/Tipizzazione%20in%20Haskell.md#^definizione-tipo-in-haskell) i cui valori sono enumerabili%% link %%, ovvero hanno un predecessore e un successore ben definiti. Questo permette di usarli nelle range notation%% link %% delle liste, come `[LT .. GT]` o `['a' .. 'z']`.
 
 %% 
 They also have defined successors and predecessors, which you can get with the `succ` and `pred` functions. Types in this class: `()`, `Bool`, `Char`, `Ordering`, `Int`, `Integer`, `Float` and `Double`.
@@ -494,7 +494,7 @@ ghci> succ 'B'
 
 > [!definizione]+ Definizione: classe di tipo `Bounded`
 >
-> **`Bounded`** è una [classe di tipo](Tipizzazione%20in%20Haskell.md#^definizione-classe-di-tipo) a cui appartiene qualsiasi [tipo](Tipizzazione%20in%20Haskell.md#^definizione-tipo-in-haskell) che ha un valore minimo e un valore massimo%% link %%, accessibili tramite le funzioni%% link %% `minBound` e `maxBound`.
+> **`Bounded`** è una [classe di tipo](Informatica/Lambda-calcolo/Haskell/Tipizzazione%20in%20Haskell.md#^definizione-classe-di-tipo) a cui appartiene qualsiasi [tipo](Informatica/Lambda-calcolo/Haskell/Tipizzazione%20in%20Haskell.md#^definizione-tipo-in-haskell) che ha un valore minimo e un valore massimo%% link %%, accessibili tramite le funzioni%% link %% `minBound` e `maxBound`.
 
 %% 
 ```haskell
@@ -520,7 +520,7 @@ ghci> maxBound :: (Bool, Int, Char)
 
 > [!definizione]+ Definizione: classe di tipo `Num`
 >
-> **`Num`** è una [classe di tipo](Tipizzazione%20in%20Haskell.md#^definizione-classe-di-tipo) a cui appartiene qualsiasi [tipo](Tipizzazione%20in%20Haskell.md#^definizione-tipo-in-haskell) numerico%% link %% i cui valori supportano le operazioni aritmetiche%% link %% di base, come `+`, `-` e `*`%% link a tutti %%.
+> **`Num`** è una [classe di tipo](Informatica/Lambda-calcolo/Haskell/Tipizzazione%20in%20Haskell.md#^definizione-classe-di-tipo) a cui appartiene qualsiasi [tipo](Informatica/Lambda-calcolo/Haskell/Tipizzazione%20in%20Haskell.md#^definizione-tipo-in-haskell) numerico%% link %% i cui valori supportano le operazioni aritmetiche%% link %% di base, come `+`, `-` e `*`%% link a tutti %%.
 
 %% 
 ```haskell
@@ -551,11 +551,11 @@ To join Num, a type must already be friends with Show and Eq.
 
 > [!definizione]+ Definizione: classe di tipo `Integral`
 >
-> **`Integral`** è una [classe di tipo](Tipizzazione%20in%20Haskell.md#^definizione-classe-di-tipo) a cui appartiene qualsiasi [tipo](Tipizzazione%20in%20Haskell.md#^definizione-tipo-in-haskell) numerico intero%% link %%, come `Int` e `Integer`. Estende `Num`%% link %% e aggiunge la divisione intera%% link %% e il modulo%% link %% tramite le funzioni%% link %% `div` e `mod`.
+> **`Integral`** è una [classe di tipo](Informatica/Lambda-calcolo/Haskell/Tipizzazione%20in%20Haskell.md#^definizione-classe-di-tipo) a cui appartiene qualsiasi [tipo](Informatica/Lambda-calcolo/Haskell/Tipizzazione%20in%20Haskell.md#^definizione-tipo-in-haskell) numerico intero%% link %%, come `Int` e `Integer`. Estende `Num`%% link %% e aggiunge la divisione intera%% link %% e il modulo%% link %% tramite le funzioni%% link %% `div` e `mod`.
 
 > [!definizione]+ Definizione: classe di tipo `Floating`
 >
-> **`Floating`** è una [classe di tipo](Tipizzazione%20in%20Haskell.md#^definizione-classe-di-tipo) a cui appartiene qualsiasi [tipo](Tipizzazione%20in%20Haskell.md#^definizione-tipo-in-haskell) numerico in virgola mobile%% link %%, come `Float` e `Double`. Estende `Num`%% link %% e aggiunge operazioni matematiche avanzate%% link %% come `sqrt`, `sin`, `cos` e `**`%% link a tutti %%.
+> **`Floating`** è una [classe di tipo](Informatica/Lambda-calcolo/Haskell/Tipizzazione%20in%20Haskell.md#^definizione-classe-di-tipo) a cui appartiene qualsiasi [tipo](Informatica/Lambda-calcolo/Haskell/Tipizzazione%20in%20Haskell.md#^definizione-tipo-in-haskell) numerico in virgola mobile%% link %%, come `Float` e `Double`. Estende `Num`%% link %% e aggiunge operazioni matematiche avanzate%% link %% come `sqrt`, `sin`, `cos` e `**`%% link a tutti %%.
 
 %% 
 A very useful function for dealing with numbers is `fromIntegral`. It has a type declaration of `fromIntegral :: (Num b, Integral a) => a -> b`. From its type signature we see that it takes an integral number and turns it into a more general number. That’s useful when you want integral and floating point types to work together nicely. For instance, the `length` function has a type declaration of `length :: [a] -> Int` instead of having a more general type of `(Num b) => length :: [a] -> b`. If we try to get a length of a list and then add it to `3.2`, we’ll get an error because we tried to add together an `Int` and a floating point number. So to get around this, we do `fromIntegral (length [1,2,3,4]) + 3.2` and it all works out.

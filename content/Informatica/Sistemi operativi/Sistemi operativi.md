@@ -45,7 +45,7 @@ Multiprocessori di due tipi:
 > 
 > Il **sistema operativo** (abbreviato in **_SO_**, in inglese **_OS_**, _**O**perating **S**ystem_) è il software di base che gestisce le risorse hardware (in particolare la memoria primaria e secondaria, le periferiche, e la stessa CPU) e software di un computer, permettendo e facilitando l'interazione tra l'utente e la macchina.
 > 
-> Un generico sistema operativo moderno si compone di alcune parti standard, più o meno ben definite: [kernel](Sistemi%20operativi.md#^definizione-kernel), 
+> Un generico sistema operativo moderno si compone di alcune parti standard, più o meno ben definite: [kernel](Informatica/Sistemi%20operativi/Sistemi%20operativi.md#^definizione-kernel), 
 > 
 > In base al tipo di computer per cui viene progettato, i sistemi operativi si dividono in desktop%% link %%, per dispositivi mobili%% link %%, per server %% link %% ed embedded%% link %%.
 ^definizione-sistema-operativo
@@ -54,24 +54,24 @@ Multiprocessori di due tipi:
 
 > [!osservazione]+ Osservazione: cosa fa parte di un sistema operativo e cosa no?
 > 
-> Non esiste una definizione universalmente accettata di che cosa faccia parte o meno di un [sistema operativo](Sistemi%20operativi.md#^definizione-sistema-operativo): il confine tra il SO e le altre componenti software non è sempre ben definibile.
+> Non esiste una definizione universalmente accettata di che cosa faccia parte o meno di un [sistema operativo](Informatica/Sistemi%20operativi/Sistemi%20operativi.md#^definizione-sistema-operativo): il confine tra il SO e le altre componenti software non è sempre ben definibile.
 > 
-> Per esempio, l'interfaccia grafica (cioè quella parte del [sistema operativo](Sistemi%20operativi.md#^definizione-sistema-operativo) che gestisce la grafica che ci viene mostrata) non ne fa sempre parte: nel passaggio da MS-DOS%% link %% a Windows%% link %%, l'interfaccia grafica si è integrata nel SO, ma inizialmente non ne faceva parte, così come in [UNIX]() i comandi a disposizione dell'utente non sono parte del SO, come pure le varie interfacce grafiche a disposizione.
+> Per esempio, l'interfaccia grafica (cioè quella parte del [sistema operativo](Informatica/Sistemi%20operativi/Sistemi%20operativi.md#^definizione-sistema-operativo) che gestisce la grafica che ci viene mostrata) non ne fa sempre parte: nel passaggio da MS-DOS%% link %% a Windows%% link %%, l'interfaccia grafica si è integrata nel SO, ma inizialmente non ne faceva parte, così come in [UNIX]() i comandi a disposizione dell'utente non sono parte del SO, come pure le varie interfacce grafiche a disposizione.
 > 
 > Il problema di definire esattamente quali siano i componenti di un sistema operativo sembra avere poca importanza, ma da un punto di vista commerciale/economico può avere una rilevanza fondamentale: basti pensare, per esempio, a un cliente che ha bisogno di acquistare la licenza di un sistema operativo completo, ma che poi scopre non essere fornito dell'interfaccia grafica (essenziale per coloro che non hanno molta domestichezza con l'informatica).
 
-Ogni [sistema operativo](Sistemi%20operativi.md#^definizione-sistema-operativo), in un dato momento del suo utilizzo, ha una determinata [_configurazione_](Sistemi%20operativi.md#^definizione-configurazione-di-un-sistema-operativo).
+Ogni [sistema operativo](Informatica/Sistemi%20operativi/Sistemi%20operativi.md#^definizione-sistema-operativo), in un dato momento del suo utilizzo, ha una determinata [_configurazione_](Informatica/Sistemi%20operativi/Sistemi%20operativi.md#^definizione-configurazione-di-un-sistema-operativo).
 
 > [!definizione]+ Definizione: configurazione di un sistema operativo
 > 
-> La **configurazione di un [sistema operativo](Sistemi%20operativi.md#^definizione-sistema-operativo)** è l'insieme delle impostazioni, regole e componenti software che determinano come il [sistema operativo](Sistemi%20operativi.md#^definizione-sistema-operativo) è organizzato, quali funzioni svolge e in che modo le svolge.
+> La **configurazione di un [sistema operativo](Informatica/Sistemi%20operativi/Sistemi%20operativi.md#^definizione-sistema-operativo)** è l'insieme delle impostazioni, regole e componenti software che determinano come il [sistema operativo](Informatica/Sistemi%20operativi/Sistemi%20operativi.md#^definizione-sistema-operativo) è organizzato, quali funzioni svolge e in che modo le svolge.
 ^definizione-configurazione-di-un-sistema-operativo
 
 > [!osservazione]+ Osservazione: cosa fa parte della configurazione di un SO e cosa no?
 > 
-> All'interno della definizione di [_configurazione di un sistema operativo_](Sistemi%20operativi.md#^definizione-configurazione-di-un-sistema-operativo) solitamente si include unicamente ciò che, indica _come_ il [sistema operativo](Sistemi%20operativi.md#^definizione-sistema-operativo) si deve comportare: per esempio, le impostazioni di sistema, i driver%% link %% installati, i servizi%% link %% attivi, le politiche di sicurezza%% link %%, la configurazione della rete%% link %% e la gestione degli utenti%% link %% e dei permessi%% link %%.
+> All'interno della definizione di [_configurazione di un sistema operativo_](Informatica/Sistemi%20operativi/Sistemi%20operativi.md#^definizione-configurazione-di-un-sistema-operativo) solitamente si include unicamente ciò che, indica _come_ il [sistema operativo](Informatica/Sistemi%20operativi/Sistemi%20operativi.md#^definizione-sistema-operativo) si deve comportare: per esempio, le impostazioni di sistema, i driver%% link %% installati, i servizi%% link %% attivi, le politiche di sicurezza%% link %%, la configurazione della rete%% link %% e la gestione degli utenti%% link %% e dei permessi%% link %%.
 > 
-> I dati%% link %% dell'utente%% link %% (come documenti%% link %%, salvataggi di giochi, foto, ecc.) non fanno parte della [configurazione del sistema operativo](Sistemi%20operativi.md#^definizione-configurazione-di-un-sistema-operativo), anche se possono dipendere da essa.
+> I dati%% link %% dell'utente%% link %% (come documenti%% link %%, salvataggi di giochi, foto, ecc.) non fanno parte della [configurazione del sistema operativo](Informatica/Sistemi%20operativi/Sistemi%20operativi.md#^definizione-configurazione-di-un-sistema-operativo), anche se possono dipendere da essa.
 ^osservazione-cosa-fa-parte-della-configurazione-di-un-so-e-cosa-no
 
 %%
@@ -135,12 +135,12 @@ Altre componenti del sistema operativo:
 
 > [!definizione]+ Definizione: kernel
 > 
-> Il **kernel** è il nucleo fondamentale di un [sistema operativo](Sistemi%20operativi.md#^definizione-sistema-operativo) ed è il software che funge da intermediario tra l'hardware del computer (come CPU%% link %%, memoria%% link %%, dispositivi di I/O%% link %%) e tutte le altre applicazioni. Il kernel gestisce le risorse del sistema e ne controlla l'accesso, garantendo che i [processi]() possano operare in modo sicuro ed efficiente.
+> Il **kernel** è il nucleo fondamentale di un [sistema operativo](Informatica/Sistemi%20operativi/Sistemi%20operativi.md#^definizione-sistema-operativo) ed è il software che funge da intermediario tra l'hardware del computer (come CPU%% link %%, memoria%% link %%, dispositivi di I/O%% link %%) e tutte le altre applicazioni. Il kernel gestisce le risorse del sistema e ne controlla l'accesso, garantendo che i [processi]() possano operare in modo sicuro ed efficiente.
 ^definizione-kernel
 
 > [!osservazione]+ Osservazione: kernel apposito per ogni sistema operativo
 > 
-> Il [kernel]() è progettato per funzionare con uno specifico tipo di hardware. Ciò significa che, per esempio, un kernel creato per un processore Sun SPARC non funzionerà su una macchina con un processore Intel senza essere adattato o modificato. Questo accade perché ogni tipo di hardware ha specifiche caratteristiche e istruzioni che il kernel deve conoscere per gestirlo correttamente. Le architetture di processori diverse hanno insiemi di istruzioni unici, e il kernel deve essere "costruito" in modo specifico per quell'architettura affinché possa comunicare efficacemente con l'hardware.
+> Il [kernel](Informatica/Sistemi%20operativi/Sistemi%20operativi.md#^definizione-kernel) è progettato per funzionare con uno specifico tipo di hardware. Ciò significa che, per esempio, un kernel creato per un processore Sun SPARC non funzionerà su una macchina con un processore Intel senza essere adattato o modificato. Questo accade perché ogni tipo di hardware ha specifiche caratteristiche e istruzioni che il kernel deve conoscere per gestirlo correttamente. Le architetture di processori diverse hanno insiemi di istruzioni unici, e il kernel deve essere "costruito" in modo specifico per quell'architettura affinché possa comunicare efficacemente con l'hardware.
 
 %%
 Un kernel non è strettamente necessario per far funzionare un computer. I [programmi](https://it.wikipedia.org/wiki/Programma_(informatica) "Programma (informatica)") possono essere infatti direttamente caricati ed eseguiti sulla macchina, a patto che i loro [sviluppatori](https://it.wikipedia.org/wiki/Programmatore "Programmatore") ritengano necessario fare a meno del supporto del sistema operativo.
@@ -153,8 +153,6 @@ L'accesso diretto al kernel da parte di un utente/[amministratore](https://it.wi
 %%
 
 ### 1.1.1 - Classificazione dei kernel
-
-^7ee5e5
 
 L'accesso diretto all'hardware può essere anche molto complesso, quindi i kernel usualmente implementano uno o più tipi di astrazione dall'hardware detti _livelli di astrazione dell'hardware_ (HAL, Hardware Abstraction Layer). Queste astrazioni servono a "nascondere" la complessità e a fornire un'interfaccia pulita e uniforme all'hardware sottostante, in modo da semplificare il lavoro degli sviluppatori.
 
@@ -370,9 +368,9 @@ https://it.wikipedia.org/wiki/Sistema_operativo#Installazione_e_avvio
 
 https://it.wikipedia.org/wiki/Live_USB
 
-Tipicamente il [sistema operativo](Sistemi%20operativi.md#^definizione-sistema-operativo), una volta installato sulla macchina, risiede nell'hard disk pronto ad essere caricato nella RAM durante la fase di avvio della macchina.
+Tipicamente il [sistema operativo](Informatica/Sistemi%20operativi/Sistemi%20operativi.md#^definizione-sistema-operativo), una volta installato sulla macchina, risiede nell'hard disk pronto ad essere caricato nella RAM durante la fase di avvio della macchina.
 
-È possibile installare più [sistemi operativi](Sistemi%20operativi.md#^definizione-sistema-operativo) sulla stessa macchina in modalità dual boot, selezionando poi il sistema desiderato nella fase di avvio del PC attraverso il boot manager. Tutto ciò è possibile solo in virtù dell'operazione di partizionamento della memoria secondaria (hard disk) in più settori logici indipendenti dove ciascuno può ospitare un diverso sistema.
+È possibile installare più [sistemi operativi](Informatica/Sistemi%20operativi/Sistemi%20operativi.md#^definizione-sistema-operativo) sulla stessa macchina in modalità dual boot, selezionando poi il sistema desiderato nella fase di avvio del PC attraverso il boot manager. Tutto ciò è possibile solo in virtù dell'operazione di partizionamento della memoria secondaria (hard disk) in più settori logici indipendenti dove ciascuno può ospitare un diverso sistema.
 
 All'accensione del computer il BIOS, dopo la fase di POST, esegue nella cosiddetta fase di boot, attraverso il boot loader, il caricamento del kernel del sistema operativo dall'hard disk alla RAM, come qualunque programma, pronto ad essere eseguito dal processore, rendendo la macchina pronta all'uso da parte dell'utente. Nel caso di sistemi operativi ad interazione con l'utente questa fase, dopo il login iniziale da parte dell'utente stesso, tipicamente comporta anche il caricamento di tutte le impostazioni di configurazione (settings) e profilo utente inizializzando così lo spazio utente.
 %%

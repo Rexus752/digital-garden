@@ -15,7 +15,7 @@ resto dell'introduzione a pag. 178-179
 
 > [!teorema]+ Teorema del limite della funzione composta
 > 
-> Date due [funzioni](Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e $g \colon \text{dom}(g) \to \mathbb{R}$ con $\text{rng}(f) \subseteq \text{dom}(g)$ e un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R} \cup \{ \pm \infty \}$ per $\text{dom}(f)$:
+> Date due [funzioni](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e $g \colon \text{dom}(g) \to \mathbb{R}$ con $\text{rng}(f) \subseteq \text{dom}(g)$ e un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R} \cup \{ \pm \infty \}$ per $\text{dom}(f)$:
 > 1. se esiste il [limite](Limiti.md#^definizione-limite) $\displaystyle\lim_{x \to x_0} f(x) = y_0 \in \mathbb{R} \cup \{ \pm \infty \}$ e $y_0$ è un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) per $\text{dom}(g)$,
 > 2. se $y_0 \in \mathbb{R}$, supponiamo che $y_0 \in \text{dom}(g)$ e che $g$ sia [continua](Funzioni%20continue.md#^definizione-funzione-continua) in $y_0$ con $g(y_0) = l \in \mathbb{R}$ e
 > 3. se $y_0 = \pm \infty$, supponiamo che esista il [limite](Limiti.md#^definizione-limite) $\displaystyle\lim_{y \to y_0} g(y) = l \in \mathbb{R} \cup \{ \pm \infty \}$,
@@ -37,7 +37,7 @@ esempi pagg. 180-181 lancelotti
 
 > [!teorema]+ Teorema del limite della funzione composta continua
 > 
-> Date due [funzioni](Funzioni.md#^definizione-funzione)
+> Date due [funzioni](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione)
 > 
 > $$
 > \begin{array}{}
@@ -84,7 +84,7 @@ esempi pagg. 180-181 lancelotti
 
 > [!proposizione]+ Proposizione: continuità della funzione composta
 > 
->  Date due [funzioni](Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e $g \colon \text{dom}(g) \to \mathbb{R}$ con $\text{rng}(f) \subseteq \text{dom}(g)$ e un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R} \cup \{ \pm \infty \}$ per $\text{dom}(f)$, se $f$ è [continua](Funzioni%20continue.md#^definizione-funzione-continua-in-un-punto) in $x_0$ e $g$ è [continua](Funzioni%20continue.md#^definizione-funzione-continua-in-un-punto) in $f(x_0)$, allora la loro [composizione](Composizione%20di%20funzioni.md#^definizione-composizione-di-due-funzioni) $f \circ g$ è anch'essa [continua](Funzioni%20continue.md#^definizione-funzione-continua-in-un-punto) in $x_0$.
+>  Date due [funzioni](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e $g \colon \text{dom}(g) \to \mathbb{R}$ con $\text{rng}(f) \subseteq \text{dom}(g)$ e un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R} \cup \{ \pm \infty \}$ per $\text{dom}(f)$, se $f$ è [continua](Funzioni%20continue.md#^definizione-funzione-continua-in-un-punto) in $x_0$ e $g$ è [continua](Funzioni%20continue.md#^definizione-funzione-continua-in-un-punto) in $f(x_0)$, allora la loro [composizione](Composizione%20di%20funzioni.md#^definizione-composizione-di-due-funzioni) $f \circ g$ è anch'essa [continua](Funzioni%20continue.md#^definizione-funzione-continua-in-un-punto) in $x_0$.
 ^proposizione-continuita-della-funzione-composta
 
 %% 

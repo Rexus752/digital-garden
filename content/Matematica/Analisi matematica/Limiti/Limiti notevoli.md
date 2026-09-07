@@ -34,7 +34,7 @@ Ci sono alcuni [limiti](Limiti.md#^definizione-limite) particolari di cui è sem
 
 Questo [limite](Limiti.md#^definizione-limite) è una [forma indeterminata](Matematica/Analisi%20matematica/Limiti/Forme%20indeterminate.md#^definizione-forma-indeterminata) del tipo $\dfrac{0}{0}$.
 
-Osserviamo che la [funzione](Funzioni.md#^definizione-funzione) $f(x) = \dfrac{\sin x}{x}$ è [pari](Matematica/Teoria%20degli%20insiemi/Funzioni/Proprietà%20delle%20funzioni.md#^definizione-funzioni-pari-e-dispari), infatti il dominio(Link) $\text{dom}(f) = (-\infty, 0) \cup (0, +\infty)$ è simmetrico rispetto a $0$ e
+Osserviamo che la [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f(x) = \dfrac{\sin x}{x}$ è [pari](Matematica/Teoria%20degli%20insiemi/Funzioni/Proprietà%20delle%20funzioni.md#^definizione-funzioni-pari-e-dispari), infatti il dominio(Link) $\text{dom}(f) = (-\infty, 0) \cup (0, +\infty)$ è simmetrico rispetto a $0$ e
 
 $$
 \forall x \ne 0 . \left( f(-x) = \dfrac{\sin(-x)}{-x} = \dfrac{-\sin x}{-x} = \dfrac{\sin x}{x} = f(x) \right) 
@@ -118,7 +118,7 @@ e a che serve?
 
 > [!lemma]+ Lemma del modulo
 > 
-> Data una [funzione](Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$, un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R} \cup \{ \pm \infty \}$ per $\text{dom}(f)$, abbiamo che
+> Data una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$, un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R} \cup \{ \pm \infty \}$ per $\text{dom}(f)$, abbiamo che
 > 
 > $$
 > \lim_{x \to x_0} f(x) = 0 \iff \lim_{x \to x_0} |f(x)| = 0
@@ -136,7 +136,7 @@ con relative dimostrazioni
 
 > [!corollario]+ Corollario del lemma del modulo
 > 
-> Date due [funzioni](Funzioni.md#^definizione-funzione) $f,g \colon A \subseteq \mathbb{R} \to \mathbb{R}$ (con $A \ne \emptyset$) e un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R} \cup \{ \pm \infty \}$ per $A$, se esiste un [intorno](Topologia%20dei%20reali.md#^definizione-intorno-di-un-punto) $I(x_0)$ di $x_0$ tale che $f$ sia limitata%% link %% su $(A \cap I(x_0)) \setminus \{ x_0 \}$ e vale il [limite](Limiti.md#^definizione-limite) $\displaystyle\lim_{x \to x_0} g(x) = 0$, allora
+> Date due [funzioni](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f,g \colon A \subseteq \mathbb{R} \to \mathbb{R}$ (con $A \ne \emptyset$) e un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R} \cup \{ \pm \infty \}$ per $A$, se esiste un [intorno](Topologia%20dei%20reali.md#^definizione-intorno-di-un-punto) $I(x_0)$ di $x_0$ tale che $f$ sia limitata%% link %% su $(A \cap I(x_0)) \setminus \{ x_0 \}$ e vale il [limite](Limiti.md#^definizione-limite) $\displaystyle\lim_{x \to x_0} g(x) = 0$, allora
 > 
 > $$
 > \lim_{x \to x_0} \big( f(x) \circ g(x) \big)  = 0
@@ -184,7 +184,7 @@ con relative dimostrazioni
 
 > [!proposizione]+ Proposizione: risoluzione delle forme indeterminate esponenziali
 > 
-> Date due [funzioni](Funzioni.md#^definizione-funzione) $f, g \colon A \subseteq \mathbb{R} \to \mathbb{R}$ (con $A \ne \emptyset$) e un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R} \cup \{\pm\infty\}$ per $A$, supposto che esista il [limite](Limiti.md#^definizione-limite) $\displaystyle\lim_{x \to x_0} \big( g(x) \ln f(x) \big)$, per il [teorema del limite della funzione composta](Limiti%20delle%20funzioni%20composte.md#^teorema-del-limite-della-funzione-composta) e il [teorema del limite della funzione composta continua](Limiti%20delle%20funzioni%20composte.md#^teorema-del-limite-della-funzione-composta-continua) e per la continuità di $e$%% link alla continuità di $e$ %%, si ha che:
+> Date due [funzioni](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f, g \colon A \subseteq \mathbb{R} \to \mathbb{R}$ (con $A \ne \emptyset$) e un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R} \cup \{\pm\infty\}$ per $A$, supposto che esista il [limite](Limiti.md#^definizione-limite) $\displaystyle\lim_{x \to x_0} \big( g(x) \ln f(x) \big)$, per il [teorema del limite della funzione composta](Limiti%20delle%20funzioni%20composte.md#^teorema-del-limite-della-funzione-composta) e il [teorema del limite della funzione composta continua](Limiti%20delle%20funzioni%20composte.md#^teorema-del-limite-della-funzione-composta-continua) e per la continuità di $e$%% link alla continuità di $e$ %%, si ha che:
 > 
 > $$
 > \lim_{x \to x_0} [f(x)]^{g(x)} = \displaystyle\lim_{x \to x_0}e^{ g(x) \ln f(x)} = \begin{cases}

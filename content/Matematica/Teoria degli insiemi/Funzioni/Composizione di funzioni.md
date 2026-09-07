@@ -8,7 +8,7 @@
 ---
 
 > [!definizione]+ Definizione: composizione di due funzioni
-> Date due [funzioni](Funzioni.md#^definizione-funzione) $f\colon A\to B$ e $g\colon B \to C$ (dove $\text{cod}(f) = \text{dom}(g) = B$), la **composizione** di $f$ e $g$, denotata con "$g \circ f$", è la funzione:
+> Date due [funzioni](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f\colon A\to B$ e $g\colon B \to C$ (dove $\text{cod}(f) = \text{dom}(g) = B$), la **composizione** di $f$ e $g$, denotata con "$g \circ f$", è la funzione:
 > $$
 > \begin{align*}
 > g \circ f \colon A & \to C \\
@@ -18,7 +18,7 @@
 ^definizione-composizione-di-due-funzioni
 
 > [!osservazione]+ Osservazione: composizione rappresentata con le frecce
-> La notazione "a frecce" delle [funzioni](Funzioni.md#^definizione-funzione) permette di rappresentare semplicemente la composizione $g \circ f$ come:
+> La notazione "a frecce" delle [funzioni](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) permette di rappresentare semplicemente la composizione $g \circ f$ come:
 > 
 > $$
 > A \xrightarrow{f} B \xrightarrow{g} C,\quad A \xrightarrow{g\circ f} C
@@ -27,7 +27,7 @@
 > dove entrambi i percorsi che può seguire un elemento $a \in A$ per arrivare in $C$ danno lo stesso risultato.
 
 > [!esempio]- Esempio: composizione di $\color{#7F7FFF} f(x)=x^2$ con $\color{#7F7FFF} g(x)=4x+1$
-> Date due [funzioni](Funzioni.md#^definizione-funzione) $f\colon \mathbb{R}\to \mathbb{R},f(x)=x^2$ e $g\colon \mathbb{R}\to \mathbb{R},g(x)=4x+1$, allora la [funzione composta](Composizione%20di%20funzioni.md#^definizione-composizione-di-due-funzioni) $g\circ f$ è definita da
+> Date due [funzioni](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f\colon \mathbb{R}\to \mathbb{R},f(x)=x^2$ e $g\colon \mathbb{R}\to \mathbb{R},g(x)=4x+1$, allora la [funzione composta](Composizione%20di%20funzioni.md#^definizione-composizione-di-due-funzioni) $g\circ f$ è definita da
 > $$
 > (g\circ f)(x)=g(f(x))=4f(x)+1=4x^2+1
 > $$
@@ -42,7 +42,7 @@
 > L'[esempio precedente](Composizione%20di%20funzioni.md#^esempio-composizione-di-funzioni) mostra che in generale le [funzioni composte](Composizione%20di%20funzioni.md#^definizione-composizione-di-due-funzioni) $g \circ f$ e $f \circ g$ non coincidono: l'operazione di composizione tra funzioni **non è commutativa**.
 
 > [!osservazione]+ Osservazione: composizione di una funzione costante con altre funzioni
-> Data una [funzione costante](Funzioni.md#^definizione-funzione-costante)
+> Data una [funzione costante](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione-costante)
 > $$
 > \begin{align*}
 > f_\beta\colon A & \to B \\
@@ -88,7 +88,7 @@ Osservazione 1.1.12 di pagina 14 di Dambrosio, mettere il grafico a centro pagin
 
 > [!attenzione]+ Attenzione: necessità di far coincidere dominio e codominio nella composizione
 > 
-> Consideriamo le [funzioni](Funzioni.md#^definizione-funzione) $f$ e $g$ definite da
+> Consideriamo le [funzioni](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f$ e $g$ definite da
 > 
 > $$
 > f(x) = x - 4
@@ -116,7 +116,7 @@ Osservazione 1.1.12 di pagina 14 di Dambrosio, mettere il grafico a centro pagin
 > 
 > Se però volessimo calcolare $(g \circ f)(1)$ incontreremmo un problema: infatti $f(1)=-3$ e dunque $g(f(1))$ non esiste perché $\sqrt{-3}$ non è definito in $\mathbb{R}$.
 > 
-> Osserviamo quindi il motivo per cui, nella [definizione di _funzione composta_](Composizione%20di%20funzioni.md#^definizione-composizione-di-due-funzioni), viene richiesto che il [codominio](Funzioni.md#^definizione-funzione) di $f$ debba coincidere con il dominio di $g$.
+> Osserviamo quindi il motivo per cui, nella [definizione di _funzione composta_](Composizione%20di%20funzioni.md#^definizione-composizione-di-due-funzioni), viene richiesto che il [codominio](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) di $f$ debba coincidere con il dominio di $g$.
 
 # 1 - Monotonia e composizione di funzioni
 
@@ -124,7 +124,7 @@ Ora vediamo una proposizione%% link %% che lega la [monotonia](Proprietà%20dell
 
 > [!proposizione]+ Regola dei segni per la monotonia della funzione composta
 > 
-> Date due [funzioni](Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e $g \colon \text{dom}(g) \to \mathbb{R}$ (con $\text{rng}(f) \subseteq \text{dom}(g)$) e due intervalli%% Link %% $I \subseteq \text{dom}(f)$ e $g \subseteq \text{dom}(g)$:
+> Date due [funzioni](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e $g \colon \text{dom}(g) \to \mathbb{R}$ (con $\text{rng}(f) \subseteq \text{dom}(g)$) e due intervalli%% Link %% $I \subseteq \text{dom}(f)$ e $g \subseteq \text{dom}(g)$:
 > - Se $f$ è [(strettamente) crescente](Proprietà%20delle%20funzioni.md#^definizione-funzione-strettamente-decrescente-o-monotona-su-un-intervallo) su $I$ e $g$ è [(strettamente) crescente](Proprietà%20delle%20funzioni.md#^definizione-funzione-strettamente-decrescente-o-monotona-su-un-intervallo) su $J$, allora la loro [composizione](Composizione%20di%20funzioni.md#^definizione-composizione-di-due-funzioni) $g \circ f$ è [(strettamente) crescente](Proprietà%20delle%20funzioni.md#^definizione-funzione-strettamente-decrescente-o-monotona-su-un-intervallo) su $I$.
 > - Se $f$ è [(strettamente) decrescente](Proprietà%20delle%20funzioni.md#^definizione-funzione-strettamente-decrescente-o-monotona-su-un-intervallo) su $I$ e $g$ è [(strettamente) crescente](Proprietà%20delle%20funzioni.md#^definizione-funzione-strettamente-decrescente-o-monotona-su-un-intervallo) su $J$, allora la loro [composizione](Composizione%20di%20funzioni.md#^definizione-composizione-di-due-funzioni) $g \circ f$ è [(strettamente) decrescente](Proprietà%20delle%20funzioni.md#^definizione-funzione-strettamente-decrescente-o-monotona-su-un-intervallo) su $I$.
 > - Se $f$ è [(strettamente) crescente](Proprietà%20delle%20funzioni.md#^definizione-funzione-strettamente-decrescente-o-monotona-su-un-intervallo) su $I$ e $g$ è [(strettamente) decrescente](Proprietà%20delle%20funzioni.md#^definizione-funzione-strettamente-decrescente-o-monotona-su-un-intervallo) su $J$, allora la loro [composizione](Composizione%20di%20funzioni.md#^definizione-composizione-di-due-funzioni) $g \circ f$ è [(strettamente) decrescente](Proprietà%20delle%20funzioni.md#^definizione-funzione-strettamente-decrescente-o-monotona-su-un-intervallo) su $I$.
@@ -139,8 +139,8 @@ Ora vediamo una proposizione%% link %% che lega la [monotonia](Proprietà%20dell
 > [!trucco]+ Trucco per ricordare la regola dei segni per la monotonia della funzione composta
 > 
 > La [regola dei segni per la monotonia della funzione composta](Composizione%20di%20funzioni.md#^regola-dei-segni-per-la-monotonia-della-funzione-composta) si chiama così proprio perché ricorda la regola dei segni per il prodotto di due numeri reali%% link %%:
-> - Se le due [funzioni](Funzioni.md#^definizione-funzione) sono "concordi", cioè entrambe o [(strettamente) crescenti](Proprietà%20delle%20funzioni.md#^definizione-funzione-strettamente-decrescente-o-monotona-su-un-intervallo) o [(strettamente) decrescenti](Proprietà%20delle%20funzioni.md#^definizione-funzione-strettamente-decrescente-o-monotona-su-un-intervallo), allora la loro [composizione](Composizione%20di%20funzioni.md#^definizione-composizione-di-due-funzioni) è [(strettamente) crescente](Proprietà%20delle%20funzioni.md#^definizione-funzione-strettamente-decrescente-o-monotona-su-un-intervallo).
-> - Se le due [funzioni](Funzioni.md#^definizione-funzione) sono "discordi", cioè una è [(strettamente) crescente](Proprietà%20delle%20funzioni.md#^definizione-funzione-strettamente-decrescente-o-monotona-su-un-intervallo) e l'altra è [(strettamente) decrescente](Proprietà%20delle%20funzioni.md#^definizione-funzione-strettamente-decrescente-o-monotona-su-un-intervallo), allora la loro [composizione](Composizione%20di%20funzioni.md#^definizione-composizione-di-due-funzioni) è [(strettamente) decrescente](Proprietà%20delle%20funzioni.md#^definizione-funzione-strettamente-decrescente-o-monotona-su-un-intervallo).
+> - Se le due [funzioni](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) sono "concordi", cioè entrambe o [(strettamente) crescenti](Proprietà%20delle%20funzioni.md#^definizione-funzione-strettamente-decrescente-o-monotona-su-un-intervallo) o [(strettamente) decrescenti](Proprietà%20delle%20funzioni.md#^definizione-funzione-strettamente-decrescente-o-monotona-su-un-intervallo), allora la loro [composizione](Composizione%20di%20funzioni.md#^definizione-composizione-di-due-funzioni) è [(strettamente) crescente](Proprietà%20delle%20funzioni.md#^definizione-funzione-strettamente-decrescente-o-monotona-su-un-intervallo).
+> - Se le due [funzioni](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) sono "discordi", cioè una è [(strettamente) crescente](Proprietà%20delle%20funzioni.md#^definizione-funzione-strettamente-decrescente-o-monotona-su-un-intervallo) e l'altra è [(strettamente) decrescente](Proprietà%20delle%20funzioni.md#^definizione-funzione-strettamente-decrescente-o-monotona-su-un-intervallo), allora la loro [composizione](Composizione%20di%20funzioni.md#^definizione-composizione-di-due-funzioni) è [(strettamente) decrescente](Proprietà%20delle%20funzioni.md#^definizione-funzione-strettamente-decrescente-o-monotona-su-un-intervallo).
 
 %% 
 figure 1.24 e 1.25 pag. 23 Dambrosio

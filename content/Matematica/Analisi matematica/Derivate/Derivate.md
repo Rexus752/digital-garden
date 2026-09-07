@@ -47,7 +47,7 @@ Se prendiamo il [quoziente di Newton](Variazioni%20e%20quoziente%20di%20Newton.m
 
 > [!definizione]+ Definizione: pendenza di una funzione in un punto
 > 
-> Data una [funzione](Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e un punto%% link %% $x_0 \in \text{dom}(f)$, la **pendenza di $f$ in $x_0$**, indicata con $p_f(x_0)$, è il [limite](Limiti.md#^definizione-limite) per $x \to x_0$ del [quoziente di Newton](Variazioni%20e%20quoziente%20di%20Newton.md#^definizione-quoziente-di-newton):
+> Data una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e un punto%% link %% $x_0 \in \text{dom}(f)$, la **pendenza di $f$ in $x_0$**, indicata con $p_f(x_0)$, è il [limite](Limiti.md#^definizione-limite) per $x \to x_0$ del [quoziente di Newton](Variazioni%20e%20quoziente%20di%20Newton.md#^definizione-quoziente-di-newton):
 > 
 > $$
 > p_f(x_0) \overset{\text{def}}{=} \lim_{x \to x_0} \dfrac{\Delta f}{\Delta x} = \lim_{x \to x_0} \dfrac{f(x) - f(x_0)}{x - x_0}
@@ -76,7 +76,7 @@ In questo caso ingrandendo il grafico di $f$ vicino a $P(x_0, f(x_0))$ vediamo u
 
 > [!esempio]- Esempio di pendenza non definita
 > 
-> Prendiamo la [funzione](Funzioni.md#^definizione-funzione) del valore assoluto%% link %% di $x$, definità così:
+> Prendiamo la [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) del valore assoluto%% link %% di $x$, definità così:
 > 
 > $$
 > f(x) = |x| = \begin{cases}
@@ -100,7 +100,7 @@ In questo caso ingrandendo il grafico di $f$ vicino a $P(x_0, f(x_0))$ vediamo u
 
 > [!definizione]+ Definizione: funzione localmente dritta in un punto
 > 
-> Data una [funzione](Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e un punto%% link %% $x_0 \in \text{dom}(f)$, diciamo che **$f$ è localmente dritta in $x_0$** se è possibile definire la [pendenza](Derivate.md#^definizione-pendenza-di-una-funzione-in-un-punto) in $x_0$ (cioè $p_f(x_0)$).
+> Data una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e un punto%% link %% $x_0 \in \text{dom}(f)$, diciamo che **$f$ è localmente dritta in $x_0$** se è possibile definire la [pendenza](Derivate.md#^definizione-pendenza-di-una-funzione-in-un-punto) in $x_0$ (cioè $p_f(x_0)$).
 ^definizione-funzione-localmente-dritta-in-un-punto
 
 > [!esempio]- Esempio di funzione non localmente dritta in un punto
@@ -109,14 +109,14 @@ In questo caso ingrandendo il grafico di $f$ vicino a $P(x_0, f(x_0))$ vediamo u
 
 > [!definizione]+ Definizione: retta tangente a una funzione in un punto
 > 
-> Data una [funzione](Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e un punto%% link %% $x_0 \in \text{dom}(f)$, diciamo che la **retta tangente a $f$ in $x_0$** è la retta passante%% link %% per il punto%% link %% $P(x_0, f(x_0))$ e con [pendenza](Derivate.md#^definizione-pendenza-di-una-funzione-in-un-punto) $p_f(x_0)$.
+> Data una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e un punto%% link %% $x_0 \in \text{dom}(f)$, diciamo che la **retta tangente a $f$ in $x_0$** è la retta passante%% link %% per il punto%% link %% $P(x_0, f(x_0))$ e con [pendenza](Derivate.md#^definizione-pendenza-di-una-funzione-in-un-punto) $p_f(x_0)$.
 ^definizione-retta-tangente-a-una-funzione-in-un-punto
 
 ## 1.1 - Derivata di una funzione
 
 > [!definizione]+ Definizione: derivata (prima) di una funzione in un punto
 > 
-> Data una [funzione](Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e un [punto interno](Topologia%20dei%20reali.md#^definizione-punto-interno) $x_0 \in \text{dom}(f)$ a $\text{dom}(f)$, diciamo che **$f$ è derivabile in $x_0$** se esiste finito%% link %% il [limite](Limiti.md#^definizione-limite)
+> Data una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e un [punto interno](Topologia%20dei%20reali.md#^definizione-punto-interno) $x_0 \in \text{dom}(f)$ a $\text{dom}(f)$, diciamo che **$f$ è derivabile in $x_0$** se esiste finito%% link %% il [limite](Limiti.md#^definizione-limite)
 > 
 > $$
 > \lim_{h \to 0} \dfrac{f(x_0 + h) - f(x_0)}{h}
@@ -127,7 +127,7 @@ In questo caso ingrandendo il grafico di $f$ vicino a $P(x_0, f(x_0))$ vediamo u
 
 > [!osservazione]+ Osservazione: derivata ed equivalenza asintotica
 > 
-> Se una [funzione](Funzioni.md#^definizione-funzione) $f$ è [derivabile](Derivate.md#^definizione-derivata-prima-di-una-funzione-in-un-punto) in un punto%% Link %% $x_0$ e la [derivata](Derivate.md#^definizione-derivata-prima-di-una-funzione-in-un-punto) $f'(x_0)$ è diversa da $0$, allora il [limite](Limiti.md#^definizione-limite)
+> Se una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f$ è [derivabile](Derivate.md#^definizione-derivata-prima-di-una-funzione-in-un-punto) in un punto%% Link %% $x_0$ e la [derivata](Derivate.md#^definizione-derivata-prima-di-una-funzione-in-un-punto) $f'(x_0)$ è diversa da $0$, allora il [limite](Limiti.md#^definizione-limite)
 > 
 > $$
 > f'(x_0) = \lim_{h \to 0} \dfrac{f(x_0 + h) - f(x_0)}{h}
@@ -172,7 +172,7 @@ ci dice che la derivata di $\sin x$ in $x_0$ vale $1$ (che è la pendenza di $x$
 
 > [!definizione]+ Definizione: derivata (prima) di una funzione in un intervallo
 > 
-> Data una [funzione](Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e un intervallo%% link %% $I \subseteq \text{dom}(f)$, diciamo che **$f$ è derivabile in $I$** se è [derivabile](Derivate.md#^definizione-derivata-prima-di-una-funzione-in-un-punto) in ogni punto%% link %% di $I$.
+> Data una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e un intervallo%% link %% $I \subseteq \text{dom}(f)$, diciamo che **$f$ è derivabile in $I$** se è [derivabile](Derivate.md#^definizione-derivata-prima-di-una-funzione-in-un-punto) in ogni punto%% link %% di $I$.
 ^definizione-derivata-prima-di-una-funzione-in-un-intervallo
 
 %% 
@@ -203,7 +203,7 @@ osservazione 1.4 ed esempio 1.5 pagg. 239-241
 
 > [!teorema]+ Teorema del legame fra la continuità e la derivabilità
 > 
-> Data una [funzione](Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e un [punto interno](Topologia%20dei%20reali.md#^definizione-punto-interno) $x_0 \in \text{dom}(f)$ a $\text{dom}(f)$, se $f$ è [derivabile](Derivate.md#^definizione-derivabilita-e-derivata-prima-di-una-funzione-in-un-punto) in $x_0$ allora $f$ è [continua](Funzioni%20continue.md#^definizione-funzione-continua) in $x_0$.
+> Data una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e un [punto interno](Topologia%20dei%20reali.md#^definizione-punto-interno) $x_0 \in \text{dom}(f)$ a $\text{dom}(f)$, se $f$ è [derivabile](Derivate.md#^definizione-derivabilita-e-derivata-prima-di-una-funzione-in-un-punto) in $x_0$ allora $f$ è [continua](Funzioni%20continue.md#^definizione-funzione-continua) in $x_0$.
 ^teorema-del-legame-fra-la-continuita-e-la-derivabilita
 
 > [!dimostrazione]- Dimostrazione del teorema del legame fra la continuità e la derivabilità
@@ -244,13 +244,13 @@ dimostrazione pag. 242 lancelotti
 
 > [!osservazione]+ Osservazione: derivabilità implica continuità ma non il contrario
 > 
-> Per il [teorema del legame fra la continuità e la derivabilità](Derivate.md#^teorema-del-legame-fra-la-continuita-e-la-derivabilita), la [derivabilità](Derivate.md#^definizione-derivabilita-e-derivata-prima-di-una-funzione-in-un-punto) implica automaticamente la [continuità](Funzioni%20continue.md#^definizione-funzione-continua), ma non è vero il contrario: per esempio, la [funzione](Funzioni.md#^definizione-funzione) $f(x) = |x|$ è [continua](Funzioni%20continue.md#^definizione-funzione-continua) ma non [derivabile](Derivate.md#^definizione-derivabilita-e-derivata-prima-di-una-funzione-in-un-punto) in $0$.
+> Per il [teorema del legame fra la continuità e la derivabilità](Derivate.md#^teorema-del-legame-fra-la-continuita-e-la-derivabilita), la [derivabilità](Derivate.md#^definizione-derivabilita-e-derivata-prima-di-una-funzione-in-un-punto) implica automaticamente la [continuità](Funzioni%20continue.md#^definizione-funzione-continua), ma non è vero il contrario: per esempio, la [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f(x) = |x|$ è [continua](Funzioni%20continue.md#^definizione-funzione-continua) ma non [derivabile](Derivate.md#^definizione-derivabilita-e-derivata-prima-di-una-funzione-in-un-punto) in $0$.
 > 
-> In particolare, abbiamo che per contrapposizione%% link %% se una [funzione](Funzioni.md#^definizione-funzione) non è [continua](Funzioni%20continue.md#^definizione-funzione-continua) allora non è neanche [derivabile](Derivate.md#^definizione-derivabilita-e-derivata-prima-di-una-funzione-in-un-punto): riprendendo l'esempio precedente della funzione $f(x) = \text{sgn}(x)$%% link %%, poiché $f$ non è [continua](Funzioni%20continue.md#^definizione-funzione-continua) in $0$, allora possiamo immediatamente concludere che $f$ non è [derivabile](Derivate.md#^definizione-derivabilita-e-derivata-prima-di-una-funzione-in-un-punto) in $0$.
+> In particolare, abbiamo che per contrapposizione%% link %% se una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) non è [continua](Funzioni%20continue.md#^definizione-funzione-continua) allora non è neanche [derivabile](Derivate.md#^definizione-derivabilita-e-derivata-prima-di-una-funzione-in-un-punto): riprendendo l'esempio precedente della funzione $f(x) = \text{sgn}(x)$%% link %%, poiché $f$ non è [continua](Funzioni%20continue.md#^definizione-funzione-continua) in $0$, allora possiamo immediatamente concludere che $f$ non è [derivabile](Derivate.md#^definizione-derivabilita-e-derivata-prima-di-una-funzione-in-un-punto) in $0$.
 
 > [!proposizione]+ Proposizione: in una derivata la variazione è un infinitesimo
 > 
-> Se una [funzione](Funzioni.md#^definizione-funzione) $f$ è [derivabile](Derivate.md#^definizione-derivabilita-e-derivata-prima-di-una-funzione-in-un-punto) in $x_0$, ossia
+> Se una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f$ è [derivabile](Derivate.md#^definizione-derivabilita-e-derivata-prima-di-una-funzione-in-un-punto) in $x_0$, ossia
 > 
 > $$
 > \lim_{x \to x_0} \dfrac{f(x) - f(x_0)}{x - x_0} = f'(x_0) \in \mathbb{R}
@@ -384,14 +384,14 @@ tabella riassuntiva delle varie interpretazioni con quoziente di Newton e deriva
 
 > [!definizione]+ Definizione: differenziale di una funzione
 > 
-> Data una [funzione](Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e un [punto interno](Topologia%20dei%20reali.md#^definizione-punto-interno) $x_0 \in \text{dom}(f)$ a $\text{dom}(f)$, diciamo che **$f$ è differenziabile in $x_0$** se $f$ è [derivabile](Derivate.md#^definizione-derivabilita-e-derivata-prima-di-una-funzione-in-un-punto) in $x_0$ e in tal caso chiamiamo **differenziale di $f$ in $x_0$** la funzione lineare%% link %% $df(x_0) \colon \mathbb{R} \to \mathbb{R}$ definita da
+> Data una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e un [punto interno](Topologia%20dei%20reali.md#^definizione-punto-interno) $x_0 \in \text{dom}(f)$ a $\text{dom}(f)$, diciamo che **$f$ è differenziabile in $x_0$** se $f$ è [derivabile](Derivate.md#^definizione-derivabilita-e-derivata-prima-di-una-funzione-in-un-punto) in $x_0$ e in tal caso chiamiamo **differenziale di $f$ in $x_0$** la funzione lineare%% link %% $df(x_0) \colon \mathbb{R} \to \mathbb{R}$ definita da
 > 
 > $$
 > df(x_0)(x) = f'(x_0)x
 > $$
 ^definizione-differenziale-di-una-funzione
 
-Quindi il [differenziale](Derivate.md#^definizione-differenziale-di-una-funzione) di $f$ in $x_0$ è una [funzione](Funzioni.md#^definizione-funzione) il cui grafico%% link %% è una retta%% link %% passante per l'origine $O(0;0)$%% ink %% con coefficiente angolare%% Link %% $f'(x_0)$.
+Quindi il [differenziale](Derivate.md#^definizione-differenziale-di-una-funzione) di $f$ in $x_0$ è una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) il cui grafico%% link %% è una retta%% link %% passante per l'origine $O(0;0)$%% ink %% con coefficiente angolare%% Link %% $f'(x_0)$.
 
 Posto $dx \colon \mathbb{R} \to \mathbb{R}$ la funzione lineare identica%% link %%, cioè la funzione tale che $dx(x) = x$ per ogni $x \in \mathbb{R}$, allora il [differenziale](Derivate.md#^definizione-differenziale-di-una-funzione) di $f$ in $x_0$ diventa
 
@@ -416,7 +416,7 @@ $$
 
 > [!definizione]+ Definizione: derivate laterali di una funzione
 > 
-> Data una [funzione](Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$, un [punto interno](Topologia%20dei%20reali.md#^definizione-punto-interno) $x_0 \in \text{dom}(f)$ a $\text{dom}(f)$ e un $\delta > 0$ tale che $[x_0;x_0 + \delta) \subseteq \text{dom}(f)$, diciamo che **$f$ è derivabile da destra in $x_0$** se esiste il [limite](Limiti.md#^definizione-limite)
+> Data una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$, un [punto interno](Topologia%20dei%20reali.md#^definizione-punto-interno) $x_0 \in \text{dom}(f)$ a $\text{dom}(f)$ e un $\delta > 0$ tale che $[x_0;x_0 + \delta) \subseteq \text{dom}(f)$, diciamo che **$f$ è derivabile da destra in $x_0$** se esiste il [limite](Limiti.md#^definizione-limite)
 > 
 > $$
 > \lim_{x \to x_0^+} \dfrac{f(x) - f(x_0)}{x - x_0} = l \in \mathbb{R}
@@ -437,7 +437,7 @@ $$
 
 > [!esempio]- Esempio di derivate laterali di una funzione
 > 
-> Consideriamo la [funzione](Funzioni.md#^definizione-funzione) $f(x) = |x|$, abbiamo visto%% Link %% che è [derivabile](Derivate.md#^definizione-derivabilita-e-derivata-prima-di-una-funzione-in-un-punto) in ogni $x \ne 0$ e che non è [derivabile](Derivate.md#^definizione-derivabilita-e-derivata-prima-di-una-funzione-in-un-punto) in $0$. Inoltre si ha che
+> Consideriamo la [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f(x) = |x|$, abbiamo visto%% Link %% che è [derivabile](Derivate.md#^definizione-derivabilita-e-derivata-prima-di-una-funzione-in-un-punto) in ogni $x \ne 0$ e che non è [derivabile](Derivate.md#^definizione-derivabilita-e-derivata-prima-di-una-funzione-in-un-punto) in $0$. Inoltre si ha che
 > 
 > $$
 > \begin{array}{}
@@ -452,7 +452,7 @@ Osservazione 1.14 pag. 247 Lancelotti
 
 > [!teorema]+ Teorema del legame fra la derivata e le derivate laterali
 > 
-> Data una [funzione](Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e un [punto interno](Topologia%20dei%20reali.md#^definizione-punto-interno) $x_0 \in \text{dom}(f)$ a $\text{dom}(f)$. Se esistono le [derivate laterali](Derivate.md#^definizione-derivate-laterali-di-una-funzione) $D^+f(x_0)$ e $D^-f(x_0)$, allora $f$ è [continua](Funzioni%20continue.md#^definizione-funzione-continua) in $x_0$ e inoltre $f$ è [derivabile](Derivate.md#^definizione-derivabilita-e-derivata-prima-di-una-funzione-in-un-punto) in $x_0$ se e solo se $D^+f(x_0) = D^-f(x_0)$ e, in tal caso,
+> Data una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e un [punto interno](Topologia%20dei%20reali.md#^definizione-punto-interno) $x_0 \in \text{dom}(f)$ a $\text{dom}(f)$. Se esistono le [derivate laterali](Derivate.md#^definizione-derivate-laterali-di-una-funzione) $D^+f(x_0)$ e $D^-f(x_0)$, allora $f$ è [continua](Funzioni%20continue.md#^definizione-funzione-continua) in $x_0$ e inoltre $f$ è [derivabile](Derivate.md#^definizione-derivabilita-e-derivata-prima-di-una-funzione-in-un-punto) in $x_0$ se e solo se $D^+f(x_0) = D^-f(x_0)$ e, in tal caso,
 > 
 > $$
 > f'(x_0) = D^+f(x_0) = D^-f(x_0)
@@ -464,9 +464,9 @@ dimostrazione pag. 247 lancelotti
 
 > [!definizione]+ Definizione: derivabilità e derivata (prima) di una funzione
 > 
-> Data una [funzione](Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$, diciamo che **$f$ è derivabile** se è [derivabile](Derivate.md#^definizione-derivabilita-e-derivata-prima-di-una-funzione-in-un-punto) in ogni punto%% link %% del dominio%% link %% $\text{dom}(f)$ e, nei [punti di frontiera](Topologia%20dei%20reali.md#^definizione-punto-di-frontiera) appartenenti al dominio%% link %%, se sono [derivabili lateralmente](Derivate.md#^definizione-derivate-laterali-di-una-funzione).
+> Data una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$, diciamo che **$f$ è derivabile** se è [derivabile](Derivate.md#^definizione-derivabilita-e-derivata-prima-di-una-funzione-in-un-punto) in ogni punto%% link %% del dominio%% link %% $\text{dom}(f)$ e, nei [punti di frontiera](Topologia%20dei%20reali.md#^definizione-punto-di-frontiera) appartenenti al dominio%% link %%, se sono [derivabili lateralmente](Derivate.md#^definizione-derivate-laterali-di-una-funzione).
 > 
-> In tal caso è definita una [funzione](Funzioni.md#^definizione-funzione), detta **derivata (prima) di $f$**, denotata con $f'$ (oppure $Df$, $\dfrac{df}{dx}$ p $\dot f$) e definita come
+> In tal caso è definita una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione), detta **derivata (prima) di $f$**, denotata con $f'$ (oppure $Df$, $\dfrac{df}{dx}$ p $\dot f$) e definita come
 > 
 > $$
 > \begin{align*}
@@ -478,7 +478,7 @@ dimostrazione pag. 247 lancelotti
 
 > [!esempio]- Esempio di derivabiità di una funzione
 > 
-> Consideriamo la [funzione](Funzioni.md#^definizione-funzione) $f(x) = x^q$ con $q \in \mathbb{Q}^{> 0} \setminus \mathbb{N}$. Abbiamo che $\text{dom}(f) = [0, + \infty)$ e, per ogni $x > 0$, si ha che $f$ è [derivabile](Derivate.md#^definizione-derivabilita-e-derivata-prima-di-una-funzione-in-un-punto) in $x$ con $f'(x) = qx^{q-1}$. In $x=0$ si ha che
+> Consideriamo la [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f(x) = x^q$ con $q \in \mathbb{Q}^{> 0} \setminus \mathbb{N}$. Abbiamo che $\text{dom}(f) = [0, + \infty)$ e, per ogni $x > 0$, si ha che $f$ è [derivabile](Derivate.md#^definizione-derivabilita-e-derivata-prima-di-una-funzione-in-un-punto) in $x$ con $f'(x) = qx^{q-1}$. In $x=0$ si ha che
 > 
 > $$
 > \lim_{x \to 0^+} \dfrac{f(x) - f(0)}{x} = \lim_{x \to 0^+} \dfrac{x^q}{x} = \lim_{x \to 0^+} x^{q-1} = \begin{cases}
@@ -491,11 +491,11 @@ dimostrazione pag. 247 lancelotti
 
 # 4 - Punti di non derivabilità
 
-Introduciamo una classificazione per i punti di non derivabilità%% link %% di una [funzione](Funzioni.md#^definizione-funzione), ossia per i punti%% link %% in cui $f$ è [continua](Funzioni%20continue.md#^definizione-funzione-continua) ma non [derivabile](Derivate.md#^definizione-derivabilita-e-derivata-prima-di-una-funzione).
+Introduciamo una classificazione per i punti di non derivabilità%% link %% di una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione), ossia per i punti%% link %% in cui $f$ è [continua](Funzioni%20continue.md#^definizione-funzione-continua) ma non [derivabile](Derivate.md#^definizione-derivabilita-e-derivata-prima-di-una-funzione).
 
 > [!definizione]+ Definizione: punto angoloso
 > 
-> Data una [funzione](Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e un [punto interno](Topologia%20dei%20reali.md#^definizione-punto-interno) $x_0 \in \text{dom}(f)$ a $\text{dom}(f)$, diciamo che **$x_0$ è un punto angoloso per $f$** se esistono le [derivate laterali](Derivate.md#^definizione-derivate-laterali-di-una-funzione) $D^+f(x_0)$ e $D^-f(x_0)$ ma sono diverse.
+> Data una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e un [punto interno](Topologia%20dei%20reali.md#^definizione-punto-interno) $x_0 \in \text{dom}(f)$ a $\text{dom}(f)$, diciamo che **$x_0$ è un punto angoloso per $f$** se esistono le [derivate laterali](Derivate.md#^definizione-derivate-laterali-di-una-funzione) $D^+f(x_0)$ e $D^-f(x_0)$ ma sono diverse.
 ^definizione-punto-angoloso
 
 %% 
@@ -508,7 +508,7 @@ riprendere l'esempio della pendenza di $f(x) = |x|$
 
 > [!esempio]- Esempio di punto angoloso per $\color{#7F7FFF} f(x) =|x|$
 > 
-> Consideriamo la [funzione](Funzioni.md#^definizione-funzione) $f(x) = |x|$: il punto%% link %% $x_0 = 0$ è [angoloso](Derivate.md#^definizione-punto-angoloso) per $f$, infatti le [derivate laterali](Derivate.md#^definizione-derivate-laterali-di-una-funzione) non coincidono:
+> Consideriamo la [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f(x) = |x|$: il punto%% link %% $x_0 = 0$ è [angoloso](Derivate.md#^definizione-punto-angoloso) per $f$, infatti le [derivate laterali](Derivate.md#^definizione-derivate-laterali-di-una-funzione) non coincidono:
 > 
 > $$
 > D^+f(0) = 1 \ne -1 = D^-f(0)
@@ -525,7 +525,7 @@ esempio 1.20 di punto angoloso per funzione a tratti pagg. 248-249 lancelotti
 
 > [!definizione]+ Definizione: cuspide
 > 
-> Data una [funzione](Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e un [punto interno](Topologia%20dei%20reali.md#^definizione-punto-interno) $x_0 \in \text{dom}(f)$ a $\text{dom}(f)$, diciamo che **$x_0$ è una cuspide per $f$** se $f$ è [continua](Funzioni%20continue.md#^definizione-funzione-continua) in $x_0$ e
+> Data una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e un [punto interno](Topologia%20dei%20reali.md#^definizione-punto-interno) $x_0 \in \text{dom}(f)$ a $\text{dom}(f)$, diciamo che **$x_0$ è una cuspide per $f$** se $f$ è [continua](Funzioni%20continue.md#^definizione-funzione-continua) in $x_0$ e
 > 
 > $$
 > \lim_{x \to x_0^+} \dfrac{f(x) - f(x_0)}{x - x_0} = \pm \infty \ne \mp \infty = \lim_{x \to x_0^-} \dfrac{f(x) - f(x_0)}{x - x_0}
@@ -545,7 +545,7 @@ esempio 1.21 pag. 249
 
 > [!definizione]+ Definizione: punto di flesso a tangente verticale
 > 
-> Data una [funzione](Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e un [punto interno](Topologia%20dei%20reali.md#^definizione-punto-interno) $x_0 \in \text{dom}(f)$ a $\text{dom}(f)$, diciamo che **$x_0$ è un punto di flesso a tangente verticale per $f$** se $f$ è [continua](Funzioni%20continue.md#^definizione-funzione-continua) in $x_0$ e
+> Data una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e un [punto interno](Topologia%20dei%20reali.md#^definizione-punto-interno) $x_0 \in \text{dom}(f)$ a $\text{dom}(f)$, diciamo che **$x_0$ è un punto di flesso a tangente verticale per $f$** se $f$ è [continua](Funzioni%20continue.md#^definizione-funzione-continua) in $x_0$ e
 > 
 > $$
 > \lim_{x \to x_0^+} \dfrac{f(x) - f(x_0)}{x - x_0} = \lim_{x \to x_0^-} \dfrac{f(x) - f(x_0)}{x - x_0} = \pm \infty
@@ -566,7 +566,7 @@ osservazione 1.23 pag. 250-251 lancelotti
 
 > [!teorema]+ Teorema della derivata della somma
 > 
-> Date due [funzioni](Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e $g \colon \text{dom}(g) \to \mathbb{R}$ [derivabili](Derivate.md#^definizione-derivabilita-e-derivata-prima-di-una-funzione-in-un-punto) in un punto%% link %% $x_0$ [interno](Topologia%20dei%20reali.md#^definizione-punto-interno) a $\text{dom}(f) \cap \text{dom}(g)$, allora la loro somma%% link %% $f+g$ è [derivabile](Derivate.md#^definizione-derivabilita-e-derivata-prima-di-una-funzione-in-un-punto) in $x_0$ e
+> Date due [funzioni](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e $g \colon \text{dom}(g) \to \mathbb{R}$ [derivabili](Derivate.md#^definizione-derivabilita-e-derivata-prima-di-una-funzione-in-un-punto) in un punto%% link %% $x_0$ [interno](Topologia%20dei%20reali.md#^definizione-punto-interno) a $\text{dom}(f) \cap \text{dom}(g)$, allora la loro somma%% link %% $f+g$ è [derivabile](Derivate.md#^definizione-derivabilita-e-derivata-prima-di-una-funzione-in-un-punto) in $x_0$ e
 > 
 > $$
 > (f+g)'(x_0) = f'(x_0) + g'(x_0)
@@ -579,7 +579,7 @@ Dimostrazione: è un'immediata conseguenza della definizione di derivatat e vien
 
 > [!teorema]+ Teorema della derivata del prodotto
 > 
-> Date due [funzioni](Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e $g \colon \text{dom}(g) \to \mathbb{R}$ [derivabili](Derivate.md#^definizione-derivabilita-e-derivata-prima-di-una-funzione-in-un-punto) in un punto%% link %% $x_0$ [interno](Topologia%20dei%20reali.md#^definizione-punto-interno) a $\text{dom}(f) \cap \text{dom}(g)$, allora il loro prodotto%% link %% $f \cdot g$ è [derivabile](Derivate.md#^definizione-derivabilita-e-derivata-prima-di-una-funzione-in-un-punto) in $x_0$ e
+> Date due [funzioni](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e $g \colon \text{dom}(g) \to \mathbb{R}$ [derivabili](Derivate.md#^definizione-derivabilita-e-derivata-prima-di-una-funzione-in-un-punto) in un punto%% link %% $x_0$ [interno](Topologia%20dei%20reali.md#^definizione-punto-interno) a $\text{dom}(f) \cap \text{dom}(g)$, allora il loro prodotto%% link %% $f \cdot g$ è [derivabile](Derivate.md#^definizione-derivabilita-e-derivata-prima-di-una-funzione-in-un-punto) in $x_0$ e
 > 
 > $$
 > (f \cdot g)'(x_0) = f'(x_0) \cdot g(x_0) + f(x_0) \cdot g'(x_0)
@@ -592,7 +592,7 @@ dimostrazione pag. 252 lancelotti
 
 > [!teorema]+ Teorema della derivata del reciproco
 > 
-> Data una [funzione](Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ [derivabile](Derivate.md#^definizione-derivabilita-e-derivata-prima-di-una-funzione-in-un-punto) in un punto%% link %% $x_0$ [interno](Topologia%20dei%20reali.md#^definizione-punto-interno) a $\text{dom}(f)$, se $f(x_0) \ne 0$ allora il reciproco%% link %% $\dfrac{1}{f}$ è [derivabile](Derivate.md#^definizione-derivabilita-e-derivata-prima-di-una-funzione-in-un-punto) in $x_0$ e
+> Data una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ [derivabile](Derivate.md#^definizione-derivabilita-e-derivata-prima-di-una-funzione-in-un-punto) in un punto%% link %% $x_0$ [interno](Topologia%20dei%20reali.md#^definizione-punto-interno) a $\text{dom}(f)$, se $f(x_0) \ne 0$ allora il reciproco%% link %% $\dfrac{1}{f}$ è [derivabile](Derivate.md#^definizione-derivabilita-e-derivata-prima-di-una-funzione-in-un-punto) in $x_0$ e
 > 
 > $$
 > \left( \dfrac{1}{f} \right)'(x_0) = - \dfrac{f'(x_0)}{[f(x_0)]^2}
@@ -605,7 +605,7 @@ dimostrazione pag. 253 lancelotti
 
 > [!teorema]+ Teorema della derivata del quoziente
 > 
-> Date due [funzioni](Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e $g \colon \text{dom}(g) \to \mathbb{R}$ [derivabili](Derivate.md#^definizione-derivabilita-e-derivata-prima-di-una-funzione-in-un-punto) in un punto%% link %% $x_0$ [interno](Topologia%20dei%20reali.md#^definizione-punto-interno) a $\text{dom}(f) \cap \text{dom}(g)$, se $g(x_0) \ne 0$ allora il loro quoziente%% Link %% $\dfrac{f}{g}$ è [derivabile](Derivate.md#^definizione-derivabilita-e-derivata-prima-di-una-funzione-in-un-punto) in $x_0$ e
+> Date due [funzioni](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e $g \colon \text{dom}(g) \to \mathbb{R}$ [derivabili](Derivate.md#^definizione-derivabilita-e-derivata-prima-di-una-funzione-in-un-punto) in un punto%% link %% $x_0$ [interno](Topologia%20dei%20reali.md#^definizione-punto-interno) a $\text{dom}(f) \cap \text{dom}(g)$, se $g(x_0) \ne 0$ allora il loro quoziente%% Link %% $\dfrac{f}{g}$ è [derivabile](Derivate.md#^definizione-derivabilita-e-derivata-prima-di-una-funzione-in-un-punto) in $x_0$ e
 > 
 > $$
 > \left( \dfrac{f}{g} \right)'(x_0) = \dfrac{f'(x_0)g(x_0) - f(x_0)g'(x_0)}{[g(x_0)]^2}
@@ -630,7 +630,7 @@ esercizio 1.27 pag. 254 lancelotti
 
 > [!teorema]+ Teorema della derivata della funzione composta
 > 
-> Date due [funzioni](Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e $g \colon \text{dom}(g) \to \mathbb{R}$ con immagine%% link %% di $f$ nel dominio%% Link %% di $g$ (cioè $\text{im}(f) \subseteq \text{dom}(f)$) e un punto%% link %% $x_0$ [interno](Topologia%20dei%20reali.md#^definizione-punto-interno) a $\text{dom}(f)$ tale che $f(x_0)$ è [interno](Topologia%20dei%20reali.md#^definizione-punto-interno) a $\text{dom}(g)$, se $f$ è [derivabile](Derivate.md#^definizione-derivabilita-e-derivata-prima-di-una-funzione-in-un-punto) in $x_0$ e $g$ è [derivabile](Derivate.md#^definizione-derivabilita-e-derivata-prima-di-una-funzione-in-un-punto) in $f(x_0)$, allora la loro composizione%% link %% $g \circ f$ è [derivabile](Derivate.md#^definizione-derivabilita-e-derivata-prima-di-una-funzione-in-un-punto) in $x_0$ e
+> Date due [funzioni](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e $g \colon \text{dom}(g) \to \mathbb{R}$ con immagine%% link %% di $f$ nel dominio%% Link %% di $g$ (cioè $\text{im}(f) \subseteq \text{dom}(f)$) e un punto%% link %% $x_0$ [interno](Topologia%20dei%20reali.md#^definizione-punto-interno) a $\text{dom}(f)$ tale che $f(x_0)$ è [interno](Topologia%20dei%20reali.md#^definizione-punto-interno) a $\text{dom}(g)$, se $f$ è [derivabile](Derivate.md#^definizione-derivabilita-e-derivata-prima-di-una-funzione-in-un-punto) in $x_0$ e $g$ è [derivabile](Derivate.md#^definizione-derivabilita-e-derivata-prima-di-una-funzione-in-un-punto) in $f(x_0)$, allora la loro composizione%% link %% $g \circ f$ è [derivabile](Derivate.md#^definizione-derivabilita-e-derivata-prima-di-una-funzione-in-un-punto) in $x_0$ e
 > 
 > $$
 > (g \circ f)'(x_0) = g'(f(x_0)) \cdot f'(x_0)
@@ -680,7 +680,7 @@ I teoremi 1.24, 1.28 e 1.34 valgono anche per le derivate laterali
 
 # 6 - Derivate $n$-esime
 
-Finora la [derivata di una funzione](Derivate.md#^definizione-derivabilita-e-derivata-prima-di-una-funzione) l'abbiamo chiamata _prima_. Ma perché _prima_? Perché in realtà una [funzione](Funzioni.md#^definizione-funzione) è [derivabile](Derivate.md#^definizione-derivata-prima-di-una-funzione) più volte: per esempio, data una [funzione](Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ [derivabile](Derivate.md#^definizione-derivata-prima-di-una-funzione-in-un-intervallo) in un intervallo%% link %% $(a,b) \subseteq \text{dom}(f)$ per cui quindi esiste la sua [derivata](Derivate.md#^definizione-derivata-prima-di-una-funzione) $f'$, possiamo nuovamente valutare la [derivabilità](Derivate.md#^definizione-derivata-prima-di-una-funzione) di $f'$, ossia possiamo chiederci se esiste finito%% Link %% il [limite](Limiti.md#^definizione-limite)
+Finora la [derivata di una funzione](Derivate.md#^definizione-derivabilita-e-derivata-prima-di-una-funzione) l'abbiamo chiamata _prima_. Ma perché _prima_? Perché in realtà una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) è [derivabile](Derivate.md#^definizione-derivata-prima-di-una-funzione) più volte: per esempio, data una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ [derivabile](Derivate.md#^definizione-derivata-prima-di-una-funzione-in-un-intervallo) in un intervallo%% link %% $(a,b) \subseteq \text{dom}(f)$ per cui quindi esiste la sua [derivata](Derivate.md#^definizione-derivata-prima-di-una-funzione) $f'$, possiamo nuovamente valutare la [derivabilità](Derivate.md#^definizione-derivata-prima-di-una-funzione) di $f'$, ossia possiamo chiederci se esiste finito%% Link %% il [limite](Limiti.md#^definizione-limite)
 
 $$
 \lim_{h \to 0} \dfrac{f'(x_0 + h) - f'(x_0)}{h}
@@ -690,7 +690,7 @@ In caso di risposta affermativa denotiamo questo valore con $f''(x_0)$ e lo chia
 
 > [!definizione]+ Definizione: derivata $\color{#FF7FFF} n$-esima di una funzione
 > 
-> Data una [funzione](Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e $n \in \mathbb{N}$, $n \geq 1$, supponiamo che $f$ sia [derivabile](Derivate.md#^definizione-derivabilita-e-derivata-prima-di-una-funzione) $n-1$ volte in un [intorno](Topologia%20dei%20reali.md#^definizione-intorno-di-un-punto) di un punto%% link %% $x_0 \in \text{dom}(f)$, con [derivata](Derivate.md#^definizione-derivata-prima-di-una-funzione) $(n-1)$-esima $f^{(n-1)}$. Se $f^{(n-1)}$ è a sua volta [derivabile](Derivate.md#^definizione-derivata-prima-di-una-funzione-in-un-punto) in $x_0$, diciamo che **$f$ è derivabile $n$ volte in $x_0$** e chiamiamo **derivata $n$-esima di $f$ in $x_0$** la [funzione](Funzioni.md#^definizione-funzione)
+> Data una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e $n \in \mathbb{N}$, $n \geq 1$, supponiamo che $f$ sia [derivabile](Derivate.md#^definizione-derivabilita-e-derivata-prima-di-una-funzione) $n-1$ volte in un [intorno](Topologia%20dei%20reali.md#^definizione-intorno-di-un-punto) di un punto%% link %% $x_0 \in \text{dom}(f)$, con [derivata](Derivate.md#^definizione-derivata-prima-di-una-funzione) $(n-1)$-esima $f^{(n-1)}$. Se $f^{(n-1)}$ è a sua volta [derivabile](Derivate.md#^definizione-derivata-prima-di-una-funzione-in-un-punto) in $x_0$, diciamo che **$f$ è derivabile $n$ volte in $x_0$** e chiamiamo **derivata $n$-esima di $f$ in $x_0$** la [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione)
 > 
 > $$
 > f^{(n)}(x_0) \overset{\text{def}}{=} \left(f^{(n-1)}\right)'(x_0)
@@ -732,13 +732,13 @@ definizione di "calcolo differenziale"
 > mettere foto grafico pag. 260 però disegnando le rette tangenti orizzontali con resto della spiegazione
 > %%
 > 
-> Oppure $f$ potrebbe non essere [continua](Funzioni%20continue.md#^definizione-funzione-continua) in tali punti%% link %%, come nel caso della [funzione](Funzioni.md#^definizione-funzione) $f(x) = |\text{sgn}(x)|$ che ha un punto di minimo%% Link %% in $x=0$ ma non è [continua](Funzioni%20continue.md#^definizione-funzione-continua) in tale punto%% link %%.
+> Oppure $f$ potrebbe non essere [continua](Funzioni%20continue.md#^definizione-funzione-continua) in tali punti%% link %%, come nel caso della [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f(x) = |\text{sgn}(x)|$ che ha un punto di minimo%% Link %% in $x=0$ ma non è [continua](Funzioni%20continue.md#^definizione-funzione-continua) in tale punto%% link %%.
 > 
 > %% 
 > mettere foto grafico funzione modulo segno
 > %%
 > 
-> Oppure $f$ potrebbe non essere [derivabile](Derivate.md#^definizione-derivabilita-e-derivata-prima-di-una-funzione-in-un-punto) in tali punti%% link %%, come nel caso della [funzione](Funzioni.md#^definizione-funzione) $f(x) = |x|$ che ha un punto di minimo%% link %% in $x = 0$ ma non è [derivabile](Derivate.md#^definizione-derivabilita-e-derivata-prima-di-una-funzione-in-un-punto) in tale punto%% link %%.
+> Oppure $f$ potrebbe non essere [derivabile](Derivate.md#^definizione-derivabilita-e-derivata-prima-di-una-funzione-in-un-punto) in tali punti%% link %%, come nel caso della [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f(x) = |x|$ che ha un punto di minimo%% link %% in $x = 0$ ma non è [derivabile](Derivate.md#^definizione-derivabilita-e-derivata-prima-di-una-funzione-in-un-punto) in tale punto%% link %%.
 > 
 > %% 
 > mettere foto grafico funzione f(x)=|x|
@@ -746,11 +746,11 @@ definizione di "calcolo differenziale"
 > 
 > Oppure tali punti%% link %% potrebbero anche essere [isolati](Topologia%20dei%20reali.md#^definizione-punto-isolato).
 > 
-> Poiché la casistica è piuttosto vasta, vogliamo poter stabilire delle condizioni necessarie e/o sufficienti affinché un punto%% link %% sia di estremo locale%% Link %% per una [funzione](Funzioni.md#^definizione-funzione).
+> Poiché la casistica è piuttosto vasta, vogliamo poter stabilire delle condizioni necessarie e/o sufficienti affinché un punto%% link %% sia di estremo locale%% Link %% per una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione).
 
 > [!definizione]+ Definizione: punto stazionario
 > 
-> Data una [funzione](Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e un [punto interno](Topologia%20dei%20reali.md#^definizione-punto-interno) $x_0 \in \text{dom}(f)$ a $\text{dom}(f)$, se $f$ è [derivabile](Derivate.md#^definizione-derivabilita-e-derivata-prima-di-una-funzione-in-un-punto) in $x_0$ allora diciamo che **$x_0$ è un punto stazionario (o critico) per $f$** se $f'(x_0) = 0$.
+> Data una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e un [punto interno](Topologia%20dei%20reali.md#^definizione-punto-interno) $x_0 \in \text{dom}(f)$ a $\text{dom}(f)$, se $f$ è [derivabile](Derivate.md#^definizione-derivabilita-e-derivata-prima-di-una-funzione-in-un-punto) in $x_0$ allora diciamo che **$x_0$ è un punto stazionario (o critico) per $f$** se $f'(x_0) = 0$.
 ^definizione-punto-stazionario
 
 %% 
@@ -759,7 +759,7 @@ esempi di punti stazionari
 
 > [!teorema]+ Teorema di Fermat
 > 
-> Data una [funzione](Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e un [punto interno](Topologia%20dei%20reali.md#^definizione-punto-interno) $x_0 \in \text{dom}(f)$ a $\text{dom}(f)$, se $f$ è [derivabile](Derivate.md#^definizione-derivabilita-e-derivata-prima-di-una-funzione-in-un-punto) in $x_0$ e $x_0$ è un punto di massimo%% Link %% o di minimo locale%% link %% per $f$, allora $x_0$ è un [punto stazionario](Derivate.md#^definizione-punto-stazionario) per $f$.
+> Data una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e un [punto interno](Topologia%20dei%20reali.md#^definizione-punto-interno) $x_0 \in \text{dom}(f)$ a $\text{dom}(f)$, se $f$ è [derivabile](Derivate.md#^definizione-derivabilita-e-derivata-prima-di-una-funzione-in-un-punto) in $x_0$ e $x_0$ è un punto di massimo%% Link %% o di minimo locale%% link %% per $f$, allora $x_0$ è un [punto stazionario](Derivate.md#^definizione-punto-stazionario) per $f$.
 ^teorema-di-fermat
 
 %% 
@@ -782,7 +782,7 @@ osservazione 2.6 pag. 263 lancelotti
 
 > [!teorema]+ Teorema di Rolle
 > 
-> Data una [funzione](Funzioni.md#^definizione-funzione) $f \colon [a,b] \to \mathbb{R}$, se $f$ è [continua](Funzioni%20continue.md#^definizione-funzione-continua) in $[a,b]$, [derivabile](Derivate.md#^definizione-derivabilita-di-una-funzione-in-un-sottoinsieme-del-dominio) in $(a,b)$ e $f(a) = f(b)$, allora esiste almeno un punto%% link %% $x_0 \in (a,b)$ tale che $f'(x_0) = 0$.
+> Data una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon [a,b] \to \mathbb{R}$, se $f$ è [continua](Funzioni%20continue.md#^definizione-funzione-continua) in $[a,b]$, [derivabile](Derivate.md#^definizione-derivabilita-di-una-funzione-in-un-sottoinsieme-del-dominio) in $(a,b)$ e $f(a) = f(b)$, allora esiste almeno un punto%% link %% $x_0 \in (a,b)$ tale che $f'(x_0) = 0$.
 ^teorema-di-rolle
 
 %% chi è Rolle? %%
@@ -797,7 +797,7 @@ dimostrazione pagg. 263-264 lancelotti
 
 > [!teorema]+ Teorema di Lagrange (o del valore medio)
 > 
-> Data una [funzione](Funzioni.md#^definizione-funzione) $f \colon [a,b] \to \mathbb{R}$, se $f$ è [continua](Funzioni%20continue.md#^definizione-funzione-continua) in $[a,b]$ e [derivabile](Derivate.md#^definizione-derivabilita-di-una-funzione-in-un-sottoinsieme-del-dominio) in $(a,b)$, allora esiste almeno un punto%% link %% $x_0 \in (a,b)$ tale che la [derivata](Derivate.md#^definizione-derivata-prima-di-una-funzione-in-un-intervallo) $f'(x_0)$ di $f$ in $x_0$ è uguale al [quoziente di Newton](Variazioni%20e%20quoziente%20di%20Newton.md#^definizione-quoziente-di-newton) tra $a$ e $b$:
+> Data una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon [a,b] \to \mathbb{R}$, se $f$ è [continua](Funzioni%20continue.md#^definizione-funzione-continua) in $[a,b]$ e [derivabile](Derivate.md#^definizione-derivabilita-di-una-funzione-in-un-sottoinsieme-del-dominio) in $(a,b)$, allora esiste almeno un punto%% link %% $x_0 \in (a,b)$ tale che la [derivata](Derivate.md#^definizione-derivata-prima-di-una-funzione-in-un-intervallo) $f'(x_0)$ di $f$ in $x_0$ è uguale al [quoziente di Newton](Variazioni%20e%20quoziente%20di%20Newton.md#^definizione-quoziente-di-newton) tra $a$ e $b$:
 > 
 > $$
 > f'(x_0) = \dfrac{f(b) - f(a)}{b - a}
@@ -825,7 +825,7 @@ mettere grafico in questa osservazione
 
 > [!osservazione]+ Osservazione: interpretazione cinematica del teorema di Lagrange
 > 
-> Se una [funzione](Funzioni.md#^definizione-funzione) $f$ rappresenta la posizione di un oggetto su una retta%% link %% e la sua [derivata](Derivate.md#^definizione-derivata-prima-di-una-funzione-in-un-punto) $f'(c)$ in un punto%% Link %% $c \in (a,b)$ rappresenta la sua velocità istantanea al tempo $c$, allora la pendenza%% link alla pendenza di una retta (e non solo in un punto) %% del segmento%% link %% passante per $(a,f(a))$ e $(b, f(b))$, cioè
+> Se una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f$ rappresenta la posizione di un oggetto su una retta%% link %% e la sua [derivata](Derivate.md#^definizione-derivata-prima-di-una-funzione-in-un-punto) $f'(c)$ in un punto%% Link %% $c \in (a,b)$ rappresenta la sua velocità istantanea al tempo $c$, allora la pendenza%% link alla pendenza di una retta (e non solo in un punto) %% del segmento%% link %% passante per $(a,f(a))$ e $(b, f(b))$, cioè
 > 
 > $$
 > \dfrac{f(b)-f(a)}{b - a}
@@ -847,11 +847,11 @@ osservazione 2.11 pag. 266 lncelotti
 
 Ora vediamo una serie di corollari%% Link %% sul [teorema di Lagrange](Derivate.md#^teorema-di-lagrange-o-del-valore-medio).
 
-Il prossimo corollario%% Link %% formalizza quanto abbiamo detto prima riguardo la [molteplicità del punto $x_0$ nel teorema di Lagrange](Derivate.md#^osservazione-molteplicita-del-punto-x0-nel-teorema-di-lagrange), ossia che quando una [funzione](Funzioni.md#^definizione-funzione) è costante%% link %% allora la sua [derivata](Derivate.md#^definizione-derivata-prima-di-una-funzione) è sempre nulla%% link %%.
+Il prossimo corollario%% Link %% formalizza quanto abbiamo detto prima riguardo la [molteplicità del punto $x_0$ nel teorema di Lagrange](Derivate.md#^osservazione-molteplicita-del-punto-x0-nel-teorema-di-lagrange), ossia che quando una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) è costante%% link %% allora la sua [derivata](Derivate.md#^definizione-derivata-prima-di-una-funzione) è sempre nulla%% link %%.
 
 > [!corollario]+ Corollario di caratterizzazione delle funzioni con derivata nulla
 > 
-> Data una [funzione](Funzioni.md#^definizione-funzione) $f \colon (a,b) \to \mathbb{R}$ [derivabile](Derivate.md#^definizione-derivata-prima-di-una-funzione), per ogni punto%% link %% $x \in (a,b)$ la sua [derivata](Derivate.md#^definizione-derivata-prima-di-una-funzione-in-un-punto) $f'(x)$ è nulla%% link %% se e solo se esiste una costante%% link %% $k \in \mathbb{R}$ tale che la [funzione](Funzioni.md#^definizione-funzione) in ogni punto%% link %% $x \in (a,b)$ vale $k$:
+> Data una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon (a,b) \to \mathbb{R}$ [derivabile](Derivate.md#^definizione-derivata-prima-di-una-funzione), per ogni punto%% link %% $x \in (a,b)$ la sua [derivata](Derivate.md#^definizione-derivata-prima-di-una-funzione-in-un-punto) $f'(x)$ è nulla%% link %% se e solo se esiste una costante%% link %% $k \in \mathbb{R}$ tale che la [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) in ogni punto%% link %% $x \in (a,b)$ vale $k$:
 > 
 > $$
 > \begin{array}{}
@@ -872,18 +872,18 @@ Il prossimo corollario%% Link %% formalizza quanto abbiamo detto prima riguardo 
 > 	\lim_{h \to 0} \dfrac{f(x+h) - f(x)}{h} = \lim_{h \to 0} \dfrac{k -k}{h} = 0
 > 	$$
 > 	Di conseguenza, la [derivata](Derivate.md#^definizione-derivata-prima-di-una-funzione-in-un-punto) $f'(x)$ di $f$ in $x$ è nulla%% link %% per ogni $x \in (a,b)$.
-> - Direzione ($\Downarrow$): essendo $f$ [derivabile](Derivate.md#^definizione-derivata-prima-di-una-funzione) su $(a,b)$, allora $f$ è anche [continua](Funzioni%20continue.md#^definizione-funzione-continua) sul suo [dominio](Funzioni.md#^definizione-dominio-e-codominio-della-funzione) $(a,b)$ per il [teorema del legame fra la continuità e la derivabilità](Derivate.md#^teorema-del-legame-fra-la-continuita-e-la-derivabilita).
-> 	Se prendiamo due punti%% link %% $x_1, x_2 \in (a,b)$ tali che $a < x_1 < x_2 < b$ allora $f$ soddisfa le ipotesi del [teorema del Lagrange](Derivate.md#^teorema-di-lagrange-o-del-valore-medio) su $[x_1, x_2] \subsetneq (a,b)$ per ogni scelta di $x_1$ e $x_2$ (cioè semplicemente applichiamo il [teorema del Lagrange](Derivate.md#^teorema-di-lagrange-o-del-valore-medio) su un [sottoinsieme](Teoria%20degli%20insiemi.md#^definizione-insieme) del [dominio](Funzioni.md#^definizione-dominio-e-codominio-della-funzione)), quindi abbiamo
+> - Direzione ($\Downarrow$): essendo $f$ [derivabile](Derivate.md#^definizione-derivata-prima-di-una-funzione) su $(a,b)$, allora $f$ è anche [continua](Funzioni%20continue.md#^definizione-funzione-continua) sul suo [dominio](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-dominio-e-codominio-della-funzione) $(a,b)$ per il [teorema del legame fra la continuità e la derivabilità](Derivate.md#^teorema-del-legame-fra-la-continuita-e-la-derivabilita).
+> 	Se prendiamo due punti%% link %% $x_1, x_2 \in (a,b)$ tali che $a < x_1 < x_2 < b$ allora $f$ soddisfa le ipotesi del [teorema del Lagrange](Derivate.md#^teorema-di-lagrange-o-del-valore-medio) su $[x_1, x_2] \subsetneq (a,b)$ per ogni scelta di $x_1$ e $x_2$ (cioè semplicemente applichiamo il [teorema del Lagrange](Derivate.md#^teorema-di-lagrange-o-del-valore-medio) su un [sottoinsieme](Teoria%20degli%20insiemi.md#^definizione-insieme) del [dominio](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-dominio-e-codominio-della-funzione)), quindi abbiamo
 > 	$$
 > 	\dfrac{f(x_2) - f(x_1)}{x_2 - x_1} = 0 \implies f(x_1) = f(x_2)
 > 	$$
-> 	Dato che il valore%% link %% della [funzione](Funzioni.md#^definizione-funzione) è uguale sia in $x_1$ che in $x_2$ e dato che ciò vale per qualsiasi coppia di punti%% link %% $x_1,x_2$ presi nel [dominio](Funzioni.md#^definizione-dominio-e-codominio-della-funzione), la [funzione](Funzioni.md#^definizione-funzione) avrà lo stesso valore%% link %% in ogni punto%% link %%, ergo sarà necessariamente costante%% link %%.
+> 	Dato che il valore%% link %% della [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) è uguale sia in $x_1$ che in $x_2$ e dato che ciò vale per qualsiasi coppia di punti%% link %% $x_1,x_2$ presi nel [dominio](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-dominio-e-codominio-della-funzione), la [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) avrà lo stesso valore%% link %% in ogni punto%% link %%, ergo sarà necessariamente costante%% link %%.
 > 
 > $\blacksquare$
 
 > [!corollario]+ Corollario di caratterizzazione delle funzioni con derivata seconda nulla
 > 
-> Data una [funzione](Funzioni.md#^definizione-funzione) $f \colon (a,b) \to \mathbb{R}$ [derivabile due volte](Derivate.md#^definizione-derivata-n-esima-di-una-funzione), per ogni punto%% link %% $x \in (a,b)$ la sua [derivata seconda](Derivate.md#^definizione-derivata-n-esima-di-una-funzione) $f'(x)$ è nulla%% link %% se e solo se la [funzione](Funzioni.md#^definizione-funzione) è lineare%% link %%:
+> Data una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon (a,b) \to \mathbb{R}$ [derivabile due volte](Derivate.md#^definizione-derivata-n-esima-di-una-funzione), per ogni punto%% link %% $x \in (a,b)$ la sua [derivata seconda](Derivate.md#^definizione-derivata-n-esima-di-una-funzione) $f'(x)$ è nulla%% link %% se e solo se la [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) è lineare%% link %%:
 > 
 > $$
 > \begin{array}{}
@@ -933,7 +933,7 @@ Il prossimo corollario%% Link %% formalizza quanto abbiamo detto prima riguardo 
 
 > [!corollario]+ Corollario 1 di caratterizzazione delle primitive di una stessa funzione su un intervallo
 > 
-> Data una [funzione](Funzioni.md#^definizione-funzione) $f \colon [a,b] \to \mathbb{R}$ e una sua primitiva%% link %% $F$, allora per ogni valore%% link %% $c \in \mathbb{R}$ anche $F(x) + c$ è una primitiva%% link %% di $f$.
+> Data una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon [a,b] \to \mathbb{R}$ e una sua primitiva%% link %% $F$, allora per ogni valore%% link %% $c \in \mathbb{R}$ anche $F(x) + c$ è una primitiva%% link %% di $f$.
 ^corollario-1-di-caratterizzazione-delle-primitive-di-una-stessa-funzione-su-un-intervallo
 
 > [!dimostrazione]- Dimostrazione del corollario 1 di caratterizzazione delle primitive di una stessa funzione su un intervallo
@@ -962,7 +962,7 @@ Il prossimo corollario%% Link %% formalizza quanto abbiamo detto prima riguardo 
 
 > [!corollario]+ Corollario 2 di caratterizzazione delle primitive di una stessa funzione su un intervallo
 > 
-> Data una [funzione](Funzioni.md#^definizione-funzione) $f \colon [a,b] \to \mathbb{R}$, se due [funzioni](Funzioni.md#^definizione-funzione) $F_1$ ed $F_2$ sono primitive%% link %% di $f$, allora differiscono per un valore%% link %% $c \in \mathbb{R}$:
+> Data una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon [a,b] \to \mathbb{R}$, se due [funzioni](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $F_1$ ed $F_2$ sono primitive%% link %% di $f$, allora differiscono per un valore%% link %% $c \in \mathbb{R}$:
 > 
 > $$
 > \forall x \in [a,b] . \big( F_1(x) - F_2(x) = c \big) 
@@ -1015,7 +1015,7 @@ Il prossimo corollario%% Link %% formalizza quanto abbiamo detto prima riguardo 
 
 > [!corollario]+ Corollario del teorema di Lagrange
 > 
-> Dato un intervallo%% Link %% $I \subseteq \mathbb{R}$ e una [funzione](Funzioni.md#^definizione-funzione) $f \colon I \to \mathbb{R}$ [derivabile](Derivate.md#^definizione-derivabilita-e-derivata-prima-di-una-funzione) e due punti%% Link %% $x_0, x \in I$, esiste un punto%% link %% $t$ compreso tra $x_0$ e $x$ (non necessariamente in questo ordine) tale che
+> Dato un intervallo%% Link %% $I \subseteq \mathbb{R}$ e una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon I \to \mathbb{R}$ [derivabile](Derivate.md#^definizione-derivabilita-e-derivata-prima-di-una-funzione) e due punti%% Link %% $x_0, x \in I$, esiste un punto%% link %% $t$ compreso tra $x_0$ e $x$ (non necessariamente in questo ordine) tale che
 > 
 > $$
 > f(x) - f(x_0) = f'(t) \cdot (x - x_0)
@@ -1040,7 +1040,7 @@ Osservazione 2.13 pag. 266 lancelotti
 
 > [!teorema]+ Teorema del legame fra la monotonia e il segno della derivata
 > 
-> Dato un intervallo%% Link %% $(a,b) \subseteq \mathbb{R}$ e una [funzione](Funzioni.md#^definizione-funzione) $f \colon (a,b) \to \mathbb{R}$ [derivabile](Derivate.md#^definizione-derivabilita-e-derivata-prima-di-una-funzione), allora:
+> Dato un intervallo%% Link %% $(a,b) \subseteq \mathbb{R}$ e una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon (a,b) \to \mathbb{R}$ [derivabile](Derivate.md#^definizione-derivabilita-e-derivata-prima-di-una-funzione), allora:
 > - $f$ è crescente%% link %% (o decrescente%% link %%) su $(a,b)$ se e solo se $f'(x) \ge 0$ (o $f'(x) \le 0$) per ogni $x \in (a,b)$:
 > 	$$
 > 	\forall x \in (a,b) . \left( \begin{array}{}
@@ -1105,7 +1105,7 @@ Osservazioni pagg. 268 lancelotti
 
 > [!corollario]+ Corollario del teorema del legame fra la monotonia e il segno della derivata
 > 
-> Data una [funzione](Funzioni.md#^definizione-funzione) $f \colon [a,b] \to \mathbb{R}$, se $f$ è [continua](Funzioni%20continue.md#^definizione-funzione-continua) in $[a,b]$ e [derivabile](Derivate.md#^definizione-derivabilita-di-una-funzione-in-un-sottoinsieme-del-dominio) in $(a,b)$, allora:
+> Data una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon [a,b] \to \mathbb{R}$, se $f$ è [continua](Funzioni%20continue.md#^definizione-funzione-continua) in $[a,b]$ e [derivabile](Derivate.md#^definizione-derivabilita-di-una-funzione-in-un-sottoinsieme-del-dominio) in $(a,b)$, allora:
 > - Se $f'(x) \ge 0$ (o $f'(x) \le 0$) per ogni $x \in (a,b)$, allora $f$ è crescente%% link %% (o decrescente%% link %%) su $[a,b]$.
 > - Se $f'(x) > 0$ (o $f'(x) < 0$) per ogni $x \in (a,b)$, allora $f$ è strettamente crescente%% link %% (o strettamente decrescente%% link %%) su $[a,b]$.
 > 
@@ -1128,7 +1128,7 @@ osservazione 2.17 pag. 269-270 lancelotti
 
 > [!teorema]+ Teorema del test per la ricerca dei punti di massimo e minimo
 > 
-> Data una [funzione](Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$, un intervallo%% link %% $I \subseteq \text{dom}(f)$ e un [punto interno](Topologia%20dei%20reali.md#^definizione-punto-interno) $x_0$ a $I$, se $f$ è [continua](Funzioni%20continue.md#^definizione-funzione-continua) in $I$ e [derivabile](Derivate.md#^definizione-derivabilita-di-una-funzione-in-un-sottoinsieme-del-dominio) in $I \setminus \{ x_0 \}$, allora:
+> Data una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$, un intervallo%% link %% $I \subseteq \text{dom}(f)$ e un [punto interno](Topologia%20dei%20reali.md#^definizione-punto-interno) $x_0$ a $I$, se $f$ è [continua](Funzioni%20continue.md#^definizione-funzione-continua) in $I$ e [derivabile](Derivate.md#^definizione-derivabilita-di-una-funzione-in-un-sottoinsieme-del-dominio) in $I \setminus \{ x_0 \}$, allora:
 > - Se $f'(x) > 0$ per ogni $x \in I$ con $x < x_0$ e $f'(x) < 0$ per ogni $x \in I$ con $x > x_0$, allora $x_0$ è un punto di massimo locale%% link %% per $f$:
 > 	
 > 	|                  | $x < x_0$       | $x > x_0$         |
@@ -1172,7 +1172,7 @@ Abbiamo visto che se $f$ è una funzione costante%% link %% ed è [derivabile](D
 
 > [!teorema]+ Teorema di caratterizzazione delle funzioni costanti
 > 
-> Dato un intervallo%% link %% $I \subseteq \mathbb{R}$ e una [funzione](Funzioni.md#^definizione-funzione) $f \colon I \to \mathbb{R}$ [derivabile](Derivate.md#^definizione-derivabilita-e-derivata-prima-di-una-funzione) tale che $f'(x) = 0$ per ogni $x \in I$, allora $f$ è costante%% link %% su $I$.
+> Dato un intervallo%% link %% $I \subseteq \mathbb{R}$ e una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon I \to \mathbb{R}$ [derivabile](Derivate.md#^definizione-derivabilita-e-derivata-prima-di-una-funzione) tale che $f'(x) = 0$ per ogni $x \in I$, allora $f$ è costante%% link %% su $I$.
 ^teorema-di-caratterizzazione-delle-funzioni-costanti
 
 %% dimostrazione pag. 273 lancelotti %%
@@ -1189,7 +1189,7 @@ Teorema del legame tra la concavità e la monotonia della derivata, L2a
 
 > [!teorema]+ Teorema del legame tra la concavità e la monotonia della derivata
 > 
-> Data una [funzione](Funzioni.md#^definizione-funzione) $f \colon (a,b) \to \mathbb{R}$ [derivabile](Derivate.md#^definizione-derivata-prima-di-una-funzione), allora:
+> Data una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon (a,b) \to \mathbb{R}$ [derivabile](Derivate.md#^definizione-derivata-prima-di-una-funzione), allora:
 > - $f$ è [convessa](Proprietà%20delle%20funzioni.md#^definizione-funzione-concava-o-convessa-su-un-intervallo) su $(a,b)$ se e solo se la sua [derivata](Derivate.md#^definizione-derivata-prima-di-una-funzione) $f'$ è [crescente](Proprietà%20delle%20funzioni.md#^definizione-funzione-strettamente-decrescente-o-monotona-su-un-intervallo) su $(a,b)$ e
 > - $f$ è [concava](Proprietà%20delle%20funzioni.md#^definizione-funzione-concava-o-convessa-su-un-intervallo) su $(a,b)$ se e solo se la sua [derivata](Derivate.md#^definizione-derivata-prima-di-una-funzione) $f'$ è [decrescente](Proprietà%20delle%20funzioni.md#^definizione-funzione-strettamente-decrescente-o-monotona-su-un-intervallo) su $(a,b)$:
 > 
@@ -1203,13 +1203,13 @@ Teorema del legame tra la concavità e la monotonia della derivata, L2a
 
 > [!dimostrazione]- Dimostrazione del teorema del legame tra la concavità e la monotonia della derivata
 > 
-> Dimostriamo la prima affermazione: come nella [definizione di _funzione convessa_](Proprietà%20delle%20funzioni.md#^definizione-funzione-concava-o-convessa-su-un-intervallo), scegliamo due punti%% link %% $x_1, x_2 \in (a,b)$ tali che $x_1 < x_2$ e definiamo una [funzione](Funzioni.md#^definizione-funzione) $c(x)$%% spiegare meglio cos'è questa funzione corda $c$ %% come
+> Dimostriamo la prima affermazione: come nella [definizione di _funzione convessa_](Proprietà%20delle%20funzioni.md#^definizione-funzione-concava-o-convessa-su-un-intervallo), scegliamo due punti%% link %% $x_1, x_2 \in (a,b)$ tali che $x_1 < x_2$ e definiamo una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $c(x)$%% spiegare meglio cos'è questa funzione corda $c$ %% come
 > 
 > $$
 > c(x) \overset{\text{def}}{=} f(x_1) + \dfrac{f(x_2) - f(x_1)}{x_2 - x_1} (x - x_1)
 > $$
 > 
-> e una [funzione](Funzioni.md#^definizione-funzione) $g(x)$ come
+> e una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $g(x)$ come
 > 
 > $$
 > g(x) \overset{\text{def}}{=} f(x) - c(x)
@@ -1217,7 +1217,7 @@ Teorema del legame tra la concavità e la monotonia della derivata, L2a
 > 
 > per ogni $x \in [x_1, x_2]$.
 > 
-> La [funzione](Funzioni.md#^definizione-funzione) $g$ è certamente [derivabile](Derivate.md#^definizione-derivata-prima-di-una-funzione) perché è differenza di due [funzioni derivabili](Derivate.md#^definizione-derivata-prima-di-una-funzione) ($f(x)$ per ipotesi e $c(x)$ perché è una funzione lineare%% ???? spiegare meglio perché è una funzione lineare %%).
+> La [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $g$ è certamente [derivabile](Derivate.md#^definizione-derivata-prima-di-una-funzione) perché è differenza di due [funzioni derivabili](Derivate.md#^definizione-derivata-prima-di-una-funzione) ($f(x)$ per ipotesi e $c(x)$ perché è una funzione lineare%% ???? spiegare meglio perché è una funzione lineare %%).
 > 
 > Calcolando la sua [derivata](Derivate.md#^definizione-derivata-prima-di-una-funzione) otteniamo:
 > 
@@ -1229,7 +1229,7 @@ Teorema del legame tra la concavità e la monotonia della derivata, L2a
 > $$
 > 
 > 
-> Inoltre, calcolando la [funzione](Funzioni.md#^definizione-funzione) agli estremi dell'intervallo%% link agli estremi dell'intervallo %% si ha banalmente $g(x_1) = 0$ e $g(x_2) = 0$.
+> Inoltre, calcolando la [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) agli estremi dell'intervallo%% link agli estremi dell'intervallo %% si ha banalmente $g(x_1) = 0$ e $g(x_2) = 0$.
 > 
 > A questo punto verifichiamo la bi-implicazione%% link %% in entrambe le direzioni:
 > - Direzione ($\implies$): se $f$ è [convessa](Proprietà%20delle%20funzioni.md#^definizione-funzione-concava-o-convessa-su-un-intervallo), allora per [definizione di _funzione convessa_](Proprietà%20delle%20funzioni.md#^definizione-funzione-concava-o-convessa-su-un-intervallo) nell'intervallo%% link %% $[x_1, x_2]$ il grafico si troverà sempre al di sotto o in corrispondenza di $c(x)$:
@@ -1263,7 +1263,7 @@ Teorema del legame tra la concavità e la monotonia della derivata, L2a
 > 	g'(x_1) \le g'(x_2)
 > 	$$
 > 	che dimostra che $g'$ è [crescente](Proprietà%20delle%20funzioni.md#^definizione-funzione-strettamente-decrescente-o-monotona-su-un-intervallo) in $(x_1, x_2)$ e in particolare in $(a,b)$ quando $x_1 = a$ e $x_2 = b$.
-> - Direzione ($\impliedby$): supponiamo che $f'$ sia [crescente](Proprietà%20delle%20funzioni.md#^definizione-funzione-strettamente-decrescente-o-monotona-su-un-intervallo). Nei punti in cui la [derivata](Derivate.md#^definizione-derivata-prima-di-una-funzione) $f'$ di $f$ sarà [crescente](Proprietà%20delle%20funzioni.md#^definizione-funzione-strettamente-decrescente-o-monotona-su-un-intervallo), anche la [derivata](Derivate.md#^definizione-derivata-prima-di-una-funzione) $g'$ di $g$ sarà [crescente](Proprietà%20delle%20funzioni.md#^definizione-funzione-strettamente-decrescente-o-monotona-su-un-intervallo) perché $g'$ è data dalla [differenza](Funzioni.md#^definizione-somma-di-funzioni) tra $f'$ (che è [crescente](Proprietà%20delle%20funzioni.md#^definizione-funzione-strettamente-decrescente-o-monotona-su-un-intervallo)) e $c'$ (che sarà una costante).
+> - Direzione ($\impliedby$): supponiamo che $f'$ sia [crescente](Proprietà%20delle%20funzioni.md#^definizione-funzione-strettamente-decrescente-o-monotona-su-un-intervallo). Nei punti in cui la [derivata](Derivate.md#^definizione-derivata-prima-di-una-funzione) $f'$ di $f$ sarà [crescente](Proprietà%20delle%20funzioni.md#^definizione-funzione-strettamente-decrescente-o-monotona-su-un-intervallo), anche la [derivata](Derivate.md#^definizione-derivata-prima-di-una-funzione) $g'$ di $g$ sarà [crescente](Proprietà%20delle%20funzioni.md#^definizione-funzione-strettamente-decrescente-o-monotona-su-un-intervallo) perché $g'$ è data dalla [differenza](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-somma-di-funzioni) tra $f'$ (che è [crescente](Proprietà%20delle%20funzioni.md#^definizione-funzione-strettamente-decrescente-o-monotona-su-un-intervallo)) e $c'$ (che sarà una costante).
 > 	Applicando il [teorema di Lagrange](Derivate.md#^teorema-di-lagrange-o-del-valore-medio) a $g$ su $[x_1, x_2]$ e sapendo che $g(x_1) = g(x_2) = 0$ otteniamo che esisterà un punto $c \in [x_1, x_2]$ tale che $g'(c) = 0$.
 > 	Inoltre, sapendo che $g'$ è [crescente](Proprietà%20delle%20funzioni.md#^definizione-funzione-strettamente-decrescente-o-monotona-su-un-intervallo), allora per il [teorema del legame fra la monotonia e il segno della derivata](Derivate.md#^teorema-del-legame-fra-la-monotonia-e-il-segno-della-derivata) abbiamo che:
 > 	- Essendo $g'(x) \le 0$ su $[x_1, c)$, allora $g$ è [decrescente](Proprietà%20delle%20funzioni.md#^definizione-funzione-strettamente-decrescente-o-monotona-su-un-intervallo) su $[x_1, c)$.
@@ -1286,7 +1286,7 @@ Esercizio: finisci dimostrazione
 
 > [!corollario]+ Corollario del legame tra la concavità e il segno della derivata seconda
 > 
-> Data una [funzione](Funzioni.md#^definizione-funzione) $f \colon (a,b) \to \mathbb{R}$ [derivabile due volte](Derivate.md#^definizione-derivata-n-esima-di-una-funzione), allora
+> Data una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon (a,b) \to \mathbb{R}$ [derivabile due volte](Derivate.md#^definizione-derivata-n-esima-di-una-funzione), allora
 > - $f$ è [convessa](Proprietà%20delle%20funzioni.md#^definizione-funzione-concava-o-convessa-su-un-intervallo) su $(a,b)$ se e solo se la [derivata seconda](Derivate.md#^definizione-derivata-n-esima-di-una-funzione) di $f$ è positiva%% link %% per ogni $x \in (a,b)$ e
 > - $f$ è [concava](Proprietà%20delle%20funzioni.md#^definizione-funzione-concava-o-convessa-su-un-intervallo) su $(a,b)$ se e solo se la [derivata seconda](Derivate.md#^definizione-derivata-n-esima-di-una-funzione) di $f$ è negativa%% link %% per ogni $x \in (a,b)$:
 > 
@@ -1328,7 +1328,7 @@ Questi teoremi%% link %% sono uno strumento molto potente per calcolare alcuni [
 
 > [!teorema]+ Teorema di De l'Hôpital della forma indeterminata algebrica del tipo $\color{#FF3F3F} \dfrac{0}{0}$
 > 
-> Dato un intervallo%% link %% $A \subseteq \mathbb{R}$, due [funzioni](Funzioni.md#^definizione-funzione) $f,g \colon A \to \mathbb{R}$, e un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R} \cup \{ \pm \infty \}$ per $A$, se:
+> Dato un intervallo%% link %% $A \subseteq \mathbb{R}$, due [funzioni](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f,g \colon A \to \mathbb{R}$, e un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R} \cup \{ \pm \infty \}$ per $A$, se:
 > 1. i [limiti](Limiti.md#^definizione-limite) di $f$ e $g$ per $x \to x_0$ sono nulli%% link %% (cioè $\displaystyle\lim_{x \to x_0} f(x) = \lim_{x \to x_0} g(x) = 0$),
 > 2. esiste un [intorno](Topologia%20dei%20reali.md#^definizione-intorno-di-un-punto) $I(x_0)$ di $x_0$ tale che $f$ e $g$ siano [derivabili](Derivate.md#^definizione-derivabilita-di-una-funzione-in-un-sottoinsieme-del-dominio) in ogni $x \in A \cap I(x_0)$ (con $x \ne x_0$) e che per tali $x$ si ha $g'(x) \ne 0$ e
 > 3. esiste il [limite](Limiti.md#^definizione-limite) $\displaystyle\lim_{x \to x_0} \dfrac{f'(x)}{g'(x)} = l \in \mathbb{R} \cup \{ \pm \infty \}$,
@@ -1342,7 +1342,7 @@ Questi teoremi%% link %% sono uno strumento molto potente per calcolare alcuni [
 
 > [!teorema]+ Teorema di De l'Hôpital della forma indeterminata algebrica del tipo $\color{#FF3F3F} \dfrac{\infty}{\infty}$
 > 
-> Dato un intervallo%% link %% $A \subseteq \mathbb{R}$, due [funzioni](Funzioni.md#^definizione-funzione) $f,g \colon A \to \mathbb{R}$, e un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R} \cup \{ \pm \infty \}$ per $A$, se:
+> Dato un intervallo%% link %% $A \subseteq \mathbb{R}$, due [funzioni](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f,g \colon A \to \mathbb{R}$, e un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R} \cup \{ \pm \infty \}$ per $A$, se:
 > 1. i [limiti](Limiti.md#^definizione-limite) di $f$ e $g$ per $x \to x_0$ sono infiniti%% link %% (cioè $\displaystyle\lim_{x \to x_0} f(x) = \pm \infty$ e $\displaystyle\lim_{x \to x_0} g(x) = \pm \infty$),
 > 2. esiste un [intorno](Topologia%20dei%20reali.md#^definizione-intorno-di-un-punto) $I(x_0)$ di $x_0$ tale che $f$ e $g$ siano [derivabili](Derivate.md#^definizione-derivabilita-di-una-funzione-in-un-sottoinsieme-del-dominio) in ogni $x \in A \cap I(x_0)$ (con $x \ne x_0$) e che per tali $x$ si ha $g'(x) \ne 0$ e
 > 3. esiste il [limite](Limiti.md#^definizione-limite) $\displaystyle\lim_{x \to x_0} \dfrac{f'(x)}{g'(x)} = l \in \mathbb{R} \cup \{ \pm \infty \}$,
@@ -1464,7 +1464,7 @@ esempio 2-30 pagg- 275-276 lancelotti
 
 > [!teorema]+ Teorema di derivabilità in un punto mediante il limite della derivata
 > 
-> Dato un intervallo%% link %% $I \subseteq \mathbb{R}$, una [funzione](Funzioni.md#^definizione-funzione) $f \colon I \to \mathbb{R}$ e un [punto interno](Topologia%20dei%20reali.md#^definizione-punto-interno) $x_0$ a $I$ e supponiamo che:
+> Dato un intervallo%% link %% $I \subseteq \mathbb{R}$, una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon I \to \mathbb{R}$ e un [punto interno](Topologia%20dei%20reali.md#^definizione-punto-interno) $x_0$ a $I$ e supponiamo che:
 > 1. $f$ sia [continua](Funzioni%20continue.md#^definizione-funzione-continua) in $I$,
 > 2. $f$ sia [derivabile](Derivate.md#^definizione-derivabilita-e-derivata-prima-di-una-funzione) in $I \setminus \{ x_0 \}$ (cioè non sappiamo se è [derivabile](Derivate.md#^definizione-derivabilita-e-derivata-prima-di-una-funzione-in-un-punto) anche in $x_0$) e
 > 3. esista il [limite](Limiti.md#^definizione-limite) $\displaystyle\lim_{x \to x_0} f'(x) = l \in \mathbb{R}$,
@@ -1478,13 +1478,13 @@ dimostrazione pag. 277 lancelotti
 
 > [!osservazione]+ Osservazione: significato del teorema di derivabilità in un punto mediante il limite della derivata
 > 
-> Il [teorema di derivabilità in un punto mediante il limite della derivata](Derivate.md#^teorema-di-derivabilita-in-un-punto-mediante-il-limite-della-derivata) ci dice che se una [funzione](Funzioni.md#^definizione-funzione) $f$ è [continua](Funzioni%20continue.md#^definizione-funzione-continua) in un punto%% link %% $x_0$ ed è [derivabile](Derivate.md#^definizione-derivabilita-di-una-funzione-in-un-sottoinsieme-del-dominio) in tutto un [intorno](Topologia%20dei%20reali.md#^definizione-intorno-di-un-punto) di $x_0$ ma non sappiamo se è [derivabile](Derivate.md#^definizione-derivabilita-e-derivata-prima-di-una-funzione-in-un-punto) in $x_0$ stesso, se il [limite](Limiti.md#^definizione-limite) della [derivata](Derivate.md#^definizione-derivabilita-e-derivata-prima-di-una-funzione) per $x \to x_0$ è un numero reale%% link %% allora possiamo confermare che $f$ è [derivabile](Derivate.md#^definizione-derivabilita-e-derivata-prima-di-una-funzione-in-un-punto) in $x_0$ e questa [derivata](Derivate.md#^definizione-derivabilita-e-derivata-prima-di-una-funzione) $f'$ nel punto%% link %% $x_0$ ha proprio lo stesso valore%% Link %% $l$ del [limite](Limiti.md#^definizione-limite) per $x \to x_0$.
+> Il [teorema di derivabilità in un punto mediante il limite della derivata](Derivate.md#^teorema-di-derivabilita-in-un-punto-mediante-il-limite-della-derivata) ci dice che se una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f$ è [continua](Funzioni%20continue.md#^definizione-funzione-continua) in un punto%% link %% $x_0$ ed è [derivabile](Derivate.md#^definizione-derivabilita-di-una-funzione-in-un-sottoinsieme-del-dominio) in tutto un [intorno](Topologia%20dei%20reali.md#^definizione-intorno-di-un-punto) di $x_0$ ma non sappiamo se è [derivabile](Derivate.md#^definizione-derivabilita-e-derivata-prima-di-una-funzione-in-un-punto) in $x_0$ stesso, se il [limite](Limiti.md#^definizione-limite) della [derivata](Derivate.md#^definizione-derivabilita-e-derivata-prima-di-una-funzione) per $x \to x_0$ è un numero reale%% link %% allora possiamo confermare che $f$ è [derivabile](Derivate.md#^definizione-derivabilita-e-derivata-prima-di-una-funzione-in-un-punto) in $x_0$ e questa [derivata](Derivate.md#^definizione-derivabilita-e-derivata-prima-di-una-funzione) $f'$ nel punto%% link %% $x_0$ ha proprio lo stesso valore%% Link %% $l$ del [limite](Limiti.md#^definizione-limite) per $x \to x_0$.
 > 
 > Se invece non esiste il [limite](Limiti.md#^definizione-limite) della [derivata](Derivate.md#^definizione-derivabilita-e-derivata-prima-di-una-funzione) per $x \to x_0$, allora non possiamo concludere nulla sulla [derivabilità](Derivate.md#^definizione-derivabilita-e-derivata-prima-di-una-funzione-in-un-punto) di $f$ in $x_0$ e dobbiamo ricorrere al calcolo del [limite](Limiti.md#^definizione-limite) del rapporto incrementale%% link %% senza poter ricorrere ai teoremi di De l'Hôpital.
 
 > [!proposizione]+ Proposizione: non-derivabilità se il limite della derivata è infinito
 > 
-> Data una [funzione](Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e un [punto interno](Topologia%20dei%20reali.md#^definizione-punto-interno) $x_0$ a $\text{dom}(f)$, se il [limite](Limiti.md#^definizione-limite) della sua [derivata](Derivate.md#^definizione-derivabilita-e-derivata-prima-di-una-funzione) $f'$ per $x \to x_0$ è infinito, allora $f$ non è sicuramente [derivabile](Derivate.md#^definizione-derivabilita-e-derivata-prima-di-una-funzione-in-un-punto) in $x_0$:
+> Data una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e un [punto interno](Topologia%20dei%20reali.md#^definizione-punto-interno) $x_0$ a $\text{dom}(f)$, se il [limite](Limiti.md#^definizione-limite) della sua [derivata](Derivate.md#^definizione-derivabilita-e-derivata-prima-di-una-funzione) $f'$ per $x \to x_0$ è infinito, allora $f$ non è sicuramente [derivabile](Derivate.md#^definizione-derivabilita-e-derivata-prima-di-una-funzione-in-un-punto) in $x_0$:
 > 
 > $$
 > \lim_{x \to x_0} f'(x) = \pm \infty \implies f \text{ non è derivabile in } x_0
@@ -1532,7 +1532,7 @@ La funzione $f$ dell'esempio 2.39 pag. 278.279 lancelotti è derivabile su R e 0
 > 
 > Grazie al [teorema di De l'Hôpital della forma indeterminata algebrica del tipo $\dfrac{0}{0}$](Derivate.md#^teorema-di-de-l-hopital-della-forma-indeterminata-algebrica-del-tipo-0-su-0) abbiamo un modo più semplice per classificare i punti di non derivabilità%% link %%.
 > 
-> Infatti, data una [funzione](Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e un punto%% link %% $x_0$ [interno](Topologia%20dei%20reali.md#^definizione-punto-interno) a $\text{dom}(f)$, se $f$ è [continua](Funzioni%20continue.md#^definizione-funzione-continua) in $x_0$ e [derivabile](Derivate.md#^definizione-derivabilita-di-una-funzione-in-un-sottoinsieme-del-dominio) in tutto un [intorno](Topologia%20dei%20reali.md#^definizione-intorno-di-un-punto) $I \subseteq \text{dom}(f)$ escluso $x_0$ stesso in cui non sappiamo se $f$ è [derivabile](Derivate.md#^definizione-derivabilita-e-derivata-prima-di-una-funzione-in-un-punto), allora:
+> Infatti, data una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e un punto%% link %% $x_0$ [interno](Topologia%20dei%20reali.md#^definizione-punto-interno) a $\text{dom}(f)$, se $f$ è [continua](Funzioni%20continue.md#^definizione-funzione-continua) in $x_0$ e [derivabile](Derivate.md#^definizione-derivabilita-di-una-funzione-in-un-sottoinsieme-del-dominio) in tutto un [intorno](Topologia%20dei%20reali.md#^definizione-intorno-di-un-punto) $I \subseteq \text{dom}(f)$ escluso $x_0$ stesso in cui non sappiamo se $f$ è [derivabile](Derivate.md#^definizione-derivabilita-e-derivata-prima-di-una-funzione-in-un-punto), allora:
 > - Se i limiti laterali%% link %% della [derivata](Derivate.md#^definizione-derivabilita-e-derivata-prima-di-una-funzione) $\displaystyle\lim_{x \to x_0^\pm} f'(x)$ esistono finiti%% link %% e diversi fra loro, oppure se uno è finito%% link %% e l'altro è infinito%% link %%, allora $x_0$ è un [punto angoloso](Derivate.md#^definizione-punto-angoloso) per $f$.
 > - Se i limiti laterali%% link %% della [derivata](Derivate.md#^definizione-derivabilita-e-derivata-prima-di-una-funzione) $\displaystyle\lim_{x \to x_0^\pm} f'(x)$ esistono infiniti%% link %% e diversi fra loro, allora $x_0$ è una [cuspide](Derivate.md#^definizione-cuspide) per $f$.
 > - Se i limiti laterali%% link %% della [derivata](Derivate.md#^definizione-derivabilita-e-derivata-prima-di-una-funzione) $\displaystyle\lim_{x \to x_0^\pm} f'(x)$ esistono infiniti%% link %% e uguali, allora $x_0$ è un [punto di flesso a tangente verticale](Derivate.md#^definizione-punto-di-flesso-a-tangente-verticale) per $f$.

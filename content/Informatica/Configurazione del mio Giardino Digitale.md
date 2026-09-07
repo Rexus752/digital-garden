@@ -183,7 +183,7 @@ Nel file `quartz.config.yaml` ho modificato il layout delle note, cioè la strut
         Repository: https://forgejo.it/Rexus752/digital-garden.git
         Il mio Linktree: https://linktr.ee/rexus752
 	```
-- Per fare in modo che anche nelle _folder page_ (cioè nelle pagine-cartelle come [Matematica](Matematica.md)) escano tutti i componenti come l'indice, ho modificato le impostazioni del `layout` che si possono trovare in fondo al `quartz.config.yaml`:
+- Per fare in modo che anche nelle _folder page_ (cioè nelle pagine-cartelle come [Matematica](Matematica/Matematica.md)) escano tutti i componenti come l'indice, ho modificato le impostazioni del `layout` che si possono trovare in fondo al `quartz.config.yaml`:
 	```yaml title="quartz.config.yaml" showLineNumbers{273} {13}
 	layout:
 	  groups:
@@ -229,15 +229,15 @@ Nel file `quartz.config.yaml` ho modificato il layout delle note, cioè la strut
 
 Nella cartella `quartz/static` ho sostituito il file `icon.png` con una mia icona personalizzata, che è appunto l'icona di questo Giardino Digitale:
 
-![Icona Giardino Digitale](Icona%20Giardino%20Digitale.png)
+![Icona Giardino Digitale](Informatica/_attachments/Icona%20Giardino%20Digitale.png)
 
 Questa l'ho creata attraverso il [generatore sul sito ufficiale di Obsidian](https://obsidian.md/blog/new-obsidian-icon/) che ti permette di personalizzare la nuova icona di Obsidian adottata nel 2023 con i tuoi colori. Io ho usato gli stessi colori della mia classica immagine di profilo che uso ovunque, ossia quella di Patrick con il cervello esploso:
 
-![Immagine di profilo](Immagine%20di%20profilo.png)
+![Immagine di profilo](Informatica/_attachments/Immagine%20di%20profilo.png)
 
 Ne ho approfittato anche per sostituire con questa icona il file `og-image.png`, sempre nella cartella `quartz/static`, che è la foto che compare nelle preview del Giardino Digitale quando si inserisce il link in un messaggio:
 
-![Preview link Giardino Digitale|400](Preview%20link%20Giardino%20Digitale.png)
+![Preview link Giardino Digitale|400](Informatica/_attachments/Preview%20link%20Giardino%20Digitale.png)
 
 Facendo ciò ho anche disabilitato il [plugin `Custom OG Images`](https://quartz.jzhao.xyz/plugins/customogimages) nel file `quartz.config.yaml`, che è il plugin che si occupa di generare delle preview uniche per ogni nota del sito (e che, in realtà, rallenta anche il tempo di _build_ del sito):
 
@@ -629,7 +629,7 @@ Qua sotto ho inserito una lista dei callout che uso, ognuno dei quali ha al prop
 
 I callout contenenti dei blocchi LaTeX, quando vengono chiusi, mantengono uno spazio vuoto sotto il titolo:
 
-![Callout chiuso rotto](Callout%20chiuso%20rotto.png)
+![Callout chiuso rotto](Informatica/_attachments/Callout%20chiuso%20rotto.png)
 
 Per risolvere questo problema, ho creato un file `quartz/styles/custom/fix-collapsed-callouts.scss`:
 

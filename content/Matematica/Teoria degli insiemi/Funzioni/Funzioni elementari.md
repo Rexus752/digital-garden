@@ -11,7 +11,7 @@
 
 > [!definizione]+ Definizione: funzione lineare
 > 
-> Una **funzione lineare** è una [funzione](Funzioni.md#^definizione-funzione) del tipo
+> Una **funzione lineare** è una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) del tipo
 > 
 > $$
 > f(x) = mx + q
@@ -146,7 +146,7 @@ Proprio perché [$m$ indica la pendenza di una funzione lineare](Funzioni%20elem
 
 > [!definizione]+ Definizione: funzione potenza
 > 
-> Una **funzione potenza** è una [funzione](Funzioni.md#^definizione-funzione) del tipo
+> Una **funzione potenza** è una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) del tipo
 > 
 > $$
 > f(x) = x^n
@@ -185,7 +185,7 @@ Il comportamento delle funzioni potenza dipende dall'esponente $n$:
 
 > [!definizione]+ Definizione: funzione esponenziale
 > 
-> Una **funzione esponenziale** è una [funzione](Funzioni.md#^definizione-funzione) del tipo
+> Una **funzione esponenziale** è una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) del tipo
 > 
 > $$
 > f(x) = a^x
@@ -207,7 +207,7 @@ Il comportamento delle funzioni potenza dipende dalla base $a$:
 
 > [!definizione]+ Definizione: funzione logaritmica
 > 
-> Una **funzione logaritmica** è una [funzione](Funzioni.md#^definizione-funzione) del tipo
+> Una **funzione logaritmica** è una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) del tipo
 > 
 > $$
 > f(x) = \log_a x
@@ -230,7 +230,7 @@ Il comportamento delle funzioni potenza dipende dalla base del logaritmo $a$:
 
 > [!definizione]+ Definizione: funzione goniometrica
 > 
-> Una **funzione goniometrica** è una [funzione](Funzioni.md#^definizione-funzione) del tipo
+> Una **funzione goniometrica** è una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) del tipo
 > 
 > $$
 > f(x) = \sin x

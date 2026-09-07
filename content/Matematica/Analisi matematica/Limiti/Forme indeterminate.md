@@ -9,7 +9,7 @@
 
 > [!definizione]+ Definizione: forma indeterminata
 > 
-> Una **forma indeterminata** è un'espressione in cui i valori dei [limiti](Limiti.md#^definizione-limite) dipendono dalle [funzioni](Funzioni.md) di cui è composta. Essa possono essere [_algebriche_](Forme%20indeterminate.md#^definizione-forma-indeterminata-algebrica) o [_esponenziali_](Forme%20indeterminate.md#^definizione-forma-indeterminata-esponenziale).
+> Una **forma indeterminata** è un'espressione in cui i valori dei [limiti](Limiti.md#^definizione-limite) dipendono dalle [funzioni](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md) di cui è composta. Essa possono essere [_algebriche_](Forme%20indeterminate.md#^definizione-forma-indeterminata-algebrica) o [_esponenziali_](Forme%20indeterminate.md#^definizione-forma-indeterminata-esponenziale).
 ^definizione-forma-indeterminata
 
 # 1 - Forme indeterminate algebriche
@@ -29,7 +29,7 @@
 
 > [!definizione]+ Definizione: forma indeterminata algebrica del tipo $\color{#FF7FFF} \dfrac{0}{0}$
 > 
-> Date due [funzioni](Funzioni.md#^definizione-funzione) $f, g \colon A \subseteq \mathbb{R} \to \mathbb{R}$ (con $A \ne \emptyset$) e un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R} \cup \{\pm\infty\}$ per $A$, se esiste un [intorno](Topologia%20dei%20reali.md#^definizione-intorno-di-un-punto) $I(x_0)$ di $x_0$ tale che $g(x) \ne 0$ su $(A \cap I(x_0)) \setminus \{x_0\}$, si dice che il [limite](Limiti.md#^definizione-limite)
+> Date due [funzioni](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f, g \colon A \subseteq \mathbb{R} \to \mathbb{R}$ (con $A \ne \emptyset$) e un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R} \cup \{\pm\infty\}$ per $A$, se esiste un [intorno](Topologia%20dei%20reali.md#^definizione-intorno-di-un-punto) $I(x_0)$ di $x_0$ tale che $g(x) \ne 0$ su $(A \cap I(x_0)) \setminus \{x_0\}$, si dice che il [limite](Limiti.md#^definizione-limite)
 > 
 > $$\lim_{x \to x_0} \frac{f(x)}{g(x)}$$
 > 
@@ -37,7 +37,7 @@
 > 
 > $$\lim_{x \to x_0} f(x) = 0 \quad \land \quad \lim_{x \to x_0} g(x) = 0$$
 > 
-> Il [limite](Limiti.md#^definizione-limite) non ha un valore%% link %% $l \in \mathbb{R} \cup \{\pm\infty\}$ determinabile dalla sola conoscenza dei [limiti](Limiti.md#^definizione-limite) di $f$ e $g$, poiché il risultato dipende dal comportamento specifico delle due [funzioni](Funzioni.md#^definizione-funzione) su $(A \cap I(x_0)) \setminus \{x_0\}$.
+> Il [limite](Limiti.md#^definizione-limite) non ha un valore%% link %% $l \in \mathbb{R} \cup \{\pm\infty\}$ determinabile dalla sola conoscenza dei [limiti](Limiti.md#^definizione-limite) di $f$ e $g$, poiché il risultato dipende dal comportamento specifico delle due [funzioni](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) su $(A \cap I(x_0)) \setminus \{x_0\}$.
 ^forma-indeterminata-algebrica-del-tipo-0-su-0
 
 %% osservazione: perché è una forma indeterminata? %%
@@ -56,7 +56,7 @@ $\overline{\mathbb{R}}$ (R esteso)
 
 > [!definizione]+ Definizione: forma indeterminata algebrica del tipo $\color{#FF7FFF} \dfrac{\infty}{\infty}$
 > 
-> Date due [funzioni](Funzioni.md#^definizione-funzione) $f, g \colon A \subseteq \mathbb{R} \to \mathbb{R}$ (con $A \ne \emptyset$) e un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R} \cup \{\pm\infty\}$ per $A$, se esiste un [intorno](Topologia%20dei%20reali.md#^definizione-intorno-di-un-punto) $I(x_0)$ di $x_0$ tale che $g(x) \ne 0$ su $(A \cap I(x_0)) \setminus \{x_0\}$, si dice che il [limite](Limiti.md#^definizione-limite)
+> Date due [funzioni](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f, g \colon A \subseteq \mathbb{R} \to \mathbb{R}$ (con $A \ne \emptyset$) e un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R} \cup \{\pm\infty\}$ per $A$, se esiste un [intorno](Topologia%20dei%20reali.md#^definizione-intorno-di-un-punto) $I(x_0)$ di $x_0$ tale che $g(x) \ne 0$ su $(A \cap I(x_0)) \setminus \{x_0\}$, si dice che il [limite](Limiti.md#^definizione-limite)
 > 
 > $$\lim_{x \to x_0} \frac{f(x)}{g(x)}$$
 > 
@@ -64,7 +64,7 @@ $\overline{\mathbb{R}}$ (R esteso)
 > 
 > $$\lim_{x \to x_0} f(x) = \pm\infty \quad \land \quad \lim_{x \to x_0} g(x) = \pm\infty$$
 > 
-> Il [limite](Limiti.md#^definizione-limite) non ha un valore%% link %% $l \in \mathbb{R} \cup \{\pm\infty\}$ determinabile dalla sola conoscenza dei [limiti](Limiti.md#^definizione-limite) di $f$ e $g$, poiché il risultato dipende dal comportamento specifico delle due [funzioni](Funzioni.md#^definizione-funzione) su $(A \cap I(x_0)) \setminus \{x_0\}$.
+> Il [limite](Limiti.md#^definizione-limite) non ha un valore%% link %% $l \in \mathbb{R} \cup \{\pm\infty\}$ determinabile dalla sola conoscenza dei [limiti](Limiti.md#^definizione-limite) di $f$ e $g$, poiché il risultato dipende dal comportamento specifico delle due [funzioni](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) su $(A \cap I(x_0)) \setminus \{x_0\}$.
 ^definizione-forma-indeterminata-algebrica-del-tipo-infinito-su-infinito
 
 %% osservazione: perché è una forma indeterminata? %%
@@ -77,7 +77,7 @@ Una sola osservazione: la condizione $g(x) \ne 0$ su $(A \cap I(x_0)) \setminus 
 
 > [!definizione]+ Definizione: forma indeterminata algebrica del tipo $\color{#FF7FFF} \infty-\infty$
 > 
-> Date due [funzioni](Funzioni.md#^definizione-funzione) $f, g \colon A \subseteq \mathbb{R} \to \mathbb{R}$ (con $A \ne \emptyset$) e un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R} \cup \{\pm\infty\}$ per $A$, si dice che il [limite](Limiti.md#^definizione-limite)
+> Date due [funzioni](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f, g \colon A \subseteq \mathbb{R} \to \mathbb{R}$ (con $A \ne \emptyset$) e un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R} \cup \{\pm\infty\}$ per $A$, si dice che il [limite](Limiti.md#^definizione-limite)
 > 
 > $$\lim_{x \to x_0} \big( f(x)-g(x) \big) $$
 > 
@@ -85,7 +85,7 @@ Una sola osservazione: la condizione $g(x) \ne 0$ su $(A \cap I(x_0)) \setminus 
 > 
 > $$\lim_{x \to x_0} f(x) = \pm\infty \quad \land \quad \lim_{x \to x_0} g(x) = \pm\infty$$
 > 
-> Il [limite](Limiti.md#^definizione-limite) non ha un valore%% link %% $l \in \mathbb{R} \cup \{\pm\infty\}$ determinabile dalla sola conoscenza dei [limiti](Limiti.md#^definizione-limite) di $f$ e $g$, poiché il risultato dipende dal comportamento specifico delle due [funzioni](Funzioni.md#^definizione-funzione) su $(A \cap I(x_0)) \setminus \{x_0\}$.
+> Il [limite](Limiti.md#^definizione-limite) non ha un valore%% link %% $l \in \mathbb{R} \cup \{\pm\infty\}$ determinabile dalla sola conoscenza dei [limiti](Limiti.md#^definizione-limite) di $f$ e $g$, poiché il risultato dipende dal comportamento specifico delle due [funzioni](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) su $(A \cap I(x_0)) \setminus \{x_0\}$.
 ^forma-indeterminata-algebrica-del-tipo-infinito-meno-infinito
 
 %% osservazione: perché è una forma indeterminata? %%
@@ -98,7 +98,7 @@ Un'osservazione: rispetto alle forme frazionarie, qui non compare alcuna condizi
 
 > [!definizione]+ Definizione: forma indeterminata algebrica del tipo $\color{#FF7FFF} 0 \cdot \infty$
 > 
-> Date due [funzioni](Funzioni.md#^definizione-funzione) $f, g \colon A \subseteq \mathbb{R} \to \mathbb{R}$ (con $A \ne \emptyset$) e un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R} \cup \{\pm\infty\}$ per $A$, si dice che il [limite](Limiti.md#^definizione-limite)
+> Date due [funzioni](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f, g \colon A \subseteq \mathbb{R} \to \mathbb{R}$ (con $A \ne \emptyset$) e un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R} \cup \{\pm\infty\}$ per $A$, si dice che il [limite](Limiti.md#^definizione-limite)
 > 
 > $$\lim_{x \to x_0} \big( f(x) \cdot g(x) \big)$$
 > 
@@ -106,7 +106,7 @@ Un'osservazione: rispetto alle forme frazionarie, qui non compare alcuna condizi
 > 
 > $$\lim_{x \to x_0} f(x) = 0 \quad \land \quad \lim_{x \to x_0} g(x) = \pm\infty$$
 > 
-> Il [limite](Limiti.md#^definizione-limite) non ha un valore%% link %% $l \in \mathbb{R} \cup \{\pm\infty\}$ determinabile dalla sola conoscenza dei [limiti](Limiti.md#^definizione-limite) di $f$ e $g$, poiché il risultato dipende dal comportamento specifico delle due [funzioni](Funzioni.md#^definizione-funzione) su $(A \cap I(x_0)) \setminus \{x_0\}$.
+> Il [limite](Limiti.md#^definizione-limite) non ha un valore%% link %% $l \in \mathbb{R} \cup \{\pm\infty\}$ determinabile dalla sola conoscenza dei [limiti](Limiti.md#^definizione-limite) di $f$ e $g$, poiché il risultato dipende dal comportamento specifico delle due [funzioni](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) su $(A \cap I(x_0)) \setminus \{x_0\}$.
 ^definizione-forma-indeterminata-algebrica-del-tipo-0-per-infinito
 
 %% osservazione: perché è una forma indeterminata? %%
@@ -128,7 +128,7 @@ Un'osservazione: come per $\infty - \infty$, il prodotto $f(x) \cdot g(x)$ è de
 
 > [!definizione]+ Definizione: forma indeterminata esponenziale del tipo $\color{#FF7FFF} 1^\infty$
 > 
-> Date due [funzioni](Funzioni.md#^definizione-funzione) $f, g \colon A \subseteq \mathbb{R} \to \mathbb{R}$ (con $A \ne \emptyset$) e un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R} \cup \{\pm\infty\}$ per $A$, si dice che il [limite](Limiti.md#^definizione-limite)
+> Date due [funzioni](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f, g \colon A \subseteq \mathbb{R} \to \mathbb{R}$ (con $A \ne \emptyset$) e un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R} \cup \{\pm\infty\}$ per $A$, si dice che il [limite](Limiti.md#^definizione-limite)
 > 
 > $$\lim_{x \to x_0} \big( f(x)^{g(x)} \big)$$
 > 
@@ -136,7 +136,7 @@ Un'osservazione: come per $\infty - \infty$, il prodotto $f(x) \cdot g(x)$ è de
 > 
 > $$\lim_{x \to x_0} f(x) = 1 \quad \land \quad \lim_{x \to x_0} g(x) = \pm\infty$$
 > 
-> Il [limite](Limiti.md#^definizione-limite) non ha un valore%% link %% $l \in \mathbb{R} \cup \{\pm\infty\}$ determinabile dalla sola conoscenza dei [limiti](Limiti.md#^definizione-limite) di $f$ e $g$, poiché il risultato dipende dal comportamento specifico delle due [funzioni](Funzioni.md#^definizione-funzione) su $(A \cap I(x_0)) \setminus \{x_0\}$.
+> Il [limite](Limiti.md#^definizione-limite) non ha un valore%% link %% $l \in \mathbb{R} \cup \{\pm\infty\}$ determinabile dalla sola conoscenza dei [limiti](Limiti.md#^definizione-limite) di $f$ e $g$, poiché il risultato dipende dal comportamento specifico delle due [funzioni](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) su $(A \cap I(x_0)) \setminus \{x_0\}$.
 ^definizione-forma-indeterminata-espnenziale-del-tipo-1-all-infinito
 
 %% osservazione: perché è una forma indeterminata? %%
@@ -152,7 +152,7 @@ Un'osservazione: come per $\infty - \infty$, il prodotto $f(x) \cdot g(x)$ è de
 
 > [!definizione]+ Definizione: forma indeterminata esponenziale del tipo $\color{#FF7FFF} \infty^0$
 > 
-> Date due [funzioni](Funzioni.md#^definizione-funzione) $f, g \colon A \subseteq \mathbb{R} \to \mathbb{R}$ (con $A \ne \emptyset$) e un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R} \cup \{\pm\infty\}$ per $A$, si dice che il [limite](Limiti.md#^definizione-limite)
+> Date due [funzioni](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f, g \colon A \subseteq \mathbb{R} \to \mathbb{R}$ (con $A \ne \emptyset$) e un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R} \cup \{\pm\infty\}$ per $A$, si dice che il [limite](Limiti.md#^definizione-limite)
 > 
 > $$\lim_{x \to x_0} \big( f(x) \big)^{g(x)}$$
 > 
@@ -160,7 +160,7 @@ Un'osservazione: come per $\infty - \infty$, il prodotto $f(x) \cdot g(x)$ è de
 > 
 > $$\lim_{x \to x_0} f(x) = +\infty \quad \land \quad \lim_{x \to x_0} g(x) = 0$$
 > 
-> Il [limite](Limiti.md#^definizione-limite) non ha un valore%% link %% $l \in \mathbb{R} \cup \{\pm\infty\}$ determinabile dalla sola conoscenza dei [limiti](Limiti.md#^definizione-limite) di $f$ e $g$, poiché il risultato dipende dal comportamento specifico delle due [funzioni](Funzioni.md#^definizione-funzione) su $(A \cap I(x_0)) \setminus \{x_0\}$.
+> Il [limite](Limiti.md#^definizione-limite) non ha un valore%% link %% $l \in \mathbb{R} \cup \{\pm\infty\}$ determinabile dalla sola conoscenza dei [limiti](Limiti.md#^definizione-limite) di $f$ e $g$, poiché il risultato dipende dal comportamento specifico delle due [funzioni](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) su $(A \cap I(x_0)) \setminus \{x_0\}$.
 ^definizione-forma-indeterminata-esponenziale-del-tipo-infinito-allo-zero
 
 %% osservazione: perché è una forma indeterminata? %%
@@ -169,7 +169,7 @@ Un'osservazione: come per $\infty - \infty$, il prodotto $f(x) \cdot g(x)$ è de
 
 > [!definizione]+ Definizione: forma indeterminata esponenziale del tipo $\color{#FF7FFF} 0^0$
 > 
-> Date due [funzioni](Funzioni.md#^definizione-funzione) $f, g \colon A \subseteq \mathbb{R} \to \mathbb{R}$ (con $A \ne \emptyset$) e un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R} \cup \{\pm\infty\}$ per $A$, si dice che il [limite](Limiti.md#^definizione-limite)
+> Date due [funzioni](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f, g \colon A \subseteq \mathbb{R} \to \mathbb{R}$ (con $A \ne \emptyset$) e un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R} \cup \{\pm\infty\}$ per $A$, si dice che il [limite](Limiti.md#^definizione-limite)
 > 
 > $$\lim_{x \to x_0} \big( f(x) \big)^{g(x)}$$
 > 
@@ -177,7 +177,7 @@ Un'osservazione: come per $\infty - \infty$, il prodotto $f(x) \cdot g(x)$ è de
 > 
 > $$\lim_{x \to x_0} f(x) = 0^+ \quad \land \quad \lim_{x \to x_0} g(x) = 0$$
 > 
-> Il [limite](Limiti.md#^definizione-limite) non ha un valore%% Link %% $l \in \mathbb{R} \cup \{\pm\infty\}$ determinabile dalla sola conoscenza dei [limiti](Limiti.md#^definizione-limite) di $f$ e $g$, poiché il risultato dipende dal comportamento specifico delle due [funzioni](Funzioni.md#^definizione-funzione) su $(A \cap I(x_0)) \setminus \{x_0\}$.
+> Il [limite](Limiti.md#^definizione-limite) non ha un valore%% Link %% $l \in \mathbb{R} \cup \{\pm\infty\}$ determinabile dalla sola conoscenza dei [limiti](Limiti.md#^definizione-limite) di $f$ e $g$, poiché il risultato dipende dal comportamento specifico delle due [funzioni](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) su $(A \cap I(x_0)) \setminus \{x_0\}$.
 ^definizione-forma-indeterminata-esponenziale-del-tipo-0-alla-0
 
 %% osservazione: perché è una forma indeterminata? %%

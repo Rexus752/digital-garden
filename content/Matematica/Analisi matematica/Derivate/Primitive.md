@@ -17,7 +17,7 @@ Data la funzione $f'(x) = 2x$ so che una possibile $f$ è $x^2$, però mi accorg
 
 > [!definizione]+ Definizione: primitiva di una derivata
 > 
-> Data una [funzione](Funzioni.md#^definizione-funzione) $f' \colon \text{dom}(f') \to \mathbb{R}$, diciamo che un'altra [funzione](Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ è la **primitiva di $f'$** se la [derivata](Derivate.md#^definizione-derivabilita-e-derivata-prima-di-una-funzione) di $f$ è $f'$.
+> Data una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f' \colon \text{dom}(f') \to \mathbb{R}$, diciamo che un'altra [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ è la **primitiva di $f'$** se la [derivata](Derivate.md#^definizione-derivabilita-e-derivata-prima-di-una-funzione) di $f$ è $f'$.
 ^definizione-primitiva-di-una-derivata
 
 %% 

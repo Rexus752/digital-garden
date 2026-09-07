@@ -69,7 +69,7 @@ Questa proprietà è molto utile per determinare l'immagine di una funzione cont
 
 > [!corollario]+ Corollario 2 del teorema dei valori intermedi
 > 
-> Data una [funzione continua](Funzioni.md#^definizione-funzione) e monotona%% link %% $f \colon [a,b] \to \mathbb{R}$, si ha che:
+> Data una [funzione continua](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) e monotona%% link %% $f \colon [a,b] \to \mathbb{R}$, si ha che:
 > - se $f$ è crescente%% link %%, allora $\text{rng}(f) = [f(a), f(b)]$ e
 > - se $f$ è decrescente%% link %%, allora $\text{rng}(f) = [f(b),f(a)]$.
 ^corollario-2-del-teorema-dei-valori-intermedi
@@ -116,7 +116,7 @@ dimostrazione pagg. 230-231 lancelotti
 
 > [!teorema]+ Teorema di Weierstrass
 > 
-> Data una [funzione](Funzioni.md#^definizione-funzione) $f \colon [a,b] \to \mathbb{R}$ [continua](Funzioni%20continue.md#^definizione-funzione-continua), esistono due punti%% Link %% $x_m, x_M \in [a,b]$ tali che
+> Data una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon [a,b] \to \mathbb{R}$ [continua](Funzioni%20continue.md#^definizione-funzione-continua), esistono due punti%% Link %% $x_m, x_M \in [a,b]$ tali che
 > 
 > $$
 > \forall x \in [a,b] . \big( f(x_m) \le f(x) \le f(x_M) \big) 
@@ -145,7 +145,7 @@ dimostrazione pag. 231-232 lancelotti
 
 > [!osservazione]+ Osservazione: molteplicità dei punti di minimo e massimo assoluto
 > 
-> Nel [teorema di Weierstrass](Proprietà%20globali%20delle%20funzioni%20continue.md#^teorema-di-weierstrass) ci viene detto che i punti di minimo assoluto%% Link %% $x_m$ e di massimo assoluto%% link %% $x_M$ esistono, ma non necessariamente devono essere unici: possono esistere molteplici punti di minimo%% link %% e massimo assoluto%% Link %%, come per esempio nella [funzione](Funzioni.md#^definizione-funzione) $\sin x$ in cui i punti di minimo assoluto%% link %% sono ogni $x_m$ tali che $- \dfrac{\pi}{2} + 2k\pi$ (per ogni $k \in \mathbb{N}$) e i punti di massimo assoluto%% link %% sono ogni $x_M$ tali che $\dfrac{\pi}{2} + 2k\pi$ (per ogni $k \in \mathbb{N}$).
+> Nel [teorema di Weierstrass](Proprietà%20globali%20delle%20funzioni%20continue.md#^teorema-di-weierstrass) ci viene detto che i punti di minimo assoluto%% Link %% $x_m$ e di massimo assoluto%% link %% $x_M$ esistono, ma non necessariamente devono essere unici: possono esistere molteplici punti di minimo%% link %% e massimo assoluto%% Link %%, come per esempio nella [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $\sin x$ in cui i punti di minimo assoluto%% link %% sono ogni $x_m$ tali che $- \dfrac{\pi}{2} + 2k\pi$ (per ogni $k \in \mathbb{N}$) e i punti di massimo assoluto%% link %% sono ogni $x_M$ tali che $\dfrac{\pi}{2} + 2k\pi$ (per ogni $k \in \mathbb{N}$).
 
 %% mettere grafico evidenziando i punti %%
 
@@ -153,7 +153,7 @@ dimostrazione pag. 231-232 lancelotti
 
 [!osservazione]+ Osservazione: ipotesi di continuità necessaria su tutto il dominio
 
-Nel [teorema di Weierstrass](Proprietà%20globali%20delle%20funzioni%20continue.md#^teorema-di-weierstrass), l'ipotesi di [continuità](Funzioni%20continue.md#^definizione-funzione-continua) di $f$ è necessaria su tutto il suo [dominio](Funzioni.md#^definizione-dominio-e-codominio-della-funzione) $[a,b]$, estremi%% link %% compresi, perché altrimenti possono crearsi casi simili ai seguenti:
+Nel [teorema di Weierstrass](Proprietà%20globali%20delle%20funzioni%20continue.md#^teorema-di-weierstrass), l'ipotesi di [continuità](Funzioni%20continue.md#^definizione-funzione-continua) di $f$ è necessaria su tutto il suo [dominio](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-dominio-e-codominio-della-funzione) $[a,b]$, estremi%% link %% compresi, perché altrimenti possono crearsi casi simili ai seguenti:
 
 vedere esempi minuto 04:07 lezione L9b
 -->
@@ -186,7 +186,7 @@ dimsotrazione pag. 233 lancelotti
 
 > [!definizione]+ Definizione: funzione uniformemente continua
 > 
-> Data una [funzione](Funzioni.md#^definizione-funzione) $f \colon A \subseteq \mathbb{R} \to \mathbb{R}$ (con $A \ne \emptyset$), diciamo che **$f$ è uniformemente continua in $A$** se, per ogni $\varepsilon > 0$, esiste un $\delta > 0$ tale che, per ogni $x,x_0 \in A$ con $|x - x_0| < \delta$, si ha che $|f(x) - f(x_0)| < \varepsilon$:
+> Data una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon A \subseteq \mathbb{R} \to \mathbb{R}$ (con $A \ne \emptyset$), diciamo che **$f$ è uniformemente continua in $A$** se, per ogni $\varepsilon > 0$, esiste un $\delta > 0$ tale che, per ogni $x,x_0 \in A$ con $|x - x_0| < \delta$, si ha che $|f(x) - f(x_0)| < \varepsilon$:
 > 
 > $$
 > \begin{array}{}
@@ -209,7 +209,7 @@ esempio 6.18 paagg. 233-234
 
 > [!teorema]+ Teorema di regolarità della continuità uniforme 
 > 
-> Se una [funzione](Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ è [uniformemente continua](Proprietà%20globali%20delle%20funzioni%20continue.md#^definizione-funzione-uniformemente-continua), allora è anche [continua](Funzioni%20continue.md#^definizione-funzione-continua).
+> Se una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ è [uniformemente continua](Proprietà%20globali%20delle%20funzioni%20continue.md#^definizione-funzione-uniformemente-continua), allora è anche [continua](Funzioni%20continue.md#^definizione-funzione-continua).
 
 %% 
 Osservazione: il viceversa non è vero, coem mostra la funzione $f(x) = x^2$. Lo è se per esempio $f$ è definita su un intervallo chiuso e limitato, come evidenzia il prossimo risultato.
@@ -217,7 +217,7 @@ Osservazione: il viceversa non è vero, coem mostra la funzione $f(x) = x^2$. Lo
 
 > [!teorema]+ Teorema di Heine-Cantor
 > 
-> Se una [funzione](Funzioni.md#^definizione-funzione) $f \colon [a,b] \to \mathbb{R}$ è [continua](Funzioni%20continue.md#^definizione-funzione-continua), allora è anche [uniformemente continua](Proprietà%20globali%20delle%20funzioni%20continue.md#^definizione-funzione-uniformemente-continua) in $[a,b]$.
+> Se una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon [a,b] \to \mathbb{R}$ è [continua](Funzioni%20continue.md#^definizione-funzione-continua), allora è anche [uniformemente continua](Proprietà%20globali%20delle%20funzioni%20continue.md#^definizione-funzione-uniformemente-continua) in $[a,b]$.
 
 %% 
 dimostrazione pagg. 234-235 lancelotti

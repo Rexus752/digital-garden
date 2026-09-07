@@ -40,7 +40,7 @@ Vedere meglio pagine 64-68 di LAncelotti
 
 > [!definizione]+ Definizione: dominio e codominio della funzione
 > 
-> In una [funzione](Funzioni.md#^definizione-funzione) $f \colon A \to B$, l'[insieme](Teoria%20degli%20insiemi.md#^definizione-insieme) $A$ è detto **dominio della funzione** (o, più semplicemente, **dominio**) e viene indicato con "$\text{dom}(f)$":
+> In una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon A \to B$, l'[insieme](Teoria%20degli%20insiemi.md#^definizione-insieme) $A$ è detto **dominio della funzione** (o, più semplicemente, **dominio**) e viene indicato con "$\text{dom}(f)$":
 > 
 > $$
 > \text{dom}(f) = A
@@ -55,16 +55,16 @@ Vedere meglio pagine 64-68 di LAncelotti
 
 > [!esempio]- Esempio di funzione
 > 
-> Un esempio di [funzione](Funzioni.md#^definizione-funzione) è $f \colon \mathbb{R} \to \mathbb{R}$ che associa a ogni numero reale%% link %% $x \in \mathbb{R}$ il suo quadrato $x^2 \in \mathbb{R}$. Essa è una funzione perché per ogni numero il suo quadrato è unico e non può averne altri.
+> Un esempio di [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) è $f \colon \mathbb{R} \to \mathbb{R}$ che associa a ogni numero reale%% link %% $x \in \mathbb{R}$ il suo quadrato $x^2 \in \mathbb{R}$. Essa è una funzione perché per ogni numero il suo quadrato è unico e non può averne altri.
 ^esempio-di-funzione
 
 > [!esempio]- Esempio: $\color{#7F7FFF} R=\{(1,2),(1,3),(2,4)\}$ non è una funzione
 > 
-> Data una [relazione binaria](Relazioni%20tra%20insiemi.md#^definizione-relazione-n-aria) $R=\{(1,2),(1,3),(2,4)\}$, essa non è una [funzione](Funzioni.md#^definizione-funzione) perché c'è un elemento del [dominio](Funzioni.md#^definizione-dominio-e-codominio-della-funzione) che è associato a più elementi del [codominio](Funzioni.md#^definizione-dominio-e-codominio-della-funzione).
+> Data una [relazione binaria](Relazioni%20tra%20insiemi.md#^definizione-relazione-n-aria) $R=\{(1,2),(1,3),(2,4)\}$, essa non è una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) perché c'è un elemento del [dominio](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-dominio-e-codominio-della-funzione) che è associato a più elementi del [codominio](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-dominio-e-codominio-della-funzione).
 
 > [!osservazione]+ Osservazione: funzione come dipendenza tra due grandezze
 > 
-> Il concetto di [funzione](Funzioni.md#^definizione-funzione) è un modello matematico usato per esprimere la *dipendenza* tra due grandezze. Se una certa grandezza $Y$ dipende da un'altra grandezza $X$ e se a ogni valore di $X$ è associato un unico valore di $Y$, allora $Y$ è una funzione di $X$: in questo caso si dice che $X$ è la grandezza _indipendente_ e che $Y$ è la grandezza _dipendente_.
+> Il concetto di [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) è un modello matematico usato per esprimere la *dipendenza* tra due grandezze. Se una certa grandezza $Y$ dipende da un'altra grandezza $X$ e se a ogni valore di $X$ è associato un unico valore di $Y$, allora $Y$ è una funzione di $X$: in questo caso si dice che $X$ è la grandezza _indipendente_ e che $Y$ è la grandezza _dipendente_.
 > 
 > Un esempio molto semplice è dato dalle grandezze $X$ e $Y$ definite rispettivamente come "lunghezza del lato di un quadrato" e "area del quadrato": l'insieme dei possibili valori assunti da $X$, cioè il dominio, è $\{ x \in \mathbb{R} \mid x > 0\}$ e a ogni $x$ si associa l'area corrispondente $y=x^2$ (in opportune unità di misura), che è l'unico valore dell'area del quadrato di lato avente lunghezza $x$.
 > Possiamo quindi affermare che l'area del quadrato è _funzione_ della lunghezza del suo lato, secondo la relazione:
@@ -74,7 +74,7 @@ Vedere meglio pagine 64-68 di LAncelotti
 
 > [!notazione]+ Notazioni alternative per una funzione
 > 
-> Una [funzione](Funzioni.md#^definizione-funzione) $f \colon A \to B$ si può anche indicare in altri modi:
+> Una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon A \to B$ si può anche indicare in altri modi:
 > - Possiamo usare la notazione "completa"
 > 	
 > 	$$
@@ -90,13 +90,13 @@ Vedere meglio pagine 64-68 di LAncelotti
 > 	f \colon A \to B, a \mapsto b
 > 	$$
 > 
-> - Possiamo usare quest'altra notazione che sottolinea il fatto che una [funzione](Funzioni.md#^definizione-funzione) è una _trasformazione_ di un oggetto $a \in A$ in un altro oggetto $b \in B$:
+> - Possiamo usare quest'altra notazione che sottolinea il fatto che una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) è una _trasformazione_ di un oggetto $a \in A$ in un altro oggetto $b \in B$:
 > 
 > 	$$
 > 	A \overset{f}\to B
 > 	$$
 > 
-> - Possiamo indicare direttamente la trasformazione che applichiamo sull'oggetto (come già scritto nella [definizione di _funzione_](Funzioni.md#^definizione-funzione)). Per esempio, nell'[esempio di prima](Funzioni.md#^esempio-di-funzione), la [funzione](Funzioni.md#^definizione-funzione) $f \colon \mathbb{R} \to \mathbb{R}$ che prende un $x \in \mathbb{R}$ e ne restituisce il suo quadrato $x^2 \in \mathbb{R}$ si può indicare come
+> - Possiamo indicare direttamente la trasformazione che applichiamo sull'oggetto (come già scritto nella [definizione di _funzione_](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione)). Per esempio, nell'[esempio di prima](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^esempio-di-funzione), la [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon \mathbb{R} \to \mathbb{R}$ che prende un $x \in \mathbb{R}$ e ne restituisce il suo quadrato $x^2 \in \mathbb{R}$ si può indicare come
 > 
 > 	$$
 > 	\begin{align*}
@@ -113,19 +113,19 @@ Vedere meglio pagine 64-68 di LAncelotti
 
 > [!notazione]+ Notazione: dominio e codominio sottintesi
 > 
-> Quando una [funzione](Funzioni.md#^definizione-funzione) è indicata solo attraverso la sua "trasformazione" (per esempio $f(x) = x^2$), si dà per scontato che la [funzione](Funzioni.md#^definizione-funzione) abbia come [codominio](Funzioni.md#^definizione-dominio-e-codominio-della-funzione) l'insieme dei numeri reali%% link %% $\mathbb{R}$, mentre come [dominio](Funzioni.md#^definizione-dominio-e-codominio-della-funzione) non $\mathbb{R}$ ma un [sottoinsieme](Teoria%20degli%20insiemi.md#^definizione-insieme) di $\mathbb{R}$ che corrisponde a tutti e soli i punti%% link %% su cui la [funzione](Funzioni.md#^definizione-funzione) è definita che viene solitamente indicato direttamente con "$\text{dom}(f)$"):
+> Quando una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) è indicata solo attraverso la sua "trasformazione" (per esempio $f(x) = x^2$), si dà per scontato che la [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) abbia come [codominio](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-dominio-e-codominio-della-funzione) l'insieme dei numeri reali%% link %% $\mathbb{R}$, mentre come [dominio](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-dominio-e-codominio-della-funzione) non $\mathbb{R}$ ma un [sottoinsieme](Teoria%20degli%20insiemi.md#^definizione-insieme) di $\mathbb{R}$ che corrisponde a tutti e soli i punti%% link %% su cui la [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) è definita che viene solitamente indicato direttamente con "$\text{dom}(f)$"):
 > 
 > $$
 > f \colon \text{dom}(f) \to \mathbb{R}
 > $$
 > 
-> Il [dominio](Funzioni.md#^definizione-dominio-e-codominio-della-funzione) non può essere "generalizzato" ponendolo uguale a $\mathbb{R}$ perché ciò significherebbe che la [funzione](Funzioni.md#^definizione-funzione) è definita su tutto $\mathbb{R}$, ma ciò non è sempre vero: molte funzioni, per esempio $f(x) = \dfrac{1}{x}$ o $f(x) = \sqrt x$ sono definite solo su alcuni punti%% Link %% di $\mathbb{R}$ (es. $f(x) = \dfrac{1}{x}$ è definita su $\mathbb{R} \setminus \{ 0 \}$, mentre $f(x) = \sqrt x$ è definita solo sui reali positivi%% link %% $\mathbb{R}^{\ge0}$).
+> Il [dominio](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-dominio-e-codominio-della-funzione) non può essere "generalizzato" ponendolo uguale a $\mathbb{R}$ perché ciò significherebbe che la [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) è definita su tutto $\mathbb{R}$, ma ciò non è sempre vero: molte funzioni, per esempio $f(x) = \dfrac{1}{x}$ o $f(x) = \sqrt x$ sono definite solo su alcuni punti%% Link %% di $\mathbb{R}$ (es. $f(x) = \dfrac{1}{x}$ è definita su $\mathbb{R} \setminus \{ 0 \}$, mentre $f(x) = \sqrt x$ è definita solo sui reali positivi%% link %% $\mathbb{R}^{\ge0}$).
 > 
-> Ecco perché userò spesso la notazione "$f \colon \text{dom}(f) \to \mathbb{R}$" per indicare una [funzione](Funzioni.md#^definizione-funzione) generica.
+> Ecco perché userò spesso la notazione "$f \colon \text{dom}(f) \to \mathbb{R}$" per indicare una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) generica.
 
 > [!osservazione]+ Osservazione: funzione come concetto non strettamente algebrico
 > 
-> La nozione di [_funzione_](Funzioni.md#^definizione-funzione) è molto generale e non si limita a considerare solo quelle funzioni che si possono scrivere esplicitamente in modi strettamente "matematici". Per esempio, si può scegliere di definire una [funzione](Funzioni.md#^definizione-funzione) del tipo:
+> La nozione di [_funzione_](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) è molto generale e non si limita a considerare solo quelle funzioni che si possono scrivere esplicitamente in modi strettamente "matematici". Per esempio, si può scegliere di definire una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) del tipo:
 > 
 > $$
 > \begin{align*}
@@ -134,7 +134,7 @@ Vedere meglio pagine 64-68 di LAncelotti
 > \end{align*}
 > $$
 > 
-> oppure una [funzione](Funzioni.md#^definizione-funzione) del tipo:
+> oppure una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) del tipo:
 > 
 > $$
 > \begin{align*}
@@ -145,9 +145,9 @@ Vedere meglio pagine 64-68 di LAncelotti
 
 > [!osservazione]+ Osservazione: funzione come processo con input e output
 > 
-> Il concetto di [_funzione_](Funzioni.md#^definizione-funzione) può essere facilmente inteso in termini di processo che, dato un certo input, fornisce un determinato output.
+> Il concetto di [_funzione_](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) può essere facilmente inteso in termini di processo che, dato un certo input, fornisce un determinato output.
 > 
-> Una [funzione](Funzioni.md#^definizione-funzione) $f$ è assimilabile a una macchina che prende in ingresso un valore $x$ e restituisce in uscita un unico valore corrispondente $f(x)$:
+> Una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f$ è assimilabile a una macchina che prende in ingresso un valore $x$ e restituisce in uscita un unico valore corrispondente $f(x)$:
 > 
 > $$
 > \boxed x \to \boxed{f(x)}
@@ -166,7 +166,7 @@ Vedere meglio pagine 64-68 di LAncelotti
 
 > [!definizione]+ Definizione: grafico di una funzione
 > 
-> Data una [funzione](Funzioni.md#^definizione-funzione) $f \colon A \to B$, si definisce ***grafico*** di $f$ il [sottoinsieme](Teoria%20degli%20insiemi.md#^definizione-sottoinsieme) $\Gamma_{f} \subseteq \mathbb{R}^{2}$ definito da:
+> Data una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon A \to B$, si definisce ***grafico*** di $f$ il [sottoinsieme](Teoria%20degli%20insiemi.md#^definizione-sottoinsieme) $\Gamma_{f} \subseteq \mathbb{R}^{2}$ definito da:
 > 
 > $$
 > \begin{align*}
@@ -205,7 +205,7 @@ Esempi:
 
 > [!definizione]+ Definizione: immagine
 > 
-> Data una [funzione](Funzioni.md#^definizione-funzione) $f \colon A \to B, x \mapsto f(x)$:
+> Data una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon A \to B, x \mapsto f(x)$:
 > - L'elemento $f(x)$ è detto **_immagine di $a$ mediante $f$_** (oppure **_valore di $f$ su $a$_**).
 > - Dato un [sottoinsieme](Teoria%20degli%20insiemi.md#^definizione-sottoinsieme) $C \subseteq A$, l'insieme degli $f(x) \in B$ associati a ogni $x \in C$, denotato con "$f(C)$", è detto **_immagine di $C$ mediante $f$_**:
 > $$
@@ -229,7 +229,7 @@ Slide 7-9 di Viale
 
 > [!definizione]+ Definizione: controimmagine
 > 
-> Data una [funzione](Funzioni.md#^definizione-funzione) $f \colon A \to B, x \mapsto f(x)$:
+> Data una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon A \to B, x \mapsto f(x)$:
 > - L'insieme degli $x \in A$ associati a un elemento $y \in B$, denotato con $f^{-1}(y)$, è detto **_controimmagine di $y$_**:
 > $$
 > f^{-1}(y) = \{ x \in A \mid f(x) = y \}
@@ -247,36 +247,36 @@ Slide 11-12 di Viale
 %% 
 Osservazione:
 
-Se $D=B$, l'insieme degli $x \in A$ associati a ogni $y \in B$ corrisponde al [dominio](Matem[dominio](Funzioni.md#^definizione-funzione) 
+Se $D=B$, l'insieme degli $x \in A$ associati a ogni $y \in B$ corrisponde al [dominio](Matem[dominio](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) 
 fare tabella riassuntiva per spiegare meglio differenza tra immagine/controimmagine dei singoli elementi/degli interi insiemi 
 %%
 
 > [!esempio]- Esempio: controimmagine di una funzione costante
 > 
-> Data una [funzione costante](Funzioni.md#^definizione-funzione-costante) $f \colon A \to B, a \mapsto \beta$, se $T \subsetneq B$ è un sottoinsieme del codominio $B$ si ha che:
+> Data una [funzione costante](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione-costante) $f \colon A \to B, a \mapsto \beta$, se $T \subsetneq B$ è un sottoinsieme del codominio $B$ si ha che:
 > - Se $\beta \in T$, allora $f^{-1}(T) = A$.
 > - Se $\beta \notin T$, allora $f^{-1}(T) = \emptyset$.
 
 > [!esempio]- Esempio: controimmagine di una funzione proiezione
 > 
-> Data una [funzione proiezione](Funzioni.md#^definizione-funzione-proiezione) $f \colon A \times B \to B, (a,b) \mapsto b$, allora $\forall b \in B(f^{-1}(b) = A\times\{b\})$.
+> Data una [funzione proiezione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione-proiezione) $f \colon A \times B \to B, (a,b) \mapsto b$, allora $\forall b \in B(f^{-1}(b) = A\times\{b\})$.
 
 > [!esempio]- Esempio: controimmagine della funzione $\color{#7F7FFF} f \colon [-1,1] \to \mathbb{R}, x \mapsto \sin(x)$
 > 
-> Data una [funzione](Funzioni.md#^definizione-funzione) $f \colon [-1,1] \to \mathbb{R}, x \mapsto \sin(x)$, la controimmagine dell'insieme $\mathbb{N} \subsetneq \mathbb{R}$ dei numeri naturali è l'insieme:
+> Data una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon [-1,1] \to \mathbb{R}, x \mapsto \sin(x)$, la controimmagine dell'insieme $\mathbb{N} \subsetneq \mathbb{R}$ dei numeri naturali è l'insieme:
 > $$
 > f^{-1}(\mathbb{N}) = \left\{ \ldots, -\dfrac{3\pi}{2}, -\pi, -\dfrac{\pi}{2}, 0, \dfrac{\pi}{2}, \pi, \dfrac{3\pi}{2}, \ldots \right\} = \left\{ \dfrac{n\pi}{2} \middle| n \in \mathbb{Z} \right\}
 > $$
 
 ## 1.3 - Definizioni e rappresentazioni di una funzione
 
-Ci sono diversi modi per poter definire la struttura di una [funzione](Funzioni.md#^definizione-funzione), alcuni dei quali molto simili a quanto avviene per gli [insiemi](Teoria%20degli%20insiemi.md#^definizione-insieme).
+Ci sono diversi modi per poter definire la struttura di una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione), alcuni dei quali molto simili a quanto avviene per gli [insiemi](Teoria%20degli%20insiemi.md#^definizione-insieme).
 
 ### 1.3.1 - Definizione per elencazione di una funzione
 
 > [!notazione]+ Definizione per elencazione di una funzione
 > 
-> Una [funzione](Funzioni.md#^definizione-funzione) $f \colon A \to B$ può essere definita **per elencazione** fornendo un elenco di tutte le coppie $(a,b) \in A \times B$ tali che $(a,b) \in f$, ovvero tali che $b = f(a)$.
+> Una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon A \to B$ può essere definita **per elencazione** fornendo un elenco di tutte le coppie $(a,b) \in A \times B$ tali che $(a,b) \in f$, ovvero tali che $b = f(a)$.
 ^definizione-per-elencazione-di-una-funzione
 
 > [!esempio]- Esempio di definizione per elencazione di una funzione
@@ -289,13 +289,13 @@ Ci sono diversi modi per poter definire la struttura di una [funzione](Funzioni.
 > f(c) = 0
 > \end{align*}
 > $$
-> descrive in maniera univoca una [funzione](Funzioni.md#^definizione-funzione) $f \colon A \to B$.
+> descrive in maniera univoca una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon A \to B$.
 
 ### 1.3.2 - Definizione per caratteristica di una funzione
 
 > [!notazione]+ Definizione per caratteristica di una funzione
 > 
-> Una [funzione](Funzioni.md#^definizione-funzione) $f \colon A \to B$ può essere definita **per caratteristica** fornendo una "regola" che permette di determinare i valori di $f$ su ciascun $x \in A$, ma ciò presuppone che il dominio e il codominio della funzione siano stati specificati precedentemente o facilmente intuibili dal contesto.
+> Una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon A \to B$ può essere definita **per caratteristica** fornendo una "regola" che permette di determinare i valori di $f$ su ciascun $x \in A$, ma ciò presuppone che il dominio e il codominio della funzione siano stati specificati precedentemente o facilmente intuibili dal contesto.
 ^definizione-per-caratteristica-di-una-funzione
 
 > [!esempio]- Esempio di definizione per caratteristica di una funzione
@@ -314,7 +314,7 @@ spostare il piano cartesiano nelle relazioni (perché può essere generico a qua
 
 > [!notazione]+ Rappresentazione di una funzione col piano cartesiano
 > 
-> Per rappresentare una [funzione](Funzioni.md#^definizione-funzione) "visivamente" si usa il **piano cartesiano**, cioè un piano composto da due rette perpendicolari tra loro, dette **_assi cartesiani_**, che hanno alcune caratteristiche particolari:
+> Per rappresentare una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) "visivamente" si usa il **piano cartesiano**, cioè un piano composto da due rette perpendicolari tra loro, dette **_assi cartesiani_**, che hanno alcune caratteristiche particolari:
 > - Sono disegnate in modo che una di esse sia orizzontale e l'altra verticale.
 > - Ognuna di loro rappresenta una grandezza: generalmente la retta orizzontale, detta **_asse delle ascisse_**, rappresenta i valori che può assumere la $x$, mentre la retta verticale, detta **_asse delle ordinate_**, rappresenta i valori che può assumere la $y$.
 > - Sono orientate, cioè a una delle due estremità presentano una freccia che indica il verso in cui le grandezze aumentano di valore (generalmente verso destra per l'asse delle ascisse e verso l'alto per l'asse delle ordinate).
@@ -329,7 +329,7 @@ come si disegna la funzione sul piano cartesiano?
 
 > [!esempio]- Esempio: piano cartesiano di ${\color{#7F7FFF} f(x)=3x-1 }$
 > 
-> Il [grafico](Funzioni.md#^definizione-grafico-di-una-funzione) della [funzione](Funzioni.md#^definizione-funzione) $f(x)=3x-1$ è l'insieme $\Gamma_{f} = \{ (x,y) \in \mathbb{R}^{2} \mid y=3x-1 \}$ ed è rappresentato dalla seguente retta nel piano cartesiano:
+> Il [grafico](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-grafico-di-una-funzione) della [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f(x)=3x-1$ è l'insieme $\Gamma_{f} = \{ (x,y) \in \mathbb{R}^{2} \mid y=3x-1 \}$ ed è rappresentato dalla seguente retta nel piano cartesiano:
 > ![350](Pasted%20image%2020240220105837.png)
 
 %% sostituire grafici con Geogebra %%
@@ -383,7 +383,7 @@ cui parte più di una freccia).
 
 > [!definizione]+ Definizione: uguaglianza di due funzioni
 > 
-> Date due [funzioni](Funzioni.md#^definizione-funzione) $f$ e $g$, esse sono definite **uguali** se hanno lo stesso dominio e lo stesso codominio e se $f(x) = g(x)$ per ogni elemento $x$ del dominio.
+> Date due [funzioni](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f$ e $g$, esse sono definite **uguali** se hanno lo stesso dominio e lo stesso codominio e se $f(x) = g(x)$ per ogni elemento $x$ del dominio.
 ^definizione-uguaglianza-di-due-funzioni
 
 %% 
@@ -393,7 +393,7 @@ quindi il loro grafico deve coincidere
 
 > [!esempio]- Esempio: uguaglianza di due funzioni apparentemente diverse
 > 
-> Date due [funzioni](Funzioni.md#^definizione-funzione) $f(x)=3x^2-1$ e $g(x)=x^3+2x-1$ definite in $\mathbb{R}$ e con [dominio](Funzioni.md#^definizione-dominio-e-codominio-della-funzione) $\{0,1,2\}$, ossia $f,g \colon \{0,1,2\} \to \mathbb{R}$, allora $f=g$ perché:
+> Date due [funzioni](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f(x)=3x^2-1$ e $g(x)=x^3+2x-1$ definite in $\mathbb{R}$ e con [dominio](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-dominio-e-codominio-della-funzione) $\{0,1,2\}$, ossia $f,g \colon \{0,1,2\} \to \mathbb{R}$, allora $f=g$ perché:
 > - $f(0)=g(0)=-1$;
 > - $f(1)=g(1)=2$;
 > - $f(2)=g(2)=11$.
@@ -410,7 +410,7 @@ perché la prima non è definita per $x = 1$
 
 # 3 - Funzioni particolari
 
-Ci sono alcune [funzioni](Funzioni.md#^definizione-funzione) che hanno un comportamento particolare.
+Ci sono alcune [funzioni](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) che hanno un comportamento particolare.
 
 %% 
 Funzione segno:
@@ -431,7 +431,7 @@ Le funzioni di questo tipo sono dette definite a tratti. Un'altra funzione defin
 
 > [!definizione]+ Definizione: funzione identità
 > 
-> Dato un [insieme](Teoria%20degli%20insiemi.md#^definizione-insieme) $X$, la **funzione identità** $\text{id}_X$ su $X$ è la [funzione](Funzioni.md#^definizione-funzione) che associa a ogni elemento di $X$ se stesso:
+> Dato un [insieme](Teoria%20degli%20insiemi.md#^definizione-insieme) $X$, la **funzione identità** $\text{id}_X$ su $X$ è la [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) che associa a ogni elemento di $X$ se stesso:
 > 
 > $$
 > \begin{align*}
@@ -449,7 +449,7 @@ fare esempio
 
 > [!definizione]+ Definizione: funzione costante
 > 
-> Dati due [insiemi](Teoria%20degli%20insiemi.md#^definizione-insieme) $A$ e $B$ non necessariamente distinti e un elemento fissato $\beta \in B$, la **funzione costante** $f_\beta$ con valore $\beta$ è la [funzione](Funzioni.md#^definizione-funzione) che associa a ogni elemento di $A$ sempre lo stesso elemento $\beta$ di $B$:
+> Dati due [insiemi](Teoria%20degli%20insiemi.md#^definizione-insieme) $A$ e $B$ non necessariamente distinti e un elemento fissato $\beta \in B$, la **funzione costante** $f_\beta$ con valore $\beta$ è la [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) che associa a ogni elemento di $A$ sempre lo stesso elemento $\beta$ di $B$:
 > 
 > $$
 > \begin{align*}
@@ -467,7 +467,7 @@ fare esempio
 
 > [!definizione]+ Definizione: funzione proiezione
 > 
-> Dati due [insiemi](Teoria%20degli%20insiemi.md#^definizione-insieme) $A$ e $B$, le **funzioni proiezioni** $p_1$ e $p_2$ sui singoli fattori sono le [funzioni](Funzioni.md#^definizione-funzione) che associano a ogni coppia di valori $(a,b) \in A \times B$ uno solo dei due valori:
+> Dati due [insiemi](Teoria%20degli%20insiemi.md#^definizione-insieme) $A$ e $B$, le **funzioni proiezioni** $p_1$ e $p_2$ sui singoli fattori sono le [funzioni](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) che associano a ogni coppia di valori $(a,b) \in A \times B$ uno solo dei due valori:
 > 
 > $$
 > \begin{align*}
@@ -492,7 +492,7 @@ fare esempio
 
 > [!definizione]+ Definizione: funzione restrizione
 > 
-> Data una [funzione](Funzioni.md#^definizione-funzione) $f \colon A \to B$ e un [sottoinsieme](Teoria%20degli%20insiemi.md#^definizione-sottoinsieme) $C \subseteq A$, si dice _**restrizione**_ di $f$ a $C$ la funzione $f_{\vert C}$ che restringe il dominio di $f$ a $C$:
+> Data una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon A \to B$ e un [sottoinsieme](Teoria%20degli%20insiemi.md#^definizione-sottoinsieme) $C \subseteq A$, si dice _**restrizione**_ di $f$ a $C$ la funzione $f_{\vert C}$ che restringe il dominio di $f$ a $C$:
 > 
 > $$
 > \begin{align*}
@@ -510,7 +510,7 @@ Definizione 1.3 di Lancellotti
 
 > [!esempio]- Esempio: ${\color{#7F7FFF} f|_\mathbb{N} \colon \mathbb{N} \to \mathbb{R} }$ restrizione di ${\color{#7F7FFF} f \colon \mathbb{R} \to \mathbb{R} }$
 > 
-> Data una [funzione](Funzioni.md#^definizione-funzione) $f \colon \mathbb{R} \to \mathbb{R}, x \mapsto x^2$, essa si può [restringere](Funzioni.md#^definizione-funzione-restrizione) al [sottoinsieme](Teoria%20degli%20insiemi.md#^definizione-insieme) $\mathbb{N} \subsetneq \mathbb{R}$ e diventa la [funzione](Funzioni.md#^definizione-funzione) $f|_\mathbb{N} \colon \mathbb{R} \to \mathbb{R} x \mapsto x^2$.
+> Data una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon \mathbb{R} \to \mathbb{R}, x \mapsto x^2$, essa si può [restringere](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione-restrizione) al [sottoinsieme](Teoria%20degli%20insiemi.md#^definizione-insieme) $\mathbb{N} \subsetneq \mathbb{R}$ e diventa la [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f|_\mathbb{N} \colon \mathbb{R} \to \mathbb{R} x \mapsto x^2$.
 
 %% 
 Esempio:
@@ -542,7 +542,7 @@ rng(f|C) = f [C].
 
 > [!definizione]+ Definizione: somma di funzioni
 > 
-> Date due [funzioni](Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e $g \colon \text{dom}(g) \to \mathbb{R}$, si definisce la **somma** $f + g$ come la [funzione](Funzioni.md#^definizione-funzione):
+> Date due [funzioni](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e $g \colon \text{dom}(g) \to \mathbb{R}$, si definisce la **somma** $f + g$ come la [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione):
 > 
 > $$
 > (f + g) \colon \text{dom}(f) \cap \text{dom}(g) \to \mathbb{R}
@@ -559,7 +559,7 @@ rng(f|C) = f [C].
 
 > [!definizione]+ Definizione: prodotto di funzioni
 > 
-> Date due [funzioni](Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e $g \colon \text{dom}(g) \to \mathbb{R}$, si definisce il **prodotto** $f \cdot g$ (a volte indicato anche come $fg$) come la [funzione](Funzioni.md#^definizione-funzione):
+> Date due [funzioni](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e $g \colon \text{dom}(g) \to \mathbb{R}$, si definisce il **prodotto** $f \cdot g$ (a volte indicato anche come $fg$) come la [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione):
 > 
 > $$
 > (f \cdot g) \colon \text{dom}(f) \cap \text{dom}(g) \to \mathbb{R}

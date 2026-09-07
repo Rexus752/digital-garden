@@ -13,7 +13,7 @@ vedere se tutti i riferimenti a `^definizione-funzione-continua` riguardano una 
 
 > [!definizione]+ Definizione: funzione continua in un punto
 > 
-> Data una [funzione](Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R} \cup \{ \pm \infty \}$ per $\text{dom}(f)$, diciamo che **$f$ è continua in $x_0$** se
+> Data una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R} \cup \{ \pm \infty \}$ per $\text{dom}(f)$, diciamo che **$f$ è continua in $x_0$** se
 > 
 > $$
 > \lim_{x \to x_0} f(x) = f(x_0)
@@ -24,14 +24,14 @@ vedere se tutti i riferimenti a `^definizione-funzione-continua` riguardano una 
 
 > [!definizione]+ Definizione: funzione continua in un intervallo
 > 
-> Data una [funzione](Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e un intervallo%% link %% $I \subseteq \text{dom}(f)$ non [vuoto](Teoria%20degli%20insiemi.md#^definizione-insieme-vuoto) ($I \ne \emptyset$), diciamo che **$f$ è continua in $I$** se è [continua](Funzioni%20continue.md#^definizione-funzione-continua-in-un-punto) in ogni punto%% link %% $x_0 \in I$.
+> Data una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e un intervallo%% link %% $I \subseteq \text{dom}(f)$ non [vuoto](Teoria%20degli%20insiemi.md#^definizione-insieme-vuoto) ($I \ne \emptyset$), diciamo che **$f$ è continua in $I$** se è [continua](Funzioni%20continue.md#^definizione-funzione-continua-in-un-punto) in ogni punto%% link %% $x_0 \in I$.
 > 
 > Altrimenti, si dice che **$f$ è discontinua in $I$** se è [discontinua](Funzioni%20continue.md#^definizione-funzione-continua-in-un-punto) in almeno un punto%% link %% $x_0 \in I$.
 ^definizione-funzione-continua-in-un-intervallo
 
 > [!definizione]+ Definizione: funzione continua
 > 
-> Una [funzione](Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ si dice **continua** se è [continua](Funzioni%20continue.md#^definizione-funzione-continua-in-un-intervallo) in $\text{dom}(f)$.
+> Una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ si dice **continua** se è [continua](Funzioni%20continue.md#^definizione-funzione-continua-in-un-intervallo) in $\text{dom}(f)$.
 ^definizione-funzione-continua
 
 %% 
@@ -46,7 +46,7 @@ Riprendendo l'osservazione (???) che avevamo fatto studiando i limiti (quella su
 
 > [!osservazione]+ Osservazione: interpretazione informale di _funzione continua_
 > 
-> In termini poco rigorosi, possiamo dire che una [funzione](Funzioni.md#^definizione-funzione) è [continua](Funzioni%20continue.md#^definizione-funzione-continua-in-un-punto) in un punto%% link %% $x_0$ del suo dominio%% link %% se a "piccole" variazioni di $x$ nelle vicinanze di $x_0$ corrispondono "piccole" variazioni di $f(x)$ nelle vicinanze di $f(x_0)$. Questa interpretazione tuttavia non è per nulla rigorosa, in quanto il concetto di "piccolo" non è ben definito. È meglio dire che $f$ è [continua](Funzioni%20continue.md#^definizione-funzione-continua-in-un-punto) in $x_0$ se è sempre possibile avere un "controllo" delle variazioni di $f$ dal valore $f(x_0)$ al valore $f(x)$ in tutti i punti%% link %% di $x$ sufficientemente vicini a $x_0$.
+> In termini poco rigorosi, possiamo dire che una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) è [continua](Funzioni%20continue.md#^definizione-funzione-continua-in-un-punto) in un punto%% link %% $x_0$ del suo dominio%% link %% se a "piccole" variazioni di $x$ nelle vicinanze di $x_0$ corrispondono "piccole" variazioni di $f(x)$ nelle vicinanze di $f(x_0)$. Questa interpretazione tuttavia non è per nulla rigorosa, in quanto il concetto di "piccolo" non è ben definito. È meglio dire che $f$ è [continua](Funzioni%20continue.md#^definizione-funzione-continua-in-un-punto) in $x_0$ se è sempre possibile avere un "controllo" delle variazioni di $f$ dal valore $f(x_0)$ al valore $f(x)$ in tutti i punti%% link %% di $x$ sufficientemente vicini a $x_0$.
 
 > [!osservazione]+ Osservazione: funzione continua in tutti e soli i punti del suo dominio
 > 
@@ -60,7 +60,7 @@ Inoltre, dal confronto fra queste due nozioni, seguono le seguenti proposizioni.
 
 > [!proposizione]+ Proposizione: continuità e punti di accumulazione
 > 
-> Data una [funzione](Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e un punto%% link %% $x_0 \in \text{dom}(f)$, si ha che, se $x_0$ è un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) per $\text{dom}(f)$, allora
+> Data una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e un punto%% link %% $x_0 \in \text{dom}(f)$, si ha che, se $x_0$ è un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) per $\text{dom}(f)$, allora
 > 
 > $$
 > f \text{ è continua in } x_0 \iff \lim_{x \to x_0} f(x) = f(x_0)
@@ -73,7 +73,7 @@ Dimostrazione pag. 137 Lancelotti
 
 > [!proposizione]+ Proposizione: continuità e punti isolati
 > 
-> Data una [funzione](Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e un punto%% link %% $x_0 \in \text{dom}(f)$, si ha che, se $x_0$ è un [punto isolato](Topologia%20dei%20reali.md#^definizione-punto-isolato) per $\text{dom}(f)$, allora $f$ è [continua](Funzioni%20continue.md#^definizione-funzione-continua) in $x_0$.
+> Data una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e un punto%% link %% $x_0 \in \text{dom}(f)$, si ha che, se $x_0$ è un [punto isolato](Topologia%20dei%20reali.md#^definizione-punto-isolato) per $\text{dom}(f)$, allora $f$ è [continua](Funzioni%20continue.md#^definizione-funzione-continua) in $x_0$.
 ^proposiizone-continuita-e-punti-isolati
 
 %% 
@@ -92,7 +92,7 @@ Dimostrazione pag. 137 Lancelotti
 > 	$$
 > 	\lim_{x \to x_0} f(x) = f(x_0) \implies f \text{ è continua in } x_0
 > 	$$
-> 	cioè, per sapere se una [funzione](Funzioni.md#^definizione-funzione) $f$ è [continua](Funzioni%20continue.md#^definizione-funzione-continua) in un punto%% link %% $x_0$ del suo dominio%% link %% in cui ha senso calcolare il [limite](Limiti.md#^definizione-limite) di $f(x)$ per $x \to x_0$, allora è sufficiente calcolare questo limite e controllare che coincida con $f(x_0)$. In particolare, abbiamo che
+> 	cioè, per sapere se una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f$ è [continua](Funzioni%20continue.md#^definizione-funzione-continua) in un punto%% link %% $x_0$ del suo dominio%% link %% in cui ha senso calcolare il [limite](Limiti.md#^definizione-limite) di $f(x)$ per $x \to x_0$, allora è sufficiente calcolare questo limite e controllare che coincida con $f(x_0)$. In particolare, abbiamo che
 > 	$$
 > 	\lim_{x \to x_0} f(x) \ne f(x_0) \implies f \text{ non è continua in } x_0
 > 	$$
@@ -104,12 +104,12 @@ esempio pagg. 138-141 Lancelotti
 %% 
 [!esercizio]+ Esercizio
 
-Determinare una [funzione](Funzioni.md#^definizione-funzione) definita su tutto $\mathbb{R}$ e [continua](Funzioni%20continue.md#^definizione-funzione-continua) solo in $0$ e $1$.
+Determinare una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) definita su tutto $\mathbb{R}$ e [continua](Funzioni%20continue.md#^definizione-funzione-continua) solo in $0$ e $1$.
 %%
 
 > [!attenzione]+ Attenzione: si può parlare di (dis)continuità solo dove $\color{#FFBF7F} f$ è definita
 > 
-> Non ha senso parlare di [dis(continuità)](Funzioni%20continue.md#^definizione-funzione-continua) di una [funzione](Funzioni.md#^definizione-funzione) nei punti%% link %% in cui non è definita%% link %%. Per esempio,
+> Non ha senso parlare di [dis(continuità)](Funzioni%20continue.md#^definizione-funzione-continua) di una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) nei punti%% link %% in cui non è definita%% link %%. Per esempio,
 > 
 > $$
 > f(x) = \dfrac{1}{x}
@@ -119,7 +119,7 @@ Determinare una [funzione](Funzioni.md#^definizione-funzione) definita su tutto 
 
 > [!proposizione]+ Proposizione
 > 
-> Data una [funzione](Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0$ per $\text{dom}(f)$, abbiamo che
+> Data una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0$ per $\text{dom}(f)$, abbiamo che
 > 
 > $$
 > \begin{array}{}
@@ -129,7 +129,7 @@ Determinare una [funzione](Funzioni.md#^definizione-funzione) definita su tutto 
 > \end{array}
 > $$
 > 
-> Dove la [funzione](Funzioni.md#^definizione-funzione) $\tilde f \colon \text{dom}(f) \cup \{ x_0 \} \to \mathbb{R}$ è definita da
+> Dove la [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $\tilde f \colon \text{dom}(f) \cup \{ x_0 \} \to \mathbb{R}$ è definita da
 > 
 > $$
 > \tilde f(x) = \begin{cases}
@@ -180,9 +180,9 @@ pagg. 143-144 lancelotti
 > 
 > Le nozioni e le proprietà che si studiano in analisi matematica%% link %% si possono distinguere in due classi: **locali** e **globali**.
 > 
-> Sono _locali_ quelle che si realizzano nelle "vicinanze" di un punto%% Link %% di una [funzione](Funzioni.md#^definizione-funzione), ossia coinvolgono (riguardano) solo certi punti%% link %%, mentre sono _globali_ quelle che coinvolgono tutti i punti%% Link %% di quella [funzione](Funzioni.md#^definizione-funzione).
+> Sono _locali_ quelle che si realizzano nelle "vicinanze" di un punto%% Link %% di una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione), ossia coinvolgono (riguardano) solo certi punti%% link %%, mentre sono _globali_ quelle che coinvolgono tutti i punti%% Link %% di quella [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione).
 > 
-> Per esempio, riferite alle nozioni sin qui introdotte sulle [funzioni](Funzioni.md#^definizione-funzione), sono nozioni locali quella di [limite](Limiti.md#^definizione-limite) e quella di [funzione continua](Funzioni%20continue.md#^definizione-funzione-continua); infatti, sono definite coinvolgendo solo i punti%% Link %% in un [intorno](Topologia%20dei%20reali.md#^definizione-intorno-di-un-punto) del punto%% Link %% a cui tende la variabile indipendente%% link %%.
+> Per esempio, riferite alle nozioni sin qui introdotte sulle [funzioni](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione), sono nozioni locali quella di [limite](Limiti.md#^definizione-limite) e quella di [funzione continua](Funzioni%20continue.md#^definizione-funzione-continua); infatti, sono definite coinvolgendo solo i punti%% Link %% in un [intorno](Topologia%20dei%20reali.md#^definizione-intorno-di-un-punto) del punto%% Link %% a cui tende la variabile indipendente%% link %%.
 > 
 > Sono invece globali l'[iniettività](Proprietà%20delle%20funzioni.md#^definizione-iniettivita), la [suriettività](Matematica/Teoria%20degli%20insiemi/Funzioni/Proprietà%20delle%20funzioni.md#^definizione-suriettivita), la [biettività](Matematica/Teoria%20degli%20insiemi/Funzioni/Proprietà%20delle%20funzioni.md#^definizione-biettivita), la monotonia%% Link %%, la simmetria%% link %%, la periodicità%% Link %%; infatti, sono definite coinvolgendo ogni punto%% link %% del dominio%% link %%.
 > 
@@ -195,7 +195,7 @@ pagg. 143-144 lancelotti
 
 > [!definizione]+ Definizione: funzione continua da destra
 > 
-> Data una [funzione](Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R}$ per $\text{dom}(f)$, diciamo che **$f$ è continua da destra in $x_0$** se $f$ [ristretta](Funzioni.md#^definizione-funzione-restrizione) a $\text{dom}(f) \cap [x_0, + \infty)$ è [continua](Funzioni%20continue.md#^definizione-funzione-continua) in $x_0$:
+> Data una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R}$ per $\text{dom}(f)$, diciamo che **$f$ è continua da destra in $x_0$** se $f$ [ristretta](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione-restrizione) a $\text{dom}(f) \cap [x_0, + \infty)$ è [continua](Funzioni%20continue.md#^definizione-funzione-continua) in $x_0$:
 > 
 > $$
 > \begin{array}{}
@@ -208,7 +208,7 @@ pagg. 143-144 lancelotti
 
 > [!definizione]+ Definizione: funzione continua da sinistra
 > 
-> Data una [funzione](Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R}$ per $\text{dom}(f)$, diciamo che **$f$ è continua da sinistra in $x_0$** se $f$ [ristretta](Funzioni.md#^definizione-funzione-restrizione) a $\text{dom}(f) \cap (-\infty, x_0]$ è [continua](Funzioni%20continue.md#^definizione-funzione-continua) in $x_0$:
+> Data una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R}$ per $\text{dom}(f)$, diciamo che **$f$ è continua da sinistra in $x_0$** se $f$ [ristretta](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione-restrizione) a $\text{dom}(f) \cap (-\infty, x_0]$ è [continua](Funzioni%20continue.md#^definizione-funzione-continua) in $x_0$:
 > 
 > $$
 > \begin{array}{}
@@ -221,7 +221,7 @@ pagg. 143-144 lancelotti
 
 > [!proposizione]+ Proposizione: $\color{#FF7F7F} f$ continua solo se continua dai lati
 > 
-> Data una [funzione](Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R}$ per $\text{dom}(f)$, abbiamo che $f$ è [continua](Funzioni%20continue.md#^definizione-funzione-continua) in $x_0$ se e solo se $f$ è [continua da destra](Funzioni%20continue.md#^definizione-funzione-continua-da-destra) e [da sinistra](Funzioni%20continue.md#^definizione-funzione-continua-da-sinistra) in $x_0$:
+> Data una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R}$ per $\text{dom}(f)$, abbiamo che $f$ è [continua](Funzioni%20continue.md#^definizione-funzione-continua) in $x_0$ se e solo se $f$ è [continua da destra](Funzioni%20continue.md#^definizione-funzione-continua-da-destra) e [da sinistra](Funzioni%20continue.md#^definizione-funzione-continua-da-sinistra) in $x_0$:
 > 
 > $$
 > \begin{array}{}
@@ -233,7 +233,7 @@ pagg. 143-144 lancelotti
 
 > [!proposizione]+ Proposizione: $\color{#FF7F7F} f$ continua dai lati solo se limite uguale a $\color{#FF7F7F} f(x_0)$
 > 
-> Data una [funzione](Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R}$ per $\text{dom}(f) \cap [x_0, + \infty)$, abbiamo che
+> Data una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R}$ per $\text{dom}(f) \cap [x_0, + \infty)$, abbiamo che
 > 
 > $$
 > \begin{array}{}
@@ -255,7 +255,7 @@ pagg. 143-144 lancelotti
 
 > [!proposizione]+ Proposizione: $\color{#FF7F7F} f$ definita per $\color{#FF7F7F} x \lesseqgtr x_0$ continua anche dai lati
 > 
-> Se una [funzione](Funzioni.md#^definizione-funzione) è definita solo per $x \ge x_0$, allora è la stessa cosa dire che $f$ è [continua](Funzioni%20continue.md#^definizione-funzione-continua) in $x_0$ e dire che $f$ è [continua da destra](Funzioni%20continue.md#^definizione-funzione-continua-da-destra) in $x_0$:
+> Se una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) è definita solo per $x \ge x_0$, allora è la stessa cosa dire che $f$ è [continua](Funzioni%20continue.md#^definizione-funzione-continua) in $x_0$ e dire che $f$ è [continua da destra](Funzioni%20continue.md#^definizione-funzione-continua-da-destra) in $x_0$:
 > 
 > $$
 > \begin{array}{}
@@ -265,7 +265,7 @@ pagg. 143-144 lancelotti
 > \end{array}
 > $$
 > 
-> Analogicamente, se una [funzione](Funzioni.md#^definizione-funzione) è definita solo per $x \le x_0$, allora è la stessa cosa dire che $f$ è [continua](Funzioni%20continue.md#^definizione-funzione-continua) in $x_0$ e dire che $f$ è [continua da sinistra](Funzioni%20continue.md#^definizione-funzione-continua-da-sinistra) in $x_0$:
+> Analogicamente, se una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) è definita solo per $x \le x_0$, allora è la stessa cosa dire che $f$ è [continua](Funzioni%20continue.md#^definizione-funzione-continua) in $x_0$ e dire che $f$ è [continua da sinistra](Funzioni%20continue.md#^definizione-funzione-continua-da-sinistra) in $x_0$:
 > 
 > $$
 > \begin{array}{}
@@ -279,7 +279,7 @@ pagg. 143-144 lancelotti
 
 > [!definizione]+ Definizione: discontinuità eliminabile
 > 
-> Data una [funzione](Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R}$ per $\text{dom}(f)$, diciamo che $f$ ha una **discontinuità eliminabile in $x_0$** (oppure che $x_0$ è un **punto di discontinuità eliminabile per $f$**) se esiste il [limite](Limiti.md#^definizione-limite)
+> Data una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R}$ per $\text{dom}(f)$, diciamo che $f$ ha una **discontinuità eliminabile in $x_0$** (oppure che $x_0$ è un **punto di discontinuità eliminabile per $f$**) se esiste il [limite](Limiti.md#^definizione-limite)
 > 
 > $$
 > \lim_{x \to x_0} f(x) = l \in \mathbb{R}
@@ -290,7 +290,7 @@ pagg. 143-144 lancelotti
 
 > [!osservazione]+ Osservazione: perché si chiama "discontinuità eliminabile"
 > 
-> La denominazione "discontinuità eliminabile" sta ad indicare che, a patto di modificare la [funzione](Funzioni.md#^definizione-funzione) $f$ in modo opportuno nel punto%% link %% $x_0$, questa discontinuità si può eliminare, semplicemente ponendo il valore di $f(x_0)$ uguale a $l$. Infatti, la [funzione](Funzioni.md#^definizione-funzione) $\tilde f \colon \text{dom}(f) \to \mathbb{R}$ definita da
+> La denominazione "discontinuità eliminabile" sta ad indicare che, a patto di modificare la [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f$ in modo opportuno nel punto%% link %% $x_0$, questa discontinuità si può eliminare, semplicemente ponendo il valore di $f(x_0)$ uguale a $l$. Infatti, la [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $\tilde f \colon \text{dom}(f) \to \mathbb{R}$ definita da
 > 
 > $$
 > \tilde f(x) = \begin{cases}
@@ -303,7 +303,7 @@ pagg. 143-144 lancelotti
 
 > [!definizione]+ Definizione: discontinuità di prima specie (o salto)
 > 
-> Data una [funzione](Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R}$ per $\text{dom}(f)$, diciamo che $f$ ha una **discontinuità di prima specie (o salto) in $x_0$** (oppure che $x_0$ è un **punto di discontinuità di prima specie (o salto) per $f$**) se esistono finiti e diversi fra loro i limiti laterali%% link %%:
+> Data una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R}$ per $\text{dom}(f)$, diciamo che $f$ ha una **discontinuità di prima specie (o salto) in $x_0$** (oppure che $x_0$ è un **punto di discontinuità di prima specie (o salto) per $f$**) se esistono finiti e diversi fra loro i limiti laterali%% link %%:
 > 
 > $$
 > \lim_{x \to x_0^+} f(x) = l \ne l' = \lim_{x \to x_0^-} f(x)
@@ -319,7 +319,7 @@ Esempi:
 
 > [!definizione]+ Definizione: discontinuità di seconda specie
 > 
-> Data una [funzione](Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R}$ per $\text{dom}(f)$, diciamo che $f$ ha una **discontinuità di seconda specie in $x_0$** (oppure che $x_0$ è un **punto di discontinuità di seconda specie per $f$**) se almeno un limite laterale%% link %% per $x \to x_0$ è infinito%% link %% o non esiste.
+> Data una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R}$ per $\text{dom}(f)$, diciamo che $f$ ha una **discontinuità di seconda specie in $x_0$** (oppure che $x_0$ è un **punto di discontinuità di seconda specie per $f$**) se almeno un limite laterale%% link %% per $x \to x_0$ è infinito%% link %% o non esiste.
 ^definizione-discontinuita-di-seconda-specie
 
 %% 
