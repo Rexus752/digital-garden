@@ -92,7 +92,7 @@ $$
 
 Ora possiamo parlare di _integrale definito di una funzione su un intervallo_:
 
-Dati una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon [a,b] \to \mathbb{R}$, un valore $N \in \mathbb{N}^{\ge 1}$ intero e $x_0 = a$, $x_N = b$ e $x_1, \ldots, x_{n-1}$ i punti di $(a,b)$ che suddividono $[a,b]$ in $N$ intervalli di ampiezza $\dfrac{b-a}{N}$ e un punto medio $z_i \in [x_{i-1}, x_i)$ per ogni intervallo se il [limite](Limiti.md#^definizione-limite) $\displaystyle\lim_{N \to + \infty} \dfrac{b-a}{N} \sum_{i=1}^N F(z_i)$ esiste finito e non dipende dalla scelta degli $z_i$ allora il valore che si ottiene è detto **integrale definito di $F$ su $[a,b]$** e si indica con
+Dati una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon [a,b] \to \mathbb{R}$, un valore $N \in \mathbb{N}^{\ge 1}$ intero e $x_0 = a$, $x_N = b$ e $x_1, \ldots, x_{n-1}$ i punti di $(a,b)$ che suddividono $[a,b]$ in $N$ intervalli di ampiezza $\dfrac{b-a}{N}$ e un punto medio $z_i \in [x_{i-1}, x_i)$ per ogni intervallo se il [limite](Matematica/Analisi%20matematica/Limiti/Limiti.md#^definizione-limite) $\displaystyle\lim_{N \to + \infty} \dfrac{b-a}{N} \sum_{i=1}^N F(z_i)$ esiste finito e non dipende dalla scelta degli $z_i$ allora il valore che si ottiene è detto **integrale definito di $F$ su $[a,b]$** e si indica con
 
 $$
 \int_a^b f(x)dx

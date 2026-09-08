@@ -60,7 +60,7 @@ d(f(x), 2) < 0.01 &\iff |f(x) - 2| < 0.01
 \end{align*}
 $$
 
-Quindi, per [definizione di _intorno_](Topologia%20dei%20reali.md#^definizione-intorno-di-un-punto), possiamo riscrivere che se $x$ si trova in un [intorno](Topologia%20dei%20reali.md#^definizione-intorno-di-un-punto) di $1$ di raggio $0.01$ (cioè $x \in (0.99, 1.01)$), allora $f(x)$ si troverà in un [intorno](Topologia%20dei%20reali.md#^definizione-intorno-di-un-punto) di $2$ di raggio $0.01$ (cioè $f(x) \in (1.99, 2.01)$):
+Quindi, per [definizione di _intorno_](Matematica/Teoria%20degli%20insiemi/Funzioni/Topologia%20dei%20reali.md#^definizione-intorno-di-un-punto), possiamo riscrivere che se $x$ si trova in un [intorno](Matematica/Teoria%20degli%20insiemi/Funzioni/Topologia%20dei%20reali.md#^definizione-intorno-di-un-punto) di $1$ di raggio $0.01$ (cioè $x \in (0.99, 1.01)$), allora $f(x)$ si troverà in un [intorno](Matematica/Teoria%20degli%20insiemi/Funzioni/Topologia%20dei%20reali.md#^definizione-intorno-di-un-punto) di $2$ di raggio $0.01$ (cioè $f(x) \in (1.99, 2.01)$):
 
 $$
 x \in I_{0.01}(1) \implies f(x) \in I_{0.01}(2)
@@ -110,7 +110,7 @@ nel caso andrebbe modificato anche negli altri 3 casi e nella definizione genera
 
 > [!osservazione]+ Osservazione: definizione alternativa di _limite finito al finito_
 > 
-> Nella [definizione di _limite finito al finito_](Limiti.md#^definizione-limite-finito-al-finito) gli [intorni](Topologia%20dei%20reali.md#^definizione-intorno-di-un-punto) possono essere sostituiti dalla distanza%% link %% sfruttando la [definizione stessa di _intorno_](Topologia%20dei%20reali.md#^definizione-intorno-di-un-punto):
+> Nella [definizione di _limite finito al finito_](Matematica/Analisi%20matematica/Limiti/Limiti.md#^definizione-limite-finito-al-finito) gli [intorni](Matematica/Teoria%20degli%20insiemi/Funzioni/Topologia%20dei%20reali.md#^definizione-intorno-di-un-punto) possono essere sostituiti dalla distanza%% link %% sfruttando la [definizione stessa di _intorno_](Matematica/Teoria%20degli%20insiemi/Funzioni/Topologia%20dei%20reali.md#^definizione-intorno-di-un-punto):
 > 
 > $$
 > \begin{array}{}
@@ -123,7 +123,7 @@ nel caso andrebbe modificato anche negli altri 3 casi e nella definizione genera
 
 > [!osservazione]+ Osservazione: dipendenza di $\color{#7F7F7F} \delta$ da $\color{#7F7F7F} \varepsilon$
 > 
-> Il valore di $\delta$ dipende da $\varepsilon$ perché, a seconda di quanto piccolo scegliamo $\varepsilon$, il $\delta$ sarà sufficientemente piccolo da rispettare la [definizione di _limite finito al finito_](Limiti.md#^definizione-limite-finito-al-finito).
+> Il valore di $\delta$ dipende da $\varepsilon$ perché, a seconda di quanto piccolo scegliamo $\varepsilon$, il $\delta$ sarà sufficientemente piccolo da rispettare la [definizione di _limite finito al finito_](Matematica/Analisi%20matematica/Limiti/Limiti.md#^definizione-limite-finito-al-finito).
 > 
 > Per questo motivo, alcuni usano la notazione $\delta(\varepsilon)$ per indicare che $\delta$ è in funzione di $\varepsilon$.
 
@@ -146,7 +146,7 @@ Questa osservazione varrà anche per gli altri tipi di limite, ossia il limite i
 > f(x) = \dfrac{x^2 - 1}{x - 1}
 > $$
 > 
-> vogliamo dimostrare che vale il [limite finito al finito](Limiti.md#^definizione-limite-finito-al-finito)
+> vogliamo dimostrare che vale il [limite finito al finito](Matematica/Analisi%20matematica/Limiti/Limiti.md#^definizione-limite-finito-al-finito)
 > 
 > $$
 > \lim_{x \to 1} f(x) = 2
@@ -190,7 +190,7 @@ Questa osservazione varrà anche per gli altri tipi di limite, ossia il limite i
 
 > [!osservazione]+ Osservazione: basta un $\color{#7F7F7F} \delta$ qualsiasi nel limite finito al finito
 > 
-> In un [limite finito al finito](Limiti.md#^definizione-limite-finito-al-finito) non è importante trovare il miglior $\delta$, cioè la distanza minore possibile tra $f(x)$ ed $l$, ma ne basta uno qualunque che funzioni.
+> In un [limite finito al finito](Matematica/Analisi%20matematica/Limiti/Limiti.md#^definizione-limite-finito-al-finito) non è importante trovare il miglior $\delta$, cioè la distanza minore possibile tra $f(x)$ ed $l$, ma ne basta uno qualunque che funzioni.
 > 
 > Per esempio, consideriamo la [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon \mathbb{R} \to \mathbb{R}$ definita da
 > 
@@ -201,19 +201,19 @@ Questa osservazione varrà anche per gli altri tipi di limite, ossia il limite i
 > \end{cases}
 > $$
 > 
-> Vogliamo dimostrare che vale il [limite](Limiti.md#^definizione-limite-finito-al-finito)
+> Vogliamo dimostrare che vale il [limite](Matematica/Analisi%20matematica/Limiti/Limiti.md#^definizione-limite-finito-al-finito)
 > 
 > $$
 > \lim_{x \to 1} f(x) = 5
 > $$
 > 
-> Secondo la [definizione alternativa del _limite finito al finito_](Limiti.md#^osservazione-definizione-alternativa-di-limite-finito-al-finito), abbiamo che
+> Secondo la [definizione alternativa del _limite finito al finito_](Matematica/Analisi%20matematica/Limiti/Limiti.md#^osservazione-definizione-alternativa-di-limite-finito-al-finito), abbiamo che
 > 
 > $$
 > \forall \varepsilon > 0, \exists \delta > 0, \forall x \in \mathbb{R} . \big( 0 < |x - 1| < \delta \implies |f(x) - 5| < \varepsilon \big)
 > $$
 > 
-> Consideriamo un $\varepsilon > 0$ qualunque: esiste un $\delta$ che rispetta questa [definizione](Limiti.md#^definizione-limite-finito-al-finito)?
+> Consideriamo un $\varepsilon > 0$ qualunque: esiste un $\delta$ che rispetta questa [definizione](Matematica/Analisi%20matematica/Limiti/Limiti.md#^definizione-limite-finito-al-finito)?
 > 
 > Partiamo dall'obiettivo che vogliamo dimostrare, cioè che $|f(x) - 5| < \varepsilon$. Si ha che, se $x \ne x_0 = 1$ allora, per la definizione di questa [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione), abbiamo che
 > 
@@ -229,9 +229,9 @@ Questa osservazione varrà anche per gli altri tipi di limite, ossia il limite i
 > \end{array}
 > $$
 > 
-> Dato che abbiamo anche che $|x-1| < \delta$, poniamo arbitrariamente $\displaystyle\delta = \dfrac{\varepsilon}{3}$, che non è necessariamente il $\delta$ più piccolo che possiamo prendere in questo [limite](Limiti.md#^definizione-limite-finito-al-finito).
+> Dato che abbiamo anche che $|x-1| < \delta$, poniamo arbitrariamente $\displaystyle\delta = \dfrac{\varepsilon}{3}$, che non è necessariamente il $\delta$ più piccolo che possiamo prendere in questo [limite](Matematica/Analisi%20matematica/Limiti/Limiti.md#^definizione-limite-finito-al-finito).
 > 
-> Ciò ci porta al fatto che, per ogni $x$ tale che $0 < |x-1| < \delta$, soddisfiamo automaticamente l'obiettivo $|f(x) - 5| < \varepsilon$, verificando così il [limite](Limiti.md#^definizione-limite-finito-al-finito).
+> Ciò ci porta al fatto che, per ogni $x$ tale che $0 < |x-1| < \delta$, soddisfiamo automaticamente l'obiettivo $|f(x) - 5| < \varepsilon$, verificando così il [limite](Matematica/Analisi%20matematica/Limiti/Limiti.md#^definizione-limite-finito-al-finito).
 >  
 > Perché $\displaystyle\delta = \dfrac{\varepsilon}{3}$ è "arbitrario"? Perché avremmo potuto prendere $\displaystyle\delta = \dfrac{\varepsilon}{4}$ o $\displaystyle\delta = \dfrac{\varepsilon}{10}$ o qualunque altro valore più piccolo di $\dfrac{\varepsilon}{3}$, ma tanto funzionerebbero tutti: $\dfrac{\varepsilon}{3}$ è semplicemente il più comodo che emerge dal calcolo.
 > 
@@ -363,13 +363,13 @@ fare interpretazione grafica di questo caso specifico del limite
 > f(x) = x^2
 > $$
 > 
-> vogliamo dimostrare che vale il [limite infinito all'infinito](Limiti.md#^definizione-limite-infinito-all-infinito)
+> vogliamo dimostrare che vale il [limite infinito all'infinito](Matematica/Analisi%20matematica/Limiti/Limiti.md#^definizione-limite-infinito-all-infinito)
 > 
 > $$
 > \lim_{x \to +\infty} f(x) = +\infty
 > $$
 > 
-> proprio sfruttando la [definizione del _limite infinito all'infinito_](Limiti.md#^definizione-limite-infinito-all-infinito), che ci dice che, per una soglia $M$ qualsiasi, esiste un $K$ tale che, per ogni $x \in \text{dom}(f)$, se $x > K$ allora $f(x) > M$.
+> proprio sfruttando la [definizione del _limite infinito all'infinito_](Matematica/Analisi%20matematica/Limiti/Limiti.md#^definizione-limite-infinito-all-infinito), che ci dice che, per una soglia $M$ qualsiasi, esiste un $K$ tale che, per ogni $x \in \text{dom}(f)$, se $x > K$ allora $f(x) > M$.
 > 
 > Per esempio, prendiamo la soglia $M' = 100$: vogliamo trovare un $K'$ tale che, per ogni $x > K'$, si abbia $f(x) > M' = 100$. Notiamo che ci basta prendere $K' = \sqrt{100} = 10$: infatti, per $x = 11$ si ha $f(11) = 121 > M' = 100$.
 > 
@@ -385,7 +385,7 @@ fare interpretazione grafica di questo caso specifico del limite
 
 > [!osservazione]+ Osservazione: basta un $\color{#7F7F7F} K$ qualsiasi nel limite infinito all'infinito
 > 
-> In un [limite infinito all'infinito](Limiti.md#^definizione-limite-infinito-all-infinito) non è importante trovare il miglior $K$, cioè la soglia più piccola possibile oltre la quale $f(x) > M$, ma ne basta uno qualunque che funzioni.
+> In un [limite infinito all'infinito](Matematica/Analisi%20matematica/Limiti/Limiti.md#^definizione-limite-infinito-all-infinito) non è importante trovare il miglior $K$, cioè la soglia più piccola possibile oltre la quale $f(x) > M$, ma ne basta uno qualunque che funzioni.
 > 
 > Per esempio, consideriamo la [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon \mathbb{R} \to \mathbb{R}$ definita da
 > 
@@ -393,13 +393,13 @@ fare interpretazione grafica di questo caso specifico del limite
 > f(x) = 2x^2 + 1
 > $$
 > 
-> Vogliamo dimostrare che vale il [limite](Limiti.md#^definizione-limite-infinito-all-infinito)
+> Vogliamo dimostrare che vale il [limite](Matematica/Analisi%20matematica/Limiti/Limiti.md#^definizione-limite-infinito-all-infinito)
 > 
 > $$
 > \lim_{x \to +\infty} f(x) = +\infty
 > $$
 > 
-> Secondo la [definizione del _limite infinito all'infinito_](Limiti.md#^definizione-limite-infinito-all-infinito), abbiamo che
+> Secondo la [definizione del _limite infinito all'infinito_](Matematica/Analisi%20matematica/Limiti/Limiti.md#^definizione-limite-infinito-all-infinito), abbiamo che
 > 
 > $$
 > \forall M > 0, \exists K > 0, \forall x \in \mathbb{R} . \big( x > K \implies 2x^2 + 1 > M \big)
@@ -419,9 +419,9 @@ fare interpretazione grafica di questo caso specifico del limite
 > \end{array}
 > $$
 > 
-> Dato che, per definizione, abbiamo anche $x > K$, poniamo arbitrariamente $\displaystyle K = \sqrt{\dfrac{M-1}{2}}$, che non è necessariamente il $K$ più piccolo che possiamo prendere in questo [limite](Limiti.md#^definizione-limite-infinito-all-infinito).
+> Dato che, per definizione, abbiamo anche $x > K$, poniamo arbitrariamente $\displaystyle K = \sqrt{\dfrac{M-1}{2}}$, che non è necessariamente il $K$ più piccolo che possiamo prendere in questo [limite](Matematica/Analisi%20matematica/Limiti/Limiti.md#^definizione-limite-infinito-all-infinito).
 > 
-> Ciò ci porta al fatto che, per ogni $x$ tale che $x > K$, soddisfiamo automaticamente l'obiettivo $2x^2 + 1 > M$, verificando così il [limite](Limiti.md#^definizione-limite-infinito-all-infinito).
+> Ciò ci porta al fatto che, per ogni $x$ tale che $x > K$, soddisfiamo automaticamente l'obiettivo $2x^2 + 1 > M$, verificando così il [limite](Matematica/Analisi%20matematica/Limiti/Limiti.md#^definizione-limite-infinito-all-infinito).
 > 
 > Perché $\displaystyle K = \sqrt{\dfrac{M-1}{2}}$ è "arbitrario"? Perché avremmo potuto prendere $K = \sqrt{\dfrac{M}{2}}$ o $K = \sqrt{M}$ o qualunque altro valore più grande di $\sqrt{\dfrac{M-1}{2}}$, ma tanto funzionerebbero tutti: $\sqrt{\dfrac{M-1}{2}}$ è semplicemente il più preciso che emerge dal calcolo.
 
@@ -474,7 +474,7 @@ Siamo interessati a conoscere qual è il comportamento di $g$ quando la variabil
 
 Se, tuttavia, $x$ si avvicina a $x_0 = 0$ in modo casuale, cambiando anche segno, e "saltando" da un lato all'altro rispetto allo $0$, non possiamo dire con certezza se sta diventando sempre più positivo o sempre più negativo, quindi potremmo concludere che per $x \to 0$ si ha che $g(x)$ non ha un comportamento ben determinato e il _limite_ di $g(x)$ per $x \to 0$ non esiste. Ecco che quindi, in questo caso, dobbiamo necessariamente specificare da quale lato vogliamo avvicinarci allo $0$, se da destra o da sinistra.
 
-Da questi esempi si capisce che la nozione di [_limite_](Limiti.md#^definizione-limite) ci dice qual è il _comportamento_ (o _andamento_) di una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) e dei valori che essa può assumere a seconda di come la sua variabile indipendente%% link %% _tende_ a un determinato "punto"%% link %% (e qui la parola _punto_ viene messa tra virgolette perché la variabile%% link %% può anche tendere verso $+\infty$ o $-\infty$ che **non** sono punti%% link %% di $\mathbb{R}$).
+Da questi esempi si capisce che la nozione di [_limite_](Matematica/Analisi%20matematica/Limiti/Limiti.md#^definizione-limite) ci dice qual è il _comportamento_ (o _andamento_) di una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) e dei valori che essa può assumere a seconda di come la sua variabile indipendente%% link %% _tende_ a un determinato "punto"%% link %% (e qui la parola _punto_ viene messa tra virgolette perché la variabile%% link %% può anche tendere verso $+\infty$ o $-\infty$ che **non** sono punti%% link %% di $\mathbb{R}$).
 
 ## 1.3 - Limite finito all'infinito
 
@@ -570,13 +570,13 @@ fare interpretazione grafica di questo caso specifico del limite
 > f(x) = \dfrac{1}{x}
 > $$
 > 
-> vogliamo dimostrare che vale il [limite finito all'infinito](Limiti.md#^definizione-limite-finito-all-infinito)
+> vogliamo dimostrare che vale il [limite finito all'infinito](Matematica/Analisi%20matematica/Limiti/Limiti.md#^definizione-limite-finito-all-infinito)
 > 
 > $$
 > \lim_{x \to +\infty} f(x) = 0
 > $$
 > 
-> proprio sfruttando la [definizione del _limite finito all'infinito_](Limiti.md#^definizione-limite-finito-all-infinito), che ci dice che, per una tolleranza $\varepsilon$ qualsiasi, esiste un $K$ tale che, per ogni $x > K$, si ha $|f(x) - 0| < \varepsilon$.
+> proprio sfruttando la [definizione del _limite finito all'infinito_](Matematica/Analisi%20matematica/Limiti/Limiti.md#^definizione-limite-finito-all-infinito), che ci dice che, per una tolleranza $\varepsilon$ qualsiasi, esiste un $K$ tale che, per ogni $x > K$, si ha $|f(x) - 0| < \varepsilon$.
 > 
 > Per esempio, prendiamo $\varepsilon' = 0.01$: vogliamo trovare un $K'$ tale che, per ogni $x > K'$, si abbia $|f(x)| < 0.01$. Ci basta prendere $K' = \dfrac{1}{0.01} = 100$: infatti, per $x = 200$ si ha $f(200) = 0.005 < 0.01$.
 > 
@@ -592,7 +592,7 @@ fare interpretazione grafica di questo caso specifico del limite
 
 > [!osservazione]+ Osservazione: basta un $\color{#7F7F7F} K$ qualsiasi nel limite finito all'infinito
 > 
-> In un [limite finito all'infinito](Limiti.md#^definizione-limite-finito-all-infinito) non è importante trovare il miglior $K$, cioè la soglia più piccola possibile oltre la quale $|f(x) - l| < \varepsilon$, ma ne basta uno qualunque che funzioni.
+> In un [limite finito all'infinito](Matematica/Analisi%20matematica/Limiti/Limiti.md#^definizione-limite-finito-all-infinito) non è importante trovare il miglior $K$, cioè la soglia più piccola possibile oltre la quale $|f(x) - l| < \varepsilon$, ma ne basta uno qualunque che funzioni.
 > 
 > Per esempio, consideriamo la [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon \mathbb{R} \setminus \{0\} \to \mathbb{R}$ definita da
 > 
@@ -600,13 +600,13 @@ fare interpretazione grafica di questo caso specifico del limite
 > f(x) = \dfrac{1}{x^2} + 3
 > $$
 > 
-> Vogliamo dimostrare che vale il [limite](Limiti.md#^definizione-limite-finito-all-infinito)
+> Vogliamo dimostrare che vale il [limite](Matematica/Analisi%20matematica/Limiti/Limiti.md#^definizione-limite-finito-all-infinito)
 > 
 > $$
 > \lim_{x \to +\infty} f(x) = 3
 > $$
 > 
-> Secondo la [definizione del _limite finito all'infinito_](Limiti.md#^definizione-limite-finito-all-infinito), abbiamo che
+> Secondo la [definizione del _limite finito all'infinito_](Matematica/Analisi%20matematica/Limiti/Limiti.md#^definizione-limite-finito-all-infinito), abbiamo che
 > 
 > $$
 > \forall \varepsilon > 0, \exists K > 0, \forall x \in \mathbb{R} .\ \big( x > K \implies |f(x) - 3| < \varepsilon \big)
@@ -628,9 +628,9 @@ fare interpretazione grafica di questo caso specifico del limite
 > \end{array}
 > $$
 > 
-> Dato che, per definizione, abbiamo anche $x > K$, poniamo arbitrariamente $K = \dfrac{1}{\sqrt{\varepsilon}}$, che non è necessariamente il $K$ più piccolo che possiamo prendere in questo [limite](Limiti.md#^definizione-limite-finito-all-infinito).
+> Dato che, per definizione, abbiamo anche $x > K$, poniamo arbitrariamente $K = \dfrac{1}{\sqrt{\varepsilon}}$, che non è necessariamente il $K$ più piccolo che possiamo prendere in questo [limite](Matematica/Analisi%20matematica/Limiti/Limiti.md#^definizione-limite-finito-all-infinito).
 > 
-> Ciò ci porta al fatto che, per ogni $x > K$, soddisfiamo automaticamente l'obiettivo $|f(x) - 3| < \varepsilon$, verificando così il [limite](Limiti.md#^definizione-limite-finito-all-infinito).
+> Ciò ci porta al fatto che, per ogni $x > K$, soddisfiamo automaticamente l'obiettivo $|f(x) - 3| < \varepsilon$, verificando così il [limite](Matematica/Analisi%20matematica/Limiti/Limiti.md#^definizione-limite-finito-all-infinito).
 > 
 > Perché $K = \dfrac{1}{\sqrt{\varepsilon}}$ è "arbitrario"? Perché avremmo potuto prendere $K = \dfrac{2}{\sqrt{\varepsilon}}$ o $K = \dfrac{1}{\sqrt{\varepsilon}} + 1$ o qualunque altro valore più grande, ma tanto funzionerebbero tutti.
 
@@ -727,13 +727,13 @@ fare interpretazione grafica di questo caso specifico del limite
 > f(x) = \dfrac{1}{x^2}
 > $$
 > 
-> vogliamo dimostrare che vale il [limite infinito al finito](Limiti.md#^definizione-limite-infinito-al-finito)
+> vogliamo dimostrare che vale il [limite infinito al finito](Matematica/Analisi%20matematica/Limiti/Limiti.md#^definizione-limite-infinito-al-finito)
 > 
 > $$
 > \lim_{x \to 0} f(x) = +\infty
 > $$
 > 
-> proprio sfruttando la [definizione del _limite infinito al finito_](Limiti.md#^definizione-limite-infinito-al-finito), che ci dice che, per una soglia $M$ qualsiasi, esiste un $\delta$ tale che, per ogni $x \in I_\delta(0) \setminus \{0\}$, si ha $f(x) > M$.
+> proprio sfruttando la [definizione del _limite infinito al finito_](Matematica/Analisi%20matematica/Limiti/Limiti.md#^definizione-limite-infinito-al-finito), che ci dice che, per una soglia $M$ qualsiasi, esiste un $\delta$ tale che, per ogni $x \in I_\delta(0) \setminus \{0\}$, si ha $f(x) > M$.
 > 
 > Per esempio, prendiamo la soglia $M' = 100$: vogliamo trovare un $\delta'$ tale che, per ogni $x \in I_{\delta'}(0) \setminus \{0\}$, si abbia $f(x) > 100$. Ci basta prendere $\delta' = \dfrac{1}{\sqrt{100}} = 0.1$: infatti, per $x = 0.05$ si ha $f(0.05) = 400 > 100$.
 > 
@@ -749,7 +749,7 @@ fare interpretazione grafica di questo caso specifico del limite
 
 > [!osservazione]+ Osservazione: basta un $\color{#7F7F7F} \delta$ qualsiasi nel limite infinito al finito
 > 
-> In un [limite infinito al finito](Limiti.md#^definizione-limite-infinito-al-finito) non è importante trovare il miglior $\delta$, cioè il più grande possibile tale che $f(x) > M$ per ogni $x \in I_\delta(c) \setminus \{c\}$, ma ne basta uno qualunque che funzioni.
+> In un [limite infinito al finito](Matematica/Analisi%20matematica/Limiti/Limiti.md#^definizione-limite-infinito-al-finito) non è importante trovare il miglior $\delta$, cioè il più grande possibile tale che $f(x) > M$ per ogni $x \in I_\delta(c) \setminus \{c\}$, ma ne basta uno qualunque che funzioni.
 > 
 > Per esempio, consideriamo la [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon \mathbb{R} \setminus \{0\} \to \mathbb{R}$ definita da
 > 
@@ -757,13 +757,13 @@ fare interpretazione grafica di questo caso specifico del limite
 > f(x) = \dfrac{1}{x^2} + x^2
 > $$
 > 
-> Vogliamo dimostrare che vale il [limite](Limiti.md#^definizione-limite-infinito-al-finito)
+> Vogliamo dimostrare che vale il [limite](Matematica/Analisi%20matematica/Limiti/Limiti.md#^definizione-limite-infinito-al-finito)
 > 
 > $$
 > \lim_{x \to 0} f(x) = +\infty
 > $$
 > 
-> Secondo la [definizione del _limite infinito al finito_](Limiti.md#^definizione-limite-infinito-al-finito), abbiamo che
+> Secondo la [definizione del _limite infinito al finito_](Matematica/Analisi%20matematica/Limiti/Limiti.md#^definizione-limite-infinito-al-finito), abbiamo che
 > 
 > $$
 > \forall M > 0, \exists \delta > 0, \forall x \in \mathbb{R} .\ \big( x \in I_\delta(0) \setminus \{0\} \implies f(x) > M \big)
@@ -789,9 +789,9 @@ fare interpretazione grafica di questo caso specifico del limite
 > \end{array}
 > $$
 > 
-> Poniamo quindi arbitrariamente $\delta = \dfrac{1}{\sqrt{M}}$, che non è necessariamente il $\delta$ più grande che possiamo prendere in questo [limite](Limiti.md#^definizione-limite-infinito-al-finito).
+> Poniamo quindi arbitrariamente $\delta = \dfrac{1}{\sqrt{M}}$, che non è necessariamente il $\delta$ più grande che possiamo prendere in questo [limite](Matematica/Analisi%20matematica/Limiti/Limiti.md#^definizione-limite-infinito-al-finito).
 > 
-> Ciò ci porta al fatto che, per ogni $x \in I_\delta(0) \setminus \{0\}$, si ha $\dfrac{1}{x^2} > M$ e quindi $f(x) \geq \dfrac{1}{x^2} > M$, verificando così il [limite](Limiti.md#^definizione-limite-infinito-al-finito).
+> Ciò ci porta al fatto che, per ogni $x \in I_\delta(0) \setminus \{0\}$, si ha $\dfrac{1}{x^2} > M$ e quindi $f(x) \geq \dfrac{1}{x^2} > M$, verificando così il [limite](Matematica/Analisi%20matematica/Limiti/Limiti.md#^definizione-limite-infinito-al-finito).
 > 
 > Perché $\delta = \dfrac{1}{\sqrt{M}}$ è "arbitrario"? Perché avremmo potuto prendere qualunque $\delta$ più piccolo, come $\delta = \dfrac{1}{2\sqrt{M}}$ o $\delta = \dfrac{1}{\sqrt{M}+1}$, e funzionerebbero tutti ugualmente.
 
@@ -801,7 +801,7 @@ Ora proviamo a riunire questi quattro casi "specifici" in una definizione più g
 
 > [!definizione]+ Definizione: limite
 > 
-> Data una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$, un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $c \in \mathbb{R} \cup \{ \pm \infty \}$ per $\text{dom}(f)$ e un valore%% link %% $l \in \mathbb{R} \cup \{ \pm \infty \}$, diciamo che **$f$ ha limite $l$ per $x$ che tende a $c$** e si scrive
+> Data una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$, un [punto di accumulazione](Matematica/Teoria%20degli%20insiemi/Funzioni/Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $c \in \mathbb{R} \cup \{ \pm \infty \}$ per $\text{dom}(f)$ e un valore%% link %% $l \in \mathbb{R} \cup \{ \pm \infty \}$, diciamo che **$f$ ha limite $l$ per $x$ che tende a $c$** e si scrive
 > 
 > $$
 > \lim_{x \to c} f(x) = l
@@ -837,7 +837,7 @@ mettere vari tipi di limite nella definizione di limite
 
 > [!osservazione]+ Osservazione: non è necessario che $\color{#7F7F7F} c \in \text{dom}(f)$
 > 
-> Nella [definizione di _limite_](Limiti.md#^definizione-limite), il punto%% link %% $c$ è un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) per $\text{dom}(f)$, quindi può anche **non** appartenere al dominio%% link %%: ecco perché si richiede che $x \ne c$. Un altro motivo per cui ciò accade è che, anche se $c \in \text{dom}(f)$, il [limite](Limiti.md#^definizione-limite), sia che esista sia che non esista, non dipende dal valore%% link %% di $f$ in $c$, ma solo dai valori di $f$ nei punti%% link %% in un [intorno](Topologia%20dei%20reali.md#^definizione-intorno-di-un-punto) di $c$.
+> Nella [definizione di _limite_](Matematica/Analisi%20matematica/Limiti/Limiti.md#^definizione-limite), il punto%% link %% $c$ è un [punto di accumulazione](Matematica/Teoria%20degli%20insiemi/Funzioni/Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) per $\text{dom}(f)$, quindi può anche **non** appartenere al dominio%% link %%: ecco perché si richiede che $x \ne c$. Un altro motivo per cui ciò accade è che, anche se $c \in \text{dom}(f)$, il [limite](Matematica/Analisi%20matematica/Limiti/Limiti.md#^definizione-limite), sia che esista sia che non esista, non dipende dal valore%% link %% di $f$ in $c$, ma solo dai valori di $f$ nei punti%% link %% in un [intorno](Matematica/Teoria%20degli%20insiemi/Funzioni/Topologia%20dei%20reali.md#^definizione-intorno-di-un-punto) di $c$.
 
 %% 
 questa osservazione riprende quanto detto prima sul comportamento della funzione nel punto specifico
@@ -859,7 +859,7 @@ questa osservazione riprende quanto detto prima sul comportamento della funzione
 > 
 > %% grafico della funzione %%
 > 
-> il suo [limite](Limiti.md#^definizione-limite)
+> il suo [limite](Matematica/Analisi%20matematica/Limiti/Limiti.md#^definizione-limite)
 > 
 > $$
 > \lim_{x \to 0} \text{sgn}(x)
@@ -877,7 +877,7 @@ questa osservazione riprende quanto detto prima sul comportamento della funzione
 > 
 > Poiché $|\text{sgn}(x)| \le l$, possiamo supporre che $l \in \mathbb{R}$, cioè $l \ne \pm \infty$.
 > 
-> Per la [definizione di _limite finito al finito_](Limiti.md#^definizione-limite-finito-al-finito), abbiamo che
+> Per la [definizione di _limite finito al finito_](Matematica/Analisi%20matematica/Limiti/Limiti.md#^definizione-limite-finito-al-finito), abbiamo che
 > 
 > $$
 > \forall \varepsilon > 0, \exists \delta > 0, \forall x \in \mathbb{R} . \big( 0 < |x| < \delta \implies |\text{sgn}(x) - l| < \varepsilon \big)
@@ -912,11 +912,11 @@ questa osservazione riprende quanto detto prima sul comportamento della funzione
 
 > [!osservazione]+ Osservazione: utilità della definizione del limite
 > 
-> La [definizione di _limite_](Limiti.md#^definizione-limite) non è utile ai fini del calcolo del limite, ma solo per verificare il valore del limite o per confutarne l'esistenza. 
+> La [definizione di _limite_](Matematica/Analisi%20matematica/Limiti/Limiti.md#^definizione-limite) non è utile ai fini del calcolo del limite, ma solo per verificare il valore del limite o per confutarne l'esistenza. 
 
 > [!esercizio]+ Esercizio
 > 
-> Provare che non esiste il [limite](Limiti.md#^definizione-limite)
+> Provare che non esiste il [limite](Matematica/Analisi%20matematica/Limiti/Limiti.md#^definizione-limite)
 > 
 > $$
 > \lim_{x \to 0} \dfrac{1}{x}
@@ -930,7 +930,7 @@ mettere soluzione
 
 > [!teorema]+ Teorema di unicità del limite
 > 
-> Data una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$, un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R} \cup \{ \pm \infty \}$ per $\text{dom}(f)$ e due valori%% link %% $l_1,l_2 \in \mathbb{R} \cup \{ \pm\infty \}$ per i quali esiste il [limite](Limiti.md#^definizione-limite) $\displaystyle\lim_{x \to x_0}f(x)$, allora
+> Data una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$, un [punto di accumulazione](Matematica/Teoria%20degli%20insiemi/Funzioni/Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R} \cup \{ \pm \infty \}$ per $\text{dom}(f)$ e due valori%% link %% $l_1,l_2 \in \mathbb{R} \cup \{ \pm\infty \}$ per i quali esiste il [limite](Matematica/Analisi%20matematica/Limiti/Limiti.md#^definizione-limite) $\displaystyle\lim_{x \to x_0}f(x)$, allora
 > 
 > $$
 > l_1 = l_2
@@ -948,7 +948,7 @@ Pagina 135 e 136del Lancelotti
 # 4 - Limiti laterali
 
 %% 
-Ora definiamo due particolari [limiti](Limiti.md#^definizione-limite), detti _limiti laterali_ perché ???, in particolare limite destro e limite sinistro.
+Ora definiamo due particolari [limiti](Matematica/Analisi%20matematica/Limiti/Limiti.md#^definizione-limite), detti _limiti laterali_ perché ???, in particolare limite destro e limite sinistro.
 %%
 
 %%
@@ -975,7 +975,7 @@ $$
 
 > [!definizione]+ Definizione: limite destro
 > 
-> Data una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R}$ per $\text{dom}(f) \cap (x_0, + \infty)$ e un valore%% link %% $l \in \mathbb{R} \cup \{ \pm \infty \}$, diciamo che **$f$ ha limite destro $l$ per $x$ che tende a $x_0$** (o che **$f$ tende a $l$ per $x$ che tende a $x_0$ da destra**) se, per ogni [intorno](Topologia%20dei%20reali.md#^definizione-intorno-di-un-punto) $I(l)$ di $l$, esiste un [intorno destro](Topologia%20dei%20reali.md#^definizione-intorno-di-un-punto) $I^+(x_0)$ di $x_0$ tale che, per ogni $x \in \text{dom}(f)$ con $x \in I^+(x_0)$, si ha che $f(x) \in I(l)$:
+> Data una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e un [punto di accumulazione](Matematica/Teoria%20degli%20insiemi/Funzioni/Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R}$ per $\text{dom}(f) \cap (x_0, + \infty)$ e un valore%% link %% $l \in \mathbb{R} \cup \{ \pm \infty \}$, diciamo che **$f$ ha limite destro $l$ per $x$ che tende a $x_0$** (o che **$f$ tende a $l$ per $x$ che tende a $x_0$ da destra**) se, per ogni [intorno](Matematica/Teoria%20degli%20insiemi/Funzioni/Topologia%20dei%20reali.md#^definizione-intorno-di-un-punto) $I(l)$ di $l$, esiste un [intorno destro](Matematica/Teoria%20degli%20insiemi/Funzioni/Topologia%20dei%20reali.md#^definizione-intorno-di-un-punto) $I^+(x_0)$ di $x_0$ tale che, per ogni $x \in \text{dom}(f)$ con $x \in I^+(x_0)$, si ha che $f(x) \in I(l)$:
 > 
 > $$
 > \forall I(l) \text{ intorno di } l, \exists I^+(x_0) \text{ intorno destro di } x_0 .\big( x \in \text{dom}(f) \cap I^+(x_0) \implies f(x) \in I(l) \big) 
@@ -992,7 +992,7 @@ $$
 
 > [!definizione]+ Definizione: limite sinistro
 > 
-> Data una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R}$ per $\text{dom}(f) \cap (- \infty, x_0)$ e un valore%% link %% $l \in \mathbb{R} \cup \{ \pm \infty \}$, diciamo che **$f$ ha limite sinistro $l$ per $x$ che tende a $x_0$** (o che **$f$ tende a $l$ per $x$ che tende a $x_0$ da sinistra**) se, per ogni [intorno](Topologia%20dei%20reali.md#^definizione-intorno-di-un-punto) $I(l)$ di $l$, esiste un [intorno sinistro](Topologia%20dei%20reali.md#^definizione-intorno-di-un-punto) $I^-(x_0)$ di $x_0$ tale che, per ogni $x \in \text{dom}(f)$ con $x \in I^-(x_0)$, si ha che $f(x) \in I(l)$:
+> Data una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e un [punto di accumulazione](Matematica/Teoria%20degli%20insiemi/Funzioni/Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R}$ per $\text{dom}(f) \cap (- \infty, x_0)$ e un valore%% link %% $l \in \mathbb{R} \cup \{ \pm \infty \}$, diciamo che **$f$ ha limite sinistro $l$ per $x$ che tende a $x_0$** (o che **$f$ tende a $l$ per $x$ che tende a $x_0$ da sinistra**) se, per ogni [intorno](Matematica/Teoria%20degli%20insiemi/Funzioni/Topologia%20dei%20reali.md#^definizione-intorno-di-un-punto) $I(l)$ di $l$, esiste un [intorno sinistro](Matematica/Teoria%20degli%20insiemi/Funzioni/Topologia%20dei%20reali.md#^definizione-intorno-di-un-punto) $I^-(x_0)$ di $x_0$ tale che, per ogni $x \in \text{dom}(f)$ con $x \in I^-(x_0)$, si ha che $f(x) \in I(l)$:
 > 
 > $$
 > \forall I(l) \text{ intorno di } l, \exists I^-(x_0) \text{ intorno sinistro di } x_0 .\big( x \in \text{dom}(f) \cap I^-(x_0) \implies f(x) \in I(l) \big) 
@@ -1009,7 +1009,7 @@ $$
 
 > [!definizione]+ Definizione: limiti laterali
 > 
-> Il [limite destro](Limiti.md#^definizione-limite-destro) e [limite sinistro](Limiti.md#^definizione-limite-sinistro) sono detti **limiti laterali**.
+> Il [limite destro](Matematica/Analisi%20matematica/Limiti/Limiti.md#^definizione-limite-destro) e [limite sinistro](Matematica/Analisi%20matematica/Limiti/Limiti.md#^definizione-limite-sinistro) sono detti **limiti laterali**.
 ^definizione-limiti-laterali
 
 %% 
@@ -1018,9 +1018,9 @@ I limiti laterali non si definiscono per $+\infty$ e $- \infty$.
 
 > [!osservazione]+ Osservazione: casi specifici dei limiti laterali
 > 
-> Queste definizioni, esattamente per come avviene per i [limiti](Limiti.md#^definizione-limite), possono essere scritte in modo più specifico a seconda che $l \in \mathbb{R}$ o $l = \pm \infty$.
+> Queste definizioni, esattamente per come avviene per i [limiti](Matematica/Analisi%20matematica/Limiti/Limiti.md#^definizione-limite), possono essere scritte in modo più specifico a seconda che $l \in \mathbb{R}$ o $l = \pm \infty$.
 > 
-> Per esempio, con un [limite destro](Limiti.md#^definizione-limite) di $f(x)$ con $l \in \mathbb{R}$, si ha che
+> Per esempio, con un [limite destro](Matematica/Analisi%20matematica/Limiti/Limiti.md#^definizione-limite) di $f(x)$ con $l \in \mathbb{R}$, si ha che
 > 
 > $$
 > \begin{array}{}
@@ -1030,7 +1030,7 @@ I limiti laterali non si definiscono per $+\infty$ e $- \infty$.
 > \end{array}
 > $$
 > 
-> Invece, con un [limite sinistro](Limiti.md#^definizione-limite-sinistro) di $f(x)$ con $l = - \infty$, si ha che
+> Invece, con un [limite sinistro](Matematica/Analisi%20matematica/Limiti/Limiti.md#^definizione-limite-sinistro) di $f(x)$ con $l = - \infty$, si ha che
 > 
 > $$
 > \begin{array}{}
@@ -1046,7 +1046,7 @@ esercizio: scrivere definizioni degli altri casi
 
 > [!proposizione]+ Proposizione: limiti laterali coincidenti
 > 
-> Data una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R}$ sia per $\text{dom}(f) \cap (x_0, + \infty)$ che per $\text{dom}(f) \cap (- \infty, x_0)$ e un valore%% link %% $l \in \mathbb{R} \cup \{ \pm \infty \}$, allora
+> Data una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e un [punto di accumulazione](Matematica/Teoria%20degli%20insiemi/Funzioni/Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R}$ sia per $\text{dom}(f) \cap (x_0, + \infty)$ che per $\text{dom}(f) \cap (- \infty, x_0)$ e un valore%% link %% $l \in \mathbb{R} \cup \{ \pm \infty \}$, allora
 > 
 > $$
 > \lim_{x \to x_0} f(x) = l \iff \lim_{x \to x_0^+} f(x) = \lim_{x \to x_0^-} f(x) = l
@@ -1064,7 +1064,7 @@ il limite non esiste se il limite destro =/= limite sinistro o se almeno uno dei
 
 > [!corollario]+ Corollario del teorema di unicità del limite per i limiti laterali
 > 
-> Il [teorema di unicità del limite](Limiti.md#^teorema-di-unicita-del-limite) vale anche per il [limite destro](Limiti.md#^definizione-limite-destro) e il [limite sinistro](Limiti.md#^definizione-limite-sinistro).
+> Il [teorema di unicità del limite](Matematica/Analisi%20matematica/Limiti/Limiti.md#^teorema-di-unicita-del-limite) vale anche per il [limite destro](Matematica/Analisi%20matematica/Limiti/Limiti.md#^definizione-limite-destro) e il [limite sinistro](Matematica/Analisi%20matematica/Limiti/Limiti.md#^definizione-limite-sinistro).
 
 %% 
 esempio 2.28 pagg. 146-147 Lancelotti
@@ -1130,7 +1130,7 @@ osservazione: limite per eccesso e per difetto sono casi specifici dei limiti la
 
 > [!esempio]- Esempio di limite per eccesso
 > 
-> Un esempio di [limite per eccesso](Limiti.md#^definizione-limite-per-eccesso) è il [limite](Limiti.md#^definizione-limite)
+> Un esempio di [limite per eccesso](Matematica/Analisi%20matematica/Limiti/Limiti.md#^definizione-limite-per-eccesso) è il [limite](Matematica/Analisi%20matematica/Limiti/Limiti.md#^definizione-limite)
 > 
 > $$
 > \lim_{x \to + \infty} \dfrac{1}{x^2} = 0^+
@@ -1140,7 +1140,7 @@ osservazione: limite per eccesso e per difetto sono casi specifici dei limiti la
 
 > [!esempio]- Esempio di limite per difetto
 > 
-> Un esempio di [limite per difetto](Limiti.md#^definizione-limite-per-difetto) è il [limite](Limiti.md#^definizione-limite)
+> Un esempio di [limite per difetto](Matematica/Analisi%20matematica/Limiti/Limiti.md#^definizione-limite-per-difetto) è il [limite](Matematica/Analisi%20matematica/Limiti/Limiti.md#^definizione-limite)
 > 
 > $$
 > \lim_{x \to 0} (1 - x^2) = 1^-
@@ -1185,7 +1185,7 @@ $$
 
 > [!teorema]+ Teorema della somma di limiti finiti
 > 
-> Dato un [sottoinsieme](Teoria%20degli%20insiemi.md#^definizione-insieme) $A \subseteq \mathbb{R}$ non [vuoto](Teoria%20degli%20insiemi.md#^definizione-insieme-vuoto), due [funzioni](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon A \to \mathbb{R}$ e $g \colon A \to \mathbb{R}$ e un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R} \cup \{ \pm \infty \}$ per $A$, se esistono i [limiti](Limiti.md#^definizione-limite) $\displaystyle\lim_{x \to x_0} f(x) = l \in \mathbb{R}$ e $\displaystyle\lim_{x \to x_0} g(x) = m \in \mathbb{R}$, allora il [limite](Limiti.md#^definizione-limite) della loro [somma](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-somma-di-funzioni) $f + g$ è uguale alla somma%% Link %% dei loro [limiti](Limiti.md#^definizione-limite):
+> Dato un [sottoinsieme](Matematica/Teoria%20degli%20insiemi/Teoria%20degli%20insiemi.md#^definizione-insieme) $A \subseteq \mathbb{R}$ non [vuoto](Matematica/Teoria%20degli%20insiemi/Teoria%20degli%20insiemi.md#^definizione-insieme-vuoto), due [funzioni](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon A \to \mathbb{R}$ e $g \colon A \to \mathbb{R}$ e un [punto di accumulazione](Matematica/Teoria%20degli%20insiemi/Funzioni/Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R} \cup \{ \pm \infty \}$ per $A$, se esistono i [limiti](Matematica/Analisi%20matematica/Limiti/Limiti.md#^definizione-limite) $\displaystyle\lim_{x \to x_0} f(x) = l \in \mathbb{R}$ e $\displaystyle\lim_{x \to x_0} g(x) = m \in \mathbb{R}$, allora il [limite](Matematica/Analisi%20matematica/Limiti/Limiti.md#^definizione-limite) della loro [somma](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-somma-di-funzioni) $f + g$ è uguale alla somma%% Link %% dei loro [limiti](Matematica/Analisi%20matematica/Limiti/Limiti.md#^definizione-limite):
 > 
 > $$
 > \lim_{x \to x_0} \big( f(x) + g(x) \big) = \lim_{x \to x_0} f(x) + \lim_{x \to x_0} g(x) = l + m
@@ -1196,7 +1196,7 @@ $$
 
 [!dimostrazione]- Dimostrazione del teorema della somma di limiti finiti
 
-Dimostriamo che vale il [teorema della somma di limiti finiti](Limiti.md#^teorema-della-somma-di-limiti-finiti). Consideriamo per il momento il caso in cui $x_0 \in \mathbb{R}$ e, usando la [definizione alternativa di _limite finito al finito_](Limiti.md#^osservazione-definizione-alternativa-di-limite-finito-al-finito), abbiamo che la tesi si può riscrivere in questa forma:
+Dimostriamo che vale il [teorema della somma di limiti finiti](Matematica/Analisi%20matematica/Limiti/Limiti.md#^teorema-della-somma-di-limiti-finiti). Consideriamo per il momento il caso in cui $x_0 \in \mathbb{R}$ e, usando la [definizione alternativa di _limite finito al finito_](Matematica/Analisi%20matematica/Limiti/Limiti.md#^osservazione-definizione-alternativa-di-limite-finito-al-finito), abbiamo che la tesi si può riscrivere in questa forma:
 
 $$
 \begin{array}{}
@@ -1212,7 +1212,7 @@ $$
 |f(x) + g(x) - l - m| \le |f(x) - l| + |g(x) - m|
 $$
 
-Per ipotesi, i due [limiti](Limiti.md#^definizione-limite) di $f(x)$ e $g(x)$ esistono rispettivamente un $\delta_f > 0$ e un $\delta_g > 0$ tali che
+Per ipotesi, i due [limiti](Matematica/Analisi%20matematica/Limiti/Limiti.md#^definizione-limite) di $f(x)$ e $g(x)$ esistono rispettivamente un $\delta_f > 0$ e un $\delta_g > 0$ tali che
 
 $$
 \begin{array}{}
@@ -1224,7 +1224,7 @@ $$
 
 %% perché $\dfrac{\varepsilon}{2}$? %%
 
-Quindi, per dimostrare il [limite](Limiti.md#^definizione-limite) iniziale, scegliamo come $\delta$ quello minore tra $\delta_f$ e $\delta_g$.
+Quindi, per dimostrare il [limite](Matematica/Analisi%20matematica/Limiti/Limiti.md#^definizione-limite) iniziale, scegliamo come $\delta$ quello minore tra $\delta_f$ e $\delta_g$.
 
 %% fare anche caso del limite finito all'infinito %%
 
@@ -1236,7 +1236,7 @@ dimostrazioni analoghe a quelle dell'algebra delle funzioni continue
 
 > [!teorema]+ Teorema del prodotto di limiti finiti
 > 
-> Dato un [sottoinsieme](Teoria%20degli%20insiemi.md#^definizione-insieme) $A \subseteq \mathbb{R}$ non [vuoto](Teoria%20degli%20insiemi.md#^definizione-insieme-vuoto), due [funzioni](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon A \to \mathbb{R}$ e $g \colon A \to \mathbb{R}$ e un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R} \cup \{ \pm \infty \}$ per $A$, se esistono i [limiti](Limiti.md#^definizione-limite) $\displaystyle\lim_{x \to x_0} f(x) = l \in \mathbb{R}$ e $\displaystyle\lim_{x \to x_0} g(x) = m \in \mathbb{R}$, allora il [limite](Limiti.md#^definizione-limite) del loro [prodotto](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-prodotto-di-funzioni) è uguale al prodotto%% Link %% dei loro [limiti](Limiti.md#^definizione-limite):
+> Dato un [sottoinsieme](Matematica/Teoria%20degli%20insiemi/Teoria%20degli%20insiemi.md#^definizione-insieme) $A \subseteq \mathbb{R}$ non [vuoto](Matematica/Teoria%20degli%20insiemi/Teoria%20degli%20insiemi.md#^definizione-insieme-vuoto), due [funzioni](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon A \to \mathbb{R}$ e $g \colon A \to \mathbb{R}$ e un [punto di accumulazione](Matematica/Teoria%20degli%20insiemi/Funzioni/Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R} \cup \{ \pm \infty \}$ per $A$, se esistono i [limiti](Matematica/Analisi%20matematica/Limiti/Limiti.md#^definizione-limite) $\displaystyle\lim_{x \to x_0} f(x) = l \in \mathbb{R}$ e $\displaystyle\lim_{x \to x_0} g(x) = m \in \mathbb{R}$, allora il [limite](Matematica/Analisi%20matematica/Limiti/Limiti.md#^definizione-limite) del loro [prodotto](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-prodotto-di-funzioni) è uguale al prodotto%% Link %% dei loro [limiti](Matematica/Analisi%20matematica/Limiti/Limiti.md#^definizione-limite):
 > 
 > $$
 > \lim_{x \to x_0} \big( f(x) \cdot g(x) \big) = \lim_{x \to x_0} f(x) \cdot \lim_{x \to x_0} g(x) = l \cdot m
@@ -1248,7 +1248,7 @@ dimostrazioni analoghe a quelle dell'algebra delle funzioni continue
 
 > [!teorema]+ Teorema del quoziente di limiti finiti
 > 
-> Dato un [sottoinsieme](Teoria%20degli%20insiemi.md#^definizione-insieme) $A \subseteq \mathbb{R}$ non [vuoto](Teoria%20degli%20insiemi.md#^definizione-insieme-vuoto), due [funzioni](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon A \to \mathbb{R}$ e $g \colon A \to \mathbb{R}$ e un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R} \cup \{ \pm \infty \}$ per $A$, se esistono i [limiti](Limiti.md#^definizione-limite) $\displaystyle\lim_{x \to x_0} f(x) = l \in \mathbb{R}$ e $\displaystyle\lim_{x \to x_0} g(x) = m \in \mathbb{R}$ con $m \ne 0$, allora il [limite](Limiti.md#^definizione-limite) del loro quoziente%% link al quoziente di funzioni %% è uguale al quoziente%% Link %% dei loro [limiti](Limiti.md#^definizione-limite):
+> Dato un [sottoinsieme](Matematica/Teoria%20degli%20insiemi/Teoria%20degli%20insiemi.md#^definizione-insieme) $A \subseteq \mathbb{R}$ non [vuoto](Matematica/Teoria%20degli%20insiemi/Teoria%20degli%20insiemi.md#^definizione-insieme-vuoto), due [funzioni](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon A \to \mathbb{R}$ e $g \colon A \to \mathbb{R}$ e un [punto di accumulazione](Matematica/Teoria%20degli%20insiemi/Funzioni/Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R} \cup \{ \pm \infty \}$ per $A$, se esistono i [limiti](Matematica/Analisi%20matematica/Limiti/Limiti.md#^definizione-limite) $\displaystyle\lim_{x \to x_0} f(x) = l \in \mathbb{R}$ e $\displaystyle\lim_{x \to x_0} g(x) = m \in \mathbb{R}$ con $m \ne 0$, allora il [limite](Matematica/Analisi%20matematica/Limiti/Limiti.md#^definizione-limite) del loro quoziente%% link al quoziente di funzioni %% è uguale al quoziente%% Link %% dei loro [limiti](Matematica/Analisi%20matematica/Limiti/Limiti.md#^definizione-limite):
 > 
 > $$
 > \lim_{x \to x_0} \dfrac{f(x)}{g(x)} = \dfrac{\displaystyle\lim_{x \to x_0} f(x)}{\displaystyle\lim_{x \to x_0} g(x)} = \dfrac{l}{m}
@@ -1260,7 +1260,7 @@ dimostrazioni analoghe a quelle dell'algebra delle funzioni continue
 
 > [!teorema]+ Teorema del reciproco di un limite
 > 
-> Data una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R} \cup \{ \pm \infty \}$, se esiste il [limite](Limiti.md#^definizione-limite) $\displaystyle\lim_{x \to x_0} f(x) = l \in \mathbb{R} \cup \{ \pm \infty \}$ ed è diverso da $0$, allora il [limite](Limiti.md#^definizione-limite) del suo reciproco%% link %% $\dfrac{1}{f(x)}$ è uguale al reciproco%% link %% del [limite](Limiti.md#^definizione-limite):
+> Data una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e un [punto di accumulazione](Matematica/Teoria%20degli%20insiemi/Funzioni/Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R} \cup \{ \pm \infty \}$, se esiste il [limite](Matematica/Analisi%20matematica/Limiti/Limiti.md#^definizione-limite) $\displaystyle\lim_{x \to x_0} f(x) = l \in \mathbb{R} \cup \{ \pm \infty \}$ ed è diverso da $0$, allora il [limite](Matematica/Analisi%20matematica/Limiti/Limiti.md#^definizione-limite) del suo reciproco%% link %% $\dfrac{1}{f(x)}$ è uguale al reciproco%% link %% del [limite](Matematica/Analisi%20matematica/Limiti/Limiti.md#^definizione-limite):
 > 
 > $$
 > \lim_{x \to x_0} \dfrac{1}{f(x)} = \dfrac{1}{\displaystyle\lim_{x \to x_0} f(x)} = \dfrac{1}{l}
@@ -1276,11 +1276,11 @@ pagg. 161-164 lancelotti
 
 ## 6.1 - Algebra dei limiti infiniti
 
-Ora vediamo alcune operazioni in cui almeno uno dei due [limiti](Limiti.md#^definizione-limite) è infinito (cioè è o un [limite infinito all'infinito](Limiti.md#^definizione-limite-infinito-all-infinito) o un [limite infinito al finito](Limiti.md#^definizione-limite-infinito-al-finito)).
+Ora vediamo alcune operazioni in cui almeno uno dei due [limiti](Matematica/Analisi%20matematica/Limiti/Limiti.md#^definizione-limite) è infinito (cioè è o un [limite infinito all'infinito](Matematica/Analisi%20matematica/Limiti/Limiti.md#^definizione-limite-infinito-all-infinito) o un [limite infinito al finito](Matematica/Analisi%20matematica/Limiti/Limiti.md#^definizione-limite-infinito-al-finito)).
 
 > [!teorema]+ Teorema della somma di limite finito con limite infinito
 >
-> Dato un [sottoinsieme](Teoria%20degli%20insiemi.md#^definizione-insieme) $A \subseteq \mathbb{R}$ non [vuoto](Teoria%20degli%20insiemi.md#^definizione-insieme-vuoto), due [funzioni](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f, g \colon A \to \mathbb{R}$ e un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R} \cup \{ \pm\infty \}$ per $A$, se
+> Dato un [sottoinsieme](Matematica/Teoria%20degli%20insiemi/Teoria%20degli%20insiemi.md#^definizione-insieme) $A \subseteq \mathbb{R}$ non [vuoto](Matematica/Teoria%20degli%20insiemi/Teoria%20degli%20insiemi.md#^definizione-insieme-vuoto), due [funzioni](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f, g \colon A \to \mathbb{R}$ e un [punto di accumulazione](Matematica/Teoria%20degli%20insiemi/Funzioni/Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R} \cup \{ \pm\infty \}$ per $A$, se
 >
 > $$
 > \lim_{x \to x_0} f(x) = l \in \mathbb{R} \quad \land \quad \lim_{x \to x_0} g(x) = \pm\infty
@@ -1294,7 +1294,7 @@ Ora vediamo alcune operazioni in cui almeno uno dei due [limiti](Limiti.md#^defi
 
 > [!teorema]+ Teorema della somma di limiti infiniti concordi
 >
-> Dato un [sottoinsieme](Teoria%20degli%20insiemi.md#^definizione-insieme) $A \subseteq \mathbb{R}$ non [vuoto](Teoria%20degli%20insiemi.md#^definizione-insieme-vuoto), due [funzioni](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f, g \colon A \to \mathbb{R}$ e un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R} \cup \{ \pm\infty \}$ per $A$, se
+> Dato un [sottoinsieme](Matematica/Teoria%20degli%20insiemi/Teoria%20degli%20insiemi.md#^definizione-insieme) $A \subseteq \mathbb{R}$ non [vuoto](Matematica/Teoria%20degli%20insiemi/Teoria%20degli%20insiemi.md#^definizione-insieme-vuoto), due [funzioni](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f, g \colon A \to \mathbb{R}$ e un [punto di accumulazione](Matematica/Teoria%20degli%20insiemi/Funzioni/Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R} \cup \{ \pm\infty \}$ per $A$, se
 >
 > $$
 > \lim_{x \to x_0} f(x) = \lim_{x \to x_0} g(x) = \pm\infty
@@ -1308,7 +1308,7 @@ Ora vediamo alcune operazioni in cui almeno uno dei due [limiti](Limiti.md#^defi
 
 > [!teorema]+ Teorema del prodotto di limiti infiniti concordi
 >
-> Dato un [sottoinsieme](Teoria%20degli%20insiemi.md#^definizione-insieme) $A \subseteq \mathbb{R}$ non [vuoto](Teoria%20degli%20insiemi.md#^definizione-insieme-vuoto), due [funzioni](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f, g \colon A \to \mathbb{R}$ e un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R} \cup \{ \pm\infty \}$ per $A$, se
+> Dato un [sottoinsieme](Matematica/Teoria%20degli%20insiemi/Teoria%20degli%20insiemi.md#^definizione-insieme) $A \subseteq \mathbb{R}$ non [vuoto](Matematica/Teoria%20degli%20insiemi/Teoria%20degli%20insiemi.md#^definizione-insieme-vuoto), due [funzioni](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f, g \colon A \to \mathbb{R}$ e un [punto di accumulazione](Matematica/Teoria%20degli%20insiemi/Funzioni/Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R} \cup \{ \pm\infty \}$ per $A$, se
 >
 > $$
 > \lim_{x \to x_0} f(x) = \lim_{x \to x_0} g(x) = \pm\infty
@@ -1326,7 +1326,7 @@ Attenzione: $(- \infty) \cdot (- \infty) = + \infty$
 
 > [!teorema]+ Teorema del quoziente di limite finito con limite infinito
 >
-> Dato un [sottoinsieme](Teoria%20degli%20insiemi.md#^definizione-insieme) $A \subseteq \mathbb{R}$ non [vuoto](Teoria%20degli%20insiemi.md#^definizione-insieme-vuoto), due [funzioni](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f, g \colon A \to \mathbb{R}$ e un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R} \cup \{ \pm\infty \}$ per $A$, se
+> Dato un [sottoinsieme](Matematica/Teoria%20degli%20insiemi/Teoria%20degli%20insiemi.md#^definizione-insieme) $A \subseteq \mathbb{R}$ non [vuoto](Matematica/Teoria%20degli%20insiemi/Teoria%20degli%20insiemi.md#^definizione-insieme-vuoto), due [funzioni](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f, g \colon A \to \mathbb{R}$ e un [punto di accumulazione](Matematica/Teoria%20degli%20insiemi/Funzioni/Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R} \cup \{ \pm\infty \}$ per $A$, se
 >
 > $$
 > \lim_{x \to x_0} f(x) = l \in \mathbb{R} \setminus \{ 0 \} \quad \land \quad \lim_{x \to x_0} g(x) = \pm\infty
@@ -1346,7 +1346,7 @@ Corollario:
 
 > [!teorema]+ Teorema del quoziente di limite finito con limite nullo
 >
-> Dato un [sottoinsieme](Teoria%20degli%20insiemi.md#^definizione-insieme) $A \subseteq \mathbb{R}$ non [vuoto](Teoria%20degli%20insiemi.md#^definizione-insieme-vuoto), due [funzioni](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f, g \colon A \to \mathbb{R}$ e un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R} \cup \{ \pm\infty \}$ per $A$, se
+> Dato un [sottoinsieme](Matematica/Teoria%20degli%20insiemi/Teoria%20degli%20insiemi.md#^definizione-insieme) $A \subseteq \mathbb{R}$ non [vuoto](Matematica/Teoria%20degli%20insiemi/Teoria%20degli%20insiemi.md#^definizione-insieme-vuoto), due [funzioni](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f, g \colon A \to \mathbb{R}$ e un [punto di accumulazione](Matematica/Teoria%20degli%20insiemi/Funzioni/Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R} \cup \{ \pm\infty \}$ per $A$, se
 >
 > $$
 > \lim_{x \to x_0} f(x) = l \in \mathbb{R} \setminus \{ 0 \} \quad \land \quad \lim_{x \to x_0} g(x) = 0^+
@@ -1374,13 +1374,13 @@ spiegare cosa sono i teoremi del confronto
 
 > [!teorema]+ Teorema dei due carabinieri
 > 
-> Date tre [funzioni](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f,g,h \colon A \subseteq \mathbb{R} \to \mathbb{R}$ (con $A \ne \emptyset$) e un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R} \cup \{ \pm \infty \}$ per $A$, se esistono i [limiti](Limiti.md#^definizione-limite)
+> Date tre [funzioni](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f,g,h \colon A \subseteq \mathbb{R} \to \mathbb{R}$ (con $A \ne \emptyset$) e un [punto di accumulazione](Matematica/Teoria%20degli%20insiemi/Funzioni/Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R} \cup \{ \pm \infty \}$ per $A$, se esistono i [limiti](Matematica/Analisi%20matematica/Limiti/Limiti.md#^definizione-limite)
 > 
 > $$
 > \lim_{x \to x_0} f(x) = \lim_{x \to x_0} h(x) = l \in \mathbb{R}
 > $$
 > 
-> ed esiste un [intorno](Topologia%20dei%20reali.md#^definizione-intorno-di-un-punto) $I(x_0)$ di $x_0$ tale che
+> ed esiste un [intorno](Matematica/Teoria%20degli%20insiemi/Funzioni/Topologia%20dei%20reali.md#^definizione-intorno-di-un-punto) $I(x_0)$ di $x_0$ tale che
 > 
 > $$
 > \forall x \in (A \cap I(x_0)) \setminus \{ x_0 \} . \big (f(x) \le g(x) \le h(x))
@@ -1400,13 +1400,13 @@ e spiegare perché si chiama "teorema dei due carabinieri"
 
 > [!dimostrazione]- Dimostrazione del teorema dei due carabinieri
 > 
-> Dimostriamo il [teorema dei due carabinieri](Limiti.md#^teorema-dei-due-carabinieri). Vogliamo dimostrare che
+> Dimostriamo il [teorema dei due carabinieri](Matematica/Analisi%20matematica/Limiti/Limiti.md#^teorema-dei-due-carabinieri). Vogliamo dimostrare che
 > 
 > $$
 > \lim_{x \to x_0} g(x) = l
 > $$
 > 
-> ossia che, per [definizione di _limite_](Limiti.md#^definizione-limite),
+> ossia che, per [definizione di _limite_](Matematica/Analisi%20matematica/Limiti/Limiti.md#^definizione-limite),
 > 
 > $$
 > \forall I_\varepsilon(l), \exists I_\delta(x_0), \forall x \in \mathbb{R} . \big( x \in I_\delta(x_0) \setminus \{ x_0 \} \implies g(x) \in I_\varepsilon(l) \big) 
@@ -1418,7 +1418,7 @@ e spiegare perché si chiama "teorema dei due carabinieri"
 > \lim_{x \to x_0} f(x) = \lim_{x \to x_0} h(x) = l \in \mathbb{R}
 > $$
 > 
-> ossia che, per [definizione di _limite_](Limiti.md#^definizione-limite),
+> ossia che, per [definizione di _limite_](Matematica/Analisi%20matematica/Limiti/Limiti.md#^definizione-limite),
 > 
 > $$
 > \forall I_\varepsilon(l), \begin{cases}
@@ -1427,7 +1427,7 @@ e spiegare perché si chiama "teorema dei due carabinieri"
 > \end{cases}
 > $$
 > 
-> Scegliamo come [intorno](Topologia%20dei%20reali.md#^definizione-intorno-di-un-punto) $I_\delta(x_0)$ proprio l'[intersezione](Teoria%20degli%20insiemi.md#^definizione-intersezione-di-due-insiemi) tra $\hat I_{\hat\delta}(x_0)$ e $\dot I_{\dot\delta}(x_0)$:
+> Scegliamo come [intorno](Matematica/Teoria%20degli%20insiemi/Funzioni/Topologia%20dei%20reali.md#^definizione-intorno-di-un-punto) $I_\delta(x_0)$ proprio l'[intersezione](Matematica/Teoria%20degli%20insiemi/Teoria%20degli%20insiemi.md#^definizione-intersezione-di-due-insiemi) tra $\hat I_{\hat\delta}(x_0)$ e $\dot I_{\dot\delta}(x_0)$:
 > 
 > $$
 > I_\delta(x_0) = \hat I_{\hat\delta}(x_0) \cap \dot I_{\dot\delta}(x_0)
@@ -1443,7 +1443,7 @@ e spiegare perché si chiama "teorema dei due carabinieri"
 > \end{array} \right)
 > $$
 > 
-> che, per [definizione di _intorno_](Topologia%20dei%20reali.md#^definizione-intorno-di-un-punto), diventa
+> che, per [definizione di _intorno_](Matematica/Teoria%20degli%20insiemi/Funzioni/Topologia%20dei%20reali.md#^definizione-intorno-di-un-punto), diventa
 > 
 > $$
 > \forall I_\varepsilon(l), \exists I_\delta(x_0), \forall x \in \mathbb{R} . \left( x \in I_\delta(x_0) \setminus \{ x_0 \} \implies \begin{array}{}
@@ -1479,7 +1479,7 @@ e spiegare perché si chiama "teorema dei due carabinieri"
 > \right) 
 > $$
 > 
-> E da qui risalire alla [definizione di _limite_](Limiti.md#^definizione-limite):
+> E da qui risalire alla [definizione di _limite_](Matematica/Analisi%20matematica/Limiti/Limiti.md#^definizione-limite):
 > 
 > 
 > $$
@@ -1508,7 +1508,7 @@ Osservazioni 3.28 e 3.29 pag. 172 lancelotti
 
 > [!teorema]+ Teorema del confronto per limiti infiniti
 > 
-> Date due [funzioni](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f,g \colon A \subseteq \mathbb{R} \to \mathbb{R}$ (con $A \ne \emptyset$) e un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R} \cup \{ \pm \infty \}$ per $A$, se esiste un [intorno](Topologia%20dei%20reali.md#^definizione-intorno-di-un-punto) $I(x_0)$ di $x_0$ tale che, per ogni $x \in (A \cap I(x_0)) \setminus \{ x_0 \}$, si abbia $f(x) \le g(x)$, allora
+> Date due [funzioni](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f,g \colon A \subseteq \mathbb{R} \to \mathbb{R}$ (con $A \ne \emptyset$) e un [punto di accumulazione](Matematica/Teoria%20degli%20insiemi/Funzioni/Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R} \cup \{ \pm \infty \}$ per $A$, se esiste un [intorno](Matematica/Teoria%20degli%20insiemi/Funzioni/Topologia%20dei%20reali.md#^definizione-intorno-di-un-punto) $I(x_0)$ di $x_0$ tale che, per ogni $x \in (A \cap I(x_0)) \setminus \{ x_0 \}$, si abbia $f(x) \le g(x)$, allora
 > 
 > $$
 > \begin{array}{}
@@ -1524,7 +1524,7 @@ spiegazione (con grafico) del teorema del confronto per limiti infiniti
 
 > [!dimostrazione]- Dimostrazione del teorema del confronto per limiti infiniti
 > 
-> Dimostriamo il [teorema del confronto per limiti infiniti](Limiti.md#^teorema-del-confronto-per-limiti-infiniti).
+> Dimostriamo il [teorema del confronto per limiti infiniti](Matematica/Analisi%20matematica/Limiti/Limiti.md#^teorema-del-confronto-per-limiti-infiniti).
 > 
 > Dimostriamo prima il primo caso:
 > 
@@ -1532,7 +1532,7 @@ spiegazione (con grafico) del teorema del confronto per limiti infiniti
 > \displaystyle\lim_{x \to x_0} f(x) = + \infty \implies \lim_{x \to x_0} g(x) = + \infty
 > $$
 > 
-> Per [definizione di _limite infinito al finito_](Limiti.md#^definizione-limite-infinito-al-finito),
+> Per [definizione di _limite infinito al finito_](Matematica/Analisi%20matematica/Limiti/Limiti.md#^definizione-limite-infinito-al-finito),
 > 
 > $$
 > \begin{array}{}
@@ -1560,7 +1560,7 @@ spiegazione (con grafico) del teorema del confronto per limiti infiniti
 > g(x) > M
 > $$
 > 
-> Ciò quindi conferma che il [limite](Limiti.md#^definizione-limite) $\displaystyle\lim_{x \to x_0} g(x) = + \infty$ vale:
+> Ciò quindi conferma che il [limite](Matematica/Analisi%20matematica/Limiti/Limiti.md#^definizione-limite) $\displaystyle\lim_{x \to x_0} g(x) = + \infty$ vale:
 > 
 > $$
 > \begin{array}{}
@@ -1579,7 +1579,7 @@ spiegazione (con grafico) del teorema del confronto per limiti infiniti
 
 > [!esercizio]+ Esercizio ($\blacklozenge \lozenge \lozenge$): completa la dimostrazione
 > 
-> Completa la [dimostrazione del teorema del confronto per limiti infiniti](Limiti.md#^dimostrazione-del-teorema-del-confronto-per-limiti-infiniti) dimostrando il secondo caso:
+> Completa la [dimostrazione del teorema del confronto per limiti infiniti](Matematica/Analisi%20matematica/Limiti/Limiti.md#^dimostrazione-del-teorema-del-confronto-per-limiti-infiniti) dimostrando il secondo caso:
 > 
 > $$
 > \displaystyle\lim_{x \to x_0} g(x) = - \infty \implies \lim_{x \to x_0} f(x) = - \infty
@@ -1597,7 +1597,7 @@ Osservazioni 3.24 pag. 170 Lancelotti
 
 > [!teorema]+ Primo teorema del confronto
 > 
-> Date due [funzioni](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f,g \colon A \subseteq \mathbb{R} \to \mathbb{R}$ (con $A \ne \emptyset$) e un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R} \cup \{ \pm \infty \}$ per $A$, se esistono i [limiti](Limiti.md#^definizione-limite)
+> Date due [funzioni](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f,g \colon A \subseteq \mathbb{R} \to \mathbb{R}$ (con $A \ne \emptyset$) e un [punto di accumulazione](Matematica/Teoria%20degli%20insiemi/Funzioni/Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R} \cup \{ \pm \infty \}$ per $A$, se esistono i [limiti](Matematica/Analisi%20matematica/Limiti/Limiti.md#^definizione-limite)
 > 
 > $$
 > \begin{array}{}
@@ -1606,7 +1606,7 @@ Osservazioni 3.24 pag. 170 Lancelotti
 > \end{array}
 > $$
 > 
-> ed esiste un [intorno](Topologia%20dei%20reali.md#^definizione-intorno-di-un-punto) $I(x_0)$ di $x_0$ tale che
+> ed esiste un [intorno](Matematica/Teoria%20degli%20insiemi/Funzioni/Topologia%20dei%20reali.md#^definizione-intorno-di-un-punto) $I(x_0)$ di $x_0$ tale che
 > 
 > $$
 > \forall x \in (A \cap I(x_0)) \setminus \{ x_0 \} . \big (f(x) \le g(x))
@@ -1631,22 +1631,22 @@ osservazioni pag. 170-171 lancelotti
 
 > [!teorema]+ Teorema dei limiti laterali di funzioni monotone
 > 
-> Data una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ [monotona](Proprietà%20delle%20funzioni.md#^definizione-funzione-strettamente-decrescente-o-monotona-su-un-intervallo) su $\text{dom}(f)$ e un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R}$ per $\text{dom}(f) \cap (x_0, + \infty)$, allora si ha che:
-> - Se $f$ è [(strettamente) crescente](Proprietà%20delle%20funzioni.md#^definizione-funzione-strettamente-decrescente-o-monotona-su-un-intervallo), allora:
+> Data una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ [monotona](Matematica/Teoria%20degli%20insiemi/Funzioni/Proprietà%20delle%20funzioni.md#^definizione-funzione-strettamente-decrescente-o-monotona-su-un-intervallo) su $\text{dom}(f)$ e un [punto di accumulazione](Matematica/Teoria%20degli%20insiemi/Funzioni/Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) $x_0 \in \mathbb{R}$ per $\text{dom}(f) \cap (x_0, + \infty)$, allora si ha che:
+> - Se $f$ è [(strettamente) crescente](Matematica/Teoria%20degli%20insiemi/Funzioni/Proprietà%20delle%20funzioni.md#^definizione-funzione-strettamente-decrescente-o-monotona-su-un-intervallo), allora:
 > 	$$
 > 	\lim_{x \to x_0^+} f(x) = \inf\{ f(x) \mid x \in \text{dom}(f) \land x > x_0 \}
 > 	$$
-> - Se $f$ è [(strettamente) decrescente](Proprietà%20delle%20funzioni.md#^definizione-funzione-strettamente-decrescente-o-monotona-su-un-intervallo), allora:
+> - Se $f$ è [(strettamente) decrescente](Matematica/Teoria%20degli%20insiemi/Funzioni/Proprietà%20delle%20funzioni.md#^definizione-funzione-strettamente-decrescente-o-monotona-su-un-intervallo), allora:
 > 	$$
 > 	\lim_{x \to x_0^+} f(x) = \sup\{ f(x) \mid x \in \text{dom}(f) \land x > x_0 \}
 > 	$$
 > 
-> Se $x_0$ è un [punto di accumulazione](Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) per $\text{dom}(f) \cap (-\infty, x_0)$, allora si ha che:
-> - Se $f$ è [(strettamente) crescente](Proprietà%20delle%20funzioni.md#^definizione-funzione-strettamente-decrescente-o-monotona-su-un-intervallo), allora:
+> Se $x_0$ è un [punto di accumulazione](Matematica/Teoria%20degli%20insiemi/Funzioni/Topologia%20dei%20reali.md#^definizione-punto-di-accumulazione) per $\text{dom}(f) \cap (-\infty, x_0)$, allora si ha che:
+> - Se $f$ è [(strettamente) crescente](Matematica/Teoria%20degli%20insiemi/Funzioni/Proprietà%20delle%20funzioni.md#^definizione-funzione-strettamente-decrescente-o-monotona-su-un-intervallo), allora:
 > 	$$
 > 	\lim_{x \to x_0^+} f(x) = \sup\{ f(x) \mid x \in \text{dom}(f) \land x < x_0 \}
 > 	$$
-> - Se $f$ è [(strettamente) decrescente](Proprietà%20delle%20funzioni.md#^definizione-funzione-strettamente-decrescente-o-monotona-su-un-intervallo), allora:
+> - Se $f$ è [(strettamente) decrescente](Matematica/Teoria%20degli%20insiemi/Funzioni/Proprietà%20delle%20funzioni.md#^definizione-funzione-strettamente-decrescente-o-monotona-su-un-intervallo), allora:
 > 	$$
 > 	\lim_{x \to x_0^+} f(x) = \inf\{ f(x) \mid x \in \text{dom}(f) \land x < x_0 \}
 > 	$$

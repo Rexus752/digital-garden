@@ -7,13 +7,13 @@
 
 ---
 
-Dato un [intorno](Topologia%20dei%20reali.md#^definizione-intorno-di-un-punto) $I_r(c) \subseteq \mathbb{R}$ di centro $c \in \mathbb{R}$ e raggio $r \in \mathbb{R}$ e una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon I_r(c) \to \mathbb{R}$ [derivabile](Derivate.md#^definizione-derivata-prima-di-una-funzione-in-un-punto) in $c$ e [continua](Funzioni%20continue.md#^definizione-funzione-continua-in-un-punto) su $I_r(c)$, allora abbiamo visto%% link %% che se $f'(c) \ne 0$ si ha che
+Dato un [intorno](Matematica/Teoria%20degli%20insiemi/Funzioni/Topologia%20dei%20reali.md#^definizione-intorno-di-un-punto) $I_r(c) \subseteq \mathbb{R}$ di centro $c \in \mathbb{R}$ e raggio $r \in \mathbb{R}$ e una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon I_r(c) \to \mathbb{R}$ [derivabile](Matematica/Analisi%20matematica/Derivate/Derivate.md#^definizione-derivata-prima-di-una-funzione-in-un-punto) in $c$ e [continua](Matematica/Analisi%20matematica/Limiti/Funzioni%20continue.md#^definizione-funzione-continua-in-un-punto) su $I_r(c)$, allora abbiamo visto%% link %% che se $f'(c) \ne 0$ si ha che
 
 $$
 \lim_{x \to c} \dfrac{f(x) - f(c)}{(x-c) \cdot f'(c)} = 1
 $$
 
-ovvero che $f(x)$ è [equivalente](Infiniti%20e%20infinitesimi.md#^definizione-equivalenza-asintotica) a $f(c) + f'(c) \cdot (x-c)$ per $x \to c$:
+ovvero che $f(x)$ è [equivalente](Matematica/Analisi%20matematica/Limiti/Infiniti%20e%20infinitesimi.md#^definizione-equivalenza-asintotica) a $f(c) + f'(c) \cdot (x-c)$ per $x \to c$:
 
 $$
 f(x) \sim f(c) + f'(c) \cdot (x-c) \text{ per } x \to c
@@ -23,7 +23,7 @@ Quindi $f(x)$ è approssimabile alla retta tangente%% Link %% quando $x \to c$.
 
 > [!definizione]+ Definizione: polinomio di Taylor di ordine $\color{#FF7FFF} 1$ di $\color{#FF7FFF} f$ centrato in $\color{#FF7FFF} c$
 > 
-> Dato un [intorno](Topologia%20dei%20reali.md#^definizione-intorno-di-un-punto) $I_r(c) \subseteq \mathbb{R}$ di centro $c \in \mathbb{R}$ e raggio $r \in \mathbb{R}$ e una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon I_r(c) \to \mathbb{R}$ [derivabile](Derivate.md#^definizione-derivata-prima-di-una-funzione-in-un-punto) in $c$ e [continua](Funzioni%20continue.md#^definizione-funzione-continua-in-un-punto) su $I_r(c)$, definiamo il **polinomio di Taylor di ordine $1$ di $f$ centrato in $c$** e denotiamo con $T_{1,c}(x)$ il seguente polinomio%% Link %%:
+> Dato un [intorno](Matematica/Teoria%20degli%20insiemi/Funzioni/Topologia%20dei%20reali.md#^definizione-intorno-di-un-punto) $I_r(c) \subseteq \mathbb{R}$ di centro $c \in \mathbb{R}$ e raggio $r \in \mathbb{R}$ e una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon I_r(c) \to \mathbb{R}$ [derivabile](Matematica/Analisi%20matematica/Derivate/Derivate.md#^definizione-derivata-prima-di-una-funzione-in-un-punto) in $c$ e [continua](Matematica/Analisi%20matematica/Limiti/Funzioni%20continue.md#^definizione-funzione-continua-in-un-punto) su $I_r(c)$, definiamo il **polinomio di Taylor di ordine $1$ di $f$ centrato in $c$** e denotiamo con $T_{1,c}(x)$ il seguente polinomio%% Link %%:
 > 
 > $$
 > T_{1,c}(x) \overset{\text{def}}{=} f(c) + f'(c) \cdot (x-c)
@@ -36,7 +36,7 @@ chi è Taylor?
 
 > [!esempio]- Esempio di polinomio di Taylor per $\color{#7F7FFF} f(x) = e^x$
 > 
-> Calcoliamo il [polinomio di Taylor di ordine 1](Approssimazione%20locale%20di%20funzioni.md#^definizione-polinomio-di-taylor-di-ordine-1-di-f-centrato-in-c) della [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f(x) = e^x$ centrato in $c = 0$:
+> Calcoliamo il [polinomio di Taylor di ordine 1](Matematica/Analisi%20matematica/Derivate/Approssimazione%20locale%20di%20funzioni.md#^definizione-polinomio-di-taylor-di-ordine-1-di-f-centrato-in-c) della [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f(x) = e^x$ centrato in $c = 0$:
 > 
 > $$
 > \begin{align*}
@@ -62,12 +62,12 @@ chi è Taylor?
 > 	$$
 > 	E_1(x) = |f(x) - T_{1,c}(x)|
 > 	$$
-> 	Dato che $f$ e $T_{1,c}$ sono [continue](Funzioni%20continue.md#^definizione-funzione-continua) e anche la funzione valore assoluto%% link %% è [continua](Funzioni%20continue.md#^definizione-funzione-continua), allora anche $E_1(x)$ è [continua](Funzioni%20continue.md#^definizione-funzione-continua).
-> 	Sfruttando la [definizione di _funzione continua_](Funzioni%20continue.md#^definizione-funzione-continua), abbiamo che il [limite](Limiti.md#^definizione-limite) di $E_1(c)$ per $x \to c$ ha lo stesso valore di $E_1(c)$, cioè $0$:
+> 	Dato che $f$ e $T_{1,c}$ sono [continue](Matematica/Analisi%20matematica/Limiti/Funzioni%20continue.md#^definizione-funzione-continua) e anche la funzione valore assoluto%% link %% è [continua](Matematica/Analisi%20matematica/Limiti/Funzioni%20continue.md#^definizione-funzione-continua), allora anche $E_1(x)$ è [continua](Matematica/Analisi%20matematica/Limiti/Funzioni%20continue.md#^definizione-funzione-continua).
+> 	Sfruttando la [definizione di _funzione continua_](Matematica/Analisi%20matematica/Limiti/Funzioni%20continue.md#^definizione-funzione-continua), abbiamo che il [limite](Matematica/Analisi%20matematica/Limiti/Limiti.md#^definizione-limite) di $E_1(c)$ per $x \to c$ ha lo stesso valore di $E_1(c)$, cioè $0$:
 > 	$$
 > 	\lim_{x \to c} E_1(x) = E_1(x) = 0
 > 	$$
-> 	Quindi, per [definizione di _limite_](Limiti.md#^definizione-limite),
+> 	Quindi, per [definizione di _limite_](Matematica/Analisi%20matematica/Limiti/Limiti.md#^definizione-limite),
 > 	$$
 > 	\forall \varepsilon \in \mathbb{R}, \exists \delta \in \mathbb{R}, \forall x \in \mathbb{R} . \left( 0 < |x - c| < \delta \implies E_1(x) < \varepsilon \right) 
 > 	$$
@@ -133,7 +133,7 @@ Ora reiteriamo questo ragionamento per i prossimi ordini.
 
 > [!teorema]+ Teorema del polinomio di Taylor di ordine $\color{#FF3F3F} n$ per $\color{#FF3F3F} f$ centrato in $\color{#FF3F3F} x = c$
 > 
-> Dato un [intorno](Topologia%20dei%20reali.md#^definizione-intorno-di-un-punto) $I_r(c) \subseteq \mathbb{R}$ di centro $c \in \mathbb{R}$ e raggio $r \in \mathbb{R}$ e una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon I_r(c) \to \mathbb{R}$ [derivabile $n$ volte](Derivate.md#^definizione-derivata-n-esima-di-una-funzione) in $x = c$, esiste un unico polinomio di ordine $n$%% link %%, denotato con $T_{n,c}(x)$, tale che
+> Dato un [intorno](Matematica/Teoria%20degli%20insiemi/Funzioni/Topologia%20dei%20reali.md#^definizione-intorno-di-un-punto) $I_r(c) \subseteq \mathbb{R}$ di centro $c \in \mathbb{R}$ e raggio $r \in \mathbb{R}$ e una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon I_r(c) \to \mathbb{R}$ [derivabile $n$ volte](Matematica/Analisi%20matematica/Derivate/Derivate.md#^definizione-derivata-n-esima-di-una-funzione) in $x = c$, esiste un unico polinomio di ordine $n$%% link %%, denotato con $T_{n,c}(x)$, tale che
 > 
 > $$
 > \forall k \in \{ 0, \ldots, n \} . \left( T^{(k)}_{n,c}(c) = f^{(k)}(c) \right) 
@@ -204,7 +204,7 @@ Ora reiteriamo questo ragionamento per i prossimi ordini.
 
 > [!definizione]+ Definizione: formula di Taylor con il resto di Lagrange
 > 
-> Data una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon [a,b] \to \mathbb{R}$ [derivabile $(n+1)$ volte](Derivate.md#^definizione-derivata-n-esima-di-una-funzione), allora
+> Data una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon [a,b] \to \mathbb{R}$ [derivabile $(n+1)$ volte](Matematica/Analisi%20matematica/Derivate/Derivate.md#^definizione-derivata-n-esima-di-una-funzione), allora
 > 
 > $$
 > \forall c,x \in (a,b), \exists \xi \in (c,x) . \left( f(x) = T_{n,c}(x) + \dfrac{f^{(n+1)}(\xi)}{(n+1)!} (x-c)^{n+1} \right) 

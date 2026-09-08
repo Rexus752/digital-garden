@@ -15,7 +15,7 @@ prerequisito: Logica Matematica per teoremi e dimostrazioni
 
 > [!definizione]+ Definizione: teoria degli insiemi
 > 
-> La **teoria degli insiemi** è una branca della [matematica](Matematica.md#^definizione-matematica) che si occupa dello studio degli [insiemi](Teoria%20degli%20insiemi.md#^definizione-insieme), cioè collezioni di oggetti distinti che possono essere definiti e manipolati secondo determinate regole.
+> La **teoria degli insiemi** è una branca della [matematica](Matematica/Matematica.md#^definizione-matematica) che si occupa dello studio degli [insiemi](Matematica/Teoria%20degli%20insiemi/Teoria%20degli%20insiemi.md#^definizione-insieme), cioè collezioni di oggetti distinti che possono essere definiti e manipolati secondo determinate regole.
 ^definizione-teoria-degli-insiemi
 
 %% 
@@ -44,24 +44,24 @@ che per essere spiegata necessita esclusivamente di sinonimi.
 
 > [!osservazione]+ Osservazione: restrizioni sulla natura degli elementi di un insieme
 > 
-> Non c'è alcuna restrizione su quale sia la natura degli oggetti che possono appartenere a un [insieme](Teoria%20degli%20insiemi.md#^definizione-insieme): essi possono essere sia oggetti "matematici" (come i numeri), ma non solo (es. l'insieme delle capitali dei Paesi nel mondo). Non è neanche detto che gli oggetti dell'[insieme](Teoria%20degli%20insiemi.md#^definizione-insieme) debbano avere una natura "omogenea" (es. può esistere un insieme che ha come elementi il numero 4, il nome del Rettore dell'Università di Torino e la Mole Antonelliana).
+> Non c'è alcuna restrizione su quale sia la natura degli oggetti che possono appartenere a un [insieme](Matematica/Teoria%20degli%20insiemi/Teoria%20degli%20insiemi.md#^definizione-insieme): essi possono essere sia oggetti "matematici" (come i numeri), ma non solo (es. l'insieme delle capitali dei Paesi nel mondo). Non è neanche detto che gli oggetti dell'[insieme](Matematica/Teoria%20degli%20insiemi/Teoria%20degli%20insiemi.md#^definizione-insieme) debbano avere una natura "omogenea" (es. può esistere un insieme che ha come elementi il numero 4, il nome del Rettore dell'Università di Torino e la Mole Antonelliana).
 ^osservazione-restrizioni-sulla-natura-degli-elementi-di-un-insieme
 
 > [!osservazione]+ Osservazione: significato di _"ben definita"_
 > 
-> La richiesta che la collezione sia ben definita significa che non deve esserci alcuna ambiguità circa il fatto che un oggetto sia o meno un elemento di un dato [insieme](Teoria%20degli%20insiemi.md#^definizione-insieme) (es. l'insieme dei professori più bravi dell'Università di Torino non può essere un insieme perché non è possibile definire in modo oggettivo quali professori ne facciano parte e quali no).
+> La richiesta che la collezione sia ben definita significa che non deve esserci alcuna ambiguità circa il fatto che un oggetto sia o meno un elemento di un dato [insieme](Matematica/Teoria%20degli%20insiemi/Teoria%20degli%20insiemi.md#^definizione-insieme) (es. l'insieme dei professori più bravi dell'Università di Torino non può essere un insieme perché non è possibile definire in modo oggettivo quali professori ne facciano parte e quali no).
 ^osservazione-significato-di-ben-definita
 
 > [!osservazione]+ Osservazione: insiemi come elementi di altri insiemi
 > 
-> Una volta definito correttamente un certo [insieme](Teoria%20degli%20insiemi.md#^definizione-insieme), esso è certamente un oggetto matematico e, in quanto tale, può essere esso stesso elemento di un altro insieme: gli elementi di un insieme possono essere a loro volta insiemi (es. l'insieme $B$ può essere inteso come un elemento dell'insieme $A$).
+> Una volta definito correttamente un certo [insieme](Matematica/Teoria%20degli%20insiemi/Teoria%20degli%20insiemi.md#^definizione-insieme), esso è certamente un oggetto matematico e, in quanto tale, può essere esso stesso elemento di un altro insieme: gli elementi di un insieme possono essere a loro volta insiemi (es. l'insieme $B$ può essere inteso come un elemento dell'insieme $A$).
 > 
 > Inoltre, dati un insieme $A$ e un suo elemento l'insieme $B\in A$, gli elementi di $B$ **NON** sono elementi di $A$ (es. se abbiamo $B=\{3,4\}$ e $A=\{0,1,2,\{3,4\}\}$, con $B \in A$ , gli elementi di $A$ sono 4, in quanto gli elementi $\{3,4\}$ di $B$ sono contati come un unico elemento in $A$).
 ^osservazione-insiemi-come-elementi-di-altri-insiemi
 
 > [!definizione]+ Definizione: insieme universo
 > 
-> Un **insieme universo** (o **universo di riferimento**), solitamente denotato con "$\mathcal{U}$", è un [insieme](Teoria%20degli%20insiemi.md#^definizione-insieme) che comprende tutti gli insiemi/oggetti/enti pertinenti a un certo contesto o problema.
+> Un **insieme universo** (o **universo di riferimento**), solitamente denotato con "$\mathcal{U}$", è un [insieme](Matematica/Teoria%20degli%20insiemi/Teoria%20degli%20insiemi.md#^definizione-insieme) che comprende tutti gli insiemi/oggetti/enti pertinenti a un certo contesto o problema.
 ^definizione-insieme-universo
 
 > [!esempio]- Esempio
@@ -77,12 +77,12 @@ che per essere spiegata necessita esclusivamente di sinonimi.
 
 > [!osservazione]+ Osservazione: l'insieme $\color{#7F7F7F}A=\{\emptyset\}$ non è vuoto
 > 
-> L'insieme $A = \{\emptyset\}$ non è un insieme vuoto: l'insieme vuoto è privo di elementi, mentre l'insieme $A$ ha un elemento, ossia l'elemento-insieme vuoto $\emptyset \in A$ ([come già osservato](Teoria%20degli%20insiemi.md#^osservazione-insiemi-come-elementi-di-altri-insiemi), un insieme può avere come suoi elementi altri insiemi).
+> L'insieme $A = \{\emptyset\}$ non è un insieme vuoto: l'insieme vuoto è privo di elementi, mentre l'insieme $A$ ha un elemento, ossia l'elemento-insieme vuoto $\emptyset \in A$ ([come già osservato](Matematica/Teoria%20degli%20insiemi/Teoria%20degli%20insiemi.md#^osservazione-insiemi-come-elementi-di-altri-insiemi), un insieme può avere come suoi elementi altri insiemi).
 ^osservazione-l-insieme-A-non-e-vuoto
 
 > [!osservazione]+ Osservazione: unicità dell'insieme vuoto
 > 
-> L'insieme vuoto è unico, ovvero: se $A$ e $B$ sono due insiemi che non contengono nessun elemento, allora, per il [principio di estensionalità](Teoria%20degli%20insiemi.md#^principio-di-estensionalita), si ha che:
+> L'insieme vuoto è unico, ovvero: se $A$ e $B$ sono due insiemi che non contengono nessun elemento, allora, per il [principio di estensionalità](Matematica/Teoria%20degli%20insiemi/Teoria%20degli%20insiemi.md#^principio-di-estensionalita), si ha che:
 > $$
 > A = B
 > $$
@@ -101,13 +101,13 @@ che per essere spiegata necessita esclusivamente di sinonimi.
 
 > [!esempio]- Esempio: $\color{#7F7FFF}\{0\}$ e $\color{#7F7FFF}\{\{1,2,3\}\}$ sono singoletti
 > 
-> Gli insiemi $\{0\}$ e $\{\{1,2,3\}\}$ sono [singoletti](Teoria%20degli%20insiemi.md#^definizione-singoletto): in particolare, il primo è formato unicamente dall'elemento $0$, mentre il secondo è formato dall'unico elemento $\{1,2,3\}$ che a sua volta è un [insieme](Teoria%20degli%20insiemi.md#^definizione-insieme) (quest'ultimo però non [unitario](Teoria%20degli%20insiemi.md#^definizione-singoletto)).
+> Gli insiemi $\{0\}$ e $\{\{1,2,3\}\}$ sono [singoletti](Matematica/Teoria%20degli%20insiemi/Teoria%20degli%20insiemi.md#^definizione-singoletto): in particolare, il primo è formato unicamente dall'elemento $0$, mentre il secondo è formato dall'unico elemento $\{1,2,3\}$ che a sua volta è un [insieme](Matematica/Teoria%20degli%20insiemi/Teoria%20degli%20insiemi.md#^definizione-insieme) (quest'ultimo però non [unitario](Matematica/Teoria%20degli%20insiemi/Teoria%20degli%20insiemi.md#^definizione-singoletto)).
 
 ## 1.3 - Cardinalità di un insieme
 
 > [!definizione]+ Definizione: cardinalità di un insieme
 > 
-> La **cardinalità** di un [insieme](Teoria%20degli%20insiemi.md#^definizione-insieme) $A$, denotata "$|A|$" oppure "$\#A$", è il numero degli elementi di $A$.
+> La **cardinalità** di un [insieme](Matematica/Teoria%20degli%20insiemi/Teoria%20degli%20insiemi.md#^definizione-insieme) $A$, denotata "$|A|$" oppure "$\#A$", è il numero degli elementi di $A$.
 > 
 > Se $A$ contiene un numero finito $n$ di elementi si denota "$|A| = n$" (es. $|\{0,1\}| = 2$), mentre se $A$ contiene infiniti elementi (e cioè è un insieme infinito%% link %%) si denota "$|A| = \infty$".
 ^definizione-cardinalita-di-un-insieme
@@ -123,24 +123,24 @@ che per essere spiegata necessita esclusivamente di sinonimi.
 
 ## 1.4 - Rappresentazioni di un insieme
 
-I modi per rappresentare un [insieme](Teoria%20degli%20insiemi.md#^definizione-insieme) sono molteplici e ognuno di essi è più adatto in determinati casi piuttosto che in altri.
+I modi per rappresentare un [insieme](Matematica/Teoria%20degli%20insiemi/Teoria%20degli%20insiemi.md#^definizione-insieme) sono molteplici e ognuno di essi è più adatto in determinati casi piuttosto che in altri.
 
 ### 1.4.1 - Rappresentazione per elencazione di un insieme
 
 > [!notazione]+ Rappresentazione per elencazione di un insieme
 > 
-> La **rappresentazione per elencazione (o estensiva)** di un [insieme](Teoria%20degli%20insiemi.md#^definizione-insieme) prevede di indicare tutti gli elementi che appartengono ad un insieme semplicemente elencandoli uno ad uno, all'interno di parentesi graffe. Quando si rappresenta un insieme per elencazione, non ha mai importanza l'ordine con cui si scrivono gli elementi e, inoltre, tale metodo è pratico solo quando l'insieme in questione contiene pochi elementi.
+> La **rappresentazione per elencazione (o estensiva)** di un [insieme](Matematica/Teoria%20degli%20insiemi/Teoria%20degli%20insiemi.md#^definizione-insieme) prevede di indicare tutti gli elementi che appartengono ad un insieme semplicemente elencandoli uno ad uno, all'interno di parentesi graffe. Quando si rappresenta un insieme per elencazione, non ha mai importanza l'ordine con cui si scrivono gli elementi e, inoltre, tale metodo è pratico solo quando l'insieme in questione contiene pochi elementi.
 > 
 > Nel caso in cui ci siano invece più elementi che si vogliono omettere nella notazione (come anche nel caso di insiemi infiniti%% link %%, in cui si vogliono esplicitare soltanto alcuni determinati elementi dell'insieme), si possono usare i puntini di sospensione "$\ldots$" all'interno delle graffe.
 ^rappresentazione-per-elencazione-di-un-insieme
 
 > [!esempio]- Esempio: $\color{#7F7FFF}A=\{1,2,3,4,5,6,7,8,9\}$ e $\color{#7F7FFF}B=\{\text{Francia}, \space\text{Germania}, \space\text{Svizzera}\}$
 > 
-> La notazione $A=\{1,2,3,4,5,6,7,8,9\}$ definisce correttamente l'[insieme](Teoria%20degli%20insiemi.md#^definizione-insieme) $A$ come l'insieme dei numerali naturali compresi tra 1 e 9, mentre $B=\{\text{Francia}, \space\text{Germania}, \space\text{Svizzera}\}$ definisce correttamente l'insieme $B$ come un insieme contenente alcune nazioni europee.
+> La notazione $A=\{1,2,3,4,5,6,7,8,9\}$ definisce correttamente l'[insieme](Matematica/Teoria%20degli%20insiemi/Teoria%20degli%20insiemi.md#^definizione-insieme) $A$ come l'insieme dei numerali naturali compresi tra 1 e 9, mentre $B=\{\text{Francia}, \space\text{Germania}, \space\text{Svizzera}\}$ definisce correttamente l'insieme $B$ come un insieme contenente alcune nazioni europee.
 
 > [!esempio]- Esempio: $\color{#7F7FFF}\mathbb{N} = \{0, 1, 2, 3, \ldots\}, \mathbb{Z} = \{\ldots, -2, -1, 0, 1, 2, \ldots\}, \mathbb{R} = \{\ldots, 3, \ldots, 4, \ldots \}$
 > 
-> Ognuno dei seguenti [insiemi](Teoria%20degli%20insiemi.md#^definizione-insieme) numerici usa i puntini di sospensione in modo diverso:
+> Ognuno dei seguenti [insiemi](Matematica/Teoria%20degli%20insiemi/Teoria%20degli%20insiemi.md#^definizione-insieme) numerici usa i puntini di sospensione in modo diverso:
 > - L'insieme dei numeri naturali $\mathbb{N}$ può essere rappresentato con la notazione $\mathbb{N} = \{0, 1, 2, 3, \ldots\}$, in cui i puntini che seguono il $3$ indicano che ci sono infiniti numeri naturali dopo di esso.
 > - Allo stesso modo, per l'insieme dei numeri interi $\mathbb{Z}$, nella notazione $\mathbb{Z} = \{\ldots, -2, -1, 0, 1, 2, \ldots\}$ i primi puntini indicano che prima del $-2$ ci sono infiniti numeri interi.
 > - Anche per l'insieme dei numeri reali $\mathbb{R}$, nella notazione $\mathbb{R} = \{\ldots, 3, \ldots, 4, \ldots \}$ i puntini tra il $3$ e il $4$ indicano che ci sono infiniti numeri reali tra i due. 
@@ -149,7 +149,7 @@ I modi per rappresentare un [insieme](Teoria%20degli%20insiemi.md#^definizione-i
 
 > [!notazione]+ Rappresentazione per caratteristica di un insieme
 > 
-> La **rappresentazione per caratteristica (o intensiva)** di un [insieme](Teoria%20degli%20insiemi.md#^definizione-insieme) consiste nel dare una proprietà che risulti verificata da tutti gli elementi dell'insieme e solo da essi. Dunque, la forma generale della definizione di un insieme $X$ con questo metodo è del tipo
+> La **rappresentazione per caratteristica (o intensiva)** di un [insieme](Matematica/Teoria%20degli%20insiemi/Teoria%20degli%20insiemi.md#^definizione-insieme) consiste nel dare una proprietà che risulti verificata da tutti gli elementi dell'insieme e solo da essi. Dunque, la forma generale della definizione di un insieme $X$ con questo metodo è del tipo
 > $$
 > X = \{ x \in \mathcal{U} \mid P(x) \}
 > $$
@@ -157,12 +157,12 @@ I modi per rappresentare un [insieme](Teoria%20degli%20insiemi.md#^definizione-i
 > $$
 > X = \{x \mid x \in \mathcal{U}, P(x)\}
 > $$
-> (da leggersi _"$X$ è l'insieme degli elementi $x$ in $\mathcal{U}$ tali che $x$ soddisfa la proprietà $P$"_) dove l'[insieme universo](Teoria%20degli%20insiemi.md#^definizione-insieme-universo) $\mathcal{U}$, che può essere implicito o esplicito, è stato già definito precedentemente e funziona da ambito del discorso.
+> (da leggersi _"$X$ è l'insieme degli elementi $x$ in $\mathcal{U}$ tali che $x$ soddisfa la proprietà $P$"_) dove l'[insieme universo](Matematica/Teoria%20degli%20insiemi/Teoria%20degli%20insiemi.md#^definizione-insieme-universo) $\mathcal{U}$, che può essere implicito o esplicito, è stato già definito precedentemente e funziona da ambito del discorso.
 ^rappresentazione-per-caratteristica-di-un-insieme
 
 > [!esempio]- Esempio: $\color{#7F7FFF}C=\{\text{cittadini italiani}\}$ e $\color{#7F7FFF}D=\{x\in\mathbb{R}\mid x^2>1\}$
 > 
-> Le notazioni $C=\{\text{cittadini italiani}\}$ e $D=\{x\in\mathbb{R}\mid x^2>1\}$ definiscono correttamente due [insiemi](Teoria%20degli%20insiemi.md#^definizione-insieme) nonostante non siano elencati esplicitamente tutti i loro elementi, specialmente nel caso dell'insieme $D$ che sarebbe matematicamente impossibile, essendo questo insieme infinito%% link %%.
+> Le notazioni $C=\{\text{cittadini italiani}\}$ e $D=\{x\in\mathbb{R}\mid x^2>1\}$ definiscono correttamente due [insiemi](Matematica/Teoria%20degli%20insiemi/Teoria%20degli%20insiemi.md#^definizione-insieme) nonostante non siano elencati esplicitamente tutti i loro elementi, specialmente nel caso dell'insieme $D$ che sarebbe matematicamente impossibile, essendo questo insieme infinito%% link %%.
 > 
 > In particolare, gli oggetti a cui applicare i due criteri sono presi a priori da un certo insieme di riferimento, esplicito nel caso di $D$ (l'insieme dei numeri reali $\mathbb{R}$%% link %%) ed implicito nel caso di $C$ (avrebbe senso applicare il criterio su un insieme di esseri umani).
 
@@ -170,7 +170,7 @@ I modi per rappresentare un [insieme](Teoria%20degli%20insiemi.md#^definizione-i
 
 > [!notazione]+ Rappresentazione grafica di un insieme
 > 
-> La **rappresentazione grafica di un insieme** consiste nel rappresentare un [insieme](Teoria%20degli%20insiemi.md#^definizione-insieme) con una regione di piano limitata da una curva chiusa: gli elementi dell'insieme sono scritti all'interno della linea chiusa, mentre gli elementi che non appartengono all'insieme stanno all'esterno. Il nome dell'insieme, invece, viene posto all'esterno della linea chiusa vicino a essa. Forme grafiche di questo tipo sono generalmente denominate **_diagrammi di Eulero-Venn_** ed offrono un supporto intuitivo notevole nel rappresentare gli insiemi.
+> La **rappresentazione grafica di un insieme** consiste nel rappresentare un [insieme](Matematica/Teoria%20degli%20insiemi/Teoria%20degli%20insiemi.md#^definizione-insieme) con una regione di piano limitata da una curva chiusa: gli elementi dell'insieme sono scritti all'interno della linea chiusa, mentre gli elementi che non appartengono all'insieme stanno all'esterno. Il nome dell'insieme, invece, viene posto all'esterno della linea chiusa vicino a essa. Forme grafiche di questo tipo sono generalmente denominate **_diagrammi di Eulero-Venn_** ed offrono un supporto intuitivo notevole nel rappresentare gli insiemi.
 %% fare esempio %%
 ^rappresentazione-grafica-di-un-insieme
 
@@ -182,7 +182,7 @@ Esempio con un diagramma di Eulero-Venn
 
 > [!notazione]+ Rappresentazione per intervalli di un insieme
 > 
-> La **rappresentazione per intervalli di un insieme** si può usare nel caso in cui l'[insieme](Teoria%20degli%20insiemi.md#^definizione-insieme) contiene tutti i numeri (generalmente in $\mathbb{R}$) compresi tra due valori detti **_estremi dell'intervallo_**, che possono essere compresi o meno nell'intervallo stesso. Per indicare l'intervallo, quindi, si racchiudono i due valori, separati da una virgola, in due parentesi che sono quadre se i valori sono compresi nell'intervallo o, altrimenti, tonde.
+> La **rappresentazione per intervalli di un insieme** si può usare nel caso in cui l'[insieme](Matematica/Teoria%20degli%20insiemi/Teoria%20degli%20insiemi.md#^definizione-insieme) contiene tutti i numeri (generalmente in $\mathbb{R}$) compresi tra due valori detti **_estremi dell'intervallo_**, che possono essere compresi o meno nell'intervallo stesso. Per indicare l'intervallo, quindi, si racchiudono i due valori, separati da una virgola, in due parentesi che sono quadre se i valori sono compresi nell'intervallo o, altrimenti, tonde.
 ^rappresentazione-per-intervalli-di-un-insieme
 
 %%fare un esempio con solo estremi esclusi e uno con solo estremi inclusi%%
@@ -215,9 +215,9 @@ scrivere
 
 > [!definizione]+ Definizione: tupla
 > 
-> Una **tupla** (o **lista ordinata**) è una collezione di oggetti disposti in un ordine specifico. [A differenza di un insieme](Teoria%20degli%20insiemi.md#^osservazione-irrilevanza-dell-ordine-e-unicita-degli-elementi), l'ordine degli elementi in una tupla è significativo, e gli stessi elementi possono comparire più volte.
+> Una **tupla** (o **lista ordinata**) è una collezione di oggetti disposti in un ordine specifico. [A differenza di un insieme](Matematica/Teoria%20degli%20insiemi/Teoria%20degli%20insiemi.md#^osservazione-irrilevanza-dell-ordine-e-unicita-degli-elementi), l'ordine degli elementi in una tupla è significativo, e gli stessi elementi possono comparire più volte.
 > 
-> Una **$n$-upla** è una tupla di esattamente $n$ elementi, dove $n$ è un numero intero non-negativo e si denota similmente alla [rappresentazione per elencazione di un insieme](Teoria%20degli%20insiemi.md#^rappresentazione-per-elencazione-di-un-insieme) nei seguenti modi:
+> Una **$n$-upla** è una tupla di esattamente $n$ elementi, dove $n$ è un numero intero non-negativo e si denota similmente alla [rappresentazione per elencazione di un insieme](Matematica/Teoria%20degli%20insiemi/Teoria%20degli%20insiemi.md#^rappresentazione-per-elencazione-di-un-insieme) nei seguenti modi:
 > $$
 > (a_1, a_2, \ldots, a_n)
 > $$
@@ -236,7 +236,7 @@ scrivere
 
 > [!definizione]+ Definizione: sottoinsieme
 > 
-> Dati due [insiemi](Teoria%20degli%20insiemi.md#^definizione-insieme) $A$ e $B$, $B$ si dice _**sottoinsieme**_ di $A$ e si denota con "$B \subseteq A$" (_"$B$ è incluso in $A$"_) se ogni elemento di $B$ è anche un elemento di $A$:
+> Dati due [insiemi](Matematica/Teoria%20degli%20insiemi/Teoria%20degli%20insiemi.md#^definizione-insieme) $A$ e $B$, $B$ si dice _**sottoinsieme**_ di $A$ e si denota con "$B \subseteq A$" (_"$B$ è incluso in $A$"_) se ogni elemento di $B$ è anche un elemento di $A$:
 > $$
 > B \subseteq A = \{b \in B \mid b \in A\}
 > $$
@@ -253,7 +253,7 @@ scrivere
 
 > [!esempio]- Esempio: sottoinsiemi di $\color{#7F7FFF}A=\{0,1,2,3,4\}$
 > 
-> Dato un insieme $A=\{0,1,2,3,4\}$, possibili sottoinsiemi di $A$ sono gli [insiemi](Teoria%20degli%20insiemi.md#^definizione-insieme) $B=\{0,1,2\}$ e $C=\{4\}$, in quanto gli elementi che contengono appartengono anche ad $A$:
+> Dato un insieme $A=\{0,1,2,3,4\}$, possibili sottoinsiemi di $A$ sono gli [insiemi](Matematica/Teoria%20degli%20insiemi/Teoria%20degli%20insiemi.md#^definizione-insieme) $B=\{0,1,2\}$ e $C=\{4\}$, in quanto gli elementi che contengono appartengono anche ad $A$:
 > $$
 > B, C \subseteq A
 > $$
@@ -310,17 +310,17 @@ Quale delle seguenti affermazioni sono corrette?
 
 > [!esempio]- Esempio: sottoinsiemi propri di $\color{#7F7FFF}A=\{0,1,2,3,4\}$
 > 
-> Dato un insieme $A=\{0,1,2,3,4\}$, dei suoi possibili sottoinsiemi propri sono gli [insiemi](Teoria%20degli%20insiemi.md#^definizione-insieme) $B=\{1,3,4\} \subsetneq A$ e $C=\{0,1,2,3\} \subsetneq A$.
+> Dato un insieme $A=\{0,1,2,3,4\}$, dei suoi possibili sottoinsiemi propri sono gli [insiemi](Matematica/Teoria%20degli%20insiemi/Teoria%20degli%20insiemi.md#^definizione-insieme) $B=\{1,3,4\} \subsetneq A$ e $C=\{0,1,2,3\} \subsetneq A$.
 
 > [!notazione]+ Notazione: evitare il simbolo "$\subset$"
 > 
-> Personalmente, un consiglio che mi sento di dare è quello di evitare **sempre** l'uso del simbolo "$\subset$", in quanto viene spesso usato intercambiabilmente in letteratura sia per evidenziare il [sottoinsieme proprio](Teoria%20degli%20insiemi.md#^definizione-sottoinsieme-proprio) che per indicare la relazione "generale" di [sottoinsieme](Teoria%20degli%20insiemi.md#^definizione-sottoinsieme).
+> Personalmente, un consiglio che mi sento di dare è quello di evitare **sempre** l'uso del simbolo "$\subset$", in quanto viene spesso usato intercambiabilmente in letteratura sia per evidenziare il [sottoinsieme proprio](Matematica/Teoria%20degli%20insiemi/Teoria%20degli%20insiemi.md#^definizione-sottoinsieme-proprio) che per indicare la relazione "generale" di [sottoinsieme](Matematica/Teoria%20degli%20insiemi/Teoria%20degli%20insiemi.md#^definizione-sottoinsieme).
 > 
-> Nel dubbio, per evitare qualsiasi confusione, va evitato e, al suo posto, vanno usati rispettivamente "$\subsetneq$" nel caso di un [sottoinsieme proprio](Teoria%20degli%20insiemi.md#^definizione-sottoinsieme-proprio) e "$\subseteq$" nel caso di un [sottoinsieme](Teoria%20degli%20insiemi.md#^definizione-sottoinsieme) qualsiasi.
+> Nel dubbio, per evitare qualsiasi confusione, va evitato e, al suo posto, vanno usati rispettivamente "$\subsetneq$" nel caso di un [sottoinsieme proprio](Matematica/Teoria%20degli%20insiemi/Teoria%20degli%20insiemi.md#^definizione-sottoinsieme-proprio) e "$\subseteq$" nel caso di un [sottoinsieme](Matematica/Teoria%20degli%20insiemi/Teoria%20degli%20insiemi.md#^definizione-sottoinsieme) qualsiasi.
 
 > [!attenzione]+ Attenzione: non confondere "$\subsetneq$" con "$\not\subseteq$"
 > 
-> Fai molta attenzione a non confondere "$\subsetneq$" con "$\nsubseteq$": dati due [insiemi](Teoria%20degli%20insiemi.md#^definizione-insieme) $A$ e $B$, se $B \subsetneq A$ (cioè $B$ è un [sottoinsieme proprio](Teoria%20degli%20insiemi.md#^definizione-sottoinsieme-proprio) di $A$), allora in particolare $A$ è un [sottoinsieme](Teoria%20degli%20insiemi.md#^definizione-sottoinsieme) di $B$ (cioè $B \subseteq A$) e quindi non potrà essere vero che $A \nsubseteq B$ perché, quest'ultima relazione, indica che $A$ **non** è sottoinsieme di $B$.
+> Fai molta attenzione a non confondere "$\subsetneq$" con "$\nsubseteq$": dati due [insiemi](Matematica/Teoria%20degli%20insiemi/Teoria%20degli%20insiemi.md#^definizione-insieme) $A$ e $B$, se $B \subsetneq A$ (cioè $B$ è un [sottoinsieme proprio](Matematica/Teoria%20degli%20insiemi/Teoria%20degli%20insiemi.md#^definizione-sottoinsieme-proprio) di $A$), allora in particolare $A$ è un [sottoinsieme](Matematica/Teoria%20degli%20insiemi/Teoria%20degli%20insiemi.md#^definizione-sottoinsieme) di $B$ (cioè $B \subseteq A$) e quindi non potrà essere vero che $A \nsubseteq B$ perché, quest'ultima relazione, indica che $A$ **non** è sottoinsieme di $B$.
 > 
 > Ad esempio, vale la relazione $\{1, 2\} \subsetneq \{1, 2, 3\}$, ma non è vero che $\{1, 2\} \nsubseteq \{1, 2, 3\}$.
 
@@ -345,26 +345,26 @@ Quale delle seguenti affermazioni sono corrette?
 
 > [!esempio]- Esempio di insieme delle parti
 > 
-> Dato un [insieme](Teoria%20degli%20insiemi.md#^definizione-insieme) $A=\{a,b,c\}$, si ha $\mathcal{P}(A)=\{\emptyset, \{a\}, \{b\}, \{c\}, \{a,b\}, \{b,c\}, \{a,c\},A\}$.
+> Dato un [insieme](Matematica/Teoria%20degli%20insiemi/Teoria%20degli%20insiemi.md#^definizione-insieme) $A=\{a,b,c\}$, si ha $\mathcal{P}(A)=\{\emptyset, \{a\}, \{b\}, \{c\}, \{a,b\}, \{b,c\}, \{a,c\},A\}$.
 
 > [!osservazione]+ Osservazione: insieme delle parti di un insieme vuoto
 > 
-> L'unico [sottoinsieme](Teoria%20degli%20insiemi.md#^definizione-sottoinsieme) di un [insieme vuoto](Teoria%20degli%20insiemi.md#^definizione-insieme-vuoto) $\emptyset$ è $\{\emptyset\}$. Pertanto, il suo [insieme delle parti](Teoria%20degli%20insiemi.md#^definizione-insieme-delle-parti) è $\mathcal{P}(\emptyset)=\{\emptyset\}$ e, dunque, $\mathcal{P}(\emptyset)\ne\emptyset$.
+> L'unico [sottoinsieme](Matematica/Teoria%20degli%20insiemi/Teoria%20degli%20insiemi.md#^definizione-sottoinsieme) di un [insieme vuoto](Matematica/Teoria%20degli%20insiemi/Teoria%20degli%20insiemi.md#^definizione-insieme-vuoto) $\emptyset$ è $\{\emptyset\}$. Pertanto, il suo [insieme delle parti](Matematica/Teoria%20degli%20insiemi/Teoria%20degli%20insiemi.md#^definizione-insieme-delle-parti) è $\mathcal{P}(\emptyset)=\{\emptyset\}$ e, dunque, $\mathcal{P}(\emptyset)\ne\emptyset$.
 ^osservazione-insieme-delle-parti-di-un-insieme-vuoto
 
 > [!osservazione]+ Osservazione: insieme delle parti di un singoletto
 > 
-> Dato un [singoletto](Teoria%20degli%20insiemi.md#^definizione-singoletto) $A = \{ a \}$, gli suoi [sottoinsiemi](Teoria%20degli%20insiemi.md#^definizione-sottoinsieme) sono quelli [banali](Teoria%20degli%20insiemi.md#^definizione-sottoinsiemi-banali), quindi il suo [insieme delle parti](Teoria%20degli%20insiemi.md#^definizione-insieme-delle-parti) è $\mathcal{P}(A) = \mathcal{P}(\{a\}) = \{\emptyset, \{a\}\}$.
+> Dato un [singoletto](Matematica/Teoria%20degli%20insiemi/Teoria%20degli%20insiemi.md#^definizione-singoletto) $A = \{ a \}$, gli suoi [sottoinsiemi](Matematica/Teoria%20degli%20insiemi/Teoria%20degli%20insiemi.md#^definizione-sottoinsieme) sono quelli [banali](Matematica/Teoria%20degli%20insiemi/Teoria%20degli%20insiemi.md#^definizione-sottoinsiemi-banali), quindi il suo [insieme delle parti](Matematica/Teoria%20degli%20insiemi/Teoria%20degli%20insiemi.md#^definizione-insieme-delle-parti) è $\mathcal{P}(A) = \mathcal{P}(\{a\}) = \{\emptyset, \{a\}\}$.
 ^osservazione-insieme-delle-parti-di-un-singoletto
 
 > [!osservazione]+ Osservazione: insieme delle parti è sempre non vuoto
 > 
-> Per qualsiasi [insieme](Teoria%20degli%20insiemi.md#^definizione-insieme) $A$, vuoto o non vuoto, il suo [insieme delle parti](Teoria%20degli%20insiemi.md#^definizione-insieme-delle-parti) $\mathcal{P}(A)$ contiene sempre l'[insieme vuoto](Teoria%20degli%20insiemi.md#^definizione-insieme-vuoto) $\emptyset$ e $A$ stesso come elementi (cioè i suoi [sottoinsiemi banali](Teoria%20degli%20insiemi.md#^definizione-sottoinsiemi-banali)), quindi è sempre non vuoto.
+> Per qualsiasi [insieme](Matematica/Teoria%20degli%20insiemi/Teoria%20degli%20insiemi.md#^definizione-insieme) $A$, vuoto o non vuoto, il suo [insieme delle parti](Matematica/Teoria%20degli%20insiemi/Teoria%20degli%20insiemi.md#^definizione-insieme-delle-parti) $\mathcal{P}(A)$ contiene sempre l'[insieme vuoto](Matematica/Teoria%20degli%20insiemi/Teoria%20degli%20insiemi.md#^definizione-insieme-vuoto) $\emptyset$ e $A$ stesso come elementi (cioè i suoi [sottoinsiemi banali](Matematica/Teoria%20degli%20insiemi/Teoria%20degli%20insiemi.md#^definizione-sottoinsiemi-banali)), quindi è sempre non vuoto.
 ^osservazione-insieme-delle-parti-e-sempre-non-vuoto
 
 > [!osservazione]+ Osservazione: cardinalità di un insieme delle parti
 > 
-> Dato un [insieme](Teoria%20degli%20insiemi.md#^definizione-insieme) [finito](Teoria%20degli%20insiemi.md#^definizione-cardinalita-di-un-insieme) $A$ con $n$ elementi (quindi $|A| = n$), allora il suo [insieme delle parti ](Teoria%20degli%20insiemi.md#^definizione-insieme-delle-parti) $\mathcal{P}(A)$ ha esattamente $2^n$ elementi, cioè $|\mathcal{P}(A)| = 2^{|A|}$. Per esempio, dato un insieme $A$ con $3$ elementi, il suo insieme delle parti $\mathcal{P}(A)$ avrà $2^3 = 8$ elementi.
+> Dato un [insieme](Matematica/Teoria%20degli%20insiemi/Teoria%20degli%20insiemi.md#^definizione-insieme) [finito](Matematica/Teoria%20degli%20insiemi/Teoria%20degli%20insiemi.md#^definizione-cardinalita-di-un-insieme) $A$ con $n$ elementi (quindi $|A| = n$), allora il suo [insieme delle parti ](Matematica/Teoria%20degli%20insiemi/Teoria%20degli%20insiemi.md#^definizione-insieme-delle-parti) $\mathcal{P}(A)$ ha esattamente $2^n$ elementi, cioè $|\mathcal{P}(A)| = 2^{|A|}$. Per esempio, dato un insieme $A$ con $3$ elementi, il suo insieme delle parti $\mathcal{P}(A)$ avrà $2^3 = 8$ elementi.
 ^osservazione-cardinalita-di-un-insieme-delle-parti
 
 %% 
@@ -398,11 +398,11 @@ A not= \emptyset, allora A not\subseteq {A}, mentre \emptyset \subseteq {\emptys
 
 # 3 - Uguaglianza di due insiemi
 
-L'uguaglianza di due [insiemi](Teoria%20degli%20insiemi.md#^definizione-insieme) viene verificata solo se viene rispettato il _principio di estensionalità_.
+L'uguaglianza di due [insiemi](Matematica/Teoria%20degli%20insiemi/Teoria%20degli%20insiemi.md#^definizione-insieme) viene verificata solo se viene rispettato il _principio di estensionalità_.
 
 > [!principio]+ Principio di estensionalità
 > 
-> Due [insiemi](Teoria%20degli%20insiemi.md#^definizione-insieme) sono **uguali** se e solo se hanno gli stessi elementi, ovvero:
+> Due [insiemi](Matematica/Teoria%20degli%20insiemi/Teoria%20degli%20insiemi.md#^definizione-insieme) sono **uguali** se e solo se hanno gli stessi elementi, ovvero:
 > $$
 > A = B \iff \forall x (x \in A \iff x \in B)
 > $$
@@ -410,13 +410,13 @@ L'uguaglianza di due [insiemi](Teoria%20degli%20insiemi.md#^definizione-insieme)
 
 > [!osservazione]+ Osservazione: irrilevanza dell'ordine e unicità degli elementi
 > 
-> Dato un insieme $\{-1, 2, 3\}$, per il [principio di estensionalità](Teoria%20degli%20insiemi.md#^principio-di-estensionalita), si ha che:
+> Dato un insieme $\{-1, 2, 3\}$, per il [principio di estensionalità](Matematica/Teoria%20degli%20insiemi/Teoria%20degli%20insiemi.md#^principio-di-estensionalita), si ha che:
 > 
 > $$
 > \{-1, 2, 3\} = \{2, -1, 3\} = \{-1, 2, 3, 3\}
 > $$
 > 
-> In altre parole: l'ordine in cui vengono elencati gli elementi di un insieme è irrilevante e le eventuali ripetizioni non contano, proprio perché per tutti e tre [insiemi](Teoria%20degli%20insiemi.md#^definizione-insieme) vale il principio di estensionalità e, quindi, sono in realtà tutti lo stesso insieme:
+> In altre parole: l'ordine in cui vengono elencati gli elementi di un insieme è irrilevante e le eventuali ripetizioni non contano, proprio perché per tutti e tre [insiemi](Matematica/Teoria%20degli%20insiemi/Teoria%20degli%20insiemi.md#^definizione-insieme) vale il principio di estensionalità e, quindi, sono in realtà tutti lo stesso insieme:
 > 
 > $$
 > \begin{array}{}
@@ -429,11 +429,11 @@ L'uguaglianza di due [insiemi](Teoria%20degli%20insiemi.md#^definizione-insieme)
 > Al contrario, $\{3, -1, 2\} \ne \{2, -1, 2\}$ poiché $3$ appartiene al primo insieme ma non al secondo.
 ^osservazione-irrilevanza-dell-ordine-e-unicita-degli-elementi
 
-Dal [principio di estensionalità](Teoria%20degli%20insiemi.md#^principio-di-estensionalita) si ottiene il [teorema della doppia inclusione](Teoria%20degli%20insiemi.md#^teorema-della-doppia-inclusione), usato spesso (in maniera implicita) per dimostrare%% link %% l'uguaglianza di due insiemi.
+Dal [principio di estensionalità](Matematica/Teoria%20degli%20insiemi/Teoria%20degli%20insiemi.md#^principio-di-estensionalita) si ottiene il [teorema della doppia inclusione](Matematica/Teoria%20degli%20insiemi/Teoria%20degli%20insiemi.md#^teorema-della-doppia-inclusione), usato spesso (in maniera implicita) per dimostrare%% link %% l'uguaglianza di due insiemi.
 
 > [!teorema]+ Teorema della doppia inclusione
 > 
-> Dati due [insiemi](Teoria%20degli%20insiemi.md#^definizione-insieme) $A$ e $B$, essi sono uguali se e solo se ciascuno è un sottoinsieme dell'altro contemporaneamente:
+> Dati due [insiemi](Matematica/Teoria%20degli%20insiemi/Teoria%20degli%20insiemi.md#^definizione-insieme) $A$ e $B$, essi sono uguali se e solo se ciascuno è un sottoinsieme dell'altro contemporaneamente:
 > $$
 > A = B \iff A \subseteq B \land B \subseteq A
 > $$
@@ -468,11 +468,11 @@ A \cup B = \emptyset ⇐⇒ A = B = \emptyset
 
 > [!definizione]+ Definizione: intersezione di due insiemi
 > 
-> Dati due [insiemi](Teoria%20degli%20insiemi.md#^definizione-insieme) $A$ e $B$, si dice _**intersezione**_ di $A$ e $B$ e si denota "$A\cap B$" l'insieme che comprende gli elementi che appartengono contemporaneamente sia ad $A$ che a $B$:
+> Dati due [insiemi](Matematica/Teoria%20degli%20insiemi/Teoria%20degli%20insiemi.md#^definizione-insieme) $A$ e $B$, si dice _**intersezione**_ di $A$ e $B$ e si denota "$A\cap B$" l'insieme che comprende gli elementi che appartengono contemporaneamente sia ad $A$ che a $B$:
 > $$
 > A \cap B = \{ x \mid x \in A \land x \in B \}
 > $$
-> Due [insiemi](Teoria%20degli%20insiemi.md#^definizione-insieme) $A$ e $B$ si dicono **_disgiunti_** se non hanno elementi in comune:
+> Due [insiemi](Matematica/Teoria%20degli%20insiemi/Teoria%20degli%20insiemi.md#^definizione-insieme) $A$ e $B$ si dicono **_disgiunti_** se non hanno elementi in comune:
 > $$
 > A \cap B = \emptyset
 > $$
@@ -539,7 +539,7 @@ maggiore di uno. Diciamo che A1, \ldots , An sono a due a due disgiunti se per o
 
 > [!definizione]+ Definizione: unione di due insiemi
 > 
-> Dati due [insiemi](Teoria%20degli%20insiemi.md#^definizione-insieme) $A$ e $B$, si dice _**unione**_ di $A$ e $B$ e si denota "$A\cup B$" l'insieme contenente tutti gli elementi di entrambi gli insiemi:
+> Dati due [insiemi](Matematica/Teoria%20degli%20insiemi/Teoria%20degli%20insiemi.md#^definizione-insieme) $A$ e $B$, si dice _**unione**_ di $A$ e $B$ e si denota "$A\cup B$" l'insieme contenente tutti gli elementi di entrambi gli insiemi:
 > $$
 > A \cup B = \{x \mid x \in A \lor x \in B\}
 > $$
@@ -592,7 +592,7 @@ maggiore di uno. Diciamo che A1, \ldots , An sono a due a due disgiunti se per o
 >  & B = \{n \in \mathbb{N} \mid n \bmod 2 = 1\}
 > \end{align*}
 > $$
-> ossia rispettivamente gli [insiemi](Teoria%20degli%20insiemi.md#^definizione-insieme) dei numeri naturali pari e dispari, allora lo loro unione è l'insieme dei numeri naturali $\mathbb{N}$%% link %%:
+> ossia rispettivamente gli [insiemi](Matematica/Teoria%20degli%20insiemi/Teoria%20degli%20insiemi.md#^definizione-insieme) dei numeri naturali pari e dispari, allora lo loro unione è l'insieme dei numeri naturali $\mathbb{N}$%% link %%:
 > $$
 > A \cup B = \mathbb{N}
 > $$
@@ -601,7 +601,7 @@ maggiore di uno. Diciamo che A1, \ldots , An sono a due a due disgiunti se per o
 
 > [!definizione]+ Definizione: differenza tra due insiemi
 > 
-> Dati due [insiemi](Teoria%20degli%20insiemi.md#^definizione-insieme) $A$ e $B$, si dice _**differenza**_ tra $A$ e $B$ e si denota "$A \setminus B$" l'insieme degli elementi presenti in $A$ ma non in $B$:
+> Dati due [insiemi](Matematica/Teoria%20degli%20insiemi/Teoria%20degli%20insiemi.md#^definizione-insieme) $A$ e $B$, si dice _**differenza**_ tra $A$ e $B$ e si denota "$A \setminus B$" l'insieme degli elementi presenti in $A$ ma non in $B$:
 > $$
 > A \setminus B = \{x \mid x \in A \land x \notin B\}
 > $$
@@ -627,7 +627,7 @@ maggiore di uno. Diciamo che A1, \ldots , An sono a due a due disgiunti se per o
 
 > [!definizione]+ Definizione: differenza simmetrica tra due insiemi
 > 
-> Dati due [insiemi](Teoria%20degli%20insiemi.md#^definizione-insieme) $A$ e $B$, si dice _**differenza simmetrica**_ tra $A$ e $B$ e si denota "$A \Delta B$" l'insieme degli elementi presenti solamente in uno dei due insiemi:
+> Dati due [insiemi](Matematica/Teoria%20degli%20insiemi/Teoria%20degli%20insiemi.md#^definizione-insieme) $A$ e $B$, si dice _**differenza simmetrica**_ tra $A$ e $B$ e si denota "$A \Delta B$" l'insieme degli elementi presenti solamente in uno dei due insiemi:
 > $$
 > A \Delta B = \{ x \mid \forall x ((x \in A \land x \notin B) \lor (x \in B \land x \notin A)) \}
 > $$
@@ -661,7 +661,7 @@ PRENDERE COME ESEMPIO:
 
 > [!osservazione]+ Osservazione: $\color{#7F7F7F}\complement_B(A)=B\backslash A$
 > 
-> Dati due [insiemi](Teoria%20degli%20insiemi.md#^definizione-insieme) $A$ e $B$ con $A\subseteq B$, il complemento $\complement_B(A)$ di $A$ in $B$ si può esprimere anche come la [differenza](Teoria%20degli%20insiemi.md#^definizione-differenza-tra-due-insiemi) $B\backslash A$ tra $B$ e $A$:
+> Dati due [insiemi](Matematica/Teoria%20degli%20insiemi/Teoria%20degli%20insiemi.md#^definizione-insieme) $A$ e $B$ con $A\subseteq B$, il complemento $\complement_B(A)$ di $A$ in $B$ si può esprimere anche come la [differenza](Matematica/Teoria%20degli%20insiemi/Teoria%20degli%20insiemi.md#^definizione-differenza-tra-due-insiemi) $B\backslash A$ tra $B$ e $A$:
 > $$
 > \complement_B(A)=B\backslash A
 > $$
@@ -683,7 +683,7 @@ Usare come notazione $\complement_\mathcal{U}(A)$ perché è più completa
 
 > [!definizione]+ Definizione: complemento di un insieme
 > 
-> Dati un [insieme universo](Teoria%20degli%20insiemi.md#^definizione-insieme-universo) $\mathcal{U}$ e un insieme $A \subseteq \mathcal{U}$, si dice _**complemento**_ di $A$ e si denota "$A^\complement$" (ma anche "$A'$", "$\overline{A}$", "$\complement_\mathcal{U}(A)$" e "$\complement(A)$") la [differenza](Teoria%20degli%20insiemi.md#^definizione-differenza-tra-due-insiemi) $\mathcal{U} \setminus A$, cioè il [sottoinsieme](Teoria%20degli%20insiemi.md#^definizione-sottoinsieme) degli elementi di $\mathcal{U}$ non in $A$:
+> Dati un [insieme universo](Matematica/Teoria%20degli%20insiemi/Teoria%20degli%20insiemi.md#^definizione-insieme-universo) $\mathcal{U}$ e un insieme $A \subseteq \mathcal{U}$, si dice _**complemento**_ di $A$ e si denota "$A^\complement$" (ma anche "$A'$", "$\overline{A}$", "$\complement_\mathcal{U}(A)$" e "$\complement(A)$") la [differenza](Matematica/Teoria%20degli%20insiemi/Teoria%20degli%20insiemi.md#^definizione-differenza-tra-due-insiemi) $\mathcal{U} \setminus A$, cioè il [sottoinsieme](Matematica/Teoria%20degli%20insiemi/Teoria%20degli%20insiemi.md#^definizione-sottoinsieme) degli elementi di $\mathcal{U}$ non in $A$:
 > $$
 > A^\complement = \mathcal{U} \setminus A = \{ x \mid x \in \mathcal{U} \land x \notin A \}
 > $$
@@ -691,13 +691,13 @@ Usare come notazione $\complement_\mathcal{U}(A)$ perché è più completa
 
 > [!osservazione]+ Osservazione: $\color{#7F7F7F}\mathbb{I} = \mathbb{Q}^\complement$ con $\color{#7F7F7F}\mathcal{U} = \mathbb{R}$
 > 
-> L'insieme dei numeri irrazionali $\mathbb{I}$%% link %% si può esprimere come complemento di $\mathbb{Q}$ se si considera come [insieme universo](Teoria%20degli%20insiemi.md#^definizione-insieme-universo) $\mathbb{R}$:
+> L'insieme dei numeri irrazionali $\mathbb{I}$%% link %% si può esprimere come complemento di $\mathbb{Q}$ se si considera come [insieme universo](Matematica/Teoria%20degli%20insiemi/Teoria%20degli%20insiemi.md#^definizione-insieme-universo) $\mathbb{R}$:
 > $$
 > \mathbb{I} = \mathbb{Q}^\complement \text{ con } \mathcal{U} = \mathbb{R}
 > $$
 
 > [!proprieta]+ Proprietà del doppio complemento: $\color{#FFFF7F}(A^\complement)^\complement = A$
-> Dati un [insieme universo](Teoria%20degli%20insiemi.md#^definizione-insieme-universo) $\mathcal{U}$ e un insieme $A \subseteq \mathcal{U}$, il doppio complemento $(A^\complement)^\complement$ di $A$ in $\mathcal{U}$ è sempre uguale ad $A$:
+> Dati un [insieme universo](Matematica/Teoria%20degli%20insiemi/Teoria%20degli%20insiemi.md#^definizione-insieme-universo) $\mathcal{U}$ e un insieme $A \subseteq \mathcal{U}$, il doppio complemento $(A^\complement)^\complement$ di $A$ in $\mathcal{U}$ è sempre uguale ad $A$:
 > $$
 > (A^\complement)^\complement = A
 > $$
@@ -737,7 +737,7 @@ Usare come notazione $\complement_\mathcal{U}(A)$ perché è più completa
 
 Le **leggi di De Morgan** (o **teoremi di De Morgan**) sono due regole fondamentali usate sia in **teoria degli insiemi** che in logica proposizionale%% link %%. Esse descrivono come negare combinazioni di proposizioni logiche o insiemi, permettendo di trasformare espressioni complesse in forme equivalenti.
 
-In particolare, in teoria degli insiemi, le leggi di De Morgan descrivono la relazione tra [intersezione](Teoria%20degli%20insiemi.md#^definizione-intersezione-di-due-insiemi), [unione](Teoria%20degli%20insiemi.md#^definizione-unione-di-due-insiemi) e [complemento](Teoria%20degli%20insiemi.md#^definizione-complemento-di-un-insieme) di due [insiemi](Teoria%20degli%20insiemi.md#^definizione-insieme) e si esprimono nei seguenti due teoremi.
+In particolare, in teoria degli insiemi, le leggi di De Morgan descrivono la relazione tra [intersezione](Matematica/Teoria%20degli%20insiemi/Teoria%20degli%20insiemi.md#^definizione-intersezione-di-due-insiemi), [unione](Matematica/Teoria%20degli%20insiemi/Teoria%20degli%20insiemi.md#^definizione-unione-di-due-insiemi) e [complemento](Matematica/Teoria%20degli%20insiemi/Teoria%20degli%20insiemi.md#^definizione-complemento-di-un-insieme) di due [insiemi](Matematica/Teoria%20degli%20insiemi/Teoria%20degli%20insiemi.md#^definizione-insieme) e si esprimono nei seguenti due teoremi.
 
 > [!proposizione]+ Prima legge di De Morgan: $\color{#FF7F7F}(A \cup B)^\complement = A^\complement \cap B^\complement$
 > 
@@ -800,7 +800,7 @@ In particolare, in teoria degli insiemi, le leggi di De Morgan descrivono la rel
 > 
 > > [!dimostrazione]- Dimostrazione alternativa
 > > 
-> > La stessa identità può anche essere dimostrata utilizzando ciò che abbiamo già dimostrato, ovvero che per tutti gli [insiemi](Teoria%20degli%20insiemi.md#^definizione-insieme) $X$ e $Y$ valgono $(X^\complement)^\complement = X$ per la [proprietà del doppio complemento](Teoria%20degli%20insiemi.md#^Doppio-complemento) e $(X \cup Y)^\complement = X^\complement \cap Y^\complement$ per la [prima legge di De Morgan](Teoria%20degli%20insiemi.md#^Prima-legge-di-De-Morgan).
+> > La stessa identità può anche essere dimostrata utilizzando ciò che abbiamo già dimostrato, ovvero che per tutti gli [insiemi](Matematica/Teoria%20degli%20insiemi/Teoria%20degli%20insiemi.md#^definizione-insieme) $X$ e $Y$ valgono $(X^\complement)^\complement = X$ per la [proprietà del doppio complemento](Matematica/Teoria%20degli%20insiemi/Teoria%20degli%20insiemi.md#^Doppio-complemento) e $(X \cup Y)^\complement = X^\complement \cap Y^\complement$ per la [prima legge di De Morgan](Matematica/Teoria%20degli%20insiemi/Teoria%20degli%20insiemi.md#^Prima-legge-di-De-Morgan).
 > > 
 > > %% colorare le trasformazioni %%
 > > Partendo da $(A \cap B)^\complement$, per la proprietà del doppio complemento abbiamo che:
@@ -827,7 +827,7 @@ Slide di Viale dalla 38 alla 42: varie dimostrazioni
 
 > [!definizione]+ Definizione: prodotto cartesiano di due insiemi
 > 
-> Dati due [insiemi](Teoria%20degli%20insiemi.md#^definizione-insieme) $A$ e $B$, si definisce ***prodotto cartesiano*** di $A$ e $B$ e si denota "$A \times B$" l'insieme i cui elementi sono [coppie ordinate](Teoria%20degli%20insiemi.md#^definizione-tupla) di elementi con il primo elemento in $A$ e il secondo in $B$:
+> Dati due [insiemi](Matematica/Teoria%20degli%20insiemi/Teoria%20degli%20insiemi.md#^definizione-insieme) $A$ e $B$, si definisce ***prodotto cartesiano*** di $A$ e $B$ e si denota "$A \times B$" l'insieme i cui elementi sono [coppie ordinate](Matematica/Teoria%20degli%20insiemi/Teoria%20degli%20insiemi.md#^definizione-tupla) di elementi con il primo elemento in $A$ e il secondo in $B$:
 > $$
 > A \times B = \{ (x, y) \mid x \in A \land y \in B \}
 > $$
@@ -851,7 +851,7 @@ Slide di Viale dalla 38 alla 42: varie dimostrazioni
 %%
 Esempio: prodotto cartesiano tra due intervalli e relativa rappresentazione grafica
 
-Dati due [insiemi](Teoria%20degli%20insiemi.md#^definizione-insieme) $A=\{x\mid 0\le x\le1\}$ e $B=\{x\mid -1\le x\le0\}$, %\%collegare a rappresentazione intervalli%\% rappresentabili anche con gli intervalli chiusi $A=[0,1]$ e $B=[-1,0]$, il loro prodotto cartesiano $A\times B$ è rappresentabile su un piano cartesiano come l'insieme di tutti i punti compresi tra il punto $\color{Red}A(0,1)$ e il punto $\color{Green}B(-1,0)$:
+Dati due [insiemi](Matematica/Teoria%20degli%20insiemi/Teoria%20degli%20insiemi.md#^definizione-insieme) $A=\{x\mid 0\le x\le1\}$ e $B=\{x\mid -1\le x\le0\}$, %\%collegare a rappresentazione intervalli%\% rappresentabili anche con gli intervalli chiusi $A=[0,1]$ e $B=[-1,0]$, il loro prodotto cartesiano $A\times B$ è rappresentabile su un piano cartesiano come l'insieme di tutti i punti compresi tra il punto $\color{Red}A(0,1)$ e il punto $\color{Green}B(-1,0)$:
 
 ![Prodotto cartesiano tra due intervalli e relativa rappresentazione grafica.png]]
 Embeddare Geogebra o [Manim](https://www.manim.community/)
@@ -866,7 +866,7 @@ Embeddare Geogebra o [Manim](https://www.manim.community/)
 
 > [!osservazione]+ Osservazione: $\color{#7F7F7F}A \ne \emptyset \land B \ne \emptyset \implies A \times B \ne \emptyset$
 > 
-> Il [prodotto cartesiano tra due insiemi](Teoria%20degli%20insiemi.md#^definizione-prodotto-cartesiano-di-due-insiemi) $A$ e $B$ non [vuoti](Teoria%20degli%20insiemi.md#^definizione-insieme-vuoto) è sempre pari a un insieme non vuoto:
+> Il [prodotto cartesiano tra due insiemi](Matematica/Teoria%20degli%20insiemi/Teoria%20degli%20insiemi.md#^definizione-prodotto-cartesiano-di-due-insiemi) $A$ e $B$ non [vuoti](Matematica/Teoria%20degli%20insiemi/Teoria%20degli%20insiemi.md#^definizione-insieme-vuoto) è sempre pari a un insieme non vuoto:
 > $$
 > A \ne \emptyset \land B \ne \emptyset \implies A \times B \ne \emptyset
 > $$
@@ -912,7 +912,7 @@ Ad esempio, se A = {0, 1, 2, 3} e B = {a, b, c}, allora la coppia (0, a) apparti
 
 > [!definizione]+ Definizione: potenza $\color{#FF7FFF} n$-sima di un insieme
 > 
-> Il [prodotto cartesiano](Teoria%20degli%20insiemi.md#^definizione-prodotto-cartesiano-di-due-insiemi) $\underbrace{A \times A \times \ldots \times A}_{n \text{volte}}$ di $n$ copie di un [insieme](Teoria%20degli%20insiemi.md#^definizione-insieme) $A$ viene detto **potenza $n$-esima di $A$** e si denota come "$A^n$":
+> Il [prodotto cartesiano](Matematica/Teoria%20degli%20insiemi/Teoria%20degli%20insiemi.md#^definizione-prodotto-cartesiano-di-due-insiemi) $\underbrace{A \times A \times \ldots \times A}_{n \text{volte}}$ di $n$ copie di un [insieme](Matematica/Teoria%20degli%20insiemi/Teoria%20degli%20insiemi.md#^definizione-insieme) $A$ viene detto **potenza $n$-esima di $A$** e si denota come "$A^n$":
 > 
 > $$
 > A^n = \underbrace{A \times A \times \ldots \times A}_{n \text{volte}} = \{ \langle x_0, x_1, \ldots, x_{n-1} \rangle \mid \forall i \in I (x_i \in A) \}
@@ -923,7 +923,7 @@ Ad esempio, se A = {0, 1, 2, 3} e B = {a, b, c}, allora la coppia (0, a) apparti
 
 > [!osservazione]+ Osservazione: valenza geometrica del prodotto cartesiano
 > 
-> Se si interpreta l'insieme $\mathbb{R}$ dei numeri reali%% link %% come una retta, allora il prodotto cartesiano $\mathbb{R}^2=\mathbb{R}\times\mathbb{R}$ è l'insieme formato da tutte le [coppie ordinate](Teoria%20degli%20insiemi.md#^definizione-tupla) $(x, y)$ di numeri reali:
+> Se si interpreta l'insieme $\mathbb{R}$ dei numeri reali%% link %% come una retta, allora il prodotto cartesiano $\mathbb{R}^2=\mathbb{R}\times\mathbb{R}$ è l'insieme formato da tutte le [coppie ordinate](Matematica/Teoria%20degli%20insiemi/Teoria%20degli%20insiemi.md#^definizione-tupla) $(x, y)$ di numeri reali:
 > $$
 > \mathbb{R}^2 = \{(x, y)\mid x \in \mathbb{R}\land y \in \mathbb{R}\}
 > $$
@@ -933,7 +933,7 @@ Ad esempio, se A = {0, 1, 2, 3} e B = {a, b, c}, allora la coppia (0, a) apparti
 
 > [!definizione]+ Definizione: famiglia di insiemi
 > 
-> Un [insieme](Teoria%20degli%20insiemi.md#^definizione-insieme) è detto **_famiglia di insiemi_** se ognuno degli elementi è a sua volta un insieme e viene denotata come:
+> Un [insieme](Matematica/Teoria%20degli%20insiemi/Teoria%20degli%20insiemi.md#^definizione-insieme) è detto **_famiglia di insiemi_** se ognuno degli elementi è a sua volta un insieme e viene denotata come:
 > $$
 > \{ A_i \}_{i \in I}
 > $$
@@ -944,14 +944,14 @@ Ad esempio, se A = {0, 1, 2, 3} e B = {a, b, c}, allora la coppia (0, a) apparti
 
 > [!definizione]+ Definizione: intersezione di una famiglia di insiemi
 > 
-> Data una [famiglia di insiemi](Teoria%20degli%20insiemi.md#^definizione-famiglia-di-insiemi) $\{ A_i \}_{i \in I}$, l'[intersezione](Teoria%20degli%20insiemi.md#^definizione-intersezione-di-due-insiemi) degli $A_i$ è l'insieme degli elementi che appartengono a ogni $A_i$:
+> Data una [famiglia di insiemi](Matematica/Teoria%20degli%20insiemi/Teoria%20degli%20insiemi.md#^definizione-famiglia-di-insiemi) $\{ A_i \}_{i \in I}$, l'[intersezione](Matematica/Teoria%20degli%20insiemi/Teoria%20degli%20insiemi.md#^definizione-intersezione-di-due-insiemi) degli $A_i$ è l'insieme degli elementi che appartengono a ogni $A_i$:
 > $$
 > \bigcap_{i = 1}^n A_i = \{x \mid \forall i \in I (x \in A_i)\}
 > $$
 
 > [!definizione]+ Definizione: unione di una famiglia di insiemi
 > 
-> Data una [famiglia di insiemi](Teoria%20degli%20insiemi.md#^definizione-famiglia-di-insiemi) $\{ A_i \}_{i \in I}$, l'[unione](Teoria%20degli%20insiemi.md#^definizione-unione-di-due-insiemi) degli $A_i$ è l'insieme degli elementi che appartengono ad almeno un $A_i$:
+> Data una [famiglia di insiemi](Matematica/Teoria%20degli%20insiemi/Teoria%20degli%20insiemi.md#^definizione-famiglia-di-insiemi) $\{ A_i \}_{i \in I}$, l'[unione](Matematica/Teoria%20degli%20insiemi/Teoria%20degli%20insiemi.md#^definizione-unione-di-due-insiemi) degli $A_i$ è l'insieme degli elementi che appartengono ad almeno un $A_i$:
 > $$
 > \bigcup_{i = 1}^n A_i = \{x \mid \exists i \in I (x \in A_i)\}
 > $$
@@ -967,7 +967,7 @@ Data una famiglia di insiemi $\mathcal A$ formata dagli $n$-esimi insiemi $A_n\i
 
 > [!definizione]+ Definizione: prodotto cartesiano di una famiglia di insiemi
 > 
-> Data una [famiglia di insiemi](Teoria%20degli%20insiemi.md#^definizione-famiglia-di-insiemi) $\{ A_i \}_{i \in I}$, il [prodotto cartesiano](Teoria%20degli%20insiemi.md#^definizione-prodotto-cartesiano-di-due-insiemi) degli $A_i$ è l'insieme delle [$n$-uple](Teoria%20degli%20insiemi.md#^definizione-tupla) $(x_1, x_2, \ldots, x_n)$ con $x_i\in A_i$:
+> Data una [famiglia di insiemi](Matematica/Teoria%20degli%20insiemi/Teoria%20degli%20insiemi.md#^definizione-famiglia-di-insiemi) $\{ A_i \}_{i \in I}$, il [prodotto cartesiano](Matematica/Teoria%20degli%20insiemi/Teoria%20degli%20insiemi.md#^definizione-prodotto-cartesiano-di-due-insiemi) degli $A_i$ è l'insieme delle [$n$-uple](Matematica/Teoria%20degli%20insiemi/Teoria%20degli%20insiemi.md#^definizione-tupla) $(x_1, x_2, \ldots, x_n)$ con $x_i\in A_i$:
 > 
 > $$
 > \prod_{i = 1}^n A_i = \{(x_1, x_2, \ldots, x_n) \mid \forall i\in I(x_i \in A_i)\}

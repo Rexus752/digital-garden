@@ -15,7 +15,7 @@ Negli anni Venti e Trenta del Novecento, logici e matematici come Hilbert, Göde
 
 Per rispondere, occorreva chiarire cosa significhi **calcolare in modo puramente meccanico**: come descrivere formalmente una sequenza di operazioni che, dato un valore iniziale, produca un risultato.
 
-Il matematico statunitense Alonzo Church sviluppò allora un formalismo minimale che prendeva come unica base il concetto di [funzione matematica](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione), in quanto una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) può essere rappresentata come un [processo che, dato un certo input, restituisce un certo output](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^osservazione-funzione-come-processo-con-input-e-output). La sua intuizione fu di considerare le [funzioni](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) non più soltanto come [relazioni](Relazioni%20tra%20insiemi.md#^definizione-relazione-n-aria) immutabili tra [insiemi](Teoria%20degli%20insiemi.md#^definizione-teoria-degli-insiemi), ma come oggetti matematici manipolabili, su cui fondare una nuova branca della matematica: ecco quindi la nascita del [$\lambda$-calcolo](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-lambda-calcolo).
+Il matematico statunitense Alonzo Church sviluppò allora un formalismo minimale che prendeva come unica base il concetto di [funzione matematica](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione), in quanto una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) può essere rappresentata come un [processo che, dato un certo input, restituisce un certo output](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^osservazione-funzione-come-processo-con-input-e-output). La sua intuizione fu di considerare le [funzioni](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) non più soltanto come [relazioni](Matematica/Teoria%20degli%20insiemi/Relazioni%20tra%20insiemi.md#^definizione-relazione-n-aria) immutabili tra [insiemi](Matematica/Teoria%20degli%20insiemi/Teoria%20degli%20insiemi.md#^definizione-teoria-degli-insiemi), ma come oggetti matematici manipolabili, su cui fondare una nuova branca della matematica: ecco quindi la nascita del [$\lambda$-calcolo](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-lambda-calcolo).
 
 > [!definizione]+ Definizione: $\color{#FF7FFF} \lambda$-calcolo
 > 
@@ -57,7 +57,7 @@ f \colon & A \to B \\
 \end{align*}
 $$
 
-Il signor Church, per rendere la notazione più scorrevole e, soprattutto, il più astratta possibile (in modo da poterci fare operazioni più comodamente), scelse di evitare di indicare per ogni [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) il suo nome (in questo caso $f$) e gli [insiemi](Teoria%20degli%20insiemi.md#^definizione-insieme) posti in [relazione](Relazioni%20tra%20insiemi.md#^definizione-relazione-n-aria) ($A$ e $B$), valorizzando in particolare proprio la trasformazione che avviene grazie alla [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) ($a \mapsto b$).
+Il signor Church, per rendere la notazione più scorrevole e, soprattutto, il più astratta possibile (in modo da poterci fare operazioni più comodamente), scelse di evitare di indicare per ogni [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) il suo nome (in questo caso $f$) e gli [insiemi](Matematica/Teoria%20degli%20insiemi/Teoria%20degli%20insiemi.md#^definizione-insieme) posti in [relazione](Matematica/Teoria%20degli%20insiemi/Relazioni%20tra%20insiemi.md#^definizione-relazione-n-aria) ($A$ e $B$), valorizzando in particolare proprio la trasformazione che avviene grazie alla [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) ($a \mapsto b$).
 
 La nuova notazione di Church rappresenta le [funzioni](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) introducendole con un $\lambda$ (da qui il nome del [$\lambda$-calcolo](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-lambda-calcolo)) per indicare l'inizio della definizione di una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione), seguito dalle due variabili separate da un punto:
 
@@ -538,9 +538,9 @@ trucco per ricordarsi come fare la sostituzione
 
 ## 2.2 - $\alpha$-conversione
 
-Abbiamo detto che le [funzioni matematiche](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) sono quindi un modo per rappresentare in maniera generica una [relazione](Relazioni%20tra%20insiemi.md#^definizione-relazione-n-aria) tra due [insiemi](Teoria%20degli%20insiemi.md#^definizione-insieme).
+Abbiamo detto che le [funzioni matematiche](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) sono quindi un modo per rappresentare in maniera generica una [relazione](Matematica/Teoria%20degli%20insiemi/Relazioni%20tra%20insiemi.md#^definizione-relazione-n-aria) tra due [insiemi](Matematica/Teoria%20degli%20insiemi/Teoria%20degli%20insiemi.md#^definizione-insieme).
 
-Per esempio, la [relazione](Relazioni%20tra%20insiemi.md#^definizione-relazione-n-aria) che associa a ogni numero naturale $x$ il suo quadrato $x^2$ (anch'esso nell'insieme dei numeri naturali $\mathbb{N}$) possiamo rappresentarla con la [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione)
+Per esempio, la [relazione](Matematica/Teoria%20degli%20insiemi/Relazioni%20tra%20insiemi.md#^definizione-relazione-n-aria) che associa a ogni numero naturale $x$ il suo quadrato $x^2$ (anch'esso nell'insieme dei numeri naturali $\mathbb{N}$) possiamo rappresentarla con la [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione)
 
 $$
 \begin{align*}
@@ -571,7 +571,7 @@ Queste tre rappresentazioni sono perfettamente equivalenti e, nell'ambito del [
 
 > [!definizione]+ Definizione: $\alpha$-conversione
 > 
-> L'**$\alpha$-conversione**, denotata con $\equiv_\alpha$, è una [relazione binaria](Relazioni%20tra%20insiemi.md#^definizione-relazione-n-aria) tra due [astrazioni](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-astrazione) $\lambda x.M$ e $\lambda y.M$ che permette di rinominare la [variabile legata](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-variabili-libere-e-legate) $x$ in un'altra [variabile legata](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-variabili-libere-e-legate) $y$ senza alterare il significato del [termine](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-termine):
+> L'**$\alpha$-conversione**, denotata con $\equiv_\alpha$, è una [relazione binaria](Matematica/Teoria%20degli%20insiemi/Relazioni%20tra%20insiemi.md#^definizione-relazione-n-aria) tra due [astrazioni](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-astrazione) $\lambda x.M$ e $\lambda y.M$ che permette di rinominare la [variabile legata](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-variabili-libere-e-legate) $x$ in un'altra [variabile legata](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-variabili-libere-e-legate) $y$ senza alterare il significato del [termine](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-termine):
 > 
 > $$
 > y \notin \text{fv(M)} \iff \lambda x.M \equiv_\alpha \lambda y.M [y / x]
@@ -734,13 +734,13 @@ Avendo definito formalmente la [riduzione singola](Informatica/Lambda-calcolo/L
 
 ## 2.6 - Conversione
 
-La [riduzione multipla](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-riduzione-multipla) è una [relazione](Relazioni%20tra%20insiemi.md#^definizione-relazione-n-aria) tra due [termini](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-termine) che può essere interpretata come una sorta di "equivalenza" tra di essi: se abbiamo che $M \Rightarrow N$, allora possiamo dedurre che in qualche modo dal [termine](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-termine) $M$ si può arrivare al [termine](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-termine) $N$, seppur con più di qualche passaggio di [riduzione singola](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-riduzione-singola). Viceversa, facendo lo stesso discorso per le _espansioni_, cioè [$\beta$-espansione](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-beta-riduzione) ed [$\eta$-espansione](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-eta-riduzione), si potrebbe dire che da $N$ possiamo risalire a $M$. Insomma, si potrebbe dire che $M$ ed $N$ sono uguali _semanticamente_, cioè rappresentano la stessa [funzione](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-astrazione).
+La [riduzione multipla](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-riduzione-multipla) è una [relazione](Matematica/Teoria%20degli%20insiemi/Relazioni%20tra%20insiemi.md#^definizione-relazione-n-aria) tra due [termini](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-termine) che può essere interpretata come una sorta di "equivalenza" tra di essi: se abbiamo che $M \Rightarrow N$, allora possiamo dedurre che in qualche modo dal [termine](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-termine) $M$ si può arrivare al [termine](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-termine) $N$, seppur con più di qualche passaggio di [riduzione singola](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-riduzione-singola). Viceversa, facendo lo stesso discorso per le _espansioni_, cioè [$\beta$-espansione](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-beta-riduzione) ed [$\eta$-espansione](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-eta-riduzione), si potrebbe dire che da $N$ possiamo risalire a $M$. Insomma, si potrebbe dire che $M$ ed $N$ sono uguali _semanticamente_, cioè rappresentano la stessa [funzione](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-astrazione).
 
 A questa intercambiabilità tra [termini](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-termine) collegati da una [riduzione multipla](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-riduzione-multipla) diamo il nome di [_conversione_](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-conversione).
 
 > [!definizione]+ Definizione: conversione
 > 
-> Sia $\Lambda$ l'[insieme](Teoria%20degli%20insiemi.md#^definizione-insieme) di [termini](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-termine) del [$\lambda$-calcolo](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-lambda-calcolo). La [relazione binaria](Relazioni%20tra%20insiemi.md#^definizione-relazione-n-aria) $\Leftrightarrow\, \subseteq \Lambda \times \Lambda$ è detta **conversione** ed è definita come segue:
+> Sia $\Lambda$ l'[insieme](Matematica/Teoria%20degli%20insiemi/Teoria%20degli%20insiemi.md#^definizione-insieme) di [termini](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-termine) del [$\lambda$-calcolo](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-lambda-calcolo). La [relazione binaria](Matematica/Teoria%20degli%20insiemi/Relazioni%20tra%20insiemi.md#^definizione-relazione-n-aria) $\Leftrightarrow\, \subseteq \Lambda \times \Lambda$ è detta **conversione** ed è definita come segue:
 > 
 > $$
 > \forall M,N \in \Lambda (M \Leftrightarrow N \iff (M \Rightarrow N \lor N \Rightarrow M))
@@ -807,7 +807,7 @@ Intanto, ai [termini](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-
 > \forall M \in \Lambda \big( (M \not\to) \iff \not\exists N \in \Lambda (M \to N) \big)
 > $$
 > 
-> dove $\Lambda$ è l'[insieme](Teoria%20degli%20insiemi.md#^definizione-insieme) di [termini](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-termine) del [$\lambda$-calcolo](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-lambda-calcolo).
+> dove $\Lambda$ è l'[insieme](Matematica/Teoria%20degli%20insiemi/Teoria%20degli%20insiemi.md#^definizione-insieme) di [termini](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-termine) del [$\lambda$-calcolo](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-lambda-calcolo).
 ^definizione-forma-normale
 
 ## 3.1 - Confluenza
@@ -837,7 +837,7 @@ Quindi la confluenza vale finché non ci sono di mezzo modifiche della memoria (
 
 > [!teorema]+ Teorema della confluenza
 > 
-> Sia $\Lambda$ l'[insieme](Teoria%20degli%20insiemi.md#^definizione-insieme) di [termini](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-termine) del [$\lambda$-calcolo](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-lambda-calcolo).
+> Sia $\Lambda$ l'[insieme](Matematica/Teoria%20degli%20insiemi/Teoria%20degli%20insiemi.md#^definizione-insieme) di [termini](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-termine) del [$\lambda$-calcolo](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-lambda-calcolo).
 > Dati tre [termini](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-termine) $M, N_1, N_2 \in \Lambda$, con $M \Rightarrow N_1$ e $M \Rightarrow N_2$, allora esiste un [termine](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-termine) $N \in \Lambda$ tale che $N_1 \Rightarrow N$ e $N_2 \Rightarrow N$.
 > 
 > $$
@@ -859,7 +859,7 @@ Grazie alla forma normale, possiamo aggiungere un importante corollario al teore
 > \forall M \in  \Lambda , \exists N_1,N_2 \in  \Lambda \Big(\big((M \Rightarrow N_1\not\to)\land(M \Rightarrow N_2\not\to)\big) \implies (N_1 \equiv_\alpha N_2)\Big)
 > $$
 > 
-> dove $\Lambda$ è l'[insieme](Teoria%20degli%20insiemi.md#^definizione-insieme) di [termini](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-termine) del [$\lambda$-calcolo](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-lambda-calcolo).
+> dove $\Lambda$ è l'[insieme](Matematica/Teoria%20degli%20insiemi/Teoria%20degli%20insiemi.md#^definizione-insieme) di [termini](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-termine) del [$\lambda$-calcolo](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-lambda-calcolo).
 
 %% questo corollario è importantissimo: ci assicura che i nostri programmi in lambda-calcolo si comportano in maniera deterministica %%
 

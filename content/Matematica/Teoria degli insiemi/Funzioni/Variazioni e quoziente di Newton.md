@@ -27,7 +27,7 @@
 
 > [!definizione]+ Definizione: quoziente di Newton
 > 
-> Data una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e due punti distinti%% Link %% $x_1, x_2 \in \text{dom}(f)$, diciamo che il **quoziente di Newton di $f$ tra $x_1$ e $x_2$** (o **tasso medio di variazione di $f$ nel passaggio da $x_1$ a $x_2$**) è il quoziente%% link %% tra la [variazione di $x$](Variazioni%20e%20quoziente%20di%20Newton.md#^definizione-variazione-di-x-nel-passaggio-da-x1-a-x2) e la [variazione di $f$](Variazioni%20e%20quoziente%20di%20Newton.md#^definizione-variazione-di-f-nel-passaggio-da-x1-a-x2):
+> Data una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e due punti distinti%% Link %% $x_1, x_2 \in \text{dom}(f)$, diciamo che il **quoziente di Newton di $f$ tra $x_1$ e $x_2$** (o **tasso medio di variazione di $f$ nel passaggio da $x_1$ a $x_2$**) è il quoziente%% link %% tra la [variazione di $x$](Matematica/Teoria%20degli%20insiemi/Funzioni/Variazioni%20e%20quoziente%20di%20Newton.md#^definizione-variazione-di-x-nel-passaggio-da-x1-a-x2) e la [variazione di $f$](Matematica/Teoria%20degli%20insiemi/Funzioni/Variazioni%20e%20quoziente%20di%20Newton.md#^definizione-variazione-di-f-nel-passaggio-da-x1-a-x2):
 > 
 > $$
 > \dfrac{\Delta f}{\Delta x} = \dfrac{f(x_2) - f(x_1)}{x_2 - x_1}
@@ -42,7 +42,7 @@ spiegare nella definizione perché si chiama Quoziente di Newton
 >
 > Consideriamo la [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f(x) = x^2$ e i punti%% Link %% $x_1 = 2$ e $x_2 = 5$.
 > 
-> La [variazione di $x$ nel passaggio da $x_1$ a $x_2$](Variazioni%20e%20quoziente%20di%20Newton.md#^definizione-variazione-di-x-nel-passaggio-da-x1-a-x2) è:
+> La [variazione di $x$ nel passaggio da $x_1$ a $x_2$](Matematica/Teoria%20degli%20insiemi/Funzioni/Variazioni%20e%20quoziente%20di%20Newton.md#^definizione-variazione-di-x-nel-passaggio-da-x1-a-x2) è:
 > 
 > $$
 > \begin{align*}
@@ -52,7 +52,7 @@ spiegare nella definizione perché si chiama Quoziente di Newton
 > \end{align*}
 > $$
 >
-> La [variazione di $f$ nel passaggio da $x_1$ a $x_2$](Variazioni%20e%20quoziente%20di%20Newton.md#^definizione-variazione-di-f-nel-passaggio-da-x1-a-x2) è:
+> La [variazione di $f$ nel passaggio da $x_1$ a $x_2$](Matematica/Teoria%20degli%20insiemi/Funzioni/Variazioni%20e%20quoziente%20di%20Newton.md#^definizione-variazione-di-f-nel-passaggio-da-x1-a-x2) è:
 >
 > $$
 > \begin{align*}
@@ -63,7 +63,7 @@ spiegare nella definizione perché si chiama Quoziente di Newton
 > \end{align*}
 > $$
 > 
-> Il [quoziente di Newton](Variazioni%20e%20quoziente%20di%20Newton.md#^definizione-quoziente-di-newton) è:
+> Il [quoziente di Newton](Matematica/Teoria%20degli%20insiemi/Funzioni/Variazioni%20e%20quoziente%20di%20Newton.md#^definizione-quoziente-di-newton) è:
 > 
 > $$
 > \begin{align*}

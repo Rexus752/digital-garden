@@ -7,7 +7,7 @@
 
 ---
 
-Dopo aver definito gli [asintoti verticali](Asintoti%20verticali%20e%20orizzontali.md#^definizione-asintoto-verticale) e quelli [orizzontali](Asintoti%20verticali%20e%20orizzontali.md#^definizione-asintoto-orizzontale), ora vediamo quelli [_obliqui_](Asintoti%20obliqui.md#^definizione-asintoto-obliquo).
+Dopo aver definito gli [asintoti verticali](Matematica/Analisi%20matematica/Limiti/Asintoti%20verticali%20e%20orizzontali.md#^definizione-asintoto-verticale) e quelli [orizzontali](Matematica/Analisi%20matematica/Limiti/Asintoti%20verticali%20e%20orizzontali.md#^definizione-asintoto-orizzontale), ora vediamo quelli [_obliqui_](Matematica/Analisi%20matematica/Limiti/Asintoti%20obliqui.md#^definizione-asintoto-obliquo).
 
 > [!definizione]+ Definizione: asintoto obliquo
 > 
@@ -30,16 +30,16 @@ Osservazioni 4.36 pagg. 210-211
 
 > [!teorema]+ Teorema di caratterizzazione degli asintoti obliqui
 > 
-> Data una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ con $\text{dom}(f)$ illimitato superiormente%% Link %% (o inferiormente%% link %%) e dati $m,q \in \mathbb{R}$ con $m \ne 0$, la retta%% link %% $y = mx + q$ è un [asintoto obliquo destro](Asintoti%20obliqui.md#^definizione-asintoto-obliquo) (o [sinistro](Asintoti%20obliqui.md#^definizione-asintoto-obliquo)) se e solo se
-> 1. $f$ è un [infinito](Infiniti%20e%20infinitesimi.md#^definizione-infinito-e-infinitesimo) per $x \to + \infty$ (o per $x \to - \infty$):
+> Data una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ con $\text{dom}(f)$ illimitato superiormente%% Link %% (o inferiormente%% link %%) e dati $m,q \in \mathbb{R}$ con $m \ne 0$, la retta%% link %% $y = mx + q$ è un [asintoto obliquo destro](Matematica/Analisi%20matematica/Limiti/Asintoti%20obliqui.md#^definizione-asintoto-obliquo) (o [sinistro](Matematica/Analisi%20matematica/Limiti/Asintoti%20obliqui.md#^definizione-asintoto-obliquo)) se e solo se
+> 1. $f$ è un [infinito](Matematica/Analisi%20matematica/Limiti/Infiniti%20e%20infinitesimi.md#^definizione-infinito-e-infinitesimo) per $x \to + \infty$ (o per $x \to - \infty$):
 > 	$$
 > 	\lim_{x \to \pm \infty} f(x) = \pm \infty
 > 	$$
-> 2. $f$ è un [infinito di ordine $1$ rispetto all'infinito campione $u(x) = |x|$](Infiniti%20e%20infinitesimi.md#^definizione-infinitesimo-di-ordine-alfa-rispetto-all-infinitesimo-campione-u) per $x \to + \infty$ (o per $x \to - \infty$):
+> 2. $f$ è un [infinito di ordine $1$ rispetto all'infinito campione $u(x) = |x|$](Matematica/Analisi%20matematica/Limiti/Infiniti%20e%20infinitesimi.md#^definizione-infinitesimo-di-ordine-alfa-rispetto-all-infinitesimo-campione-u) per $x \to + \infty$ (o per $x \to - \infty$):
 > 	$$
 > 	\lim_{x \to \pm \infty} \dfrac{f(x)}{|x|} = m
 > 	$$
-> 3. Vale il seguente [limite](Limiti.md#^definizione-limite):
+> 3. Vale il seguente [limite](Matematica/Analisi%20matematica/Limiti/Limiti.md#^definizione-limite):
 > 	$$
 > 	\lim_{x \to \pm \infty} \left( f(x) - mx \right) = q
 > 	$$

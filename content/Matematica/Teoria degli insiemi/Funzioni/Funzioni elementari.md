@@ -22,7 +22,7 @@
 
 %% 
 Osservazione:
-Nel caso della [funzione lineare](Funzioni%20elementari.md#^definizione-funzione-lineare), il quoziente di Newton corrisponde proprio al [coefficiente angolare](Funzioni%20elementari.md#^definizione-coefficiente-angolare).
+Nel caso della [funzione lineare](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni%20elementari.md#^definizione-funzione-lineare), il quoziente di Newton corrisponde proprio al [coefficiente angolare](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni%20elementari.md#^definizione-coefficiente-angolare).
 
 citare questa osservazione anche negli esempi e osservazioni successivi
 %%
@@ -98,35 +98,35 @@ citare questa osservazione anche negli esempi e osservazioni successivi
 > Si può quindi evincere che la pendenza della retta dipende dal coefficiente $m$ e, in particolare, quando $m = 0$ la retta è orizzontale e parallela al piano delle ascisse.
 ^osservazione-m-indica-la-pendenza-di-una-funzione-lineare
 
-Proprio perché [$m$ indica la pendenza di una funzione lineare](Funzioni%20elementari.md#^osservazione-m-indica-la-pendenza-di-una-funzione-lineare), viene spesso chiamato _coefficiente angolare_%% perchè indica l'angolo ??? %%.
+Proprio perché [$m$ indica la pendenza di una funzione lineare](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni%20elementari.md#^osservazione-m-indica-la-pendenza-di-una-funzione-lineare), viene spesso chiamato _coefficiente angolare_%% perchè indica l'angolo ??? %%.
 
 > [!definizione]+ Definizione: coefficiente angolare
 > 
-> In una [funzione lineare](Funzioni%20elementari.md#^definizione-funzione-lineare) $y = mx + q$ il coefficiente $m$ viene detto **coefficiente angolare** o **pendenza della retta** o **coefficiente di proporzionalità tra la variazione di $f$ e quella di $x$**.
+> In una [funzione lineare](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni%20elementari.md#^definizione-funzione-lineare) $y = mx + q$ il coefficiente $m$ viene detto **coefficiente angolare** o **pendenza della retta** o **coefficiente di proporzionalità tra la variazione di $f$ e quella di $x$**.
 ^definizione-coefficiente-angolare
 
 > [!osservazione]+ Osservazione: funzione lineare rappresenta (quasi) ogni retta del piano cartesiano
 > 
-> Ogni retta del piano cartesiano può essere rappresentata da una [funzione lineare](Funzioni%20elementari.md#^definizione-funzione-lineare), eccetto una retta particolare: quella verticale, cioè la retta che ha pendenza infinita. Dal momento che, per avere pendenza infinita, $m$ dovrebbe essere uguale a $\pm \infty$ ma le [funzioni lineari](Funzioni%20elementari.md#^definizione-funzione-lineare) accettano solo valori reali%% link %% di $m$ (perché $m \in \mathbb{R}$), con le [funzioni lineari](Funzioni%20elementari.md#^definizione-funzione-lineare) non si possono rappresentare le rette verticali.
+> Ogni retta del piano cartesiano può essere rappresentata da una [funzione lineare](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni%20elementari.md#^definizione-funzione-lineare), eccetto una retta particolare: quella verticale, cioè la retta che ha pendenza infinita. Dal momento che, per avere pendenza infinita, $m$ dovrebbe essere uguale a $\pm \infty$ ma le [funzioni lineari](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni%20elementari.md#^definizione-funzione-lineare) accettano solo valori reali%% link %% di $m$ (perché $m \in \mathbb{R}$), con le [funzioni lineari](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni%20elementari.md#^definizione-funzione-lineare) non si possono rappresentare le rette verticali.
 
 > [!osservazione]+ Osservazione: $\color{#7F7F7F} q$ indica la distanza dall'origine
 > 
-> Analizziamo ora il comportamento di $f$ al variare di $q$. Possiamo osservare che una [funzione lineare](Funzioni%20elementari.md#^definizione-funzione-lineare) interseca l'asse delle ordinate%% link %% sempre nel punto $(0,q)$, quindi quando $q = 0$ la retta passa per l'origine%% link %% $O(0,0)$. 
+> Analizziamo ora il comportamento di $f$ al variare di $q$. Possiamo osservare che una [funzione lineare](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni%20elementari.md#^definizione-funzione-lineare) interseca l'asse delle ordinate%% link %% sempre nel punto $(0,q)$, quindi quando $q = 0$ la retta passa per l'origine%% link %% $O(0,0)$. 
 
 > [!teorema]+ Teorema della pendenza costante della funzione lineare
 > 
-> Data una [funzione lineare](Funzioni%20elementari.md#^definizione-funzione-lineare) $f(x) = mx+q$ con $x \in \mathbb{R}$ e $m,q \in \mathbb{R}$ fissati, allora per ogni coppia di punti%% link %% distinti%% link %% $x_1, x_2 \in \mathbb{R}$ si ha che il [quoziente di Newton](Variazioni%20e%20quoziente%20di%20Newton.md#^definizione-quoziente-di-newton) è sempre pari a $m$:
+> Data una [funzione lineare](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni%20elementari.md#^definizione-funzione-lineare) $f(x) = mx+q$ con $x \in \mathbb{R}$ e $m,q \in \mathbb{R}$ fissati, allora per ogni coppia di punti%% link %% distinti%% link %% $x_1, x_2 \in \mathbb{R}$ si ha che il [quoziente di Newton](Matematica/Teoria%20degli%20insiemi/Funzioni/Variazioni%20e%20quoziente%20di%20Newton.md#^definizione-quoziente-di-newton) è sempre pari a $m$:
 > 
 > $$
 > \forall x_1, x_2 \in \mathbb{R} . \left( x_1 \ne x_2 \implies \dfrac{\Delta f}{\Delta x} = \dfrac{f(x_2) - f(x_1)}{x_2 - x_1} = m \right) 
 > $$
 > 
-> Cioè, in una [funzione lineare](Funzioni%20elementari.md#^definizione-funzione-lineare), il [coefficiente angolare $m$](Funzioni%20elementari.md#^definizione-coefficiente-angolare) (che [rappresenta la pendenza](Funzioni%20elementari.md#^osservazione-m-indica-la-pendenza-di-una-funzione-lineare)) è costante%% link %%.
+> Cioè, in una [funzione lineare](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni%20elementari.md#^definizione-funzione-lineare), il [coefficiente angolare $m$](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni%20elementari.md#^definizione-coefficiente-angolare) (che [rappresenta la pendenza](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni%20elementari.md#^osservazione-m-indica-la-pendenza-di-una-funzione-lineare)) è costante%% link %%.
 ^teorema-della-pendenza-costante-della-funzione-lineare
 
 > [!dimostrazione]- Dimostrazione del teorema della pendenza costante della funzione lineare
 > 
-> Dimostriamo il [teorema della pendenza costante della funzione lineare](Funzioni%20elementari.md#^teorema-della-pendenza-costante-della-funzione-lineare).
+> Dimostriamo il [teorema della pendenza costante della funzione lineare](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni%20elementari.md#^teorema-della-pendenza-costante-della-funzione-lineare).
 > 
 > Tramite una serie di passaggi, dimostriamo che vale l'equivalenza:
 > 

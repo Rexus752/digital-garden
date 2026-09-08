@@ -11,16 +11,16 @@
 dimostrazioni sempre come callout a parte perché se no i riferimenti non funzionano
 %%
 
-La [**matematica**](Matematica.md#^definizione-matematica) è una delle mie discipline preferite in assoluto. Mi ha sempre affascinato fin da quando ero piccolo, motivo per cui molto probabilmente ho fin da subito sviluppato una _forma mentis_ molto più tecnica che artistica/umanistica.
+La [**matematica**](Matematica/Matematica.md#^definizione-matematica) è una delle mie discipline preferite in assoluto. Mi ha sempre affascinato fin da quando ero piccolo, motivo per cui molto probabilmente ho fin da subito sviluppato una _forma mentis_ molto più tecnica che artistica/umanistica.
 
-Dico spesso che, in un'altra vita, se non avessi sviluppato la passione per l'informatica%% Link %%, quasi certamente sarei finito per studiare matematica. Non che il percorso che ho scelto mi dispiaccia, anzi, l'approccio che ho avuto nei confronti dell'informatica%% Link %% a livello didattico (universitario) è stato particolarmente orientato alla [matematica](Matematica.md#^definizione-matematica), cosa che mi ha portato ad apprezzarla ulteriormente.
+Dico spesso che, in un'altra vita, se non avessi sviluppato la passione per l'informatica%% Link %%, quasi certamente sarei finito per studiare matematica. Non che il percorso che ho scelto mi dispiaccia, anzi, l'approccio che ho avuto nei confronti dell'informatica%% Link %% a livello didattico (universitario) è stato particolarmente orientato alla [matematica](Matematica/Matematica.md#^definizione-matematica), cosa che mi ha portato ad apprezzarla ulteriormente.
 
 > [!definizione]+ Definizione: matematica
 > 
 > La **matematica** è la disciplina che studia le quantità, i numeri, lo spazio, le strutture, i calcoli e, in generale, gli oggetti astratti rigorosamente definiti, la loro stessa definizione e le relazioni tra essi.
 ^definizione-matematica
 
-In questa pagina potresti trovare roba sparsa di [matematica](Matematica.md#^definizione-matematica) che non ho ancora asistemato in altre pagine.
+In questa pagina potresti trovare roba sparsa di [matematica](Matematica/Matematica.md#^definizione-matematica) che non ho ancora asistemato in altre pagine.
 
 # 1 - Distanza tra due punti sulla retta reale
 

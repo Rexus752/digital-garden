@@ -81,19 +81,19 @@ esempio figura 1.11 pag. 10 dambrosio
 
 > [!osservazione]+ Osservazione: simmetria dei grafici di funzioni pari e dispari
 > 
-> In termini di [grafico](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-grafico-di-una-funzione) $\Gamma_f$ di $f$ è semplice osservare che, per una [funzione pari](Proprietà%20delle%20funzioni.md#^definizione-funzioni-pari-e-dispari), vale
+> In termini di [grafico](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-grafico-di-una-funzione) $\Gamma_f$ di $f$ è semplice osservare che, per una [funzione pari](Matematica/Teoria%20degli%20insiemi/Funzioni/Proprietà%20delle%20funzioni.md#^definizione-funzioni-pari-e-dispari), vale
 > 
 > $$
 > (x,y) \in \Gamma_f \iff (-x,y) \in \Gamma_f
 > $$
 > 
-> mentre, per una [funzione dispari](Proprietà%20delle%20funzioni.md#^definizione-funzioni-pari-e-dispari), vale
+> mentre, per una [funzione dispari](Matematica/Teoria%20degli%20insiemi/Funzioni/Proprietà%20delle%20funzioni.md#^definizione-funzioni-pari-e-dispari), vale
 > 
 > $$
 > (x,y) \in \Gamma_f \iff (-x,-y) \in \Gamma_f
 > $$
 > 
-> Questo significa che il grafico%% link grafico grafico %% di una [funzione pari](Proprietà%20delle%20funzioni.md#^definizione-funzioni-pari-e-dispari) è simmetrico rispetto all'asse delle ordinate%% link %%, mentre il grafico%% link grafico grafico %% di una [funzione dispari](Proprietà%20delle%20funzioni.md#^definizione-funzioni-pari-e-dispari) è simmetrico rispetto all'origine.
+> Questo significa che il grafico%% link grafico grafico %% di una [funzione pari](Matematica/Teoria%20degli%20insiemi/Funzioni/Proprietà%20delle%20funzioni.md#^definizione-funzioni-pari-e-dispari) è simmetrico rispetto all'asse delle ordinate%% link %%, mentre il grafico%% link grafico grafico %% di una [funzione dispari](Matematica/Teoria%20degli%20insiemi/Funzioni/Proprietà%20delle%20funzioni.md#^definizione-funzioni-pari-e-dispari) è simmetrico rispetto all'origine.
 
 %% esempio definizione 1.1.5 pagina 11 Dambrosio %%
 
@@ -115,7 +115,7 @@ esempio figura 1.11 pag. 10 dambrosio
 
 > [!osservazione]+ Osservazione: grafico di una funzione periodica
 > 
-> È semplice osservare che il grafico%% link grafico grafico %% di una [funzione periodica](Proprietà%20delle%20funzioni.md#^definizione-funzione-periodica) $f$ di periodo $T$ è invariante per traslazioni orizzontali di ampiezza $T$: questo significa che è sufficiente tracciare il grafico di $f$ su un intervallo di lunghezza $T$ e ripeterlo infinite volte a destra e a sinistra dell'intervallo considerato.
+> È semplice osservare che il grafico%% link grafico grafico %% di una [funzione periodica](Matematica/Teoria%20degli%20insiemi/Funzioni/Proprietà%20delle%20funzioni.md#^definizione-funzione-periodica) $f$ di periodo $T$ è invariante per traslazioni orizzontali di ampiezza $T$: questo significa che è sufficiente tracciare il grafico di $f$ su un intervallo di lunghezza $T$ e ripeterlo infinite volte a destra e a sinistra dell'intervallo considerato.
 
 %% 
 esempio figura 1.14 pag. 12 dambrosio
@@ -197,7 +197,7 @@ f : A \to B è tale che ogni punto di B è raggiunto almeno da una freccia.
 
 > [!definizione]+ Definizione: biettività
 > 
-> Una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon A\to B$ si dice che è _**biettiva**_ o che è una _**biezione**_ se è contemporaneamente sia [iniettiva](Proprietà%20delle%20funzioni.md#^definizione-iniettivita) che [suriettiva](Proprietà%20delle%20funzioni.md#^definizione-suriettivita), ovvero se per ogni elemento del codominio $y\in B$ esiste ed è unico un elemento del dominio $x \in A$ tale che $f(x)=y$:
+> Una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon A\to B$ si dice che è _**biettiva**_ o che è una _**biezione**_ se è contemporaneamente sia [iniettiva](Matematica/Teoria%20degli%20insiemi/Funzioni/Proprietà%20delle%20funzioni.md#^definizione-iniettivita) che [suriettiva](Matematica/Teoria%20degli%20insiemi/Funzioni/Proprietà%20delle%20funzioni.md#^definizione-suriettivita), ovvero se per ogni elemento del codominio $y\in B$ esiste ed è unico un elemento del dominio $x \in A$ tale che $f(x)=y$:
 > $$
 > \forall y \in B, \exists! \, x \in A (f(x) = y)
 > $$
@@ -261,7 +261,7 @@ suriezione se e solo se f -1(b) \ne \emptyset per ogni b \in B
 
 > [!definizione]+ Definizione: funzione identicamente nulla
 > 
-> Una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ si dice **identicamente nulla** su un [insieme](Teoria%20degli%20insiemi.md#^definizione-insieme) $A \subseteq \text{dom}(f)$ se $f(x) = 0$ per ogni $x \in A$:
+> Una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ si dice **identicamente nulla** su un [insieme](Matematica/Teoria%20degli%20insiemi/Teoria%20degli%20insiemi.md#^definizione-insieme) $A \subseteq \text{dom}(f)$ se $f(x) = 0$ per ogni $x \in A$:
 > 
 > $$
 > \begin{array}{}
@@ -320,7 +320,7 @@ fare esempi grafici su ogni caso
 %% 
 Osservazione
 
-Il concetto di [monotonia](Proprietà%20delle%20funzioni.md#^definizione-funzione-strettamente-decrescente-o-monotona-su-un-intervallo) è legato a quello dell'ordinamento sulla retta reale: le funzioni crescenti mantengono l'ordinamento nel passaggio da $x$ a $f(x)$, mentre le funzioni decrescenti lo invertono:
+Il concetto di [monotonia](Matematica/Teoria%20degli%20insiemi/Funzioni/Proprietà%20delle%20funzioni.md#^definizione-funzione-strettamente-decrescente-o-monotona-su-un-intervallo) è legato a quello dell'ordinamento sulla retta reale: le funzioni crescenti mantengono l'ordinamento nel passaggio da $x$ a $f(x)$, mentre le funzioni decrescenti lo invertono:
 
 figure 1.19, 1.20 pag. 20 Dmbrosio
 %%
@@ -337,8 +337,8 @@ Osservazione 1.1.18 pag. 21 Dambrosio
 > [!proposizione]+ Proposizione sulla somma di funzioni monotone
 > 
 > Date due [funzioni](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ e $g \colon \text{dom}(g) \to \mathbb{R}$ e un intervallo%% link %% $I \subseteq \text{dom}(f) \cap \text{dom}(g)$:
-> - Se $f_1$ ed $f_2$ sono [(strettamente) crescenti](Proprietà%20delle%20funzioni.md#^definizione-funzione-strettamente-decrescente-o-monotona-su-un-intervallo) su $I$ allora la loro [somma](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-somma-di-funzioni) $f_1 + f_2$ è [(strettamente) crescente](Proprietà%20delle%20funzioni.md#^definizione-funzione-strettamente-decrescente-o-monotona-su-un-intervallo) su $I$.
-> - Se $f_1$ ed $f_2$ sono [(strettamente) decrescenti](Proprietà%20delle%20funzioni.md#^definizione-funzione-strettamente-decrescente-o-monotona-su-un-intervallo) su $I$ allora la loro [somma](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-somma-di-funzioni) $f_1 + f_2$ è [(strettamente) decrescente](Proprietà%20delle%20funzioni.md#^definizione-funzione-strettamente-decrescente-o-monotona-su-un-intervallo) su $I$.
+> - Se $f_1$ ed $f_2$ sono [(strettamente) crescenti](Matematica/Teoria%20degli%20insiemi/Funzioni/Proprietà%20delle%20funzioni.md#^definizione-funzione-strettamente-decrescente-o-monotona-su-un-intervallo) su $I$ allora la loro [somma](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-somma-di-funzioni) $f_1 + f_2$ è [(strettamente) crescente](Matematica/Teoria%20degli%20insiemi/Funzioni/Proprietà%20delle%20funzioni.md#^definizione-funzione-strettamente-decrescente-o-monotona-su-un-intervallo) su $I$.
+> - Se $f_1$ ed $f_2$ sono [(strettamente) decrescenti](Matematica/Teoria%20degli%20insiemi/Funzioni/Proprietà%20delle%20funzioni.md#^definizione-funzione-strettamente-decrescente-o-monotona-su-un-intervallo) su $I$ allora la loro [somma](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-somma-di-funzioni) $f_1 + f_2$ è [(strettamente) decrescente](Matematica/Teoria%20degli%20insiemi/Funzioni/Proprietà%20delle%20funzioni.md#^definizione-funzione-strettamente-decrescente-o-monotona-su-un-intervallo) su $I$.
 
 %% 
 dimostrazione per esercizio
@@ -359,7 +359,7 @@ y &= f(x_1) + \dfrac{f(x_2) - f(x_1)}{x_2 - x_1} (x - x_1) \\
 \end{align*}
 $$
 
-(dove $\dfrac{\Delta f}{\Delta x}$ è ovviamente il [quoziente di Newton](Variazioni%20e%20quoziente%20di%20Newton.md#^definizione-quoziente-di-newton)).
+(dove $\dfrac{\Delta f}{\Delta x}$ è ovviamente il [quoziente di Newton](Matematica/Teoria%20degli%20insiemi/Funzioni/Variazioni%20e%20quoziente%20di%20Newton.md#^definizione-quoziente-di-newton)).
 
 Ebbene, possiamo dire ora che la [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f$ è _concava_ su $I$ se per ogni ogni coppia di punti%% link %% $x_1, x_2 \in I$ con $x_1 < x_2$ il grafico%% link %% di $f$ è "sopra" quello della retta%% link %% $r_{1,2}$ su tutto l'intervallo%% link %% $[x_1, x_2]$; analogamente, è _convessa_ su $I$ se per ogni ogni coppia di punti%% link %% $x_1, x_2 \in I$ con $x_1 < x_2$ il grafico%% link %% di $f$ è "sotto" quello della retta%% link %% $r_{1,2}$ su tutto l'intervallo%% link %% $[x_1, x_2]$.
 
@@ -384,7 +384,7 @@ La prossima definizione esprime matematicamente quanto abbiamo appena detto.
 
 > [!osservazione]+ Osservazione: funzione né concava né convessa
 > 
-> Una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) potrebbe non essere né [concava](Proprietà%20delle%20funzioni.md#^definizione-funzione-concava-o-convessa-su-un-intervallo) né [convessa](Proprietà%20delle%20funzioni.md#^definizione-funzione-concava-o-convessa-su-un-intervallo) su un intervallo%% link %%: per esempio, la [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f(x) = \sin x$ non è né [concava](Proprietà%20delle%20funzioni.md#^definizione-funzione-concava-o-convessa-su-un-intervallo) né [convessa](Proprietà%20delle%20funzioni.md#^definizione-funzione-concava-o-convessa-su-un-intervallo) sull'intervallo%% link %% $[-3,3]$, però è [concava](Proprietà%20delle%20funzioni.md#^definizione-funzione-concava-o-convessa-su-un-intervallo) in $[0, \pi]$ e [convessa](Proprietà%20delle%20funzioni.md#^definizione-funzione-concava-o-convessa-su-un-intervallo) in $[-\pi, 0]$.
+> Una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) potrebbe non essere né [concava](Matematica/Teoria%20degli%20insiemi/Funzioni/Proprietà%20delle%20funzioni.md#^definizione-funzione-concava-o-convessa-su-un-intervallo) né [convessa](Matematica/Teoria%20degli%20insiemi/Funzioni/Proprietà%20delle%20funzioni.md#^definizione-funzione-concava-o-convessa-su-un-intervallo) su un intervallo%% link %%: per esempio, la [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f(x) = \sin x$ non è né [concava](Matematica/Teoria%20degli%20insiemi/Funzioni/Proprietà%20delle%20funzioni.md#^definizione-funzione-concava-o-convessa-su-un-intervallo) né [convessa](Matematica/Teoria%20degli%20insiemi/Funzioni/Proprietà%20delle%20funzioni.md#^definizione-funzione-concava-o-convessa-su-un-intervallo) sull'intervallo%% link %% $[-3,3]$, però è [concava](Matematica/Teoria%20degli%20insiemi/Funzioni/Proprietà%20delle%20funzioni.md#^definizione-funzione-concava-o-convessa-su-un-intervallo) in $[0, \pi]$ e [convessa](Matematica/Teoria%20degli%20insiemi/Funzioni/Proprietà%20delle%20funzioni.md#^definizione-funzione-concava-o-convessa-su-un-intervallo) in $[-\pi, 0]$.
 
 %% 
 grafico della funzione nell'osservazione

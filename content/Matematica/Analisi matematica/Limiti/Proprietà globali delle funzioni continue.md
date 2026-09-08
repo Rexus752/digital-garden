@@ -7,11 +7,11 @@
 
 ---
 
-Dopo aver studiato le proprietà locali delle [funzioni continue](Funzioni%20continue.md#^definizione-funzione-continua)%% come il teorema ... %%, ora ci occupiamo delle proprietà globali, cioè di quelle proprietà che coinvolgono tutto il dominio%% link %% e non solo l'[intorno](Topologia%20dei%20reali.md#^definizione-intorno-di-un-punto) di un punto%% link %%.
+Dopo aver studiato le proprietà locali delle [funzioni continue](Matematica/Analisi%20matematica/Limiti/Funzioni%20continue.md#^definizione-funzione-continua)%% come il teorema ... %%, ora ci occupiamo delle proprietà globali, cioè di quelle proprietà che coinvolgono tutto il dominio%% link %% e non solo l'[intorno](Matematica/Teoria%20degli%20insiemi/Funzioni/Topologia%20dei%20reali.md#^definizione-intorno-di-un-punto) di un punto%% link %%.
 
 > [!teorema]+ Teorema degli zeri
 > 
-> Data una [funzione continua](Funzioni%20continue.md#^definizione-funzione-continua) $f \colon [a,b] \to \mathbb{R}$ tale che $f(a) \cdot f(b) < 0$ (cioè $f(a)$ e $f(b)$ sono discordi), allora esiste un punto%% link %% $x_0 \in (a,b)$ tale che $f(x_0) = 0$.
+> Data una [funzione continua](Matematica/Analisi%20matematica/Limiti/Funzioni%20continue.md#^definizione-funzione-continua) $f \colon [a,b] \to \mathbb{R}$ tale che $f(a) \cdot f(b) < 0$ (cioè $f(a)$ e $f(b)$ sono discordi), allora esiste un punto%% link %% $x_0 \in (a,b)$ tale che $f(x_0) = 0$.
 > 
 > Inoltre, se $f$ è strettamente monotona%% Link %%, allora questo punto%% link %% $x_0$ è unico.
 ^teorema-degli-zeri
@@ -22,7 +22,7 @@ dimostrazione pag. 226-227 lancelotti
 
 > [!osservazione]+ Osservazione: significato del teorema degli zeri
 > 
-> Il [teorema degli zeri](Proprietà%20globali%20delle%20funzioni%20continue.md#^teorema-degli-zeri) asserisce che se $f$ è [continua](Funzioni%20continue.md#^definizione-funzione-continua) sull'intervallo chiuso%% link %% e limitato%% link %% $[a,b]$ e negli estremi%% link %% assume valori discordi%% link %% allora ammette almeno uno _zero_, cioè un punto%% Link %% in cui si annulla (ossia in cui $f(x)$ vale $0$). Il [teorema](Proprietà%20globali%20delle%20funzioni%20continue.md#^teorema-degli-zeri) non dice quanti ce ne sono (a meno che $f$ non sia strettamente monotona%% Link %%, in quel caso sicuramente ce n'è uno e uno solo) enon ci dice chi sono.
+> Il [teorema degli zeri](Matematica/Analisi%20matematica/Limiti/Proprietà%20globali%20delle%20funzioni%20continue.md#^teorema-degli-zeri) asserisce che se $f$ è [continua](Matematica/Analisi%20matematica/Limiti/Funzioni%20continue.md#^definizione-funzione-continua) sull'intervallo chiuso%% link %% e limitato%% link %% $[a,b]$ e negli estremi%% link %% assume valori discordi%% link %% allora ammette almeno uno _zero_, cioè un punto%% Link %% in cui si annulla (ossia in cui $f(x)$ vale $0$). Il [teorema](Matematica/Analisi%20matematica/Limiti/Proprietà%20globali%20delle%20funzioni%20continue.md#^teorema-degli-zeri) non dice quanti ce ne sono (a meno che $f$ non sia strettamente monotona%% Link %%, in quel caso sicuramente ce n'è uno e uno solo) enon ci dice chi sono.
 
 %% 
 esempio 6.3 pag. 227-228 lancelotti
@@ -30,7 +30,7 @@ esempio 6.3 pag. 227-228 lancelotti
 
 > [!corollario]+ Corollario del teorema degli zeri
 > 
-> Dato un intervallo%% link %% $I \subseteq \mathbb{R}$ e una [funzione continua](Funzioni%20continue.md#^definizione-funzione-continua) $f \colon I \to \mathbb{R}$, se $f$ ammette [limiti](Limiti.md#^definizione-limite) per $x$ che tende agli estremi dell'intervallo%% link %% $I$ e questi [limiti](Limiti.md#^definizione-limite) hanno segni opposti, allora esiste un punto%% link %% $x_0 \in I$ tale che $f(x_0) = 0$.
+> Dato un intervallo%% link %% $I \subseteq \mathbb{R}$ e una [funzione continua](Matematica/Analisi%20matematica/Limiti/Funzioni%20continue.md#^definizione-funzione-continua) $f \colon I \to \mathbb{R}$, se $f$ ammette [limiti](Matematica/Analisi%20matematica/Limiti/Limiti.md#^definizione-limite) per $x$ che tende agli estremi dell'intervallo%% link %% $I$ e questi [limiti](Matematica/Analisi%20matematica/Limiti/Limiti.md#^definizione-limite) hanno segni opposti, allora esiste un punto%% link %% $x_0 \in I$ tale che $f(x_0) = 0$.
 > 
 > Inoltre, se $f$ è strettamente monotona%% Link %%, allora questo punto%% link %% $x_0$ è unico.
 ^corollario-del-teorema-degli-zeri
@@ -41,7 +41,7 @@ dimostrazione pag. 228 lancelotti
 
 > [!teorema]+ Teorema dei valori intermedi
 > 
-> Una [funzione continua](Funzioni%20continue.md#^definizione-funzione-continua) $f \colon [a,b] \to \mathbb{R}$ assume tutti i valori%% link %% compresi tra $f(a)$ e $f(b)$, non necessariamente in questo ordine.
+> Una [funzione continua](Matematica/Analisi%20matematica/Limiti/Funzioni%20continue.md#^definizione-funzione-continua) $f \colon [a,b] \to \mathbb{R}$ assume tutti i valori%% link %% compresi tra $f(a)$ e $f(b)$, non necessariamente in questo ordine.
 > 
 > In altri termini, l'intervallo chiuso%% Link %% avente per estremi%% link %% $f(a)$ e $f(b)$ è contenuto in $\text{rng}(f)$.
 ^teorema-dei-valori-intermedi
@@ -56,7 +56,7 @@ Osservazione 6.6 pag. 229 lancelotti
 
 > [!corollario]+ Corollario 1 del teorema dei valori intermedi
 > 
-> Dato un intervallo%% Link %% $I \subseteq \mathbb{R}$ e una [funzione continua](Funzioni%20continue.md#^definizione-funzione-continua) $f \colon I \to \mathbb{R}$, allora $f(I) = \text{rng}(f)$ è un intervallo%% link %%.
+> Dato un intervallo%% Link %% $I \subseteq \mathbb{R}$ e una [funzione continua](Matematica/Analisi%20matematica/Limiti/Funzioni%20continue.md#^definizione-funzione-continua) $f \colon I \to \mathbb{R}$, allora $f(I) = \text{rng}(f)$ è un intervallo%% link %%.
 ^corollario-1-del-teorema-dei-valori-intermedi
 
 %% 
@@ -81,7 +81,7 @@ Segue immediatamente dal corollario 1 e dalla monotonia di $f$
 
 > [!corollario]+ Corollario 3 del teorema dei valori intermedi
 > 
-> Data una [funzione continua](Funzioni%20continue.md#^definizione-funzione-continua) e monotona%% Link %% $f \colon [a,b) \to \mathbb{R}$, si ha che:
+> Data una [funzione continua](Matematica/Analisi%20matematica/Limiti/Funzioni%20continue.md#^definizione-funzione-continua) e monotona%% Link %% $f \colon [a,b) \to \mathbb{R}$, si ha che:
 > - se $f$ è crescente%% link %%, allora $\text{rng}(f) = \left[ f(a), \displaystyle\lim_{x \to b^-} f(x) \right)$ e
 > - se $f$ è decrescente%% link %%, allora $\text{rng}(f) = \left( \displaystyle\lim_{x \to b^-} f(x), f(a) \right]$.
 ^corollario-3-del-teorema-dei-valori-intermedi
@@ -101,13 +101,13 @@ Esempio 6.11 pag. 230 Lancelotti
 
 > [!lemma]+ Lemma delle successioni minimizzanti e massimizzanti
 > 
-> Dato un [sottoinsieme](Teoria%20degli%20insiemi.md#^definizione-sottoinsieme) non [vuoto](Teoria%20degli%20insiemi.md#^definizione-insieme-vuoto) $A \subseteq \mathbb{R}$, esistono due [successioni](Limiti%20di%20successioni.md#^definizione-successione) $(x_n)$ e $(y_n)$ in $A$ tali che
+> Dato un [sottoinsieme](Matematica/Teoria%20degli%20insiemi/Teoria%20degli%20insiemi.md#^definizione-sottoinsieme) non [vuoto](Matematica/Teoria%20degli%20insiemi/Teoria%20degli%20insiemi.md#^definizione-insieme-vuoto) $A \subseteq \mathbb{R}$, esistono due [successioni](Matematica/Analisi%20matematica/Limiti/Limiti%20di%20successioni.md#^definizione-successione) $(x_n)$ e $(y_n)$ in $A$ tali che
 > 
 > $$
 > \lim_n x_n = \inf A \land \lim_n y_n = \sup A
 > $$
 > 
-> La [successione](Limiti%20di%20successioni.md#^definizione-successione) $(x_n)$ è detta **successione minimizzante** e la [successione](Limiti%20di%20successioni.md#^definizione-successione) $(y_n)$ è detta **successione massimizzante**.
+> La [successione](Matematica/Analisi%20matematica/Limiti/Limiti%20di%20successioni.md#^definizione-successione) $(x_n)$ è detta **successione minimizzante** e la [successione](Matematica/Analisi%20matematica/Limiti/Limiti%20di%20successioni.md#^definizione-successione) $(y_n)$ è detta **successione massimizzante**.
 ^lemma-delle-successioni-minimizzanti-e-massimizzanti
 
 %% 
@@ -116,7 +116,7 @@ dimostrazione pagg. 230-231 lancelotti
 
 > [!teorema]+ Teorema di Weierstrass
 > 
-> Data una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon [a,b] \to \mathbb{R}$ [continua](Funzioni%20continue.md#^definizione-funzione-continua), esistono due punti%% Link %% $x_m, x_M \in [a,b]$ tali che
+> Data una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon [a,b] \to \mathbb{R}$ [continua](Matematica/Analisi%20matematica/Limiti/Funzioni%20continue.md#^definizione-funzione-continua), esistono due punti%% Link %% $x_m, x_M \in [a,b]$ tali che
 > 
 > $$
 > \forall x \in [a,b] . \big( f(x_m) \le f(x) \le f(x_M) \big) 
@@ -145,7 +145,7 @@ dimostrazione pag. 231-232 lancelotti
 
 > [!osservazione]+ Osservazione: molteplicità dei punti di minimo e massimo assoluto
 > 
-> Nel [teorema di Weierstrass](Proprietà%20globali%20delle%20funzioni%20continue.md#^teorema-di-weierstrass) ci viene detto che i punti di minimo assoluto%% Link %% $x_m$ e di massimo assoluto%% link %% $x_M$ esistono, ma non necessariamente devono essere unici: possono esistere molteplici punti di minimo%% link %% e massimo assoluto%% Link %%, come per esempio nella [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $\sin x$ in cui i punti di minimo assoluto%% link %% sono ogni $x_m$ tali che $- \dfrac{\pi}{2} + 2k\pi$ (per ogni $k \in \mathbb{N}$) e i punti di massimo assoluto%% link %% sono ogni $x_M$ tali che $\dfrac{\pi}{2} + 2k\pi$ (per ogni $k \in \mathbb{N}$).
+> Nel [teorema di Weierstrass](Matematica/Analisi%20matematica/Limiti/Proprietà%20globali%20delle%20funzioni%20continue.md#^teorema-di-weierstrass) ci viene detto che i punti di minimo assoluto%% Link %% $x_m$ e di massimo assoluto%% link %% $x_M$ esistono, ma non necessariamente devono essere unici: possono esistere molteplici punti di minimo%% link %% e massimo assoluto%% Link %%, come per esempio nella [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $\sin x$ in cui i punti di minimo assoluto%% link %% sono ogni $x_m$ tali che $- \dfrac{\pi}{2} + 2k\pi$ (per ogni $k \in \mathbb{N}$) e i punti di massimo assoluto%% link %% sono ogni $x_M$ tali che $\dfrac{\pi}{2} + 2k\pi$ (per ogni $k \in \mathbb{N}$).
 
 %% mettere grafico evidenziando i punti %%
 
@@ -153,14 +153,14 @@ dimostrazione pag. 231-232 lancelotti
 
 [!osservazione]+ Osservazione: ipotesi di continuità necessaria su tutto il dominio
 
-Nel [teorema di Weierstrass](Proprietà%20globali%20delle%20funzioni%20continue.md#^teorema-di-weierstrass), l'ipotesi di [continuità](Funzioni%20continue.md#^definizione-funzione-continua) di $f$ è necessaria su tutto il suo [dominio](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-dominio-e-codominio-della-funzione) $[a,b]$, estremi%% link %% compresi, perché altrimenti possono crearsi casi simili ai seguenti:
+Nel [teorema di Weierstrass](Matematica/Analisi%20matematica/Limiti/Proprietà%20globali%20delle%20funzioni%20continue.md#^teorema-di-weierstrass), l'ipotesi di [continuità](Matematica/Analisi%20matematica/Limiti/Funzioni%20continue.md#^definizione-funzione-continua) di $f$ è necessaria su tutto il suo [dominio](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-dominio-e-codominio-della-funzione) $[a,b]$, estremi%% link %% compresi, perché altrimenti possono crearsi casi simili ai seguenti:
 
 vedere esempi minuto 04:07 lezione L9b
 -->
 
 > [!teorema]+ Teorema di monotonia per funzioni continue iniettive
 > 
-> Dato un intervallo%% link %% $I \subseteq R$ e una [funzione continua](Funzioni%20continue.md#^definizione-funzione-continua) $f \colon I \to \mathbb{R}$, quest'ultima è [iniettiva](Proprietà%20delle%20funzioni.md#^definizione-iniettivita) se e solo se è strettamente monotona%% Link %%.
+> Dato un intervallo%% link %% $I \subseteq R$ e una [funzione continua](Matematica/Analisi%20matematica/Limiti/Funzioni%20continue.md#^definizione-funzione-continua) $f \colon I \to \mathbb{R}$, quest'ultima è [iniettiva](Matematica/Teoria%20degli%20insiemi/Funzioni/Proprietà%20delle%20funzioni.md#^definizione-iniettivita) se e solo se è strettamente monotona%% Link %%.
 
 %% 
 dimostrazione pag. 232 lancelotti
@@ -176,7 +176,7 @@ Osservazione 6.15 pag. 232 lancelotti
 
 > [!teorema]+ Teorema sulla continuità della funzione inversa
 > 
-> Dati due intervalli%% link %% $I, J \subseteq \mathbb{R}$ e una [funzione continua](Funzioni%20continue.md#^definizione-funzione-continua) e invertibile%% link %% $f \colon I \to J$, la sua inversa%% link %% $f^{-1} \colon J \to I$ è anch'essa [continua](Funzioni%20continue.md#^definizione-funzione-continua).
+> Dati due intervalli%% link %% $I, J \subseteq \mathbb{R}$ e una [funzione continua](Matematica/Analisi%20matematica/Limiti/Funzioni%20continue.md#^definizione-funzione-continua) e invertibile%% link %% $f \colon I \to J$, la sua inversa%% link %% $f^{-1} \colon J \to I$ è anch'essa [continua](Matematica/Analisi%20matematica/Limiti/Funzioni%20continue.md#^definizione-funzione-continua).
 
 %% 
 dimsotrazione pag. 233 lancelotti
@@ -199,9 +199,9 @@ dimsotrazione pag. 233 lancelotti
 
 > [!osservazione]+ Osservazione: affinità e divergenze tra continuità uniforme e continuità
 > 
-> La nozione di [_funzione uniformemente continua_](Proprietà%20globali%20delle%20funzioni%20continue.md#^definizione-funzione-uniformemente-continua) è simile a quella di [_funzione continua_](Funzioni%20continue.md#^definizione-funzione-continua), ma si differenziano per i seguenti motivi:
-> - La [continuità uniforme](Proprietà%20globali%20delle%20funzioni%20continue.md#^definizione-funzione-uniformemente-continua) è una proprietà globale%% Link %%, mentre la [continuità](Funzioni%20continue.md#^definizione-funzione-continua) è una proprietà locale%% Link %%.
-> - Nella [continuità uniforme](Proprietà%20globali%20delle%20funzioni%20continue.md#^definizione-funzione-uniformemente-continua) $\delta$ dipende solo da $\varepsilon$%%, mentre nella [continuità](Funzioni%20continue.md#^definizione-funzione-continua) dipende da ???%%.
+> La nozione di [_funzione uniformemente continua_](Matematica/Analisi%20matematica/Limiti/Proprietà%20globali%20delle%20funzioni%20continue.md#^definizione-funzione-uniformemente-continua) è simile a quella di [_funzione continua_](Matematica/Analisi%20matematica/Limiti/Funzioni%20continue.md#^definizione-funzione-continua), ma si differenziano per i seguenti motivi:
+> - La [continuità uniforme](Matematica/Analisi%20matematica/Limiti/Proprietà%20globali%20delle%20funzioni%20continue.md#^definizione-funzione-uniformemente-continua) è una proprietà globale%% Link %%, mentre la [continuità](Matematica/Analisi%20matematica/Limiti/Funzioni%20continue.md#^definizione-funzione-continua) è una proprietà locale%% Link %%.
+> - Nella [continuità uniforme](Matematica/Analisi%20matematica/Limiti/Proprietà%20globali%20delle%20funzioni%20continue.md#^definizione-funzione-uniformemente-continua) $\delta$ dipende solo da $\varepsilon$%%, mentre nella [continuità](Matematica/Analisi%20matematica/Limiti/Funzioni%20continue.md#^definizione-funzione-continua) dipende da ???%%.
 
 %% 
 esempio 6.18 paagg. 233-234
@@ -209,7 +209,7 @@ esempio 6.18 paagg. 233-234
 
 > [!teorema]+ Teorema di regolarità della continuità uniforme 
 > 
-> Se una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ è [uniformemente continua](Proprietà%20globali%20delle%20funzioni%20continue.md#^definizione-funzione-uniformemente-continua), allora è anche [continua](Funzioni%20continue.md#^definizione-funzione-continua).
+> Se una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon \text{dom}(f) \to \mathbb{R}$ è [uniformemente continua](Matematica/Analisi%20matematica/Limiti/Proprietà%20globali%20delle%20funzioni%20continue.md#^definizione-funzione-uniformemente-continua), allora è anche [continua](Matematica/Analisi%20matematica/Limiti/Funzioni%20continue.md#^definizione-funzione-continua).
 
 %% 
 Osservazione: il viceversa non è vero, coem mostra la funzione $f(x) = x^2$. Lo è se per esempio $f$ è definita su un intervallo chiuso e limitato, come evidenzia il prossimo risultato.
@@ -217,7 +217,7 @@ Osservazione: il viceversa non è vero, coem mostra la funzione $f(x) = x^2$. Lo
 
 > [!teorema]+ Teorema di Heine-Cantor
 > 
-> Se una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon [a,b] \to \mathbb{R}$ è [continua](Funzioni%20continue.md#^definizione-funzione-continua), allora è anche [uniformemente continua](Proprietà%20globali%20delle%20funzioni%20continue.md#^definizione-funzione-uniformemente-continua) in $[a,b]$.
+> Se una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon [a,b] \to \mathbb{R}$ è [continua](Matematica/Analisi%20matematica/Limiti/Funzioni%20continue.md#^definizione-funzione-continua), allora è anche [uniformemente continua](Matematica/Analisi%20matematica/Limiti/Proprietà%20globali%20delle%20funzioni%20continue.md#^definizione-funzione-uniformemente-continua) in $[a,b]$.
 
 %% 
 dimostrazione pagg. 234-235 lancelotti

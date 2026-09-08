@@ -15,7 +15,7 @@ Vedere meglio pagine 64-68 di LAncelotti
 
 > [!definizione]+ Definizione: funzione
 > 
-> Una [relazione binaria](Relazioni%20tra%20insiemi.md#^definizione-relazione-n-aria) $f$ tra due [insiemi](Teoria%20degli%20insiemi.md#^osservazione-insiemi-come-elementi-di-altri-insiemi) $A$ e $B$ si dice **_funzione_ (o _applicazione_ o _trasformazione_) _da $A$ in $B$_** se:
+> Una [relazione binaria](Matematica/Teoria%20degli%20insiemi/Relazioni%20tra%20insiemi.md#^definizione-relazione-n-aria) $f$ tra due [insiemi](Matematica/Teoria%20degli%20insiemi/Teoria%20degli%20insiemi.md#^osservazione-insiemi-come-elementi-di-altri-insiemi) $A$ e $B$ si dice **_funzione_ (o _applicazione_ o _trasformazione_) _da $A$ in $B$_** se:
 > 1. per ogni $a \in A$ c'è un $b \in B$ tale che $(a,b) \in f$ e
 > 2. se $(a,b_1) \in f$ e $(a,b_2) \in f$, allora $b_1 = b_2$.
 > 
@@ -40,13 +40,13 @@ Vedere meglio pagine 64-68 di LAncelotti
 
 > [!definizione]+ Definizione: dominio e codominio della funzione
 > 
-> In una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon A \to B$, l'[insieme](Teoria%20degli%20insiemi.md#^definizione-insieme) $A$ è detto **dominio della funzione** (o, più semplicemente, **dominio**) e viene indicato con "$\text{dom}(f)$":
+> In una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon A \to B$, l'[insieme](Matematica/Teoria%20degli%20insiemi/Teoria%20degli%20insiemi.md#^definizione-insieme) $A$ è detto **dominio della funzione** (o, più semplicemente, **dominio**) e viene indicato con "$\text{dom}(f)$":
 > 
 > $$
 > \text{dom}(f) = A
 > $$
 > 
-> L'[insieme](Teoria%20degli%20insiemi.md#^definizione-insieme) $B$, invece, è detto **codominio della funzione** (o, più semplicemente, **codominio**) e viene indicato con "$\text{cod}(f)$":
+> L'[insieme](Matematica/Teoria%20degli%20insiemi/Teoria%20degli%20insiemi.md#^definizione-insieme) $B$, invece, è detto **codominio della funzione** (o, più semplicemente, **codominio**) e viene indicato con "$\text{cod}(f)$":
 > 
 > $$
 > \text{cod}(f) = B
@@ -60,7 +60,7 @@ Vedere meglio pagine 64-68 di LAncelotti
 
 > [!esempio]- Esempio: $\color{#7F7FFF} R=\{(1,2),(1,3),(2,4)\}$ non è una funzione
 > 
-> Data una [relazione binaria](Relazioni%20tra%20insiemi.md#^definizione-relazione-n-aria) $R=\{(1,2),(1,3),(2,4)\}$, essa non è una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) perché c'è un elemento del [dominio](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-dominio-e-codominio-della-funzione) che è associato a più elementi del [codominio](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-dominio-e-codominio-della-funzione).
+> Data una [relazione binaria](Matematica/Teoria%20degli%20insiemi/Relazioni%20tra%20insiemi.md#^definizione-relazione-n-aria) $R=\{(1,2),(1,3),(2,4)\}$, essa non è una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) perché c'è un elemento del [dominio](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-dominio-e-codominio-della-funzione) che è associato a più elementi del [codominio](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-dominio-e-codominio-della-funzione).
 
 > [!osservazione]+ Osservazione: funzione come dipendenza tra due grandezze
 > 
@@ -113,7 +113,7 @@ Vedere meglio pagine 64-68 di LAncelotti
 
 > [!notazione]+ Notazione: dominio e codominio sottintesi
 > 
-> Quando una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) è indicata solo attraverso la sua "trasformazione" (per esempio $f(x) = x^2$), si dà per scontato che la [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) abbia come [codominio](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-dominio-e-codominio-della-funzione) l'insieme dei numeri reali%% link %% $\mathbb{R}$, mentre come [dominio](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-dominio-e-codominio-della-funzione) non $\mathbb{R}$ ma un [sottoinsieme](Teoria%20degli%20insiemi.md#^definizione-insieme) di $\mathbb{R}$ che corrisponde a tutti e soli i punti%% link %% su cui la [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) è definita che viene solitamente indicato direttamente con "$\text{dom}(f)$"):
+> Quando una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) è indicata solo attraverso la sua "trasformazione" (per esempio $f(x) = x^2$), si dà per scontato che la [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) abbia come [codominio](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-dominio-e-codominio-della-funzione) l'insieme dei numeri reali%% link %% $\mathbb{R}$, mentre come [dominio](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-dominio-e-codominio-della-funzione) non $\mathbb{R}$ ma un [sottoinsieme](Matematica/Teoria%20degli%20insiemi/Teoria%20degli%20insiemi.md#^definizione-insieme) di $\mathbb{R}$ che corrisponde a tutti e soli i punti%% link %% su cui la [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) è definita che viene solitamente indicato direttamente con "$\text{dom}(f)$"):
 > 
 > $$
 > f \colon \text{dom}(f) \to \mathbb{R}
@@ -166,7 +166,7 @@ Vedere meglio pagine 64-68 di LAncelotti
 
 > [!definizione]+ Definizione: grafico di una funzione
 > 
-> Data una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon A \to B$, si definisce ***grafico*** di $f$ il [sottoinsieme](Teoria%20degli%20insiemi.md#^definizione-sottoinsieme) $\Gamma_{f} \subseteq \mathbb{R}^{2}$ definito da:
+> Data una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon A \to B$, si definisce ***grafico*** di $f$ il [sottoinsieme](Matematica/Teoria%20degli%20insiemi/Teoria%20degli%20insiemi.md#^definizione-sottoinsieme) $\Gamma_{f} \subseteq \mathbb{R}^{2}$ definito da:
 > 
 > $$
 > \begin{align*}
@@ -207,7 +207,7 @@ Esempi:
 > 
 > Data una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon A \to B, x \mapsto f(x)$:
 > - L'elemento $f(x)$ è detto **_immagine di $a$ mediante $f$_** (oppure **_valore di $f$ su $a$_**).
-> - Dato un [sottoinsieme](Teoria%20degli%20insiemi.md#^definizione-sottoinsieme) $C \subseteq A$, l'insieme degli $f(x) \in B$ associati a ogni $x \in C$, denotato con "$f(C)$", è detto **_immagine di $C$ mediante $f$_**:
+> - Dato un [sottoinsieme](Matematica/Teoria%20degli%20insiemi/Teoria%20degli%20insiemi.md#^definizione-sottoinsieme) $C \subseteq A$, l'insieme degli $f(x) \in B$ associati a ogni $x \in C$, denotato con "$f(C)$", è detto **_immagine di $C$ mediante $f$_**:
 > $$
 > \begin{align*}
 > f(C) & = \{ f(x) \in B \mid x \in C \} \\
@@ -234,7 +234,7 @@ Slide 7-9 di Viale
 > $$
 > f^{-1}(y) = \{ x \in A \mid f(x) = y \}
 > $$
-> - Dato un [sottoinsieme](Teoria%20degli%20insiemi.md#^definizione-sottoinsieme) $D \subseteq B$, l'unione di tutte le controimmagini degli $x \in A$ associati a ogni $f(x) \in D$, denotato con "$f^{-1}(D)$", è detto **_controimmagine di $D$_**:
+> - Dato un [sottoinsieme](Matematica/Teoria%20degli%20insiemi/Teoria%20degli%20insiemi.md#^definizione-sottoinsieme) $D \subseteq B$, l'unione di tutte le controimmagini degli $x \in A$ associati a ogni $f(x) \in D$, denotato con "$f^{-1}(D)$", è detto **_controimmagine di $D$_**:
 > $$
 > f^{-1}(D) = \bigcup_{y \in D} f^{-1}(y)
 > $$
@@ -270,7 +270,7 @@ fare tabella riassuntiva per spiegare meglio differenza tra immagine/controimmag
 
 ## 1.3 - Definizioni e rappresentazioni di una funzione
 
-Ci sono diversi modi per poter definire la struttura di una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione), alcuni dei quali molto simili a quanto avviene per gli [insiemi](Teoria%20degli%20insiemi.md#^definizione-insieme).
+Ci sono diversi modi per poter definire la struttura di una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione), alcuni dei quali molto simili a quanto avviene per gli [insiemi](Matematica/Teoria%20degli%20insiemi/Teoria%20degli%20insiemi.md#^definizione-insieme).
 
 ### 1.3.1 - Definizione per elencazione di una funzione
 
@@ -281,7 +281,7 @@ Ci sono diversi modi per poter definire la struttura di una [funzione](Matematic
 
 > [!esempio]- Esempio di definizione per elencazione di una funzione
 > 
-> Dati due [insiemi](Teoria%20degli%20insiemi.md#^definizione-insieme) $A = \{ a,b,c \}$ e $B = \{ 0,1 \}$, allora la lista:
+> Dati due [insiemi](Matematica/Teoria%20degli%20insiemi/Teoria%20degli%20insiemi.md#^definizione-insieme) $A = \{ a,b,c \}$ e $B = \{ 0,1 \}$, allora la lista:
 > $$
 > \begin{align*}
 > f(a) = 0 \\
@@ -431,7 +431,7 @@ Le funzioni di questo tipo sono dette definite a tratti. Un'altra funzione defin
 
 > [!definizione]+ Definizione: funzione identità
 > 
-> Dato un [insieme](Teoria%20degli%20insiemi.md#^definizione-insieme) $X$, la **funzione identità** $\text{id}_X$ su $X$ è la [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) che associa a ogni elemento di $X$ se stesso:
+> Dato un [insieme](Matematica/Teoria%20degli%20insiemi/Teoria%20degli%20insiemi.md#^definizione-insieme) $X$, la **funzione identità** $\text{id}_X$ su $X$ è la [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) che associa a ogni elemento di $X$ se stesso:
 > 
 > $$
 > \begin{align*}
@@ -449,7 +449,7 @@ fare esempio
 
 > [!definizione]+ Definizione: funzione costante
 > 
-> Dati due [insiemi](Teoria%20degli%20insiemi.md#^definizione-insieme) $A$ e $B$ non necessariamente distinti e un elemento fissato $\beta \in B$, la **funzione costante** $f_\beta$ con valore $\beta$ è la [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) che associa a ogni elemento di $A$ sempre lo stesso elemento $\beta$ di $B$:
+> Dati due [insiemi](Matematica/Teoria%20degli%20insiemi/Teoria%20degli%20insiemi.md#^definizione-insieme) $A$ e $B$ non necessariamente distinti e un elemento fissato $\beta \in B$, la **funzione costante** $f_\beta$ con valore $\beta$ è la [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) che associa a ogni elemento di $A$ sempre lo stesso elemento $\beta$ di $B$:
 > 
 > $$
 > \begin{align*}
@@ -467,7 +467,7 @@ fare esempio
 
 > [!definizione]+ Definizione: funzione proiezione
 > 
-> Dati due [insiemi](Teoria%20degli%20insiemi.md#^definizione-insieme) $A$ e $B$, le **funzioni proiezioni** $p_1$ e $p_2$ sui singoli fattori sono le [funzioni](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) che associano a ogni coppia di valori $(a,b) \in A \times B$ uno solo dei due valori:
+> Dati due [insiemi](Matematica/Teoria%20degli%20insiemi/Teoria%20degli%20insiemi.md#^definizione-insieme) $A$ e $B$, le **funzioni proiezioni** $p_1$ e $p_2$ sui singoli fattori sono le [funzioni](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) che associano a ogni coppia di valori $(a,b) \in A \times B$ uno solo dei due valori:
 > 
 > $$
 > \begin{align*}
@@ -492,7 +492,7 @@ fare esempio
 
 > [!definizione]+ Definizione: funzione restrizione
 > 
-> Data una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon A \to B$ e un [sottoinsieme](Teoria%20degli%20insiemi.md#^definizione-sottoinsieme) $C \subseteq A$, si dice _**restrizione**_ di $f$ a $C$ la funzione $f_{\vert C}$ che restringe il dominio di $f$ a $C$:
+> Data una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon A \to B$ e un [sottoinsieme](Matematica/Teoria%20degli%20insiemi/Teoria%20degli%20insiemi.md#^definizione-sottoinsieme) $C \subseteq A$, si dice _**restrizione**_ di $f$ a $C$ la funzione $f_{\vert C}$ che restringe il dominio di $f$ a $C$:
 > 
 > $$
 > \begin{align*}
@@ -510,7 +510,7 @@ Definizione 1.3 di Lancellotti
 
 > [!esempio]- Esempio: ${\color{#7F7FFF} f|_\mathbb{N} \colon \mathbb{N} \to \mathbb{R} }$ restrizione di ${\color{#7F7FFF} f \colon \mathbb{R} \to \mathbb{R} }$
 > 
-> Data una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon \mathbb{R} \to \mathbb{R}, x \mapsto x^2$, essa si può [restringere](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione-restrizione) al [sottoinsieme](Teoria%20degli%20insiemi.md#^definizione-insieme) $\mathbb{N} \subsetneq \mathbb{R}$ e diventa la [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f|_\mathbb{N} \colon \mathbb{R} \to \mathbb{R} x \mapsto x^2$.
+> Data una [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f \colon \mathbb{R} \to \mathbb{R}, x \mapsto x^2$, essa si può [restringere](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione-restrizione) al [sottoinsieme](Matematica/Teoria%20degli%20insiemi/Teoria%20degli%20insiemi.md#^definizione-insieme) $\mathbb{N} \subsetneq \mathbb{R}$ e diventa la [funzione](Matematica/Teoria%20degli%20insiemi/Funzioni/Funzioni.md#^definizione-funzione) $f|_\mathbb{N} \colon \mathbb{R} \to \mathbb{R} x \mapsto x^2$.
 
 %% 
 Esempio:
