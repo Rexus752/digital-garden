@@ -9,9 +9,9 @@ configuration:
   locale: it-IT
   baseUrl: rexus752.dev
   ignorePatterns:
-    - private
-    - templates
-    - .obsidian
+    - ".obsidian"
+    - "_scripts"
+    - "_templates"
   theme:
     fontOrigin: googleFonts
     cdnCaching: true
