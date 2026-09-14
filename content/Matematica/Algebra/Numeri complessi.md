@@ -69,10 +69,10 @@ Ogni [numero complesso](Matematica/Algebra/Numeri%20complessi.md#^definizione-nu
 
 > [!definizione] Definizione: coniugato di un numero complesso
 > 
-> Dato un [numero complesso](Matematica/Algebra/Numeri%20complessi.md#^definizione-numero-complesso) $z = a + bi$, il suo **coniugato** (o **coniugio**) $\bar z$ è il [numero complesso](Matematica/Algebra/Numeri%20complessi.md#^definizione-numero-complesso)
+> Dato un [numero complesso](Matematica/Algebra/Numeri%20complessi.md#^definizione-numero-complesso) $z = a + bi$, il suo **coniugato** (o **coniugio**) $\overline z$ è il [numero complesso](Matematica/Algebra/Numeri%20complessi.md#^definizione-numero-complesso)
 > 
 > $$
-> \bar z = a - bi
+> \overline z = a - bi
 > $$
 > 
 > ottenuto da $z$ cambiando il segno%% link %% della sua [parte immaginaria](Matematica/Algebra/Numeri%20complessi.md#^definizione-numero-complesso).
@@ -80,10 +80,10 @@ Ogni [numero complesso](Matematica/Algebra/Numeri%20complessi.md#^definizione-nu
 
 > [!osservazione] Osservazione: numero complesso uguale al suo coniugato
 > 
-> Notiamo come un [numero complesso](Matematica/Algebra/Numeri%20complessi.md#^definizione-numero-complesso) $z = a + bi$ è uguale al suo [coniugato](Matematica/Algebra/Numeri%20complessi.md#^definizione-coniugato-di-un-numero-complesso) $\bar z = a - bi$ solo quando la [parte immaginaria](Matematica/Algebra/Numeri%20complessi.md#^definizione-numero-complesso) $b$ è nulla, ossia quando $z$ è in realtà un numero reale%% Link %%, quindi:
+> Notiamo come un [numero complesso](Matematica/Algebra/Numeri%20complessi.md#^definizione-numero-complesso) $z = a + bi$ è uguale al suo [coniugato](Matematica/Algebra/Numeri%20complessi.md#^definizione-coniugato-di-un-numero-complesso) $\overline z = a - bi$ solo quando la [parte immaginaria](Matematica/Algebra/Numeri%20complessi.md#^definizione-numero-complesso) $b$ è nulla, ossia quando $z$ è in realtà un numero reale%% Link %%, quindi:
 > 
 > $$
-> z \in \mathbb{R} \iff z = \bar z
+> z \in \mathbb{R} \iff z = \overline z
 > $$
 
 > [!definizione] Definizione: modulo di un numero complesso
@@ -97,10 +97,10 @@ Ogni [numero complesso](Matematica/Algebra/Numeri%20complessi.md#^definizione-nu
 
 > [!osservazione] Osservazione: prodotto di un numero complesso col suo coniugato
 > 
-> Il prodotto%% link %% tra un [numero complesso](Matematica/Algebra/Numeri%20complessi.md#^definizione-numero-complesso) $z = a + bi$ e il suo [coniugato](Matematica/Algebra/Numeri%20complessi.md#^definizione-coniugato-di-un-numero-complesso) $\bar z = a - bi$ è uguale al quadrato del [modulo](Matematica/Algebra/Numeri%20complessi.md#^definizione-modulo-di-un-numero-complesso) $\vert z \vert = \sqrt{a^2 + b^2}$, infatti
+> Il prodotto%% link %% tra un [numero complesso](Matematica/Algebra/Numeri%20complessi.md#^definizione-numero-complesso) $z = a + bi$ e il suo [coniugato](Matematica/Algebra/Numeri%20complessi.md#^definizione-coniugato-di-un-numero-complesso) $\overline z = a - bi$ è uguale al quadrato del [modulo](Matematica/Algebra/Numeri%20complessi.md#^definizione-modulo-di-un-numero-complesso) $\vert z \vert = \sqrt{a^2 + b^2}$, infatti
 > 
 > $$
-> z \cdot \bar z = (a+bi) \cdot (a-bi) = a^2 + b^2 = \vert z \vert ^2
+> z \cdot \overline z = (a+bi) \cdot (a-bi) = a^2 + b^2 = \vert z \vert ^2
 > $$
 ^osservazione-prodotto-di-un-numero-complesso-col-suo-coniugato
 
@@ -109,7 +109,7 @@ Ogni [numero complesso](Matematica/Algebra/Numeri%20complessi.md#^definizione-nu
 > Dato un [numero complesso](Matematica/Algebra/Numeri%20complessi.md#^definizione-numero-complesso) $z = a + bi$, il suo **inverso** $z^{-1}$ è il [numero complesso](Matematica/Algebra/Numeri%20complessi.md#^definizione-numero-complesso)
 > 
 > $$
-> z^{-1} = \dfrac{\bar z}{\vert z \vert^2}
+> z^{-1} = \dfrac{\overline z}{\vert z \vert^2}
 > $$
 ^definizione-inverso-di-un-numero-complesso
 
@@ -117,7 +117,7 @@ Possiamo provare l'[inverso di un numero complesso](Matematica/Algebra/Numeri%20
 
 > [!proposizione] Proposizione: inverso di un numero complesso
 > 
-> Dato un [numero complesso](Matematica/Algebra/Numeri%20complessi.md#^definizione-numero-complesso) $z = a + bi$, il suo [inverso](Matematica/Algebra/Numeri%20complessi.md#^definizione-inverso-di-un-numero-complesso) $\displaystyle z^{-1} = \dfrac{\bar z}{|z|^2}$ rispetta la definizione di _inverso_%% link %%, ossia:
+> Dato un [numero complesso](Matematica/Algebra/Numeri%20complessi.md#^definizione-numero-complesso) $z = a + bi$, il suo [inverso](Matematica/Algebra/Numeri%20complessi.md#^definizione-inverso-di-un-numero-complesso) $\displaystyle z^{-1} = \dfrac{\overline z}{|z|^2}$ rispetta la definizione di _inverso_%% link %%, ossia:
 > 
 > $$
 > z \cdot z^{-1} = 1
@@ -129,10 +129,10 @@ Possiamo provare l'[inverso di un numero complesso](Matematica/Algebra/Numeri%20
 > Dimostriamo che $z \cdot z^{-1} = 1$:
 > 
 > $$
-> z \cdot z^{-1} = z \cdot \dfrac{\bar z}{|z|^2} = \dfrac{z \cdot \bar z}{|z|^2} \ {\color{#FF7F7F} = } \ \dfrac{|z|^2}{|z|^2} = 1
+> z \cdot z^{-1} = z \cdot \dfrac{\overline z}{|z|^2} = \dfrac{z \cdot \overline z}{|z|^2} \ {\color{#FF7F7F} = } \ \dfrac{|z|^2}{|z|^2} = 1
 > $$
 > 
-> Sottolineiamo che l'uguaglianza segnalata in rosso, ossia $z \cdot \bar z = |z|^2$, è già stata verificata in una [osservazione precedente](Matematica/Algebra/Numeri%20complessi.md#^osservazione-prodotto-di-un-numero-complesso-col-suo-coniugato).
+> Sottolineiamo che l'uguaglianza segnalata in rosso, ossia $z \cdot \overline z = |z|^2$, è già stata verificata in una [osservazione precedente](Matematica/Algebra/Numeri%20complessi.md#^osservazione-prodotto-di-un-numero-complesso-col-suo-coniugato).
 > 
 > $\blacksquare$
 
@@ -217,11 +217,13 @@ esempi di coordinate polari
 > $$
 > 
 > ma ciò non è altro che la formula del [modulo di un numero complesso](Matematica/Algebra/Numeri%20complessi.md#^definizione-modulo-di-un-numero-complesso) $|z|$, che quindi corrisponde proprio alla lunghezza del vettore che descrive $z$. 
+> 
+> Per questo motivo il [raggio](Numeri%20complessi.md#^definizione-coordinate-polari) $r$ viene anche chiamato spesso _modulo_.
 ^osservazione-corrispondenza-tra-modulo-e-raggio-delle-coordinate-polari
 
 > [!osservazione] Osservazione: piano complesso e coniugato
 > 
-> Dato un [numero complesso](Matematica/Algebra/Numeri%20complessi.md#^definizione-numero-complesso) $z = a + bi$, il suo [coniugato](Matematica/Algebra/Numeri%20complessi.md#^definizione-coniugato-di-un-numero-complesso) $\bar z = a - bi$ è il punto%% link %% ottenuto cambiando il segno della [parte immaginaria](Matematica/Algebra/Numeri%20complessi.md#^definizione-numero-complesso): geometricamente questo corrisponde a riflettere%% link %% il punto rispetto all'[asse reale](Matematica/Algebra/Numeri%20complessi.md#^definizione-piano-complesso).
+> Dato un [numero complesso](Matematica/Algebra/Numeri%20complessi.md#^definizione-numero-complesso) $z = a + bi$, il suo [coniugato](Matematica/Algebra/Numeri%20complessi.md#^definizione-coniugato-di-un-numero-complesso) $\overline z = a - bi$ è il punto%% link %% ottenuto cambiando il segno della [parte immaginaria](Matematica/Algebra/Numeri%20complessi.md#^definizione-numero-complesso): geometricamente questo corrisponde a riflettere%% link %% il punto rispetto all'[asse reale](Matematica/Algebra/Numeri%20complessi.md#^definizione-piano-complesso).
 > 
 > In [coordinate polari](Matematica/Algebra/Numeri%20complessi.md#^definizione-coordinate-polari), questo corrisponde a cambiare l'argomento $\theta$ in $-\theta$ ma lasciando fisso il raggio $r$.
 
@@ -312,6 +314,133 @@ $$
 > Notiamo che due [numeri complessi](Matematica/Algebra/Numeri%20complessi.md#^definizione-numero-complesso) $z_1 = r_1e^{i\theta_1}$ e $z_2 = r_2e^{i\theta_2}$ non nulli%% link %% sono in realtà lo stesso numero complesso se e solo se valgono entrambi questi fatti:
 > 1. $r_1 = r_2$ e
 > 2. $\theta_1 = \theta_2 + 2k\pi$ per qualche $k \in \mathbb{Z}$, perché essendo $\theta_1$ e $\theta_2$ angoli%% Link %% vale la periodicità degli angoli%% link %%.
+
+# Proprietà dei numeri complessi
+
+I [numeri complessi](Matematica/Algebra/Numeri%20complessi.md#^definizione-numero-complesso) hanno numerose proprietà: nel caso di un prodotto%% link %%, si dimostrano facilmente attraverso la [notazione esponenziale](Numeri%20complessi.md#^notazione-esponenziale-delle-coordinate-polari). Prova a svolgere le dimostrazioni come esercizio prima di leggerle.
+
+> [!proprieta] Proprietà: disuguaglianza triangolare dei moduli
+> 
+> Dati due [numeri complessi](Numeri%20complessi.md#^definizione-numero-complesso) $z,w \in \mathbb{C}$, vale la disuguaglianza triangolare%% Link %% per i loro [moduli](Numeri%20complessi.md#^definizione-modulo-di-un-numero-complesso), ossia
+> 
+> $$
+> |z + w| \le |z| + |w|
+> $$
+
+%%
+[!dimostrazione] Dimostrazione: disuguaglianza triangolare dei moduli
+%%
+
+> [!proprieta] Proprietà: distributività del modulo rispetto al prodotto
+> 
+> Dati due [numeri complessi](Numeri%20complessi.md#^definizione-numero-complesso) $z,w \in \mathbb{C}$, vale la distributività%% link %% per i loro [moduli](Numeri%20complessi.md#^definizione-modulo-di-un-numero-complesso) rispetto al prodotto%% Link %%, ossia
+> 
+> $$
+> |z \cdot w| = |z| \cdot |w|
+> $$
+
+%% 
+Dimostrazione
+%%
+
+> [!proprieta] Proprietà del modulo dell'inverso
+> 
+> Dato un [numero complesso](Numeri%20complessi.md#^definizione-numero-complesso) $z \in \mathbb{C} \setminus \{ 0 \}$, il [modulo](Numeri%20complessi.md#^definizione-modulo-di-un-numero-complesso) del suo [inverso](Numeri%20complessi.md#^definizione-inverso-di-un-numero-complesso) $|z^{-1}|$ è pari all'inverso%% link %% del suo [modulo](Numeri%20complessi.md#^definizione-modulo-di-un-numero-complesso) $|z|$:
+> 
+> $$
+> |z^{-1}| = \dfrac{1}{|z|}
+> $$
+
+%% 
+Dimostrazione
+%%
+
+> [!proprieta] Proprietà: uguaglianza dei moduli di un complesso e il suo coniugato
+> 
+> Dato un [numero complesso](Numeri%20complessi.md#^definizione-numero-complesso) $z \in \mathbb{C}$, il suo [modulo](Numeri%20complessi.md#^definizione-modulo-di-un-numero-complesso) $|z|$ è uguale al [modulo](Numeri%20complessi.md#^definizione-modulo-di-un-numero-complesso) del suo [coniugato](Numeri%20complessi.md#^definizione-coniugato-di-un-numero-complesso) $|\overline z|$:
+> 
+> $$
+> |z| = |\overline z|
+> $$
+
+%% 
+Dimostrazione
+%%
+
+> [!proprieta] Proprietà: distributività del coniugato rispetto alla somma
+> 
+> Dati due [numeri complessi](Numeri%20complessi.md#^definizione-numero-complesso) $z,w \in \mathbb{C}$, vale la distributività%% link %% per i loro [coniugati](Numeri%20complessi.md#^definizione-coniugato-di-un-numero-complesso) rispetto alla somma%% Link %%, ossia
+> 
+> $$
+> \overline{z + w} = \overline z + \overline w
+> $$
+
+%% 
+Dimostrazione
+%%
+
+> [!proprieta] Proprietà: distributività del coniugato rispetto al prodotto
+> 
+> Dati due [numeri complessi](Numeri%20complessi.md#^definizione-numero-complesso) $z,w \in \mathbb{C}$, vale la distributività%% link %% per i loro [coniugati](Numeri%20complessi.md#^definizione-coniugato-di-un-numero-complesso) rispetto al prodotto%% Link %%, ossia
+> 
+> $$
+> \overline{z \cdot w} = \overline z \cdot \overline w
+> $$
+
+%% 
+Dimostrazione
+%%
+
+# Radici $n$-esime di un numero complesso
+
+Dato un [numero complesso](Numeri%20complessi.md#^definizione-numero-complesso) $z_0 \in \mathbb{C} \setminus \{ 0 \}$, vediamo ora come risolvere l'equazione%% Link %%
+
+$$
+z^n = z_0
+$$
+
+con $n \in \mathbb{N}$. Risolvere questa equazione significa trovare tutti i [numeri complessi](Numeri%20complessi.md#^definizione-numero-complesso) $z$ che, elevati alla potenza $n$, danno come risultato $z_0$, ossia come determinare le radici $n$-esime%% link %% di $z_0$.
+
+Riscrivendo $z$ e $z_0$ in [notazione esponenziale](Numeri%20complessi.md#^notazione-esponenziale-delle-coordinate-polari), l'equazione diventa
+
+$$
+r^ne^{in\theta} = r_0e^{i\theta_0}
+$$
+
+Perché questa uguaglianza sia vera, devono essere uguali sia i [moduli](Numeri%20complessi.md#^osservazione-corrispondenza-tra-modulo-e-raggio-delle-coordinate-polari) sia gli [argomenti](Numeri%20complessi.md#^definizione-coordinate-polari):
+1. Per i [moduli](Numeri%20complessi.md#^osservazione-corrispondenza-tra-modulo-e-raggio-delle-coordinate-polari): $r^n = r_0 \implies r = \sqrt[n]{r_0}$.
+2. Per gli [argomenti](Numeri%20complessi.md#^definizione-coordinate-polari): $e^{in\theta} = e^{i\theta_0} \implies n\theta = \theta_0 + 2k\pi$ dove $k \in \mathbb{Z}$ (ricordiamoci della necessità di aggiungere $2k\pi$ perché aggiungere un multiplo intero di $2\pi$ a un angolo non cambia la direzione rappresentata da quell'angolo%% link %%).
+
+In particolare, dividendo entrambi i membri per $n$, la seconda condizione può essere riscritta come
+
+$$
+\theta = \dfrac{\theta_0}{n} + \dfrac{2k\pi}{n}
+$$
+
+per qualche $k \in \mathbb{Z}$. Questa formula ci dice che, per ogni $k \in \mathbb{Z}$, otteniamo un possibile [argomento](Numeri%20complessi.md#^definizione-coordinate-polari) di una radice%% link %% dell'equazione iniziale $z^n = z_0$.
+
+A prima vista, poiché $k$ può essere qualsiasi numero intero, sembrerebbe che esistano infinite soluzioni%% link %%. In realtà, i valori di $k$ producono esattamente $n$ [numeri complessi](Numeri%20complessi.md#^definizione-numero-complesso), ossia dopo $n$ valori di $k$ le soluzioni si ripetono. Possiamo verificare questa cosa prendendo per esempio $k = n + 1$:
+
+$$
+\begin{align*}
+\frac{2(n + 1)\pi}{n} &= \dfrac{2n\pi + 2\pi}{n} \\
+&= \dfrac{2n\pi}{n} + \dfrac{2\pi}{n} \\
+&= 2\pi + \dfrac{2\pi}{n}
+\end{align*}
+$$
+
+Ma, ricordandoci della periodicità di $2\pi$%% link alla periodicità di $2\pi$ %%, il valore di questo [argomento](Numeri%20complessi.md#^definizione-coordinate-polari) è equivalente a $\dfrac{2\pi}{n}$, che corrisponde anche all'[argomento](Numeri%20complessi.md#^definizione-coordinate-polari) del caso $k=1$, quindi i casi $k = n+1$ e $k=1$ rappresentano in realtà lo stesso [numero complesso](Numeri%20complessi.md#^definizione-numero-complesso).
+
+Possiamo evincere quindi che per ogni $k \in \mathbb{Z}$ gli [argomenti](Numeri%20complessi.md#^definizione-coordinate-polari) saranno uguali a quelli dei primi $n-1$ valori di $k$, sottraendo o aggiungendo opportuni multipli di $n$. Per esempio, $k=n$ produrrà lo stesso [numero complesso](Numeri%20complessi.md#^definizione-numero-complesso) di $k=0$, $k=n+1$ lo stesso di $k=1$, e così via, oppure $k = -n - 2$ produrrà lo stesso di $k = n-2$.
+
+Di conseguenza, possiamo limitarci a considerare i valori di $k$ da $0$ a $n-1$, ottenendo così precisamente $n$ soluzioni distinte:
+
+$$
+\theta = \underbrace{\dfrac{\theta_0}{n}}_{k = 0}, \underbrace{\dfrac{\theta_0}{n} + \dfrac{2\pi}{n}}_{k = 1}, \underbrace{\dfrac{\theta_0}{n} + \dfrac{4\pi}{n}}_{k = 2}, \ldots, \underbrace{\dfrac{\theta_0}{n} + \dfrac{2(n-1)\pi}{n}}_{k = n-1}
+$$
+
+Le $n$ soluzioni%% Link %% dell'equazione $z^n = z_0$, riprendendo le due condizioni di prima,  hanno tutte lo stesso [modulo](Numeri%20complessi.md#^osservazione-corrispondenza-tra-modulo-e-raggio-delle-coordinate-polari) $r = \sqrt[n]{r_0}$, ma i loro [argomenti](Numeri%20complessi.md#^definizione-coordinate-polari) variano in una sequenza di angoli separati da un passo%% link a "passo" = valore fisso tra intervalli (?) %% costante%% link %% $\dfrac{2\pi}{n}$.
+
 
 ---
 
