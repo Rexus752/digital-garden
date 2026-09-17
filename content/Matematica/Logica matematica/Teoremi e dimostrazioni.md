@@ -7,6 +7,24 @@
 
 ---
 
+%% 
+[!definizione]+ Definizione: teorema fondamentale
+
+Un teorema fondamentale è un teorema particolarmente importante all'interno di una teoria matematica, perché stabilisce un risultato su cui si basano molti altri risultati.
+
+La parola "fondamentale" non indica necessariamente una categoria matematica precisa: è un modo per sottolineare l'importanza del teorema.
+
+Per esempio, il Teorema fondamentale dell'algebra afferma che ogni polinomio non costante a coefficienti complessi ha almeno una radice complessa. Di conseguenza, un polinomio di grado nnn ha esattamente nnn radici complesse, contando le molteplicità.
+
+Questo teorema è importante perché garantisce, tra le altre cose, che l'equazione
+
+zn=z0z^n=z_0zn=z0
+
+con z0\ne0z_0\neq 0z0=0 abbia esattamente nnn soluzioni complesse distinte.
+
+In breve: un teorema fondamentale è un risultato che costituisce una base importante per comprendere o dimostrare altri risultati matematici.
+%%
+
 Nella maggior parte delle discipline scientifiche (ad esempio fisica, chimica, biologia, ecc.) per stabilire la verità di un'affermazione si ricorre a misurazioni, esperimenti o simulazioni: se gli esperimenti, magari fatti più volte e da più persone, confermano l'affermazione, allora questa viene accettata (almeno temporaneamente), altrimenti viene rifiutata.
 
 > [!esempio]- Esempio: il principio di Archimede

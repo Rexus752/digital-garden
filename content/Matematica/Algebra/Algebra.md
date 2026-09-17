@@ -1,5 +1,5 @@
 
-> [!premessa] Premessa
+> [!premessa]+ Premessa
 > 
 > Ciao! Se è la prima volta che capiti su questo sito, ti consiglio di consultare la [pagina principale](index.md) di questo cosiddetto _Giardino Digitale_ per scoprire meglio cos'è e come navigarlo.
 > 
@@ -7,10 +7,8 @@
 
 ---
 
-
-
 ---
 
-> [!fonti] Fonti
+> [!fonti]+ Fonti
 > 
 > 

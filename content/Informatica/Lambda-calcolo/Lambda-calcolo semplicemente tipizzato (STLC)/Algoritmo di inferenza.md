@@ -27,7 +27,6 @@ Questa struttura verrà chiamata [albero sintattico](Informatica/Lambda-calcolo/
 - Togliere il tag `<rect ... />` nelle prime righe così da togliere lo sfondo e il gioco è fatto
 %%
 
-
 > [!definizione]+ Definizione: albero sintattico
 > 
 > Data una [$\lambda^\to_\text{Bool}$-espressione](Informatica/Lambda-calcolo/Lambda-calcolo%20semplicemente%20tipizzato%20(STLC)/Lambda-calcolo%20semplicemente%20tipizzato%20(STLC).md#^definizione-termine-nel-stlcb) $T$, l'**albero sintattico** $\text{Tree}[T]$:
