@@ -20,6 +20,8 @@ Dico spesso che, in un'altra vita, se non avessi sviluppato la passione per l'in
 > La **matematica** è la disciplina che studia le quantità, i numeri, lo spazio, le strutture, i calcoli e, in generale, gli oggetti astratti rigorosamente definiti, la loro stessa definizione e le relazioni tra essi.
 ^definizione-matematica
 
+<!--
+
 In questa pagina potresti trovare roba sparsa di [matematica](Matematica/Matematica.md#^definizione-matematica) che non ho ancora asistemato in altre pagine.
 
 # 1 - Distanza tra due punti sulla retta reale
@@ -68,12 +70,16 @@ $$
 \{ x \in \mathbb{R} \mid d(x,1) < 3 \} = \{ x \in \mathbb{R} \mid |x - 1| < 3 \} = \{ x \in \mathbb{R} \mid -3 < x - 1 < 3 \} = (-2,4)
 $$
 
+Fonti:
+- 🏫 Corso di Laurea in Informatica (`L-31 R`) presso l'Università di Torino%% per la roba sulla distanza tra due punti %%:
+	- Corso di _Analisi Matematica - canale C_, A.A. 2020-21 ([pagina Moodle](https://informatica.i-learn.unito.it/course/view.php?id=2075)):
+		- Prof. Barutello Vivina Laura, videolezioni:
+			- [_L6a_](https://informatica.i-learn.unito.it/local/streamingfilemanager/file.php/informatica.i-learn.unito.it/2075/L6a.mp4).
+
+-->
+
 ---
 
 > [!fonti]+ Fonti
 > 
 > - 🌐 [_Matematica_](https://it.wikipedia.org/wiki/Matematica) su Wikipedia in lingua italiana, [archiviato sulla Wayback Machine](https://web.archive.org/web/20260408183630/https://it.wikipedia.org/wiki/Matematica) in data 8 aprile 2026.
-> - 🏫 Corso di Laurea in Informatica (`L-31 R`) presso l'Università di Torino%% per la roba sulla distanza tra due punti %%:
-> 	- Corso di _Analisi Matematica - canale C_, A.A. 2020-21 ([pagina Moodle](https://informatica.i-learn.unito.it/course/view.php?id=2075)):
-> 		- Prof. Barutello Vivina Laura, videolezioni:
-> 			- [_L6a_](https://informatica.i-learn.unito.it/local/streamingfilemanager/file.php/informatica.i-learn.unito.it/2075/L6a.mp4).

@@ -1,5 +1,5 @@
 ---
-alias: sheet-music
+aliases: sheet-music
 ---
 
 > [!premessa]+ Premessa

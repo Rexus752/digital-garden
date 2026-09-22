@@ -1,5 +1,6 @@
 ---
-alias: desktop-wallpapers
+aliases:
+  - desktop-wallpapers
 ---
 
 > [!premessa]+ Premessa

@@ -1,3 +1,7 @@
+---
+aliases:
+  - New note
+---
 
 > [!premessa]+ Premessa
 > 

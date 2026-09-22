@@ -264,34 +264,34 @@ Possiamo però evidenziare come questa regola valga solo per i [gruppi abeliani]
 
 > [!definizione]+ Definizione: anello
 > 
-> Un **anello** è una [struttura algebrica](Strutture%20algebriche.md#^definizione-struttura-algebrica) $(G, {\color{#FF7F7F} \oplus }, {\color{#7F7FFF} \otimes })$ in cui l'[insieme sostegno](Strutture%20algebriche.md#^definizione-struttura-algebrica) $G$ è dotato di due operazioni binarie%% Link %% ${\color{#FF7F7F} \oplus }$ e ${\color{#7F7FFF} \otimes }$ che soddisfano i seguenti assiomi:
-> 1. Esistenza dell'elemento neutro $e_{\color{#FF7F7F} \oplus } \in G$%% link %% per l'operazione ${\color{#FF7F7F} \oplus }$:
+> Un **anello** è una [struttura algebrica](Strutture%20algebriche.md#^definizione-struttura-algebrica) $(A, {\color{#FF7F7F} \oplus }, {\color{#7F7FFF} \otimes })$ in cui l'[insieme sostegno](Strutture%20algebriche.md#^definizione-struttura-algebrica) $A$ è dotato di due operazioni binarie%% Link %% ${\color{#FF7F7F} \oplus }$ e ${\color{#7F7FFF} \otimes }$ che soddisfano i seguenti assiomi:
+> 1. Esistenza dell'elemento neutro $e_{\color{#FF7F7F} \oplus } \in A$%% link %% per l'operazione ${\color{#FF7F7F} \oplus }$:
 > 	$$
-> 	\exists e_{\color{#FF7F7F} \oplus } \in G, \forall a \in G .(e_{\color{#FF7F7F} \oplus }\ {\color{#FF7F7F} \oplus }\ a = a\ {\color{#FF7F7F} \oplus }\ e_{\color{#FF7F7F} \oplus } = a)
+> 	\exists e_{\color{#FF7F7F} \oplus } \in A, \forall a \in A .(e_{\color{#FF7F7F} \oplus }\ {\color{#FF7F7F} \oplus }\ a = a\ {\color{#FF7F7F} \oplus }\ e_{\color{#FF7F7F} \oplus } = a)
 > 	$$
-> 2. Esistenza dell'elemento neutro $e_{\color{#7F7FFF} \otimes } \in G$%% link %% per l'operazione ${\color{#7F7FFF} \otimes }$:
+> 2. Esistenza dell'elemento neutro $e_{\color{#7F7FFF} \otimes } \in A$%% link %% per l'operazione ${\color{#7F7FFF} \otimes }$:
 > 	$$
-> 	\exists e_{\color{#7F7FFF} \otimes } \in G, \forall a \in G .(e_{\color{#7F7FFF} \otimes }\ {\color{#7F7FFF} \otimes }\ a = a\ {\color{#7F7FFF} \otimes }\ e_{\color{#7F7FFF} \otimes } = a)
+> 	\exists e_{\color{#7F7FFF} \otimes } \in A, \forall a \in A .(e_{\color{#7F7FFF} \otimes }\ {\color{#7F7FFF} \otimes }\ a = a\ {\color{#7F7FFF} \otimes }\ e_{\color{#7F7FFF} \otimes } = a)
 > 	$$
 > 3. Proprietà associativa%% Link %% per l'operazione ${\color{#FF7F7F} \oplus }$:
 > 	$$
-> 	\forall a,b,c \in G . \big(a\ {\color{#FF7F7F} \oplus }\ (b\ {\color{#FF7F7F} \oplus }\ c) = (a\ {\color{#FF7F7F} \oplus }\ b)\ {\color{#FF7F7F} \oplus }\ c \big)
+> 	\forall a,b,c \in A . \big(a\ {\color{#FF7F7F} \oplus }\ (b\ {\color{#FF7F7F} \oplus }\ c) = (a\ {\color{#FF7F7F} \oplus }\ b)\ {\color{#FF7F7F} \oplus }\ c \big)
 > 	$$
 > 4. Proprietà associativa%% link %% per l'operazione ${\color{#7F7FFF} \otimes }$:
 > 	$$
-> 	\forall a,b,c \in G . \big(a\ {\color{#7F7FFF} \otimes }\ (b\ {\color{#7F7FFF} \otimes }\ c) = (a\ {\color{#7F7FFF} \otimes }\ b)\ {\color{#7F7FFF} \otimes }\ c \big)
+> 	\forall a,b,c \in A . \big(a\ {\color{#7F7FFF} \otimes }\ (b\ {\color{#7F7FFF} \otimes }\ c) = (a\ {\color{#7F7FFF} \otimes }\ b)\ {\color{#7F7FFF} \otimes }\ c \big)
 > 	$$
-> 5. Esistenza dell'inverso%% link %% $a' \in G$ per l'operazione ${\color{#FF7F7F} \oplus }$:
+> 5. Esistenza dell'inverso%% link %% $a' \in A$ per l'operazione ${\color{#FF7F7F} \oplus }$:
 > 	$$
-> 	\forall a \in G, \exists a' \in G . (a\ {\color{#FF7F7F} \oplus }\ a' = a'\ {\color{#FF7F7F} \oplus }\ a = e_{\color{#FF7F7F} \oplus })
+> 	\forall a \in A, \exists a' \in A . (a\ {\color{#FF7F7F} \oplus }\ a' = a'\ {\color{#FF7F7F} \oplus }\ a = e_{\color{#FF7F7F} \oplus })
 > 	$$
 > 6. Proprietà commutativa%% link %% per l'operazione ${\color{#FF7F7F} \oplus }$:
 > 	$$
-> 	\forall a,b \in G . (a\ {\color{#FF7F7F} \oplus }\ b = b\ {\color{#FF7F7F} \oplus }\ a)
+> 	\forall a,b \in A . (a\ {\color{#FF7F7F} \oplus }\ b = b\ {\color{#FF7F7F} \oplus }\ a)
 > 	$$
 > 7. Proprietà distributiva%% link %%:
 > 	$$
-> 	\forall a,b,c \in G. \left( \begin{array}{}
+> 	\forall a,b,c \in A. \left( \begin{array}{}
 > 	a\ {\color{#7F7FFF} \otimes }\ (b\ {\color{#FF7F7F} \oplus }\ c) = (a\ {\color{#7F7FFF} \otimes }\ b)\ {\color{#FF7F7F} \oplus }\ (a\ {\color{#7F7FFF} \otimes }\ c) \\
 > 	\land \\
 > 	(b\ {\color{#FF7F7F} \oplus }\ c)\ {\color{#7F7FFF} \otimes }\ a = (b\ {\color{#7F7FFF} \otimes }\ a)\ {\color{#FF7F7F} \oplus }\ (c\ {\color{#7F7FFF} \otimes }\ a)
@@ -305,6 +305,91 @@ esempi: $(\mathbb{Z}, +, \cdot)$ sono anello,
 
 %% 
 anello commutativo se vale la proprietà commutativa anche per ${\color{#7F7FFF} \otimes }$
+%%
+
+Gli [anelli](Strutture%20algebriche.md#^definizione-anello) possiedono proprietà interessanti per quanto riguarda i due elementi neutri%% link %% $e_{\color{#FF7F7F} \oplus }$ e $e_{\color{#7F7FFF} \otimes }$ rispettivamente per le operazioni%% link %% ${\color{#FF7F7F} \oplus }$ e ${\color{#7F7FFF} \otimes }$: in particolare, possiamo verificare che l'elemento neutro%% link %% $e_{\color{#FF7F7F} \oplus }$ di ${\color{#FF7F7F} \oplus }$ è anche l'elemento assorbente%% Link %% di ${\color{#7F7FFF} \otimes }$.
+
+Per esempio, per l'[anello](Strutture%20algebriche.md#^definizione-anello) $(\mathbb{Z}, +, \cdot)$ l'elemento neutro $0$ di $+$ è l'elemento assorbente%% Link %% di $\cdot$.
+
+> [!proposizione] Proposizione: elemento neutro e assorbente
+> 
+> Dato un [anello](Strutture%20algebriche.md#^definizione-anello) $(A, {\color{#FF7F7F} \oplus }, {\color{#7F7FFF} \otimes })$ con $e_{\color{#FF7F7F} \oplus }$ elemento neutro%% link %% di ${\color{#FF7F7F} \oplus }$, abbiamo che $e_{{\color{#FF7F7F} \oplus }}$ è anche l'elemento assorbente%% Link %% di ${\color{#7F7FFF} \otimes }$:
+> 
+> $$
+> \forall a \in A .(e_{\color{#FF7F7F} \oplus }\ {\color{#7F7FFF} \otimes }\ a = a\ {\color{#7F7FFF} \otimes }\ e_{\color{#FF7F7F} \oplus } = e_{\color{#FF7F7F} \oplus }) 
+> $$
+^proposizione-elemento-neutro-e-assorbente
+
+> [!dimostrazione] Dimostrazione: elemento neutro e assorbente
+> 
+> Dimostriamo che in un [anello](Strutture%20algebriche.md#^definizione-anello) $(A, {\color{#FF7F7F} \oplus }, {\color{#7F7FFF} \otimes })$ [l'elemento neutro $e_{\color{#FF7F7F} \oplus }$ di ${\color{#FF7F7F} \oplus }$ è anche l'elemento assorbente di ${\color{#7F7FFF} \otimes }$](Strutture%20algebriche.md#^proposizione-elemento-neutro-e-assorbente) attraverso una serie di uguaglianze:
+> 
+> $$
+> \begin{align*}
+> e_{\color{#FF7F7F} \oplus }\ {\color{#7F7FFF} \otimes }\ a &= (e_{\color{#FF7F7F} \oplus }\ {\color{#FF7F7F} \oplus }\ e_{\color{#FF7F7F} \oplus })\ {\color{#7F7FFF} \otimes }\ a \\
+> &= (e_{\color{#FF7F7F} \oplus }\ {\color{#7F7FFF} \otimes }\ a)\ {\color{#FF7F7F} \oplus }\ (e_{\color{#FF7F7F} \oplus }\ {\color{#7F7FFF} \otimes }\ a) \\
+> &= e_{\color{#FF7F7F} \oplus }\ {\color{#FF7F7F} \oplus }\ e_{\color{#FF7F7F} \oplus } \\
+> &= e_{\color{#FF7F7F} \oplus }
+> \end{align*}
+> $$
+> 
+> E analogamente si può dimostrare che vale anche $a\ {\color{#7F7FFF} \otimes }\ e_{\color{#FF7F7F} \oplus } = e_{\color{#FF7F7F} \oplus }$.
+> 
+> $\blacksquare$
+
+%% 
+unicità dell'elemento neutro e_\times
+%%
+
+# Campi
+
+> [!definizione]+ Definizione: campo
+> 
+> Un **campo** è una [struttura algebrica](Strutture%20algebriche.md#^definizione-struttura-algebrica) $(C, {\color{#FF7F7F} \oplus }, {\color{#7F7FFF} \otimes })$ in cui l'[insieme sostegno](Strutture%20algebriche.md#^definizione-struttura-algebrica) $C$ è dotato di due operazioni binarie%% Link %% ${\color{#FF7F7F} \oplus }$ e ${\color{#7F7FFF} \otimes }$ che soddisfano i seguenti assiomi:
+> 1. Esistenza dell'elemento neutro $e_{\color{#FF7F7F} \oplus } \in C$%% link %% per l'operazione ${\color{#FF7F7F} \oplus }$:
+> 	$$
+> 	\exists e_{\color{#FF7F7F} \oplus } \in C, \forall a \in C .(e_{\color{#FF7F7F} \oplus }\ {\color{#FF7F7F} \oplus }\ a = a\ {\color{#FF7F7F} \oplus }\ e_{\color{#FF7F7F} \oplus } = a)
+> 	$$
+> 2. Esistenza dell'elemento neutro $e_{\color{#7F7FFF} \otimes } \in C$%% link %% per l'operazione ${\color{#7F7FFF} \otimes }$:
+> 	$$
+> 	\exists e_{\color{#7F7FFF} \otimes } \in C, \forall a \in C .(e_{\color{#7F7FFF} \otimes }\ {\color{#7F7FFF} \otimes }\ a = a\ {\color{#7F7FFF} \otimes }\ e_{\color{#7F7FFF} \otimes } = a)
+> 	$$
+> 3. Proprietà associativa%% Link %% per l'operazione ${\color{#FF7F7F} \oplus }$:
+> 	$$
+> 	\forall a,b,c \in C . \big(a\ {\color{#FF7F7F} \oplus }\ (b\ {\color{#FF7F7F} \oplus }\ c) = (a\ {\color{#FF7F7F} \oplus }\ b)\ {\color{#FF7F7F} \oplus }\ c \big)
+> 	$$
+> 4. Proprietà associativa%% link %% per l'operazione ${\color{#7F7FFF} \otimes }$:
+> 	$$
+> 	\forall a,b,c \in C . \big(a\ {\color{#7F7FFF} \otimes }\ (b\ {\color{#7F7FFF} \otimes }\ c) = (a\ {\color{#7F7FFF} \otimes }\ b)\ {\color{#7F7FFF} \otimes }\ c \big)
+> 	$$
+> 5. Esistenza dell'inverso%% link %% $a' \in C$ per l'operazione ${\color{#FF7F7F} \oplus }$:
+> 	$$
+> 	\forall a \in C, \exists a' \in C . (a\ {\color{#FF7F7F} \oplus }\ a' = a'\ {\color{#FF7F7F} \oplus }\ a = e_{\color{#FF7F7F} \oplus })
+> 	$$
+> 6. Esistenza dell'inverso%% link %% $a'' \in C$ per l'operazione ${\color{#7F7FFF} \otimes }$:
+> 	$$
+> 	\forall a \in C, \exists a'' \in C . (a\ {\color{#7F7FFF} \otimes }\ a'' = a''\ {\color{#7F7FFF} \otimes }\ a = e_{\color{#7F7FFF} \otimes })
+> 	$$
+> 7. Proprietà commutativa%% link %% per l'operazione ${\color{#FF7F7F} \oplus }$:
+> 	$$
+> 	\forall a,b \in C . (a\ {\color{#FF7F7F} \oplus }\ b = b\ {\color{#FF7F7F} \oplus }\ a)
+> 	$$
+> 8. Proprietà commutativa%% link %% per l'operazione ${\color{#7F7FFF} \otimes }$:
+> 	$$
+> 	\forall a,b \in C . (a\ {\color{#7F7FFF} \otimes }\ b = b\ {\color{#7F7FFF} \otimes }\ a)
+> 	$$
+> 9. Proprietà distributiva%% link %%:
+> 	$$
+> 	\forall a,b,c \in C. \left( \begin{array}{}
+> 	a\ {\color{#7F7FFF} \otimes }\ (b\ {\color{#FF7F7F} \oplus }\ c) = (a\ {\color{#7F7FFF} \otimes }\ b)\ {\color{#FF7F7F} \oplus }\ (a\ {\color{#7F7FFF} \otimes }\ c) \\
+> 	\land \\
+> 	(b\ {\color{#FF7F7F} \oplus }\ c)\ {\color{#7F7FFF} \otimes }\ a = (b\ {\color{#7F7FFF} \otimes }\ a)\ {\color{#FF7F7F} \oplus }\ (c\ {\color{#7F7FFF} \otimes }\ a)
+> 	\end{array} \right) 
+> 	$$
+^definizione-campo
+
+%% 
+esercizi pagg. 36-38
 %%
 
 ---
