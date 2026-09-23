@@ -1,3 +1,7 @@
+---
+aliases:
+  - Asintoti verticali e orizzontali
+---
 
 > [!premessa]+ Premessa
 > 

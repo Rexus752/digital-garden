@@ -1,3 +1,7 @@
+---
+aliases:
+  - Forme indeterminate
+---
 
 > [!premessa]+ Premessa
 > 

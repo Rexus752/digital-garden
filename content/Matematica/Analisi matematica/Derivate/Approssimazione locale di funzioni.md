@@ -1,3 +1,7 @@
+---
+aliases:
+  - Approssimazione locale di funzioni
+---
 
 > [!premessa]+ Premessa
 > 

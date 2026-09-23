@@ -1,3 +1,7 @@
+---
+aliases:
+  - Tipizzazione in Haskell
+---
 
 > [!premessa]+ Premessa
 > 

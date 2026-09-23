@@ -1,3 +1,7 @@
+---
+aliases:
+  - Informatica a UniTo
+---
 
 > [!premessa]+ Premessa
 > 

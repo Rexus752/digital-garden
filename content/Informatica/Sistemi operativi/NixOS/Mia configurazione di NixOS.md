@@ -1,3 +1,7 @@
+---
+aliases:
+  - Mia configurazione di NixOS
+---
 
 > [!premessa]+ Premessa
 > 

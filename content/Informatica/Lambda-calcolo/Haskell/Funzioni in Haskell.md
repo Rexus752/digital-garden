@@ -1,3 +1,7 @@
+---
+aliases:
+  - Funzioni in Haskell
+---
 
 > [!premessa]+ Premessa
 > 

@@ -1,3 +1,7 @@
+---
+aliases:
+  - Topologia dei reali
+---
 
 > [!premessa]+ Premessa
 > 

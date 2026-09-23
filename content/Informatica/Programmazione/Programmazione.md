@@ -1,3 +1,7 @@
+---
+aliases:
+  - Programmazione
+---
 
 > [!premessa]+ Premessa
 > 

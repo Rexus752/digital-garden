@@ -1,3 +1,7 @@
+---
+aliases:
+  - Informatica
+---
 
 > [!premessa]+ Premessa
 > 

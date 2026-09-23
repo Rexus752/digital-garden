@@ -1,3 +1,7 @@
+---
+aliases:
+  - Logica per l'informatica
+---
 
 > [!premessa]+ Premessa
 > 

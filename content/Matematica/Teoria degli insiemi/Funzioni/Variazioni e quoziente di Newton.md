@@ -1,3 +1,7 @@
+---
+aliases:
+  - Variazioni e quoziente di Newton
+---
 
 > [!premessa]+ Premessa
 > 

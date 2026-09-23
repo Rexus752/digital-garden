@@ -1,4 +1,5 @@
-# d2 --theme=200 --layout=elk --pad=0 ./content/_scripts/canvas/canvas.d2 
+# python ./content/_scripts/canvas/canvas-to-d2.py ./content/_scripts/canvas/canvas.canvas ./content/_scripts/canvas/canvas.d2
+# d2 --theme=200 --layout=elk --pad=0 --scale=1 ./content/_scripts/canvas/canvas.d2
 
 #!/usr/bin/env python3
 
@@ -25,20 +26,17 @@ def decode(value):
     return unquote(value)
 
 
-def normalize_slug(value):
+def normalize_url_part(value):
     """
-    Trasforma un nome di pagina in uno slug.
+    Normalizza una singola parte di un URL.
 
     Esempi:
 
-        "Matematica"
-        -> "matematica"
+        "Logica per l'informatica"
+        -> "logica-per-l'informatica"
 
-        "Algebra lineare"
-        -> "algebra-lineare"
-
-        "Teoria degli insiemi"
-        -> "teoria-degli-insiemi"
+        "Lambda-calcolo semplicemente tipizzato (STLC)"
+        -> "lambda-calcolo-semplicemente-tipizzato-(stlc)"
     """
 
     value = decode(value).strip().lower()
@@ -46,13 +44,10 @@ def normalize_slug(value):
     # Spazi e underscore diventano -
     value = re.sub(r"[\s_]+", "-", value)
 
-    # Mantiene lettere Unicode, numeri e -
-    value = re.sub(r"[^\w-]", "-", value, flags=re.UNICODE)
-
-    # Elimina trattini consecutivi
+    # Elimina eventuali - consecutivi
     value = re.sub(r"-+", "-", value)
 
-    # Elimina trattini ai bordi
+    # Elimina eventuali - ai bordi
     value = value.strip("-")
 
     return value
@@ -70,14 +65,14 @@ def page_url(path):
         Matematica.md
         -> https://rexus752.dev/matematica
 
-        Matematica/Algebra/Algebra lineare/Algebra lineare.md
-        -> https://rexus752.dev/matematica/algebra/algebra-lineare/algebra-lineare
+        Logica per l'informatica.md
+        -> https://rexus752.dev/logica-per-l'informatica
+
+        Lambda-calcolo semplicemente tipizzato (STLC).md
+        -> https://rexus752.dev/lambda-calcolo-semplicemente-tipizzato-(stlc)
     """
 
-    path = decode(path).strip()
-
-    # Rimuove eventuale slash iniziale
-    path = path.lstrip("/")
+    path = decode(path).strip().lstrip("/")
 
     # Rimuove .md
     if path.lower().endswith(".md"):
@@ -90,7 +85,7 @@ def page_url(path):
     parts = path.split("/")
 
     parts = [
-        normalize_slug(part)
+        normalize_url_part(part)
         for part in parts
         if part.strip()
     ]
@@ -100,28 +95,31 @@ def page_url(path):
 
 def icon_url(path):
     """
-    Converte:
+    Converte il path dell'icona nell'URL pubblico.
+
+    Esempi:
 
         _icons/Matematica.svg
+        -> https://rexus752.dev/_icons/matematica.svg
 
-    in:
+        _icons/Logica per l'informatica.svg
+        -> https://rexus752.dev/_icons/logica-per-l'informatica.svg
 
-        https://rexus752.dev/_icons/matematica.svg
+        _icons/Lambda-calcolo semplicemente tipizzato (STLC).svg
+        -> https://rexus752.dev/_icons/lambda-calcolo-semplicemente-tipizzato-(stlc).svg
     """
 
     path = decode(path).strip().lstrip("/")
 
     parts = path.split("/")
 
-    # Normalizziamo solo il nome dell'icona.
-    # La directory _icons resta invariata.
     if parts:
         filename = parts[-1]
 
         stem = Path(filename).stem
         extension = Path(filename).suffix
 
-        stem = normalize_slug(stem)
+        stem = normalize_url_part(stem)
 
         parts[-1] = stem + extension.lower()
 
@@ -133,7 +131,7 @@ def icon_url(path):
 # ============================================================
 
 MARKDOWN_LINK_RE = re.compile(
-    r"#\s*\[([^\]]+)\]\(([^)]+)\)"
+    r"#\s*\[([^\]]+)\]\((.*)\)"
 )
 
 

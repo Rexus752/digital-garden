@@ -1,3 +1,7 @@
+---
+aliases:
+  - Proprietà globali delle funzioni continue
+---
 
 > [!premessa]+ Premessa
 > 

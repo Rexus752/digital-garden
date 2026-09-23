@@ -1,3 +1,7 @@
+---
+aliases:
+  - Proprietà locali delle funzioni continue
+---
 
 > [!premessa]+ Premessa
 > 

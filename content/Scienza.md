@@ -1,3 +1,7 @@
+---
+aliases:
+  - Scienza
+---
 
 > [!premessa]+ Premessa
 > 

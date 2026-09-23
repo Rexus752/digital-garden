@@ -1,3 +1,7 @@
+---
+aliases:
+  - Proprietà delle funzioni
+---
 
 > [!premessa]+ Premessa
 > 

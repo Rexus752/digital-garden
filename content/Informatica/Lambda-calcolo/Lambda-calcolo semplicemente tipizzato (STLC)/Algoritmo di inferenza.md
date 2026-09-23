@@ -1,3 +1,7 @@
+---
+aliases:
+  - Algoritmo di inferenza
+---
 
 > [!premessa]+ Premessa
 > 

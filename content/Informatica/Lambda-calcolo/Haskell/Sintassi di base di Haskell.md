@@ -1,3 +1,7 @@
+---
+aliases:
+  - Sintassi di base di Haskell
+---
 
 > [!premessa]+ Premessa
 > 

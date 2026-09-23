@@ -1,3 +1,7 @@
+---
+aliases:
+  - Codifica di Church
+---
 
 > [!premessa]+ Premessa
 > 

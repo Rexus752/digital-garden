@@ -1,3 +1,7 @@
+---
+aliases:
+  - Composizione di funzioni
+---
 
 > [!premessa]+ Premessa
 > 

@@ -1,3 +1,7 @@
+---
+aliases:
+  - Infiniti e infinitesimi
+---
 
 > [!premessa]+ Premessa
 > 

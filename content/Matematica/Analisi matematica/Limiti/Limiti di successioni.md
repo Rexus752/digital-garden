@@ -1,3 +1,7 @@
+---
+aliases:
+  - Limiti di successioni
+---
 
 > [!premessa]+ Premessa
 > 

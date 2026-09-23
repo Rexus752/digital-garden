@@ -1,3 +1,7 @@
+---
+aliases:
+  - Limiti delle funzioni elementari
+---
 
 > [!premessa]+ Premessa
 > 

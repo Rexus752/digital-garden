@@ -1,3 +1,7 @@
+---
+aliases:
+  - Grafici di derivate
+---
 
 > [!premessa]+ Premessa
 > 

@@ -1,5 +1,7 @@
 ---
-aliases: sheet-music
+aliases:
+  - sheet-music
+  - Tablature per basso
 ---
 
 > [!premessa]+ Premessa

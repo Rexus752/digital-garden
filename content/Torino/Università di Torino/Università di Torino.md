@@ -1,3 +1,7 @@
+---
+aliases:
+  - Università di Torino
+---
 
 > [!premessa]+ Premessa
 > 

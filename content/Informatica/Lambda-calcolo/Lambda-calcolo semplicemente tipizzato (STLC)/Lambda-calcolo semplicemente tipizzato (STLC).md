@@ -1,3 +1,7 @@
+---
+aliases:
+  - Lambda-calcolo semplicemente tipizzato (STLC)
+---
 
 > [!premessa]+ Premessa
 > 

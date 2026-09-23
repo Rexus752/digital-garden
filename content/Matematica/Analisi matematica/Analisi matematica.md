@@ -1,3 +1,7 @@
+---
+aliases:
+  - Analisi matematica
+---
 
 > [!premessa]+ Premessa
 > 

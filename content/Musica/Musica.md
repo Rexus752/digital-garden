@@ -1,3 +1,7 @@
+---
+aliases:
+  - Musica
+---
 
 > [!premessa]+ Premessa
 > 

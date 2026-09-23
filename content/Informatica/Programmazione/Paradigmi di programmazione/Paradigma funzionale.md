@@ -1,3 +1,7 @@
+---
+aliases:
+  - Paradigma funzionale
+---
 
 > [!premessa]+ Premessa
 > 

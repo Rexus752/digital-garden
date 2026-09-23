@@ -1,3 +1,7 @@
+---
+aliases:
+  - Nix flake
+---
 
 > [!premessa]+ Premessa
 > 

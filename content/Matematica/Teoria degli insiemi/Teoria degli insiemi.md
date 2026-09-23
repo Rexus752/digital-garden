@@ -1,3 +1,7 @@
+---
+aliases:
+  - Teoria degli insiemi
+---
 
 > [!premessa]+ Premessa
 > 

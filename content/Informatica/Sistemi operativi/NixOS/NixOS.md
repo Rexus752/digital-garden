@@ -1,3 +1,7 @@
+---
+aliases:
+  - NixOS
+---
 
 > [!premessa]+ Premessa
 > 

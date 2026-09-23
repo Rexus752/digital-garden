@@ -1,3 +1,7 @@
+---
+aliases:
+  - Torino
+---
 
 > [!premessa]+ Premessa
 > 

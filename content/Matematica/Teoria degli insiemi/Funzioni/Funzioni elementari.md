@@ -1,3 +1,7 @@
+---
+aliases:
+  - Funzioni elementari
+---
 
 > [!premessa]+ Premessa
 > 

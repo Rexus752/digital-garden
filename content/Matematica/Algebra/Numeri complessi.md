@@ -1,3 +1,7 @@
+---
+aliases:
+  - Numeri complessi
+---
 
 > [!premessa]+ Premessa
 > 

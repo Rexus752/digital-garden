@@ -1,3 +1,7 @@
+---
+aliases:
+  - Configurazione del mio Giardino Digitale
+---
 
 > [!premessa]+ Premessa
 > 
@@ -118,6 +122,14 @@ Per usare questi font, ho modificato il file `quartz.config.yaml` in questo modo
 ```
 
 ## 2.4 - File system
+
+%% 
+nomi veri anziché index perché
+1. credevo non avrebbe dato problemi quando metto link nelle note, facendo scrivere solo il percorso shortest
+2. nel canvas cambia i nomi
+
+ogni nota ha il proprio nome come alias così dall'SVG del canvas rimanda alla pagina giusta senza dover trovare il percorso completo del file quando fa l'SVG 
+%%
 
 Il mio Giardino Digitale contiene note divise per cartelle a seconda dell'argomento di cui trattano. Ogni cartella ha una nota associata e le relative sotto-cartelle e sotto-note comprese in quell'argomento.
 

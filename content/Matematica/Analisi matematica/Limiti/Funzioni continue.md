@@ -1,3 +1,7 @@
+---
+aliases:
+  - Funzioni continue
+---
 
 > [!premessa]+ Premessa
 > 

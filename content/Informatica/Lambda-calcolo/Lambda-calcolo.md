@@ -1,3 +1,7 @@
+---
+aliases:
+  - Lambda-calcolo
+---
 
 > [!premessa]+ Premessa
 > 

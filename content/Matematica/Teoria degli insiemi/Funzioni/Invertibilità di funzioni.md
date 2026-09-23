@@ -1,3 +1,7 @@
+---
+aliases:
+  - Invertibilità di funzioni
+---
 
 > [!premessa]+ Premessa
 > 

@@ -1,3 +1,7 @@
+---
+aliases:
+  - Logica matematica
+---
 
 > [!premessa]+ Premessa
 > 

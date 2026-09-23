@@ -1,3 +1,7 @@
+---
+aliases:
+  - Distribuzione del software
+---
 
 > [!premessa]+ Premessa
 > 

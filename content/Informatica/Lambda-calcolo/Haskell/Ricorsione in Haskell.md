@@ -1,3 +1,7 @@
+---
+aliases:
+  - Ricorsione in Haskell
+---
 
 > [!premessa]+ Premessa
 > 

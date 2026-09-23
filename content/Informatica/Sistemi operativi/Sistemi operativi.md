@@ -1,3 +1,7 @@
+---
+aliases:
+  - Sistemi operativi
+---
 
 > [!premessa]+ Premessa
 > 

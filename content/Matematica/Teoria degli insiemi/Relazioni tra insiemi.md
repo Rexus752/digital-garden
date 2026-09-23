@@ -1,3 +1,7 @@
+---
+aliases:
+  - Relazioni tra insiemi
+---
 
 > [!premessa]+ Premessa
 > 

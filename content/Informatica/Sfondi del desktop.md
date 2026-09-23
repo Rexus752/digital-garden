@@ -1,6 +1,7 @@
 ---
 aliases:
   - desktop-wallpapers
+  - Sfondi del desktop
 ---
 
 > [!premessa]+ Premessa

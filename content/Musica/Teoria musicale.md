@@ -1,3 +1,7 @@
+---
+aliases:
+  - Teoria musicale
+---
 
 > [!premessa]+ Premessa
 > 

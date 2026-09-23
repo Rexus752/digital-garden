@@ -1,3 +1,7 @@
+---
+aliases:
+  - Paradigmi di programmazione
+---
 
 > [!premessa]+ Premessa
 > 

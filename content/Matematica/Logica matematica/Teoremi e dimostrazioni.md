@@ -1,3 +1,7 @@
+---
+aliases:
+  - Teoremi e dimostrazioni
+---
 
 > [!premessa]+ Premessa
 > 
