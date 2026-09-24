@@ -131,9 +131,9 @@ nomi veri anziché index perché
 ogni nota ha il proprio nome come alias così dall'SVG del canvas rimanda alla pagina giusta senza dover trovare il percorso completo del file quando fa l'SVG 
 %%
 
-Il mio Giardino Digitale contiene note divise per cartelle a seconda dell'argomento di cui trattano. Ogni cartella ha una nota associata e le relative sotto-cartelle e sotto-note comprese in quell'argomento.
+Il mio Giardino Digitale contiene note divise per cartelle a seconda dell'argomento di cui trattano.
 
-Per esempio, la cartella `Matematica` contiene la nota `Matematica.md` che fa da introduzione a quell'argomento e le sue sotto-cartelle come `Teoria degli insiemi` che a sua volta avrà la sua nota principale:
+Ogni cartella ha una nota associata (che da qui in poi chiamerò _folder note_) e le relative sotto-cartelle e sotto-note comprese in quell'argomento. Per esempio, la cartella `Matematica` contiene la sua _folder note_ `Matematica.md` che fa da introduzione a quell'argomento e le sue sotto-cartelle come `Teoria degli insiemi` che a sua volta avrà la sua _folder note_ `Teoria degli insiemi.md`:
 
 ```
 📂 Matematica/
@@ -143,27 +143,11 @@ Per esempio, la cartella `Matematica` contiene la nota `Matematica.md` che fa da
     └── 🗒 Teoria degli insiemi.md
 ```
 
-Problemino: Quartz%% link %% genera delle pagine web non solo per le note, ma anche per le cartelle stesse (nella pagina della cartella ti inserisce i link alle note contenute nella cartella). Ciò significa che, per esempio, la nota `Matematica.md` è disponibile al percorso `./Matematica/Matematica.md`, perché al percorso `./Matematica` apre la pagina della cartella Matematica%% link %%.
+Quartz%% link %% genera una pagina sia per ogni cartella (in cui descrive il contenuto della cartella, vedi [qua](https://quartz.jzhao.xyz/features/folder-and-tag-listings) per saperne di più) e una per ogni nota del vault%% link %% (in cui inserisce contenuto della nota).
 
-Per ovviare a questo problema, Quartz offre già a priori una soluzione: nella cartella desiderata, si può rinominare la sua "nota associata" in `_index.md` o `index.md` in modo da sostituirla alla nota della cartella. Il titolo della nota lo prende dalla proprietà `title` inserita nel frontmatter della nota.
+Nel caso delle _folder note_ che hanno lo stesso nome della propria cartella di appartenenza (come appunto la cartella `Matematica` e la sua _folder note_ `Matematica.md`) non genera due pagine separate ma un'unica pagina in cui le riunisce entrambe, mettendo prima il contenuto della nota e poi la lista del contenuto della cartella.
 
-> [!attenzione]+ Attenzione: `_index.md` o `index.md`?
-> 
-> Riguardo quest'ultima cosa, sono stato costretto a scegliere `_index.md` come nome di default per le note associate alle cartelle, perché `index.md` l'ho riservato alla nota della homepage del sito (cioè `content/index.md`). Ho dovuto fare così perché, in questo modo, nelle premesse delle note posso mettere un link che reindirizza semplicemente all'unica nota che in tutto il vault di Obsidian ha come nome `index.md`, ossia proprio `content/index.md`. Se anche questa nota avesse come nome `_index.md`, Obsidian "forza" a inserire come percorso nell'hyperlink il percorso `content/_index.md`, generando il problema per cui, sul sito, questo hyperlink rimanda alla nota `https://rexus752.dev/content/_index.md` che non esiste.
-
-Quindi, nella cartella `Matematica`, la nota `Matematica.md` diventa `_index.md` e, quando nell'Esplora sul lato della pagina cliccherò su `Matematica`, non mi porterà alla pagina della cartella, ma a quella della nota `Matematica.md`.
-
-Il risultato è il seguente:
-
-```
-📂 Matematica/
-├── 🗒 _index.md
-├── 🗒 Analisi.md
-└── 📂 Teoria degli insiemi/
-    └── 🗒 _index.md
-```
-
-Per evitare che comunque le pagine associate delle cartelle mostrino sotto il contenuto della nota associata anche il contenuto della cartella, ho dovuto modificare il codice SCSS del sito perché non capivo come modificarlo dalle impostazioni del plugin, dato che le opzioni che il [plugin `FolderPage`](https://quartz.jzhao.xyz/plugins/folderpage) mette a disposizione non mi permette di disabilitarlo in toto e, se provo ad eliminarlo direttamente dal `quartz.config.yaml`, mi disabilita proprio l'intera pagina.
+Per evitare che venga mostrato anche il contenuto della cartella, ho dovuto modificare il codice SCSS del sito perché non capivo come modificarlo dalle impostazioni del plugin, dato che le opzioni che il [plugin `FolderPage`](https://quartz.jzhao.xyz/plugins/folderpage) mette a disposizione non mi permette di disabilitarlo in toto e, se provo a disabilitarlo direttamente dal `quartz.config.yaml`, mi disabilita proprio l'intera pagina.
 
 Per modificare il codice SCSS, Quartz%% link %% mette a disposizione il file `custom.scss` nella cartella `quartz/styles` per scriverci le proprie modifiche. In nome del sacro principio della _modularità del codice_%% link %%, ho inserito questa modifica in un file `disable-folder-page.scss` in una sotto-cartella `custom` della cartella `quartz/styles` che, appunto, conterrà tutte le varie modifiche da applicare all'SCSS del sito.
 

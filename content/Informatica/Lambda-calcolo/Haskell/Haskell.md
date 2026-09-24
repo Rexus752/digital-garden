@@ -94,6 +94,10 @@ Per imparare a usare [Haskell](Informatica/Lambda-calcolo/Haskell/Haskell.md#^de
 https://downloads.haskell.org/ghc/latest/docs/users_guide/ghci.html
 %%
 
+%% 
+- Padovani: [Contatore di accessi web](https://boystrange.github.io/LPP/HitCounter)
+%%
+
 > [!fonti]+ Fonti
 > 
 > - 🏫 Corso di Laurea in Informatica (`L-31 R`) presso l'Università di Torino:

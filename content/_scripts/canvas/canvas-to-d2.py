@@ -1,5 +1,6 @@
+# Esempio:
 # python ./content/_scripts/canvas/canvas-to-d2.py ./content/_scripts/canvas/canvas.canvas ./content/_scripts/canvas/canvas.d2
-# d2 --theme=200 --layout=elk --pad=0 --scale=1 ./content/_scripts/canvas/canvas.d2
+# d2 --bundle --theme=200 --layout=elk --pad=0 --scale=1 ./content/_scripts/canvas/canvas.d2
 
 #!/usr/bin/env python3
 
@@ -16,6 +17,14 @@ from urllib.parse import unquote
 
 BASE_URL = "https://rexus752.dev"
 
+STATUS_RE = re.compile(r"🟢|🟡|🔴")
+
+STATUS_COLORS = {
+    "🔴": "#FF7F7F",
+    "🟡": "#FFFF7F",
+    "🟢": "#FFFFFF",
+}
+
 
 # ============================================================
 # Utility
@@ -31,7 +40,6 @@ def normalize_url_part(value):
     Normalizza una singola parte di un URL.
 
     Esempi:
-
         "Logica per l'informatica"
         -> "logica-per-l'informatica"
 
@@ -56,20 +64,6 @@ def normalize_url_part(value):
 def page_url(path):
     """
     Converte un path Markdown di Obsidian nell'URL del sito.
-
-    Esempi:
-
-        index.md
-        -> https://rexus752.dev
-
-        Matematica.md
-        -> https://rexus752.dev/matematica
-
-        Logica per l'informatica.md
-        -> https://rexus752.dev/logica-per-l'informatica
-
-        Lambda-calcolo semplicemente tipizzato (STLC).md
-        -> https://rexus752.dev/lambda-calcolo-semplicemente-tipizzato-(stlc)
     """
 
     path = decode(path).strip().lstrip("/")
@@ -96,21 +90,9 @@ def page_url(path):
 def icon_url(path):
     """
     Converte il path dell'icona nell'URL pubblico.
-
-    Esempi:
-
-        _icons/Matematica.svg
-        -> https://rexus752.dev/_icons/matematica.svg
-
-        _icons/Logica per l'informatica.svg
-        -> https://rexus752.dev/_icons/logica-per-l'informatica.svg
-
-        _icons/Lambda-calcolo semplicemente tipizzato (STLC).svg
-        -> https://rexus752.dev/_icons/lambda-calcolo-semplicemente-tipizzato-(stlc).svg
     """
 
     path = decode(path).strip().lstrip("/")
-
     parts = path.split("/")
 
     if parts:
@@ -120,10 +102,78 @@ def icon_url(path):
         extension = Path(filename).suffix
 
         stem = normalize_url_part(stem)
-
         parts[-1] = stem + extension.lower()
 
     return BASE_URL + "/" + "/".join(parts)
+
+
+def build_markdown_index(vault_root):
+    """
+    Indicizza tutti i file Markdown nel vault, comprese le sottocartelle.
+    Le chiavi sono percorsi relativi al vault e nomi file minuscoli.
+    """
+
+    root = Path(vault_root).expanduser().resolve()
+    by_path = {}
+    by_name = {}
+
+    for path in root.rglob("*.md"):
+        if not path.is_file():
+            continue
+
+        relative = path.relative_to(root).as_posix()
+        by_path[relative.casefold()] = path
+        by_name.setdefault(path.name.casefold(), []).append(path)
+
+    return root, by_path, by_name
+
+
+def find_status_emoji(file_path, markdown_index):
+    """
+    Cerca la prima emoji di stato nel file Markdown associato.
+    Prima tenta il percorso relativo completo, poi il nome file.
+    """
+
+    root, by_path, by_name = markdown_index
+
+    clean_path = re.split(r"[?#]", unquote(file_path), maxsplit=1)[0]
+    clean_path = clean_path.strip().lstrip("/")
+
+    # Prova prima a trovare il file usando il percorso completo.
+    path = by_path.get(clean_path.casefold())
+
+    # Se il link contiene solo il nome della nota, cerca per basename.
+    if path is None:
+        candidates = by_name.get(Path(clean_path).name.casefold(), [])
+
+        if len(candidates) == 1:
+            path = candidates[0]
+        elif len(candidates) > 1:
+            print(
+                f"Avviso: nome file ambiguo {file_path!r}; "
+                "trovate più note con lo stesso nome.",
+                file=sys.stderr,
+            )
+            return ""
+
+    if path is None:
+        print(
+            f"Avviso: nota non trovata nel vault: {file_path!r}",
+            file=sys.stderr,
+        )
+        return ""
+
+    try:
+        content = path.read_text(encoding="utf-8")
+    except (OSError, UnicodeError) as error:
+        print(
+            f"Avviso: impossibile leggere {path}: {error}",
+            file=sys.stderr,
+        )
+        return ""
+
+    match = STATUS_RE.search(content)
+    return match.group(0) if match else ""
 
 
 # ============================================================
@@ -140,11 +190,9 @@ def parse_text_node(text):
     Analizza un nodo Canvas di tipo text.
 
     Esempio:
-
         # [Matematica](Matematica.md)
 
     restituisce:
-
         {
             "title": "Matematica",
             "path": "Matematica.md"
@@ -175,11 +223,7 @@ def parse_text_node(text):
 # ============================================================
 
 def rectangle(node):
-    """
-    Restituisce:
-
-        left, top, right, bottom
-    """
+    """Restituisce left, top, right, bottom."""
 
     x = node.get("x", 0)
     y = node.get("y", 0)
@@ -317,19 +361,12 @@ def find_icon_for_node(node, icon_nodes, groups):
     Cerca l'icona associata a un nodo.
 
     Strategia:
-
     1. Se l'icona e il nodo appartengono allo stesso gruppo,
        l'icona è candidata.
-
     2. Se esiste un solo candidato, viene utilizzato.
-
     3. Se esistono più candidati, viene scelta quella più vicina.
-
     4. Se non esiste nessuna icona nello stesso gruppo,
        il nodo rimane senza icona.
-
-    Questo evita di assegnare arbitrariamente un'icona
-    appartenente ad una zona completamente diversa del Canvas.
     """
 
     node_groups = find_groups_for_node(node, groups)
@@ -369,11 +406,8 @@ def find_icon_for_node(node, icon_nodes, groups):
     # Caso 2: nessun gruppo
     # --------------------------------------------------------
     #
-    # Per i nodi senza gruppo NON prendiamo semplicemente
-    # l'icona più vicina.
-    #
-    # Cerchiamo soltanto un'icona molto vicina e con la stessa
-    # altezza/posizione tipica di un accoppiamento icon + text.
+    # Per i nodi senza gruppo cerchiamo soltanto un'icona
+    # molto vicina, evitando associazioni arbitrarie.
     # --------------------------------------------------------
 
     best_icon = None
@@ -384,9 +418,6 @@ def find_icon_for_node(node, icon_nodes, groups):
         distance = distance_squared(node, icon)
 
         # Soglia volutamente conservativa.
-        #
-        # Nel Canvas normalmente l'icona si trova a poche
-        # decine di pixel dal nodo testuale.
         if distance > 120 ** 2:
             continue
 
@@ -410,26 +441,35 @@ def escape_d2_string(value):
     return value.replace("\\", "\\\\").replace('"', '\\"')
 
 
-def generate_d2(canvas):
+def generate_d2(canvas, vault_root):
     groups, text_nodes, icon_nodes = build_structure(canvas)
+    markdown_index = build_markdown_index(vault_root)
 
     # --------------------------------------------------------
-    # Mappa ID Canvas -> titolo D2
+    # Mappa ID Canvas -> dati del nodo
     # --------------------------------------------------------
 
     node_map = {}
 
     for node in text_nodes:
 
+        status = find_status_emoji(
+            node["path"],
+            markdown_index,
+        )
+
+        # Il titolo rimane quello originale del Canvas:
+        # l'emoji di stato non viene aggiunta.
         node_map[node["id"]] = {
             "title": node["title"],
             "path": node["path"],
             "link": page_url(node["path"]),
             "icon": None,
+            "status": status,
         }
 
     # --------------------------------------------------------
-    # Associa icone
+    # Associa icone grafiche
     # --------------------------------------------------------
 
     for node in text_nodes:
@@ -452,6 +492,8 @@ def generate_d2(canvas):
     lines = []
 
     lines.append("direction: right")
+    lines.append("*.style.font-size: 32")
+    lines.append("# *.shape: image")
     lines.append("")
 
     # --------------------------------------------------------
@@ -464,6 +506,7 @@ def generate_d2(canvas):
 
         data = node_map[node["id"]]
 
+        # Usa il titolo originale, senza aggiungere l'emoji.
         title = data["title"]
 
         # Se due nodi Canvas rappresentano la stessa pagina,
@@ -482,9 +525,18 @@ def generate_d2(canvas):
                 f"  link: {data['link']}"
             )
 
+        if data["status"]:
+            color = STATUS_COLORS[data["status"]]
+            lines.append(
+                f'  style.font-color: "{color}"'
+            )
+
         if data["icon"]:
             lines.append(
                 f"  icon: {data['icon']}"
+            )
+            lines.append(
+                "  shape: image"
             )
 
         lines.append("}")
@@ -510,6 +562,7 @@ def generate_d2(canvas):
         if to_id not in node_map:
             continue
 
+        # Anche gli archi usano i titoli senza emoji.
         from_title = node_map[from_id]["title"]
         to_title = node_map[to_id]["title"]
 
@@ -541,7 +594,7 @@ def main():
 
     if len(sys.argv) < 2:
         print(
-            f"Uso: {sys.argv[0]} INPUT.canvas [OUTPUT.d2]",
+            f"Uso: {sys.argv[0]} INPUT.canvas [OUTPUT.d2] [VAULT_ROOT]",
             file=sys.stderr,
         )
         sys.exit(1)
@@ -552,6 +605,25 @@ def main():
         output_path = Path(sys.argv[2])
     else:
         output_path = input_path.with_suffix(".d2")
+
+    # --------------------------------------------------------
+    # Cartella principale dei file Markdown
+    # --------------------------------------------------------
+    #
+    # Per il percorso di esempio:
+    # content/_scripts/canvas/canvas.canvas
+    #
+    # la radice predefinita è:
+    # content/
+    #
+    # È possibile specificare una radice diversa come terzo
+    # argomento da riga di comando.
+    # --------------------------------------------------------
+
+    if len(sys.argv) >= 4:
+        vault_root = Path(sys.argv[3])
+    else:
+        vault_root = input_path.parent.parent.parent
 
     # --------------------------------------------------------
     # Lettura Canvas
@@ -582,7 +654,10 @@ def main():
     # Conversione
     # --------------------------------------------------------
 
-    d2 = generate_d2(canvas)
+    d2 = generate_d2(
+        canvas,
+        vault_root,
+    )
 
     # --------------------------------------------------------
     # Scrittura
@@ -594,8 +669,9 @@ def main():
     ) as file:
         file.write(d2)
 
-    print(f"Canvas: {input_path}")
-    print(f"D2:     {output_path}")
+    print(f"Canvas:     {input_path}")
+    print(f"D2:         {output_path}")
+    print(f"Vault root: {vault_root}")
 
 
 if __name__ == "__main__":
