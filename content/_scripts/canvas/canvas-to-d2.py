@@ -1,6 +1,5 @@
 # Esempio:
-# python ./content/_scripts/canvas/canvas-to-d2.py ./content/_scripts/canvas/canvas.canvas ./content/_scripts/canvas/canvas.d2
-# d2 --bundle --theme=200 --layout=elk --pad=0 --scale=1 ./content/_scripts/canvas/canvas.d2
+# python ./content/_scripts/canvas/canvas-to-d2.py ./content/_scripts/canvas/canvas.canvas ./content/_scripts/canvas/canvas.d2 && d2 --bundle --theme=200 --layout=elk --pad=100 --scale=1 ./content/_scripts/canvas/canvas.d2
 
 #!/usr/bin/env python3
 
@@ -352,6 +351,58 @@ def smallest_group(groups):
     )
 
 
+def map_groups_to_text_nodes(groups, text_nodes):
+    """
+    Associa ogni gruppo Canvas al nodo text che contiene.
+
+    Se un gruppo contiene più nodi text, seleziona quello
+    il cui centro è più vicino al centro del gruppo.
+
+    Restituisce un dizionario:
+        {
+            "id_gruppo": nodo_text,
+            ...
+        }
+    """
+
+    group_to_text = {}
+
+    for group in groups:
+        candidates = [
+            node
+            for node in text_nodes
+            if contains(group, node)
+        ]
+
+        if not candidates:
+            continue
+
+        group_to_text[group["id"]] = min(
+            candidates,
+            key=lambda node: distance_squared(group, node),
+        )
+
+    return group_to_text
+
+
+def get_group_color_for_node(node, groups):
+    """
+    Restituisce il colore del gruppo più specifico
+    che contiene il nodo.
+
+    Se il nodo non appartiene a nessun gruppo colorato,
+    restituisce None.
+    """
+
+    node_groups = find_groups_for_node(node, groups)
+    group = smallest_group(node_groups)
+
+    if group is None:
+        return None
+
+    return group.get("color")
+
+
 # ============================================================
 # Associazione delle icone
 # ============================================================
@@ -466,7 +517,20 @@ def generate_d2(canvas, vault_root):
             "link": page_url(node["path"]),
             "icon": None,
             "status": status,
+            "group_color": get_group_color_for_node(
+                node,
+                groups,
+            ),
         }
+    
+    # --------------------------------------------------------
+    # Mappa ID gruppo Canvas -> nodo text corrispondente
+    # --------------------------------------------------------
+
+    group_to_text = map_groups_to_text_nodes(
+        groups,
+        text_nodes,
+    )
 
     # --------------------------------------------------------
     # Associa icone grafiche
@@ -492,7 +556,10 @@ def generate_d2(canvas, vault_root):
     lines = []
 
     lines.append("direction: right")
-    lines.append("*.style.font-size: 32")
+    lines.append("*.style.font-size: 16")
+    lines.append("*.style.stroke-width: 4") # Bordi dei nodi
+    lines.append("(* -> *)[*].style.stroke-width: 8") # Archi
+    lines.append("*.style.fill: transparent")
     lines.append("# *.shape: image")
     lines.append("")
 
@@ -520,12 +587,18 @@ def generate_d2(canvas, vault_root):
 
         lines.append(f'"{title_escaped}": {{')
 
+        if data["group_color"]:
+            color = escape_d2_string(data["group_color"])
+            lines.append(
+                f'  style.stroke: "{color}"'
+            )
+
         if data["link"]:
             lines.append(
                 f"  link: {data['link']}"
             )
 
-        if data["status"]:
+        if data["status"] and not title.startswith("Benvenut*"):
             color = STATUS_COLORS[data["status"]]
             lines.append(
                 f'  style.font-color: "{color}"'
@@ -534,9 +607,6 @@ def generate_d2(canvas, vault_root):
         if data["icon"]:
             lines.append(
                 f"  icon: {data['icon']}"
-            )
-            lines.append(
-                "  shape: image"
             )
 
         lines.append("}")
@@ -550,22 +620,69 @@ def generate_d2(canvas, vault_root):
 
     emitted_edges = set()
 
+    def resolve_endpoint(node_id):
+        """
+        Risolve un endpoint Canvas in una coppia:
+            (titolo D2, colore del gruppo)
+
+        Per i nodi text usa il colore del gruppo
+        di appartenenza.
+        Per i gruppi usa il colore del gruppo stesso.
+        """
+
+        # Collegamento diretto a un nodo text
+        if node_id in node_map:
+            data = node_map[node_id]
+            return (
+                data["title"],
+                data["group_color"],
+            )
+
+        # Collegamento a un gruppo
+        text_node = group_to_text.get(node_id)
+
+        if text_node is not None:
+            group = next(
+                (
+                    group
+                    for group in groups
+                    if group["id"] == node_id
+                ),
+                None,
+            )
+
+            color = (
+                group.get("color")
+                if group is not None
+                else None
+            )
+
+            return (
+                node_map[text_node["id"]]["title"],
+                color,
+            )
+
+        return None, None
+
     for edge in edges:
 
         from_id = edge.get("fromNode")
         to_id = edge.get("toNode")
 
-        # Ignora archi che non collegano nodi text validi.
-        if from_id not in node_map:
+        from_title, from_color = resolve_endpoint(from_id)
+        to_title, _ = resolve_endpoint(to_id)
+
+        # Ignora gli archi che non possono essere associati
+        # a due nodi D2 validi.
+        if from_title is None or to_title is None:
             continue
 
-        if to_id not in node_map:
+        # Evita collegamenti di un nodo a sé stesso.
+        if from_title == to_title:
             continue
 
-        # Anche gli archi usano i titoli senza emoji.
-        from_title = node_map[from_id]["title"]
-        to_title = node_map[to_id]["title"]
-
+        # Evita duplicati, compresi quelli tra archi
+        # che collegano direttamente nodi text e gruppi.
         edge_key = (
             from_title,
             to_title,
@@ -579,9 +696,20 @@ def generate_d2(canvas, vault_root):
         from_escaped = escape_d2_string(from_title)
         to_escaped = escape_d2_string(to_title)
 
-        lines.append(
-            f'"{from_escaped}" -> "{to_escaped}"'
-        )
+        if from_color:
+            color = escape_d2_string(from_color)
+
+            lines.append(
+                f'"{from_escaped}" -> "{to_escaped}": {{'
+            )
+            lines.append(
+                f'  style.stroke: "{color}"'
+            )
+            lines.append("}")
+        else:
+            lines.append(
+                f'"{from_escaped}" -> "{to_escaped}"'
+            )
 
     return "\n".join(lines) + "\n"
 
