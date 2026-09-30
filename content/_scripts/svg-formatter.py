@@ -1,3 +1,8 @@
+"""
+Rende gli SVG dei quadrati e li formatta in modo da rendere
+facilmente configurabile il colore dell'icona
+"""
+
 import re
 
 ICON_NAME = "Informatica a UniTo"
