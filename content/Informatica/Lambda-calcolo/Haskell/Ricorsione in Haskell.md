@@ -17,11 +17,11 @@ If you still don’t know what recursion is, read this sentence. Haha! Just kidd
 
 Recursion is important to Haskell because unlike imperative languages, you do computations in Haskell by declaring what something is instead of declaring how you get it. That’s why there are no while loops or for loops in Haskell and instead we many times have to use recursion to declare what something is.
 
-# Funzioni definite ricorsivamente
+# 1 - Funzioni definite ricorsivamente
 
 Ora vediamo come ri-definire ricorsivamente alcune funzioni già viste.
 
-## Funzione `maximum`
+## 1.1 - Funzione `maximum`
 
 The maximum function takes a list of things that can be ordered (e.g. instances of the Ord typeclass) and returns the biggest of them. Think about how you’d implement that in an imperative fashion. You’d probably set up a variable to hold the maximum value so far and then you’d loop through the elements of a list and if an element is bigger than then the current maximum value, you’d replace it with that element. The maximum value that remains at the end is the result. Whew! That’s quite a lot of words to describe such a simple algorithm!
 
@@ -58,7 +58,7 @@ $$
 maximum[2,5,1] = \max 2 (maximum[5,1] = \max 5(maximum[1] = 1))
 $$
 
-## Funzione `replicate`
+## 1.2 - Funzione `replicate`
 
 Now that we know how to generally think recursively, let’s implement a few functions using recursion. First off, we’ll implement `replicate`. `replicate` takes an `Int` and some element and returns a list that has several repetitions of the same element. For instance, `replicate 3 5` returns `[5,5,5]`. Let’s think about the edge condition. My guess is that the edge condition is 0 or less. If we try to replicate something zero times, it should return an empty list. Also for negative numbers, because it doesn’t really make sense.
 
@@ -73,7 +73,7 @@ We used guards here instead of patterns because we’re testing for a boolean co
 
 **Note:** `Num` is not a subclass of `Ord`. This is because not every number type has an ordering, e.g. complex numbers aren’t ordered. So that’s why we have to specify both the `Num` and `Ord` class constraints when doing addition or subtraction and also comparison.
 
-## Funzione `take`
+## 1.3 - Funzione `take`
 
 Next up, we’ll implement `take`. It takes a certain number of elements from a list. For instance, `take 3 [5,4,3,2,1]` will return `[5,4,3]`. If we try to take 0 or fewer elements from a list, we get an empty list. Also if we try to take anything from an empty list, we get an empty list. Notice that those are two edge conditions right there. So let’s write that out:
 
@@ -87,9 +87,9 @@ take' n (x:xs) = x : take' (n-1) xs
 
 The first pattern specifies that if we try to take a 0 or negative number of elements, we get an empty list. Notice that we’re using `_` to match the list because we don’t really care what it is in this case. Also notice that we use a guard, but without an `otherwise` part. That means that if `n` turns out to be more than 0, the matching will fall through to the next pattern. The second pattern indicates that if we try to take anything from an empty list, we get an empty list. The third pattern breaks the list into a head and a tail. And then we state that taking `n` elements from a list equals a list that has `x` as the head and then a list that takes `n-1` elements from the tail as a tail. Try using a piece of paper to write down how the evaluation would look like if we try to take, say, 3 from `[4,3,2,1]`.
 
-## Funzione `reverse`
+## 1.4 - Funzione `reverse`
 
-`reverse` simply reverses a list. Think about the edge condition. What is it? Come on … it’s the empty list! An empty list reversed equals the empty list itself. O-kay. What about the rest of it? Well, you could say that if we split a list to a head and a tail, the reversed list is equal to the reversed tail and then the head at the end.
+`reverse` simply reverses a list. Think about the edge condition. What is it? Come on ... it’s the empty list! An empty list reversed equals the empty list itself. O-kay. What about the rest of it? Well, you could say that if we split a list to a head and a tail, the reversed list is equal to the reversed tail and then the head at the end.
 
 ```haskell
 reverse' :: [a] -> [a]  
@@ -99,7 +99,7 @@ reverse' (x:xs) = reverse' xs ++ [x]
 
 There we go!
 
-## Funzione `repeat`
+## 1.5 - Funzione `repeat`
 
 Because Haskell supports infinite lists, our recursion doesn’t really have to have an edge condition. But if it doesn’t have it, it will either keep churning at something infinitely or produce an infinite data structure, like an infinite list. The good thing about infinite lists though is that we can cut them where we want. `repeat` takes an element and returns an infinite list that just has that element. A recursive implementation of that is really easy, watch.
 
@@ -110,7 +110,7 @@ repeat' x = x:repeat' x
 
 Calling `repeat 3` will give us a list that starts with `3` and then has an infinite amount of 3’s as a tail. So calling `repeat 3` would evaluate like `3:repeat 3`, which is `3:(3:repeat 3)`, which is `3:(3:(3:repeat 3))`, etc. `repeat 3` will never finish evaluating, whereas `take 5 (repeat 3)` will give us a list of five 3’s. So essentially it’s like doing `replicate 5 3`.
 
-## Funzione `zip`
+## 1.6 - Funzione `zip`
 
 `zip` takes two lists and zips them together. `zip [1,2,3] [2,3]` returns `[(1,2),(2,3)]`, because it truncates the longer list to match the length of the shorter one. How about if we zip something with an empty list? Well, we get an empty list back then. So there’s our edge condition. However, `zip` takes two lists as parameters, so there are actually two edge conditions.
 
@@ -123,7 +123,7 @@ zip' (x:xs) (y:ys) = (x,y):zip' xs ys
 
 First two patterns say that if the first list or second list is empty, we get an empty list. The third one says that two lists zipped are equal to pairing up their heads and then tacking on the zipped tails. Zipping `[1,2,3]` and `['a','b']` will eventually try to zip `[3]` with `[]`. The edge condition patterns kick in and so the result is `(1,'a'):(2,'b'):[]`, which is exactly the same as `[(1,'a'),(2,'b')]`.
 
-## Funzione `elem`
+## 1.7 - Funzione `elem`
 
 Let’s implement one more standard library function — `elem`. It takes an element and a list and sees if that element is in the list. The edge condition, as is most of the times with lists, is the empty list. We know that an empty list contains no elements, so it certainly doesn’t have the droids we’re looking for.
 

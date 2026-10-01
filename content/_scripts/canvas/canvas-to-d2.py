@@ -19,9 +19,9 @@ BASE_URL = "https://rexus752.dev"
 STATUS_RE = re.compile(r"🟢|🟡|🔴")
 
 STATUS_COLORS = {
-    "🔴": "#FF7F7F",
-    "🟡": "#FFFF7F",
-    "🟢": "#FFFFFF",
+    "🔴": "#ff7f7f",
+    "🟡": "#ffff7f",
+    "🟢": "#ffffff",
 }
 
 

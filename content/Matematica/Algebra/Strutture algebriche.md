@@ -315,7 +315,7 @@ Gli [anelli](Strutture%20algebriche.md#^definizione-anello) possiedono propriet�
 
 Per esempio, per l'[anello](Strutture%20algebriche.md#^definizione-anello) $(\mathbb{Z}, +, \cdot)$ l'elemento neutro $0$ di $+$ è l'elemento assorbente%% Link %% di $\cdot$.
 
-> [!proposizione] Proposizione: elemento neutro e assorbente
+> [!proposizione]+ Proposizione: elemento neutro e assorbente
 > 
 > Dato un [anello](Strutture%20algebriche.md#^definizione-anello) $(A, {\color{#FF7F7F} \oplus }, {\color{#7F7FFF} \otimes })$ con $e_{\color{#FF7F7F} \oplus }$ elemento neutro%% link %% di ${\color{#FF7F7F} \oplus }$, abbiamo che $e_{{\color{#FF7F7F} \oplus }}$ è anche l'elemento assorbente%% Link %% di ${\color{#7F7FFF} \otimes }$:
 > 
@@ -324,7 +324,7 @@ Per esempio, per l'[anello](Strutture%20algebriche.md#^definizione-anello) $(\ma
 > $$
 ^proposizione-elemento-neutro-e-assorbente
 
-> [!dimostrazione] Dimostrazione: elemento neutro e assorbente
+> [!dimostrazione]- Dimostrazione: elemento neutro e assorbente
 > 
 > Dimostriamo che in un [anello](Strutture%20algebriche.md#^definizione-anello) $(A, {\color{#FF7F7F} \oplus }, {\color{#7F7FFF} \otimes })$ [l'elemento neutro $e_{\color{#FF7F7F} \oplus }$ di ${\color{#FF7F7F} \oplus }$ è anche l'elemento assorbente di ${\color{#7F7FFF} \otimes }$](Strutture%20algebriche.md#^proposizione-elemento-neutro-e-assorbente) attraverso una serie di uguaglianze:
 > 
@@ -345,7 +345,7 @@ Per esempio, per l'[anello](Strutture%20algebriche.md#^definizione-anello) $(\ma
 unicità dell'elemento neutro e_\times
 %%
 
-# Campi
+# 3 - Campi
 
 > [!definizione]+ Definizione: campo
 > 

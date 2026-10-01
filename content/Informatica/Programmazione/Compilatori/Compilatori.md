@@ -21,12 +21,12 @@ Tuttavia c'è un problema: un [computer](Informatica.md#^definizione-computer) �
 Introdurre in questa definizione "codice sorgente" e "codice macchina"
 %%
 
-> [!definizione] Definizione: compilatore
+> [!definizione]+ Definizione: compilatore
 > 
 > Un **compilatore** è un [programma](Informatica.md#^definizione-programma) che traduce una sequenza di [istruzioni](Informatica.md#^definizione-istruzione) scritte in un [linguaggio di programmazione](Programmazione.md#^definizione-linguaggio-di-programmazione) in linguaggio macchina%% Link %%.
 ^definizione-compilatore
 
-> [!osservazione] Osservazione: a cosa serve studiare i compilatori?
+> [!osservazione]+ Osservazione: a cosa serve studiare i compilatori?
 > 
 > Al giorno d'oggi (quasi) nessuno realizza più [compilatori](Compilatori.md#^definizione-compilatore) (eccetto se si sta inventando un nuovo [linguaggio di programmazione](Programmazione.md#^definizione-linguaggio-di-programmazione)), ma allora a cosa serve studiarli?
 > 
