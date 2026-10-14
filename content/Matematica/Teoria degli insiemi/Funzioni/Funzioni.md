@@ -5,7 +5,7 @@ aliases:
 
 > [!premessa]+ Premessa
 > 
-> Ciao! Se è la prima volta che capiti su questo sito, ti consiglio di consultare la [pagina principale](index.md) di questo cosiddetto _Giardino Digitale_ per scoprire meglio cos'è e come navigarlo.
+> Ciao! Se è la prima volta che capiti su questo sito, ti consiglio di consultare la [pagina principale](index.md) di questo _Giardino Digitale_ per scoprire meglio cos'è e come navigarlo.
 > 
 > Lo stato di questa nota è al momento: 🟡 <font color="#FFFF7F">_Incompleta_</font>.
 
@@ -581,7 +581,7 @@ rng(f|C) = f [C].
 > [!fonti]+ Fonti
 > 
 > - 🏫 Corso di Laurea in Informatica (`L-31 R`) presso l'Università di Torino:
-> 	- Corso di _Matematica Discreta, Algebra e Geometria - parte di Matematica Discreta & Algebra (parte 1) - canale C_, A.A. 2023-24 ([pagina Moodle](https://informatica.i-learn.unito.it/course/view.php?id=2750)):
+> 	- Corso di _Matematica Discreta, Algebra e Geometria - parte di Matematica Discreta & Algebra (parte 1) - canale C_ (`INF0328`), A.A. 2023-24 ([pagina Moodle](https://informatica.i-learn.unito.it/course/view.php?id=2750)):
 > 		- Proff. Chen Yu e Terracini Lea, lezioni in aula.
 > 	- Corso di _Matematica Discreta, Algebra e Geometria - parte di Algebra Lineare & Geometria (parte 2) - canale C_, A.A. 2023-24 ([pagina Moodle](https://informatica.i-learn.unito.it/course/view.php?id=2750)):
 > 		- Prof. Radeschi Marco, lezioni in aula.

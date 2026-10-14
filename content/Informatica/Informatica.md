@@ -5,7 +5,7 @@ aliases:
 
 > [!premessa]+ Premessa
 > 
-> Ciao! Se è la prima volta che capiti su questo sito, ti consiglio di consultare la [pagina principale](index.md) di questo cosiddetto _Giardino Digitale_ per scoprire meglio cos'è e come navigarlo.
+> Ciao! Se è la prima volta che capiti su questo sito, ti consiglio di consultare la [pagina principale](index.md) di questo _Giardino Digitale_ per scoprire meglio cos'è e come navigarlo.
 > 
 > Lo stato di questa nota è al momento: 🔴 <font color="#FF7F7F">_Bozza_</font>.
 
@@ -13,7 +13,7 @@ aliases:
 
 > [!definizione]+ Definizione: informatica
 > 
-> L'**informatica** (termine che deriva dal francese _informatique_, ottenuto dalla contrazione _informazione automatica_) è la [scienza](Scienza.md#^definizione-scienza) che studia l'[informazione](Informatica/Informatica.md#^definizione-informazione) e come trattarla in modo automatico, cioè tramite [computer](Informatica/Informatica.md#^definizione-computer).
+> L'**informatica** (termine che deriva dal francese _informatique_, ottenuto dalla contrazione _informazione automatica_) è la [scienza](Scienza.md#^definizione-scienza) che studia l'[informazione](#^definizione-informazione) e come trattarla in modo automatico, cioè tramite [computer](#^definizione-computer).
 ^definizione-informatica
 
 %% 
@@ -41,57 +41,57 @@ Si occupa della realizzazione concreta di sistemi:
 - Sicurezza informatica
 %%
 
-Ma cos'è esattamente un'[informazione](Informatica/Informatica.md#^definizione-informazione)? E cosa rappresenta invece il termine [dato](Informatica/Informatica.md#^definizione-dato)? Sebbene vengano usati spesso in maniera intercambiabile, i termini [_dato_](Informatica/Informatica.md#^definizione-dato) e [_informazione_](Informatica/Informatica.md#^definizione-informazione) hanno significati ben distinti.
+Ma cos'è esattamente un'[informazione](#^definizione-informazione)? E cosa rappresenta invece il termine [dato](#^definizione-dato)? Sebbene vengano usati spesso in maniera intercambiabile, i termini [_dato_](#^definizione-dato) e [_informazione_](#^definizione-informazione) hanno significati ben distinti.
 
 > [!definizione]+ Definizione: dato
 > 
 > Un **dato** è una rappresentazione elementare (numerica, testuale, visiva, ecc.) di un fenomeno della realtà che si vuole rappresentare. È grezzo e privo di significato di per sé e senza un contesto o un'interpretazione non ha valore informativo e non ci dice nulla.
 ^definizione-dato
 
-I [dati](Basi%20di%20dati.md#^definizione-dato), però, se aggregati, possono rappresentare un'[informazione](Informatica/Informatica.md#^definizione-informazione).
+I [dati](Informatica.md#^definizione-dato), però, se aggregati, possono rappresentare un'[informazione](#^definizione-informazione).
 
 > [!definizione]+ Definizione: informazione
 > 
-> Un'**informazione** è il risultato dell'interpretazione e della correlazione di uno o più [dati](Basi%20di%20dati.md#^definizione-dato) inquadrati in un determinato contesto.
+> Un'**informazione** è il risultato dell'interpretazione e della correlazione di uno o più [dati](Informatica.md#^definizione-dato) inquadrati in un determinato contesto.
 ^definizione-informazione
 
 > [!esempio]- Esempio di differenza tra dato e informazione
 > 
-> Immaginiamo di avere come [dati](Basi%20di%20dati.md#^definizione-dato) la scritta `Mario Rossi` e il numero `741` scritti su un foglio di carta. Da soli, questi elementi non hanno un significato chiaro; tuttavia, se sappiamo che il foglio risponde alla domanda _"chi è il responsabile del Dipartimento di Informatica e qual è la sua matricola?"_, allora possiamo interpretare i [dati](Basi%20di%20dati.md#^definizione-dato) e ottenere l'[informazione](Basi%20di%20dati.md#^definizione-informazione) che Mario Rossi è il responsabile del Dipartimento di Informatica e il suo numero di telefono è 741.
+> Immaginiamo di avere come [dati](Informatica.md#^definizione-dato) la scritta `Mario Rossi` e il numero `741` scritti su un foglio di carta. Da soli, questi elementi non hanno un significato chiaro; tuttavia, se sappiamo che il foglio risponde alla domanda _"chi è il responsabile del Dipartimento di Informatica e qual è la sua matricola?"_, allora possiamo interpretare i [dati](Informatica.md#^definizione-dato) e ottenere l'[informazione](Informatica.md#^definizione-informazione) che Mario Rossi è il responsabile del Dipartimento di Informatica e il suo numero di telefono è 741.
 
-In sintesi, i [dati](Basi%20di%20dati.md#^definizione-dato) diventano [informazioni](Basi%20di%20dati.md#^definizione-informazione) quando vengono elaborati, contestualizzati e resi comprensibili per un determinato scopo.
+In sintesi, i [dati](Informatica.md#^definizione-dato) diventano [informazioni](Informatica.md#^definizione-informazione) quando vengono elaborati, contestualizzati e resi comprensibili per un determinato scopo.
 
 > [!definizione]+ Definizione: computer
 > 
-> Un **computer** (o, in italiano, **calcolatore** o **elaboratore**) è una macchina elettronica capace di ricevere dati in ingresso, elaborarli seguendo una serie di istruzioni e restituire un risultato in uscita.
+> Un **computer** (o, in italiano, **calcolatore** o **elaboratore** o anche **macchina**) è una macchina elettronica capace di ricevere dati in ingresso, elaborarli seguendo una serie di istruzioni e restituire un risultato in uscita.
 ^definizione-computer
 
-Un [computer](Informatica/Informatica.md#^definizione-computer) spesso fa parte di un [sistema informatico](Informatica/Informatica.md#^definizione-sistema-informatico).
+Un [computer](#^definizione-computer) spesso fa parte di un [sistema informatico](#^definizione-sistema-informatico).
 
 > [!definizione]+ Definizione: sistema informatico
 > 
-> Un **sistema informatico** è un insieme organizzato di componenti che lavorano insieme per raccogliere, elaborare, conservare e trasmettere [informazioni](Informatica/Informatica.md#^definizione-informazione).
+> Un **sistema informatico** è un insieme organizzato di componenti che lavorano insieme per raccogliere, elaborare, conservare e trasmettere [informazioni](#^definizione-informazione).
 > 
-> Le due componenti fondamentali di ogni **sistema informatico**, inseparabili e complementari, sono l'[hardware](Informatica/Informatica.md#^definizione-hardware) e il [software](Informatica/Informatica.md#^definizione-software).
+> Le due componenti fondamentali di ogni **sistema informatico**, inseparabili e complementari, sono l'[hardware](#^definizione-hardware) e il [software](#^definizione-software).
 ^definizione-sistema-informatico
 
 # 1 - Hardware
 
 > [!definizione]+ Definizione: hardware
 > 
-> L'**hardware** è l'insieme dei componenti fisici e tangibili di un [sistema informatico](Informatica/Informatica.md#^definizione-sistema-informatico), cioè comprende tutto ciò che si può vedere e toccare: il processore, la memoria, lo schermo, la tastiera, i cavi%% link a tutto %%. È la parte "materiale" di un [computer](Informatica/Informatica.md#^definizione-computer), quella che esegue concretamente le operazioni.
+> L'**hardware** è l'insieme dei componenti fisici e tangibili di un [sistema informatico](#^definizione-sistema-informatico), cioè comprende tutto ciò che si può vedere e toccare: il processore, la memoria, lo schermo, la tastiera, i cavi%% link a tutto %%. È la parte "materiale" di un [computer](#^definizione-computer), quella che esegue concretamente le operazioni.
 ^definizione-hardware
 
 # 2 - Software
 
 > [!definizione]+ Definizione: software
 > 
-> Il **software** è la parte immateriale di un [sistema informatico](Informatica/Informatica.md#^definizione-sistema-informatico), cioè comprende tutto ciò che non si può vedere o toccare ed è la parte che comprende i programmi%% link %% e le istruzioni%% link %% che comandano l'[hardware](Informatica/Informatica.md#^definizione-hardware).
+> Il **software** è la parte immateriale di un [sistema informatico](#^definizione-sistema-informatico), cioè comprende tutto ciò che non si può vedere o toccare ed è la parte che comprende i programmi%% link %% e le istruzioni%% link %% che comandano l'[hardware](#^definizione-hardware).
 ^definizione-software
 
 > [!definizione]+ Definizione: istruzione
 > 
-> Un'**istruzione** è il comando elementare che un [computer](Informatica/Informatica.md#^definizione-computer) è in grado di eseguire.
+> Un'**istruzione** è il comando elementare che un [computer](#^definizione-computer) è in grado di eseguire.
 ^definizione-istruzione
 
 %% 
@@ -113,11 +113,11 @@ In linguaggio umano, un'istruzione assomiglia a:
 - È **eseguibile** — la macchina sa esattamente come svolgerla
 %%
 
-Le [istruzioni](Informatica/Informatica.md#^definizione-istruzione) compongono i [_programmi_](Informatica/Informatica.md#^definizione-programma).
+Le [istruzioni](#^definizione-istruzione) compongono i [_programmi_](#^definizione-programma).
 
 > [!definizione]+ Definizione: programma
 > 
-> Un **programma** è una sequenza di [istruzioni](Informatica/Informatica.md#^definizione-istruzione) scritte in un linguaggio comprensibile al [computer](Informatica/Informatica.md#^definizione-computer) che descrive come eseguire un compito specifico, prendendo [dati](Informatica/Informatica.md#^definizione-dato) in ingresso (detti [_input_](Informatica/Informatica.md#^definizione-input)) e restituendo altri [dati](Informatica/Informatica.md#^definizione-dato) in uscita (detti [_output_](Informatica/Informatica.md#^definizione-output)).
+> Un **programma** è una sequenza di [istruzioni](#^definizione-istruzione) scritte in un linguaggio comprensibile al [computer](#^definizione-computer) che descrive come eseguire un compito specifico, prendendo [dati](#^definizione-dato) in ingresso (detti [_input_](#^definizione-input)) e restituendo altri [dati](#^definizione-dato) in uscita (detti [_output_](#^definizione-output)).
 ^definizione-programma
 
 %% 
@@ -150,7 +150,7 @@ Microsoft Word, per esempio, è un software — ma al suo interno contiene decin
 
 > [!definizione]+ Definizione: input
 > 
-> L'**input** (in italiano _mettere dentro_) è qualsiasi [dato](Informatica/Informatica.md#^definizione-dato) fornito dall'esterno a un [computer](Informatica/Informatica.md#^definizione-computer) affinché lo elabori attraverso un [programma](Informatica/Informatica.md#^definizione-programma).
+> L'**input** (in italiano _mettere dentro_) è qualsiasi [dato](#^definizione-dato) fornito dall'esterno a un [computer](#^definizione-computer) affinché lo elabori attraverso un [programma](#^definizione-programma).
 ^definizione-input
 
 %% 
@@ -164,7 +164,7 @@ Microsoft Word, per esempio, è un software — ma al suo interno contiene decin
 
 > [!definizione]+ Definizione: output
 > 
-> L'**output** (in italiano _mettere fuori_) è qualsiasi [dato](Informatica/Informatica.md#^definizione-dato) che il [computer](Informatica/Informatica.md#^definizione-computer) fornisce in uscita dopo aver elaborato un [input](Informatica/Informatica.md#^definizione-input) attraverso un [programma](Informatica/Informatica.md#^definizione-programma).
+> L'**output** (in italiano _mettere fuori_) è qualsiasi [dato](#^definizione-dato) che il [computer](#^definizione-computer) fornisce in uscita dopo aver elaborato un [input](#^definizione-input) attraverso un [programma](#^definizione-programma).
 ^definizione-output
 
 %% 
@@ -176,11 +176,11 @@ Microsoft Word, per esempio, è un software — ma al suo interno contiene decin
 - Una risposta di un'intelligenza artificiale
 %%
 
-Un [software](Informatica/Informatica.md#^definizione-software) non è quasi mai autosufficiente: piuttosto, dipende da altri [software](Informatica/Informatica.md#^definizione-software) per svolgere parte del lavoro. Queste sono le sue [dipendenze](Informatica/Informatica.md#^definizione-dipendenza).
+Un [software](#^definizione-software) non è quasi mai autosufficiente: piuttosto, dipende da altri [software](#^definizione-software) per svolgere parte del lavoro. Queste sono le sue [dipendenze](#^definizione-dipendenza).
 
 > [!definizione]+ Definizione: dipendenza
 > 
-> Una **dipendenza** è un [programma](Informatica/Informatica.md#^definizione-programma) di cui un [software](Informatica/Informatica.md#^definizione-software) ha bisogno per funzionare, ma che non contiene al proprio interno.
+> Una **dipendenza** è un [programma](#^definizione-programma) di cui un [software](#^definizione-software) ha bisogno per funzionare, ma che non contiene al proprio interno.
 ^definizione-dipendenza
 
 %% 

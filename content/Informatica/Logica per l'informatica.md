@@ -5,7 +5,7 @@ aliases:
 
 > [!premessa]+ Premessa
 > 
-> Ciao! Se è la prima volta che capiti su questo sito, ti consiglio di consultare la [pagina principale](index.md) di questo cosiddetto _Giardino Digitale_ per scoprire meglio cos'è e come navigarlo.
+> Ciao! Se è la prima volta che capiti su questo sito, ti consiglio di consultare la [pagina principale](index.md) di questo _Giardino Digitale_ per scoprire meglio cos'è e come navigarlo.
 > 
 > Lo stato di questa nota è al momento: 🔴 <font color="#FF7F7F">_Bozza_</font>.
 
@@ -96,7 +96,7 @@ Quindi \notB non può essere compatibile con \not\notA e $A \implies B$.
 > [!fonti]+ Fonti
 > 
 > - 🏫 Corso di Laurea in Informatica (`L-31 R`) presso l'Università di Torino:
->     - Corso di _Logica per l'Informatica_, A.A. 2025-26 ([pagina Moodle](https://informatica.i-learn.unito.it/course/view.php?id=3477)):
+>     - Corso di _Logica per l'Informatica_ (`INF0341`), A.A. 2025-26 ([pagina Moodle](https://informatica.i-learn.unito.it/course/view.php?id=3477)):
 > 		- Prof. Roversi Luca, slide del corso:
 > 			- [_Organizzazione_](https://drive.google.com/file/d/1NB1splxyYTw1GnMoiHo942Svh7FN_doG/view)
 > 			- [_Preludio_](https://drive.google.com/file/d/1az-Yi3Ab2Yz0rZ73Y61nM_0MsA2M4xSB/view)

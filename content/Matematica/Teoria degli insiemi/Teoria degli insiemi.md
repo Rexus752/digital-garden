@@ -5,7 +5,7 @@ aliases:
 
 > [!premessa]+ Premessa
 > 
-> Ciao! Se è la prima volta che capiti su questo sito, ti consiglio di consultare la [pagina principale](index.md) di questo cosiddetto _Giardino Digitale_ per scoprire meglio cos'è e come navigarlo.
+> Ciao! Se è la prima volta che capiti su questo sito, ti consiglio di consultare la [pagina principale](index.md) di questo _Giardino Digitale_ per scoprire meglio cos'è e come navigarlo.
 > 
 > Lo stato di questa nota è al momento: 🟡 <font color="#FFFF7F">_Incompleta_</font>.
 
@@ -468,7 +468,69 @@ Inoltre si ha che
 A \cup B = \emptyset ⇐⇒ A = B = \emptyset
 %%
 
-## 4.1 - Intersezione di insiemi
+## 4.1 - Unione di insiemi
+
+> [!definizione]+ Definizione: unione di due insiemi
+> 
+> Dati due [insiemi](Matematica/Teoria%20degli%20insiemi/Teoria%20degli%20insiemi.md#^definizione-insieme) $A$ e $B$, si dice _**unione**_ di $A$ e $B$ e si denota "$A\cup B$" l'insieme contenente tutti gli elementi di entrambi gli insiemi:
+> $$
+> A \cup B = \{x \mid x \in A \lor x \in B\}
+> $$
+> Gli elementi che si trovano sia in $A$ che in $B$ vengono presi in considerazione una volta sola perché, per l'unicità degli elementi%% link %%, non ci possono essere elementi ripetuti in un insieme.
+^definizione-unione-di-due-insiemi
+
+%% rappresentazione con Eulero-Venn %%
+
+> [!esempio]- Esempio: unione di due insiemi
+> 
+> Dati due insiemi:
+> 
+> $$
+> \begin{align*}
+>  & A = \{ 0,1 \} \\
+>  & B = \{ 2, 3, 4 \}
+> \end{align*}
+> $$
+> la loro unione è
+> $$
+> A \cup B = \{0,1,2,3,4\}
+> $$
+
+> [!esempio]- Esempio: unione di tre insiemi
+> 
+> Dati tre insiemi:
+> $$
+> \begin{align*}
+>  & A = \{ a,b,c,d,e \} \\
+>  & B = \{ d,e,f,g \} \\
+>  & C = \{ g,h,i \}
+> \end{align*}
+> $$
+> le combinazioni delle loro unioni sono:
+> $$
+> \begin{align*}
+> A \cup B & = \{ a,b,c,d,e,f,g \} \\
+> B \cup C & = \{ d,e,f,g,h,i \} \\
+> A \cup C & = \{ a,b,c,d,e,g,h,i \} \\
+> A \cup B \cup C & = \{ a,b,c,d,e,f,g,h,i \}
+> \end{align*}
+> $$
+
+> [!esempio]- Esempio: unione degli insiemi dei numeri pari e dispari
+> 
+> Dati due insiemi:
+> $$
+> \begin{align*}
+>  & A = \{n \in \mathbb{N} \mid n \bmod 2 = 0\} \\
+>  & B = \{n \in \mathbb{N} \mid n \bmod 2 = 1\}
+> \end{align*}
+> $$
+> ossia rispettivamente gli [insiemi](Matematica/Teoria%20degli%20insiemi/Teoria%20degli%20insiemi.md#^definizione-insieme) dei numeri naturali pari e dispari, allora lo loro unione è l'insieme dei numeri naturali $\mathbb{N}$%% link %%:
+> $$
+> A \cup B = \mathbb{N}
+> $$
+
+## 4.2 - Intersezione di insiemi
 
 > [!definizione]+ Definizione: intersezione di due insiemi
 > 
@@ -539,73 +601,11 @@ maggiore di uno. Diciamo che A1, \ldots , An sono a due a due disgiunti se per o
 > A \cap B = \{\{a,c\},\{b,c\},\{c,d\}\}
 > $$
 
-## 4.2 - Unione di insiemi
-
-> [!definizione]+ Definizione: unione di due insiemi
-> 
-> Dati due [insiemi](Matematica/Teoria%20degli%20insiemi/Teoria%20degli%20insiemi.md#^definizione-insieme) $A$ e $B$, si dice _**unione**_ di $A$ e $B$ e si denota "$A\cup B$" l'insieme contenente tutti gli elementi di entrambi gli insiemi:
-> $$
-> A \cup B = \{x \mid x \in A \lor x \in B\}
-> $$
-> Gli elementi che si trovano sia in $A$ che in $B$ vengono presi in considerazione una volta sola perché, per l'unicità degli elementi%% link %%, non ci possono essere elementi ripetuti in un insieme.
-^definizione-unione-di-due-insiemi
-
-%% rappresentazione con Eulero-Venn %%
-
-> [!esempio]- Esempio: unione di due insiemi
-> 
-> Dati due insiemi:
-> 
-> $$
-> \begin{align*}
->  & A = \{ 0,1 \} \\
->  & B = \{ 2, 3, 4 \}
-> \end{align*}
-> $$
-> la loro unione è
-> $$
-> A \cup B = \{0,1,2,3,4\}
-> $$
-
-> [!esempio]- Esempio: unione di tre insiemi
-> 
-> Dati tre insiemi:
-> $$
-> \begin{align*}
->  & A = \{ a,b,c,d,e \} \\
->  & B = \{ d,e,f,g \} \\
->  & C = \{ g,h,i \}
-> \end{align*}
-> $$
-> le combinazioni delle loro unioni sono:
-> $$
-> \begin{align*}
-> A \cup B & = \{ a,b,c,d,e,f,g \} \\
-> B \cup C & = \{ d,e,f,g,h,i \} \\
-> A \cup C & = \{ a,b,c,d,e,g,h,i \} \\
-> A \cup B \cup C & = \{ a,b,c,d,e,f,g,h,i \}
-> \end{align*}
-> $$
-
-> [!esempio]- Esempio: unione degli insiemi dei numeri pari e dispari
-> 
-> Dati due insiemi:
-> $$
-> \begin{align*}
->  & A = \{n \in \mathbb{N} \mid n \bmod 2 = 0\} \\
->  & B = \{n \in \mathbb{N} \mid n \bmod 2 = 1\}
-> \end{align*}
-> $$
-> ossia rispettivamente gli [insiemi](Matematica/Teoria%20degli%20insiemi/Teoria%20degli%20insiemi.md#^definizione-insieme) dei numeri naturali pari e dispari, allora lo loro unione è l'insieme dei numeri naturali $\mathbb{N}$%% link %%:
-> $$
-> A \cup B = \mathbb{N}
-> $$
-
 ## 4.3 - Differenza di insiemi
 
 > [!definizione]+ Definizione: differenza tra due insiemi
 > 
-> Dati due [insiemi](Matematica/Teoria%20degli%20insiemi/Teoria%20degli%20insiemi.md#^definizione-insieme) $A$ e $B$, si dice _**differenza**_ tra $A$ e $B$ e si denota "$A \setminus B$" l'insieme degli elementi presenti in $A$ ma non in $B$:
+> Dati due [insiemi](Matematica/Teoria%20degli%20insiemi/Teoria%20degli%20insiemi.md#^definizione-insieme) $A$ e $B$, si dice _**differenza**_ tra $A$ e $B$ e si denota "$A \setminus B$" (o "$A - B$") l'insieme degli elementi presenti in $A$ ma non in $B$:
 > $$
 > A \setminus B = \{x \mid x \in A \land x \notin B\}
 > $$
@@ -982,7 +982,7 @@ Data una famiglia di insiemi $\mathcal A$ formata dagli $n$-esimi insiemi $A_n\i
 > [!fonti]+ Fonti
 > 
 > - 🏫 Corso di Laurea in Informatica (`L-31 R`) presso l'Università di Torino:
->     - Corso di _Matematica Discreta, Algebra e Geometria - parte di Matematica Discreta & Algebra (parte 1) - canale C_, A.A. 2023-24 ([pagina Moodle](https://informatica.i-learn.unito.it/course/view.php?id=2750)):
+>     - Corso di _Matematica Discreta, Algebra e Geometria - parte di Matematica Discreta & Algebra (parte 1) - canale C_ (`INF0328`), A.A. 2023-24 ([pagina Moodle](https://informatica.i-learn.unito.it/course/view.php?id=2750)):
 > 		- Proff. Chen Yu e Terracini Lea, lezioni in aula.
 >     - Corso di _Matematica Discreta, Algebra e Geometria - parte di Algebra Lineare & Geometria (parte 2) - canale C_, A.A. 2023-24 ([pagina Moodle](https://informatica.i-learn.unito.it/course/view.php?id=2750)):
 > 		- Prof. Radeschi Marco, lezioni in aula.

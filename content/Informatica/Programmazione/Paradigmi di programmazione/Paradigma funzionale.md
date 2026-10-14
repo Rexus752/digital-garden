@@ -5,7 +5,7 @@ aliases:
 
 > [!premessa]+ Premessa
 > 
-> Ciao! Se è la prima volta che capiti su questo sito, ti consiglio di consultare la [pagina principale](index.md) di questo cosiddetto _Giardino Digitale_ per scoprire meglio cos'è e come navigarlo.
+> Ciao! Se è la prima volta che capiti su questo sito, ti consiglio di consultare la [pagina principale](index.md) di questo _Giardino Digitale_ per scoprire meglio cos'è e come navigarlo.
 > 
 > Lo stato di questa nota è al momento: 🔴 <font color="#FF7F7F">_Bozza_</font>.
 
@@ -73,10 +73,10 @@ Nel 2005 riacquista una seconda vita per il suo impatto sul calcolo parallelo, p
 > [!fonti]+ Fonti
 > 
 > - 🏫 Corso di Laurea in Informatica (`L-31 R`) presso l'Università di Torino:
->     - Corso di _Linguaggi e Paradigmi di Programmazione_, A.A. 2020-21 ([pagina Moodle](https://informatica.i-learn.unito.it/enrol/index.php?id=1987)):
+>     - Corso di _Linguaggi e Paradigmi di Programmazione_ (`MFN0610`), A.A. 2020-21 ([pagina Moodle](https://informatica.i-learn.unito.it/enrol/index.php?id=1987)):
 > 		- Prof. Luca Padovani, slide del corso:
 > 			- [_Introduzione ai paradigmi di programmazione e breve storia dei linguaggi funzionali_](https://informatica.i-learn.unito.it/pluginfile.php/466243/mod_resource/content/0/storia.pdf).
 > 		- Prof. Luca Padovani, videoregistrazioni del corso:
 > 			- [_Introduzione ai paradigmi di programmazione e breve storia dei linguaggi funzionali_](https://informatica.i-learn.unito.it/mod/url/view.php?id=271963).
->     - Corso di _Linguaggi e Paradigmi di Programmazione_, A.A. 2025-26 ([pagina Moodle](https://informatica.i-learn.unito.it/course/view.php?id=3475)):
+>     - Corso di _Linguaggi e Paradigmi di Programmazione_ (`MFN0610`), A.A. 2025-26 ([pagina Moodle](https://informatica.i-learn.unito.it/course/view.php?id=3475)):
 > 		- Prof. Viviana Bono, lezioni del corso.

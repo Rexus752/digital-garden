@@ -5,7 +5,7 @@ aliases:
 
 > [!premessa]+ Premessa
 > 
-> Ciao! Se è la prima volta che capiti su questo sito, ti consiglio di consultare la [pagina principale](index.md) di questo cosiddetto _Giardino Digitale_ per scoprire meglio cos'è e come navigarlo.
+> Ciao! Se è la prima volta che capiti su questo sito, ti consiglio di consultare la [pagina principale](index.md) di questo _Giardino Digitale_ per scoprire meglio cos'è e come navigarlo.
 > 
 > Lo stato di questa nota è al momento: 🔴 <font color="#FF7F7F">_Bozza_</font>.
 
@@ -19,7 +19,7 @@ prerequisiti:
 
 > [!definizione]+ Definizione: Haskell
 > 
-> **Haskell** è un linguaggio di programmazione%% link %% puramente funzionale%% link %% [lazy](Informatica/Lambda-calcolo/Lambda-calcolo.md#^definizione-ordine-normale), general-purpose%% link %% e fortemente tipizzato%% link %%, creato%% da un apposito comitato alla fine degli anni ottanta%% principalmente per analizzare le caratteristiche dei linguaggi%% link %%. È stato chiamato così in onore del matematico e logico statunitense Haskell Curry%% link %%.
+> **Haskell** è un linguaggio di programmazione%% link %% puramente funzionale%% link %% [lazy](Lambda-calcolo.md#^definizione-ordine-normale), general-purpose%% link %% e fortemente tipizzato%% link %%, creato%% da un apposito comitato alla fine degli anni ottanta%% principalmente per analizzare le caratteristiche dei linguaggi%% link %%. È stato chiamato così in onore del matematico e logico statunitense Haskell Curry%% link %%.
 ^definizione-haskell
 
 %% 
@@ -56,37 +56,37 @@ Haskell was made by some **really smart folk** (with PhDs). Work on Haskell bega
 
 ## 1.1 - Installazione e compilatori
 
-Per usare [Haskell](Informatica/Lambda-calcolo/Haskell/Haskell.md#^definizione-haskell), come ogni altro linguaggio di programmazione%% Link %%, c'è bisogno di un IDE%% link %% e di un compilatore%% Link %%. Uno dei compilatori%% link %% più diffusi per [Haskell](Informatica/Lambda-calcolo/Haskell/Haskell.md#^definizione-haskell) è il [_Glasgow Haskell Compiler (GHC)_](Informatica/Lambda-calcolo/Haskell/Haskell.md#^definizione-glasgow-haskell-compiler-ghc).
+Per usare [Haskell](#^definizione-haskell), come ogni altro linguaggio di programmazione%% Link %%, c'è bisogno di un IDE%% link %% e di un compilatore%% Link %%. Uno dei compilatori%% link %% più diffusi per [Haskell](#^definizione-haskell) è il [_Glasgow Haskell Compiler (GHC)_](#^definizione-glasgow-haskell-compiler-ghc).
 
 > [!definizione]+ Definizione: Glasgow Haskell Compiler (GHC)
 > 
-> Il **Glasgow Haskell Compiler (GHC)** è un compilatore%% link %% per il linguaggio di programmazione%% link %% [Haskell](Informatica/Lambda-calcolo/Haskell/Haskell.md#^definizione-haskell), chiamato così perché inizialmente sviluppato presso l'Università di Glasgow in Scozia.
+> Il **Glasgow Haskell Compiler (GHC)** è un compilatore%% link %% per il linguaggio di programmazione%% link %% [Haskell](#^definizione-haskell), chiamato così perché inizialmente sviluppato presso l'Università di Glasgow in Scozia.
 > 
-> Permette di compilare%% link %% file%% link %% di codice%% Link %% [Haskell](Informatica/Lambda-calcolo/Haskell/Haskell.md#^definizione-haskell) (solitamente con estensione%% link %% `.hs`), ma supporta anche una modalità interattiva%% link %% da terminale%% link %% tramite il [GHCi](Informatica/Lambda-calcolo/Haskell/Haskell.md#^definizione-ghci).
+> Permette di compilare%% link %% file%% link %% di codice%% Link %% [Haskell](#^definizione-haskell) (solitamente con estensione%% link %% `.hs`), ma supporta anche una modalità interattiva%% link %% da terminale%% link %% tramite il [GHCi](#^definizione-ghci).
 ^definizione-glasgow-haskell-compiler-ghc
 
-Puoi trovare [qui](https://downloads.haskell.org/ghc/latest/docs/users_guide/index.html) la documentazione%% link %% completa sul [GHC](Informatica/Lambda-calcolo/Haskell/Haskell.md#^definizione-glasgow-haskell-compiler-ghc).
+Puoi trovare [qui](https://downloads.haskell.org/ghc/latest/docs/users_guide/index.html) la documentazione%% link %% completa sul [GHC](#^definizione-glasgow-haskell-compiler-ghc).
 
 > [!definizione]+ Definizione: GHCi
 > 
-> **GHCi** è l'interfaccia interattiva (REPL)%% link %% del [GHC](Informatica/Lambda-calcolo/Haskell/Haskell.md#^definizione-glasgow-haskell-compiler-ghc) che permette di eseguire espressioni%% Link %% [Haskell](Informatica/Lambda-calcolo/Haskell/Haskell.md#^definizione-haskell) direttamente da riga di comando%% Link %% senza dover compilare%% link %% un file sorgente%% link %%.
+> **GHCi** è l'interfaccia interattiva (REPL)%% link %% del [GHC](#^definizione-glasgow-haskell-compiler-ghc) che permette di eseguire espressioni%% Link %% [Haskell](#^definizione-haskell) direttamente da riga di comando%% Link %% senza dover compilare%% link %% un file sorgente%% link %%.
 ^definizione-ghci
 
-Per imparare a usare [Haskell](Informatica/Lambda-calcolo/Haskell/Haskell.md#^definizione-haskell) è molto più facile e veloce usare il [GHCi](Informatica/Lambda-calcolo/Haskell/Haskell.md#^definizione-ghci) anziché compilare%% Link %% ed eseguire%% Link %% nuovamente il programma%% Link %% per ogni modifica che si fa. Il [GHCi](Informatica/Lambda-calcolo/Haskell/Haskell.md#^definizione-ghci) è accessibile da terminale%% link %% tramite il comando%% Link %% `ghci`.
+Per imparare a usare [Haskell](#^definizione-haskell) è molto più facile e veloce usare il [GHCi](#^definizione-ghci) anziché compilare%% Link %% ed eseguire%% Link %% nuovamente il programma%% Link %% per ogni modifica che si fa. Il [GHCi](#^definizione-ghci) è accessibile da terminale%% link %% tramite il comando%% Link %% `ghci`.
 
 > [!sintassi]+ Sintassi: uso del GHCi
 > 
-> All'interno del [GHCi](Informatica/Lambda-calcolo/Haskell/Haskell.md#^definizione-ghci) si possono chiamare%% link %% funzioni%% Link %% da file%% link %% [Haskell](Informatica/Lambda-calcolo/Haskell/Haskell.md#^definizione-haskell) che vengono _caricati_. Per _caricare_ un file%% link %% nel [GHCi](Informatica/Lambda-calcolo/Haskell/Haskell.md#^definizione-ghci), si usa il comando
+> All'interno del [GHCi](#^definizione-ghci) si possono chiamare%% link %% funzioni%% Link %% da file%% link %% [Haskell](#^definizione-haskell) che vengono _caricati_. Per _caricare_ un file%% link %% nel [GHCi](#^definizione-ghci), si usa il comando
 > 
 > ```haskell
 > :l <file_name.hs>
 > ```
 > 
-> Per esempio, per caricare un file%% link %% [Haskell](Informatica/Lambda-calcolo/Haskell/Haskell.md#^definizione-haskell) con nome `myfunctions.hs`, bisogna scrivere nel [GHCi](Informatica/Lambda-calcolo/Haskell/Haskell.md#^definizione-ghci) `:l myfunctions.hs`.
+> Per esempio, per caricare un file%% link %% [Haskell](#^definizione-haskell) con nome `myfunctions.hs`, bisogna scrivere nel [GHCi](#^definizione-ghci) `:l myfunctions.hs`.
 > 
-> Se il file%% Link %% `myfunctions.hs` viene modificato, per aggiornare le modifiche anche nel [GHCi](Informatica/Lambda-calcolo/Haskell/Haskell.md#^definizione-ghci) basta nuovamente scrivere `:l myfunctions.hs`, oppure equivalentemente `:r` che ricarica tutti i file già caricati.
+> Se il file%% Link %% `myfunctions.hs` viene modificato, per aggiornare le modifiche anche nel [GHCi](#^definizione-ghci) basta nuovamente scrivere `:l myfunctions.hs`, oppure equivalentemente `:r` che ricarica tutti i file già caricati.
 > 
-> Per uscire dal [GHCi](Informatica/Lambda-calcolo/Haskell/Haskell.md#^definizione-ghci) e tornare al terminale%% link %% basta premere `Ctrl+D`.
+> Per uscire dal [GHCi](#^definizione-ghci) e tornare al terminale%% link %% basta premere `Ctrl+D`.
 
 ---
 
@@ -101,7 +101,7 @@ https://downloads.haskell.org/ghc/latest/docs/users_guide/ghci.html
 > [!fonti]+ Fonti
 > 
 > - 🏫 Corso di Laurea in Informatica (`L-31 R`) presso l'Università di Torino:
->     - Corso di _Linguaggi e Paradigmi di Programmazione_, A.A. 2020-21 ([pagina Moodle](https://informatica.i-learn.unito.it/enrol/index.php?id=1987)):
+>     - Corso di _Linguaggi e Paradigmi di Programmazione_ (`MFN0610`), A.A. 2020-21 ([pagina Moodle](https://informatica.i-learn.unito.it/enrol/index.php?id=1987)):
 > 		- Prof. Luca Padovani, [sezione del suo sito personale su Linguaggi e Paradigmi di Programmazione](https://boystrange.github.io/LPP/):
 > 			- Introduzione:
 > 				- [_Installazione_](https://boystrange.github.io/LPP/Installazione).

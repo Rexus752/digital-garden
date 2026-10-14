@@ -5,6 +5,7 @@
 
 import json
 import re
+import subprocess
 import sys
 from pathlib import Path
 from urllib.parse import unquote
@@ -787,8 +788,8 @@ def main():
         vault_root,
     )
 
-    # --------------------------------------------------------
-    # Scrittura
+        # --------------------------------------------------------
+    # Scrittura D2
     # --------------------------------------------------------
 
     with output_path.open(
@@ -800,6 +801,23 @@ def main():
     print(f"Canvas:     {input_path}")
     print(f"D2:         {output_path}")
     print(f"Vault root: {vault_root}")
+
+    # --------------------------------------------------------
+    # Generazione SVG tramite D2
+    # --------------------------------------------------------
+
+    subprocess.run(
+        [
+            "d2",
+            "--bundle",
+            "--theme=200",
+            "--layout=elk",
+            "--pad=100",
+            "--scale=1",
+            str(output_path),
+        ],
+        check=True,
+    )
 
 
 if __name__ == "__main__":
