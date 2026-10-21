@@ -1,0 +1,27 @@
+direction: right
+
+start: "" {
+  shape: circle
+  width: 1
+  height: 1
+  style.fill: black
+}
+
+q0: |latex q_0 | {
+  shape: circle
+  style.double-border: true
+}
+
+q1: |latex q_1 | {
+  shape: circle
+}
+
+q2: |latex q_2 | {
+  shape: circle
+}
+
+start -> q0
+q0 -> q1: |latex \text{a} |
+q0 -> q0: |latex \text{b} |
+q1 -> q2: |latex \text{b} |
+q2 -> q0: |latex \text{b} |

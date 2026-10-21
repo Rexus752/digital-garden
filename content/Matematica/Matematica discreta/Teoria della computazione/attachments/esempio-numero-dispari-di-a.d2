@@ -7,15 +7,15 @@ start: "" {
   style.fill: black
 }
 
-s0: |latex s_0 | {
+q0: |latex q_0 | {
   shape: circle
 }
 
-s1: |latex s_1 | {
+q1: |latex q_1 | {
   shape: circle
   style.double-border: true
 }
 
-start -> s0
-s0 -> s1: |latex \text{a} |
-s1 -> s0: |latex \text{a} |
+start -> q0
+q0 -> q1: |latex \text{a} |
+q1 -> q0: |latex \text{a} |

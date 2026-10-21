@@ -1,5 +1,7 @@
+
 #!/usr/bin/env python3
 
+import argparse
 import re
 import subprocess
 import sys
@@ -31,26 +33,38 @@ def remove_first_svg_rect(svg_path):
 
 
 def main():
-    if len(sys.argv) < 2:
-        print(
-            f"Uso: {sys.argv[0]} INPUT.d2 [OUTPUT.svg]",
-            file=sys.stderr,
-        )
-        sys.exit(1)
+    parser = argparse.ArgumentParser(
+        description="Genera un SVG da un file D2 e rimuove il primo rect."
+    )
 
-    input_path = Path(sys.argv[1])
+    parser.add_argument(
+        "input",
+        type=Path,
+        help="File D2 di input",
+    )
+
+    parser.add_argument(
+        "output",
+        type=Path,
+        nargs="?",
+        help="File SVG di output (predefinito: stesso nome del file D2)",
+    )
+
+    parser.add_argument(
+        "--layout",
+        choices=["dagre", "elk"],
+        default="dagre",
+        help="Motore di layout da utilizzare (predefinito: dagre)",
+    )
+
+    args = parser.parse_args()
+
+    input_path = args.input
 
     if not input_path.is_file():
-        print(
-            f"Errore: file non trovato: {input_path}",
-            file=sys.stderr,
-        )
-        sys.exit(1)
+        parser.error(f"file non trovato: {input_path}")
 
-    if len(sys.argv) >= 3:
-        output_path = Path(sys.argv[2])
-    else:
-        output_path = input_path.with_suffix(".svg")
+    output_path = args.output or input_path.with_suffix(".svg")
 
     # Generazione SVG tramite D2
     try:
@@ -59,6 +73,7 @@ def main():
                 "d2",
                 "--bundle",
                 "--theme=200",
+                f"--layout={args.layout}",
                 "--pad=0",
                 "--scale=1",
                 str(input_path),
@@ -82,8 +97,9 @@ def main():
     # Rimozione del primo rect
     remove_first_svg_rect(output_path)
 
-    print(f"D2:  {input_path}")
-    print(f"SVG: {output_path}")
+    print(f"Layout: {args.layout}")
+    print(f"D2:     {input_path}")
+    print(f"SVG:    {output_path}")
 
 
 if __name__ == "__main__":
