@@ -1,0 +1,47 @@
+direction: right
+
+start: "" {
+  shape: circle
+  width: 1
+  height: 1
+  style.fill: black
+}
+
+q1: |latex q_1 | {
+  shape: circle
+}
+
+q2: |latex q_2 | {
+  shape: circle
+}
+
+q3: |latex q_3 | {
+  shape: circle
+}
+
+q4: |latex q_4 | {
+  shape: circle
+}
+
+q5: |latex q_5 | {
+  shape: circle
+}
+
+q6: |latex q_6 | {
+  shape: circle
+  style.double-border: true
+}
+
+q7: |latex q_7 | {
+  shape: circle
+  style.double-border: true
+}
+
+start -> q1
+q1 -> q2: |latex \varepsilon |
+q1 -> q4: |latex \varepsilon |
+q2 -> q3: |latex \varepsilon |
+q3 -> q6: |latex \varepsilon |
+q4 -> q5: |latex \text{a} |
+q5 -> q6: |latex \text{b} |
+q5 -> q7: |latex \varepsilon,\text{c} |

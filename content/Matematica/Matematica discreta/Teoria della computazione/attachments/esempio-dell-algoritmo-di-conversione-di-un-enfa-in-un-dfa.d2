@@ -1,0 +1,41 @@
+direction: right
+
+start: "" {
+  shape: circle
+  width: 1
+  height: 1
+  style.fill: black
+}
+
+q0q1: |latex \{q_0, q_1\} | {
+  shape: oval
+}
+
+q1: |latex \{q_1\} | {
+  shape: oval
+}
+
+q2: |latex \{q_2\} | {
+  shape: oval
+  style.double-border: true
+}
+
+q3: |latex \{q_3\} | {
+  shape: oval
+  style.double-border: true
+}
+
+empty: |latex \emptyset | {
+  shape: oval
+}
+
+start -> q0q1
+q0q1 -> q1: |latex +,- |
+q0q1 -> q3: |latex 0 |
+q0q1 -> q2: |latex 1,2,\ldots,9 |
+q1 -> empty: |latex +,-,0 |
+q1 -> q2: |latex 1,2,\ldots,9 |
+q2 -> empty: |latex +,- |
+q2 -> q2: |latex 0,1,2,\ldots,9 |
+q3 -> empty: |latex +,-,0,1,2,\ldots,9 |
+empty -> empty: |latex +,-,0,1,2,\ldots,9 |

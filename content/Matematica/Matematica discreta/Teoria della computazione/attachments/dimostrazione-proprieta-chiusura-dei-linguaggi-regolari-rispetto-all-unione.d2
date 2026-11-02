@@ -1,0 +1,50 @@
+direction: right
+
+start: "" {
+  shape: circle
+  width: 1
+  height: 1
+  style.fill: black
+}
+
+q0: |latex q_0 | {
+  shape: circle
+}
+
+d1: |latex \mathcal{D}_1 | {
+  shape: rectangle
+
+  q1: |latex q_1 | {
+    shape: circle
+  }
+
+  d1dots: |latex \cdots |
+
+  qf1: |latex q_{F_1} | {
+    shape: circle
+  }
+
+  q1 -> d1dots
+  d1dots -> qf1
+}
+
+d2: |latex \mathcal{D}_2 | {
+  shape: rectangle
+
+  q2: |latex q_2 | {
+    shape: circle
+  }
+
+  d2dots: |latex \cdots |
+
+  qf2: |latex q_{F_2} | {
+    shape: circle
+  }
+
+  q2 -> d2dots
+  d2dots -> qf2
+}
+
+start -> q0
+q0 -> d1.q1: |latex \varepsilon |
+q0 -> d2.q2: |latex \varepsilon |
