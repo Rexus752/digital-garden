@@ -11,40 +11,40 @@ q0: |latex q_0 | {
   shape: circle
 }
 
-d1: |latex \mathcal{D}_1 | {
+e1: |latex \mathcal{E}_1 | {
   shape: rectangle
 
   q1: |latex q_1 | {
     shape: circle
   }
 
-  d1dots: |latex \cdots |
+  e1dots: |latex \cdots |
 
   qf1: |latex q_{F_1} | {
     shape: circle
   }
 
-  q1 -> d1dots
-  d1dots -> qf1
+  q1 -> e1dots
+  e1dots -> qf1
 }
 
-d2: |latex \mathcal{D}_2 | {
+e2: |latex \mathcal{E}_2 | {
   shape: rectangle
 
   q2: |latex q_2 | {
     shape: circle
   }
 
-  d2dots: |latex \cdots |
+  e2dots: |latex \cdots |
 
   qf2: |latex q_{F_2} | {
     shape: circle
   }
 
-  q2 -> d2dots
-  d2dots -> qf2
+  q2 -> e2dots
+  e2dots -> qf2
 }
 
 start -> q0
-q0 -> d1.q1: |latex \varepsilon |
-q0 -> d2.q2: |latex \varepsilon |
+q0 -> e1.q1: |latex \varepsilon |
+q0 -> e2.q2: |latex \varepsilon |

@@ -7,9 +7,7 @@ aliases:
 > 
 > Ciao! Se è la prima volta che capiti su questo sito, ti consiglio di consultare la [pagina principale](index.md) di questo _Giardino Digitale_ per scoprire meglio cos'è e come navigarlo.
 > 
-> Lo stato di questa nota è al momento: 🔴 <font color="#FF7F7F">_Bozza_</font>.
-
-^2a02ff
+> Lo stato di questa nota è al momento: 🟡 <font color="#FFFF7F">_Incompleta_</font>.
 
 %% 
 https://en.wikipedia.org/wiki/Finite-state_machine
@@ -1040,37 +1038,98 @@ Ora invece vediamo come da un [$\varepsilon$-NFA](Teoria%20degli%20automi.md#^de
 
 # 4 - Teoremi e proprietà sugli automi
 
-Specifichiamo che tutti i teoremi%% Link %% presentati da qui in avanti riguarderanno i [DFA](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-deterministico-dfa) ma, a meno che non sia esplicitamente scritto, grazie all'[equivalenza tra DFA ed NFA](Teoria%20degli%20automi.md#^corollario-equivalenza-tra-dfa-ed-nfa) e all'[equivalenza tra DFA ed $\varepsilon$-NFA](Teoria%20degli%20automi.md#^corollario-equivalenza-tra-dfa-ed-enfa) potranno rispettivamente essere applicati anche agli [NFA](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-non-deterministico-nfa) e [$\varepsilon$-NFA](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-non-deterministico-con-e-transizioni-enfa).
+Specifichiamo che tutti i teoremi%% Link %% presentati da qui in avanti riguarderanno gli [$\varepsilon$-NFA](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-non-deterministico-con-e-transizioni-enfa) ma, a meno che non sia esplicitamente scritto, grazie all'[equivalenza tra DFA ed NFA](Teoria%20degli%20automi.md#^corollario-equivalenza-tra-dfa-ed-nfa) e all'[equivalenza tra DFA ed $\varepsilon$-NFA](Teoria%20degli%20automi.md#^corollario-equivalenza-tra-dfa-ed-enfa) potranno rispettivamente essere applicati anche ai [DFA](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-deterministico-dfa) e agli [NFA](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-non-deterministico-nfa).
 
 > [!proprieta]+ Proprietà: chiusura dei linguaggi regolari rispetto all'unione
-> 
-> I [linguaggi regolari](Teoria%20degli%20automi.md#^definizione-linguaggio-regolare) sono chiusi%% link %% rispetto all'operazione%% link %% di [unione](Teoria%20degli%20insiemi.md#^definizione-unione-di-due-insiemi), ovvero se due [linguaggi formali](Teoria%20dei%20linguaggi%20formali.md#^definizione-linguaggio-formale) $L_1$ ed $L_2$ sono [regolari](Teoria%20degli%20automi.md#^definizione-linguaggio-regolare), allora anche la loro [unione](Teoria%20degli%20insiemi.md#^definizione-unione-di-due-insiemi) $L_1 \cup L_2$ è [regolare](Teoria%20degli%20automi.md#^definizione-linguaggio-regolare).
+>
+> I [linguaggi regolari](Teoria%20degli%20automi.md#^definizione-linguaggio-regolare) sono chiusi rispetto all'operazione di [unione](Teoria%20degli%20insiemi.md#^definizione-unione-di-due-insiemi), ovvero se due [linguaggi formali](Teoria%20dei%20linguaggi%20formali.md#^definizione-linguaggio-formale) $L_1$ ed $L_2$ sono [regolari](Teoria%20degli%20automi.md#^definizione-linguaggio-regolare), allora anche la loro [unione](Teoria%20degli%20insiemi.md#^definizione-unione-di-due-insiemi) $L_1 \cup L_2$ è [regolare](Teoria%20degli%20automi.md#^definizione-linguaggio-regolare).
 ^proprieta-chiusura-dei-linguaggi-regolari-rispetto-all-unione
 
-[!dimostrazione]- Dimostrazione: chiusura dei linguaggi regolari rispetto all'unione
+> [!dimostrazione]- Dimostrazione: chiusura dei linguaggi regolari rispetto all'unione
+> 
+> Se due [linguaggi formali](Teoria%20dei%20linguaggi%20formali.md#^definizione-linguaggio-formale) $L_1$ ed $L_2$ sono [regolari](Teoria%20degli%20automi.md#^definizione-linguaggio-regolare), allora, per [definizione di _linguaggio regolare_](Teoria%20degli%20automi.md#^definizione-linguaggio-regolare), esistono due [$\varepsilon$-NFA](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-non-deterministico-con-e-transizioni-enfa) $\mathcal{E}_1 = \langle \Sigma, Q_1, \delta_1, q_1, F_1 \rangle$ e $\mathcal{E}_2 = \langle \Sigma, Q_2, \delta_2, q_2, F_2 \rangle$ tali che $L_1 = L(\mathcal{E}_1)$ e $L_2 = L(\mathcal{E}_2)$. Per comodità, possiamo supporre che gli [insiemi](Teoria%20degli%20insiemi.md#^definizione-insieme) degli [stati](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-non-deterministico-con-e-transizioni-enfa) $Q_1$ e $Q_2$ siano disgiunti%% link %% o, eventualmente, rinominando gli [stati](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-non-deterministico-con-e-transizioni-enfa) di uno dei due [$\varepsilon$-NFA](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-non-deterministico-con-e-transizioni-enfa).
+> 
+> Per dimostrare che anche $L_1 \cup L_2$ possa essere [regolare](Teoria%20degli%20automi.md#^definizione-linguaggio-regolare), proviamo a costruire un [$\varepsilon$-NFA](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-non-deterministico-nfa) $\mathcal{E}$ che accetti $L_1 \cup L_2$, aggiungendo un nuovo [stato iniziale](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-non-deterministico-con-e-transizioni-enfa) $q_0$ e due [$\varepsilon$-transizioni](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-non-deterministico-con-e-transizioni-enfa) che permettano di scegliere quale tra $\mathcal{E}_1$ e $\mathcal{E}_2$ simulare:
+> 
+> $$
+> \mathcal{E} = \langle \Sigma, Q_1 \cup Q_2 \cup \{q_0\}, \delta, q_0, F_1 \cup F_2 \rangle
+> $$
+> 
+> Dati uno [stato](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-non-deterministico-con-e-transizioni-enfa) $q \in Q_1 \cup Q_2 \cup \{q_0\}$ e un [simbolo](Teoria%20dei%20linguaggi%20formali.md#^definizione-simbolo) $a \in \Sigma \cup \{\varepsilon\}$, definiamo la [funzione di transizione](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-non-deterministico-con-e-transizioni-enfa) $\delta$ come:
+> 
+> $$
+> \delta(q,a) =
+> \begin{cases}
+> \{q_1,q_2\} & \text{se } q=q_0 \land a=\varepsilon \\
+> \delta_1(q,a) & \text{se } q \in Q_1 \land a \in \Sigma \\
+> \delta_2(q,a) & \text{se } q \in Q_2 \land a \in \Sigma \\
+> \emptyset & \text{altrimenti}
+> \end{cases}
+> $$
+> 
+> Ecco come si potrebbe [rappresentare graficamente](Teoria%20degli%20automi.md#^rappresentazione-grafica-di-un-automa) $\mathcal{E}$:
+> 
+> ![dimostrazione-proprieta-chiusura-dei-linguaggi-regolari-rispetto-all-unione](dimostrazione-proprieta-chiusura-dei-linguaggi-regolari-rispetto-all-unione.svg)
+> 
+> In questo modo, partendo dallo [stato iniziale](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-non-deterministico-con-e-transizioni-enfa) $q_0$, l'automa può effettuare una delle due [$\varepsilon$-transizioni](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-non-deterministico-con-e-transizioni-enfa) e raggiungere lo [stato iniziale](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-non-deterministico-con-e-transizioni-enfa) di $\mathcal{E}_1$ oppure quello di $\mathcal{E}_2$, e da lì simulare il comportamento dell'[$\varepsilon$-NFA](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-non-deterministico-con-e-transizioni-enfa) scelto.
+> 
+> Poiché gli [stati finali](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-non-deterministico-con-e-transizioni-enfa) di $\mathcal{E}$ sono quelli appartenenti a $F_1 \cup F_2$, una [stringa](Teoria%20dei%20linguaggi%20formali.md#^definizione-stringa) viene [accettata](Teoria%20degli%20automi.md#^definizione-linguaggio-riconosciuto-da-un-dfa) se e solo se viene [accettata](Teoria%20degli%20automi.md#^definizione-linguaggio-riconosciuto-da-un-dfa) da almeno uno dei due [$\varepsilon$-NFA](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-non-deterministico-con-e-transizioni-enfa) di partenza ($\mathcal{E}_1$ o $\mathcal{E}_2$).
+> 
+> Di conseguenza:
+> 
+> $$
+> \begin{aligned}
+> L(\mathcal{E})
+> &= L(\mathcal{E}_1) \cup L(\mathcal{E}_2) \\
+> &= L_1 \cup L_2
+> \end{aligned}
+> $$
+> 
+> Abbiamo quindi dimostrato che il [linguaggio](Teoria%20dei%20linguaggi%20formali.md#^definizione-linguaggio-formale) $L_1 \cup L_2$ è [regolare](Teoria%20degli%20automi.md#^definizione-linguaggio-regolare), poiché è [riconosciuto](Teoria%20degli%20automi.md#^definizione-linguaggio-riconosciuto-da-un-dfa) da un [$\varepsilon$-NFA](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-non-deterministico-con-e-transizioni-enfa).
+> 
+> $\blacksquare$
 
-Se due [linguaggi formali](Teoria%20dei%20linguaggi%20formali.md#^definizione-linguaggio-formale) $L_1$ ed $L_2$ sono [regolari](Teoria%20degli%20automi.md#^definizione-linguaggio-regolare), allora per [definizione di _linguaggio regolare_](Teoria%20degli%20automi.md#^definizione-linguaggio-regolare) esistono due [DFA](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-deterministico-dfa) $\mathcal{D}_1 = \langle \Sigma, Q_1, \delta_1, q_1, F_1 \rangle$ e $\mathcal{D}_2 = \langle \Sigma, Q_2, \delta_2, q_2, F_2 \rangle$ tali che $L_1 = L(\mathcal{D}_1)$ e $L_2 = L(\mathcal{D}_2)$.
+%% 
+Definire un ε-NFA che riconosca le stringhe composte da zero o più a, seguite da zero o più b,
+seguite da zero o più c.
+%%
 
-Proviamo a costruire il [DFA](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-deterministico-dfa) $\mathcal D$ come
+%% 
+Definire un ε-NFA che riconosca le stringhe formate da 01 ripetuto una o più volte, o da 010
+ripetuto una o più volte
+%%
 
-$$
-\mathcal D = \langle \Sigma, Q_1 \cup Q_2 \cup \{ q_0 \}, \delta, q_0, F_1 \cup F_2 \rangle 
-$$
+%%
+Per l’ε-NFA rappresentato in forma tabellare qui sotto, calcolare l’ε-chiusura di ciascuno stato,
+descrivere sommariamente il linguaggio accettato e convertire l’automa in DFA.
 
-e, dati uno [stato](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-deterministico-dfa) $q \in Q$ e un [simbolo](Teoria%20dei%20linguaggi%20formali.md#^definizione-simbolo) $a \in \Sigma$, la [funzione di transizione](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-deterministico-dfa) $\delta$ è definita come
+|                      | $\boldsymbol{\varepsilon}$ | $\mathbf{a}$ | $\mathbf{b}$ | $\mathbf{c}$ |
+| -------------------- | -------------------------- | ------------ | ------------ | ------------ |
+| $\boldsymbol{\to p}$ | $\emptyset$                | $\{ p \}$    | $\{ q \}$    | $\{ r \}$    |
+| $\boldsymbol{q}$     | $\{ p \}$                  | $\{ q \}$    | $\{ r \}$    | $\emptyset$  |
+| $\boldsymbol{*r}$    | $\{ q \}$                  | $\{ r \}$    | $\emptyset$  | $\{ p \}$    |
+%%
 
-$$
-\delta(q, a) = \begin{cases}
-\{ q_1,q_2 \} & \text{se } q = q_0 \land a = \varepsilon \\
-\delta_1(q,a) & \text{se } q \in Q_1 \\
-\delta_2(q,a) & \text{se } q \in Q_2 \\
-\emptyset & \text{altrimenti}
-\end{cases}
-$$
+%%
+Per l’ε-NFA rappresentato in forma tabellare qui sotto, calcolare l’ε-chiusura di ciascuno stato,
+descrivere sommariamente il linguaggio accettato e convertire l’automa in DFA.
 
-Ecco come si potrebbe [rappresentare graficamente](Teoria%20degli%20automi.md#^rappresentazione-grafica-di-un-automa) $\mathcal D$:
+|                      | $\boldsymbol{\varepsilon}$ | $\mathbf{a}$ | $\mathbf{b}$ | $\mathbf{c}$ |
+| -------------------- | -------------------------- | ------------ | ------------ | ------------ |
+| $\boldsymbol{\to p}$ | $\{ q,r \}$                | $\emptyset$  | $\{ q \}$    | $\{ r \}$    |
+| $\boldsymbol{q}$     | $\emptyset$                | $\{ p \}$    | $\{ r \}$    | $\{ p,q \}$  |
+| $\boldsymbol{*r}$    | $\emptyset$                | $\emptyset$  | $\emptyset$  | $\emptyset$  |
+%%
 
-![dimostrazione-proprieta-chiusura-dei-linguaggi-regolari-rispetto-all-unione](dimostrazione-proprieta-chiusura-dei-linguaggi-regolari-rispetto-all-unione.svg)
+%% 
+Dimostrare che per ogni DFA esiste un ε-NFA equivalente (cioè che riconosce lo stesso
+linguaggio) che ha esattamente uno stato finale
+%%
+
+%% 
+Dimostrare che i linguaggi regolari sono chiusi rispetto all’operazione di concatenazione.
+Suggerimento: se utile usare il risultato dimostrato nell’esercizio precedente
+%%
 
 ---
 

@@ -287,17 +287,17 @@ Ora possiamo finalmente definire cos'è un [_linguaggio formale_](Teoria%20dei%2
 
 > [!proposizione]+ Proposizione: cardinalità della potenza $\color{#FF7F7F} n$-esima di un alfabeto
 >
-> Dato un [alfabeto](Teoria%20dei%20linguaggi%20formali.md#^definizione-alfabeto) finito $\Sigma$, con $|\Sigma\vDashm$, e dato un $n\in\mathbb{N}$, la cardinalità della sua [potenza $n$-esima](Teoria%20dei%20linguaggi%20formali.md#^definizione-potenza-n-esima-di-un-alfabeto) $\Sigma^n$ è:
+> Dato un [alfabeto](Teoria%20dei%20linguaggi%20formali.md#^definizione-alfabeto) finito $\Sigma$, con $|\Sigma| = m$, e dato un $n\in\mathbb{N}$, la cardinalità della sua [potenza $n$-esima](Teoria%20dei%20linguaggi%20formali.md#^definizione-potenza-n-esima-di-un-alfabeto) $\Sigma^n$ è:
 >
 > $$
-> |\Sigma^n\vDash|\Sigma|^n=m^n
+> |\Sigma^n| = |\Sigma|^n=m^n
 > $$
 
 > [!dimostrazione]- Dimostrazione: cardinalità della potenza $\color{#7FFF7F} n$-esima di un alfabeto
 > 
 > Per [definizione](Teoria%20dei%20linguaggi%20formali.md#^definizione-potenza-n-esima-di-un-alfabeto), $\Sigma^n$ è l'[insieme](Teoria%20degli%20insiemi.md#^definizione-insieme) di tutte le [stringhe](Teoria%20dei%20linguaggi%20formali.md#^definizione-stringa) su $\Sigma$ di [lunghezza](Teoria%20dei%20linguaggi%20formali.md#^definizione-lunghezza-di-una-stringa) $n$ formate da [simboli](Teoria%20dei%20linguaggi%20formali.md#^definizione-simbolo) appartenenti a $\Sigma$ e, quindi, per costruire una [stringa](Teoria%20dei%20linguaggi%20formali.md#^definizione-stringa) di [lunghezza](Teoria%20dei%20linguaggi%20formali.md#^definizione-lunghezza-di-una-stringa) $n$ è necessario scegliere un [simbolo](Teoria%20dei%20linguaggi%20formali.md#^definizione-simbolo) di $\Sigma$ per ciascuna delle $n$ posizioni della [stringa](Teoria%20dei%20linguaggi%20formali.md#^definizione-stringa).
 > 
-> Poiché $|\Sigma\vDashm$ per ipotesi, per la prima posizione possiamo scegliere tra $m$ [simboli](Teoria%20dei%20linguaggi%20formali.md#^definizione-simbolo) dell'[alfabeto](Teoria%20dei%20linguaggi%20formali.md#^definizione-alfabeto), per la seconda posizione stessa cosa, e così via fino alla $n$-esima posizione. Per il principio fondamentale del conteggio%% link %%, il numero totale di [stringhe](Teoria%20dei%20linguaggi%20formali.md#^definizione-stringa) ottenibili è quindi:
+> Poiché $|\Sigma| = m$ per ipotesi, per la prima posizione possiamo scegliere tra $m$ [simboli](Teoria%20dei%20linguaggi%20formali.md#^definizione-simbolo) dell'[alfabeto](Teoria%20dei%20linguaggi%20formali.md#^definizione-alfabeto), per la seconda posizione stessa cosa, e così via fino alla $n$-esima posizione. Per il principio fondamentale del conteggio%% link %%, il numero totale di [stringhe](Teoria%20dei%20linguaggi%20formali.md#^definizione-stringa) ottenibili è quindi:
 > 
 > $$
 > \underbrace{m\cdot m\cdot\ldots\cdot m}_{n\text{ volte}}=m^n
@@ -306,13 +306,13 @@ Ora possiamo finalmente definire cos'è un [_linguaggio formale_](Teoria%20dei%2
 > Pertanto:
 > 
 > $$
-> |\Sigma^n\vDashm^n=|\Sigma|^n
+> |\Sigma^n| = m^n = |\Sigma|^n
 > $$
 > 
 > Per $n=0$, si ha $\Sigma^0={\varepsilon}$ e quindi:
 > 
 > $$
-> |\Sigma^0\vDash1=|\Sigma|^0
+> |\Sigma^0| = 1 = |\Sigma|^0
 > $$
 > 
 > $\blacksquare$
@@ -375,6 +375,70 @@ Ora possiamo finalmente definire cos'è un [_linguaggio formale_](Teoria%20dei%2
 > &= \Sigma^+ \setminus \{ \text{b},\text{c} \}^* \\
 > &= \{ \text{a}, \text{ba}, \text{ac}, \text{ccac}, \text{bba}, \text{aab}, \text{aca}, \text{baa}, \text{bac}, \text{cacca}, \ldots \}
 > \end{align*}
+> $$
+
+Sia la [chiusura di Kleene](Teoria%20dei%20linguaggi%20formali.md#^definizione-chiusura-di-kleene-su-un-alfabeto) che quella [transitiva](Teoria%20dei%20linguaggi%20formali.md#^definizione-chiusura-transitiva-su-un-alfabeto) possono anche essere applicate su un [linguaggio](Teoria%20dei%20linguaggi%20formali.md#^definizione-linguaggio-formale) oltre che su un [alfabeto](Teoria%20dei%20linguaggi%20formali.md#^definizione-alfabeto).
+
+> [!definizione]+ Definizione: chiusura di Kleene su un linguaggio
+> 
+> Dato un [linguaggio](Teoria%20dei%20linguaggi%20formali.md#^definizione-linguaggio-formale) $L$, la sua **chiusura di Kleene** $L^*$ è il [linguaggio](Teoria%20dei%20linguaggi%20formali.md#^definizione-linguaggio-formale) formato da tutte le [stringhe](Teoria%20dei%20linguaggi%20formali.md#^definizione-stringa) ottenibili [concatenando](Teoria%20dei%20linguaggi%20formali.md#^definizione-concatenazione-di-due-stringhe) un numero finito (anche nullo) di [stringhe](Teoria%20dei%20linguaggi%20formali.md#^definizione-stringa) appartenenti a $L$, inclusa quindi la [stringa vuota](Teoria%20dei%20linguaggi%20formali.md#^definizione-stringa-vuota) $\varepsilon$.
+> 
+> Formalmente, è l'unione di tutte le [potenze $n$-esime](Teoria%20dei%20linguaggi%20formali.md#^definizione-potenza-n-esima-di-un-linguaggio) di $L$:
+> 
+> $$
+> L^* = \bigcup_{i \in \mathbb{N}} L^i
+> $$
+^definizione-chiusura-di-kleene-su-un-linguaggio
+
+> [!esempio]- Esempio di chiusura di Kleene su un linguaggio
+> 
+> Dato il [linguaggio](Teoria%20dei%20linguaggi%20formali.md#^definizione-linguaggio-formale) $L = \{ \text{ab}, \text{ba} \}$, la sua [chiusura di Kleene](Teoria%20dei%20linguaggi%20formali.md#^definizione-chiusura-di-kleene-su-un-linguaggio) $L^*$ è:
+> 
+> $$
+> \begin{align*}
+> L^* &= \bigcup_{i \in \mathbb{N}} L^i \\
+> &= L^0 \cup L^1 \cup L^2 \cup L^3 \cup \ldots \\
+> &= \{ \underbrace{\varepsilon}_{L^0}, \underbrace{\text{ab}, \text{ba}}_{L^1}, \underbrace{\text{abab}, \text{abba}, \text{baab}, \text{baba}}_{L^2}, \underbrace{\text{ababab}, \text{ababba}, \text{abbaab}}_{\text{parte di }L^3}, \ldots \}
+> \end{align*}
+> $$
+^esempio-di-chiusura-di-kleene-su-un-linguaggio
+
+> [!definizione]+ Definizione: chiusura transitiva su un linguaggio
+> 
+> Dato un [linguaggio](Teoria%20dei%20linguaggi%20formali.md#^definizione-linguaggio-formale) $L$, la sua **chiusura transitiva** $L^+$ è il [linguaggio](Teoria%20dei%20linguaggi%20formali.md#^definizione-linguaggio-formale) formato da tutte le [stringhe](Teoria%20dei%20linguaggi%20formali.md#^definizione-stringa) ottenibili [concatenando](Teoria%20dei%20linguaggi%20formali.md#^definizione-concatenazione-di-due-stringhe) una o più [stringhe](Teoria%20dei%20linguaggi%20formali.md#^definizione-stringa) appartenenti a $L$, escludendo quindi la [stringa vuota](Teoria%20dei%20linguaggi%20formali.md#^definizione-stringa-vuota) $\varepsilon$ quando non è ottenibile tramite [concatenazione](Teoria%20dei%20linguaggi%20formali.md#^definizione-concatenazione-di-due-stringhe) di [stringhe](Teoria%20dei%20linguaggi%20formali.md#^definizione-stringa) appartenenti a $L$.
+> 
+> Formalmente, è l'unione di tutte le [potenze $n$-esime](Teoria%20dei%20linguaggi%20formali.md#^definizione-potenza-n-esima-di-un-linguaggio) di $L$, escludendo $L^0$:
+> 
+> $$
+> L^+ = \bigcup_{i \in \mathbb{N}\setminus\{0\}} L^i
+> $$
+^definizione-chiusura-transitiva-su-un-linguaggio
+
+> [!attenzione]+ Attenzione: una chiusura transitiva su un linguaggio può contenere la stringa vuota
+> 
+> A differenza della [chiusura transitiva su un alfabeto](Teoria%20dei%20linguaggi%20formali.md#^definizione-chiusura-transitiva-su-un-alfabeto), la [chiusura transitiva di un linguaggio](Teoria%20dei%20linguaggi%20formali.md#^definizione-chiusura-transitiva-su-un-linguaggio) $L$ non esclude necessariamente la [stringa vuota](Teoria%20dei%20linguaggi%20formali.md#^definizione-stringa-vuota) $\varepsilon$.
+> 
+> Infatti, se $\varepsilon \in L$, allora $\varepsilon \in L^+$, poiché la [chiusura transitiva](Teoria%20dei%20linguaggi%20formali.md#^definizione-chiusura-transitiva-su-un-linguaggio) comprende anche le [stringhe](Teoria%20dei%20linguaggi%20formali.md#^definizione-stringa) ottenute [concatenando](Teoria%20dei%20linguaggi%20formali.md#^definizione-concatenazione-di-due-stringhe) una sola [stringa](Teoria%20dei%20linguaggi%20formali.md#^definizione-stringa) appartenente a $L$.
+> 
+> Ad esempio, se $L=\{\varepsilon, \text{a}\}$, allora la [chiusura di Kleene](Teoria%20dei%20linguaggi%20formali.md#^definizione-chiusura-di-kleene-su-un-linguaggio) e quella [transitiva](Teoria%20dei%20linguaggi%20formali.md#^definizione-chiusura-transitiva-su-un-linguaggio) coincidono, perché $\varepsilon$ viene inclusa anche nella [transitiva](Teoria%20dei%20linguaggi%20formali.md#^definizione-chiusura-transitiva-su-un-alfabeto):
+> 
+> $$
+> L^+=L^*=\{\varepsilon,\text{a},\text{aa},\text{aaa},\ldots\}
+> $$
+> 
+> Se invece $L = \{ \text{a} \}$, allora
+> 
+> $$
+> \begin{array}{}
+> L^*=\{\varepsilon,\text{a},\text{aa},\text{aaa},\ldots\} \\
+> L^+=\{\text{a},\text{aa},\text{aaa},\ldots\}
+> \end{array}
+> $$
+> 
+> Si può riassumere questo comportamento generalmente come:
+> 
+> $$
+> L^+ = L^* \setminus \{\varepsilon\} \iff \varepsilon \not\in L
 > $$
 
 Ora possiamo "ri-definire" l'operazione%% link %% [insiemistica](Teoria%20degli%20insiemi.md#^definizione-insieme) del [complemento](Teoria%20degli%20insiemi.md#^definizione-complemento-di-un-insieme), applicando questo concetto ai [linguaggi formali](Teoria%20dei%20linguaggi%20formali.md#^definizione-linguaggio-formale).
@@ -500,6 +564,8 @@ Ora possiamo "ri-definire" l'operazione%% link %% [insiemistica](Teoria%20degli%
 Come abbiamo visto, possiamo descrivere un [linguaggio formale](Teoria%20dei%20linguaggi%20formali.md#^definizione-linguaggio-formale) attraverso le [stringhe](Teoria%20dei%20linguaggi%20formali.md#^definizione-stringa) che lo compongono. Solitamente, ai fini dello studio, i [linguaggi](Teoria%20dei%20linguaggi%20formali.md#^definizione-linguaggio-formale) davvero interessanti sono quelli contenenti un numero _infinito_%% link %% di [stringhe](Teoria%20dei%20linguaggi%20formali.md#^definizione-stringa), ma non è possibile descriverli semplicemente elencandole tutte (come per esempio fanno i vocabolari che elencano tutte le parole di una lingua).
 
 Occorre quindi un approccio _finito_%% link %% per descrivere un [linguaggio](Teoria%20dei%20linguaggi%20formali.md#^definizione-linguaggio-formale) _infinito_: potremmo per esempio trovare un modo _meccanico_ per dire se una [stringa](Teoria%20dei%20linguaggi%20formali.md#^definizione-stringa) è "accettabile" all'interno di un [linguaggio](Teoria%20dei%20linguaggi%20formali.md#^definizione-linguaggio-formale) o meno.
+
+%% collegarsi da qui ai DFA %%
 
 ---
 
