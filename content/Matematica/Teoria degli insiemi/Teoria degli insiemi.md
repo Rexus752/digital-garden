@@ -912,7 +912,7 @@ Ad esempio, se A = {0, 1, 2, 3} e B = {a, b, c}, allora la coppia (0, a) apparti
 > > 
 > > $\blacksquare$
 
-### 4.6.1 - Potenza ennesima di un insieme
+### 4.6.1 - Potenza $n$-esima di un insieme
 
 > [!definizione]+ Definizione: potenza $\color{#FF7FFF} n$-sima di un insieme
 > 

@@ -266,6 +266,15 @@ Ora possiamo finalmente definire cos'è un [_linguaggio formale_](Teoria%20dei%2
 > 
 > Dal momento che i [linguaggi](Teoria%20dei%20linguaggi%20formali.md#^definizione-linguaggio-formale) sono [insiemi](Teoria%20degli%20insiemi.md#^definizione-insieme), anche su di essi possono essere applicate le operazioni%% link %% insiemistiche dell'[unione $\cup$](Teoria%20degli%20insiemi.md#^definizione-unione-di-due-insiemi), [intersezione $\cap$](Teoria%20degli%20insiemi.md#^definizione-intersezione-di-due-insiemi) e [differenza $\setminus$](Teoria%20degli%20insiemi.md#^definizione-differenza-tra-due-insiemi).
 
+> [!definizione]+ Definizione: linguaggio inverso
+> 
+> Dato un [linguaggio](Teoria%20dei%20linguaggi%20formali.md#^definizione-linguaggio-formale) $L$ su un [alfabeto](Teoria%20dei%20linguaggi%20formali.md#^definizione-alfabeto) $\Sigma$, il suo **inverso** $L^R$ è il [linguaggio](Teoria%20dei%20linguaggi%20formali.md#^definizione-linguaggio-formale) ottenuto [invertendo](Teoria%20dei%20linguaggi%20formali.md#^definizione-inversa-di-una-stringa) ogni [stringa](Teoria%20dei%20linguaggi%20formali.md#^definizione-stringa) $w \in L$:
+> 
+> $$
+> L^R = \{ w^R \mid w \in L \}
+> $$
+^definizione-linguaggio-inverso
+
 > [!definizione]+ Definizione: potenza $\color{#FF7FFF} n$-esima di un alfabeto
 > 
 > Dato un [alfabeto](Teoria%20dei%20linguaggi%20formali.md#^definizione-alfabeto) $\Sigma$, la sua **potenza $n$-esima** $\Sigma^n$ (con $n\in\mathbb{N}$) è il [linguaggio](Teoria%20dei%20linguaggi%20formali.md#^definizione-linguaggio-formale) costituito da tutte le [stringhe](Teoria%20dei%20linguaggi%20formali.md#^definizione-stringa) su $\Sigma$ di [lunghezza](Teoria%20dei%20linguaggi%20formali.md#^definizione-lunghezza-di-una-stringa) $n$:

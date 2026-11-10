@@ -888,7 +888,7 @@ Quello che ho fatto è stato:
 Questo è ciò che ho in mente di fare per migliorare il sito:
 - Trovare un modo per caricare nel repository anche quelle cartelle che Quartz inserisce di default nel `.gitignore` come la `.obsidian` contenente le impostazioni del vault di Obsidian ed eventuali cartelle `private` contenenti note private (che però io non uso) e `templates` contenenti template per le note, in modo da avere un backup completo nel repository nel caso in cui dovesse malauguratamente succedere qualcosa.
 - Ridurre lo spazio vuoto in cima alle pagine del sito.
-- Quando in una pagina non è presente l'indice sul lato, far continuare 
+- Quando in una pagina non è presente l'indice sul lato, far continuare la pagina anche sul lato destro senza mantenere lo spazio vuoto a destra.
 - Integrare le icone delle note nel titolo della nota, nell'_Explorer_ e anche nel _Breadcrumbs_.
 - Trasformare la "Reader Mode" in una modalità dyslexic-friendly (es. usando il font [OpenDyslexic](https://opendyslexic.org/)). 
 - Renderizzare il LaTeX nei titoli dell'indice sul lato delle pagine.

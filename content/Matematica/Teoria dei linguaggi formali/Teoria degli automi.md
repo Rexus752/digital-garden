@@ -32,7 +32,7 @@ automa = macchina che riconosce stringhe
 > Un **automa a stati finiti deterministico** (**DFA**, dall'inglese _**D**eterministic **F**inite-state **A**utomaton_) è una [quintupla](Teoria%20degli%20insiemi.md#^definizione-tupla)
 > 
 > $$
-> \mathcal{A} = \langle \Sigma, Q, \delta, q_0, F \rangle
+> \mathcal{D} = \langle \Sigma, Q, \delta, q_0, F \rangle
 > $$
 > 
 > dove:
@@ -51,7 +51,7 @@ automa = macchina che riconosce stringhe
 > - lo [stato iniziale](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-deterministico-dfa) $q_0 \in Q$ è rappresentato da una freccia entrante e
 > - gli [stati finali](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-deterministico-dfa) $F \subseteq Q$ hanno un doppio contorno.
 > 
-> Per esempio, un [DFA](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-deterministico-dfa) $\mathcal{A} = \langle \Sigma, Q, \delta, q_0, F \rangle$ definito come:
+> Per esempio, un [DFA](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-deterministico-dfa) $\mathcal{D} = \langle \Sigma, Q, \delta, q_0, F \rangle$ definito come:
 > - $\Sigma = \{ \text{a}, \text{b} \}$,
 > - $Q = \{ q_0, q_1, q_2 \}$,
 > - $\delta(q_0, \text{a}) = q_1,\ \delta(q_0, \text{b}) = q_2,\ \delta(q_2, \text{a}) = q_2,\ \ldots$
@@ -66,7 +66,7 @@ automa = macchina che riconosce stringhe
 > 
 > Proviamo a definire un [DFA](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-deterministico-dfa) che riconosce solo le [stringhe](Teoria%20dei%20linguaggi%20formali.md#^definizione-stringa) di $\text{a}$ di [lunghezza](Teoria%20dei%20linguaggi%20formali.md#^definizione-lunghezza-di-una-stringa) dispari.
 > 
-> Questo [automa](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-deterministico-dfa) $\mathcal{A} = \langle \Sigma, Q, \delta, q_0, F \rangle$ sarà così definito:
+> Questo [automa](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-deterministico-dfa) $\mathcal{D} = \langle \Sigma, Q, \delta, q_0, F \rangle$ sarà così definito:
 > - $\Sigma = \{ \text{a} \}$ perché ci servono solo [stringhe](Teoria%20dei%20linguaggi%20formali.md#^definizione-stringa) contenenti il [simbolo](Teoria%20dei%20linguaggi%20formali.md#^definizione-simbolo) $\text{a}$;
 > - $Q = \{ q_0, q_1 \}$ perché servono solo due stati, uno per quando la [stringa](Teoria%20dei%20linguaggi%20formali.md#^definizione-stringa) sarà di [lunghezza](Teoria%20dei%20linguaggi%20formali.md#^definizione-lunghezza-di-una-stringa) pari e uno per quando sarà di [lunghezza](Teoria%20dei%20linguaggi%20formali.md#^definizione-lunghezza-di-una-stringa) dispari;
 > - $\delta \colon Q \times \Sigma \to Q$ così definita:
@@ -81,7 +81,7 @@ automa = macchina che riconosce stringhe
 > 
 > Proviamo a definire un [DFA](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-deterministico-dfa) che riconosce solo le [stringhe](Teoria%20dei%20linguaggi%20formali.md#^definizione-stringa) di numeri binari%% Link %% pari%% link %%, ossia [stringhe](Teoria%20dei%20linguaggi%20formali.md#^definizione-stringa) non [vuote](Teoria%20dei%20linguaggi%20formali.md#^definizione-stringa-vuota) e che terminano con $0$.
 > 
-> Questo [automa](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-deterministico-dfa) $\mathcal{A} = \langle \Sigma, Q, \delta, q_0, F \rangle$ sarà così definito:
+> Questo [automa](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-deterministico-dfa) $\mathcal{D} = \langle \Sigma, Q, \delta, q_0, F \rangle$ sarà così definito:
 > - $\Sigma = \{ 0,1 \}$ perché le [stringhe](Teoria%20dei%20linguaggi%20formali.md#^definizione-stringa) sono numeri binari%% Link %%;
 > - $Q = \{ q_x, q_0, q_1 \}$ perché serve uno [stato](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-deterministico-dfa) $q_x$ in cui non è ancora stato riconosciuto alcun bit e due [stati](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-deterministico-dfa) $q_0$ e $q_1$ in cui almeno un bit è stato riconosciuto e l'ultimo è stato rispettivamente $0$ e $1$;
 > - $\delta \colon Q \times \Sigma \to Q$ così definita:
@@ -109,7 +109,7 @@ Innanzitutto definiamo un'estensione della [funzione di transizione](Teoria%20de
 
 > [!definizione]+ Definizione: funzione di transizione estesa di un DFA
 > 
-> In un [DFA](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-deterministico-dfa) $\mathcal{A} = \langle \Sigma, Q, \delta, q_0, F \rangle$, la **funzione di transizione estesa** $\hat\delta \colon Q \times \Sigma^* \to Q$ è una [funzione](Funzioni.md#^definizione-funzione) definita induttivamente%% link %% sul suo secondo argomento così come segue:
+> In un [DFA](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-deterministico-dfa) $\mathcal{D} = \langle \Sigma, Q, \delta, q_0, F \rangle$, la **funzione di transizione estesa** $\hat\delta \colon Q \times \Sigma^* \to Q$ è una [funzione](Funzioni.md#^definizione-funzione) definita induttivamente%% link %% sul suo secondo argomento così come segue:
 > 
 > $$
 > \begin{align*}
@@ -147,10 +147,10 @@ Innanzitutto definiamo un'estensione della [funzione di transizione](Teoria%20de
 
 > [!definizione]+ Definizione: linguaggio riconosciuto da un DFA
 > 
-> Dato un [DFA](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-deterministico-dfa) $\mathcal{A} = \langle \Sigma, Q, \delta, q_0, F \rangle$, il **linguaggio riconosciuto** (o **accettato**) $L(A)$ da $\cal A$ è il [linguaggio formale](Teoria%20dei%20linguaggi%20formali.md#^definizione-linguaggio-formale) dato dalla [chiusura di Kleene](Teoria%20dei%20linguaggi%20formali.md#^definizione-chiusura-di-kleene-su-un-alfabeto) $\Sigma^*$ in cui, per ogni [stringa](Teoria%20dei%20linguaggi%20formali.md#^definizione-stringa) $w \in \Sigma^*$, la [funzione di transizione estesa](Teoria%20degli%20automi.md#^definizione-funzione-di-transizione-estesa-di-un-dfa) restituisce uno [stato finale](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-deterministico-dfa):
+> Dato un [DFA](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-deterministico-dfa) $\mathcal{D} = \langle \Sigma, Q, \delta, q_0, F \rangle$, il **linguaggio riconosciuto** (o **accettato**) $L(\mathcal{D})$ da $\cal D$ è il [linguaggio formale](Teoria%20dei%20linguaggi%20formali.md#^definizione-linguaggio-formale) dato dalla [chiusura di Kleene](Teoria%20dei%20linguaggi%20formali.md#^definizione-chiusura-di-kleene-su-un-alfabeto) $\Sigma^*$ in cui, per ogni [stringa](Teoria%20dei%20linguaggi%20formali.md#^definizione-stringa) $w \in \Sigma^*$, la [funzione di transizione estesa](Teoria%20degli%20automi.md#^definizione-funzione-di-transizione-estesa-di-un-dfa) restituisce uno [stato finale](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-deterministico-dfa):
 > 
 > $$
-> L(\mathcal{A}) = \{ w \in \Sigma^* \mid \hat\delta(q_0, w) \in F \}
+> L(\mathcal{D}) = \{ w \in \Sigma^* \mid \hat\delta(q_0, w) \in F \}
 > $$
 ^definizione-linguaggio-riconosciuto-da-un-dfa
 
@@ -161,30 +161,30 @@ Banalmente, un [linguaggio riconosciuto](Teoria%20degli%20automi.md#^definizione
 > Riprendendo sempre l'[esempio dei numeri binari pari](Teoria%20degli%20automi.md#^esempio-numeri-binari-pari), il [linguaggio riconosciuto](Teoria%20degli%20automi.md#^definizione-linguaggio-riconosciuto-da-un-dfa) di questo [DFA](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-deterministico-dfa) sarà dato da tutte le [stringhe](Teoria%20dei%20linguaggi%20formali.md#^definizione-stringa) terminanti per $0$:
 > 
 > $$
-> L(\mathcal{A}) = \{ w \in \Sigma^* \mid w = w'0 \}
+> L(\mathcal{D}) = \{ w \in \Sigma^* \mid w = w'0 \}
 > $$
 > 
 > (dove $w'$ è un [prefisso](Teoria%20dei%20linguaggi%20formali.md#^definizione-prefisso-di-una-stringa) di $w$).
 
-> [!definizione]+ Definizione: linguaggio regolare
+> [!definizione]+ Definizione: linguaggio regolare riconosciuto da un DFA
 > 
-> Un [linguaggio](Teoria%20dei%20linguaggi%20formali.md#^definizione-linguaggio-formale) $L$ si dice **regolare** se esiste un [DFA](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-deterministico-dfa) $\cal A$ per cui è il suo [linguaggio riconosciuto](Teoria%20degli%20automi.md#^definizione-linguaggio-riconosciuto-da-un-dfa):
+> Un [linguaggio](Teoria%20dei%20linguaggi%20formali.md#^definizione-linguaggio-formale) $L$ si dice **regolare** se esiste un [DFA](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-deterministico-dfa) $\cal D$ per cui è il suo [linguaggio riconosciuto](Teoria%20degli%20automi.md#^definizione-linguaggio-riconosciuto-da-un-dfa):
 > 
 > $$
-> L = L(\mathcal A)
+> L = L(\mathcal D)
 > $$
-^definizione-linguaggio-regolare
+^definizione-linguaggio-regolare-riconosciuto-da-un-dfa
 
 > [!notazione]+ Notazione: tabella di transizione
 > 
-> Un [DFA](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-deterministico-dfa) $\mathcal{A} = \langle \Sigma, Q, \delta, q_0, F \rangle$ si può rappresentare in forma tabellare attraverso la sua **tabella di transizione**, in cui:
+> Un [DFA](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-deterministico-dfa) $\mathcal{D} = \langle \Sigma, Q, \delta, q_0, F \rangle$ si può rappresentare in forma tabellare attraverso la sua **tabella di transizione**, in cui:
 > - ogni riga corrisponde a uno [stato](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-deterministico-dfa) del [DFA](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-deterministico-dfa),
 > - ogni riga corrisponde a un [simbolo](Teoria%20dei%20linguaggi%20formali.md#^definizione-simbolo) dell'[alfabeto](Teoria%20dei%20linguaggi%20formali.md#^definizione-alfabeto) $\Sigma$ del [DFA](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-deterministico-dfa),
 > - lo [stato iniziale](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-deterministico-dfa) $q_0 \in Q$ è marcato con una freccia $\to$,
 > - ogni [stato finale](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-deterministico-dfa) è marcato con un asterisco $*$ e
 > - la cella corrispondente alla riga $q_i$ e alla colonna $a_j$ contiene il valore di $\delta(q_i, a_j)$.
 > 
-> Per esempio, un [DFA](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-deterministico-dfa) $\mathcal{A} = \langle \Sigma, Q, \delta, q_0, F \rangle$ definito come:
+> Per esempio, un [DFA](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-deterministico-dfa) $\mathcal{D} = \langle \Sigma, Q, \delta, q_0, F \rangle$ definito come:
 > - $\Sigma = \{ \text{a}, \text{b} \}$,
 > - $Q = \{ q_0, q_1, q_2 \}$,
 > - $\delta(q_0, \text{a}) = q_1,\ \delta(q_0, \text{b}) = q_2,\ \delta(q_2, \text{a}) = q_2,\ \ldots$
@@ -221,7 +221,7 @@ Banalmente, un [linguaggio riconosciuto](Teoria%20degli%20automi.md#^definizione
 
 > [!definizione]+ Definizione: stato pozzo
 > 
-> Dato un [DFA](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-deterministico-dfa) $\mathcal{A} = \langle \Sigma, Q, \delta, q_0, F \rangle$, uno [stato](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-deterministico-dfa) $q_p \in Q$ viene detto **stato pozzo** (o **stato trappola**, in inglese **sink state** o **trap state**) se una volta entrati è impossibile uscirne, ossia se per ogni [simbolo](Teoria%20dei%20linguaggi%20formali.md#^definizione-simbolo) $a \in \Sigma$ la [funzione di transizione](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-deterministico-dfa) darà sempre $q_p$ stesso:
+> Dato un [DFA](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-deterministico-dfa) $\mathcal{D} = \langle \Sigma, Q, \delta, q_0, F \rangle$, uno [stato](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-deterministico-dfa) $q_p \in Q$ viene detto **stato pozzo** (o **stato trappola**, in inglese **sink state** o **trap state**) se una volta entrati è impossibile uscirne, ossia se per ogni [simbolo](Teoria%20dei%20linguaggi%20formali.md#^definizione-simbolo) $a \in \Sigma$ la [funzione di transizione](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-deterministico-dfa) darà sempre $q_p$ stesso:
 > 
 > $$
 > \forall a \in \Sigma . \big( \delta(q_p, a) = q_p \big) 
@@ -263,14 +263,14 @@ Finora abbiamo visto i [DFA](Teoria%20degli%20automi.md#^definizione-automa-a-st
 
 Ciò significa che una [stringa](Teoria%20dei%20linguaggi%20formali.md#^definizione-stringa) in questo tipo di automi detti [_NFA_](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-non-deterministico-nfa)%% Link %% può intraprendere più "percorsi" e viene [riconosciuta](Teoria%20degli%20automi.md#^definizione-linguaggio-riconosciuto-da-un-dfa) se se esiste almeno un percorso di transizioni che, consumando interamente la [stringa](Teoria%20dei%20linguaggi%20formali.md#^definizione-stringa) (cioè scandendo tutti i suoi [simboli](Teoria%20dei%20linguaggi%20formali.md#^definizione-simbolo)), conduce a uno [stato finale](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-deterministico-dfa).
 
-Nonostante questa differenza, [DFA](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-deterministico-dfa) e [NFA](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-non-deterministico-nfa) sono equivalenti dal punto di vista della potenza espressiva, in quanto con entrambi possiamo definire gli stessi [linguaggi regolari](Teoria%20degli%20automi.md#^definizione-linguaggio-regolare). Pertanto, ogni [NFA](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-non-deterministico-nfa) può essere trasformato in un [DFA](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-deterministico-dfa) equivalente, sebbene quest'ultimo possa richiedere un numero maggiore di [stati](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-deterministico-dfa).
+Nonostante questa differenza, [DFA](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-deterministico-dfa) e [NFA](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-non-deterministico-nfa) sono equivalenti dal punto di vista della potenza espressiva, in quanto con entrambi possiamo definire gli stessi [linguaggi regolari](Teoria%20degli%20automi.md#^definizione-linguaggio-regolare-riconosciuto-da-un-dfa). Pertanto, ogni [NFA](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-non-deterministico-nfa) può essere trasformato in un [DFA](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-deterministico-dfa) equivalente, sebbene quest'ultimo possa richiedere un numero maggiore di [stati](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-deterministico-dfa).
 
 > [!definizione]+ Definizione: automa a stati finiti non deterministico (NFA)
 > 
 > Un **automa a stati finiti non deterministico** (**NFA**, dall'inglese _**N**on-deterministic **F**inite-state **A**utomaton_) è una [quintupla](Teoria%20degli%20insiemi.md#^definizione-tupla)
 > 
 > $$
-> \mathcal{A} = \langle \Sigma, Q, \delta, q_0, F \rangle
+> \mathcal{N} = \langle \Sigma, Q, \delta, q_0, F \rangle
 > $$
 > 
 > dove:
@@ -330,7 +330,7 @@ Adattiamo le definizioni di [_funzione di transizione estesa_](Teoria%20degli%20
 
 > [!definizione]+ Definizione: funzione di transizione estesa di un NFA
 > 
-> In un [NFA](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-non-deterministico-nfa) $\mathcal{A} = \langle \Sigma, Q, \delta, q_0, F \rangle$, la **funzione di transizione estesa** $\hat\delta \colon Q \times \Sigma^* \to \mathcal{P}(Q)$ è una [funzione](Funzioni.md#^definizione-funzione) definita induttivamente%% link %% sul suo secondo argomento così come segue:
+> In un [NFA](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-non-deterministico-nfa) $\mathcal{N} = \langle \Sigma, Q, \delta, q_0, F \rangle$, la **funzione di transizione estesa** $\hat\delta \colon Q \times \Sigma^* \to \mathcal{P}(Q)$ è una [funzione](Funzioni.md#^definizione-funzione) definita induttivamente%% link %% sul suo secondo argomento così come segue:
 > 
 > $$
 > \begin{align*}
@@ -342,18 +342,27 @@ Adattiamo le definizioni di [_funzione di transizione estesa_](Teoria%20degli%20
 
 > [!definizione]+ Definizione: linguaggio riconosciuto da un NFA
 > 
-> Dato un [NFA](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-non-deterministico-nfa) $\mathcal{A} = \langle \Sigma, Q, \delta, q_0, F \rangle$, il **linguaggio riconosciuto** (o **accettato**) $L(A)$ da $\cal A$ è il [linguaggio formale](Teoria%20dei%20linguaggi%20formali.md#^definizione-linguaggio-formale) dato dalla [chiusura di Kleene](Teoria%20dei%20linguaggi%20formali.md#^definizione-chiusura-di-kleene-su-un-alfabeto) $\Sigma^*$ in cui, per ogni [stringa](Teoria%20dei%20linguaggi%20formali.md#^definizione-stringa) $w \in \Sigma^*$, la [funzione di transizione estesa](Teoria%20degli%20automi.md#^definizione-funzione-di-transizione-estesa-di-un-nfa) restituisce almeno uno [stato finale](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-non-deterministico-nfa):
+> Dato un [NFA](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-non-deterministico-nfa) $\mathcal{N} = \langle \Sigma, Q, \delta, q_0, F \rangle$, il **linguaggio riconosciuto** (o **accettato**) $L(\mathcal{N})$ da $\cal N$ è il [linguaggio formale](Teoria%20dei%20linguaggi%20formali.md#^definizione-linguaggio-formale) dato dalla [chiusura di Kleene](Teoria%20dei%20linguaggi%20formali.md#^definizione-chiusura-di-kleene-su-un-alfabeto) $\Sigma^*$ in cui, per ogni [stringa](Teoria%20dei%20linguaggi%20formali.md#^definizione-stringa) $w \in \Sigma^*$, la [funzione di transizione estesa](Teoria%20degli%20automi.md#^definizione-funzione-di-transizione-estesa-di-un-nfa) restituisce almeno uno [stato finale](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-non-deterministico-nfa):
 > 
 > $$
-> L(\mathcal{A}) = \{ w \in \Sigma^* \mid \hat\delta(q_0, w) \cap F \ne \emptyset \}
+> L(\mathcal{N}) = \{ w \in \Sigma^* \mid \hat\delta(q_0, w) \cap F \ne \emptyset \}
 > $$
 ^definizione-linguaggio-riconosciuto-da-un-nfa
+
+> [!definizione]+ Definizione: linguaggio regolare riconosciuto da un NFA
+> 
+> Un [linguaggio](Teoria%20dei%20linguaggi%20formali.md#^definizione-linguaggio-formale) $L$ si dice **regolare** se esiste un [NFA](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-non-deterministico-nfa) $\cal N$ per cui è il suo [linguaggio riconosciuto](Teoria%20degli%20automi.md#^definizione-linguaggio-riconosciuto-da-un-nfa):
+> 
+> $$
+> L = L(\mathcal N)
+> $$
+^definizione-linguaggio-regolare-riconosciuto-da-un-nfa
 
 ## 2.1 - Equivalenza tra DFA e NFA
 
 > [!teorema]+ Teorema: da NFA a DFA
 > 
-> Dato un [NFA](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-non-deterministico-nfa) $\cal N$, esiste un [DFA](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-deterministico-dfa) $\cal D$ tale che il [linguaggio riconosciuto](Teoria%20degli%20automi.md#^definizione-linguaggio-riconosciuto-da-un-dfa) $L(\mathcal{N})$ da $\mathcal{N}$ è uguale al [linguaggio riconosciuto](Teoria%20degli%20automi.md#^definizione-linguaggio-riconosciuto-da-un-nfa) $L(\mathcal{D})$ da $\cal D$:
+> Dato un [NFA](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-non-deterministico-nfa) $\cal N$, esiste un [DFA](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-deterministico-dfa) $\cal D$ tale che il [linguaggio](Teoria%20dei%20linguaggi%20formali.md#^definizione-linguaggio-formale) $L(\mathcal{N})$ [riconosciuto](Teoria%20degli%20automi.md#^definizione-linguaggio-riconosciuto-da-un-nfa) da $\mathcal{N}$ è uguale al [linguaggio](Teoria%20dei%20linguaggi%20formali.md#^definizione-linguaggio-formale) $L(\mathcal{D})$ [riconosciuto](Teoria%20degli%20automi.md#^definizione-linguaggio-riconosciuto-da-un-dfa) da $\mathcal{D}$:
 > 
 > $$
 > \forall \mathcal{N}, \exists \mathcal{D} . \big( 
@@ -631,11 +640,6 @@ Algoritmo per ridurre gli stati inutili di un NFA
 > 
 > $\blacksquare$
 
-> [!osservazione]+ Osservazione: linguaggi regolari riconosciuti da un NFA
-> 
-> Dal momento che [DFA ed NFA sono equivalenti](Teoria%20degli%20automi.md#^corollario-equivalenza-tra-dfa-e-nfa), possiamo caratterizzare un [linguaggio regolare](Teoria%20degli%20automi.md#^definizione-linguaggio-regolare) $L$ anche attraverso un [NFA](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-non-deterministico-nfa) $\mathcal{N}$ che lo [riconosce](Teoria%20degli%20automi.md#^definizione-linguaggio-riconosciuto-da-un-nfa).
-^osservazione-linguaggi-regolari-riconosciuti-da-un-nfa
-
 %% 
 Esercizio: definire un NFA che riconosce le stringhe di 0 e 1 in cui il terzultimo simbolo è un 1
 
@@ -662,7 +666,7 @@ Esercizio: Definire un NFA sull’alfabeto {a, c, e, n, s} che riconosca le paro
 
 # 3 - $\varepsilon$-NFA
 
-Abbiamo visto la classe dei [DFA](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-deterministico-dfa) $\mathcal{A} = \langle \Sigma, Q, \delta, q_0, F \rangle$ in cui a ogni [simbolo](Teoria%20dei%20linguaggi%20formali.md#^definizione-simbolo) $a \in \Sigma$ corrisponde una [transizione](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-deterministico-dfa) a uno [stato](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-deterministico-dfa) $q \in Q$ e la classe degli [NFA](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-non-deterministico-nfa) in cui a ogni [simbolo](Teoria%20dei%20linguaggi%20formali.md#^definizione-simbolo) $a \in \Sigma$ corrisponde una [transizione](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-deterministico-dfa) a uno o più [stati](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-non-deterministico-nfa) $Q' \subseteq Q$.
+Abbiamo visto la classe dei [DFA](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-deterministico-dfa) $\mathcal{D} = \langle \Sigma, Q, \delta, q_0, F \rangle$ in cui a ogni [simbolo](Teoria%20dei%20linguaggi%20formali.md#^definizione-simbolo) $a \in \Sigma$ corrisponde una [transizione](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-deterministico-dfa) a uno [stato](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-deterministico-dfa) $q \in Q$ e la classe degli [NFA](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-non-deterministico-nfa) in cui a ogni [simbolo](Teoria%20dei%20linguaggi%20formali.md#^definizione-simbolo) $a \in \Sigma$ corrisponde una [transizione](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-deterministico-dfa) a uno o più [stati](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-non-deterministico-nfa) $Q' \subseteq Q$.
 
 Ma cosa succederebbe se fosse possibile effettuare una [transizione](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-deterministico-dfa) verso uno [stato](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-deterministico-dfa) successivo **spontaneamente**, senza dover leggere alcun [simbolo](Teoria%20dei%20linguaggi%20formali.md#^definizione-simbolo) $a \in \Sigma$? In altre parole, sarebbe possibile passare da uno [stato](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-deterministico-dfa) a un altro senza consumare alcun simbolo dell'input, come se l'automa potesse spostarsi da uno stato all'altro usando la [stringa vuota](Teoria%20dei%20linguaggi%20formali.md#^definizione-stringa-vuota) $\varepsilon$?
 
@@ -673,7 +677,7 @@ Ecco che quindi introduciamo gli [_$\varepsilon$-NFA_](Teoria%20degli%20automi.m
 > Un **automa a stati finiti non deterministico con $\boldsymbol{\varepsilon}$-transizioni** (**$\boldsymbol{\varepsilon}$-NFA**, dall'inglese _**$\boldsymbol{\varepsilon}$**-transitions **N**on-deterministic **F**inite-state **A**utomaton_) è una [quintupla](Teoria%20degli%20insiemi.md#^definizione-tupla)
 > 
 > $$
-> \mathcal{A} = \langle \Sigma, Q, \delta, q_0, F \rangle
+> \mathcal{E} = \langle \Sigma, Q, \delta, q_0, F \rangle
 > $$
 > 
 > dove:
@@ -705,11 +709,21 @@ Ma a cosa potrebbero servirci queste [$\varepsilon$-transizioni](Teoria%20degli%
 > ![esempio-enfa-che-riconosce-numeri-interi-enfa-2](esempio-enfa-che-riconosce-numeri-interi-enfa-2.svg)
 ^esempio-enfa-che-riconosce-numeri-interi
 
+%% 
+Definire un ε-NFA che riconosca le stringhe composte da zero o più a, seguite da zero o più b,
+seguite da zero o più c.
+%%
+
+%% 
+Definire un ε-NFA che riconosca le stringhe formate da 01 ripetuto una o più volte, o da 010
+ripetuto una o più volte
+%%
+
 Introduciamo ora la [_$\varepsilon$-chiusura_](Teoria%20degli%20automi.md#^definizione-e-chiusura-di-uno-stato) che ci serve per tenere comodamente traccia di tutte le [$\varepsilon$-transizioni](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-non-deterministico-con-e-transizioni-enfa) che possiamo effettuare a partire da un certo [stato](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-non-deterministico-con-e-transizioni-enfa) $q$, ossia fin dove possiamo spingerci partendo da $q$ senza consumare alcun [simbolo](Teoria%20dei%20linguaggi%20formali.md#^definizione-simbolo) in ingresso.
 
 > [!definizione]+ Definizione: $\color{#FF7FFF} \varepsilon$-chiusura di uno stato
 > 
-> Dato un [$\varepsilon$-NFA](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-non-deterministico-con-e-transizioni-enfa) $\mathcal{A} = \langle \Sigma, Q, \delta, q_0, F \rangle$ e uno [stato](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-non-deterministico-con-e-transizioni-enfa) $q \in Q$, la sua **$\varepsilon$-chiusura** $\text{ECLOSE}(q)$ è il più piccolo [insieme](Teoria%20degli%20insiemi.md#^definizione-insieme) di [stati](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-non-deterministico-con-e-transizioni-enfa) tale che:
+> Dato un [$\varepsilon$-NFA](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-non-deterministico-con-e-transizioni-enfa) $\mathcal{E} = \langle \Sigma, Q, \delta, q_0, F \rangle$ e uno [stato](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-non-deterministico-con-e-transizioni-enfa) $q \in Q$, la sua **$\varepsilon$-chiusura** $\text{ECLOSE}(q)$ è il più piccolo [insieme](Teoria%20degli%20insiemi.md#^definizione-insieme) di [stati](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-non-deterministico-con-e-transizioni-enfa) tale che:
 > 1. $q$ fa parte della sua chiusura $\text{ECLOSE}(q)$:
 > 	$$
 > 	q \in \text{ECLOSE}(q)
@@ -760,7 +774,7 @@ Possiamo anche generalizzare questa definizione di [$\varepsilon$-chiusura](Teor
 
 > [!definizione]+ Definizione: $\color{#FF7FFF} \varepsilon$-chiusura di un insieme di stati
 > 
-> Dato un [$\varepsilon$-NFA](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-non-deterministico-con-e-transizioni-enfa) $\mathcal{A} = \langle \Sigma, Q, \delta, q_0, F \rangle$ e un [insieme](Teoria%20degli%20insiemi.md#^definizione-insieme) di [stati](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-non-deterministico-con-e-transizioni-enfa) $S \subseteq Q$, la loro **$\varepsilon$-chiusura** $\text{ECLOSE}(S)$ è definita come l'unione%% link %% delle [$\varepsilon$-chiusure](Teoria%20degli%20automi.md#^definizione-e-chiusura-di-uno-stato) di ogni [stato](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-non-deterministico-con-e-transizioni-enfa) $q \in S$:
+> Dato un [$\varepsilon$-NFA](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-non-deterministico-con-e-transizioni-enfa) $\mathcal{E} = \langle \Sigma, Q, \delta, q_0, F \rangle$ e un [insieme](Teoria%20degli%20insiemi.md#^definizione-insieme) di [stati](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-non-deterministico-con-e-transizioni-enfa) $S \subseteq Q$, la loro **$\varepsilon$-chiusura** $\text{ECLOSE}(S)$ è definita come l'unione%% link %% delle [$\varepsilon$-chiusure](Teoria%20degli%20automi.md#^definizione-e-chiusura-di-uno-stato) di ogni [stato](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-non-deterministico-con-e-transizioni-enfa) $q \in S$:
 > 
 > $$
 > \text{ECLOSE}(S) = \bigcup_{q \in S} \text{ECLOSE}(q)
@@ -771,7 +785,7 @@ Usiamo il concetto di [$\varepsilon$-chiusura](Teoria%20degli%20automi.md#^defin
 
 > [!definizione]+ Definizione: funzione di transizione estesa di un $\color{#FF7FFF} \varepsilon$-NFA
 > 
-> In un [$\varepsilon$-NFA](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-non-deterministico-con-e-transizioni-enfa) $\mathcal{A} = \langle \Sigma, Q, \delta, q_0, F \rangle$, la **funzione di transizione estesa** $\hat\delta \colon Q \times \Sigma^* \to \mathcal{P}(Q)$ è una [funzione](Funzioni.md#^definizione-funzione) definita induttivamente%% link %% sul suo secondo argomento così come segue:
+> In un [$\varepsilon$-NFA](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-non-deterministico-con-e-transizioni-enfa) $\mathcal{E} = \langle \Sigma, Q, \delta, q_0, F \rangle$, la **funzione di transizione estesa** $\hat\delta \colon Q \times \Sigma^* \to \mathcal{P}(Q)$ è una [funzione](Funzioni.md#^definizione-funzione) definita induttivamente%% link %% sul suo secondo argomento così come segue:
 > 
 > $$
 > \begin{align*}
@@ -783,12 +797,21 @@ Usiamo il concetto di [$\varepsilon$-chiusura](Teoria%20degli%20automi.md#^defin
 
 > [!definizione]+ Definizione: linguaggio riconosciuto da un $\color{#FF7FFF} \varepsilon$-NFA
 > 
-> Dato un [$\varepsilon$-NFA](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-non-deterministico-con-e-transizioni-enfa) $\mathcal{A} = \langle \Sigma, Q, \delta, q_0, F \rangle$, il **linguaggio riconosciuto** (o **accettato**) $L(A)$ da $\cal A$ è il [linguaggio formale](Teoria%20dei%20linguaggi%20formali.md#^definizione-linguaggio-formale) dato dalla [chiusura di Kleene](Teoria%20dei%20linguaggi%20formali.md#^definizione-chiusura-di-kleene-su-un-alfabeto) $\Sigma^*$ in cui, per ogni [stringa](Teoria%20dei%20linguaggi%20formali.md#^definizione-stringa) $w \in \Sigma^*$, la [funzione di transizione estesa](Teoria%20degli%20automi.md#^definizione-funzione-di-transizione-estesa-di-un-enfa) restituisce almeno uno [stato finale](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-non-deterministico-con-e-transizioni-enfa):
+> Dato un [$\varepsilon$-NFA](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-non-deterministico-con-e-transizioni-enfa) $\mathcal{E} = \langle \Sigma, Q, \delta, q_0, F \rangle$, il **linguaggio riconosciuto** (o **accettato**) $L(\mathcal{E})$ da $\cal E$ è il [linguaggio formale](Teoria%20dei%20linguaggi%20formali.md#^definizione-linguaggio-formale) dato dalla [chiusura di Kleene](Teoria%20dei%20linguaggi%20formali.md#^definizione-chiusura-di-kleene-su-un-alfabeto) $\Sigma^*$ in cui, per ogni [stringa](Teoria%20dei%20linguaggi%20formali.md#^definizione-stringa) $w \in \Sigma^*$, la [funzione di transizione estesa](Teoria%20degli%20automi.md#^definizione-funzione-di-transizione-estesa-di-un-enfa) restituisce almeno uno [stato finale](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-non-deterministico-con-e-transizioni-enfa):
 > 
 > $$
-> L(\mathcal{A}) = \{ w \in \Sigma^* \mid \hat\delta(q_0, w) \cap F \ne \emptyset \}
+> L(\mathcal{E}) = \{ w \in \Sigma^* \mid \hat\delta(q_0, w) \cap F \ne \emptyset \}
 > $$
 ^definizione-linguaggio-riconosciuto-da-un-enfa
+
+> [!definizione]+ Definizione: linguaggio regolare riconosciuto da un $\color{#FF7FFF} \varepsilon$-NFA
+> 
+> Un [linguaggio](Teoria%20dei%20linguaggi%20formali.md#^definizione-linguaggio-formale) $L$ si dice **regolare** se esiste un [$\varepsilon$-NFA](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-non-deterministico-con-e-transizioni-enfa) $\cal E$ per cui è il suo [linguaggio riconosciuto](Teoria%20degli%20automi.md#^definizione-linguaggio-riconosciuto-da-un-enfa):
+> 
+> $$
+> L = L(\mathcal E)
+> $$
+^definizione-linguaggio-regolare-riconosciuto-da-un-enfa
 
 ## 3.1 - Equivalenza tra DFA e $\varepsilon$-NFA
 
@@ -798,7 +821,7 @@ In particolare, nella conversione da [DFA](Teoria%20degli%20automi.md#^definizio
 
 > [!teorema]+ Teorema: da NFA a $\color{#FF3F3F} \varepsilon$-NFA
 > 
-> Dato un [NFA](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-non-deterministico-nfa) $\cal N$, esiste un [$\varepsilon$-NFA](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-non-deterministico-con-e-transizioni-enfa) $\cal E$ tale che il [linguaggio riconosciuto](Teoria%20degli%20automi.md#^definizione-linguaggio-riconosciuto-da-un-dfa) $L(\mathcal{N})$ da $\mathcal{N}$ è uguale al [linguaggio riconosciuto](Teoria%20degli%20automi.md#^definizione-linguaggio-riconosciuto-da-un-nfa) $L(\mathcal{E})$ da $\cal E$:
+> Dato un [NFA](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-non-deterministico-nfa) $\cal N$, esiste un [$\varepsilon$-NFA](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-non-deterministico-con-e-transizioni-enfa) $\cal E$ tale che il [linguaggio](Teoria%20dei%20linguaggi%20formali.md#^definizione-linguaggio-formale) $L(\mathcal{N})$ [riconosciuto](Teoria%20degli%20automi.md#^definizione-linguaggio-riconosciuto-da-un-nfa) da $\mathcal{N}$ è uguale al [linguaggio](Teoria%20dei%20linguaggi%20formali.md#^definizione-linguaggio-formale) $L(\mathcal{E})$ [riconosciuto](Teoria%20degli%20automi.md#^definizione-linguaggio-riconosciuto-da-un-enfa) da $\mathcal{E}$:
 > 
 > $$
 > \forall \mathcal{N}, \exists \mathcal{E} . \big( 
@@ -812,11 +835,16 @@ In particolare, nella conversione da [DFA](Teoria%20degli%20automi.md#^definizio
 > 
 > $\blacksquare$
 
+%% 
+Dimostrare che per ogni DFA esiste un ε-NFA equivalente (cioè che riconosce lo stesso
+linguaggio) che ha esattamente uno stato finale
+%%
+
 Ora invece vediamo come da un [$\varepsilon$-NFA](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-non-deterministico-con-e-transizioni-enfa) possiamo ottenere un [DFA](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-deterministico-dfa) equivalente.
 
 > [!teorema]+ Teorema: da $\color{#FF3F3F} \varepsilon$-NFA a DFA
 > 
-> Dato un [$\varepsilon$-NFA](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-non-deterministico-con-e-transizioni-enfa) $\cal E$, esiste un [DFA](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-deterministico-dfa) $\cal D$ tale che il [linguaggio riconosciuto](Teoria%20degli%20automi.md#^definizione-linguaggio-riconosciuto-da-un-dfa) $L(\mathcal{E})$ da $\mathcal{E}$ è uguale al [linguaggio riconosciuto](Teoria%20degli%20automi.md#^definizione-linguaggio-riconosciuto-da-un-nfa) $L(\mathcal{D})$ da $\cal D$:
+> Dato un [$\varepsilon$-NFA](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-non-deterministico-con-e-transizioni-enfa) $\cal E$, esiste un [DFA](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-deterministico-dfa) $\cal D$ tale che il [linguaggio](Teoria%20dei%20linguaggi%20formali.md#^definizione-linguaggio-formale) $L(\mathcal{E})$ [riconosciuto](Teoria%20degli%20automi.md#^definizione-linguaggio-riconosciuto-da-un-enfa) da $\mathcal{E}$ è uguale al [linguaggio](Teoria%20dei%20linguaggi%20formali.md#^definizione-linguaggio-formale) $L(\mathcal{D})$ [riconosciuto](Teoria%20degli%20automi.md#^definizione-linguaggio-riconosciuto-da-un-dfa) da $\mathcal{D}$:
 > 
 > $$
 > \forall \mathcal{E}, \exists \mathcal{D} . \big( 
@@ -1010,95 +1038,6 @@ Ora invece vediamo come da un [$\varepsilon$-NFA](Teoria%20degli%20automi.md#^de
 > 
 > ![esempio-dell-algoritmo-di-conversione-di-un-enfa-in-un-dfa](esempio-dell-algoritmo-di-conversione-di-un-enfa-in-un-dfa.svg)
 
-> [!corollario]+ Corollario: equivalenza tra DFA ed $\color{#FFCF7F} \varepsilon$-NFA
->
-> I [DFA](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-deterministico-dfa) e gli [$\varepsilon$-NFA](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-non-deterministico-con-e-transizioni-enfa) hanno la stessa potenza espressiva, ossia riconoscono esattamente gli stessi [linguaggi formali](Teoria%20dei%20linguaggi%20formali.md#^definizione-linguaggio-formale) e sono quindi equivalenti da questo punto di vista:
->
-> $$
-> \begin{array}{}
-> \forall \mathcal{D}, \exists \mathcal{E} . \big( L(\mathcal{D}) = L(\mathcal{E}) \big) \\
-> \land \\
-> \forall \mathcal{E}, \exists \mathcal{D} . \big( L(\mathcal{E}) = L(\mathcal{D}) \big) 
-> \end{array}
-> $$
-^corollario-equivalenza-tra-dfa-ed-enfa
-
-> [!dimostrazione]- Dimostrazione: equivalenza tra DFA ed $\color{#7FFF7F} \varepsilon$-NFA
->
-> Per il [primo teorema](Teoria%20degli%20automi.md#^teorema-da-nfa-a-enfa), per ogni [NFA](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-non-deterministico-nfa) esiste un [$\varepsilon$-NFA](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-non-deterministico-con-e-transizioni-enfa) che [riconosce](Teoria%20degli%20automi.md#^definizione-linguaggio-riconosciuto-da-un-enfa) lo stesso [linguaggio](Teoria%20dei%20linguaggi%20formali.md#^definizione-linguaggio-formale) e, dato che [DFA ed NFA sono equivalenti](Teoria%20degli%20automi.md#^corollario-equivalenza-tra-dfa-ed-enfa), allora anche per ogni [DFA](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-deterministico-dfa) esiste un [$\varepsilon$-NFA](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-non-deterministico-con-e-transizioni-enfa) che [riconosce](Teoria%20degli%20automi.md#^definizione-linguaggio-riconosciuto-da-un-enfa) lo stesso [linguaggio](Teoria%20dei%20linguaggi%20formali.md#^definizione-linguaggio-formale).
-> 
-> Viceversa, per il [secondo teorema](Teoria%20degli%20automi.md#^teorema-da-enfa-a-dfa) è vero il contrario: abbiamo quindi che le due tipologie di automi riconoscono gli stessi [linguaggi formali](Teoria%20dei%20linguaggi%20formali.md#^definizione-linguaggio-formale).
-> 
-> $\blacksquare$
-
-> [!osservazione]+ Osservazione: linguaggi regolari riconosciuti da un $\color{#7F7F7F} \varepsilon$-NFA
-> 
-> Dal momento che [DFA ed $\varepsilon$-NFA sono equivalenti](Teoria%20degli%20automi.md#^corollario-equivalenza-tra-dfa-ed-enfa), possiamo caratterizzare un [linguaggio regolare](Teoria%20degli%20automi.md#^definizione-linguaggio-regolare) $L$ anche attraverso un [$\varepsilon$-NFA](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-non-deterministico-con-e-transizioni-enfa) $\mathcal{E}$ che lo [riconosce](Teoria%20degli%20automi.md#^definizione-linguaggio-riconosciuto-da-un-enfa).
-^osservazione-linguaggi-regolari-riconosciuti-da-un-enfa
-
-# 4 - Teoremi e proprietà sugli automi
-
-Specifichiamo che tutti i teoremi%% Link %% presentati da qui in avanti riguarderanno gli [$\varepsilon$-NFA](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-non-deterministico-con-e-transizioni-enfa) ma, a meno che non sia esplicitamente scritto, grazie all'[equivalenza tra DFA ed NFA](Teoria%20degli%20automi.md#^corollario-equivalenza-tra-dfa-ed-nfa) e all'[equivalenza tra DFA ed $\varepsilon$-NFA](Teoria%20degli%20automi.md#^corollario-equivalenza-tra-dfa-ed-enfa) potranno rispettivamente essere applicati anche ai [DFA](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-deterministico-dfa) e agli [NFA](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-non-deterministico-nfa).
-
-> [!proprieta]+ Proprietà: chiusura dei linguaggi regolari rispetto all'unione
->
-> I [linguaggi regolari](Teoria%20degli%20automi.md#^definizione-linguaggio-regolare) sono chiusi rispetto all'operazione di [unione](Teoria%20degli%20insiemi.md#^definizione-unione-di-due-insiemi), ovvero se due [linguaggi formali](Teoria%20dei%20linguaggi%20formali.md#^definizione-linguaggio-formale) $L_1$ ed $L_2$ sono [regolari](Teoria%20degli%20automi.md#^definizione-linguaggio-regolare), allora anche la loro [unione](Teoria%20degli%20insiemi.md#^definizione-unione-di-due-insiemi) $L_1 \cup L_2$ è [regolare](Teoria%20degli%20automi.md#^definizione-linguaggio-regolare).
-^proprieta-chiusura-dei-linguaggi-regolari-rispetto-all-unione
-
-> [!dimostrazione]- Dimostrazione: chiusura dei linguaggi regolari rispetto all'unione
-> 
-> Se due [linguaggi formali](Teoria%20dei%20linguaggi%20formali.md#^definizione-linguaggio-formale) $L_1$ ed $L_2$ sono [regolari](Teoria%20degli%20automi.md#^definizione-linguaggio-regolare), allora, per [definizione di _linguaggio regolare_](Teoria%20degli%20automi.md#^definizione-linguaggio-regolare), esistono due [$\varepsilon$-NFA](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-non-deterministico-con-e-transizioni-enfa) $\mathcal{E}_1 = \langle \Sigma, Q_1, \delta_1, q_1, F_1 \rangle$ e $\mathcal{E}_2 = \langle \Sigma, Q_2, \delta_2, q_2, F_2 \rangle$ tali che $L_1 = L(\mathcal{E}_1)$ e $L_2 = L(\mathcal{E}_2)$. Per comodità, possiamo supporre che gli [insiemi](Teoria%20degli%20insiemi.md#^definizione-insieme) degli [stati](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-non-deterministico-con-e-transizioni-enfa) $Q_1$ e $Q_2$ siano disgiunti%% link %% o, eventualmente, rinominando gli [stati](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-non-deterministico-con-e-transizioni-enfa) di uno dei due [$\varepsilon$-NFA](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-non-deterministico-con-e-transizioni-enfa).
-> 
-> Per dimostrare che anche $L_1 \cup L_2$ possa essere [regolare](Teoria%20degli%20automi.md#^definizione-linguaggio-regolare), proviamo a costruire un [$\varepsilon$-NFA](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-non-deterministico-nfa) $\mathcal{E}$ che accetti $L_1 \cup L_2$, aggiungendo un nuovo [stato iniziale](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-non-deterministico-con-e-transizioni-enfa) $q_0$ e due [$\varepsilon$-transizioni](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-non-deterministico-con-e-transizioni-enfa) che permettano di scegliere quale tra $\mathcal{E}_1$ e $\mathcal{E}_2$ simulare:
-> 
-> $$
-> \mathcal{E} = \langle \Sigma, Q_1 \cup Q_2 \cup \{q_0\}, \delta, q_0, F_1 \cup F_2 \rangle
-> $$
-> 
-> Dati uno [stato](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-non-deterministico-con-e-transizioni-enfa) $q \in Q_1 \cup Q_2 \cup \{q_0\}$ e un [simbolo](Teoria%20dei%20linguaggi%20formali.md#^definizione-simbolo) $a \in \Sigma \cup \{\varepsilon\}$, definiamo la [funzione di transizione](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-non-deterministico-con-e-transizioni-enfa) $\delta$ come:
-> 
-> $$
-> \delta(q,a) =
-> \begin{cases}
-> \{q_1,q_2\} & \text{se } q=q_0 \land a=\varepsilon \\
-> \delta_1(q,a) & \text{se } q \in Q_1 \land a \in \Sigma \\
-> \delta_2(q,a) & \text{se } q \in Q_2 \land a \in \Sigma \\
-> \emptyset & \text{altrimenti}
-> \end{cases}
-> $$
-> 
-> Ecco come si potrebbe [rappresentare graficamente](Teoria%20degli%20automi.md#^rappresentazione-grafica-di-un-automa) $\mathcal{E}$:
-> 
-> ![dimostrazione-proprieta-chiusura-dei-linguaggi-regolari-rispetto-all-unione](dimostrazione-proprieta-chiusura-dei-linguaggi-regolari-rispetto-all-unione.svg)
-> 
-> In questo modo, partendo dallo [stato iniziale](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-non-deterministico-con-e-transizioni-enfa) $q_0$, l'automa può effettuare una delle due [$\varepsilon$-transizioni](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-non-deterministico-con-e-transizioni-enfa) e raggiungere lo [stato iniziale](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-non-deterministico-con-e-transizioni-enfa) di $\mathcal{E}_1$ oppure quello di $\mathcal{E}_2$, e da lì simulare il comportamento dell'[$\varepsilon$-NFA](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-non-deterministico-con-e-transizioni-enfa) scelto.
-> 
-> Poiché gli [stati finali](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-non-deterministico-con-e-transizioni-enfa) di $\mathcal{E}$ sono quelli appartenenti a $F_1 \cup F_2$, una [stringa](Teoria%20dei%20linguaggi%20formali.md#^definizione-stringa) viene [accettata](Teoria%20degli%20automi.md#^definizione-linguaggio-riconosciuto-da-un-dfa) se e solo se viene [accettata](Teoria%20degli%20automi.md#^definizione-linguaggio-riconosciuto-da-un-dfa) da almeno uno dei due [$\varepsilon$-NFA](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-non-deterministico-con-e-transizioni-enfa) di partenza ($\mathcal{E}_1$ o $\mathcal{E}_2$).
-> 
-> Di conseguenza:
-> 
-> $$
-> \begin{aligned}
-> L(\mathcal{E})
-> &= L(\mathcal{E}_1) \cup L(\mathcal{E}_2) \\
-> &= L_1 \cup L_2
-> \end{aligned}
-> $$
-> 
-> Abbiamo quindi dimostrato che il [linguaggio](Teoria%20dei%20linguaggi%20formali.md#^definizione-linguaggio-formale) $L_1 \cup L_2$ è [regolare](Teoria%20degli%20automi.md#^definizione-linguaggio-regolare), poiché è [riconosciuto](Teoria%20degli%20automi.md#^definizione-linguaggio-riconosciuto-da-un-dfa) da un [$\varepsilon$-NFA](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-non-deterministico-con-e-transizioni-enfa).
-> 
-> $\blacksquare$
-
-%% 
-Definire un ε-NFA che riconosca le stringhe composte da zero o più a, seguite da zero o più b,
-seguite da zero o più c.
-%%
-
-%% 
-Definire un ε-NFA che riconosca le stringhe formate da 01 ripetuto una o più volte, o da 010
-ripetuto una o più volte
-%%
-
 %%
 Per l’ε-NFA rappresentato in forma tabellare qui sotto, calcolare l’ε-chiusura di ciascuno stato,
 descrivere sommariamente il linguaggio accettato e convertire l’automa in DFA.
@@ -1121,15 +1060,218 @@ descrivere sommariamente il linguaggio accettato e convertire l’automa in DFA.
 | $\boldsymbol{*r}$    | $\emptyset$                | $\emptyset$  | $\emptyset$  | $\emptyset$  |
 %%
 
-%% 
-Dimostrare che per ogni DFA esiste un ε-NFA equivalente (cioè che riconosce lo stesso
-linguaggio) che ha esattamente uno stato finale
-%%
+> [!corollario]+ Corollario: equivalenza tra DFA ed $\color{#FFCF7F} \varepsilon$-NFA
+>
+> I [DFA](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-deterministico-dfa) e gli [$\varepsilon$-NFA](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-non-deterministico-con-e-transizioni-enfa) hanno la stessa potenza espressiva, ossia riconoscono esattamente gli stessi [linguaggi formali](Teoria%20dei%20linguaggi%20formali.md#^definizione-linguaggio-formale) e sono quindi equivalenti da questo punto di vista:
+>
+> $$
+> \begin{array}{}
+> \forall \mathcal{D}, \exists \mathcal{E} . \big( L(\mathcal{D}) = L(\mathcal{E}) \big) \\
+> \land \\
+> \forall \mathcal{E}, \exists \mathcal{D} . \big( L(\mathcal{E}) = L(\mathcal{D}) \big) 
+> \end{array}
+> $$
+^corollario-equivalenza-tra-dfa-ed-enfa
+
+> [!dimostrazione]- Dimostrazione: equivalenza tra DFA ed $\color{#7FFF7F} \varepsilon$-NFA
+>
+> Per il [primo teorema](Teoria%20degli%20automi.md#^teorema-da-nfa-a-enfa), per ogni [NFA](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-non-deterministico-nfa) esiste un [$\varepsilon$-NFA](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-non-deterministico-con-e-transizioni-enfa) che [riconosce](Teoria%20degli%20automi.md#^definizione-linguaggio-riconosciuto-da-un-enfa) lo stesso [linguaggio](Teoria%20dei%20linguaggi%20formali.md#^definizione-linguaggio-formale) e, dato che [DFA ed NFA sono equivalenti](Teoria%20degli%20automi.md#^corollario-equivalenza-tra-dfa-ed-enfa), allora anche per ogni [DFA](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-deterministico-dfa) esiste un [$\varepsilon$-NFA](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-non-deterministico-con-e-transizioni-enfa) che [riconosce](Teoria%20degli%20automi.md#^definizione-linguaggio-riconosciuto-da-un-enfa) lo stesso [linguaggio](Teoria%20dei%20linguaggi%20formali.md#^definizione-linguaggio-formale).
+> 
+> Viceversa, per il [secondo teorema](Teoria%20degli%20automi.md#^teorema-da-enfa-a-dfa) è vero il contrario: abbiamo quindi che le due tipologie di automi riconoscono gli stessi [linguaggi formali](Teoria%20dei%20linguaggi%20formali.md#^definizione-linguaggio-formale).
+> 
+> $\blacksquare$
+
+> [!osservazione]+ Osservazione: rapporto tra DFA, NFA ed $\color{#7F7F7F} \varepsilon$-NFA
+> 
+> Il rapporto tra [DFA](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-deterministico-dfa), [NFA](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-non-deterministico-nfa) ed [$\varepsilon$-NFA](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-non-deterministico-con-e-transizioni-enfa) si può riassumere con questo schema:
+> 
+> ![osservazione-rapporto-tra-dfa-nfa-ed-enfa](osservazione-rapporto-tra-dfa-nfa-ed-enfa.svg)
+^osservazione-rapporto-tra-dfa-nfa-ed-enfa
+
+# 4 - Proprietà di chiusura dei linguaggi regolari
+
+Specifichiamo che, per comodità, queste proprietà%% Link %% presentate di seguito riguarderanno solo una tra le tre possibili varianti di automi ([DFA](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-deterministico-dfa), [NFA](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-non-deterministico-nfa) o [$\varepsilon$-NFA](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-non-deterministico-con-e-transizioni-enfa)) ma, grazie all'[equivalenza tra DFA ed NFA](Teoria%20degli%20automi.md#^corollario-equivalenza-tra-dfa-ed-nfa) e all'[equivalenza tra DFA ed $\varepsilon$-NFA](Teoria%20degli%20automi.md#^corollario-equivalenza-tra-dfa-ed-enfa) potranno rispettivamente essere applicati anche alle altre due varianti.
+
+> [!proprieta]+ Proprietà di chiusura dei linguaggi regolari rispetto all'unione
+>
+> I [linguaggi regolari](Teoria%20degli%20automi.md#^definizione-linguaggio-regolare-riconosciuto-da-un-enfa) sono chiusi%% link %% rispetto all'[unione](Teoria%20degli%20insiemi.md#^definizione-unione-di-due-insiemi), ossia dati due [linguaggi regolari](Teoria%20degli%20automi.md#^definizione-linguaggio-regolare-riconosciuto-da-un-enfa) $L_1$ ed $L_2$ la loro [unione](Teoria%20degli%20insiemi.md#^definizione-unione-di-due-insiemi) $L_1 \cup L_2$ è anch'essa [regolare](Teoria%20degli%20automi.md#^definizione-linguaggio-regolare-riconosciuto-da-un-enfa).
+> 
+> > [!dimostrazione]- Dimostrazione
+> > 
+> > Se due [linguaggi formali](Teoria%20dei%20linguaggi%20formali.md#^definizione-linguaggio-formale) $L_1$ ed $L_2$ sono [regolari](Teoria%20degli%20automi.md#^definizione-linguaggio-regolare-riconosciuto-da-un-dfa), allora, per [definizione di _linguaggio regolare_](Teoria%20degli%20automi.md#^definizione-linguaggio-regolare-riconosciuto-da-un-dfa), esistono due [$\varepsilon$-NFA](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-non-deterministico-con-e-transizioni-enfa) $\mathcal{E}_1 = \langle \Sigma, Q_1, \delta_1, q_1, F_1 \rangle$ e $\mathcal{E}_2 = \langle \Sigma, Q_2, \delta_2, q_2, F_2 \rangle$ tali che $L_1 = L(\mathcal{E}_1)$ e $L_2 = L(\mathcal{E}_2)$. Per comodità, possiamo supporre che gli [insiemi](Teoria%20degli%20insiemi.md#^definizione-insieme) degli [stati](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-non-deterministico-con-e-transizioni-enfa) $Q_1$ e $Q_2$ siano disgiunti%% link %% o, eventualmente, rinominando gli [stati](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-non-deterministico-con-e-transizioni-enfa) di uno dei due [$\varepsilon$-NFA](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-non-deterministico-con-e-transizioni-enfa).
+> > 
+> > Per dimostrare che anche $L_1 \cup L_2$ possa essere [regolare](Teoria%20degli%20automi.md#^definizione-linguaggio-regolare-riconosciuto-da-un-dfa), proviamo a costruire un [$\varepsilon$-NFA](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-non-deterministico-nfa) $\mathcal{E}$ che accetti $L_1 \cup L_2$, aggiungendo un nuovo [stato iniziale](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-non-deterministico-con-e-transizioni-enfa) $q_0$ e due [$\varepsilon$-transizioni](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-non-deterministico-con-e-transizioni-enfa) che permettano di scegliere quale tra $\mathcal{E}_1$ e $\mathcal{E}_2$ simulare:
+> > 
+> > $$
+> > \mathcal{E} = \langle \Sigma, Q_1 \cup Q_2 \cup \{q_0\}, \delta, q_0, F_1 \cup F_2 \rangle
+> > $$
+> > 
+> > Dati uno [stato](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-non-deterministico-con-e-transizioni-enfa) $q \in Q_1 \cup Q_2 \cup \{q_0\}$ e un [simbolo](Teoria%20dei%20linguaggi%20formali.md#^definizione-simbolo) $a \in \Sigma \cup \{\varepsilon\}$, definiamo la [funzione di transizione](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-non-deterministico-con-e-transizioni-enfa) $\delta$ come:
+> > 
+> > $$
+> > \delta(q,a) =
+> > \begin{cases}
+> > \{q_1,q_2\} & \text{se } q=q_0 \land a=\varepsilon \\
+> > \delta_1(q,a) & \text{se } q \in Q_1 \land a \in \Sigma \\
+> > \delta_2(q,a) & \text{se } q \in Q_2 \land a \in \Sigma \\
+> > \emptyset & \text{altrimenti}
+> > \end{cases}
+> > $$
+> > 
+> > Ecco come si potrebbe [rappresentare graficamente](Teoria%20degli%20automi.md#^rappresentazione-grafica-di-un-automa) $\mathcal{E}$:
+> > 
+> > ![dimostrazione-proprieta-chiusura-dei-linguaggi-regolari-rispetto-all-unione](dimostrazione-proprieta-chiusura-dei-linguaggi-regolari-rispetto-all-unione.svg)
+> > 
+> > In questo modo, partendo dallo [stato iniziale](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-non-deterministico-con-e-transizioni-enfa) $q_0$, l'automa può effettuare una delle due [$\varepsilon$-transizioni](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-non-deterministico-con-e-transizioni-enfa) e raggiungere lo [stato iniziale](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-non-deterministico-con-e-transizioni-enfa) di $\mathcal{E}_1$ oppure quello di $\mathcal{E}_2$, e da lì simulare il comportamento dell'[$\varepsilon$-NFA](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-non-deterministico-con-e-transizioni-enfa) scelto.
+> > 
+> > Poiché gli [stati finali](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-non-deterministico-con-e-transizioni-enfa) di $\mathcal{E}$ sono quelli appartenenti a $F_1 \cup F_2$, una [stringa](Teoria%20dei%20linguaggi%20formali.md#^definizione-stringa) viene [accettata](Teoria%20degli%20automi.md#^definizione-linguaggio-riconosciuto-da-un-dfa) se e solo se viene [accettata](Teoria%20degli%20automi.md#^definizione-linguaggio-riconosciuto-da-un-dfa) da almeno uno dei due [$\varepsilon$-NFA](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-non-deterministico-con-e-transizioni-enfa) di partenza ($\mathcal{E}_1$ o $\mathcal{E}_2$).
+> > 
+> > Di conseguenza:
+> > 
+> > $$
+> > \begin{aligned}
+> > L(\mathcal{E})
+> > &= L(\mathcal{E}_1) \cup L(\mathcal{E}_2) \\
+> > &= L_1 \cup L_2
+> > \end{aligned}
+> > $$
+> > 
+> > Abbiamo quindi dimostrato che il [linguaggio](Teoria%20dei%20linguaggi%20formali.md#^definizione-linguaggio-formale) $L_1 \cup L_2$ è [regolare](Teoria%20degli%20automi.md#^definizione-linguaggio-regolare-riconosciuto-da-un-dfa), poiché è [riconosciuto](Teoria%20degli%20automi.md#^definizione-linguaggio-riconosciuto-da-un-dfa) da un [$\varepsilon$-NFA](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-non-deterministico-con-e-transizioni-enfa).
+> > 
+> > $\blacksquare$
+^proprieta-di-chiusura-dei-linguaggi-regolari-rispetto-all-unione
 
 %% 
 Dimostrare che i linguaggi regolari sono chiusi rispetto all’operazione di concatenazione.
 Suggerimento: se utile usare il risultato dimostrato nell’esercizio precedente
 %%
+
+> [!proprieta]+ Proprietà di chiusura dei linguaggi regolari rispetto al complemento
+> 
+> I [linguaggi regolari](Teoria%20degli%20automi.md#^definizione-linguaggio-regolare-riconosciuto-da-un-dfa) sono chiusi%% link %% rispetto al [complemento](Teoria%20degli%20insiemi.md#^definizione-complemento-di-un-insieme), ossia dato un [linguaggio regolare](Teoria%20degli%20automi.md#^definizione-linguaggio-regolare-riconosciuto-da-un-dfa) $L$ il suo [complemento](Teoria%20degli%20insiemi.md#^definizione-complemento-di-un-insieme) $\complement_{\Sigma^*}(L)$ è anch'esso [regolare](Teoria%20degli%20automi.md#^definizione-linguaggio-regolare-riconosciuto-da-un-dfa).
+> 
+> > [!dimostrazione]- Dimostrazione
+> > 
+> > Se $L$ è un [linguaggio regolare](Teoria%20degli%20automi.md#^definizione-linguaggio-regolare-riconosciuto-da-un-dfa), allora per [definizione di _linguaggio regolare_](Teoria%20degli%20automi.md#^definizione-linguaggio-regolare-riconosciuto-da-un-dfa) esiste un [DFA](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-deterministico-dfa) $\mathcal{D} = \langle \Sigma, Q, \delta, q_0, F \rangle$ tale che $L = L(\mathcal{D})$
+> > 
+> > Definiamo ora un altro [DFA](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-deterministico-dfa)
+> > 
+> > $$
+> > \mathcal{D}' = \langle \Sigma, Q, \delta, q_0, Q - F \rangle
+> > $$
+> > 
+> > (dove $Q - F$ è la [differenza insiemistica](Teoria%20degli%20insiemi.md#^definizione-differenza-tra-due-insiemi) tra l'[insieme degli stati](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-deterministico-dfa) $Q$ e l'[insieme degli stati finali](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-deterministico-dfa) $F$) e osserviamo che $\mathcal{D}'$ differisce da $\mathcal{D}$ soltanto per l'[insieme degli stati finali](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-deterministico-dfa). In particolare, gli [stati finali](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-deterministico-dfa) di $\mathcal{D}'$ sono tutti e soli gli [stati](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-deterministico-dfa) che non sono [finali](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-deterministico-dfa) in $\mathcal{D}$.
+> > 
+> > Per [definizione di _linguaggio riconosciuto da un DFA_](Teoria%20degli%20automi.md#^definizione-linguaggio-regolare-riconosciuto-da-un-dfa), una [stringa](Teoria%20dei%20linguaggi%20formali.md#^definizione-stringa) $w \in \Sigma^\*$ è [accettata](Teoria%20degli%20automi.md#^definizione-linguaggio-riconosciuto-da-un-dfa) da $\mathcal{D}'$ se e solo se, dopo aver letto l'intera stringa, il [DFA](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-deterministico-dfa) si trova in uno [stato finale](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-deterministico-dfa), cioè in uno [stato](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-deterministico-dfa) appartenente a $Q-F$ e quindi **non** appartenente a $F$. Pertanto
+> > 
+> > $$
+> > \begin{align*}
+> > L(\mathcal{D}') &= \{w \in \Sigma^\* \mid w \not\in L(\mathcal{D})\} \\
+> > &= \Sigma^* - L(\mathcal{D}) \\
+> > &= \complement_{\Sigma^*}(L)
+> > \end{align*}
+> > $$
+> > 
+> > Poiché $\mathcal{D}'$ è un [DFA](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-deterministico-dfa) che riconosce $\complement_{\Sigma^*}(L)$, per [definizione di _linguaggio regolare_](Teoria%20degli%20automi.md#^definizione-linguaggio-regolare-riconosciuto-da-un-dfa) anche $\complement_{\Sigma^*}(L)$ è [regolare](Teoria%20degli%20automi.md#^definizione-linguaggio-regolare-riconosciuto-da-un-dfa).
+> > 
+> > $\blacksquare$
+^proprieta-di-chiusura-dei-linguaggi-regolari-rispetto-al-complemento
+
+> [!proprieta]+ Proprietà di chiusura dei linguaggi regolari rispetto all'intersezione
+> 
+> I [linguaggi regolari](Teoria%20degli%20automi.md#^definizione-linguaggio-regolare-riconosciuto-da-un-dfa) sono chiusi%% link %% rispetto all'[intersezione](Teoria%20degli%20insiemi.md#^definizione-intersezione-di-due-insiemi), ossia dati due [linguaggi regolari](Teoria%20degli%20automi.md#^definizione-linguaggio-regolare-riconosciuto-da-un-dfa) $L_1$ ed $L_2$ la loro [intersezione](Teoria%20degli%20insiemi.md#^definizione-intersezione-di-due-insiemi) $L_1 \cap L_2$ è anch'essa [regolare](Teoria%20degli%20automi.md#^definizione-linguaggio-regolare-riconosciuto-da-un-dfa).
+> 
+> > [!dimostrazione]- Dimostrazione
+> > 
+> > Usando le leggi di De Morgan%% link %%, abbiamo che
+> > 
+> > $$
+> > L_1 \cap L_2 = \overline{\overline{L_1} \cup \overline{L_2}}
+> > $$
+> > 
+> > Dato che sappiamo già essere i [linguaggi regolari](Teoria%20degli%20automi.md#^definizione-linguaggio-regolare-riconosciuto-da-un-dfa) chiusi%% link %% [rispetto all'unione](Teoria%20degli%20automi.md#^proprieta-di-chiusura-dei-linguaggi-regolari-rispetto-all-unione) e [rispetto al complemento](Teoria%20degli%20automi.md#^proprieta-di-chiusura-dei-linguaggi-regolari-rispetto-al-complemento), possiamo concludere che anche $L_1 \cap L_2$ è [regolare](Teoria%20degli%20automi.md#^definizione-linguaggio-regolare-riconosciuto-da-un-dfa).
+> > 
+> > $\blacksquare$
+> 
+> > [!dimostrazione]- Dimostrazione alternativa
+> > 
+> > Se $L_1$ ed $L_2$ sono due [linguaggi regolari](Teoria%20degli%20automi.md#^definizione-linguaggio-regolare-riconosciuto-da-un-dfa), allora per [definizione di _linguaggio regolare_](Teoria%20degli%20automi.md#^definizione-linguaggio-regolare-riconosciuto-da-un-dfa) esisteranno due [DFA](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-deterministico-dfa) $\mathcal{D}_1 = \langle \Sigma, Q_1, \delta_1, q_1, F_1 \rangle$ e $\mathcal{D}_2 = \langle \Sigma, Q_2, \delta_2, q_2, F_2 \rangle$ tali che $L_1 = L(\mathcal{D_1})$ e $L_2 = L(\mathcal{D_2})$.
+> > 
+> > Definiamo un terzo [DFA](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-deterministico-dfa) $\mathcal{D} = \langle \Sigma, Q_1 \times Q_2, \delta, (q_1, q_2), F_1 \times F_2 \rangle$ dove, data una [coppia](Teoria%20degli%20insiemi.md#^definizione-tupla) di [stati](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-deterministico-dfa) $(p,q) \in Q_1 \times Q_2$ e un [simbolo](Teoria%20dei%20linguaggi%20formali.md#^definizione-simbolo) $a \in \Sigma$, la sua [funzione di transizione](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-deterministico-dfa) $\delta$ è definita come
+> > 
+> > $$
+> > \delta\big( (p,q),a \big) = \big( \delta_1(p,a), \delta_2(q,a) \big) 
+> > $$
+> > 
+> > A questo punto, per dimostrare che $L_1 \cap L_2$ è [regolare](Teoria%20degli%20automi.md#^definizione-linguaggio-regolare-riconosciuto-da-un-dfa), ci basta dimostrare che, presa una qualsiasi [stringa](Teoria%20dei%20linguaggi%20formali.md#^definizione-stringa) $w \in \Sigma^*$, valga
+> > 
+> > $$
+> > w \in L(\mathcal{D}) \iff w \in L_1 \cap L_2
+> > $$
+> > 
+> > cioè che esista il [DFA](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-deterministico-dfa) $\mathcal{D}$ che [riconosce](Teoria%20degli%20automi.md#^definizione-linguaggio-riconosciuto-da-un-dfa) ogni [stringa](Teoria%20dei%20linguaggi%20formali.md#^definizione-stringa) $w \in \Sigma^*$, rendendo così questo [linguaggio](Teoria%20dei%20linguaggi%20formali.md#^definizione-linguaggio-formale) $L_1 \cap L_2$ [regolare](Teoria%20degli%20automi.md#^definizione-linguaggio-regolare-riconosciuto-da-un-dfa).
+> > 
+> > Partendo da $w \in L(\mathcal{D})$, abbiamo che, per [definizione di _linguaggio riconosciuto da un DFA_](Teoria%20degli%20automi.md#^definizione-linguaggio-riconosciuto-da-un-dfa),
+> > 
+> > $$
+> > w \in L(\mathcal{D}) \iff \hat\delta\big( (q_1,q_2),w \big) \in F_1 \times F_2
+> > $$
+> > 
+> > Per come abbiamo definito prima la [funzione di transizione](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-deterministico-dfa) $\delta$, la [funzione di transizione estesa](Teoria%20degli%20automi.md#^definizione-funzione-di-transizione-estesa-di-un-dfa) $\hat\delta$ si può riscrivere come
+> > 
+> > $$
+> > \begin{array}{}
+> > \hat\delta\big( (q_1,q_2),w \big) \in F_1 \times F_2 \\
+> > \Updownarrow \\
+> > \big( \hat\delta_1(q_1,w), \hat\delta_2(q_2,w) \big) \in F_1 \times F_2 \\
+> > \Updownarrow \\
+> > \hat\delta_1(q_1,w) \in F_1 \land \hat\delta_2(q_2,w) \in F_2
+> > \end{array}
+> > $$
+> > 
+> > Per [definizione di _linguaggio riconosciuto_](Teoria%20degli%20automi.md#^definizione-linguaggio-riconosciuto-da-un-dfa), cioè corrisponde a
+> > 
+> > $$
+> > \begin{array}{}
+> > \hat\delta_1(q_1,w) \in F_1 \land \hat\delta_2(q_2,w) \in F_2 \\
+> > \Updownarrow \\
+> > w \in L(\mathcal{D}_1) \land w \in L(\mathcal{D}_2) \\
+> > \Updownarrow \\
+> > w \in L(\mathcal{D}_1) \cap L(\mathcal{D}_2)
+> > \end{array}
+> > $$
+> > 
+> > e quindi
+> > 
+> > $$
+> > w \in L(\mathcal{D}_1) \cap L(\mathcal{D}_2) \iff w \in L_1 \cap L_2
+> > $$
+> > 
+> > Con una serie di bi-implicazioni%% link %% abbiamo dimostrato che
+> > 
+> > $$
+> > w \in L(\mathcal{D}) \iff w \in L_1 \cap L_2
+> > $$
+> > 
+> > $\blacksquare$
+^proprieta-di-chiusura-dei-linguaggi-regolari-rispetto-all-intersezione
+
+> [!proprieta]+ Proprietà di chiusura dei linguaggi regolari rispetto alla differenza
+> 
+> I [linguaggi regolari](Teoria%20degli%20automi.md#^definizione-linguaggio-regolare-riconosciuto-da-un-dfa) sono chiusi%% link %% rispetto alla [differenza](Teoria%20degli%20insiemi.md#^definizione-differenza-tra-due-insiemi), ossia dati due [linguaggi regolari](Teoria%20degli%20automi.md#^definizione-linguaggio-regolare-riconosciuto-da-un-dfa) $L_1$ ed $L_2$ la loro [differenza](Teoria%20degli%20insiemi.md#^definizione-differenza-di-due-insiemi) $L_1 \setminus L_2$ è anch'essa [regolare](Teoria%20degli%20automi.md#^definizione-linguaggio-regolare-riconosciuto-da-un-dfa).
+> 
+> > [!dimostrazione]- Dimostrazione
+> > 
+> > Per [definizione di _differenza_](Teoria%20degli%20insiemi.md#^definizione-differenza-tra-due-insiemi), abbiamo che
+> > 
+> > $$
+> > L_1 \setminus L_2 = L_1 \cap \overline{L_2}
+> > $$
+> > 
+> > Dato che sappiamo già essere i [linguaggi regolari](Teoria%20degli%20automi.md#^definizione-linguaggio-regolare-riconosciuto-da-un-dfa) chiusi%% link %% [rispetto all'intersezione](Teoria%20degli%20automi.md#^proprieta-di-chiusura-dei-linguaggi-regolari-rispetto-all-intersezione) e [rispetto al complemento](Teoria%20degli%20automi.md#^proprieta-di-chiusura-dei-linguaggi-regolari-rispetto-al-complemento), possiamo concludere che anche $L_1 \setminus L_2$ è [regolare](Teoria%20degli%20automi.md#^definizione-linguaggio-regolare-riconosciuto-da-un-dfa).
+> > 
+> > $\blacksquare$
+^proprieta-di-chiusura-dei-linguaggi-regolari-rispetto-alla-differenza
 
 ---
 
@@ -1141,4 +1283,5 @@ Suggerimento: se utile usare il risultato dimostrato nell’esercizio precedente
 > 			- [2.1 - _DFA_](https://informatica.i-learn.unito.it/pluginfile.php/514089/mod_folder/content/0/2-1_dfa.pdf).
 > 			- [2.2 - _NFA_](https://informatica.i-learn.unito.it/pluginfile.php/514089/mod_folder/content/0/2-2_nfa.pdf).
 > 			- [2.3 - $\varepsilon$-NFA](https://informatica.i-learn.unito.it/pluginfile.php/514089/mod_folder/content/0/2-3_enfa.pdf).
+> 			- [2.5 - _Proprietà di chiusura dei linguaggi regolari_](https://informatica.i-learn.unito.it/pluginfile.php/514089/mod_folder/content/0/2-5_prop_lr.pdf).
 > - 📚 Alfred V. Aho, Monica S. Lam, Ravi Sethi, Jeffrey D. Ullman, [_Compilers - Principles, Techniques, and Tools_](https://openlibrary.org/books/OL59750369M/Compilers), Pearson India, 2023 (ISBN: `9789357054119`):

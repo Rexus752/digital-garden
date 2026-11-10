@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" data-d2-version="v0.9.0" preserveAspectRatio="xMinYMin meet" viewBox="0 0 412 102" width="412" height="102"><svg class="d2-4103728395 d2-svg" width="412" height="102" viewBox="-1 -1 412 102"><style type="text/css"><![CDATA[]]></style><style type="text/css"><![CDATA[.shape {
+  shape-rendering: geometricPrecision;
+  stroke-linejoin: round;
+}
+.connection {
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.blend {
+  mix-blend-mode: multiply;
+  opacity: 0.5;
+}
+
+		.d2-4103728395 .fill-N7{fill:#1E1E2E;}
+		.d2-4103728395 .fill-B1{fill:#CBA6f7;}
+		.d2-4103728395 .fill-B6{fill:#313244;}
+		.d2-4103728395 .stroke-B1{stroke:#CBA6f7;}
+		.d2-4103728395 .stroke-B2{stroke:#CBA6f7;}
+		.d2-4103728395 .color-N2{color:#BAC2DE;}.appendix text.text{fill:#CDD6F4}.md{--color-fg-default:#CDD6F4;--color-fg-muted:#BAC2DE;--color-fg-subtle:#A6ADC8;--color-canvas-default:#1E1E2E;--color-canvas-subtle:#313244;--color-border-default:#CBA6f7;--color-border-muted:#CBA6f7;--color-neutral-muted:#313244;--color-accent-fg:#CBA6f7;--color-accent-emphasis:#CBA6f7;--color-attention-subtle:#BAC2DE;--color-danger-fg:red;}.light-code{display: none}.dark-code{display: block}]]></style><g class="c3RhcnQ="><g class="shape" ><ellipse rx="0.5" ry="0.5" cx="0.5" cy="50.5" stroke="#CBA6f7" fill="black" class="shape stroke-B1" style="stroke-width:2;" /></g></g><g class="cTA="><g class="shape" ><ellipse rx="50" ry="50" cx="151" cy="50" stroke="#CBA6f7" fill="#313244" class="shape stroke-B1 fill-B6" style="stroke-width:2;" /></g></g><g class="cTE="><g class="shape" ><ellipse rx="50" ry="50" cx="360" cy="50" stroke="#CBA6f7" fill="#313244" class="shape stroke-B1 fill-B6" style="stroke-width:2;" /><ellipse rx="45" ry="45" cx="360" cy="50" stroke="#CBA6f7" fill="#313244" class="shape stroke-B1 fill-B6" style="stroke-width:2;" /></g></g><g class="KHN0YXJ0IC0mZ3Q7IHEwKVswXQ=="><marker id="mk-d2-4103728395-3488378134" markerWidth="10" markerHeight="12" refX="7" refY="6" viewBox="0 0 10 12" orient="auto" markerUnits="userSpaceOnUse"> <polygon points="0,0 10,6 0,12" fill="#CBA6f7" class="connection fill-B1" stroke-width="2" /> </marker><path d="M 3 50 C 41 50 61 50 97 50" stroke="#CBA6f7" fill="none" class="connection stroke-B1" style="stroke-width:2;" marker-end="url(#mk-d2-4103728395-3488378134)" mask="url(#d2-4103728395)" /></g><g class="KHEwIC0mZ3Q7IHExKVswXQ=="><path d="M 203 50 C 244.600006 50 266.399994 50 306 50" stroke="#CBA6f7" fill="none" class="connection stroke-B1" style="stroke-width:2;" marker-end="url(#mk-d2-4103728395-3488378134)" mask="url(#d2-4103728395)" /><g transform="translate(251 46)" color="#BAC2DE" class=" color-N2"><svg style="vertical-align: -0.05ex;" xmlns="http://www.w3.org/2000/svg" width="1.054ex" height="1.072ex" role="img" focusable="false" viewBox="0 -452 466 474"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D700" d="M190 -22Q124 -22 76 11T27 107Q27 174 97 232L107 239L99 248Q76 273 76 304Q76 364 144 408T290 452H302Q360 452 405 421Q428 405 428 392Q428 381 417 369T391 356Q382 356 371 365T338 383T283 392Q217 392 167 368T116 308Q116 289 133 272Q142 263 145 262T157 264Q188 278 238 278H243Q308 278 308 247Q308 206 223 206Q177 206 142 219L132 212Q68 169 68 112Q68 39 201 39Q253 39 286 49T328 72T345 94T362 105Q376 103 376 88Q376 79 365 62T334 26T275 -8T190 -22Z"></path></g></g></g></svg></g></g><mask id="d2-4103728395" maskUnits="userSpaceOnUse" x="-1" y="-1" width="412" height="102">
+<rect x="-1" y="-1" width="412" height="102" fill="white"></rect>
+<rect x="249" y="46" width="13" height="9" fill="black"></rect>
+</mask></svg></svg>

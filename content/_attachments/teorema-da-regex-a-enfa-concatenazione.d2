@@ -1,0 +1,48 @@
+direction: right
+
+start: "" {
+  shape: circle
+  width: 1
+  height: 1
+  style.fill: black
+}
+
+lr1: |latex L(\mathcal{R}_1) | {
+  shape: rectangle
+  style.border-radius: 16
+
+  q1: "" {
+    shape: circle
+  }
+
+  ledots: |latex \cdots |
+
+  qf1: "" {
+    shape: circle
+  }
+
+  q1 -> ledots
+  ledots -> qf1
+}
+
+lr2: |latex L(\mathcal{R}_2) | {
+  shape: rectangle
+  style.border-radius: 16
+
+  q2: "" {
+    shape: circle
+  }
+
+  lfdots: |latex \cdots |
+
+  qf2: "" {
+    shape: circle
+    style.double-border: true
+  }
+
+  q2 -> lfdots
+  lfdots -> qf2
+}
+
+start -> lr1.q1
+lr1.qf1 -> lr2.q2: |latex \varepsilon |

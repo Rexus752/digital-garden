@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" data-d2-version="v0.9.0" preserveAspectRatio="xMinYMin meet" viewBox="0 0 403 102" width="403" height="102"><svg class="d2-2539908923 d2-svg" width="403" height="102" viewBox="-1 -1 403 102"><style type="text/css"><![CDATA[]]></style><style type="text/css"><![CDATA[.shape {
+  shape-rendering: geometricPrecision;
+  stroke-linejoin: round;
+}
+.connection {
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.blend {
+  mix-blend-mode: multiply;
+  opacity: 0.5;
+}
+
+		.d2-2539908923 .fill-N7{fill:#1E1E2E;}
+		.d2-2539908923 .fill-B1{fill:#CBA6f7;}
+		.d2-2539908923 .fill-B6{fill:#313244;}
+		.d2-2539908923 .stroke-B1{stroke:#CBA6f7;}
+		.d2-2539908923 .stroke-B2{stroke:#CBA6f7;}.appendix text.text{fill:#CDD6F4}.md{--color-fg-default:#CDD6F4;--color-fg-muted:#BAC2DE;--color-fg-subtle:#A6ADC8;--color-canvas-default:#1E1E2E;--color-canvas-subtle:#313244;--color-border-default:#CBA6f7;--color-border-muted:#CBA6f7;--color-neutral-muted:#313244;--color-accent-fg:#CBA6f7;--color-accent-emphasis:#CBA6f7;--color-attention-subtle:#BAC2DE;--color-danger-fg:red;}.light-code{display: none}.dark-code{display: block}]]></style><g class="c3RhcnQ="><g class="shape" ><ellipse rx="0.5" ry="0.5" cx="0.5" cy="50.5" stroke="#CBA6f7" fill="black" class="shape stroke-B1" style="stroke-width:2;" /></g></g><g class="cTA="><g class="shape" ><ellipse rx="50" ry="50" cx="151" cy="50" stroke="#CBA6f7" fill="#313244" class="shape stroke-B1 fill-B6" style="stroke-width:2;" /></g></g><g class="cTE="><g class="shape" ><ellipse rx="50" ry="50" cx="351" cy="50" stroke="#CBA6f7" fill="#313244" class="shape stroke-B1 fill-B6" style="stroke-width:2;" /><ellipse rx="45" ry="45" cx="351" cy="50" stroke="#CBA6f7" fill="#313244" class="shape stroke-B1 fill-B6" style="stroke-width:2;" /></g></g><g class="KHN0YXJ0IC0mZ3Q7IHEwKVswXQ=="><marker id="mk-d2-2539908923-3488378134" markerWidth="10" markerHeight="12" refX="7" refY="6" viewBox="0 0 10 12" orient="auto" markerUnits="userSpaceOnUse"> <polygon points="0,0 10,6 0,12" fill="#CBA6f7" class="connection fill-B1" stroke-width="2" /> </marker><path d="M 3 50 C 41 50 61 50 97 50" stroke="#CBA6f7" fill="none" class="connection stroke-B1" style="stroke-width:2;" marker-end="url(#mk-d2-2539908923-3488378134)" mask="url(#d2-2539908923)" /></g><g class="KHEwIC0mZ3Q7IHExKVswXQ=="><marker id="mk-d2-2539908923-2900356485" markerWidth="10" markerHeight="12" refX="7" refY="6" viewBox="0 0 10 12" orient="auto" markerUnits="userSpaceOnUse"> <polygon points="0,0 10,6 0,12" fill="transparent" class="connection" stroke-width="2" /> </marker><path d="M 203 50 C 241 50 261 50 297 50" stroke="transparent" fill="none" class="connection" style="stroke-width:2;" marker-end="url(#mk-d2-2539908923-2900356485)" mask="url(#d2-2539908923)" /></g><mask id="d2-2539908923" maskUnits="userSpaceOnUse" x="-1" y="-1" width="403" height="102">
+<rect x="-1" y="-1" width="403" height="102" fill="white"></rect>
+
+</mask></svg></svg>
