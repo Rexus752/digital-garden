@@ -19,14 +19,13 @@ e1: |latex \mathcal{E}_1 | {
     shape: circle
   }
 
-  e1dots: |latex \cdots |
-
   qf1: |latex q_{F_1} | {
     shape: circle
   }
 
-  q1 -> e1dots
-  e1dots -> qf1
+  q1 -> qf1: |latex \ldots | {
+    style.stroke-dash: 4
+  }
 }
 
 e2: |latex \mathcal{E}_2 | {
@@ -37,14 +36,13 @@ e2: |latex \mathcal{E}_2 | {
     shape: circle
   }
 
-  e2dots: |latex \cdots |
-
   qf2: |latex q_{F_2} | {
     shape: circle
   }
 
-  q2 -> e2dots
-  e2dots -> qf2
+  q2 -> qf2: |latex \ldots | {
+    style.stroke-dash: 4
+  }
 }
 
 start -> q0

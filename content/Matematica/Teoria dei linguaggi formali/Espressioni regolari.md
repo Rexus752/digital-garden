@@ -7,7 +7,7 @@ aliases:
 > 
 > Ciao! Se è la prima volta che capiti su questo sito, ti consiglio di consultare la [pagina principale](index.md) di questo _Giardino Digitale_ per scoprire meglio cos'è e come navigarlo.
 > 
-> Lo stato di questa nota è al momento: 🔴 <font color="#FF7F7F">_Bozza_</font>.
+> Lo stato di questa nota è al momento: 🟡 <font color="#FFFF7F">_Incompleta_</font>.
 
 ---
 
@@ -326,7 +326,7 @@ Si veda la Sez. 3.2.1 del libro (lettura facoltativa)
 > > 	
 > > 	La costruzione collega lo stato finale di $\mathcal{E}_1$ allo stato iniziale di $\mathcal{E}_2$ mediante un'[$\varepsilon$-transizione](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-non-deterministico-con-e-transizioni-enfa).
 > > 	
-> > 	Di conseguenza, una [stringa](Teoria%20dei%20linguaggi%20formali.md#^definizione-stringa) viene [riconosciuta](Teoria%20degli%20automi.md#^definizione-linguaggio-riconosciuto-da-un-enfa) se e solo se può essere scomposta in due sottostringhe%% link %%, la prima riconosciuta da $\mathcal{E}_1$ e la seconda riconosciuta da $\mathcal{E}_2$. Pertanto:
+> > 	Di conseguenza, una [stringa](Teoria%20dei%20linguaggi%20formali.md#^definizione-stringa) viene [riconosciuta](Teoria%20degli%20automi.md#^definizione-linguaggio-riconosciuto-da-un-enfa) se e solo se può essere scomposta in due [sottostringhe](Teoria%20dei%20linguaggi%20formali.md#^definizione-sottostringa-di-una-stringa), la prima riconosciuta da $\mathcal{E}_1$ e la seconda riconosciuta da $\mathcal{E}_2$. Pertanto:
 > > 	
 > > 	$$
 > > 	\begin{aligned}

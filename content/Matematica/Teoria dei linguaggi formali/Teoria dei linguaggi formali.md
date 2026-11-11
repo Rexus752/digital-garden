@@ -156,14 +156,23 @@ Una [stringa](Teoria%20dei%20linguaggi%20formali.md#^definizione-stringa) partic
 > 
 > eccetto nel caso in cui almeno una delle due è la [stringa vuota](Teoria%20dei%20linguaggi%20formali.md#^definizione-stringa-vuota) $\varepsilon$ (perché [è l'elemento neutro della concatenazione](Teoria%20dei%20linguaggi%20formali.md#^proprieta-neutralita-della-concatenazione-rispetto-alla-stringa-vuota)) o in cui le due [stringhe](Teoria%20dei%20linguaggi%20formali.md#^definizione-stringa) sono [uguali](Teoria%20dei%20linguaggi%20formali.md#^definizione-stringhe-uguali).
 
+> [!definizione]+ Definizione: sottostringa di una stringa
+> 
+> Date due [stringhe](Teoria%20dei%20linguaggi%20formali.md#^definizione-stringa) $u$ e $w$, diciamo che $u$ è una **sottostringa** di $w$ se esistono due [stringhe](Teoria%20dei%20linguaggi%20formali.md#^definizione-stringa) $v$ e $x$ tali che $w = vux$.
+^definizione-sottostringa-di-una-stringa
+
+> [!esempio]- Esempio di sottostringa di una stringa
+> 
+> Date le [stringhe](Teoria%20dei%20linguaggi%20formali.md#^definizione-stringa) $u = \text{sta}$ e $w = \text{postazione}$, abbiamo che $u$ è una [sottostringa](Teoria%20dei%20linguaggi%20formali.md#^definizione-sottostringa-di-una-stringa) di $w$ perché esistono le [stringhe](Teoria%20dei%20linguaggi%20formali.md#^definizione-stringa) $v = \text{po}$ e $x = \text{zione}$ tali che $vux = w = \text{postazione}$.
+
 > [!definizione]+ Definizione: prefisso di una stringa
 > 
-> Date due [stringhe](Teoria%20dei%20linguaggi%20formali.md#^definizione-stringa) $u$ e $w$, diciamo che $u$ è un **prefisso** di $w$ se esiste una terza [stringa](Teoria%20dei%20linguaggi%20formali.md#^definizione-stringa) $v$ tale che $w = uv$.
+> Date due [stringhe](Teoria%20dei%20linguaggi%20formali.md#^definizione-stringa) $u$ e $w$, diciamo che $u$ è un **prefisso** di $w$ se è una [sottostringa](Teoria%20dei%20linguaggi%20formali.md#^definizione-sottostringa-di-una-stringa) di $w$ con $v = \varepsilon$, ossia se esiste una terza [stringa](Teoria%20dei%20linguaggi%20formali.md#^definizione-stringa) $x$ tale che $w = ux$.
 ^definizione-prefisso-di-una-stringa
 
 > [!definizione]+ Definizione: suffisso di una stringa
 > 
-> Date due [stringhe](Teoria%20dei%20linguaggi%20formali.md#^definizione-stringa) $u$ e $w$, diciamo che $u$ è un **suffisso** di $w$ se esiste una terza [stringa](Teoria%20dei%20linguaggi%20formali.md#^definizione-stringa) $v$ tale che $w = vu$.
+> Date due [stringhe](Teoria%20dei%20linguaggi%20formali.md#^definizione-stringa) $u$ e $w$, diciamo che $u$ è un **suffisso** di $w$  se è una [sottostringa](Teoria%20dei%20linguaggi%20formali.md#^definizione-sottostringa-di-una-stringa) di $w$ con $x = \varepsilon$, ossia se esiste una terza [stringa](Teoria%20dei%20linguaggi%20formali.md#^definizione-stringa) $v$ tale che $w = vu$.
 ^definizione-suffisso-di-una-stringa
 
 > [!esempio]- Esempio di prefisso e suffisso di una stringa
@@ -172,9 +181,19 @@ Una [stringa](Teoria%20dei%20linguaggi%20formali.md#^definizione-stringa) partic
 > 
 > Allo stesso modo, date le [stringhe](Teoria%20dei%20linguaggi%20formali.md#^definizione-stringa) $u=\text{vero}$ e $w=\text{papavero}$, abbiamo che $u$ è un [suffisso](Teoria%20dei%20linguaggi%20formali.md#^definizione-suffisso-di-una-stringa) di $w$ perché esiste la [stringa](Teoria%20dei%20linguaggi%20formali.md#^definizione-stringa) $v =\text{vero}$ tale che $vu = w = \text{papavero}$.
 
-> [!osservazione]+ Osservazione: una stringa è prefisso e suffisso di se stessa
+> [!osservazione]+ Osservazione: una stringa è sottostringa, prefisso e suffisso di se stessa
 > 
-> Data una [stringa](Teoria%20dei%20linguaggi%20formali.md#^definizione-stringa) $u$, essa è contemporaneamente sia [prefisso](Teoria%20dei%20linguaggi%20formali.md#^definizione-prefisso-di-una-stringa) che [suffisso](Teoria%20dei%20linguaggi%20formali.md#^definizione-suffisso-di-una-stringa) di se stessa perché esiste la [stringa vuota](Teoria%20dei%20linguaggi%20formali.md#^definizione-stringa-vuota) $\varepsilon$ per cui $u\varepsilon =u$ (nel caso del [prefisso](Teoria%20dei%20linguaggi%20formali.md#^definizione-prefisso-di-una-stringa)) e $\varepsilon u = u$ (nel caso del [suffisso](Teoria%20dei%20linguaggi%20formali.md#^definizione-suffisso-di-una-stringa)).
+> Data una [stringa](Teoria%20dei%20linguaggi%20formali.md#^definizione-stringa) $u$, essa è contemporaneamente sia [sottostringa](Teoria%20dei%20linguaggi%20formali.md#^definizione-sottostringa-di-una-stringa), sia [prefisso](Teoria%20dei%20linguaggi%20formali.md#^definizione-prefisso-di-una-stringa) che [suffisso](Teoria%20dei%20linguaggi%20formali.md#^definizione-suffisso-di-una-stringa) di se stessa perché:
+> 1. Nel caso della [sottostringa](Teoria%20dei%20linguaggi%20formali.md#^definizione-sottostringa-di-una-stringa), esiste la [stringa vuota](Teoria%20dei%20linguaggi%20formali.md#^definizione-stringa-vuota) $\varepsilon$ per cui $\varepsilon u \varepsilon = u$.
+> 2. Nel caso del [prefisso](Teoria%20dei%20linguaggi%20formali.md#^definizione-prefisso-di-una-stringa), esiste la [stringa vuota](Teoria%20dei%20linguaggi%20formali.md#^definizione-stringa-vuota) $\varepsilon$ per cui $u\varepsilon =u$.
+> 3. Nel caso del [suffisso](Teoria%20dei%20linguaggi%20formali.md#^definizione-suffisso-di-una-stringa), esiste la [stringa vuota](Teoria%20dei%20linguaggi%20formali.md#^definizione-stringa-vuota) $\varepsilon$ per cui $\varepsilon u = u$.
+
+> [!osservazione]+ Osservazione: la stringa vuota è sottostringa, prefisso e suffisso di ogni stringa  
+>   
+> Data una [stringa](Teoria%20dei%20linguaggi%20formali.md#^definizione-stringa) $w$, la [stringa vuota](Teoria%20dei%20linguaggi%20formali.md#^definizione-stringa-vuota) $\varepsilon$ è contemporaneamente [sottostringa](Teoria%20dei%20linguaggi%20formali.md#^definizione-sottostringa-di-una-stringa), [prefisso](Teoria%20dei%20linguaggi%20formali.md#^definizione-prefisso-di-una-stringa) e [suffisso](Teoria%20dei%20linguaggi%20formali.md#^definizione-suffisso-di-una-stringa) di $w$ perché:
+> 1. Nel caso della [sottostringa](Teoria%20dei%20linguaggi%20formali.md#^definizione-sottostringa-di-una-stringa), scegliendo anche $x = \varepsilon$, esiste la [stringa](Teoria%20dei%20linguaggi%20formali.md#^definizione-stringa) $v = w$ tale che $v\varepsilon x = w$.
+> 2. Nel caso del [prefisso](Teoria%20dei%20linguaggi%20formali.md#^definizione-prefisso-di-una-stringa), esiste la [stringa](Teoria%20dei%20linguaggi%20formali.md#^definizione-stringa) $x = w$ tale che $\varepsilon x = w$.
+> 3. Nel caso del [suffisso](Teoria%20dei%20linguaggi%20formali.md#^definizione-suffisso-di-una-stringa), esiste la [stringa](Teoria%20dei%20linguaggi%20formali.md#^definizione-stringa) $v = w$ tale che $v\varepsilon = w$.o).
 
 > [!definizione]+ Definizione: inversa di una stringa
 > 

@@ -1,0 +1,32 @@
+direction: right
+
+start: "" {
+  shape: circle
+  width: 1
+  height: 1
+  style.fill: black
+}
+
+q0: |latex q_0 | {
+  shape: circle
+}
+
+qi: |latex q_i = q_j | {
+  shape: circle
+}
+
+qm: |latex q_{m} | {
+  shape: circle
+  style.double-border: true
+}
+
+start -> q0
+q0 -> qi: |latex x | {
+  style.stroke-dash: 4
+}
+qi -> qi: |latex y | {
+  style.stroke-dash: 4
+}
+qi -> qm: |latex z | {
+  style.stroke-dash: 4
+}

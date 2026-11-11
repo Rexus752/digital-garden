@@ -1,0 +1,36 @@
+direction: down
+
+start: "" {
+  shape: circle
+  width: 1
+  height: 1
+  style.fill: black
+}
+
+q0: |latex q_0 | {
+  shape: circle
+}
+
+qi: |latex q_i | {
+  shape: circle
+}
+
+qj: |latex q_j | {
+  shape: circle
+}
+
+qm: |latex q_{m} | {
+  shape: circle
+  style.double-border: true
+}
+
+start -> q0
+q0 -> qi: |latex a_1a_2 \ldots a_i | {
+  style.stroke-dash: 4
+}
+qi -> qj: |latex a_{i+1}a_{i+2} \ldots a_j | {
+  style.stroke-dash: 4
+}
+qj -> qm: |latex a_{j+1}a_{j+2} \ldots a_m | {
+  style.stroke-dash: 4
+}

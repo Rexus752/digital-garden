@@ -19,14 +19,13 @@ lr1: |latex L(\mathcal{R}_1) | {
     shape: circle
   }
 
-  ledots: |latex \cdots |
-
   qf1: "" {
     shape: circle
   }
 
-  q1 -> ledots
-  ledots -> qf1
+  q1 -> qf1: |latex \ldots | {
+    style.stroke-dash: 4
+  }
 }
 
 lr2: |latex L(\mathcal{R}_2) | {
@@ -37,14 +36,13 @@ lr2: |latex L(\mathcal{R}_2) | {
     shape: circle
   }
 
-  lfdots: |latex \cdots |
-
   qf2: "" {
     shape: circle
   }
 
-  q2 -> lfdots
-  lfdots -> qf2
+  q2 -> qf2: |latex \ldots | {
+    style.stroke-dash: 4
+  }
 }
 
 qf: "" {

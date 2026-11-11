@@ -19,15 +19,14 @@ lr1: |latex L(\mathcal{R}_1) | {
     shape: circle
   }
 
-  ledots: |latex \cdots |
-
   qf1: "" {
     shape: circle
   }
 
   qf1 -> q1: |latex \varepsilon |
-  q1 -> ledots
-  ledots -> qf1
+  q1 -> qf1: |latex \ldots | {
+    style.stroke-dash: 4
+  }
 }
 
 qf: "" {
