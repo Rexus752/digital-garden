@@ -7,7 +7,7 @@ aliases:
 > 
 > Ciao! Se è la prima volta che capiti su questo sito, ti consiglio di consultare la [pagina principale](index.md) di questo _Giardino Digitale_ per scoprire meglio cos'è e come navigarlo.
 > 
-> Lo stato di questa nota è al momento: 🔴 <font color="#FF7F7F">_Bozza_</font>.
+> Lo stato di questa nota è al momento: 🟢 <font color="#7FFF7F">_Completa_</font>.
 
 ---
 
@@ -35,6 +35,10 @@ $$
 \text{il pumping lemma}
 \end{array} \right\} 
 $$
+
+%% 
+Colorare xyz anche nel teorema e nella dimostrazione
+%%
 
 > [!teorema]+ Teorema: pumping lemma per i linguaggi regolari
 > 
@@ -133,8 +137,8 @@ Capire nei dettagli la dimostrazione di questo teorema ha portato via 3 ore del 
 > 
 > Supponiamo, per assurdo, che esista una costante $n \in \mathbb{N}$ con le proprietà enunciate nel [pumping lemma](Pumping%20lemma.md#^teorema-pumping-lemma-linguaggi-regolari): prendiamo quindi per esempio la [stringa](Teoria%20dei%20linguaggi%20formali.md#^definizione-stringa) $w = \text{a}^n\text{b}^n \in L$ e che ha [lunghezza](Teoria%20dei%20linguaggi%20formali.md#^definizione-lunghezza-di-una-stringa) $|w| = 2n \ge n$.
 > 
-> Devono esistere allora tre [sottostringhe](Teoria%20dei%20linguaggi%20formali.md#^definizione-sottostringa-di-una-stringa) ${\color{#FF7F7F} x }$, ${\color{#7FFF7F} y }$ e ${\color{#7F7FFF} z }$ tali che $w = {\color{#FF7F7F} x }{\color{#7FFF7F} y }{\color{#7F7FFF} z }$ e che soddisfano le [tre condizioni del pumping lemma](Pumping%20lemma.md#^teorema-pumping-lemma-linguaggi-regolari): in particolare:
-> - Dalla [condizione 2](Pumping%20lemma.md#^teorema-pumping-lemma-linguaggi-regolari) ($|xy| \leq n$) sappiamo che ${\color{#FF7F7F} x }$ e ${\color{#7FFF7F} y }$ sono composte di sole $\text{a}$ perché i primi $n$ [simboli](Teoria%20dei%20linguaggi%20formali.md#^definizione-simbolo) di $w = \text{a}^n\text{b}^n$ sono $\text{a}$:
+> Devono esistere allora tre [sottostringhe](Teoria%20dei%20linguaggi%20formali.md#^definizione-sottostringa-di-una-stringa) ${\color{#FF7F7F} x }$, ${\color{#7FFF7F} y }$ e ${\color{#7F7FFF} z }$ tali che $w = {\color{#FF7F7F} x }{\color{#7FFF7F} y }{\color{#7F7FFF} z }$ e che soddisfano le [tre condizioni del pumping lemma](Pumping%20lemma.md#^teorema-pumping-lemma-linguaggi-regolari). In particolare:
+> - Dalla [condizione 2](Pumping%20lemma.md#^teorema-pumping-lemma-linguaggi-regolari) ($|{\color{#FF7F7F} x }{\color{#7FFF7F} y }| \leq n$) sappiamo che ${\color{#FF7F7F} x }$ e ${\color{#7FFF7F} y }$ sono composte di sole $\text{a}$ perché i primi $n$ [simboli](Teoria%20dei%20linguaggi%20formali.md#^definizione-simbolo) di $w = \text{a}^n\text{b}^n$ sono $\text{a}$:
 > 	$$
 > 	w = \underbrace{{\color{#FF7F7F} \text{aa} \ldots \text{a} }{\color{#7FFF7F} \text{aa} \ldots \text{a} }}_{\text{al max }n\text{ volte}} {\color{#7F7FFF} z }
 > 	$$
@@ -164,6 +168,148 @@ Capire nei dettagli la dimostrazione di questo teorema ha portato via 3 ore del 
 > $$
 > 
 > che contiene ${\color{#FF7F7F} n-m }$ volte $\text{a}$ e ${\color{#7F7FFF} n }$ volte $\text{b}$. Pertanto, il numero di [simboli](Teoria%20dei%20linguaggi%20formali.md#^definizione-simbolo) $\text{a}$ e $\text{b}$ non è uguale, contraddicendo la definizione del [linguaggio](Teoria%20dei%20linguaggi%20formali.md#^definizione-linguaggio-formale) $L$.
+^esempio-akbk-non-e-regolare
+
+> [!esempio]- Esempio: $\color{#7F7FFF} \text{a}^j\text{b}^k$ con $\color{#7F7FFF} j \le k$ non è regolare
+> 
+> Dimostriamo che [linguaggio formale](Teoria%20dei%20linguaggi%20formali.md#^definizione-linguaggio-formale) $L = \{ \text{a}^j\text{b}^k \mid 0 \le j \le k \}$ **non** è [regolare](Espressioni%20regolari.md#^definizione-linguaggio-generato-da-un-espressione-regolare) facendo vedere che per $L$ il [pumping lemma](Pumping%20lemma.md#^teorema-pumping-lemma-linguaggi-regolari) **non** vale.
+> 
+> Supponiamo, per assurdo, che esista una costante $n \in \mathbb{N}$ con le proprietà enunciate nel [pumping lemma](Pumping%20lemma.md#^teorema-pumping-lemma-linguaggi-regolari): prendiamo quindi per esempio la [stringa](Teoria%20dei%20linguaggi%20formali.md#^definizione-stringa) $w = \text{a}^n\text{b}^n \in L$ e che ha [lunghezza](Teoria%20dei%20linguaggi%20formali.md#^definizione-lunghezza-di-una-stringa) $|w| = 2n \ge n$.
+> 
+> Devono esistere allora tre [sottostringhe](Teoria%20dei%20linguaggi%20formali.md#^definizione-sottostringa-di-una-stringa) ${\color{#FF7F7F} x }$, ${\color{#7FFF7F} y }$ e ${\color{#7F7FFF} z }$ tali che $w = {\color{#FF7F7F} x }{\color{#7FFF7F} y }{\color{#7F7FFF} z }$ e che soddisfano le [tre condizioni del pumping lemma](Pumping%20lemma.md#^teorema-pumping-lemma-linguaggi-regolari). In particolare:
+> - Dalla [condizione 2](Pumping%20lemma.md#^teorema-pumping-lemma-linguaggi-regolari) ($|{\color{#FF7F7F} x }{\color{#7FFF7F} y }| \leq n$) sappiamo che ${\color{#FF7F7F} x }$ e ${\color{#7FFF7F} y }$ sono composte di sole $\text{a}$ perché i primi $n$ [simboli](Teoria%20dei%20linguaggi%20formali.md#^definizione-simbolo) di $w = \text{a}^n\text{b}^n$ sono $\text{a}$:
+> 	$$
+> 	w = \underbrace{{\color{#FF7F7F} \text{aa} \ldots \text{a} }{\color{#7FFF7F} \text{aa} \ldots \text{a} }}_{\text{al max }n\text{ volte}} {\color{#7F7FFF} z }
+> 	$$
+> - Dalla [condizione 1](Pumping%20lemma.md#^teorema-pumping-lemma-linguaggi-regolari) (${\color{#7FFF7F} y } \ne \varepsilon$) sappiamo che ${\color{#7FFF7F} y }$ contiene almeno una $\text{a}$:
+> 	$$
+> 	{\color{#7FFF7F} y = \text{a}^m }
+> 	$$
+> 	(con $m \ge 1$).
+> - Dalla [condizione 3](Pumping%20lemma.md#^teorema-pumping-lemma-linguaggi-regolari) ($\forall k \ge 0 . ({\color{#FF7F7F} x }{\color{#7FFF7F} y^k }{\color{#7F7FFF} z } \in L)$) sappiamo che ${\color{#FF7F7F} x }{\color{#7FFF7F} yy }{\color{#7F7FFF} z } \in L$ (con ${\color{#7FFF7F} y^k }$ avente $k = 2$).
+> 
+> Partiamo dalla scomposizione:
+> 
+> $$
+> w = \text{a}^n\text{b}^n = {\color{#FF7F7F} x }{\color{#7FFF7F} y }{\color{#7F7FFF} z }
+> $$
+> 
+> Sappiamo che:
+> - ${\color{#7FFF7F} y }$ contiene $m$ volte $\text{a}$, quindi
+> 	$$
+> 	{\color{#7FFF7F} y=a^m }
+> 	$$
+> - ${\color{#FF7F7F} x }$ contiene un numero imprecisato di $i$ volte $\text{a}$ e sappiamo che sono sicuramente delle $\text{a}$ e non delle $\text{b}$ per la [condizione 2](Pumping%20lemma.md#^teorema-pumping-lemma-linguaggi-regolari), quindi
+> 	$$
+> 	{\color{#FF7F7F} x=a^i }
+> 	$$
+> - ${\color{#7F7FFF} z }$ contiene tutti i [simboli](Teoria%20dei%20linguaggi%20formali.md#^definizione-simbolo) rimanenti, che potrebbero essere sia $\text{a}$ che $\text{b}$.
+> 
+> Poiché $w$ contiene complessivamente $n$ volte $\text{a}$, e abbiamo già assegnato
+> - $i$ volte $\text{a}$ a ${\color{#FF7F7F} x }$ e
+> - $m$ volte $\text{a}$ a ${\color{#7FFF7F} y }$,
+> allora a ${\color{#7F7FFF} z }$ devono necessariamente rimanere $n-i-m$ volte $\text{a}$.
+> 
+> Inoltre, ${\color{#7F7FFF} z }$ contiene anche tutti gli $n$ [simboli](Teoria%20dei%20linguaggi%20formali.md#^definizione-simbolo) $\text{b}$, perché per la [condizione 2](Pumping%20lemma.md#^teorema-pumping-lemma-linguaggi-regolari) sappiamo che ${\color{#FF7F7F} x }$ e ${\color{#7FFF7F} y }$ sono composte esclusivamente da [simboli](Teoria%20dei%20linguaggi%20formali.md#^definizione-simbolo) $\text{a}$. Pertanto:
+> 
+> $$
+> {\color{#7F7FFF} z=\text{a}^{n-i-m}\text{b}^n }
+> $$
+> 
+> Attenzione: non stiamo assumendo un valore particolare per $i$ o $m$. Sono semplicemente le lunghezze di ${\color{#FF7F7F} x }$ e ${\color{#7FFF7F} y }$ e la quantità $n-i-m$ rappresenta il numero di $\text{a}$ che rimangono in ${\color{#7F7FFF} z }$.
+> 
+> Otteniamo quindi la [stringa](Teoria%20dei%20linguaggi%20formali.md#^definizione-stringa):
+> 
+> $$
+> \begin{aligned}
+> {\color{#FF7F7F} x }{\color{#7FFF7F} y^2 }{\color{#7F7FFF} z }
+> &= {\color{#FF7F7F} \text{a}^i }
+> {\color{#7FFF7F} \text{a}^m \text{a}^m }
+> {\color{#7F7FFF} \text{a}^{n-i-m}\text{b}^n} \\
+> &= {\color{#FF7F7F} \text{a}^i }
+> {\color{#7FFF7F} \text{a}^{2m} }
+> {\color{#7F7FFF} \text{a}^{n-i-m}\text{b}^n} \\
+> &= \text{a}^{n+m}\text{b}^n
+> \end{aligned}
+> $$
+> 
+> che contiene $n+m$ volte $\text{a}$ e $n$ volte $\text{b}$. Tuttavia, dato che il numero di [simboli](Teoria%20dei%20linguaggi%20formali.md#^definizione-simbolo) $\text{a}$ è maggiore rispetto al numero di $\text{b}$, stiamo contraddicendo la definizione del [linguaggio](Teoria%20dei%20linguaggi%20formali.md#^definizione-linguaggio-formale) $L$.
+> 
+> $\blacksquare$
+
+> [!esempio]- Esempio: $\color{#7F7FFF} \text{a}^k$ con $\color{#7F7FFF} k$ primo non è regolare
+> 
+> Dimostriamo che [linguaggio formale](Teoria%20dei%20linguaggi%20formali.md#^definizione-linguaggio-formale) $L = \{ \text{a}^k \mid k \text{ è un numero primo} \}$ **non** è [regolare](Espressioni%20regolari.md#^definizione-linguaggio-generato-da-un-espressione-regolare) facendo vedere che per $L$ il [pumping lemma](Pumping%20lemma.md#^teorema-pumping-lemma-linguaggi-regolari) **non** vale.
+> 
+> Supponiamo, per assurdo, che esista una costante $n \in \mathbb{N}$ con le proprietà enunciate nel [pumping lemma](Pumping%20lemma.md#^teorema-pumping-lemma-linguaggi-regolari): prendiamo quindi per esempio la [stringa](Teoria%20dei%20linguaggi%20formali.md#^definizione-stringa) $w = \text{a}^p \in L$ dove $p$ è un numero primo%% Link %% $p \ge n + 2$ e che ha [lunghezza](Teoria%20dei%20linguaggi%20formali.md#^definizione-lunghezza-di-una-stringa) $|w| = p \ge n$.
+> 
+> Devono esistere allora tre [sottostringhe](Teoria%20dei%20linguaggi%20formali.md#^definizione-sottostringa-di-una-stringa) ${\color{#FF7F7F} x }$, ${\color{#7FFF7F} y }$ e ${\color{#7F7FFF} z }$ tali che $w = {\color{#FF7F7F} x }{\color{#7FFF7F} y }{\color{#7F7FFF} z }$ e che soddisfano le [tre condizioni del pumping lemma](Pumping%20lemma.md#^teorema-pumping-lemma-linguaggi-regolari). In particolare, definiamo ${\color{#7FFF7F} y }$ tale che $|{\color{#7FFF7F} y }| = m$, da cui segue che $|{\color{#FF7F7F} x }{\color{#7F7FFF} z }| = p-m$ e otteniamo che:
+> - Dalla [condizione 1](Pumping%20lemma.md#^teorema-pumping-lemma-linguaggi-regolari) (${\color{#7FFF7F} y } \ne \varepsilon$), poiché $|{\color{#7FFF7F} y }| = m$, otteniamo che $m \ge 1$.
+> - Dalla [condizione 2](Pumping%20lemma.md#^teorema-pumping-lemma-linguaggi-regolari) ($|{\color{#FF7F7F} x }{\color{#7FFF7F} y }| \leq n$), poiché ${\color{#7FFF7F} y }$ è una [sottostringa](Teoria%20dei%20linguaggi%20formali.md#^definizione-sottostringa-di-una-stringa) di ${\color{#FF7F7F} x }{\color{#7FFF7F} y }$, la sua [lunghezza](Teoria%20dei%20linguaggi%20formali.md#^definizione-lunghezza-di-una-stringa) non può essere maggiore di quella di ${\color{#FF7F7F} x }{\color{#7FFF7F} y }$:
+> 	$$
+> 	|{\color{#7FFF7F} y }| = m \le |{\color{#FF7F7F} x }{\color{#7FFF7F} y }| \leq n
+> 	$$
+> 	In particolare:
+> 	$$
+> 	m \le n
+> 	$$
+> - Dalla [condizione 3](Pumping%20lemma.md#^teorema-pumping-lemma-linguaggi-regolari) ($\forall k \ge 0 . ({\color{#FF7F7F} x }{\color{#7FFF7F} y^k }{\color{#7F7FFF} z } \in L)$) sappiamo che ${\color{#FF7F7F} x }{\color{#7FFF7F} y^{p-m} }{\color{#7F7FFF} z } \in L$ (con ${\color{#7FFF7F} y^k }$ avente $k = p-m$). Calcoliamone la lunghezza:
+> 	$$
+> 	\begin{align*}
+> 	|{\color{#FF7F7F} x }{\color{#7FFF7F} y^{p-m} }{\color{#7F7FFF} z }| &= |{\color{#FF7F7F} x }| + |{\color{#7FFF7F} y^{p-m} }| + |{\color{#7F7FFF} z }| \\
+> 	&= |{\color{#FF7F7F} x }| + |{\color{#7F7FFF} z }| + (p-m) \cdot |{\color{#7FFF7F} y }| \\
+> 	&= |{\color{#FF7F7F} x }{\color{#7F7FFF} z }| + (p-m) \cdot |{\color{#7FFF7F} y }| \\
+> 	&= (p-m) + (p-m) \cdot m  \\
+> 	&= (p-m)(m+1)
+> 	\end{align*}
+> 	$$
+> 
+> Tuttavia, concludiamo ora che $w = \text{a}^k = {\color{#FF7F7F} x }{\color{#7FFF7F} y^{p-m} }{\color{#7F7FFF} z }$ **non** contiene un numero primo%% link %% $k$ di $\text{a}$, in quanto:
+> - avendo $m \ge 1$, deduciamo che
+> 	$$
+> 	m + 1 \ge 2
+> 	$$
+> 	e
+> - da $m \le n$ e $p \ge n + 2$ deduciamo che
+> 	$$
+> 	p - m \ge (n+2) - n = 2
+> 	$$
+> 
+> Pertanto, la [lunghezza](Teoria%20dei%20linguaggi%20formali.md#^definizione-lunghezza-di-una-stringa) di $w = \text{a}^k = {\color{#FF7F7F} x }{\color{#7FFF7F} y^{p-m} }{\color{#7F7FFF} z }$, pari a $(p-m)(m+1)$, è il prodotto di due interi%% link %% maggiori o uguali a $2$:
+> 
+> $$
+> |w| = |{\color{#FF7F7F} x }{\color{#7FFF7F} y^{p-m} }{\color{#7F7FFF} z }| = \underbrace{(p-m)}_{=2}\underbrace{(m+1)}_{\ge 2}
+> $$
+> 
+> Di conseguenza, tale [lunghezza](Teoria%20dei%20linguaggi%20formali.md#^definizione-lunghezza-di-una-stringa) non è un numero primo%% link %%, perché è divisibile%% Link %% per due fattori%% link %% diversi da $1$ e da se stesso. Ciò significa che
+> 
+> $$
+> {\color{#FF7F7F} x }{\color{#7FFF7F} y^{p-m} }{\color{#7F7FFF} z } \not\in L
+> $$
+> 
+> contraddicendo così la [condizione 3](Pumping%20lemma.md#^teorema-pumping-lemma-linguaggi-regolari)!
+> 
+> $\blacksquare$
+
+%%
+Esercizio: dimostrare che i seguenti linguaggi non sono regolari:
+1. $\{ 0^{k^2} \mid k \ge 1 \}$
+2. $\{ 0^k10^k \mid k \ge 1 \}$
+3. $\{ 0^k1^{2k} \mid k \ge 1 \}$
+4. $\{ ww \mid w \in \{ 0,1 \}^* \}$
+5. $\{ ww^R \mid w \in \{ 0,1 \}^* \}$
+6. $\{ 0^k1^m \mid k \ne m \}$ (suggerimento: usare una proprietà di chiusura)
+%%
+
+%%
+Se $L$ è un linguaggio finito, mostrare come scegliere la costante $n$ del pumping lemma senza sapere come è fatto l'automa che riconosce $L$
+%%
+
+%% 
+Esempio: applicazione dei linguaggi regolari al parsing
+
+$L = \{ \text{a}^n\text{b}^n \mid n \in \mathbb{N} \}$ (linguaggio NON regolare) in cui $\text{a}=($ e $\text{b}=)$ è il llinguaggio delle parentesi nidificate, può essere testato per verificare correttamente l'apertura e chiusura delle parentesi in un codice
+%%
 
 ---
 
