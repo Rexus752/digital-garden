@@ -608,6 +608,167 @@ trovando per ciascuna:
 - Due derivazioni canoniche a destra distinte per la stessa stringa
 %%
 
+### 1.1.1 - Eliminazione delle ambiguità
+
+Vediamo come è possibile, in alcuni casi, eliminare l'[ambiguità](Grammatiche%20libere%20dal%20contesto.md#^definizione-grammatica-ambigua) da una [grammatica](Grammatiche%20libere%20dal%20contesto.md#^definizione-grammatica-libera-dal-contesto) ottenendone una equivalente (e cioè che [genera](Grammatiche%20libere%20dal%20contesto.md#^definizione-linguaggio-generato-da-una-grammatica-libera) lo stesso [linguaggio](Teoria%20dei%20linguaggi%20formali.md#^definizione-linguaggio-formale)) che non sia [ambigua](Grammatiche%20libere%20dal%20contesto.md#^definizione-grammatica-ambigua).
+
+Per eliminare l'[ambiguità](Grammatiche%20libere%20dal%20contesto.md#^definizione-grammatica-ambigua), dobbiamo darci delle regole in base alle quali decidere come standardizzare l'interpretazione di un [albero sintattico](Grammatiche%20libere%20dal%20contesto.md#^definizione-albero-sintattico) a partire dal suo [prodotto](Grammatiche%20libere%20dal%20contesto.md#^definizione-prodotto-di-un-albero-sintattico), creando così una [biettività](Proprietà%20delle%20funzioni.md#^definizione-biettivita) tra ogni [albero](Grammatiche%20libere%20dal%20contesto.md#^definizione-albero-sintattico) e il suo [prodotto](Grammatiche%20libere%20dal%20contesto.md#^definizione-prodotto-di-un-albero-sintattico) (e cioè creando una corrispondenza uno a uno).
+
+> [!esempio]- Esempio di eliminazione delle ambiguità
+> 
+> Riprendiamo l'[esempio di grammatica ambigua](Grammatiche%20libere%20dal%20contesto.md#^esempio-di-grammatica-ambigua): lì abbiamo un [prodotto](Grammatiche%20libere%20dal%20contesto.md#^definizione-prodotto-di-un-albero-sintattico), che è
+> 
+> $$
+> 1 + 2 * 3
+> $$
+> 
+> a cui però corrispondono due [alberi sintattici](Grammatiche%20libere%20dal%20contesto.md#^definizione-albero-sintattico) diversi:
+> 
+> ![esempio-albero-sintattico-delle-espressioni-aritmetiche.drawio](esempio-albero-sintattico-delle-espressioni-aritmetiche.drawio.svg)
+> 
+> in cui il [prodotto](Grammatiche%20libere%20dal%20contesto.md#^definizione-prodotto-di-un-albero-sintattico) verrebbe interpretato come $1+(2*3)$ e
+> 
+> ![esempio-di-grammatica-ambigua.drawio](esempio-di-grammatica-ambigua.drawio.svg)
+> 
+> in cui il [prodotto](Grammatiche%20libere%20dal%20contesto.md#^definizione-prodotto-di-un-albero-sintattico) verrebbe interpretato come $(1+2)*3$.
+> 
+> In questo caso, trattandosi di due operatori diversi ($+$ e $*$), possiamo sfruttare le convenzioni dell'aritmetica e stabilire che ha precedenza l'operatore $*$, stabilendo così che l'unico [albero sintattico](Grammatiche%20libere%20dal%20contesto.md#^definizione-albero-sintattico) che si può associare correttamente al [prodotto](Grammatiche%20libere%20dal%20contesto.md#^definizione-prodotto-di-un-albero-sintattico) $1+2*3$ è il primo, quello in cui viene interpretato come $1+(2*3)$.
+> 
+> Ma cosa succede nel caso in cui usiamo gli stessi operatori? Per esempio, nel caso del [prodotto](Grammatiche%20libere%20dal%20contesto.md#^definizione-prodotto-di-un-albero-sintattico) $1+2+3$ possiamo risalire a due [alberi sintattici](Grammatiche%20libere%20dal%20contesto.md#^definizione-albero-sintattico) diversi:
+> 
+> ![eliminazione-delle-ambiguita-1.drawio](eliminazione-delle-ambiguita-1.drawio.svg)
+> 
+> in cui il [prodotto](Grammatiche%20libere%20dal%20contesto.md#^definizione-prodotto-di-un-albero-sintattico) verrebbe interpretato come $(1+2)+3$ e
+> 
+> ![eliminazione-delle-ambiguita-2.drawio](eliminazione-delle-ambiguita-2.drawio.svg)
+> 
+> in cui il [prodotto](Grammatiche%20libere%20dal%20contesto.md#^definizione-prodotto-di-un-albero-sintattico) verrebbe interpretato come $1+(2+3)$.
+> 
+> A questo punto, in casi come questi in cui abbiamo lo stesso operatore e non possiamo sfruttare le regole di precedenza, potremmo stabilire che ad avere la priorità potrebbe essere per esempio sempre l'operatore a sinistra, stabilendo così che l'unico [albero sintattico](Grammatiche%20libere%20dal%20contesto.md#^definizione-albero-sintattico) che si può associare correttamente al [prodotto](Grammatiche%20libere%20dal%20contesto.md#^definizione-prodotto-di-un-albero-sintattico) $1+2+3$ è il primo, quello in cui viene interpretato come $(1+2)+3$.
+> 
+> Possiamo quindi provare a eliminare questa [ambiguità](Grammatiche%20libere%20dal%20contesto.md#^definizione-grammatica-ambigua) introducendo una nuova regola, in base alla quale andremo a creare una nuova [grammatica](Grammatiche%20libere%20dal%20contesto.md#^definizione-grammatica-libera-dal-contesto) **non** [ambigua](Grammatiche%20libere%20dal%20contesto.md#^definizione-grammatica-ambigua): per generare una addizione all'interno di una moltiplicazione, vanno necessariamente usate le parentesi $()$.
+> 
+> Definiamo quindi la nuova [grammatica](Grammatiche%20libere%20dal%20contesto.md#^definizione-grammatica-libera-dal-contesto)
+> 
+> $$
+> \mathcal{G}' = \langle \{ A,M,O \}, \{ 0,1,\ldots,9,+,*,(,) \}, P, A \rangle 
+> $$
+> 
+> in cui $P$ è l'[insieme](Teoria%20degli%20insiemi.md#^definizione-insieme) delle [produzioni](Grammatiche%20libere%20dal%20contesto.md#^definizione-grammatica-libera-dal-contesto)
+> 
+> $$
+> \begin{align*}
+> A &\to M \mid A + M \\
+> M &\to O \mid M * O \\
+> O &\to 0 \mid 1 \mid \ldots \mid 9 \mid (A)
+> \end{align*}
+> $$
+> 
+> e le [variabili](Grammatiche%20libere%20dal%20contesto.md#^definizione-grammatica-libera-dal-contesto) corrispondono a:
+> - $A$: espressioni additive,
+> - $M$: espressioni moltiplicative e
+> - $O$: espressioni atomiche (in cui compaiono solo le costanti numeriche o vengono aggiunte le parentesi $()$).
+> 
+> %% 
+> colorare frecce $\Rightarrow$ e frecce dell'albero sintattico corrispondenti (color coding)
+> %%
+> 
+> Abbiamo quindi che questa nuova [grammatica](Grammatiche%20libere%20dal%20contesto.md#^definizione-grammatica-libera-dal-contesto) $\mathcal{G}'$ potrebbe produrre per esempio le seguenti [derivazioni](Grammatiche%20libere%20dal%20contesto.md#^definizione-derivazione-in-un-passo):
+> 
+> $$
+> \begin{align*}
+> A &\Rightarrow M \\
+> &\Rightarrow M * O \\
+> &\Rightarrow O * O \\
+> &\Rightarrow (A) * O \\
+> &\Rightarrow (A + M) * O \\
+> &\Rightarrow (M + M) * O \\
+> &\Rightarrow (O + M) * O \\
+> &\Rightarrow (1 + M) * O \\
+> &\Rightarrow (1 + O) * O \\
+> &\Rightarrow (1 + 2) * O \\
+> &\Rightarrow (1 + 2) * 3 \\
+> \end{align*}
+> $$
+> 
+> il cui [albero sintattico](Grammatiche%20libere%20dal%20contesto.md#^definizione-albero-sintattico) è
+> 
+> ![eliminazione-delle-ambiguita-3.drawio](eliminazione-delle-ambiguita-3.drawio.svg)
+> 
+> Possiamo osservare come, in questa [grammatica](Grammatiche%20libere%20dal%20contesto.md#^definizione-grammatica-libera-dal-contesto) $\mathcal{G}'$, l'espressione la cui struttura comporta il calcolo della somma prima della moltiplicazione è generabile solo con parentesi.
+
+Esistono però [linguaggi](Teoria%20dei%20linguaggi%20formali.md#^definizione-linguaggio-formale) che possono essere [generati](Grammatiche%20libere%20dal%20contesto.md#^definizione-linguaggio-generato-da-una-grammatica-libera) unicamente da [grammatiche ambigue](Grammatiche%20libere%20dal%20contesto.md#^definizione-grammatica-ambigua), i cosiddetti [_linguaggi inerentemente ambigui_](Grammatiche%20libere%20dal%20contesto.md#^definizione-linguaggio-inerentemente-ambiguo).
+
+> [!definizione]+ Definizione: linguaggio inerentemente ambiguo
+> 
+> Un [linguaggio](Teoria%20dei%20linguaggi%20formali.md#^definizione-linguaggio-formale) $L$ si dice **inerentemente ambiguo** se può essere [generato](Grammatiche%20libere%20dal%20contesto.md#^definizione-linguaggio-generato-da-una-grammatica-libera) unicamente da [grammatiche ambigue](Grammatiche%20libere%20dal%20contesto.md#^definizione-grammatica-ambigua).
+^definizione-linguaggio-inerentemente-ambiguo
+
+> [!esempio]- Esempio di linguaggio inerentemente ambiguo
+> 
+> Un esempio di [linguaggio inerentemente ambiguo](Grammatiche%20libere%20dal%20contesto.md#^definizione-linguaggio-inerentemente-ambiguo) è il [linguaggio](Teoria%20dei%20linguaggi%20formali.md#^definizione-linguaggio-formale)
+> 
+> $$
+> L = \{ \text{a}^n\text{b}^n\text{c}^m\text{d}^m \mid n \ge 1 \land m \ge 1 \} \cup \{ \text{a}^n\text{b}^m\text{c}^m\text{d}^n \mid n \ge 1 \land m \ge 1 \}
+> $$
+> 
+> perché, a prescindere dal tipo di [grammatica](Grammatiche%20libere%20dal%20contesto.md#^definizione-grammatica-libera-dal-contesto) che [genera](Grammatiche%20libere%20dal%20contesto.md#^definizione-linguaggio-generato-da-una-grammatica-libera) $L$, ci saranno sempre almeno due [derivazioni canoniche](Grammatiche%20libere%20dal%20contesto.md#^definizione-derivazione-canonica-a-sinistra-e-a-destra) distinte che [genereranno](Grammatiche%20libere%20dal%20contesto.md#^definizione-linguaggio-generato-da-una-grammatica-libera) una [stringa](Teoria%20dei%20linguaggi%20formali.md#^definizione-stringa) della forma $\text{a}^n\text{b}^n\text{c}^n\text{d}^n$.
+> 
+> Per esempio, la [grammatica](Grammatiche%20libere%20dal%20contesto.md#^definizione-grammatica-libera-dal-contesto)
+> 
+> $$
+> \mathcal{G} = \langle \{ S,A,B,C,D \}, \{ \text{a},\text{b},\text{c},\text{d} \}, P, S \rangle 
+> $$
+> 
+> in cui $P$ è l'[insieme](Teoria%20degli%20insiemi.md#^definizione-insieme) delle [produzioni](Grammatiche%20libere%20dal%20contesto.md#^definizione-grammatica-libera-dal-contesto)
+> 
+> $$
+> \begin{align*}
+> S &\to AB \mid C \\
+> A &\to \text{a}A\text{b} \mid \text{ab} \\
+> B &\to \text{c}B\text{d} \mid \text{cd} \\
+> C &\to \text{a}C\text{d} \mid \text{a}D\text{d} \\
+> D &\to \text{b}D\text{c} \mid \text{bc}
+> \end{align*}
+> $$
+> 
+> e da cui possiamo ottenere il [prodotto](Grammatiche%20libere%20dal%20contesto.md#^definizione-prodotto-di-un-albero-sintattico) $\text{aabbccdd}$ sia dalla [derivazione canonica](Grammatiche%20libere%20dal%20contesto.md#^definizione-derivazione-canonica-a-sinistra-e-a-destra)
+> 
+> $$
+> \begin{align*}
+> S &\Rightarrow_\text{lm} AB \\
+> &\Rightarrow_\text{lm} \text{a}A\text{b}B \\
+> &\Rightarrow_\text{lm} \text{aabb}B \\
+> &\Rightarrow_\text{lm} \text{aabbc}B\text{d} \\
+> &\Rightarrow_\text{lm} \text{aabbccdd}
+> \end{align*}
+> $$
+> 
+> sia dalla [derivazione canonica](Grammatiche%20libere%20dal%20contesto.md#^definizione-derivazione-canonica-a-sinistra-e-a-destra)
+> 
+> $$
+> \begin{align*}
+> S &\Rightarrow_\text{lm} C \\
+> &\Rightarrow_\text{lm} \text{a}C\text{d} \\
+> &\Rightarrow_\text{lm} \text{aa}D\text{dd} \\
+> &\Rightarrow_\text{lm} \text{aab}D\text{cdd} \\
+> &\Rightarrow_\text{lm} \text{aabbccdd}
+> \end{align*}
+> $$
+
+%%
+Esercizio:
+data la grammatica
+
+$$
+B \to \text{T} \mid \text{F} \mid B \land B \mid B \lor B \mid \lnot B \mid (B) 
+$$
+
+delle espressioni booleane, risolvere i seguenti esercizi:
+1. Modificare la grammatica per eliminare l'ambiguità, dando ai connettivi la precedenza $\lor < \land < \lnot$ e l'associatività a destra per $\lor$ e $\land$
+2.  Usando la grammatica non ambigua ottenuta, mostrare le derivazioni a sinistra, a destra e gli alberi sintattici relativi alle espressioni $\text{T} \land \text{F} \lor \text{T}$ e $\lnot\text{T} \land \text{F}$
+%%
+
 ---
 
 > [!fonti]+ Fonti
@@ -617,3 +778,4 @@ trovando per ciascuna:
 > 		- Prof. Jeremy James Sproston, slide del corso:
 > 			- [3.1 - _Grammatiche libere dal contesto_](https://informatica.i-learn.unito.it/pluginfile.php/518900/mod_folder/content/0/3-1_cfg.pdf).
 > 			- [3.2 - _Alberi sintattici, derivazioni canoniche e ambiguità_](https://informatica.i-learn.unito.it/pluginfile.php/518900/mod_folder/content/0/3-2_alberi.pdf).
+> 			- [3.3 - _Eliminazione dell'ambiguità_](https://informatica.i-learn.unito.it/pluginfile.php/518900/mod_folder/content/0/3-3_elim_amb.pdf).
