@@ -58,7 +58,7 @@ Colorare xyz anche nel teorema e nella dimostrazione
 > 
 > > [!dimostrazione]- Dimostrazione
 > > 
-> > Se $L$ è un [linguaggio regolare](Teoria%20degli%20automi.md#^definizione-linguaggio-regolare-riconosciuto-da-un-dfa) allora esiste un [DFA](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-deterministico-dfa) $\mathcal{D} = \langle \Sigma, Q, \delta, q_0, F \rangle$ che lo [riconosce](Teoria%20degli%20automi.md#^definizione-linguaggio-riconosciuto-da-un-dfa):
+> > Se $L$ è un [linguaggio regolare](Teoria%20degli%20automi.md#^definizione-linguaggio-regolare-riconosciuto-da-un-dfa) allora esiste un [DFA](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-deterministico-dfa) $\mathcal{D} = \langle Q, \Sigma, \delta, q_0, F \rangle$ che lo [riconosce](Teoria%20degli%20automi.md#^definizione-linguaggio-riconosciuto-da-un-dfa):
 > > 
 > > $$
 > > L = L(\mathcal{D})

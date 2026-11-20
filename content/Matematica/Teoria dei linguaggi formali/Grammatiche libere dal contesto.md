@@ -7,7 +7,7 @@ aliases:
 > 
 > Ciao! Se è la prima volta che capiti su questo sito, ti consiglio di consultare la [pagina principale](index.md) di questo _Giardino Digitale_ per scoprire meglio cos'è e come navigarlo.
 > 
-> Lo stato di questa nota è al momento: 🔴 <font color="#FF7F7F">_Bozza_</font>.
+> Lo stato di questa nota è al momento: 🟢 <font color="#7FFF7F">_Completa_</font>.
 
 ---
 
@@ -261,7 +261,7 @@ cambiare nome al teorema (?)
 > 
 > > [!dimostrazione]- Dimostrazione
 > > 
-> > Supponiamo che esista un [DFA](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-deterministico-dfa) $\mathcal{D} = \langle \Sigma, Q, \delta, q_0, F \rangle$ che [riconosce](Teoria%20degli%20automi.md#^definizione-linguaggio-riconosciuto-da-un-dfa) $L$:
+> > Supponiamo che esista un [DFA](Teoria%20degli%20automi.md#^definizione-automa-a-stati-finiti-deterministico-dfa) $\mathcal{D} = \langle Q, \Sigma, \delta, q_0, F \rangle$ che [riconosce](Teoria%20degli%20automi.md#^definizione-linguaggio-riconosciuto-da-un-dfa) $L$:
 > > 
 > > $$
 > > L(\mathcal{D}) = L
